@@ -4,16 +4,48 @@ struct TodayView: View {
     @ObservedObject var viewModel: PrayerPlanViewModel
     @Binding var completedDayNumbers: Set<Int>
     @Binding var savedVerseIDs: Set<String>
+    @Binding var prayerStreak: PrayerStreak
+    @Binding var analytics: PrayerAnalyticsSnapshot
     let onOpenDay: (PrayerDay) -> Void
 
-    var body: some View {
-        let todayDay = viewModel.nextUnprayedDay(completedDayNumbers: completedDayNumbers)
+    @State private var completionPulse = false
+    private let streakService = StreakService()
 
+    private var activePlan: PrayerPlan {
+        viewModel.activePlan
+    }
+
+    private var planAccent: Color {
+        activePlan.category.brandAccent
+    }
+
+    var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .leading, spacing: AppSpacing.large) {
-                introSection
-                heroCard(for: todayDay)
-                journeySection(for: todayDay)
+                greetingSection
+
+                if activePlan.supportsJourneyStart {
+                    let nextDay = viewModel.nextUnprayedDay(completedDayNumbers: completedDayNumbers, in: activePlan)
+                    let completedCount = viewModel.completedCount(completedDayNumbers: completedDayNumbers, in: activePlan)
+
+                    JourneyProgressCard(
+                        planTitle: activePlan.title,
+                        completedDays: completedCount,
+                        totalDays: activePlan.durationDays,
+                        accent: planAccent,
+                        gradient: activePlan.category.brandGradient
+                    )
+
+                    heroCard(for: nextDay)
+                    streakCard
+                    continueJourneySection(for: nextDay)
+                } else {
+                    EmptyStateView(
+                        title: "Coming Soon",
+                        message: "\(activePlan.title) is available as a preview plan and will become fully prayer-ready in a future release.",
+                        systemImage: activePlan.coverIcon
+                    )
+                }
             }
             .padding(.horizontal, AppSpacing.large)
             .padding(.top, AppSpacing.medium)
@@ -22,13 +54,23 @@ struct TodayView: View {
         .toolbarBackground(.hidden, for: .navigationBar)
     }
 
-    private var introSection: some View {
+    private var greetingSection: some View {
         VStack(alignment: .leading, spacing: AppSpacing.small) {
-            Text("LetUsPray")
+            Text(viewModel.greeting())
+                .font(AppTypography.caption())
+                .foregroundStyle(planAccent)
+                .textCase(.uppercase)
+
+            Text(AppMetadata.appName)
                 .font(AppTypography.largeTitle())
                 .foregroundStyle(AppColors.textPrimary)
 
-            Text(viewModel.todaySubtitle)
+            Text(AppMetadata.tagline)
+                .font(AppTypography.callout())
+                .foregroundStyle(AppColors.textSecondary)
+                .fixedSize(horizontal: false, vertical: true)
+
+            Text(activePlan.subtitle)
                 .font(AppTypography.callout())
                 .foregroundStyle(AppColors.textSecondary)
                 .fixedSize(horizontal: false, vertical: true)
@@ -41,9 +83,9 @@ struct TodayView: View {
             VStack(alignment: .leading, spacing: AppSpacing.large) {
                 HStack(alignment: .top) {
                     VStack(alignment: .leading, spacing: AppSpacing.small) {
-                        Text(viewModel.plan.title)
+                        Text(activePlan.title)
                             .font(AppTypography.caption())
-                            .foregroundStyle(AppColors.prayerGold)
+                            .foregroundStyle(planAccent)
                             .textCase(.uppercase)
 
                         Text(day.title)
@@ -57,11 +99,13 @@ struct TodayView: View {
 
                     Spacer()
 
-                    Image(systemName: "book.pages.fill")
+                    Image(systemName: completionPulse ? "checkmark.seal.fill" : activePlan.coverIcon)
                         .font(.system(size: 28, weight: .medium))
                         .foregroundStyle(AppColors.textPrimary)
                         .padding(14)
-                        .background(PrayerTheme.heroGradient, in: Circle())
+                        .background(activePlan.category.brandGradient, in: Circle())
+                        .scaleEffect(completionPulse ? 1.08 : 1.0)
+                        .animation(.spring(response: 0.36, dampingFraction: 0.68), value: completionPulse)
                 }
 
                 Text(day.summary)
@@ -70,8 +114,8 @@ struct TodayView: View {
                     .lineSpacing(4)
 
                 HStack(spacing: AppSpacing.medium) {
-                    statPill(title: "Today's Journey", value: "Day \(day.dayNumber)")
-                    statPill(title: "Progress", value: viewModel.progressLabel(completedDayNumbers: completedDayNumbers))
+                    statPill(title: "Category", value: activePlan.category.displayTitle)
+                    statPill(title: "Saved", value: "\(savedVerseIDs.count) prayers")
                 }
 
                 VStack(spacing: AppSpacing.medium) {
@@ -80,12 +124,13 @@ struct TodayView: View {
                     }
                     .buttonStyle(.plain)
 
-                    Button(action: { toggleCompleted(dayNumber: day.dayNumber) }) {
+                    Button(action: { markDayAsPrayed(dayNumber: day.dayNumber) }) {
                         PrimaryPrayerButton(
                             title: completedDayNumbers.contains(day.dayNumber) ? "Marked as Prayed" : "Mark as Prayed",
                             systemImage: completedDayNumbers.contains(day.dayNumber) ? "checkmark.circle.fill" : "checkmark.circle",
                             isSecondary: true
                         )
+                        .scaleEffect(completionPulse ? 1.02 : 1.0)
                     }
                     .buttonStyle(.plain)
                 }
@@ -93,14 +138,53 @@ struct TodayView: View {
         }
         .background(
             RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
-                .fill(PrayerTheme.heroGradient.opacity(0.28))
+                .fill(activePlan.category.brandGradient.opacity(0.22))
                 .blur(radius: 18)
         )
     }
 
-    private func journeySection(for day: PrayerDay) -> some View {
+    private var streakCard: some View {
+        GlassCard {
+            HStack(alignment: .center, spacing: AppSpacing.medium) {
+                Image(systemName: "flame.fill")
+                    .font(.system(size: 22, weight: .semibold))
+                    .foregroundStyle(AppColors.textPrimary)
+                    .frame(width: 48, height: 48)
+                    .background(BrandGradients.streakCard, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(prayerStreak.badgeText)
+                        .font(AppTypography.headline())
+                        .foregroundStyle(AppColors.textPrimary)
+
+                    Text("Longest streak: \(prayerStreak.longestStreak) day\(prayerStreak.longestStreak == 1 ? "" : "s")")
+                        .font(AppTypography.footnote())
+                        .foregroundStyle(AppColors.textSecondary)
+                }
+
+                Spacer()
+
+                VStack(alignment: .trailing, spacing: 2) {
+                    Text("\(analytics.completedDaysByPlan[activePlan.id] ?? 0)")
+                        .font(AppTypography.title())
+                        .foregroundStyle(AppColors.goldAccent)
+
+                    Text("prayed")
+                        .font(AppTypography.caption())
+                        .foregroundStyle(AppColors.textTertiary)
+                }
+            }
+        }
+        .background(
+            RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
+                .fill(BrandGradients.streakCard.opacity(0.18))
+                .blur(radius: 16)
+        )
+    }
+
+    private func continueJourneySection(for day: PrayerDay) -> some View {
         VStack(alignment: .leading, spacing: AppSpacing.medium) {
-            Text("Today's Journey Day")
+            Text("Continue Journey")
                 .font(AppTypography.headline())
                 .foregroundStyle(AppColors.textPrimary)
 
@@ -130,11 +214,21 @@ struct TodayView: View {
         }
     }
 
-    private func toggleCompleted(dayNumber: Int) {
-        if completedDayNumbers.contains(dayNumber) {
-            completedDayNumbers.remove(dayNumber)
-        } else {
+    private func markDayAsPrayed(dayNumber: Int) {
+        guard !completedDayNumbers.contains(dayNumber) else { return }
+
+        withAnimation(.spring(response: 0.34, dampingFraction: 0.76)) {
             completedDayNumbers.insert(dayNumber)
+            completionPulse = true
+        }
+
+        prayerStreak = streakService.updateStreak(from: prayerStreak)
+        HapticsService.markPrayerCompleted()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
+            withAnimation(.spring(response: 0.36, dampingFraction: 0.84)) {
+                completionPulse = false
+            }
         }
     }
 }
@@ -144,6 +238,8 @@ struct TodayView: View {
         viewModel: PrayerPlanViewModel(),
         completedDayNumbers: .constant([]),
         savedVerseIDs: .constant([]),
+        prayerStreak: .constant(.empty),
+        analytics: .constant(.init(completedPrayersCount: 0, savedPrayersCount: 0, activePlanID: ProverbsPrayerData.plan.id, completedDaysByPlan: [:])),
         onOpenDay: { _ in }
     )
     .background(PrayerBackground())

@@ -3,26 +3,19 @@ import SwiftUI
 enum PrayerTheme {
     static let pageGradient = LinearGradient(
         colors: [
-            AppColors.midnight,
             AppColors.twilight,
-            AppColors.dawn.opacity(0.88)
+            AppColors.deepMaroon.opacity(0.72),
+            AppColors.prayerBlue.opacity(0.70),
+            AppColors.faithTurquoise.opacity(0.50)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
     )
 
-    static let heroGradient = LinearGradient(
-        colors: [
-            AppColors.accent.opacity(0.46),
-            AppColors.secondaryAccent.opacity(0.30),
-            AppColors.prayerGold.opacity(0.22)
-        ],
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
-    )
+    static let heroGradient = BrandGradients.primaryHero
 
     static let buttonGradient = LinearGradient(
-        colors: [AppColors.accentStrong, AppColors.secondaryAccent],
+        colors: [AppColors.prayerBlue, AppColors.faithTurquoise, AppColors.goldAccent.opacity(0.86)],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
     )
@@ -34,23 +27,32 @@ struct PrayerBackground: View {
             PrayerTheme.pageGradient
                 .ignoresSafeArea()
 
+            AppColors.warmCream.opacity(0.06)
+                .ignoresSafeArea()
+
             Circle()
-                .fill(AppColors.accent.opacity(0.16))
+                .fill(AppColors.faithTurquoise.opacity(0.20))
                 .frame(width: 320, height: 320)
                 .blur(radius: 40)
                 .offset(x: -120, y: -260)
 
             Circle()
-                .fill(AppColors.secondaryAccent.opacity(0.14))
+                .fill(AppColors.prayerBlue.opacity(0.18))
                 .frame(width: 280, height: 280)
                 .blur(radius: 44)
                 .offset(x: 150, y: 260)
 
             Circle()
-                .fill(AppColors.prayerGold.opacity(0.12))
+                .fill(AppColors.goldAccent.opacity(0.16))
                 .frame(width: 220, height: 220)
                 .blur(radius: 32)
                 .offset(x: 120, y: -120)
+
+            Circle()
+                .fill(AppColors.deepMaroon.opacity(0.18))
+                .frame(width: 250, height: 250)
+                .blur(radius: 48)
+                .offset(x: -150, y: 240)
         }
         .allowsHitTesting(false)
     }
@@ -62,11 +64,19 @@ struct PrayerSurfaceModifier: ViewModifier {
             .background(
                 RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
                     .fill(.ultraThinMaterial)
+                    .background(
+                        RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
+                            .fill(AppColors.glassFill)
+                    )
                     .overlay {
                         RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
                             .fill(
                                 LinearGradient(
-                                    colors: [AppColors.glassHighlight, .clear],
+                                    colors: [
+                                        AppColors.softIvory.opacity(0.20),
+                                        AppColors.faithTurquoise.opacity(0.06),
+                                        .clear
+                                    ],
                                     startPoint: .topLeading,
                                     endPoint: .bottomTrailing
                                 )
@@ -76,7 +86,8 @@ struct PrayerSurfaceModifier: ViewModifier {
                         RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
                             .stroke(AppColors.glassStroke, lineWidth: 1)
                     }
-                    .shadow(color: AppColors.shadow, radius: 22, x: 0, y: 14)
+                    .shadow(color: AppColors.shadow, radius: 26, x: 0, y: 16)
+                    .shadow(color: AppColors.prayerBlue.opacity(0.08), radius: 18, x: 0, y: 8)
             )
     }
 }

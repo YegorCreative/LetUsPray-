@@ -6,7 +6,10 @@ enum ProverbsPrayerData {
         title: "30 Days in Proverbs",
         subtitle: "Pray Through Scripture One Verse at a Time",
         description: "A gentle guided journey through Proverbs, helping you pray for wisdom, humility, trust, and steady obedience.",
-        duration: 30,
+        category: .wisdom,
+        durationDays: 30,
+        accentColorName: "wisdom",
+        coverIcon: "book.pages.fill",
         days: detailedDays + placeholderDays
     )
 

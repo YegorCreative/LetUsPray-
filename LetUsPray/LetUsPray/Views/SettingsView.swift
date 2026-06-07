@@ -9,6 +9,8 @@ struct SettingsView: View {
                     .foregroundStyle(AppColors.textPrimary)
                     .padding(.top, AppSpacing.small)
 
+                appInfoSection
+
                 settingsSection(
                     title: "Notifications",
                     items: [
@@ -26,10 +28,10 @@ struct SettingsView: View {
                 )
 
                 settingsSection(
-                    title: "About LetUsPray",
+                    title: "About",
                     items: [
                         ("Mission", "heart.text.square.fill"),
-                        ("Version 1.0", "info.circle.fill")
+                        ("Version \(AppMetadata.version)", "info.circle.fill")
                     ]
                 )
             }
@@ -37,6 +39,38 @@ struct SettingsView: View {
             .padding(.bottom, AppSpacing.xxLarge)
         }
         .toolbarBackground(.hidden, for: .navigationBar)
+    }
+
+    private var appInfoSection: some View {
+        GlassCard(padding: AppSpacing.heroPadding) {
+            HStack(alignment: .center, spacing: AppSpacing.medium) {
+                Image(systemName: "hands.sparkles.fill")
+                    .font(.system(size: 28, weight: .semibold))
+                    .foregroundStyle(AppColors.textPrimary)
+                    .frame(width: 64, height: 64)
+                    .background(BrandGradients.primaryHero, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
+
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(AppMetadata.appName)
+                        .font(AppTypography.title2())
+                        .foregroundStyle(AppColors.textPrimary)
+
+                    Text(AppMetadata.tagline)
+                        .font(AppTypography.footnote())
+                        .foregroundStyle(AppColors.textSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
+
+                    Text("Version \(AppMetadata.version)")
+                        .font(AppTypography.caption())
+                        .foregroundStyle(AppColors.goldAccent)
+                }
+            }
+        }
+        .background(
+            RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
+                .fill(BrandGradients.primaryHero.opacity(0.18))
+                .blur(radius: 18)
+        )
     }
 
     private func settingsSection(title: String, items: [(String, String)]) -> some View {
@@ -50,9 +84,13 @@ struct SettingsView: View {
                     HStack(spacing: AppSpacing.medium) {
                         Image(systemName: item.1)
                             .font(.system(size: 16, weight: .semibold))
-                            .foregroundStyle(AppColors.accent)
+                            .foregroundStyle(AppColors.goldAccent)
                             .frame(width: 32, height: 32)
-                            .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                            .background(AppColors.softIvory.opacity(0.12), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                    .stroke(AppColors.glassStroke, lineWidth: 1)
+                            }
 
                         Text(item.0)
                             .font(AppTypography.body())

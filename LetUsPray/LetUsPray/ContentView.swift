@@ -10,12 +10,15 @@ import SwiftUI
 struct ContentView: View {
     @StateObject private var viewModel = PrayerPlanViewModel()
     @AppStorage(PrayerStorageKeys.completedDayNumbers) private var completedDayNumbersRawValue = ""
+    @AppStorage(PrayerStorageKeys.completedDaysByPlan) private var completedDaysByPlanRawValue = "{}"
     @AppStorage(PrayerStorageKeys.savedVerseIDs) private var savedVerseIDsRawValue = ""
     @AppStorage(PrayerStorageKeys.currentStreak) private var currentStreak = 0
     @AppStorage(PrayerStorageKeys.longestStreak) private var longestStreak = 0
     @AppStorage(PrayerStorageKeys.lastCompletedDate) private var lastCompletedDateTimeInterval = 0.0
     @AppStorage(PrayerStorageKeys.completedPrayersCount) private var completedPrayersCount = 0
     @AppStorage(PrayerStorageKeys.savedPrayersCount) private var savedPrayersCount = 0
+    @AppStorage(PrayerStorageKeys.activePlanID) private var activePlanID = ProverbsPrayerData.plan.id
+    @AppStorage(PrayerStorageKeys.analyticsActivePlanID) private var analyticsActivePlanID = ProverbsPrayerData.plan.id
     @State private var selectedTodayDay: PrayerDay?
 
     var body: some View {
@@ -35,6 +38,7 @@ struct ContentView: View {
                 }
                 .navigationDestination(item: $selectedTodayDay) { day in
                     PrayerDetailView(
+                        plan: viewModel.activePlan,
                         day: day,
                         savedVerseIDs: savedVerseIDsBinding,
                         analytics: analyticsBinding
@@ -51,6 +55,7 @@ struct ContentView: View {
 
                     PlansView(
                         viewModel: viewModel,
+                        activePlanID: $activePlanID,
                         completedDayNumbers: completedDayNumbersBinding,
                         savedVerseIDs: savedVerseIDsBinding,
                         analytics: analyticsBinding
@@ -88,12 +93,35 @@ struct ContentView: View {
             }
         }
         .tint(AppColors.textPrimary)
+        .onAppear {
+            syncActivePlan()
+            syncAnalytics()
+        }
+        .onChange(of: activePlanID) { _, _ in
+            syncActivePlan()
+            syncAnalytics()
+        }
+        .onChange(of: completedDaysByPlanRawValue) { _, _ in
+            syncLegacyCompletedDays()
+            syncAnalytics()
+        }
+        .onChange(of: savedVerseIDsRawValue) { _, _ in
+            syncAnalytics()
+        }
     }
 
     private var completedDayNumbersBinding: Binding<Set<Int>> {
         Binding(
-            get: { PrayerStorageCodec.decodeIntSet(completedDayNumbersRawValue) },
-            set: { completedDayNumbersRawValue = PrayerStorageCodec.encodeIntSet($0) }
+            get: {
+                let map = PrayerStorageCodec.decodeCompletedDaysByPlan(completedDaysByPlanRawValue)
+                return map[activePlanID] ?? legacyCompletedDays
+            },
+            set: { newValue in
+                var map = PrayerStorageCodec.decodeCompletedDaysByPlan(completedDaysByPlanRawValue)
+                map[activePlanID] = newValue
+                completedDaysByPlanRawValue = PrayerStorageCodec.encodeCompletedDaysByPlan(map)
+                completedDayNumbersRawValue = PrayerStorageCodec.encodeIntSet(newValue)
+            }
         )
     }
 
@@ -126,14 +154,47 @@ struct ContentView: View {
             get: {
                 PrayerAnalyticsSnapshot(
                     completedPrayersCount: completedPrayersCount,
-                    savedPrayersCount: savedPrayersCount
+                    savedPrayersCount: savedPrayersCount,
+                    activePlanID: analyticsActivePlanID,
+                    completedDaysByPlan: PrayerStorageCodec.decodeCompletedDaysByPlan(completedDaysByPlanRawValue).mapValues(\.count)
                 )
             },
             set: {
                 completedPrayersCount = $0.completedPrayersCount
                 savedPrayersCount = $0.savedPrayersCount
+                analyticsActivePlanID = $0.activePlanID
             }
         )
+    }
+
+    private var legacyCompletedDays: Set<Int> {
+        PrayerStorageCodec.decodeIntSet(completedDayNumbersRawValue)
+    }
+
+    private func syncActivePlan() {
+        let resolvedID = viewModel.planByID(activePlanID)?.id ?? PrayerPlansRepository.featuredPlans.first?.id ?? ProverbsPrayerData.plan.id
+        if activePlanID != resolvedID {
+            activePlanID = resolvedID
+        }
+        viewModel.setActivePlan(id: resolvedID)
+        syncLegacyCompletedDays()
+    }
+
+    private func syncLegacyCompletedDays() {
+        let map = PrayerStorageCodec.decodeCompletedDaysByPlan(completedDaysByPlanRawValue)
+        let activeDays = map[activePlanID] ?? legacyCompletedDays
+        completedDayNumbersRawValue = PrayerStorageCodec.encodeIntSet(activeDays)
+    }
+
+    private func syncAnalytics() {
+        let snapshot = viewModel.analyticsSnapshot(
+            completedPrayersByPlan: PrayerStorageCodec.decodeCompletedDaysByPlan(completedDaysByPlanRawValue),
+            savedVerseIDs: PrayerStorageCodec.decodeStringSet(savedVerseIDsRawValue),
+            activePlanID: activePlanID
+        )
+        completedPrayersCount = snapshot.completedPrayersCount
+        savedPrayersCount = snapshot.savedPrayersCount
+        analyticsActivePlanID = snapshot.activePlanID
     }
 }
 

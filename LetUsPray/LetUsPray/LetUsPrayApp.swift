@@ -5,6 +5,7 @@
 //  Created by Yegor Hambaryan on 6/5/26.
 //
 
+import AppIntents
 import SwiftUI
 
 @main

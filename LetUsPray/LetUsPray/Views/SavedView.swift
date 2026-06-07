@@ -3,6 +3,7 @@ import SwiftUI
 struct SavedView: View {
     @ObservedObject var viewModel: PrayerPlanViewModel
     @Binding var savedVerseIDs: Set<String>
+    @Binding var analytics: PrayerAnalyticsSnapshot
 
     var body: some View {
         let savedItems = viewModel.savedVerses(for: savedVerseIDs)
@@ -18,40 +19,60 @@ struct SavedView: View {
                     emptyState
                 } else {
                     ForEach(savedItems) { item in
+                        let accent = item.plan.category.brandAccent
+
                         GlassCard {
                             VStack(alignment: .leading, spacing: AppSpacing.medium) {
-                                HStack(alignment: .top) {
+                                HStack(alignment: .top, spacing: AppSpacing.medium) {
+                                    Image(systemName: item.plan.category.brandIcon)
+                                        .font(.system(size: 18, weight: .semibold))
+                                        .foregroundStyle(AppColors.textPrimary)
+                                        .frame(width: 42, height: 42)
+                                        .background(item.plan.category.brandGradient, in: RoundedRectangle(cornerRadius: 15, style: .continuous))
+
                                     VStack(alignment: .leading, spacing: 6) {
-                                        Text("Day \(item.day.dayNumber) · \(item.day.title)")
+                                        Text(item.plan.title)
                                             .font(AppTypography.caption())
-                                            .foregroundStyle(AppColors.accent)
+                                            .foregroundStyle(accent)
 
                                         Text(item.verse.reference)
+                                            .font(AppTypography.caption())
+                                            .foregroundStyle(AppColors.goldAccent)
+
+                                        Text(item.day.chapterReference)
+                                            .font(AppTypography.footnote())
+                                            .foregroundStyle(AppColors.textTertiary)
+
+                                        Text(item.verse.text)
                                             .font(AppTypography.headline())
                                             .foregroundStyle(AppColors.textPrimary)
+                                            .fixedSize(horizontal: false, vertical: true)
                                     }
 
                                     Spacer()
 
                                     Button {
-                                        savedVerseIDs.remove(item.verse.id)
+                                        removeSavedPrayer(id: item.verse.id)
                                     } label: {
                                         Image(systemName: "bookmark.fill")
-                                            .foregroundStyle(AppColors.prayerGold)
+                                            .foregroundStyle(AppColors.goldAccent)
                                             .padding(10)
                                             .background(.thinMaterial, in: Circle())
                                     }
                                     .buttonStyle(.plain)
                                 }
 
-                                Text(item.verse.text)
-                                    .font(AppTypography.body())
-                                    .foregroundStyle(AppColors.textPrimary)
+                                VStack(alignment: .leading, spacing: AppSpacing.small) {
+                                    Text("Prayer")
+                                        .font(AppTypography.caption())
+                                        .foregroundStyle(AppColors.textTertiary)
+                                        .textCase(.uppercase)
 
-                                Text(item.verse.prayer)
-                                    .font(AppTypography.footnote())
-                                    .foregroundStyle(AppColors.textSecondary)
-                                    .lineSpacing(4)
+                                    Text(item.verse.prayer)
+                                        .font(AppTypography.body())
+                                        .foregroundStyle(AppColors.textSecondary)
+                                        .lineSpacing(4)
+                                }
                             }
                         }
                     }
@@ -64,30 +85,34 @@ struct SavedView: View {
     }
 
     private var emptyState: some View {
-        GlassCard(padding: AppSpacing.heroPadding) {
-            VStack(alignment: .center, spacing: AppSpacing.medium) {
-                Image(systemName: "bookmark.slash")
-                    .font(.system(size: 34, weight: .medium))
-                    .foregroundStyle(AppColors.textSecondary)
+        EmptyStateView(
+            title: "No saved prayers yet.",
+            message: "When a verse becomes a prayer you want to return to, save it here for quiet reflection later.",
+            systemImage: "bookmark.slash"
+        )
+    }
 
-                Text("No saved prayers yet.")
-                    .font(AppTypography.title2())
-                    .foregroundStyle(AppColors.textPrimary)
-
-                Text("When a verse becomes a prayer you want to return to, save it here for quiet reflection later.")
-                    .font(AppTypography.body())
-                    .foregroundStyle(AppColors.textSecondary)
-                    .multilineTextAlignment(.center)
-                    .lineSpacing(4)
-            }
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, AppSpacing.xxLarge)
+    private func removeSavedPrayer(id: String) {
+        withAnimation(.spring(response: 0.34, dampingFraction: 0.84)) {
+            _ = savedVerseIDs.remove(id)
         }
+
+        HapticsService.unsavePrayer()
+        analytics = PrayerAnalyticsSnapshot(
+            completedPrayersCount: analytics.completedPrayersCount,
+            savedPrayersCount: savedVerseIDs.count,
+            activePlanID: analytics.activePlanID,
+            completedDaysByPlan: analytics.completedDaysByPlan
+        )
     }
 }
 
 #Preview {
     NavigationStack {
-        SavedView(viewModel: PrayerPlanViewModel(), savedVerseIDs: .constant([]))
+        SavedView(
+            viewModel: PrayerPlanViewModel(),
+            savedVerseIDs: .constant([]),
+            analytics: .constant(.init(completedPrayersCount: 0, savedPrayersCount: 0, activePlanID: ProverbsPrayerData.plan.id, completedDaysByPlan: [:]))
+        )
     }
 }

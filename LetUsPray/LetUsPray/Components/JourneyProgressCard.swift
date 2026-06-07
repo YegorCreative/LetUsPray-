@@ -4,6 +4,8 @@ struct JourneyProgressCard: View {
     let planTitle: String
     let completedDays: Int
     let totalDays: Int
+    var accent: Color = AppColors.faithTurquoise
+    var gradient: LinearGradient = BrandGradients.progressCard
 
     private var progress: Double {
         guard totalDays > 0 else { return 0 }
@@ -21,7 +23,7 @@ struct JourneyProgressCard: View {
                     VStack(alignment: .leading, spacing: 6) {
                         Text("Journey Progress")
                             .font(AppTypography.caption())
-                            .foregroundStyle(AppColors.prayerGold)
+                            .foregroundStyle(AppColors.goldAccent)
                             .textCase(.uppercase)
 
                         Text(planTitle)
@@ -33,7 +35,7 @@ struct JourneyProgressCard: View {
 
                     Text(percentageLabel)
                         .font(AppTypography.title2())
-                        .foregroundStyle(AppColors.textPrimary)
+                        .foregroundStyle(accent)
                 }
 
                 Text("\(completedDays) of \(totalDays) Days Completed")
@@ -47,12 +49,17 @@ struct JourneyProgressCard: View {
                             .frame(height: 10)
 
                         Capsule()
-                            .fill(PrayerTheme.buttonGradient)
+                            .fill(gradient)
                             .frame(width: max(22, geometry.size.width * progress), height: 10)
                     }
                 }
                 .frame(height: 10)
             }
         }
+        .background(
+            RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
+                .fill(gradient.opacity(0.20))
+                .blur(radius: 18)
+        )
     }
 }
