@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+    let onResetOnboarding: () -> Void
+
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .leading, spacing: AppSpacing.large) {
@@ -26,6 +28,8 @@ struct SettingsView: View {
                         ("Text Size", "textformat.size")
                     ]
                 )
+
+                resetOnboardingSection
 
                 settingsSection(
                     title: "About",
@@ -73,6 +77,43 @@ struct SettingsView: View {
         )
     }
 
+    private var resetOnboardingSection: some View {
+        GlassCard {
+            VStack(alignment: .leading, spacing: AppSpacing.medium) {
+                Text("Onboarding")
+                    .font(AppTypography.headline())
+                    .foregroundStyle(AppColors.textPrimary)
+
+                Button(action: onResetOnboarding) {
+                    HStack(spacing: AppSpacing.medium) {
+                        Image(systemName: "arrow.counterclockwise.circle.fill")
+                            .font(.system(size: 18, weight: .semibold))
+                            .foregroundStyle(AppColors.textPrimary)
+                            .frame(width: 36, height: 36)
+                            .background(BrandGradients.onboardingCard, in: RoundedRectangle(cornerRadius: 13, style: .continuous))
+
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Reset Onboarding")
+                                .font(AppTypography.body())
+                                .foregroundStyle(AppColors.textPrimary)
+
+                            Text("Show the welcome journey again on next entry.")
+                                .font(AppTypography.footnote())
+                                .foregroundStyle(AppColors.textSecondary)
+                        }
+
+                        Spacer()
+
+                        Image(systemName: "chevron.right")
+                            .font(.system(size: 12, weight: .semibold))
+                            .foregroundStyle(AppColors.textTertiary)
+                    }
+                }
+                .buttonStyle(.plain)
+            }
+        }
+    }
+
     private func settingsSection(title: String, items: [(String, String)]) -> some View {
         GlassCard {
             VStack(alignment: .leading, spacing: AppSpacing.medium) {
@@ -115,6 +156,6 @@ struct SettingsView: View {
 
 #Preview {
     NavigationStack {
-        SettingsView()
+        SettingsView(onResetOnboarding: {})
     }
 }

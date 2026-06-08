@@ -19,9 +19,24 @@ struct ContentView: View {
     @AppStorage(PrayerStorageKeys.savedPrayersCount) private var savedPrayersCount = 0
     @AppStorage(PrayerStorageKeys.activePlanID) private var activePlanID = ProverbsPrayerData.plan.id
     @AppStorage(PrayerStorageKeys.analyticsActivePlanID) private var analyticsActivePlanID = ProverbsPrayerData.plan.id
+    @AppStorage(PrayerStorageKeys.onboardingCompleted) private var hasCompletedOnboarding = false
     @State private var selectedTodayDay: PrayerDay?
 
     var body: some View {
+        Group {
+            if hasCompletedOnboarding {
+                mainAppExperience
+            } else {
+                OnboardingView {
+                    hasCompletedOnboarding = true
+                    syncActivePlan()
+                    syncAnalytics()
+                }
+            }
+        }
+    }
+
+    private var mainAppExperience: some View {
         TabView {
             NavigationStack {
                 ZStack {
@@ -85,7 +100,9 @@ struct ContentView: View {
                 ZStack {
                     PrayerBackground()
 
-                    SettingsView()
+                    SettingsView {
+                        hasCompletedOnboarding = false
+                    }
                 }
             }
             .tabItem {

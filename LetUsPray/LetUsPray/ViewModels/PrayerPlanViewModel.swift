@@ -124,6 +124,7 @@ enum PrayerStorageKeys {
     static let activePlanID = "activePrayerPlanID"
     static let completedDaysByPlan = "completedPrayerDaysByPlan"
     static let analyticsActivePlanID = "analyticsActivePlanID"
+    static let onboardingCompleted = "hasCompletedOnboarding"
 }
 
 enum PrayerStorageCodec {
