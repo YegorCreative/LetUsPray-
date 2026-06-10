@@ -8,7 +8,7 @@ struct OnboardingPageIndicator: View {
         HStack(spacing: 8) {
             ForEach(0..<pageCount, id: \.self) { index in
                 Capsule()
-                    .fill(index == currentPage ? AppColors.goldAccent : AppColors.glassFill)
+                    .fill(index == currentPage ? AppColors.voltLime : AppColors.glassFill)
                     .frame(width: index == currentPage ? 28 : 8, height: 8)
                     .overlay {
                         Capsule()

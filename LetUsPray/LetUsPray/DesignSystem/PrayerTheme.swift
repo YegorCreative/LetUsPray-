@@ -3,19 +3,18 @@ import SwiftUI
 enum PrayerTheme {
     static let pageGradient = LinearGradient(
         colors: [
-            AppColors.twilight,
-            AppColors.deepMaroon.opacity(0.72),
-            AppColors.prayerBlue.opacity(0.70),
-            AppColors.faithTurquoise.opacity(0.50)
+            AppColors.deepGraphite,
+            AppColors.cardDarkSurface,
+            AppColors.deepGraphite.opacity(0.96)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
     )
 
-    static let heroGradient = BrandGradients.primaryHero
+    static let heroGradient = BrandGradients.activityHero
 
     static let buttonGradient = LinearGradient(
-        colors: [AppColors.prayerBlue, AppColors.faithTurquoise, AppColors.goldAccent.opacity(0.86)],
+        colors: [AppColors.voltLime, AppColors.electricCyan, AppColors.activityPink.opacity(0.92)],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
     )
@@ -27,31 +26,31 @@ struct PrayerBackground: View {
             PrayerTheme.pageGradient
                 .ignoresSafeArea()
 
-            AppColors.warmCream.opacity(0.06)
+            AppColors.deepGraphite.opacity(0.42)
                 .ignoresSafeArea()
 
             Circle()
-                .fill(AppColors.faithTurquoise.opacity(0.20))
+                .fill(AppColors.voltLime.opacity(0.20))
                 .frame(width: 320, height: 320)
-                .blur(radius: 40)
+                .blur(radius: 54)
                 .offset(x: -120, y: -260)
 
             Circle()
-                .fill(AppColors.prayerBlue.opacity(0.18))
+                .fill(AppColors.electricCyan.opacity(0.18))
                 .frame(width: 280, height: 280)
-                .blur(radius: 44)
+                .blur(radius: 56)
                 .offset(x: 150, y: 260)
 
             Circle()
-                .fill(AppColors.goldAccent.opacity(0.16))
+                .fill(AppColors.activityPink.opacity(0.18))
                 .frame(width: 220, height: 220)
-                .blur(radius: 32)
+                .blur(radius: 42)
                 .offset(x: 120, y: -120)
 
             Circle()
-                .fill(AppColors.deepMaroon.opacity(0.18))
+                .fill(AppColors.premiumGold.opacity(0.13))
                 .frame(width: 250, height: 250)
-                .blur(radius: 48)
+                .blur(radius: 52)
                 .offset(x: -150, y: 240)
         }
         .allowsHitTesting(false)
@@ -73,8 +72,9 @@ struct PrayerSurfaceModifier: ViewModifier {
                             .fill(
                                 LinearGradient(
                                     colors: [
-                                        AppColors.softIvory.opacity(0.20),
-                                        AppColors.faithTurquoise.opacity(0.06),
+                                        Color.white.opacity(0.10),
+                                        AppColors.electricCyan.opacity(0.07),
+                                        AppColors.voltLime.opacity(0.04),
                                         .clear
                                     ],
                                     startPoint: .topLeading,
@@ -87,7 +87,8 @@ struct PrayerSurfaceModifier: ViewModifier {
                             .stroke(AppColors.glassStroke, lineWidth: 1)
                     }
                     .shadow(color: AppColors.shadow, radius: 26, x: 0, y: 16)
-                    .shadow(color: AppColors.prayerBlue.opacity(0.08), radius: 18, x: 0, y: 8)
+                    .shadow(color: AppColors.electricCyan.opacity(0.10), radius: 20, x: 0, y: 10)
+                    .shadow(color: AppColors.voltLime.opacity(0.06), radius: 16, x: 0, y: 6)
             )
     }
 }

@@ -13,7 +13,7 @@ struct PrimaryPrayerButton: View {
             Text(title)
                 .font(AppTypography.callout())
         }
-        .foregroundStyle(AppColors.textPrimary)
+        .foregroundStyle(isSecondary ? AppColors.textPrimary : AppColors.brightTextOnAccent)
         .frame(maxWidth: .infinity)
         .padding(.vertical, AppSpacing.medium)
         .background(background)

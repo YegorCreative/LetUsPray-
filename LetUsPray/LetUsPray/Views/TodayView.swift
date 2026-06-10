@@ -150,7 +150,7 @@ struct TodayView: View {
                     .font(.system(size: 22, weight: .semibold))
                     .foregroundStyle(AppColors.textPrimary)
                     .frame(width: 48, height: 48)
-                    .background(BrandGradients.streakCard, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                    .background(BrandGradients.streakGlow, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
 
                 VStack(alignment: .leading, spacing: 6) {
                     Text(prayerStreak.badgeText)
@@ -167,7 +167,7 @@ struct TodayView: View {
                 VStack(alignment: .trailing, spacing: 2) {
                     Text("\(analytics.completedDaysByPlan[activePlan.id] ?? 0)")
                         .font(AppTypography.title())
-                        .foregroundStyle(AppColors.goldAccent)
+                        .foregroundStyle(AppColors.premiumGold)
 
                     Text("prayed")
                         .font(AppTypography.caption())
@@ -177,7 +177,7 @@ struct TodayView: View {
         }
         .background(
             RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
-                .fill(BrandGradients.streakCard.opacity(0.18))
+                .fill(BrandGradients.streakGlow.opacity(0.18))
                 .blur(radius: 16)
         )
     }

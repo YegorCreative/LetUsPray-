@@ -96,7 +96,7 @@ struct PlansView: View {
                                 .foregroundStyle(accent)
                                 .padding(.horizontal, 10)
                                 .padding(.vertical, 4)
-                                .background(AppColors.softIvory.opacity(0.12), in: Capsule())
+                                .background(AppColors.cardDarkSurface.opacity(0.72), in: Capsule())
                                 .overlay {
                                     Capsule()
                                         .stroke(accent.opacity(0.34), lineWidth: 1)

@@ -1,31 +1,41 @@
 import SwiftUI
 
 enum BrandGradients {
-    static let primaryHero = LinearGradient(
+    static let activityHero = LinearGradient(
         colors: [
-            AppColors.prayerBlue.opacity(0.72),
-            AppColors.faithTurquoise.opacity(0.58),
-            AppColors.goldAccent.opacity(0.34)
+            AppColors.voltLime.opacity(0.95),
+            AppColors.electricCyan.opacity(0.82),
+            AppColors.activityPink.opacity(0.70)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
     )
 
-    static let progressCard = LinearGradient(
+    static let prayerProgress = LinearGradient(
         colors: [
-            AppColors.faithTurquoise.opacity(0.62),
-            AppColors.prayerBlue.opacity(0.50),
-            AppColors.softIvory.opacity(0.16)
+            AppColors.voltLime.opacity(0.92),
+            AppColors.electricCyan.opacity(0.78),
+            AppColors.cardDarkSurface.opacity(0.22)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
     )
 
-    static let streakCard = LinearGradient(
+    static let streakGlow = LinearGradient(
         colors: [
-            AppColors.deepMaroon.opacity(0.62),
-            AppColors.goldAccent.opacity(0.44),
-            AppColors.prayerBlue.opacity(0.22)
+            AppColors.activityPink.opacity(0.92),
+            AppColors.premiumGold.opacity(0.82),
+            AppColors.voltLime.opacity(0.40)
+        ],
+        startPoint: .topLeading,
+        endPoint: .bottomTrailing
+    )
+
+    static let savedPrayer = LinearGradient(
+        colors: [
+            AppColors.premiumGold.opacity(0.82),
+            AppColors.activityPink.opacity(0.62),
+            AppColors.electricCyan.opacity(0.30)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
@@ -33,9 +43,9 @@ enum BrandGradients {
 
     static let planCard = LinearGradient(
         colors: [
-            AppColors.prayerBlue.opacity(0.44),
-            AppColors.faithTurquoise.opacity(0.34),
-            AppColors.deepMaroon.opacity(0.18)
+            AppColors.electricCyan.opacity(0.70),
+            AppColors.voltLime.opacity(0.50),
+            AppColors.activityPink.opacity(0.42)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
@@ -43,49 +53,65 @@ enum BrandGradients {
 
     static let onboardingCard = LinearGradient(
         colors: [
-            AppColors.softIvory.opacity(0.24),
-            AppColors.warmCream.opacity(0.14),
-            AppColors.goldAccent.opacity(0.24)
+            AppColors.deepGraphite.opacity(0.70),
+            AppColors.electricCyan.opacity(0.58),
+            AppColors.voltLime.opacity(0.42),
+            AppColors.activityPink.opacity(0.32)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
     )
 
+    static let launchScreen = LinearGradient(
+        colors: [
+            AppColors.deepGraphite,
+            AppColors.cardDarkSurface,
+            AppColors.electricCyan.opacity(0.22),
+            AppColors.activityPink.opacity(0.18)
+        ],
+        startPoint: .topLeading,
+        endPoint: .bottomTrailing
+    )
+
+    static let primaryHero = activityHero
+    static let progressCard = prayerProgress
+    static let streakCard = streakGlow
+
     static func planGradient(for category: PrayerPlanCategory) -> LinearGradient {
         switch category {
         case .wisdom:
             return LinearGradient(
-                colors: [AppColors.faithTurquoise.opacity(0.70), AppColors.prayerBlue.opacity(0.28)],
+                colors: [AppColors.voltLime.opacity(0.92), AppColors.electricCyan.opacity(0.30)],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
         case .psalms:
             return LinearGradient(
-                colors: [AppColors.prayerBlue.opacity(0.68), AppColors.softIvory.opacity(0.16)],
+                colors: [AppColors.electricCyan.opacity(0.88), AppColors.voltLime.opacity(0.22)],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
         case .gospel:
             return LinearGradient(
-                colors: [AppColors.goldAccent.opacity(0.70), AppColors.warmCream.opacity(0.20)],
+                colors: [AppColors.premiumGold.opacity(0.90), AppColors.voltLime.opacity(0.26)],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
         case .gratitude:
             return LinearGradient(
-                colors: [AppColors.deepMaroon.opacity(0.70), AppColors.goldAccent.opacity(0.26)],
+                colors: [AppColors.activityPink.opacity(0.92), AppColors.premiumGold.opacity(0.28)],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
         case .family:
             return LinearGradient(
-                colors: [AppColors.faithTurquoise.opacity(0.68), AppColors.goldAccent.opacity(0.34)],
+                colors: [AppColors.electricCyan.opacity(0.88), AppColors.premiumGold.opacity(0.58)],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
         case .encouragement:
             return LinearGradient(
-                colors: [AppColors.prayerBlue.opacity(0.68), AppColors.deepMaroon.opacity(0.34)],
+                colors: [AppColors.voltLime.opacity(0.88), AppColors.activityPink.opacity(0.62)],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
@@ -114,17 +140,17 @@ extension PrayerPlanCategory {
     var brandAccent: Color {
         switch self {
         case .wisdom:
-            return AppColors.faithTurquoise
+            return AppColors.voltLime
         case .psalms:
-            return AppColors.prayerBlue
+            return AppColors.electricCyan
         case .gospel:
-            return AppColors.goldAccent
+            return AppColors.premiumGold
         case .gratitude:
-            return AppColors.deepMaroon
+            return AppColors.activityPink
         case .family:
-            return AppColors.faithTurquoise
+            return AppColors.electricCyan
         case .encouragement:
-            return AppColors.prayerBlue
+            return AppColors.voltLime
         }
     }
 

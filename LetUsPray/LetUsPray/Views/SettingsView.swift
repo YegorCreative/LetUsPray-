@@ -50,9 +50,9 @@ struct SettingsView: View {
             HStack(alignment: .center, spacing: AppSpacing.medium) {
                 Image(systemName: "hands.sparkles.fill")
                     .font(.system(size: 28, weight: .semibold))
-                    .foregroundStyle(AppColors.textPrimary)
+                    .foregroundStyle(AppColors.brightTextOnAccent)
                     .frame(width: 64, height: 64)
-                    .background(BrandGradients.primaryHero, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
+                    .background(BrandGradients.activityHero, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
 
                 VStack(alignment: .leading, spacing: 6) {
                     Text(AppMetadata.appName)
@@ -66,13 +66,13 @@ struct SettingsView: View {
 
                     Text("Version \(AppMetadata.version)")
                         .font(AppTypography.caption())
-                        .foregroundStyle(AppColors.goldAccent)
+                        .foregroundStyle(AppColors.premiumGold)
                 }
             }
         }
         .background(
             RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
-                .fill(BrandGradients.primaryHero.opacity(0.18))
+                .fill(BrandGradients.activityHero.opacity(0.18))
                 .blur(radius: 18)
         )
     }
@@ -125,9 +125,9 @@ struct SettingsView: View {
                     HStack(spacing: AppSpacing.medium) {
                         Image(systemName: item.1)
                             .font(.system(size: 16, weight: .semibold))
-                            .foregroundStyle(AppColors.goldAccent)
+                            .foregroundStyle(AppColors.premiumGold)
                             .frame(width: 32, height: 32)
-                            .background(AppColors.softIvory.opacity(0.12), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                            .background(AppColors.cardDarkSurface.opacity(0.72), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                             .overlay {
                                 RoundedRectangle(cornerRadius: 12, style: .continuous)
                                     .stroke(AppColors.glassStroke, lineWidth: 1)

@@ -38,7 +38,7 @@ struct PlanDetailView: View {
                 }
                 .overlay(alignment: .topTrailing) {
                     Circle()
-                        .fill(AppColors.softIvory.opacity(0.22))
+                        .fill(AppColors.voltLime.opacity(0.24))
                         .frame(width: 150, height: 150)
                         .blur(radius: 24)
                         .offset(x: 46, y: -54)
@@ -50,7 +50,7 @@ struct PlanDetailView: View {
                     VStack(alignment: .leading, spacing: AppSpacing.small) {
                         Text(plan.category.displayTitle)
                             .font(AppTypography.caption())
-                            .foregroundStyle(AppColors.softIvory.opacity(0.86))
+                            .foregroundStyle(AppColors.textPrimary.opacity(0.86))
                             .textCase(.uppercase)
 
                         Text(plan.title)
@@ -69,7 +69,7 @@ struct PlanDetailView: View {
                         .font(.system(size: 34, weight: .semibold))
                         .foregroundStyle(AppColors.textPrimary)
                         .frame(width: 78, height: 78)
-                        .background(AppColors.softIvory.opacity(0.16), in: Circle())
+                        .background(AppColors.cardDarkSurface.opacity(0.36), in: Circle())
                         .overlay {
                             Circle()
                                 .stroke(AppColors.glassStroke, lineWidth: 1)

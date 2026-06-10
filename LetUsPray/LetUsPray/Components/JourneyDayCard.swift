@@ -12,8 +12,8 @@ struct JourneyDayCard: View {
                         .fill(
                             LinearGradient(
                                 colors: isCompleted
-                                    ? [AppColors.faithTurquoise.opacity(0.92), AppColors.goldAccent.opacity(0.78)]
-                                    : [AppColors.glassFill, AppColors.softIvory.opacity(0.12)],
+                                    ? [AppColors.voltLime.opacity(0.92), AppColors.electricCyan.opacity(0.78)]
+                                    : [AppColors.glassFill, Color.white.opacity(0.08)],
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing
                             )
@@ -34,7 +34,7 @@ struct JourneyDayCard: View {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Day \(day.dayNumber)")
                         .font(AppTypography.caption())
-                        .foregroundStyle(AppColors.faithTurquoise)
+                        .foregroundStyle(AppColors.voltLime)
 
                     Text(day.title)
                         .font(AppTypography.headline())

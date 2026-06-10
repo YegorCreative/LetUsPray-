@@ -28,7 +28,7 @@ struct SavedView: View {
                                         .font(.system(size: 18, weight: .semibold))
                                         .foregroundStyle(AppColors.textPrimary)
                                         .frame(width: 42, height: 42)
-                                        .background(item.plan.category.brandGradient, in: RoundedRectangle(cornerRadius: 15, style: .continuous))
+                                        .background(BrandGradients.savedPrayer, in: RoundedRectangle(cornerRadius: 15, style: .continuous))
 
                                     VStack(alignment: .leading, spacing: 6) {
                                         Text(item.plan.title)
@@ -37,7 +37,7 @@ struct SavedView: View {
 
                                         Text(item.verse.reference)
                                             .font(AppTypography.caption())
-                                            .foregroundStyle(AppColors.goldAccent)
+                                            .foregroundStyle(AppColors.premiumGold)
 
                                         Text(item.day.chapterReference)
                                             .font(AppTypography.footnote())
@@ -55,7 +55,7 @@ struct SavedView: View {
                                         removeSavedPrayer(id: item.verse.id)
                                     } label: {
                                         Image(systemName: "bookmark.fill")
-                                            .foregroundStyle(AppColors.goldAccent)
+                                            .foregroundStyle(AppColors.premiumGold)
                                             .padding(10)
                                             .background(.thinMaterial, in: Circle())
                                     }

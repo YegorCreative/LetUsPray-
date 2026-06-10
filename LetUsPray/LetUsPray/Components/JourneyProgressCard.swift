@@ -4,8 +4,8 @@ struct JourneyProgressCard: View {
     let planTitle: String
     let completedDays: Int
     let totalDays: Int
-    var accent: Color = AppColors.faithTurquoise
-    var gradient: LinearGradient = BrandGradients.progressCard
+    var accent: Color = AppColors.voltLime
+    var gradient: LinearGradient = BrandGradients.prayerProgress
 
     private var progress: Double {
         guard totalDays > 0 else { return 0 }
@@ -23,7 +23,7 @@ struct JourneyProgressCard: View {
                     VStack(alignment: .leading, spacing: 6) {
                         Text("Journey Progress")
                             .font(AppTypography.caption())
-                            .foregroundStyle(AppColors.goldAccent)
+                            .foregroundStyle(AppColors.premiumGold)
                             .textCase(.uppercase)
 
                         Text(planTitle)

@@ -19,7 +19,7 @@ struct OnboardingCard: View {
 
                     Image(systemName: systemImage)
                         .font(.system(size: 34, weight: .semibold))
-                        .foregroundStyle(AppColors.textPrimary)
+                        .foregroundStyle(AppColors.brightTextOnAccent)
                 }
                 .scaleEffect(isActive ? 1 : 0.94)
                 .animation(.spring(response: 0.48, dampingFraction: 0.82), value: isActive)
@@ -33,7 +33,7 @@ struct OnboardingCard: View {
                     if let subtitle {
                         Text(subtitle)
                             .font(AppTypography.callout())
-                            .foregroundStyle(AppColors.goldAccent)
+                            .foregroundStyle(AppColors.voltLime)
                             .fixedSize(horizontal: false, vertical: true)
                     }
 
@@ -49,7 +49,7 @@ struct OnboardingCard: View {
         .background(
             RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
                 .fill(gradient.opacity(0.18))
-                .blur(radius: 20)
+                .blur(radius: 24)
         )
     }
 }
@@ -60,7 +60,7 @@ struct OnboardingCard: View {
         subtitle: AppMetadata.tagline,
         description: "Discover guided prayer journeys inspired by God's Word.",
         systemImage: "hands.sparkles.fill",
-        gradient: BrandGradients.primaryHero,
+        gradient: BrandGradients.activityHero,
         isActive: true
     )
     .padding()
