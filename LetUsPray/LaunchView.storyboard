@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="25079.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25059"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="7b3-13-p0v">
+                                <rect key="frame" x="60" y="60" width="294" height="776"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="LetUsPray" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQi-gP-v5M">
+                                <rect key="frame" x="168" y="852" width="78.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+                        <color key="backgroundColor" systemColor="systemBackground"/>
+                        <constraints>
+                            <constraint firstItem="7b3-13-p0v" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="9pU-kj-9oz"/>
+                            <constraint firstItem="7b3-13-p0v" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9qG-85-jqB"/>
+                            <constraint firstAttribute="width" secondItem="7b3-13-p0v" secondAttribute="width" constant="120" id="B6F-h0-1XE"/>
+                            <constraint firstAttribute="height" secondItem="7b3-13-p0v" secondAttribute="height" constant="120" id="OZz-Ee-fMT"/>
+                            <constraint firstItem="FQi-gP-v5M" firstAttribute="top" secondItem="7b3-13-p0v" secondAttribute="bottom" constant="16" id="P2t-3v-JJz"/>
+                            <constraint firstItem="FQi-gP-v5M" firstAttribute="centerX" secondItem="7b3-13-p0v" secondAttribute="centerX" id="zLX-qM-vqY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="107"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AppLogo" width="128" height="128"/>
+        <systemColor name="systemBackground">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+        </systemColor>
+    </resources>
+</document>

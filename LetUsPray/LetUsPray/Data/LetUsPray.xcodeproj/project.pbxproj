@@ -6,14 +6,7 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		AB7534DF2FDC641300F9D8A7 /* LaunchView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7534DE2FDC641300F9D8A7 /* LaunchView.storyboard */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		AB7534922FDC505900F9D8A7 /* LetUsPray.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = LetUsPray.xcodeproj; sourceTree = "<group>"; };
-		AB7534DE2FDC641300F9D8A7 /* LaunchView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchView.storyboard; sourceTree = "<group>"; };
-		ABCA094E2FDB370F004C5D69 /* LetUsPray.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LetUsPray.xcodeproj; path = LetUsPray/Data/LetUsPray.xcodeproj; sourceTree = SOURCE_ROOT; };
 		ABDF10B22FD3CB48009A879B /* LetUsPray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetUsPray.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,26 +29,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AB7534B72FDC505900F9D8A7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		ABCA094F2FDB370F004C5D69 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		ABDF10A92FD3CB48009A879B = {
 			isa = PBXGroup;
 			children = (
 				ABDF10B42FD3CB48009A879B /* LetUsPray */,
 				ABDF10B32FD3CB48009A879B /* Products */,
-				AB7534DE2FDC641300F9D8A7 /* LaunchView.storyboard */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,16 +97,6 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = ABDF10B32FD3CB48009A879B /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = ABCA094F2FDB370F004C5D69 /* Products */;
-					ProjectRef = ABCA094E2FDB370F004C5D69 /* LetUsPray.xcodeproj */;
-				},
-				{
-					ProductGroup = AB7534B72FDC505900F9D8A7 /* Products */;
-					ProjectRef = AB7534922FDC505900F9D8A7 /* LetUsPray.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				ABDF10B12FD3CB48009A879B /* LetUsPray */,
@@ -141,7 +109,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB7534DF2FDC641300F9D8A7 /* LaunchView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
