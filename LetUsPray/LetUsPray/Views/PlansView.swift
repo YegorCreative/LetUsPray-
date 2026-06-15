@@ -31,6 +31,7 @@ struct PlansView: View {
                     PlanDetailView(
                         plan: plan,
                         isActive: activePlanID == plan.id,
+                        completedDayNumbers: $completedDayNumbers,
                         savedVerseIDs: $savedVerseIDs,
                         analytics: $analytics,
                         onStartJourney: {
@@ -57,6 +58,7 @@ struct PlansView: View {
                     PlanDetailView(
                         plan: plan,
                         isActive: activePlanID == plan.id,
+                        completedDayNumbers: $completedDayNumbers,
                         savedVerseIDs: $savedVerseIDs,
                         analytics: $analytics,
                         onStartJourney: {

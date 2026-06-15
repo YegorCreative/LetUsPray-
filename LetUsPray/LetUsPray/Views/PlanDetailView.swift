@@ -3,6 +3,7 @@ import SwiftUI
 struct PlanDetailView: View {
     let plan: PrayerPlan
     let isActive: Bool
+    @Binding var completedDayNumbers: Set<Int>
     @Binding var savedVerseIDs: Set<String>
     @Binding var analytics: PrayerAnalyticsSnapshot
     let onStartJourney: () -> Void
@@ -148,7 +149,7 @@ struct PlanDetailView: View {
                         analytics: $analytics
                     )
                 } label: {
-                    JourneyDayCard(day: day, isCompleted: false)
+                    JourneyDayCard(day: day, isCompleted: completedDayNumbers.contains(day.dayNumber))
                 }
                 .buttonStyle(.plain)
             }
@@ -180,6 +181,7 @@ struct PlanDetailView: View {
         PlanDetailView(
             plan: ProverbsPrayerData.plan,
             isActive: true,
+            completedDayNumbers: .constant([]),
             savedVerseIDs: .constant([]),
             analytics: .constant(.init(completedPrayersCount: 0, savedPrayersCount: 0, activePlanID: ProverbsPrayerData.plan.id, completedDaysByPlan: [:])),
             onStartJourney: {}
