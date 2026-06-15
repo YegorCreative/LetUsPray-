@@ -14,10 +14,16 @@ struct PrayerCardView: View {
                             .font(AppTypography.caption())
                             .foregroundStyle(AppColors.accent)
 
+                        Text("Verse")
+                            .font(AppTypography.caption())
+                            .foregroundStyle(AppColors.textTertiary)
+                            .textCase(.uppercase)
+
                         Text(verse.text)
-                            .font(AppTypography.title2())
-                            .foregroundStyle(AppColors.textPrimary)
+                            .font(AppTypography.body())
+                            .foregroundStyle(AppColors.textSecondary)
                             .fixedSize(horizontal: false, vertical: true)
+                            .lineSpacing(4)
                     }
 
                     Spacer(minLength: AppSpacing.medium)
