@@ -18,6 +18,11 @@ struct PrayerDetailView: View {
                 VStack(alignment: .leading, spacing: AppSpacing.large) {
                     headerCard
 
+                    Text("Loaded \(day.verses.count) prayers")
+                        .font(AppTypography.caption())
+                        .foregroundStyle(AppColors.textTertiary)
+                        .frame(maxWidth: .infinity, alignment: .center)
+
                     if day.verses.isEmpty {
                         placeholderCard
                     } else {

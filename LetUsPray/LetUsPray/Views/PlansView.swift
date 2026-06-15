@@ -31,6 +31,8 @@ struct PlansView: View {
                     PlanDetailView(
                         plan: plan,
                         isActive: activePlanID == plan.id,
+                        savedVerseIDs: $savedVerseIDs,
+                        analytics: $analytics,
                         onStartJourney: {
                             activePlanID = plan.id
                             viewModel.setActivePlan(id: plan.id)
@@ -55,6 +57,8 @@ struct PlansView: View {
                     PlanDetailView(
                         plan: plan,
                         isActive: activePlanID == plan.id,
+                        savedVerseIDs: $savedVerseIDs,
+                        analytics: $analytics,
                         onStartJourney: {
                             activePlanID = plan.id
                             viewModel.setActivePlan(id: plan.id)
@@ -79,7 +83,7 @@ struct PlansView: View {
                         .fill(gradient)
                         .frame(width: isFeatured ? 64 : 54, height: isFeatured ? 64 : 54)
 
-                    Image(systemName: plan.category.brandIcon)
+                    Image(systemName: plan.id == ProverbsPrayerData.plan.id ? plan.coverIcon : plan.category.brandIcon)
                         .font(.system(size: isFeatured ? 26 : 20, weight: .semibold))
                         .foregroundStyle(AppColors.textPrimary)
                 }

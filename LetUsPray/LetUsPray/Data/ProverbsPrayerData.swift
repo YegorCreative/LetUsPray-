@@ -9,7 +9,7 @@ enum ProverbsPrayerData {
         category: .wisdom,
         durationDays: 30,
         accentColorName: "wisdom",
-        coverIcon: "book.pages.fill",
+        coverIcon: "book.pages",
         days: detailedDays + placeholderDays
     )
 
@@ -220,9 +220,9 @@ enum ProverbsPrayerData {
                 ),
                 PrayerVerse(
                     id: "prov-1-closing",
-                    reference: "Closing Prayer",
-                    text: "A final prayer of commitment.",
-                    prayer: "Father, thank You for the wisdom of Proverbs 1. Root me in holy reverence, keep me teachable, and lead me from every trap into Your secure paths. In Jesus’ name, Amen. 🙏🏻"
+                    reference: "Closing",
+                    text: "In Jesus’ name, Amen. 🙏🏻",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
                 )
             ]
         ),

@@ -3,6 +3,8 @@ import SwiftUI
 struct PlanDetailView: View {
     let plan: PrayerPlan
     let isActive: Bool
+    @Binding var savedVerseIDs: Set<String>
+    @Binding var analytics: PrayerAnalyticsSnapshot
     let onStartJourney: () -> Void
 
     var body: some View {
@@ -14,6 +16,9 @@ struct PlanDetailView: View {
                     coverSection
                     metadataSection
                     actionSection
+                    if !plan.days.isEmpty {
+                        journeyDaysSection
+                    }
                 }
                 .padding(.horizontal, AppSpacing.large)
                 .padding(.top, AppSpacing.medium)
@@ -65,7 +70,7 @@ struct PlanDetailView: View {
 
                     Spacer()
 
-                    Image(systemName: plan.category.brandIcon)
+                    Image(systemName: plan.id == ProverbsPrayerData.plan.id ? plan.coverIcon : plan.category.brandIcon)
                         .font(.system(size: 34, weight: .semibold))
                         .foregroundStyle(AppColors.textPrimary)
                         .frame(width: 78, height: 78)
@@ -128,6 +133,28 @@ struct PlanDetailView: View {
         }
     }
 
+    private var journeyDaysSection: some View {
+        VStack(alignment: .leading, spacing: AppSpacing.medium) {
+            Text("Journey Days")
+                .font(AppTypography.headline())
+                .foregroundStyle(AppColors.textPrimary)
+
+            ForEach(plan.days) { day in
+                NavigationLink {
+                    PrayerDetailView(
+                        plan: plan,
+                        day: day,
+                        savedVerseIDs: $savedVerseIDs,
+                        analytics: $analytics
+                    )
+                } label: {
+                    JourneyDayCard(day: day, isCompleted: false)
+                }
+                .buttonStyle(.plain)
+            }
+        }
+    }
+
     private func metadataPill(title: String, value: String) -> some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(title)
@@ -150,6 +177,12 @@ struct PlanDetailView: View {
 
 #Preview {
     NavigationStack {
-        PlanDetailView(plan: ProverbsPrayerData.plan, isActive: true, onStartJourney: {})
+        PlanDetailView(
+            plan: ProverbsPrayerData.plan,
+            isActive: true,
+            savedVerseIDs: .constant([]),
+            analytics: .constant(.init(completedPrayersCount: 0, savedPrayersCount: 0, activePlanID: ProverbsPrayerData.plan.id, completedDaysByPlan: [:])),
+            onStartJourney: {}
+        )
     }
 }
