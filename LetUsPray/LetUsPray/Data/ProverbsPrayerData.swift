@@ -626,7 +626,7 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-4-4",
                     reference: "Proverbs 4:4",
-                    text: "Then he taught me and said to me,\n  "Let your heart hold fast my words;\n  Keep my commandments and live;",
+                    text: "Then he taught me and said to me,\n  \"Let your heart hold fast my words;\n  Keep my commandments and live;",
                     prayer: "Jesus, help me keep Your words in my heart and obey Your commands so that I may truly live."
                 ),
                 PrayerVerse(
@@ -656,7 +656,7 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-4-9",
                     reference: "Proverbs 4:9",
-                    text: "She will place on your head a garland of grace;\n  She will present you with a crown of beauty."",
+                    text: "She will place on your head a garland of grace;\n  She will present you with a crown of beauty.\"",
                     prayer: "Lord, let wisdom be like a crown of grace upon my life and bring honor to Your name."
                 ),
                 PrayerVerse(
@@ -850,7 +850,7 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-5-12",
                     reference: "Proverbs 5:12",
-                    text: "And you say, "How I have hated instruction!\n  And my heart spurned reproof!",
+                    text: "And you say, \"How I have hated instruction!\n  And my heart spurned reproof!",
                     prayer: "Lord, give me a heart that welcomes correction, instruction, and wisdom while there is still time."
                 ),
                 PrayerVerse(
@@ -862,7 +862,7 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-5-14",
                     reference: "Proverbs 5:14",
-                    text: "I was almost in utter ruin\n  In the midst of the assembly and congregation."",
+                    text: "I was almost in utter ruin\n  In the midst of the assembly and congregation.\"",
                     prayer: "Father, protect me from public shame and the consequences of hidden sin."
                 ),
                 PrayerVerse(
@@ -936,211 +936,211 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-6-1",
                     reference: "Proverbs 6:1",
-                    text: "Dear Jesus, help me to walk in wisdom with my decisions, my words, and my commitments. Teach me not to make careless promises or place myself in harmful obligations.",
+                    text: "My son, if you have become surety for your neighbor,\n  Have given a pledge for a stranger,",
                     prayer: "Dear Jesus, help me to walk in wisdom with my decisions, my words, and my commitments. Teach me not to make careless promises or place myself in harmful obligations."
                 ),
                 PrayerVerse(
                     id: "prov-6-2",
                     reference: "Proverbs 6:2",
-                    text: "Father, guard my mouth and my speech. Help me not to speak rashly or make promises without wisdom.",
+                    text: "If you have been snared with the words of your mouth,\n  Have been caught with the words of your mouth,",
                     prayer: "Father, guard my mouth and my speech. Help me not to speak rashly or make promises without wisdom."
                 ),
                 PrayerVerse(
                     id: "prov-6-3",
                     reference: "Proverbs 6:3",
-                    text: "Lord, teach me humility. Help me to seek peace quickly and correct my mistakes with wisdom and honesty.",
+                    text: "Do this then, my son, and deliver yourself;\n  Since you have come into the hand of your neighbor,\n  Go, humble yourself, and importune your neighbor.",
                     prayer: "Lord, teach me humility. Help me to seek peace quickly and correct my mistakes with wisdom and honesty."
                 ),
                 PrayerVerse(
                     id: "prov-6-4",
                     reference: "Proverbs 6:4",
-                    text: "Jesus, help me not ignore danger, sin, or foolishness in my life. Give me urgency to deal with problems wisely.",
+                    text: "Give no sleep to your eyes,\n  Nor slumber to your eyelids;",
                     prayer: "Jesus, help me not ignore danger, sin, or foolishness in my life. Give me urgency to deal with problems wisely."
                 ),
                 PrayerVerse(
                     id: "prov-6-5",
                     reference: "Proverbs 6:5",
-                    text: "Father, rescue me from every trap of the enemy and give me wisdom to flee from danger quickly.",
+                    text: "Deliver yourself like a gazelle from the hunter's hand\n  And like a bird from the hand of the fowler.",
                     prayer: "Father, rescue me from every trap of the enemy and give me wisdom to flee from danger quickly."
                 ),
                 PrayerVerse(
                     id: "prov-6-6",
                     reference: "Proverbs 6:6",
-                    text: "Lord, teach me diligence, discipline, and consistency. Help me not waste my time or opportunities.",
+                    text: "Go to the ant, O sluggard,\n  Observe her ways and be wise,",
                     prayer: "Lord, teach me diligence, discipline, and consistency. Help me not waste my time or opportunities."
                 ),
                 PrayerVerse(
                     id: "prov-6-7",
                     reference: "Proverbs 6:7",
-                    text: "Jesus, help me develop self-control and responsibility even when nobody is watching.",
+                    text: "Which, having no chief,\n  Officer or ruler,",
                     prayer: "Jesus, help me develop self-control and responsibility even when nobody is watching."
                 ),
                 PrayerVerse(
                     id: "prov-6-8",
                     reference: "Proverbs 6:8",
-                    text: "Father, teach me to prepare wisely for the future and faithfully steward the resources You provide.",
+                    text: "Prepares her food in the summer\n  And gathers her provision in the harvest.",
                     prayer: "Father, teach me to prepare wisely for the future and faithfully steward the resources You provide."
                 ),
                 PrayerVerse(
                     id: "prov-6-9",
                     reference: "Proverbs 6:9",
-                    text: "Lord, awaken me spiritually, mentally, and physically. Remove laziness and passivity from my life.",
+                    text: "How long will you lie down, O sluggard?\n  When will you arise from your sleep?",
                     prayer: "Lord, awaken me spiritually, mentally, and physically. Remove laziness and passivity from my life."
                 ),
                 PrayerVerse(
                     id: "prov-6-10",
                     reference: "Proverbs 6:10",
-                    text: "Jesus, protect me from becoming comfortable in complacency or drifting away from purposeful living.",
+                    text: "\"A little sleep, a little slumber,\n  A little folding of the hands to rest\"—",
                     prayer: "Jesus, protect me from becoming comfortable in complacency or drifting away from purposeful living."
                 ),
                 PrayerVerse(
                     id: "prov-6-11",
                     reference: "Proverbs 6:11",
-                    text: "Father, help me understand the consequences of neglect and laziness. Teach me discipline and diligence.",
+                    text: "Your poverty will come in like a vagabond\n  And your need like an armed man.",
                     prayer: "Father, help me understand the consequences of neglect and laziness. Teach me discipline and diligence."
                 ),
                 PrayerVerse(
                     id: "prov-6-12",
                     reference: "Proverbs 6:12",
-                    text: "Lord, purify my heart and my speech. Remove deceit, manipulation, and dishonesty from my life.",
+                    text: "A worthless person, a wicked man,\n  Is the one who walks with a perverse mouth,",
                     prayer: "Lord, purify my heart and my speech. Remove deceit, manipulation, and dishonesty from my life."
                 ),
                 PrayerVerse(
                     id: "prov-6-13",
                     reference: "Proverbs 6:13",
-                    text: "Jesus, help me walk sincerely and transparently before You and others.",
+                    text: "Who winks with his eyes, who signals with his feet,\n  Who points with his fingers;",
                     prayer: "Jesus, help me walk sincerely and transparently before You and others."
                 ),
                 PrayerVerse(
                     id: "prov-6-14",
                     reference: "Proverbs 6:14",
-                    text: "Father, cleanse my heart from bitterness, division, and harmful intentions. Make me a peacemaker.",
+                    text: "Who with perversity in his heart continually devises evil,\n  Who spreads strife.",
                     prayer: "Father, cleanse my heart from bitterness, division, and harmful intentions. Make me a peacemaker."
                 ),
                 PrayerVerse(
                     id: "prov-6-15",
                     reference: "Proverbs 6:15",
-                    text: "Lord, keep me from the path of destruction and give me a heart that listens to correction.",
+                    text: "Therefore his calamity will come suddenly;\n  Instantly he will be broken and there will be no healing.",
                     prayer: "Lord, keep me from the path of destruction and give me a heart that listens to correction."
                 ),
                 PrayerVerse(
                     id: "prov-6-16",
                     reference: "Proverbs 6:16",
-                    text: "Jesus, help me hate what is evil and love what is righteous and pleasing in Your sight.",
+                    text: "There are six things which the Lord hates,\n  Yes, seven which are an abomination to Him:",
                     prayer: "Jesus, help me hate what is evil and love what is righteous and pleasing in Your sight."
                 ),
                 PrayerVerse(
                     id: "prov-6-17",
                     reference: "Proverbs 6:17",
-                    text: "Father, remove pride, dishonesty, and cruelty from my heart. Teach me humility, truth, and compassion.",
+                    text: "Haughty eyes, a lying tongue,\n  And hands that shed innocent blood,",
                     prayer: "Father, remove pride, dishonesty, and cruelty from my heart. Teach me humility, truth, and compassion."
                 ),
                 PrayerVerse(
                     id: "prov-6-18",
                     reference: "Proverbs 6:18",
-                    text: "Lord, purify my thoughts and desires. Help me run toward righteousness instead of sin.",
+                    text: "A heart that devises wicked plans,\n  Feet that run rapidly to evil,",
                     prayer: "Lord, purify my thoughts and desires. Help me run toward righteousness instead of sin."
                 ),
                 PrayerVerse(
                     id: "prov-6-19",
                     reference: "Proverbs 6:19",
-                    text: "Jesus, help me never spread lies, gossip, or division. Let me bring peace and truth wherever I go.",
+                    text: "A false witness who utters lies,\n  And one who spreads strife among brothers.",
                     prayer: "Jesus, help me never spread lies, gossip, or division. Let me bring peace and truth wherever I go."
                 ),
                 PrayerVerse(
                     id: "prov-6-20",
                     reference: "Proverbs 6:20",
-                    text: "Father, help me honor godly instruction and receive wisdom with a teachable spirit.",
+                    text: "My son, observe the commandment of your father\n  And do not forsake the teaching of your mother;",
                     prayer: "Father, help me honor godly instruction and receive wisdom with a teachable spirit."
                 ),
                 PrayerVerse(
                     id: "prov-6-21",
                     reference: "Proverbs 6:21",
-                    text: "Lord, let Your Word remain close to my heart and guide my life daily.",
+                    text: "Bind them continually on your heart;\n  Tie them around your neck.",
                     prayer: "Lord, let Your Word remain close to my heart and guide my life daily."
                 ),
                 PrayerVerse(
                     id: "prov-6-22",
                     reference: "Proverbs 6:22",
-                    text: "Jesus, let Your wisdom guide me when I walk, watch over me when I sleep, and direct me when I rise.",
+                    text: "When you walk about, they will guide you;\n  When you sleep, they will watch over you;\n  And when you awake, they will talk to you.",
                     prayer: "Jesus, let Your wisdom guide me when I walk, watch over me when I sleep, and direct me when I rise."
                 ),
                 PrayerVerse(
                     id: "prov-6-23",
                     reference: "Proverbs 6:23",
-                    text: "Father, thank You for Your commandments and correction. Help me receive discipline with humility.",
+                    text: "For the commandment is a lamp and the teaching is light;\n  And reproofs for discipline are the way of life",
                     prayer: "Father, thank You for Your commandments and correction. Help me receive discipline with humility."
                 ),
                 PrayerVerse(
                     id: "prov-6-24",
                     reference: "Proverbs 6:24",
-                    text: "Lord, protect my heart, mind, and eyes from temptation and impurity.",
+                    text: "To keep you from the evil woman,\n  From the smooth tongue of the adulteress.",
                     prayer: "Lord, protect my heart, mind, and eyes from temptation and impurity."
                 ),
                 PrayerVerse(
                     id: "prov-6-25",
                     reference: "Proverbs 6:25",
-                    text: "Jesus, guard my thoughts and desires so that lust never takes root in my heart.",
+                    text: "Do not desire her beauty in your heart,\n  Nor let her capture you with her eyelids.",
                     prayer: "Jesus, guard my thoughts and desires so that lust never takes root in my heart."
                 ),
                 PrayerVerse(
                     id: "prov-6-26",
                     reference: "Proverbs 6:26",
-                    text: "Father, help me understand the cost and destruction that sin can bring into a life.",
+                    text: "For on account of a harlot one is reduced to a loaf of bread,\n  And an adulteress hunts for the precious life.",
                     prayer: "Father, help me understand the cost and destruction that sin can bring into a life."
                 ),
                 PrayerVerse(
                     id: "prov-6-27",
                     reference: "Proverbs 6:27",
-                    text: "Lord, remind me that sin always carries consequences. Give me wisdom to avoid dangerous temptations.",
+                    text: "Can a man take fire in his bosom\n  And his clothes not be burned?",
                     prayer: "Lord, remind me that sin always carries consequences. Give me wisdom to avoid dangerous temptations."
                 ),
                 PrayerVerse(
                     id: "prov-6-28",
                     reference: "Proverbs 6:28",
-                    text: "Jesus, help me never believe I can play with sin without being harmed. Keep me spiritually alert.",
+                    text: "Or can a man walk on hot coals\n  And his feet not be scorched?",
                     prayer: "Jesus, help me never believe I can play with sin without being harmed. Keep me spiritually alert."
                 ),
                 PrayerVerse(
                     id: "prov-6-29",
                     reference: "Proverbs 6:29",
-                    text: "Father, help me honor purity, faithfulness, and integrity in every relationship.",
+                    text: "So is the one who goes in to his neighbor's wife;\n  Whoever touches her will not go unpunished.",
                     prayer: "Father, help me honor purity, faithfulness, and integrity in every relationship."
                 ),
                 PrayerVerse(
                     id: "prov-6-30",
                     reference: "Proverbs 6:30",
-                    text: "Lord, give me compassion, wisdom, and understanding toward those who struggle and suffer.",
+                    text: "Men do not despise a thief if he steals\n  To satisfy himself when he is hungry;",
                     prayer: "Lord, give me compassion, wisdom, and understanding toward those who struggle and suffer."
                 ),
                 PrayerVerse(
                     id: "prov-6-31",
                     reference: "Proverbs 6:31",
-                    text: "Jesus, teach me responsibility and accountability for my actions.",
+                    text: "But when he is found, he must repay sevenfold;\n  He must give all the substance of his house.",
                     prayer: "Jesus, teach me responsibility and accountability for my actions."
                 ),
                 PrayerVerse(
                     id: "prov-6-32",
                     reference: "Proverbs 6:32",
-                    text: "Father, protect me from destructive desires and foolish choices that damage my soul.",
+                    text: "The one who commits adultery with a woman is lacking sense;\n  He who would destroy himself does it.",
                     prayer: "Father, protect me from destructive desires and foolish choices that damage my soul."
                 ),
                 PrayerVerse(
                     id: "prov-6-33",
                     reference: "Proverbs 6:33",
-                    text: "Lord, help me avoid paths that lead to shame, brokenness, and regret.",
+                    text: "Wounds and disgrace he will find,\n  And his reproach will not be blotted out.",
                     prayer: "Lord, help me avoid paths that lead to shame, brokenness, and regret."
                 ),
                 PrayerVerse(
                     id: "prov-6-34",
                     reference: "Proverbs 6:34",
-                    text: "Jesus, teach me the seriousness of betrayal and help me walk faithfully before You and others.",
+                    text: "For jealousy enrages a man,\n  And he will not spare in the day of vengeance.",
                     prayer: "Jesus, teach me the seriousness of betrayal and help me walk faithfully before You and others."
                 ),
                 PrayerVerse(
                     id: "prov-6-35",
                     reference: "Proverbs 6:35",
-                    text: "Father, help me live carefully, wisely, and honorably so that my life reflects Your righteousness.",
+                    text: "He will not accept any ransom,\n  Nor will he be satisfied though you give many gifts.",
                     prayer: "Father, help me live carefully, wisely, and honorably so that my life reflects Your righteousness."
                 ),
                 PrayerVerse(
@@ -1160,163 +1160,163 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-7-1",
                     reference: "Proverbs 7:1",
-                    text: "Dear Jesus, help me keep Your words and treasure Your commandments in my heart.",
+                    text: "My son, keep my words\n  And treasure my commandments within you.",
                     prayer: "Dear Jesus, help me keep Your words and treasure Your commandments in my heart."
                 ),
                 PrayerVerse(
                     id: "prov-7-2",
                     reference: "Proverbs 7:2",
-                    text: "Father, help me obey Your commands and walk in the life that comes from following Your truth.",
+                    text: "Keep my commandments and live,\n  And my teaching as the apple of your eye.",
                     prayer: "Father, help me obey Your commands and walk in the life that comes from following Your truth."
                 ),
                 PrayerVerse(
                     id: "prov-7-3",
                     reference: "Proverbs 7:3",
-                    text: "Lord, let Your wisdom be written upon my heart and remain before my eyes every day.",
+                    text: "Bind them on your fingers;\n  Write them on the tablet of your heart.",
                     prayer: "Lord, let Your wisdom be written upon my heart and remain before my eyes every day."
                 ),
                 PrayerVerse(
                     id: "prov-7-4",
                     reference: "Proverbs 7:4",
-                    text: "Jesus, help me treat wisdom as a close friend and understanding as a beloved companion.",
+                    text: "Say to wisdom, \"You are my sister,\"\n  And call understanding your intimate friend;",
                     prayer: "Jesus, help me treat wisdom as a close friend and understanding as a beloved companion."
                 ),
                 PrayerVerse(
                     id: "prov-7-5",
                     reference: "Proverbs 7:5",
-                    text: "Father, protect me from temptation and from voices that seek to draw me away from Your ways.",
+                    text: "That they may keep you from an adulteress,\n  From the foreigner who flatters with her words.",
                     prayer: "Father, protect me from temptation and from voices that seek to draw me away from Your ways."
                 ),
                 PrayerVerse(
                     id: "prov-7-6",
                     reference: "Proverbs 7:6",
-                    text: "Lord, give me discernment to recognize danger before I walk into it.",
+                    text: "For at the window of my house\n  I looked out through my lattice,",
                     prayer: "Lord, give me discernment to recognize danger before I walk into it."
                 ),
                 PrayerVerse(
                     id: "prov-7-7",
                     reference: "Proverbs 7:7",
-                    text: "Jesus, keep me from being simple-minded or lacking understanding. Fill me with wisdom and good judgment.",
+                    text: "And I saw among the naive,\n  And discerned among the youths\n  A young man lacking sense,",
                     prayer: "Jesus, keep me from being simple-minded or lacking understanding. Fill me with wisdom and good judgment."
                 ),
                 PrayerVerse(
                     id: "prov-7-8",
                     reference: "Proverbs 7:8",
-                    text: "Father, help me avoid places, situations, and influences that lead me toward temptation.",
+                    text: "Passing through the street near her corner;\n  And he takes the way to her house,",
                     prayer: "Father, help me avoid places, situations, and influences that lead me toward temptation."
                 ),
                 PrayerVerse(
                     id: "prov-7-9",
                     reference: "Proverbs 7:9",
-                    text: "Lord, protect me during seasons of weakness, loneliness, and spiritual darkness.",
+                    text: "In the twilight, in the evening,\n  In the middle of the night and in the darkness.",
                     prayer: "Lord, protect me during seasons of weakness, loneliness, and spiritual darkness."
                 ),
                 PrayerVerse(
                     id: "prov-7-10",
                     reference: "Proverbs 7:10",
-                    text: "Jesus, give me wisdom to recognize deception even when it appears attractive or harmless.",
+                    text: "And behold, a woman comes to meet him,\n  Dressed as a harlot and cunning of heart.",
                     prayer: "Jesus, give me wisdom to recognize deception even when it appears attractive or harmless."
                 ),
                 PrayerVerse(
                     id: "prov-7-11",
                     reference: "Proverbs 7:11",
-                    text: "Father, help me remain humble, disciplined, and obedient to Your guidance.",
+                    text: "She is boisterous and rebellious,\n  Her feet do not remain at home;",
                     prayer: "Father, help me remain humble, disciplined, and obedient to Your guidance."
                 ),
                 PrayerVerse(
                     id: "prov-7-12",
                     reference: "Proverbs 7:12",
-                    text: "Lord, teach me not to wander aimlessly into situations that can compromise my faith.",
+                    text: "She is now in the streets, now in the squares,\n  And lurks by every corner.",
                     prayer: "Lord, teach me not to wander aimlessly into situations that can compromise my faith."
                 ),
                 PrayerVerse(
                     id: "prov-7-13",
                     reference: "Proverbs 7:13",
-                    text: "Jesus, help me recognize manipulation and resist every form of temptation.",
+                    text: "So she seizes him and kisses him\n  And with a brazen face she says to him:",
                     prayer: "Jesus, help me recognize manipulation and resist every form of temptation."
                 ),
                 PrayerVerse(
                     id: "prov-7-14",
                     reference: "Proverbs 7:14",
-                    text: "Father, give me discernment when people use spiritual language to justify sinful behavior.",
+                    text: "\"I was due to offer peace offerings;\n  Today I have paid my vows.",
                     prayer: "Father, give me discernment when people use spiritual language to justify sinful behavior."
                 ),
                 PrayerVerse(
                     id: "prov-7-15",
                     reference: "Proverbs 7:15",
-                    text: "Lord, protect me from flattery and words designed to deceive my heart.",
+                    text: "Therefore I have come out to meet you,\n  To seek your presence earnestly, and I have found you.",
                     prayer: "Lord, protect me from flattery and words designed to deceive my heart."
                 ),
                 PrayerVerse(
                     id: "prov-7-16",
                     reference: "Proverbs 7:16",
-                    text: "Jesus, help me value purity over temporary pleasure and righteousness over worldly attraction.",
+                    text: "I have spread my couch with coverings,\n  With colored linens of Egypt.",
                     prayer: "Jesus, help me value purity over temporary pleasure and righteousness over worldly attraction."
                 ),
                 PrayerVerse(
                     id: "prov-7-17",
                     reference: "Proverbs 7:17",
-                    text: "Father, give me wisdom to see beyond outward beauty and attractive appearances.",
+                    text: "I have sprinkled my bed\n  With myrrh, aloes and cinnamon.",
                     prayer: "Father, give me wisdom to see beyond outward beauty and attractive appearances."
                 ),
                 PrayerVerse(
                     id: "prov-7-18",
                     reference: "Proverbs 7:18",
-                    text: "Lord, help me resist invitations that lead away from Your will and Your truth.",
+                    text: "Come, let us drink our fill of love until morning;\n  Let us delight ourselves with caresses.",
                     prayer: "Lord, help me resist invitations that lead away from Your will and Your truth."
                 ),
                 PrayerVerse(
                     id: "prov-7-19",
                     reference: "Proverbs 7:19",
-                    text: "Jesus, protect me from believing that hidden sin can remain hidden from You.",
+                    text: "For my husband is not at home,\n  He has gone on a long journey;",
                     prayer: "Jesus, protect me from believing that hidden sin can remain hidden from You."
                 ),
                 PrayerVerse(
                     id: "prov-7-20",
                     reference: "Proverbs 7:20",
-                    text: "Father, remind me that every action has consequences and that You see all things.",
+                    text: "He has taken a bag of money with him,\n  At the full moon he will come home.\"",
                     prayer: "Father, remind me that every action has consequences and that You see all things."
                 ),
                 PrayerVerse(
                     id: "prov-7-21",
                     reference: "Proverbs 7:21",
-                    text: "Lord, guard my heart from persuasive words that seek to pull me away from righteousness.",
+                    text: "With her many persuasions she entices him;\n  With her flattering lips she seduces him.",
                     prayer: "Lord, guard my heart from persuasive words that seek to pull me away from righteousness."
                 ),
                 PrayerVerse(
                     id: "prov-7-22",
                     reference: "Proverbs 7:22",
-                    text: "Jesus, keep me from following temptation foolishly and without understanding.",
+                    text: "Suddenly he follows her\n  As an ox goes to the slaughter,\n  Or as one in fetters to the discipline of a fool,",
                     prayer: "Jesus, keep me from following temptation foolishly and without understanding."
                 ),
                 PrayerVerse(
                     id: "prov-7-23",
                     reference: "Proverbs 7:23",
-                    text: "Father, help me recognize that sin ultimately wounds the soul and leads to destruction.",
+                    text: "Until an arrow pierces through his liver;\n  As a bird hastens to the snare,\n  So he does not know that it will cost him his life.",
                     prayer: "Father, help me recognize that sin ultimately wounds the soul and leads to destruction."
                 ),
                 PrayerVerse(
                     id: "prov-7-24",
                     reference: "Proverbs 7:24",
-                    text: "Lord, give me ears that listen carefully to wisdom and instruction.",
+                    text: "Now therefore, my sons, listen to me,\n  And pay attention to the words of my mouth.",
                     prayer: "Lord, give me ears that listen carefully to wisdom and instruction."
                 ),
                 PrayerVerse(
                     id: "prov-7-25",
                     reference: "Proverbs 7:25",
-                    text: "Jesus, keep my heart from wandering toward temptation or becoming captivated by sinful desires.",
+                    text: "Do not let your heart turn aside to her ways,\n  Do not stray into her paths.",
                     prayer: "Jesus, keep my heart from wandering toward temptation or becoming captivated by sinful desires."
                 ),
                 PrayerVerse(
                     id: "prov-7-26",
                     reference: "Proverbs 7:26",
-                    text: "Father, protect me from becoming another casualty of sin and spiritual compromise.",
+                    text: "For many are the victims she has cast down,\n  And numerous are all her slain.",
                     prayer: "Father, protect me from becoming another casualty of sin and spiritual compromise."
                 ),
                 PrayerVerse(
                     id: "prov-7-27",
                     reference: "Proverbs 7:27",
-                    text: "Lord, keep my feet on the path of life and away from every road that leads to destruction.",
+                    text: "Her house is the way to Sheol,\n  Descending to the chambers of death.",
                     prayer: "Lord, keep my feet on the path of life and away from every road that leads to destruction."
                 ),
                 PrayerVerse(
