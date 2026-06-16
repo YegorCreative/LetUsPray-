@@ -2431,7 +2431,230 @@ enum ProverbsPrayerData {
                 )
             ]
         ),
-        PrayerDay(dayNumber: 14, title: "Build a Wise Home", chapterReference: "Proverbs 14", summary: "Invite peace, patience, and wisdom into your relationships.", verses: []),
+        PrayerDay(
+            dayNumber: 14,
+            title: "Build a Wise Home",
+            chapterReference: "Proverbs 14",
+            summary: "Invite peace, patience, and wisdom into your relationships.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-14-1",
+                    reference: "Proverbs 14:1",
+                    text: "The wise woman builds her house,\n  But the foolish tears it down with her own hands.",
+                    prayer: "Dear Jesus, help me build my life, home, and relationships with wisdom instead of tearing them down through foolishness."
+                ),
+                PrayerVerse(
+                    id: "prov-14-2",
+                    reference: "Proverbs 14:2",
+                    text: "He who walks in his uprightness fears the Lord,\n  But he who is devious in his ways despises Him.",
+                    prayer: "Father, teach me to walk uprightly and live with reverence and obedience before You."
+                ),
+                PrayerVerse(
+                    id: "prov-14-3",
+                    reference: "Proverbs 14:3",
+                    text: "In the mouth of the foolish is a rod for his back,\n  But the lips of the wise will protect them.",
+                    prayer: "Lord, guard my mouth from prideful and foolish speech. Let my words bring wisdom and protection."
+                ),
+                PrayerVerse(
+                    id: "prov-14-4",
+                    reference: "Proverbs 14:4",
+                    text: "Where no oxen are, the manger is clean,\n  But much revenue comes by the strength of the ox.",
+                    prayer: "Jesus, help me embrace faithful work and responsibility, even when it requires effort and sacrifice."
+                ),
+                PrayerVerse(
+                    id: "prov-14-5",
+                    reference: "Proverbs 14:5",
+                    text: "A trustworthy witness will not lie,\n  But a false witness utters lies.",
+                    prayer: "Father, make me truthful, honest, and faithful in every word I speak."
+                ),
+                PrayerVerse(
+                    id: "prov-14-6",
+                    reference: "Proverbs 14:6",
+                    text: "A scoffer seeks wisdom and finds none,\n  But knowledge is easy to one who has understanding.",
+                    prayer: "Lord, give me understanding and wisdom as I seek truth sincerely with humility."
+                ),
+                PrayerVerse(
+                    id: "prov-14-7",
+                    reference: "Proverbs 14:7",
+                    text: "Leave the presence of a fool,\n  Or you will not discern words of knowledge.",
+                    prayer: "Jesus, help me recognize foolish influences and keep me close to wise and godly counsel."
+                ),
+                PrayerVerse(
+                    id: "prov-14-8",
+                    reference: "Proverbs 14:8",
+                    text: "The wisdom of the sensible is to understand his way,\n  But the foolishness of fools is deceit.",
+                    prayer: "Father, give me discernment to understand my ways and make wise decisions in life."
+                ),
+                PrayerVerse(
+                    id: "prov-14-9",
+                    reference: "Proverbs 14:9",
+                    text: "Fools mock at sin,\n  But among the upright there is good will.",
+                    prayer: "Lord, forgive my sins and help me never make light of wrongdoing or rebellion against You."
+                ),
+                PrayerVerse(
+                    id: "prov-14-10",
+                    reference: "Proverbs 14:10",
+                    text: "The heart knows its own bitterness,\n  And a stranger does not share its joy.",
+                    prayer: "Jesus, You know every joy and sorrow hidden in my heart. Comfort me and remain close to me always."
+                ),
+                PrayerVerse(
+                    id: "prov-14-11",
+                    reference: "Proverbs 14:11",
+                    text: "The house of the wicked will be destroyed,\n  But the tent of the upright will flourish.",
+                    prayer: "Father, establish my life upon righteousness so that what I build may endure."
+                ),
+                PrayerVerse(
+                    id: "prov-14-12",
+                    reference: "Proverbs 14:12",
+                    text: "There is a way which seems right to a man,\n  But its end is the way of death.",
+                    prayer: "Lord, protect me from following paths that seem right but lead to destruction. Guide me in Your truth."
+                ),
+                PrayerVerse(
+                    id: "prov-14-13",
+                    reference: "Proverbs 14:13",
+                    text: "Even in laughter the heart may be in pain,\n  And the end of joy may be grief.",
+                    prayer: "Jesus, help me bring my true emotions before You and heal every hidden sorrow within me."
+                ),
+                PrayerVerse(
+                    id: "prov-14-14",
+                    reference: "Proverbs 14:14",
+                    text: "The backslider in heart will have his fill of his own ways,\n  But a good man will be satisfied with his.",
+                    prayer: "Father, keep my heart faithful and satisfied in You instead of drifting away spiritually."
+                ),
+                PrayerVerse(
+                    id: "prov-14-15",
+                    reference: "Proverbs 14:15",
+                    text: "The naive believes everything,\n  But the sensible man considers his steps.",
+                    prayer: "Lord, give me wisdom and discernment so I do not believe everything blindly or walk carelessly."
+                ),
+                PrayerVerse(
+                    id: "prov-14-16",
+                    reference: "Proverbs 14:16",
+                    text: "A wise man is cautious and turns away from evil,\n  But a fool is arrogant and careless.",
+                    prayer: "Jesus, help me fear evil and turn away from temptation with wisdom and caution."
+                ),
+                PrayerVerse(
+                    id: "prov-14-17",
+                    reference: "Proverbs 14:17",
+                    text: "A quick-tempered man acts foolishly,\n  And a man of evil devices is hated.",
+                    prayer: "Father, give me patience and self-control instead of anger and impulsive reactions."
+                ),
+                PrayerVerse(
+                    id: "prov-14-18",
+                    reference: "Proverbs 14:18",
+                    text: "The naive inherit foolishness,\n  But the sensible are crowned with knowledge.",
+                    prayer: "Lord, let wisdom and understanding crown my life instead of foolishness."
+                ),
+                PrayerVerse(
+                    id: "prov-14-19",
+                    reference: "Proverbs 14:19",
+                    text: "The evil will bow down before the good,\n  And the wicked at the gates of the righteous.",
+                    prayer: "Jesus, establish righteousness and truth so that goodness may shine brightly before others."
+                ),
+                PrayerVerse(
+                    id: "prov-14-20",
+                    reference: "Proverbs 14:20",
+                    text: "The poor is hated even by his neighbor,\n  But those who love the rich are many.",
+                    prayer: "Father, help me love people sincerely regardless of status, wealth, or popularity."
+                ),
+                PrayerVerse(
+                    id: "prov-14-21",
+                    reference: "Proverbs 14:21",
+                    text: "He who despises his neighbor sins,\n  But happy is he who is gracious to the poor.",
+                    prayer: "Lord, forgive me when I overlook or mistreat others. Fill me with compassion and kindness toward the needy."
+                ),
+                PrayerVerse(
+                    id: "prov-14-22",
+                    reference: "Proverbs 14:22",
+                    text: "Will they not go astray who devise evil?\n  But kindness and truth will be to those who devise good.",
+                    prayer: "Jesus, guide my thoughts and plans toward goodness, mercy, and truth."
+                ),
+                PrayerVerse(
+                    id: "prov-14-23",
+                    reference: "Proverbs 14:23",
+                    text: "In all labor there is profit,\n  But mere talk leads only to poverty.",
+                    prayer: "Father, teach me diligence and faithful labor instead of empty words and procrastination."
+                ),
+                PrayerVerse(
+                    id: "prov-14-24",
+                    reference: "Proverbs 14:24",
+                    text: "The crown of the wise is their riches,\n  But the folly of fools is foolishness.",
+                    prayer: "Lord, help me use wisdom well and steward every blessing faithfully."
+                ),
+                PrayerVerse(
+                    id: "prov-14-25",
+                    reference: "Proverbs 14:25",
+                    text: "A truthful witness saves lives,\n  But he who utters lies is treacherous.",
+                    prayer: "Jesus, let me speak truth courageously and help protect others through honesty and integrity."
+                ),
+                PrayerVerse(
+                    id: "prov-14-26",
+                    reference: "Proverbs 14:26",
+                    text: "In the fear of the Lord there is strong confidence,\n  And his children will have refuge.",
+                    prayer: "Father, let my fear of You become my confidence, security, and refuge."
+                ),
+                PrayerVerse(
+                    id: "prov-14-27",
+                    reference: "Proverbs 14:27",
+                    text: "The fear of the Lord is a fountain of life,\n  That one may avoid the snares of death.",
+                    prayer: "Lord, let reverence for You be a fountain of life that keeps me from the traps of death."
+                ),
+                PrayerVerse(
+                    id: "prov-14-28",
+                    reference: "Proverbs 14:28",
+                    text: "In a multitude of people is a king's glory,\n  But in the dearth of people is a prince's ruin.",
+                    prayer: "Jesus, bless leaders with wisdom, humility, and hearts that serve people faithfully."
+                ),
+                PrayerVerse(
+                    id: "prov-14-29",
+                    reference: "Proverbs 14:29",
+                    text: "He who is slow to anger has great understanding,\n  But he who is quick-tempered exalts folly.",
+                    prayer: "Father, teach me patience and understanding so I do not act foolishly in anger."
+                ),
+                PrayerVerse(
+                    id: "prov-14-30",
+                    reference: "Proverbs 14:30",
+                    text: "A tranquil heart is life to the body,\n  But passion is rottenness to the bones.",
+                    prayer: "Lord, give me peace, contentment, and a healthy heart free from envy and bitterness."
+                ),
+                PrayerVerse(
+                    id: "prov-14-31",
+                    reference: "Proverbs 14:31",
+                    text: "He who oppresses the poor taunts his Maker,\n  But he who is gracious to the needy honors Him.",
+                    prayer: "Jesus, help me honor and care for the poor, the hurting, and those in need."
+                ),
+                PrayerVerse(
+                    id: "prov-14-32",
+                    reference: "Proverbs 14:32",
+                    text: "The wicked is thrust down by his wrongdoing,\n  But the righteous has a refuge when he dies.",
+                    prayer: "Father, let righteousness become my confidence and hope both in life and in death."
+                ),
+                PrayerVerse(
+                    id: "prov-14-33",
+                    reference: "Proverbs 14:33",
+                    text: "Wisdom rests in the heart of one who has understanding,\n  But in the hearts of fools it is made known.",
+                    prayer: "Lord, place wisdom deeply within my heart so that my life reflects understanding and truth."
+                ),
+                PrayerVerse(
+                    id: "prov-14-34",
+                    reference: "Proverbs 14:34",
+                    text: "Righteousness exalts a nation,\n  But sin is a disgrace to any people.",
+                    prayer: "Jesus, let righteousness exalt my life, my family, and my community."
+                ),
+                PrayerVerse(
+                    id: "prov-14-35",
+                    reference: "Proverbs 14:35",
+                    text: "The king's favor is toward a servant who acts wisely,\n  But his anger is toward him who acts shamefully.",
+                    prayer: "Father, help me live wisely and faithfully so that my life brings honor instead of shame."
+                ),
+                PrayerVerse(
+                    id: "prov-14-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
         PrayerDay(dayNumber: 15, title: "Choose Gentle Answers", chapterReference: "Proverbs 15", summary: "Pray for gentle responses and a listening spirit.", verses: []),
         PrayerDay(dayNumber: 16, title: "Commit Your Plans", chapterReference: "Proverbs 16", summary: "Offer your plans to God and ask Him to establish them.", verses: []),
         PrayerDay(dayNumber: 17, title: "Love Faithful Friendship", chapterReference: "Proverbs 17", summary: "Pray for covenant love and trustworthy companionship.", verses: []),
