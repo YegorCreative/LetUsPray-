@@ -608,163 +608,163 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-4-1",
                     reference: "Proverbs 4:1",
-                    text: "Dear Jesus, give me a listening heart that receives instruction and grows in understanding.",
+                    text: "Hear, O sons, the instruction of a father,\n  And give attention that you may gain understanding,",
                     prayer: "Dear Jesus, give me a listening heart that receives instruction and grows in understanding."
                 ),
                 PrayerVerse(
                     id: "prov-4-2",
                     reference: "Proverbs 4:2",
-                    text: "Father, help me value and hold tightly to the good teaching found in Your Word.",
+                    text: "For I give you sound teaching;\n  Do not abandon my instruction.",
                     prayer: "Father, help me value and hold tightly to the good teaching found in Your Word."
                 ),
                 PrayerVerse(
                     id: "prov-4-3",
                     reference: "Proverbs 4:3",
-                    text: "Lord, thank You for the people You have placed in my life to teach, guide, and encourage me.",
+                    text: "When I was a son to my father,\n  Tender and the only son in the sight of my mother,",
                     prayer: "Lord, thank You for the people You have placed in my life to teach, guide, and encourage me."
                 ),
                 PrayerVerse(
                     id: "prov-4-4",
                     reference: "Proverbs 4:4",
-                    text: "Jesus, help me keep Your words in my heart and obey Your commands so that I may truly live.",
+                    text: "Then he taught me and said to me,\n  "Let your heart hold fast my words;\n  Keep my commandments and live;",
                     prayer: "Jesus, help me keep Your words in my heart and obey Your commands so that I may truly live."
                 ),
                 PrayerVerse(
                     id: "prov-4-5",
                     reference: "Proverbs 4:5",
-                    text: "Father, help me pursue wisdom and understanding above all else. Let me never turn away from Your truth.",
+                    text: "Acquire wisdom! Acquire understanding!\n  Do not forget nor turn away from the words of my mouth.",
                     prayer: "Father, help me pursue wisdom and understanding above all else. Let me never turn away from Your truth."
                 ),
                 PrayerVerse(
                     id: "prov-4-6",
                     reference: "Proverbs 4:6",
-                    text: "Lord, teach me to love wisdom and allow it to protect and preserve my life.",
+                    text: "Do not forsake her, and she will guard you;\n  Love her, and she will watch over you.",
                     prayer: "Lord, teach me to love wisdom and allow it to protect and preserve my life."
                 ),
                 PrayerVerse(
                     id: "prov-4-7",
                     reference: "Proverbs 4:7",
-                    text: "Jesus, help me make wisdom my highest priority and seek understanding in everything I do.",
+                    text: "The beginning of wisdom is: Acquire wisdom;\n  And with all your acquiring, get understanding.",
                     prayer: "Jesus, help me make wisdom my highest priority and seek understanding in everything I do."
                 ),
                 PrayerVerse(
                     id: "prov-4-8",
                     reference: "Proverbs 4:8",
-                    text: "Father, help me cherish wisdom so that my life may be lifted up and strengthened through it.",
+                    text: "Prize her, and she will exalt you;\n  She will honor you if you embrace her.",
                     prayer: "Father, help me cherish wisdom so that my life may be lifted up and strengthened through it."
                 ),
                 PrayerVerse(
                     id: "prov-4-9",
                     reference: "Proverbs 4:9",
-                    text: "Lord, let wisdom be like a crown of grace upon my life and bring honor to Your name.",
+                    text: "She will place on your head a garland of grace;\n  She will present you with a crown of beauty."",
                     prayer: "Lord, let wisdom be like a crown of grace upon my life and bring honor to Your name."
                 ),
                 PrayerVerse(
                     id: "prov-4-10",
                     reference: "Proverbs 4:10",
-                    text: "Jesus, help me hear and receive Your instruction so that my days may be fruitful and blessed.",
+                    text: "Hear, my son, and accept my sayings\n  And the years of your life will be many.",
                     prayer: "Jesus, help me hear and receive Your instruction so that my days may be fruitful and blessed."
                 ),
                 PrayerVerse(
                     id: "prov-4-11",
                     reference: "Proverbs 4:11",
-                    text: "Father, guide me in the way of wisdom and lead me on straight paths.",
+                    text: "I have directed you in the way of wisdom;\n  I have led you in upright paths.",
                     prayer: "Father, guide me in the way of wisdom and lead me on straight paths."
                 ),
                 PrayerVerse(
                     id: "prov-4-12",
                     reference: "Proverbs 4:12",
-                    text: "Lord, direct my steps so that I may walk securely and not stumble.",
+                    text: "When you walk, your steps will not be impeded;\n  And if you run, you will not stumble.",
                     prayer: "Lord, direct my steps so that I may walk securely and not stumble."
                 ),
                 PrayerVerse(
                     id: "prov-4-13",
                     reference: "Proverbs 4:13",
-                    text: "Jesus, help me hold firmly to instruction and never let go of the wisdom You give.",
+                    text: "Take hold of instruction; do not let go.\n  Guard her, for she is your life.",
                     prayer: "Jesus, help me hold firmly to instruction and never let go of the wisdom You give."
                 ),
                 PrayerVerse(
                     id: "prov-4-14",
                     reference: "Proverbs 4:14",
-                    text: "Father, keep me from entering the path of the wicked or following sinful influences.",
+                    text: "Do not enter the path of the wicked\n  And do not proceed in the way of evil men.",
                     prayer: "Father, keep me from entering the path of the wicked or following sinful influences."
                 ),
                 PrayerVerse(
                     id: "prov-4-15",
                     reference: "Proverbs 4:15",
-                    text: "Lord, help me avoid evil, turn away from temptation, and continue walking in righteousness.",
+                    text: "Avoid it, do not pass by it;\n  Turn away from it and pass on.",
                     prayer: "Lord, help me avoid evil, turn away from temptation, and continue walking in righteousness."
                 ),
                 PrayerVerse(
                     id: "prov-4-16",
                     reference: "Proverbs 4:16",
-                    text: "Jesus, protect me from hearts and minds that delight in wrongdoing and harm.",
+                    text: "For they cannot sleep unless they do evil;\n  And they are robbed of sleep unless they make someone stumble.",
                     prayer: "Jesus, protect me from hearts and minds that delight in wrongdoing and harm."
                 ),
                 PrayerVerse(
                     id: "prov-4-17",
                     reference: "Proverbs 4:17",
-                    text: "Father, keep me from participating in sinful gain, injustice, or anything that dishonors You.",
+                    text: "For they eat the bread of wickedness\n  And drink the wine of violence.",
                     prayer: "Father, keep me from participating in sinful gain, injustice, or anything that dishonors You."
                 ),
                 PrayerVerse(
                     id: "prov-4-18",
                     reference: "Proverbs 4:18",
-                    text: "Lord, let my path shine brighter and brighter as I grow in faith, wisdom, and obedience.",
+                    text: "But the path of the righteous is like the light of dawn,\n  That shines brighter and brighter until the full day.",
                     prayer: "Lord, let my path shine brighter and brighter as I grow in faith, wisdom, and obedience."
                 ),
                 PrayerVerse(
                     id: "prov-4-19",
                     reference: "Proverbs 4:19",
-                    text: "Jesus, keep me from walking in darkness and help me recognize what causes people to stumble.",
+                    text: "The way of the wicked is like darkness;\n  They do not know over what they stumble.",
                     prayer: "Jesus, keep me from walking in darkness and help me recognize what causes people to stumble."
                 ),
                 PrayerVerse(
                     id: "prov-4-20",
                     reference: "Proverbs 4:20",
-                    text: "Father, help me pay close attention to Your words and listen carefully to Your voice.",
+                    text: "My son, give attention to my words;\n  Incline your ear to my sayings.",
                     prayer: "Father, help me pay close attention to Your words and listen carefully to Your voice."
                 ),
                 PrayerVerse(
                     id: "prov-4-21",
                     reference: "Proverbs 4:21",
-                    text: "Lord, let Your truth remain continually before my eyes and deeply rooted in my heart.",
+                    text: "Do not let them depart from your sight;\n  Keep them in the midst of your heart.",
                     prayer: "Lord, let Your truth remain continually before my eyes and deeply rooted in my heart."
                 ),
                 PrayerVerse(
                     id: "prov-4-22",
                     reference: "Proverbs 4:22",
-                    text: "Jesus, thank You that Your Word brings life, healing, strength, and hope.",
+                    text: "For they are life to those who find them\n  And health to all their body.",
                     prayer: "Jesus, thank You that Your Word brings life, healing, strength, and hope."
                 ),
                 PrayerVerse(
                     id: "prov-4-23",
                     reference: "Proverbs 4:23",
-                    text: "Father, help me guard my heart diligently, for everything I do flows from it.",
+                    text: "Watch over your heart with all diligence,\n  For from it flow the springs of life.",
                     prayer: "Father, help me guard my heart diligently, for everything I do flows from it."
                 ),
                 PrayerVerse(
                     id: "prov-4-24",
                     reference: "Proverbs 4:24",
-                    text: "Lord, remove deceit, dishonesty, and corrupt speech from my mouth.",
+                    text: "Put away from you a deceitful mouth\n  And put devious speech far from you.",
                     prayer: "Lord, remove deceit, dishonesty, and corrupt speech from my mouth."
                 ),
                 PrayerVerse(
                     id: "prov-4-25",
                     reference: "Proverbs 4:25",
-                    text: "Jesus, help me keep my eyes focused on You and the path You have set before me.",
+                    text: "Let your eyes look directly ahead\n  And let your gaze be fixed straight in front of you.",
                     prayer: "Jesus, help me keep my eyes focused on You and the path You have set before me."
                 ),
                 PrayerVerse(
                     id: "prov-4-26",
                     reference: "Proverbs 4:26",
-                    text: "Father, teach me to carefully consider my choices and establish my steps in wisdom.",
+                    text: "Watch the path of your feet\n  And all your ways will be established.",
                     prayer: "Father, teach me to carefully consider my choices and establish my steps in wisdom."
                 ),
                 PrayerVerse(
                     id: "prov-4-27",
                     reference: "Proverbs 4:27",
-                    text: "Lord, help me not turn to the right or to the left, but keep me firmly on the path of righteousness and away from evil.",
+                    text: "Do not turn to the right nor to the left;\n  Turn your foot from evil.",
                     prayer: "Lord, help me not turn to the right or to the left, but keep me firmly on the path of righteousness and away from evil."
                 ),
                 PrayerVerse(
