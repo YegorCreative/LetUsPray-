@@ -4189,7 +4189,230 @@ enum ProverbsPrayerData {
                 )
             ]
         ),
-        PrayerDay(dayNumber: 23, title: "Fix Your Eyes on Wisdom", chapterReference: "Proverbs 23", summary: "Pray for focus, sobriety, and inner stability.", verses: []),
+        PrayerDay(
+            dayNumber: 23,
+            title: "Fix Your Eyes on Wisdom",
+            chapterReference: "Proverbs 23",
+            summary: "Pray for focus, sobriety, and inner stability.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-23-1",
+                    reference: "Proverbs 23:1",
+                    text: "When you sit down to dine with a ruler,\n  Consider carefully what is before you,",
+                    prayer: "Dear Jesus, give me wisdom, self-control, and discernment in every place of influence, opportunity, or temptation."
+                ),
+                PrayerVerse(
+                    id: "prov-23-2",
+                    reference: "Proverbs 23:2",
+                    text: "And put a knife to your throat\n  If you are a man of great appetite.",
+                    prayer: "Father, help me practice discipline and restraint over my appetites and desires."
+                ),
+                PrayerVerse(
+                    id: "prov-23-3",
+                    reference: "Proverbs 23:3",
+                    text: "Do not desire his delicacies,\n  For it is deceptive food.",
+                    prayer: "Lord, keep me from craving what is deceptive, temporary, or harmful to my soul."
+                ),
+                PrayerVerse(
+                    id: "prov-23-4",
+                    reference: "Proverbs 23:4",
+                    text: "Do not weary yourself to gain wealth,\n  Cease from your consideration of it.",
+                    prayer: "Jesus, teach me not to exhaust myself chasing riches, but to trust You as my provider."
+                ),
+                PrayerVerse(
+                    id: "prov-23-5",
+                    reference: "Proverbs 23:5",
+                    text: "When you set your eyes on it, it is gone.\n  For wealth certainly makes itself wings\n  Like an eagle that flies toward the heavens.",
+                    prayer: "Father, remind me that wealth can disappear quickly. Help me treasure what is eternal."
+                ),
+                PrayerVerse(
+                    id: "prov-23-6",
+                    reference: "Proverbs 23:6",
+                    text: "Do not eat the bread of a selfish man,\n  Or desire his delicacies;",
+                    prayer: "Lord, give me discernment around people whose generosity hides selfish motives."
+                ),
+                PrayerVerse(
+                    id: "prov-23-7",
+                    reference: "Proverbs 23:7",
+                    text: "For as he thinks within himself, so he is.\n  He says to you, \"Eat and drink!\"\n  But his heart is not with you.",
+                    prayer: "Jesus, purify my thoughts and motives, and help me see beyond outward appearances."
+                ),
+                PrayerVerse(
+                    id: "prov-23-8",
+                    reference: "Proverbs 23:8",
+                    text: "You will vomit up the morsel you have eaten,\n  And waste your compliments.",
+                    prayer: "Father, protect me from accepting what comes with hidden manipulation or regret."
+                ),
+                PrayerVerse(
+                    id: "prov-23-9",
+                    reference: "Proverbs 23:9",
+                    text: "Do not speak in the hearing of a fool,\n  For he will despise the wisdom of your words.",
+                    prayer: "Lord, give me wisdom to know when words will be received and when silence is better."
+                ),
+                PrayerVerse(
+                    id: "prov-23-10",
+                    reference: "Proverbs 23:10",
+                    text: "Do not move the ancient boundary\n  Or go into the fields of the fatherless,",
+                    prayer: "Jesus, help me honor what is just, established, and right before You."
+                ),
+                PrayerVerse(
+                    id: "prov-23-11",
+                    reference: "Proverbs 23:11",
+                    text: "For their Redeemer is strong;\n  He will plead their case against you.",
+                    prayer: "Father, thank You for defending the vulnerable. Help me trust You as Redeemer and Advocate."
+                ),
+                PrayerVerse(
+                    id: "prov-23-12",
+                    reference: "Proverbs 23:12",
+                    text: "Apply your heart to discipline\n  And your ears to words of knowledge.",
+                    prayer: "Lord, help me apply my heart to instruction and my ears to words of knowledge."
+                ),
+                PrayerVerse(
+                    id: "prov-23-13",
+                    reference: "Proverbs 23:13",
+                    text: "Do not hold back discipline from the child,\n  Although you strike him with the rod, he will not die.",
+                    prayer: "Jesus, teach me loving correction, discipline, and guidance that leads to life."
+                ),
+                PrayerVerse(
+                    id: "prov-23-14",
+                    reference: "Proverbs 23:14",
+                    text: "You shall strike him with the rod\n  And rescue his soul from Sheol.",
+                    prayer: "Father, use correction and wisdom to rescue souls from destruction."
+                ),
+                PrayerVerse(
+                    id: "prov-23-15",
+                    reference: "Proverbs 23:15",
+                    text: "My son, if your heart is wise,\n  My own heart also will be glad;",
+                    prayer: "Lord, make my heart wise so that my life brings joy to those who love me."
+                ),
+                PrayerVerse(
+                    id: "prov-23-16",
+                    reference: "Proverbs 23:16",
+                    text: "And my inmost being will rejoice\n  When your lips speak what is right.",
+                    prayer: "Jesus, let my lips speak what is right, true, and pleasing to You."
+                ),
+                PrayerVerse(
+                    id: "prov-23-17",
+                    reference: "Proverbs 23:17",
+                    text: "Do not let your heart envy sinners,\n  But live in the fear of the Lord always.",
+                    prayer: "Father, keep my heart from envying sinners and help me live in reverence for You always."
+                ),
+                PrayerVerse(
+                    id: "prov-23-18",
+                    reference: "Proverbs 23:18",
+                    text: "Surely there is a future,\n  And your hope will not be cut off.",
+                    prayer: "Lord, fill me with hope for the future and confidence that Your promises will not fail."
+                ),
+                PrayerVerse(
+                    id: "prov-23-19",
+                    reference: "Proverbs 23:19",
+                    text: "Listen, my son, and be wise,\n  And direct your heart in the way.",
+                    prayer: "Jesus, help me listen, be wise, and direct my heart in Your way."
+                ),
+                PrayerVerse(
+                    id: "prov-23-20",
+                    reference: "Proverbs 23:20",
+                    text: "Do not be with heavy drinkers of wine,\n  Or with gluttonous eaters of meat;",
+                    prayer: "Father, keep me from destructive habits, excess, and unhealthy influences."
+                ),
+                PrayerVerse(
+                    id: "prov-23-21",
+                    reference: "Proverbs 23:21",
+                    text: "For the heavy drinker and the glutton will come to poverty,\n  And drowsiness will clothe one with rags.",
+                    prayer: "Lord, teach me discipline, stewardship, and self-control so I do not fall into ruin."
+                ),
+                PrayerVerse(
+                    id: "prov-23-22",
+                    reference: "Proverbs 23:22",
+                    text: "Listen to your father who begot you,\n  And do not despise your mother when she is old.",
+                    prayer: "Jesus, help me honor my parents and value the wisdom of those who came before me."
+                ),
+                PrayerVerse(
+                    id: "prov-23-23",
+                    reference: "Proverbs 23:23",
+                    text: "Buy truth, and do not sell it,\n  Get wisdom and instruction and understanding.",
+                    prayer: "Father, help me buy truth and never sell it. Let wisdom, instruction, and understanding remain treasures in my life."
+                ),
+                PrayerVerse(
+                    id: "prov-23-24",
+                    reference: "Proverbs 23:24",
+                    text: "The father of the righteous will greatly rejoice,\n  And he who sires a wise son will be glad in him.",
+                    prayer: "Lord, let righteousness bring joy, peace, and blessing to my family."
+                ),
+                PrayerVerse(
+                    id: "prov-23-25",
+                    reference: "Proverbs 23:25",
+                    text: "Let your father and your mother be glad,\n  And let her rejoice who gave birth to you.",
+                    prayer: "Jesus, help my life bring gladness and honor to my parents and those who raised me."
+                ),
+                PrayerVerse(
+                    id: "prov-23-26",
+                    reference: "Proverbs 23:26",
+                    text: "Give me your heart, my son,\n  And let your eyes delight in my ways.",
+                    prayer: "Father, take my heart fully and let my eyes delight in Your ways."
+                ),
+                PrayerVerse(
+                    id: "prov-23-27",
+                    reference: "Proverbs 23:27",
+                    text: "For a harlot is a deep pit\n  And an adulterous woman is a narrow well.",
+                    prayer: "Lord, protect me from sexual temptation and paths that trap the soul."
+                ),
+                PrayerVerse(
+                    id: "prov-23-28",
+                    reference: "Proverbs 23:28",
+                    text: "Surely she lurks as a robber,\n  And increases the faithless among men.",
+                    prayer: "Jesus, guard me from betrayal, impurity, and anything that multiplies unfaithfulness."
+                ),
+                PrayerVerse(
+                    id: "prov-23-29",
+                    reference: "Proverbs 23:29",
+                    text: "Who has woe? Who has sorrow?\n  Who has contentions? Who has complaining?\n  Who has wounds without cause?\n  Who has redness of eyes?",
+                    prayer: "Father, protect me from sorrow, conflict, wounds, and regret caused by lack of self-control."
+                ),
+                PrayerVerse(
+                    id: "prov-23-30",
+                    reference: "Proverbs 23:30",
+                    text: "Those who linger long over wine,\n  Those who go to taste mixed wine.",
+                    prayer: "Lord, keep me from lingering in destructive habits or being mastered by anything harmful."
+                ),
+                PrayerVerse(
+                    id: "prov-23-31",
+                    reference: "Proverbs 23:31",
+                    text: "Do not look on the wine when it is red,\n  When it sparkles in the cup,\n  When it goes down smoothly;",
+                    prayer: "Jesus, help me not be deceived by what looks attractive but leads to bondage."
+                ),
+                PrayerVerse(
+                    id: "prov-23-32",
+                    reference: "Proverbs 23:32",
+                    text: "At the last it bites like a serpent\n  And stings like a viper.",
+                    prayer: "Father, remind me that sin may appear pleasing at first but ends in pain and destruction."
+                ),
+                PrayerVerse(
+                    id: "prov-23-33",
+                    reference: "Proverbs 23:33",
+                    text: "Your eyes will see strange things\n  And your mind will utter perverse things.",
+                    prayer: "Lord, protect my mind, eyes, and heart from confusion, impurity, and deception."
+                ),
+                PrayerVerse(
+                    id: "prov-23-34",
+                    reference: "Proverbs 23:34",
+                    text: "And you will be like one who lies down in the middle of the sea,\n  Or like one who lies down on the top of a mast.",
+                    prayer: "Jesus, keep me steady, sober-minded, and anchored in Your truth."
+                ),
+                PrayerVerse(
+                    id: "prov-23-35",
+                    reference: "Proverbs 23:35",
+                    text: "\"They struck me, but I did not become ill;\n  They beat me, but I did not know it.\n  When shall I awake?\n  I will seek another drink.\"",
+                    prayer: "Father, awaken me from anything that dulls my spirit. Help me walk in freedom, wisdom, and self-control."
+                ),
+                PrayerVerse(
+                    id: "prov-23-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
         PrayerDay(dayNumber: 24, title: "Do Not Envy Evil", chapterReference: "Proverbs 24", summary: "Ask for courage to choose righteousness over comparison.", verses: []),
         PrayerDay(dayNumber: 25, title: "Wait with Patience", chapterReference: "Proverbs 25", summary: "Pray for restraint, patience, and thoughtful words.", verses: []),
         PrayerDay(dayNumber: 26, title: "Seek Steady Character", chapterReference: "Proverbs 26", summary: "Ask God to form maturity and consistency in you.", verses: []),
