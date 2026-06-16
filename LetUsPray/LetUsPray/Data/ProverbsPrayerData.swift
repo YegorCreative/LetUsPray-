@@ -3664,7 +3664,7 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-20-9",
                     reference: "Proverbs 20:9",
-                    text: "Who can say, "I have cleansed my heart,\n  I am pure from my sin"?",
+                    text: "Who can say, \"I have cleansed my heart,\n  I am pure from my sin\"?",
                     prayer: "Lord, cleanse my heart and forgive my sins. Make me pure through Your grace."
                 ),
                 PrayerVerse(
@@ -3694,7 +3694,7 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-20-14",
                     reference: "Proverbs 20:14",
-                    text: ""Bad, bad," says the buyer,\n  But when he goes his way, then he boasts.",
+                    text: "\"Bad, bad,\" says the buyer,\n  But when he goes his way, then he boasts.",
                     prayer: "Father, keep me honest in business, speech, and every exchange with others."
                 ),
                 PrayerVerse(
@@ -3742,7 +3742,7 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-20-22",
                     reference: "Proverbs 20:22",
-                    text: "Do not say, "I will repay evil";\n  Wait for the Lord, and He will save you.",
+                    text: "Do not say, \"I will repay evil\";\n  Wait for the Lord, and He will save you.",
                     prayer: "Jesus, keep me from revenge. Help me wait on You and trust You to act justly."
                 ),
                 PrayerVerse(
@@ -3760,7 +3760,7 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-20-25",
                     reference: "Proverbs 20:25",
-                    text: "It is a trap for a man to say rashly, "It is holy!"\n  And after the vows to make inquiry.",
+                    text: "It is a trap for a man to say rashly, \"It is holy!\"\n  And after the vows to make inquiry.",
                     prayer: "Jesus, help me be careful with vows, promises, and commitments made before You."
                 ),
                 PrayerVerse(
@@ -3948,7 +3948,7 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-21-24",
                     reference: "Proverbs 21:24",
-                    text: ""Proud," "Haughty," "Scoffer," are his names,\n  Who acts with insolent pride.",
+                    text: "\"Proud,\" \"Haughty,\" \"Scoffer,\" are his names,\n  Who acts with insolent pride.",
                     prayer: "Lord, remove pride, arrogance, and scoffing from my life."
                 ),
                 PrayerVerse(
@@ -4082,7 +4082,7 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-22-13",
                     reference: "Proverbs 22:13",
-                    text: "The sluggard says, "There is a lion outside;\n  I will be killed in the streets!"",
+                    text: "The sluggard says, \"There is a lion outside;\n  I will be killed in the streets!\"",
                     prayer: "Jesus, deliver me from excuses, fear, and laziness that keep me from doing what is right."
                 ),
                 PrayerVerse(
@@ -4631,7 +4631,188 @@ enum ProverbsPrayerData {
                 )
             ]
         ),
-        PrayerDay(dayNumber: 25, title: "Wait with Patience", chapterReference: "Proverbs 25", summary: "Pray for restraint, patience, and thoughtful words.", verses: []),
+        PrayerDay(
+            dayNumber: 25,
+            title: "Wait with Patience",
+            chapterReference: "Proverbs 25",
+            summary: "Pray for restraint, patience, and thoughtful words.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-25-1",
+                    reference: "Proverbs 25:1",
+                    text: "These also are proverbs of Solomon which the men of Hezekiah, king of Judah, transcribed.",
+                    prayer: "Dear Jesus, thank You for preserving wisdom through generations. Help me receive instruction with humility and reverence."
+                ),
+                PrayerVerse(
+                    id: "prov-25-2",
+                    reference: "Proverbs 25:2",
+                    text: "It is the glory of God to conceal a matter,\n  But the glory of kings is to search out a matter.",
+                    prayer: "Father, teach me to honor Your mysteries and seek wisdom with humility, patience, and awe."
+                ),
+                PrayerVerse(
+                    id: "prov-25-3",
+                    reference: "Proverbs 25:3",
+                    text: "As the heavens for height and the earth for depth,\n  So the heart of kings is unsearchable.",
+                    prayer: "Lord, remind me that the hearts of leaders are deep and that You alone fully know every motive."
+                ),
+                PrayerVerse(
+                    id: "prov-25-4",
+                    reference: "Proverbs 25:4",
+                    text: "Take away the dross from the silver,\n  And there comes out a vessel for the smith;",
+                    prayer: "Jesus, remove impurity from my life so that what remains may be useful and pleasing to You."
+                ),
+                PrayerVerse(
+                    id: "prov-25-5",
+                    reference: "Proverbs 25:5",
+                    text: "Take away the wicked before the king,\n  And his throne will be established in righteousness.",
+                    prayer: "Father, remove wickedness from places of influence and establish righteousness in leadership."
+                ),
+                PrayerVerse(
+                    id: "prov-25-6",
+                    reference: "Proverbs 25:6",
+                    text: "Do not claim honor in the presence of the king,\n  And do not stand in the place of great men;",
+                    prayer: "Lord, keep me humble and protect me from seeking honor for myself."
+                ),
+                PrayerVerse(
+                    id: "prov-25-7",
+                    reference: "Proverbs 25:7",
+                    text: "For it is better that it be said to you, \"Come up here,\"\n  Than for you to be placed lower in the presence of the prince,\n  Whom your eyes have seen.",
+                    prayer: "Jesus, teach me humility so I may wait for honor instead of forcing recognition."
+                ),
+                PrayerVerse(
+                    id: "prov-25-8",
+                    reference: "Proverbs 25:8",
+                    text: "Do not go out hastily to argue your case;\n  Otherwise, what will you do in the end,\n  When your neighbor humiliates you?",
+                    prayer: "Father, help me not rush into conflict or judgment without wisdom and understanding."
+                ),
+                PrayerVerse(
+                    id: "prov-25-9",
+                    reference: "Proverbs 25:9",
+                    text: "Argue your case with your neighbor,\n  And do not reveal the secret of another,",
+                    prayer: "Lord, teach me to handle disagreements privately, humbly, and honorably."
+                ),
+                PrayerVerse(
+                    id: "prov-25-10",
+                    reference: "Proverbs 25:10",
+                    text: "Or he who hears it will reproach you,\n  And the evil report about you will not pass away.",
+                    prayer: "Jesus, guard my reputation and help me protect the trust others place in me."
+                ),
+                PrayerVerse(
+                    id: "prov-25-11",
+                    reference: "Proverbs 25:11",
+                    text: "Like apples of gold in settings of silver\n  Is a word spoken in right circumstances.",
+                    prayer: "Father, help my words be timely, beautiful, wise, and valuable."
+                ),
+                PrayerVerse(
+                    id: "prov-25-12",
+                    reference: "Proverbs 25:12",
+                    text: "Like an earring of gold and an ornament of fine gold\n  Is a wise reprover to a listening ear.",
+                    prayer: "Lord, help me receive wise correction as a precious gift."
+                ),
+                PrayerVerse(
+                    id: "prov-25-13",
+                    reference: "Proverbs 25:13",
+                    text: "Like the cold of snow in the time of harvest\n  Is a faithful messenger to those who send him,\n  For he refreshes the soul of his masters.",
+                    prayer: "Jesus, make me faithful and refreshing to those who trust me with responsibility."
+                ),
+                PrayerVerse(
+                    id: "prov-25-14",
+                    reference: "Proverbs 25:14",
+                    text: "Like clouds and wind without rain\n  Is a man who boasts of his gifts falsely.",
+                    prayer: "Father, keep me from making empty promises or claiming generosity I do not live out."
+                ),
+                PrayerVerse(
+                    id: "prov-25-15",
+                    reference: "Proverbs 25:15",
+                    text: "By forbearance a ruler may be persuaded,\n  And a soft tongue breaks the bone.",
+                    prayer: "Lord, teach me patience, gentleness, and the quiet strength of wise speech."
+                ),
+                PrayerVerse(
+                    id: "prov-25-16",
+                    reference: "Proverbs 25:16",
+                    text: "Have you found honey? Eat only what you need,\n  That you not have it in excess and vomit it.",
+                    prayer: "Jesus, teach me moderation and self-control in every blessing I enjoy."
+                ),
+                PrayerVerse(
+                    id: "prov-25-17",
+                    reference: "Proverbs 25:17",
+                    text: "Let your foot rarely be in your neighbor's house,\n  Or he will become weary of you and hate you.",
+                    prayer: "Father, give me wisdom in relationships so I respect boundaries and love others well."
+                ),
+                PrayerVerse(
+                    id: "prov-25-18",
+                    reference: "Proverbs 25:18",
+                    text: "Like a club and a sword and a sharp arrow\n  Is a man who bears false witness against his neighbor.",
+                    prayer: "Lord, keep me from false witness, slander, and words that wound others."
+                ),
+                PrayerVerse(
+                    id: "prov-25-19",
+                    reference: "Proverbs 25:19",
+                    text: "Like a bad tooth and an unsteady foot\n  Is confidence in a faithless man in time of trouble.",
+                    prayer: "Jesus, help me become trustworthy and dependable in difficult times."
+                ),
+                PrayerVerse(
+                    id: "prov-25-20",
+                    reference: "Proverbs 25:20",
+                    text: "Like one who takes off a garment on a cold day, or like vinegar on soda,\n  Is he who sings songs to a troubled heart.",
+                    prayer: "Father, give me sensitivity and compassion when others are grieving or burdened."
+                ),
+                PrayerVerse(
+                    id: "prov-25-21",
+                    reference: "Proverbs 25:21",
+                    text: "If your enemy is hungry, give him food to eat;\n  And if he is thirsty, give him water to drink;",
+                    prayer: "Lord, teach me to love my enemies and respond to hostility with kindness."
+                ),
+                PrayerVerse(
+                    id: "prov-25-22",
+                    reference: "Proverbs 25:22",
+                    text: "For you will heap burning coals on his head,\n  And the Lord will reward you.",
+                    prayer: "Jesus, help me overcome evil with good and trust You with justice."
+                ),
+                PrayerVerse(
+                    id: "prov-25-23",
+                    reference: "Proverbs 25:23",
+                    text: "The north wind brings forth rain,\n  And a backbiting tongue, an angry countenance.",
+                    prayer: "Father, guard my mouth from secret words that stir anger and division."
+                ),
+                PrayerVerse(
+                    id: "prov-25-24",
+                    reference: "Proverbs 25:24",
+                    text: "It is better to live in a corner of the roof\n  Than in a house shared with a contentious woman.",
+                    prayer: "Lord, help me build peace in my home instead of conflict and contention."
+                ),
+                PrayerVerse(
+                    id: "prov-25-25",
+                    reference: "Proverbs 25:25",
+                    text: "Like cold water to a weary soul,\n  So is good news from a distant land.",
+                    prayer: "Jesus, make my words refreshing and hopeful like good news from a distant land."
+                ),
+                PrayerVerse(
+                    id: "prov-25-26",
+                    reference: "Proverbs 25:26",
+                    text: "Like a trampled spring and a polluted well\n  Is a righteous man who gives way before the wicked.",
+                    prayer: "Father, help me stand firm in righteousness and not give way before wickedness."
+                ),
+                PrayerVerse(
+                    id: "prov-25-27",
+                    reference: "Proverbs 25:27",
+                    text: "It is not good to eat much honey,\n  Nor is it glory to search out one's own glory.",
+                    prayer: "Lord, protect me from self-glory and teach me humility in every success."
+                ),
+                PrayerVerse(
+                    id: "prov-25-28",
+                    reference: "Proverbs 25:28",
+                    text: "Like a city that is broken into and without walls\n  Is a man who has no control over his spirit.",
+                    prayer: "Jesus, strengthen my self-control so my life is not left unguarded or vulnerable."
+                ),
+                PrayerVerse(
+                    id: "prov-25-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
         PrayerDay(dayNumber: 26, title: "Seek Steady Character", chapterReference: "Proverbs 26", summary: "Ask God to form maturity and consistency in you.", verses: []),
         PrayerDay(dayNumber: 27, title: "Live Attentively", chapterReference: "Proverbs 27", summary: "Pray for awareness, faithful friendship, and daily wisdom.", verses: []),
         PrayerDay(dayNumber: 28, title: "Walk Uprightly", chapterReference: "Proverbs 28", summary: "Invite bold integrity and wholehearted repentance.", verses: []),
