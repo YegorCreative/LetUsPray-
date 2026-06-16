@@ -4413,7 +4413,224 @@ enum ProverbsPrayerData {
                 )
             ]
         ),
-        PrayerDay(dayNumber: 24, title: "Do Not Envy Evil", chapterReference: "Proverbs 24", summary: "Ask for courage to choose righteousness over comparison.", verses: []),
+        PrayerDay(
+            dayNumber: 24,
+            title: "Do Not Envy Evil",
+            chapterReference: "Proverbs 24",
+            summary: "Ask for courage to choose righteousness over comparison.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-24-1",
+                    reference: "Proverbs 24:1",
+                    text: "Do not be envious of evil men,\n  Nor desire to be with them;",
+                    prayer: "Dear Jesus, keep my heart from envying evil people or desiring their ways."
+                ),
+                PrayerVerse(
+                    id: "prov-24-2",
+                    reference: "Proverbs 24:2",
+                    text: "For their minds devise violence,\n  And their lips talk of trouble.",
+                    prayer: "Father, protect my thoughts from violence, harm, and destructive plans."
+                ),
+                PrayerVerse(
+                    id: "prov-24-3",
+                    reference: "Proverbs 24:3",
+                    text: "By wisdom a house is built,\n  And by understanding it is established;",
+                    prayer: "Lord, build my life, home, and future through wisdom and understanding."
+                ),
+                PrayerVerse(
+                    id: "prov-24-4",
+                    reference: "Proverbs 24:4",
+                    text: "And by knowledge the rooms are filled\n  With all precious and pleasant riches.",
+                    prayer: "Jesus, fill the rooms of my life with knowledge, beauty, peace, and lasting treasure."
+                ),
+                PrayerVerse(
+                    id: "prov-24-5",
+                    reference: "Proverbs 24:5",
+                    text: "A wise man is strong,\n  And a man of knowledge increases power.",
+                    prayer: "Father, make me strong through wisdom and increase my strength through knowledge."
+                ),
+                PrayerVerse(
+                    id: "prov-24-6",
+                    reference: "Proverbs 24:6",
+                    text: "For by wise guidance you will wage war,\n  And in abundance of counselors there is victory.",
+                    prayer: "Lord, guide me with wise counsel and surround me with godly advice."
+                ),
+                PrayerVerse(
+                    id: "prov-24-7",
+                    reference: "Proverbs 24:7",
+                    text: "Wisdom is too exalted for a fool,\n  He does not open his mouth in the gate.",
+                    prayer: "Jesus, help me value wisdom and not speak foolishly where understanding is needed."
+                ),
+                PrayerVerse(
+                    id: "prov-24-8",
+                    reference: "Proverbs 24:8",
+                    text: "One who plans to do evil,\n  Men will call a schemer.",
+                    prayer: "Father, cleanse my mind from plotting evil or planning harm."
+                ),
+                PrayerVerse(
+                    id: "prov-24-9",
+                    reference: "Proverbs 24:9",
+                    text: "The devising of folly is sin,\n  And the scoffer is an abomination to men.",
+                    prayer: "Lord, protect me from foolish schemes and from becoming a source of mockery or sin."
+                ),
+                PrayerVerse(
+                    id: "prov-24-10",
+                    reference: "Proverbs 24:10",
+                    text: "If you are slack in the day of distress,\n  Your strength is limited.",
+                    prayer: "Jesus, strengthen me so I do not lose courage in times of trouble."
+                ),
+                PrayerVerse(
+                    id: "prov-24-11",
+                    reference: "Proverbs 24:11",
+                    text: "Deliver those who are being taken away to death,\n  And those who are staggering to slaughter, Oh hold them back.",
+                    prayer: "Father, give me courage to help those in danger and protect those being led toward destruction."
+                ),
+                PrayerVerse(
+                    id: "prov-24-12",
+                    reference: "Proverbs 24:12",
+                    text: "If you say, \"See, we did not know this,\"\n  Does He not consider it who weighs the hearts?\n  And does He not know it who keeps your soul?\n  And will He not render to man according to his work?",
+                    prayer: "Lord, remind me that You know my heart and see my responsibility. Help me act with compassion and courage."
+                ),
+                PrayerVerse(
+                    id: "prov-24-13",
+                    reference: "Proverbs 24:13",
+                    text: "My son, eat honey, for it is good,\n  Yes, the honey from the comb is sweet to your taste;",
+                    prayer: "Jesus, help me receive wisdom as something sweet and nourishing to my soul."
+                ),
+                PrayerVerse(
+                    id: "prov-24-14",
+                    reference: "Proverbs 24:14",
+                    text: "Know that wisdom is thus for your soul;\n  If you find it, then there will be a future,\n  And your hope will not be cut off.",
+                    prayer: "Father, let wisdom give me hope, future, and confidence in Your promises."
+                ),
+                PrayerVerse(
+                    id: "prov-24-15",
+                    reference: "Proverbs 24:15",
+                    text: "Do not lie in wait, O wicked man, against the dwelling of the righteous;\n  Do not destroy his resting place;",
+                    prayer: "Lord, keep me from harming the righteous or attacking those who belong to You."
+                ),
+                PrayerVerse(
+                    id: "prov-24-16",
+                    reference: "Proverbs 24:16",
+                    text: "For a righteous man falls seven times, and rises again,\n  But the wicked stumble in time of calamity.",
+                    prayer: "Jesus, help me rise again when I fall and remain faithful through every trial."
+                ),
+                PrayerVerse(
+                    id: "prov-24-17",
+                    reference: "Proverbs 24:17",
+                    text: "Do not rejoice when your enemy falls,\n  And do not let your heart be glad when he stumbles;",
+                    prayer: "Father, keep me from rejoicing when others fall or suffer."
+                ),
+                PrayerVerse(
+                    id: "prov-24-18",
+                    reference: "Proverbs 24:18",
+                    text: "Or the Lord will see it and be displeased,\n  And turn His anger away from him.",
+                    prayer: "Lord, teach me mercy, humility, and compassion even toward those who oppose me."
+                ),
+                PrayerVerse(
+                    id: "prov-24-19",
+                    reference: "Proverbs 24:19",
+                    text: "Do not fret because of evildoers\n  Or be envious of the wicked;",
+                    prayer: "Jesus, keep me from being troubled or envious because of evildoers."
+                ),
+                PrayerVerse(
+                    id: "prov-24-20",
+                    reference: "Proverbs 24:20",
+                    text: "For there will be no future for the evil man;\n  The lamp of the wicked will be put out.",
+                    prayer: "Father, remind me that evil has no lasting future, but Your righteousness endures."
+                ),
+                PrayerVerse(
+                    id: "prov-24-21",
+                    reference: "Proverbs 24:21",
+                    text: "My son, fear the Lord and the king;\n  Do not associate with those who are given to change,",
+                    prayer: "Lord, teach me to fear You and respect rightful authority with wisdom."
+                ),
+                PrayerVerse(
+                    id: "prov-24-22",
+                    reference: "Proverbs 24:22",
+                    text: "For their calamity will rise suddenly,\n  And who knows the ruin that comes from both of them?",
+                    prayer: "Jesus, protect me from rebellion and sudden destruction caused by foolish choices."
+                ),
+                PrayerVerse(
+                    id: "prov-24-23",
+                    reference: "Proverbs 24:23",
+                    text: "These also are sayings of the wise.\n  To show partiality in judgment is not good.",
+                    prayer: "Father, help me judge fairly and never show partiality."
+                ),
+                PrayerVerse(
+                    id: "prov-24-24",
+                    reference: "Proverbs 24:24",
+                    text: "He who says to the wicked, \"You are righteous,\"\n  Peoples will curse him, nations will abhor him;",
+                    prayer: "Lord, give me courage to call evil what it is and stand for righteousness."
+                ),
+                PrayerVerse(
+                    id: "prov-24-25",
+                    reference: "Proverbs 24:25",
+                    text: "But to those who rebuke the wicked will be delight,\n  And a good blessing will come upon them.",
+                    prayer: "Jesus, bless those who correct wrongdoing and defend truth with wisdom."
+                ),
+                PrayerVerse(
+                    id: "prov-24-26",
+                    reference: "Proverbs 24:26",
+                    text: "He kisses the lips\n  Who gives a right answer.",
+                    prayer: "Father, let my honest answers reflect love, truth, and integrity."
+                ),
+                PrayerVerse(
+                    id: "prov-24-27",
+                    reference: "Proverbs 24:27",
+                    text: "Prepare your work outside\n  And make it ready for yourself in the field;\n  Afterwards, then, build your house.",
+                    prayer: "Lord, help me establish my work with wisdom before building what depends on it."
+                ),
+                PrayerVerse(
+                    id: "prov-24-28",
+                    reference: "Proverbs 24:28",
+                    text: "Do not be a witness against your neighbor without cause,\n  And do not deceive with your lips.",
+                    prayer: "Jesus, keep me from testifying falsely or speaking against others without cause."
+                ),
+                PrayerVerse(
+                    id: "prov-24-29",
+                    reference: "Proverbs 24:29",
+                    text: "Do not say, \"Thus I shall do to him as he has done to me;\n  I will render to the man according to his work.\"",
+                    prayer: "Father, remove revenge from my heart and help me trust You with justice."
+                ),
+                PrayerVerse(
+                    id: "prov-24-30",
+                    reference: "Proverbs 24:30",
+                    text: "I passed by the field of the sluggard\n  And by the vineyard of the man lacking sense,",
+                    prayer: "Lord, warn me through what I see and teach me from the consequences of neglect."
+                ),
+                PrayerVerse(
+                    id: "prov-24-31",
+                    reference: "Proverbs 24:31",
+                    text: "And behold, it was completely overgrown with thistles;\n  Its surface was covered with nettles,\n  And its stone wall was broken down.",
+                    prayer: "Jesus, remove laziness, disorder, and neglect from my life."
+                ),
+                PrayerVerse(
+                    id: "prov-24-32",
+                    reference: "Proverbs 24:32",
+                    text: "When I saw, I reflected upon it;\n  I looked, and received instruction.",
+                    prayer: "Father, give me wisdom to learn from correction, observation, and experience."
+                ),
+                PrayerVerse(
+                    id: "prov-24-33",
+                    reference: "Proverbs 24:33",
+                    text: "\"A little sleep, a little slumber,\n  A little folding of the hands to rest,\"",
+                    prayer: "Lord, keep me from small compromises that slowly lead to lack and weakness."
+                ),
+                PrayerVerse(
+                    id: "prov-24-34",
+                    reference: "Proverbs 24:34",
+                    text: "Then your poverty will come as a robber\n  And your want like an armed man.",
+                    prayer: "Jesus, teach me diligence and responsibility so I do not fall into poverty of spirit, purpose, or stewardship."
+                ),
+                PrayerVerse(
+                    id: "prov-24-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
         PrayerDay(dayNumber: 25, title: "Wait with Patience", chapterReference: "Proverbs 25", summary: "Pray for restraint, patience, and thoughtful words.", verses: []),
         PrayerDay(dayNumber: 26, title: "Seek Steady Character", chapterReference: "Proverbs 26", summary: "Ask God to form maturity and consistency in you.", verses: []),
         PrayerDay(dayNumber: 27, title: "Live Attentively", chapterReference: "Proverbs 27", summary: "Pray for awareness, faithful friendship, and daily wisdom.", verses: []),
