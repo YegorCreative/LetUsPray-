@@ -1336,224 +1336,224 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-8-1",
                     reference: "Proverbs 8:1",
-                    text: "Dear Jesus, help me hear the voice of wisdom and respond when You call.",
+                    text: "Does not wisdom call,\n  And understanding lift up her voice?",
                     prayer: "Dear Jesus, help me hear the voice of wisdom and respond when You call."
                 ),
                 PrayerVerse(
                     id: "prov-8-2",
                     reference: "Proverbs 8:2",
-                    text: "Father, place me on the path of understanding and help me walk in Your truth.",
+                    text: "On top of the heights beside the way,\n  Where the paths meet, she takes her stand;",
                     prayer: "Father, place me on the path of understanding and help me walk in Your truth."
                 ),
                 PrayerVerse(
                     id: "prov-8-3",
                     reference: "Proverbs 8:3",
-                    text: "Lord, make my heart attentive to Your instruction wherever I go.",
+                    text: "Beside the gates, at the opening to the city,\n  At the entrance of the doors, she cries out:",
                     prayer: "Lord, make my heart attentive to Your instruction wherever I go."
                 ),
                 PrayerVerse(
                     id: "prov-8-4",
                     reference: "Proverbs 8:4",
-                    text: "Jesus, thank You for calling all people to wisdom. Help me answer Your call faithfully.",
+                    text: "\"To you, O men, I call,\n  And my voice is to the sons of men.",
                     prayer: "Jesus, thank You for calling all people to wisdom. Help me answer Your call faithfully."
                 ),
                 PrayerVerse(
                     id: "prov-8-5",
                     reference: "Proverbs 8:5",
-                    text: "Father, give me understanding and teach me to grow in wisdom and discernment.",
+                    text: "O naive ones, understand prudence;\n  And, O fools, understand wisdom.",
                     prayer: "Father, give me understanding and teach me to grow in wisdom and discernment."
                 ),
                 PrayerVerse(
                     id: "prov-8-6",
                     reference: "Proverbs 8:6",
-                    text: "Lord, help me listen carefully to noble and righteous instruction.",
+                    text: "Listen, for I will speak noble things;\n  And the opening of my lips will reveal right things.",
                     prayer: "Lord, help me listen carefully to noble and righteous instruction."
                 ),
                 PrayerVerse(
                     id: "prov-8-7",
                     reference: "Proverbs 8:7",
-                    text: "Jesus, let my mouth speak truth and keep me far from wickedness.",
+                    text: "For my mouth will utter truth;\n  And wickedness is an abomination to my lips.",
                     prayer: "Jesus, let my mouth speak truth and keep me far from wickedness."
                 ),
                 PrayerVerse(
                     id: "prov-8-8",
                     reference: "Proverbs 8:8",
-                    text: "Father, help my words be honest, upright, and pleasing in Your sight.",
+ text: "All the utterances of my mouth are in righteousness;\n  There is nothing crooked or perverted in them.",
                     prayer: "Father, help my words be honest, upright, and pleasing in Your sight."
                 ),
                 PrayerVerse(
                     id: "prov-8-9",
                     reference: "Proverbs 8:9",
-                    text: "Lord, open my understanding so I may recognize and embrace Your truth.",
+                    text: "They are all straightforward to him who understands,\n  And right to those who find knowledge.",
                     prayer: "Lord, open my understanding so I may recognize and embrace Your truth."
                 ),
                 PrayerVerse(
                     id: "prov-8-10",
                     reference: "Proverbs 8:10",
-                    text: "Jesus, help me choose wisdom over silver and worldly gain.",
+                    text: "Take my instruction and not silver,\n  And knowledge rather than choicest gold.",
                     prayer: "Jesus, help me choose wisdom over silver and worldly gain."
                 ),
                 PrayerVerse(
                     id: "prov-8-11",
                     reference: "Proverbs 8:11",
-                    text: "Father, teach me that wisdom is more valuable than any treasure this world can offer.",
+                    text: "For wisdom is better than jewels;\n  And all desirable things cannot compare with her.",
                     prayer: "Father, teach me that wisdom is more valuable than any treasure this world can offer."
                 ),
                 PrayerVerse(
                     id: "prov-8-12",
                     reference: "Proverbs 8:12",
-                    text: "Lord, fill me with prudence, knowledge, and sound judgment.",
+                    text: "\"I, wisdom, dwell with prudence,\n  And I find knowledge and discretion.",
                     prayer: "Lord, fill me with prudence, knowledge, and sound judgment."
                 ),
                 PrayerVerse(
                     id: "prov-8-13",
                     reference: "Proverbs 8:13",
-                    text: "Jesus, help me fear You by turning away from evil, pride, arrogance, and corruption.",
+                    text: "The fear of the Lord is to hate evil;\n  Pride and arrogance and the evil way\n  And the perverted mouth, I hate.",
                     prayer: "Jesus, help me fear You by turning away from evil, pride, arrogance, and corruption."
                 ),
                 PrayerVerse(
                     id: "prov-8-14",
                     reference: "Proverbs 8:14",
-                    text: "Father, grant me counsel, wisdom, understanding, and strength.",
+                    text: "Counsel is mine and sound wisdom;\n  I am understanding, power is mine.",
                     prayer: "Father, grant me counsel, wisdom, understanding, and strength."
                 ),
                 PrayerVerse(
                     id: "prov-8-15",
                     reference: "Proverbs 8:15",
-                    text: "Lord, guide leaders, rulers, and authorities to govern with wisdom and righteousness.",
+                    text: "By me kings reign,\n  And rulers decree justice.",
                     prayer: "Lord, guide leaders, rulers, and authorities to govern with wisdom and righteousness."
                 ),
                 PrayerVerse(
                     id: "prov-8-16",
                     reference: "Proverbs 8:16",
-                    text: "Jesus, help those in positions of influence make decisions that honor You.",
+                    text: "By me princes rule, and nobles,\n  All who judge rightly.",
                     prayer: "Jesus, help those in positions of influence make decisions that honor You."
                 ),
                 PrayerVerse(
                     id: "prov-8-17",
                     reference: "Proverbs 8:17",
-                    text: "Father, help me seek You diligently and wholeheartedly every day.",
+                    text: "I love those who love me;\n  And those who diligently seek me will find me.",
                     prayer: "Father, help me seek You diligently and wholeheartedly every day."
                 ),
                 PrayerVerse(
                     id: "prov-8-18",
                     reference: "Proverbs 8:18",
-                    text: "Lord, remind me that true riches, honor, and lasting blessings come from You.",
+                    text: "Riches and honor are with me,\n  Enduring wealth and righteousness.",
                     prayer: "Lord, remind me that true riches, honor, and lasting blessings come from You."
                 ),
                 PrayerVerse(
                     id: "prov-8-19",
                     reference: "Proverbs 8:19",
-                    text: "Jesus, let the fruit of wisdom in my life be greater than gold or silver.",
+                    text: "My fruit is better than gold, even pure gold,\n  And my yield better than choicest silver.",
                     prayer: "Jesus, let the fruit of wisdom in my life be greater than gold or silver."
                 ),
                 PrayerVerse(
                     id: "prov-8-20",
                     reference: "Proverbs 8:20",
-                    text: "Father, lead me in the way of righteousness and justice.",
+                    text: "I walk in the way of righteousness,\n  In the midst of the paths of justice,",
                     prayer: "Father, lead me in the way of righteousness and justice."
                 ),
                 PrayerVerse(
                     id: "prov-8-21",
                     reference: "Proverbs 8:21",
-                    text: "Lord, bless me with the inheritance of wisdom that endures forever.",
+                    text: "To endow those who love me with wealth,\n  That I may fill their treasuries.",
                     prayer: "Lord, bless me with the inheritance of wisdom that endures forever."
                 ),
                 PrayerVerse(
                     id: "prov-8-22",
                     reference: "Proverbs 8:22",
-                    text: "Jesus, thank You for Your eternal wisdom that existed before the foundations of the earth.",
+                    text: "\"The Lord possessed me at the beginning of His way,\n  Before His works of old.",
                     prayer: "Jesus, thank You for Your eternal wisdom that existed before the foundations of the earth."
                 ),
                 PrayerVerse(
                     id: "prov-8-23",
                     reference: "Proverbs 8:23",
-                    text: "Father, remind me that Your plans and purposes have existed from everlasting.",
+                    text: "From everlasting I was established,\n  From the beginning, from the earliest times of the earth.",
                     prayer: "Father, remind me that Your plans and purposes have existed from everlasting."
                 ),
                 PrayerVerse(
                     id: "prov-8-24",
                     reference: "Proverbs 8:24",
-                    text: "Lord, thank You for Your wisdom that existed before creation itself.",
+                    text: "When there were no depths I was brought forth,\n  When there were no springs abounding with water.",
                     prayer: "Lord, thank You for Your wisdom that existed before creation itself."
                 ),
                 PrayerVerse(
                     id: "prov-8-25",
                     reference: "Proverbs 8:25",
-                    text: "Jesus, help me stand firm upon the eternal foundation of Your truth.",
+                    text: "Before the mountains were settled,\n  Before the hills I was brought forth;",
                     prayer: "Jesus, help me stand firm upon the eternal foundation of Your truth."
                 ),
                 PrayerVerse(
                     id: "prov-8-26",
                     reference: "Proverbs 8:26",
-                    text: "Father, thank You for creating the earth and everything in it with perfect wisdom.",
+                    text: "While He had not yet made the earth and the fields,\n  Nor the first dust of the world.",
                     prayer: "Father, thank You for creating the earth and everything in it with perfect wisdom."
                 ),
                 PrayerVerse(
                     id: "prov-8-27",
                     reference: "Proverbs 8:27",
-                    text: "Lord, I praise You for establishing the heavens through Your wisdom and power.",
+                    text: "When He established the heavens, I was there,\n  When He inscribed a circle on the face of the deep,",
                     prayer: "Lord, I praise You for establishing the heavens through Your wisdom and power."
                 ),
                 PrayerVerse(
                     id: "prov-8-28",
                     reference: "Proverbs 8:28",
-                    text: "Jesus, thank You for sustaining all creation by Your mighty hand.",
+                    text: "When He made firm the skies above,\n  When the springs of the deep became fixed,",
                     prayer: "Jesus, thank You for sustaining all creation by Your mighty hand."
                 ),
                 PrayerVerse(
                     id: "prov-8-29",
                     reference: "Proverbs 8:29",
-                    text: "Father, thank You for setting boundaries and order throughout creation.",
+                    text: "When He set for the sea its boundary\n  So that the water would not transgress His command,\n  When He marked out the foundations of the earth;",
                     prayer: "Father, thank You for setting boundaries and order throughout creation."
                 ),
                 PrayerVerse(
                     id: "prov-8-30",
                     reference: "Proverbs 8:30",
-                    text: "Lord, help me delight in Your wisdom and walk closely with You every day.",
+                    text: "Then I was beside Him, as a master workman;\n  And I was daily His delight,\n  Rejoicing always before Him,",
                     prayer: "Lord, help me delight in Your wisdom and walk closely with You every day."
                 ),
                 PrayerVerse(
                     id: "prov-8-31",
                     reference: "Proverbs 8:31",
-                    text: "Jesus, thank You for Your love for mankind and Your delight in Your children.",
+                    text: "Rejoicing in the world, His earth,\n  And having my delight in the sons of men.",
                     prayer: "Jesus, thank You for Your love for mankind and Your delight in Your children."
                 ),
                 PrayerVerse(
                     id: "prov-8-32",
                     reference: "Proverbs 8:32",
-                    text: "Father, help me listen carefully to Your wisdom and follow Your ways.",
+                    text: "\"Now therefore, O sons, listen to me,\n  For blessed are they who keep my ways.",
                     prayer: "Father, help me listen carefully to Your wisdom and follow Your ways."
                 ),
                 PrayerVerse(
                     id: "prov-8-33",
                     reference: "Proverbs 8:33",
-                    text: "Lord, give me a teachable spirit that gladly receives instruction.",
+                    text: "Heed instruction and be wise,\n  And do not neglect it.",
                     prayer: "Lord, give me a teachable spirit that gladly receives instruction."
                 ),
                 PrayerVerse(
                     id: "prov-8-34",
                     reference: "Proverbs 8:34",
-                    text: "Jesus, help me seek You daily and eagerly wait upon Your guidance.",
+                    text: "Blessed is the man who listens to me,\n  Watching daily at my gates,\n  Waiting at my doorposts.",
                     prayer: "Jesus, help me seek You daily and eagerly wait upon Your guidance."
                 ),
                 PrayerVerse(
                     id: "prov-8-35",
                     reference: "Proverbs 8:35",
-                    text: "Father, thank You that those who find wisdom find life and receive Your favor.",
+                    text: "For he who finds me finds life\n  And obtains favor from the Lord.",
                     prayer: "Father, thank You that those who find wisdom find life and receive Your favor."
                 ),
                 PrayerVerse(
                     id: "prov-8-36",
                     reference: "Proverbs 8:36",
-                    text: "Lord, protect me from rejecting wisdom and choosing paths that lead to harm and destruction.",
+                    text: "But he who sins against me injures himself;\n  All those who hate me love death.\"",
                     prayer: "Lord, protect me from rejecting wisdom and choosing paths that lead to harm and destruction."
                 ),
                 PrayerVerse(
                     id: "prov-8-closing",
                     reference: "Closing",
-                    text: "In Jesus’ name, Amen. 🙏🏻",
-                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
                 )
             ]
         ),
