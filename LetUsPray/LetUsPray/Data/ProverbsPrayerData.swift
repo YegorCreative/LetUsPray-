@@ -2655,8 +2655,430 @@ enum ProverbsPrayerData {
                 )
             ]
         ),
-        PrayerDay(dayNumber: 15, title: "Choose Gentle Answers", chapterReference: "Proverbs 15", summary: "Pray for gentle responses and a listening spirit.", verses: []),
-        PrayerDay(dayNumber: 16, title: "Commit Your Plans", chapterReference: "Proverbs 16", summary: "Offer your plans to God and ask Him to establish them.", verses: []),
+        PrayerDay(
+            dayNumber: 15,
+            title: "Choose Gentle Answers",
+            chapterReference: "Proverbs 15",
+            summary: "Pray for gentle responses and a listening spirit.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-15-1",
+                    reference: "Proverbs 15:1",
+                    text: "A gentle answer turns away wrath,\n  But a harsh word stirs up anger.",
+                    prayer: "Dear Jesus, help me answer gently and peacefully. Guard me from harsh words that stir up anger and division."
+                ),
+                PrayerVerse(
+                    id: "prov-15-2",
+                    reference: "Proverbs 15:2",
+                    text: "The tongue of the wise makes knowledge acceptable,\n  But the mouth of fools spouts folly.",
+                    prayer: "Father, let my tongue speak wisdom, truth, and understanding instead of foolishness."
+                ),
+                PrayerVerse(
+                    id: "prov-15-3",
+                    reference: "Proverbs 15:3",
+                    text: "The eyes of the Lord are in every place,\n  Watching the evil and the good.",
+                    prayer: "Lord, remind me that Your eyes see everything. Help me live faithfully and uprightly before You."
+                ),
+                PrayerVerse(
+                    id: "prov-15-4",
+                    reference: "Proverbs 15:4",
+                    text: "A soothing tongue is a tree of life,\n  But perversion in it crushes the spirit.",
+                    prayer: "Jesus, let my words bring healing, encouragement, and life to others."
+                ),
+                PrayerVerse(
+                    id: "prov-15-5",
+                    reference: "Proverbs 15:5",
+                    text: "A fool rejects his father's discipline,\n  But he who regards reproof is sensible.",
+                    prayer: "Father, give me humility to accept correction and instruction with wisdom."
+                ),
+                PrayerVerse(
+                    id: "prov-15-6",
+                    reference: "Proverbs 15:6",
+                    text: "Great wealth is in the house of the righteous,\n  But trouble is in the income of the wicked.",
+                    prayer: "Lord, fill my life and home with righteousness, peace, and treasures that honor You."
+                ),
+                PrayerVerse(
+                    id: "prov-15-7",
+                    reference: "Proverbs 15:7",
+                    text: "The lips of the wise spread knowledge,\n  But the hearts of fools are not so.",
+                    prayer: "Jesus, help me spread knowledge, wisdom, and truth wherever I go."
+                ),
+                PrayerVerse(
+                    id: "prov-15-8",
+                    reference: "Proverbs 15:8",
+                    text: "The sacrifice of the wicked is an abomination to the Lord,\n  But the prayer of the upright is His delight.",
+                    prayer: "Father, let my prayers and worship be pleasing in Your sight. Purify my heart before You."
+                ),
+                PrayerVerse(
+                    id: "prov-15-9",
+                    reference: "Proverbs 15:9",
+                    text: "The way of the wicked is an abomination to the Lord,\n  But He loves one who pursues righteousness.",
+                    prayer: "Lord, guide me in righteousness and help me pursue what is good and pleasing to You."
+                ),
+                PrayerVerse(
+                    id: "prov-15-10",
+                    reference: "Proverbs 15:10",
+                    text: "Grievous punishment is for him who forsakes the way;\n  He who hates reproof will die.",
+                    prayer: "Jesus, help me respond to correction with repentance and growth instead of resisting wisdom."
+                ),
+                PrayerVerse(
+                    id: "prov-15-11",
+                    reference: "Proverbs 15:11",
+                    text: "Sheol and Abaddon lie open before the Lord,\n  How much more the hearts of men!",
+                    prayer: "Father, You know every hidden part of my heart. Cleanse me and make me pure before You."
+                ),
+                PrayerVerse(
+                    id: "prov-15-12",
+                    reference: "Proverbs 15:12",
+                    text: "A scoffer does not love one who reproves him,\n  He will not go to the wise.",
+                    prayer: "Lord, remove pride and arrogance from my life. Teach me to seek wise counsel humbly."
+                ),
+                PrayerVerse(
+                    id: "prov-15-13",
+                    reference: "Proverbs 15:13",
+                    text: "A joyful heart makes a cheerful face,\n  But when the heart is sad, the spirit is broken.",
+                    prayer: "Jesus, fill my heart with joy and peace so that my spirit may remain strong."
+                ),
+                PrayerVerse(
+                    id: "prov-15-14",
+                    reference: "Proverbs 15:14",
+                    text: "The mind of the intelligent seeks knowledge,\n  But the mouth of fools feeds on folly.",
+                    prayer: "Father, give me a hunger for wisdom, understanding, and truth instead of foolish distractions."
+                ),
+                PrayerVerse(
+                    id: "prov-15-15",
+                    reference: "Proverbs 15:15",
+                    text: "All the days of the afflicted are bad,\n  But a cheerful heart has a continual feast.",
+                    prayer: "Lord, help me maintain a thankful and joyful heart even during difficult seasons."
+                ),
+                PrayerVerse(
+                    id: "prov-15-16",
+                    reference: "Proverbs 15:16",
+                    text: "Better is a little with the fear of the Lord\n  Than great treasure and turmoil with it.",
+                    prayer: "Jesus, teach me to value reverence for You more than earthly riches or possessions."
+                ),
+                PrayerVerse(
+                    id: "prov-15-17",
+                    reference: "Proverbs 15:17",
+                    text: "Better is a dish of vegetables where love is\n  Than a fattened ox served with hatred.",
+                    prayer: "Father, fill my relationships and home with love, peace, and unity."
+                ),
+                PrayerVerse(
+                    id: "prov-15-18",
+                    reference: "Proverbs 15:18",
+                    text: "A hot-tempered man stirs up strife,\n  But the slow to anger calms a dispute.",
+                    prayer: "Lord, help me remain patient and calm instead of stirring conflict through anger."
+                ),
+                PrayerVerse(
+                    id: "prov-15-19",
+                    reference: "Proverbs 15:19",
+                    text: "The way of the lazy is as a hedge of thorns,\n  But the path of the upright is a highway.",
+                    prayer: "Jesus, remove laziness and excuses from my life. Help me walk diligently and faithfully."
+                ),
+                PrayerVerse(
+                    id: "prov-15-20",
+                    reference: "Proverbs 15:20",
+                    text: "A wise son makes a father glad,\n  But a foolish man despises his mother.",
+                    prayer: "Father, help me live wisely and bring joy and honor to my family."
+                ),
+                PrayerVerse(
+                    id: "prov-15-21",
+                    reference: "Proverbs 15:21",
+                    text: "Folly is joy to him who lacks sense,\n  But a man of understanding walks straight.",
+                    prayer: "Lord, guide me in understanding so that I may walk uprightly and wisely."
+                ),
+                PrayerVerse(
+                    id: "prov-15-22",
+                    reference: "Proverbs 15:22",
+                    text: "Without consultation, plans are frustrated,\n  But with many counselors they succeed.",
+                    prayer: "Jesus, surround me with wise counsel and teach me not to rely only on myself."
+                ),
+                PrayerVerse(
+                    id: "prov-15-23",
+                    reference: "Proverbs 15:23",
+                    text: "A man has joy in an apt answer,\n  And how delightful is a timely word!",
+                    prayer: "Father, help me speak timely words that encourage, strengthen, and bless others."
+                ),
+                PrayerVerse(
+                    id: "prov-15-24",
+                    reference: "Proverbs 15:24",
+                    text: "The path of life leads upward for the wise\n  That he may keep away from Sheol below.",
+                    prayer: "Lord, keep my steps on the path that leads to life and draw me away from destruction."
+                ),
+                PrayerVerse(
+                    id: "prov-15-25",
+                    reference: "Proverbs 15:25",
+                    text: "The Lord will tear down the house of the proud,\n  But He will establish the boundary of the widow.",
+                    prayer: "Jesus, humble the proud and protect the vulnerable. Teach me to walk humbly before You."
+                ),
+                PrayerVerse(
+                    id: "prov-15-26",
+                    reference: "Proverbs 15:26",
+                    text: "Evil plans are an abomination to the Lord,\n  But pleasant words are pure.",
+                    prayer: "Father, purify my thoughts and intentions. Let my mind dwell on what is pure and pleasing."
+                ),
+                PrayerVerse(
+                    id: "prov-15-27",
+                    reference: "Proverbs 15:27",
+                    text: "He who profits illicitly troubles his own house,\n  But he who hates bribes will live.",
+                    prayer: "Lord, remove greed and dishonest gain from my heart. Teach me integrity and contentment."
+                ),
+                PrayerVerse(
+                    id: "prov-15-28",
+                    reference: "Proverbs 15:28",
+                    text: "The heart of the righteous ponders how to answer,\n  But the mouth of the wicked pours out evil things.",
+                    prayer: "Jesus, help me think carefully before I speak and let my words reflect wisdom and grace."
+                ),
+                PrayerVerse(
+                    id: "prov-15-29",
+                    reference: "Proverbs 15:29",
+                    text: "The Lord is far from the wicked,\n  But He hears the prayer of the righteous.",
+                    prayer: "Father, draw near to me as I seek You in righteousness and prayer."
+                ),
+                PrayerVerse(
+                    id: "prov-15-30",
+                    reference: "Proverbs 15:30",
+                    text: "Bright eyes gladden the heart;\n  Good news puts fat on the bones.",
+                    prayer: "Lord, let my life bring light, joy, and encouragement to those around me."
+                ),
+                PrayerVerse(
+                    id: "prov-15-31",
+                    reference: "Proverbs 15:31",
+                    text: "He whose ear listens to the life-giving reproof\n  Will dwell among the wise.",
+                    prayer: "Jesus, help me listen carefully to correction so that I may grow in wisdom."
+                ),
+                PrayerVerse(
+                    id: "prov-15-32",
+                    reference: "Proverbs 15:32",
+                    text: "He who neglects discipline despises himself,\n  But he who listens to reproof acquires understanding.",
+                    prayer: "Father, keep me from rejecting discipline. Teach me understanding through correction and truth."
+                ),
+                PrayerVerse(
+                    id: "prov-15-33",
+                    reference: "Proverbs 15:33",
+                    text: "The fear of the Lord is the instruction for wisdom,\n  And before honor comes humility.",
+                    prayer: "Lord, teach me the fear of the Lord, humility, and wisdom so that my life may honor You always."
+                ),
+                PrayerVerse(
+                    id: "prov-15-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
+        PrayerDay(
+            dayNumber: 16,
+            title: "Commit Your Plans",
+            chapterReference: "Proverbs 16",
+            summary: "Offer your plans to God and ask Him to establish them.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-16-1",
+                    reference: "Proverbs 16:1",
+                    text: "The plans of the heart belong to man,\n  But the answer of the tongue is from the Lord.",
+                    prayer: "Dear Jesus, help me prepare my heart rightly before You, and let my words be guided by Your wisdom."
+                ),
+                PrayerVerse(
+                    id: "prov-16-2",
+                    reference: "Proverbs 16:2",
+                    text: "All the ways of a man are clean in his own sight,\n  But the Lord weighs the motives.",
+                    prayer: "Father, though my ways may seem right to me, examine my motives and purify my heart."
+                ),
+                PrayerVerse(
+                    id: "prov-16-3",
+                    reference: "Proverbs 16:3",
+                    text: "Commit your works to the Lord\n  And your plans will be established.",
+                    prayer: "Lord, I commit my plans, dreams, work, and future into Your hands. Establish my thoughts according to Your will."
+                ),
+                PrayerVerse(
+                    id: "prov-16-4",
+                    reference: "Proverbs 16:4",
+                    text: "The Lord has made everything for its own purpose,\n  Even the wicked for the day of evil.",
+                    prayer: "Jesus, thank You for creating all things with purpose. Help me fulfill the purpose You have for my life."
+                ),
+                PrayerVerse(
+                    id: "prov-16-5",
+                    reference: "Proverbs 16:5",
+                    text: "Everyone who is proud in heart is an abomination to the Lord;\n  Assuredly, he will not be unpunished.",
+                    prayer: "Father, remove pride and arrogance from my heart. Teach me humility and dependence upon You."
+                ),
+                PrayerVerse(
+                    id: "prov-16-6",
+                    reference: "Proverbs 16:6",
+                    text: "By lovingkindness and truth iniquity is atoned for,\n  And by the fear of the Lord one keeps away from evil.",
+                    prayer: "Lord, let mercy and truth guide my life, and help me turn away from evil through reverence for You."
+                ),
+                PrayerVerse(
+                    id: "prov-16-7",
+                    reference: "Proverbs 16:7",
+                    text: "When a man's ways are pleasing to the Lord,\n  He makes even his enemies to be at peace with him.",
+                    prayer: "Jesus, help my ways be pleasing in Your sight and bring peace into my relationships."
+                ),
+                PrayerVerse(
+                    id: "prov-16-8",
+                    reference: "Proverbs 16:8",
+                    text: "Better is a little with righteousness\n  Than great income with injustice.",
+                    prayer: "Father, teach me to value righteousness more than wealth gained through injustice."
+                ),
+                PrayerVerse(
+                    id: "prov-16-9",
+                    reference: "Proverbs 16:9",
+                    text: "The mind of man plans his way,\n  But the Lord directs his steps.",
+                    prayer: "Lord, I may make plans, but direct my steps according to Your perfect will."
+                ),
+                PrayerVerse(
+                    id: "prov-16-10",
+                    reference: "Proverbs 16:10",
+                    text: "A divine decision is in the lips of the king;\n  His mouth should not err in judgment.",
+                    prayer: "Jesus, grant wisdom and discernment to leaders, judges, and those entrusted with authority."
+                ),
+                PrayerVerse(
+                    id: "prov-16-11",
+                    reference: "Proverbs 16:11",
+                    text: "A just balance and scales belong to the Lord;\n  All the weights of the bag are His concern.",
+                    prayer: "Father, help me act honestly and fairly in all my dealings with others."
+                ),
+                PrayerVerse(
+                    id: "prov-16-12",
+                    reference: "Proverbs 16:12",
+                    text: "It is an abomination for kings to commit wicked acts,\n  For a throne is established on righteousness.",
+                    prayer: "Lord, establish righteousness and justice in every place of leadership and influence."
+                ),
+                PrayerVerse(
+                    id: "prov-16-13",
+                    reference: "Proverbs 16:13",
+                    text: "Righteous lips are the delight of kings,\n  And he who speaks right is loved.",
+                    prayer: "Jesus, let truth and honesty always be found on my lips."
+                ),
+                PrayerVerse(
+                    id: "prov-16-14",
+                    reference: "Proverbs 16:14",
+                    text: "The fury of a king is like messengers of death,\n  But a wise man will appease it.",
+                    prayer: "Father, give me wisdom to respond peacefully and wisely in difficult situations."
+                ),
+                PrayerVerse(
+                    id: "prov-16-15",
+                    reference: "Proverbs 16:15",
+                    text: "In the light of a king's face is life,\n  And his favor is like a cloud with the spring rain.",
+                    prayer: "Lord, let Your favor shine upon my life like refreshing rain upon dry ground."
+                ),
+                PrayerVerse(
+                    id: "prov-16-16",
+                    reference: "Proverbs 16:16",
+                    text: "How much better it is to get wisdom than gold!\n  And to get understanding is to be chosen above silver.",
+                    prayer: "Jesus, help me seek wisdom above gold and understanding above silver."
+                ),
+                PrayerVerse(
+                    id: "prov-16-17",
+                    reference: "Proverbs 16:17",
+                    text: "The highway of the upright is to depart from evil;\n  He who watches his way preserves his life.",
+                    prayer: "Father, keep me on the highway of righteousness and away from every path of evil."
+                ),
+                PrayerVerse(
+                    id: "prov-16-18",
+                    reference: "Proverbs 16:18",
+                    text: "Pride goes before destruction,\n  And a haughty spirit before stumbling.",
+                    prayer: "Lord, protect me from pride, knowing that it leads to destruction."
+                ),
+                PrayerVerse(
+                    id: "prov-16-19",
+                    reference: "Proverbs 16:19",
+                    text: "It is better to be humble in spirit with the lowly\n  Than to divide the spoil with the proud.",
+                    prayer: "Jesus, teach me humility and help me walk with a humble spirit rather than seeking earthly gain."
+                ),
+                PrayerVerse(
+                    id: "prov-16-20",
+                    reference: "Proverbs 16:20",
+                    text: "He who gives attention to the word will find good,\n  And blessed is he who trusts in the Lord.",
+                    prayer: "Father, help me trust in You completely and walk wisely in Your Word."
+                ),
+                PrayerVerse(
+                    id: "prov-16-21",
+                    reference: "Proverbs 16:21",
+                    text: "The wise in heart will be called understanding,\n  And sweetness of speech increases persuasiveness.",
+                    prayer: "Lord, fill my heart with wisdom and make my speech gracious and effective."
+                ),
+                PrayerVerse(
+                    id: "prov-16-22",
+                    reference: "Proverbs 16:22",
+                    text: "Understanding is a fountain of life to one who has it,\n  But the discipline of fools is folly.",
+                    prayer: "Jesus, let understanding be a fountain of life within me."
+                ),
+                PrayerVerse(
+                    id: "prov-16-23",
+                    reference: "Proverbs 16:23",
+                    text: "The heart of the wise instructs his mouth\n  And adds persuasiveness to his lips.",
+                    prayer: "Father, guide my heart so that my words may be wise, thoughtful, and uplifting."
+                ),
+                PrayerVerse(
+                    id: "prov-16-24",
+                    reference: "Proverbs 16:24",
+                    text: "Pleasant words are a honeycomb,\n  Sweet to the soul and healing to the bones.",
+                    prayer: "Lord, let my speech be pleasant like honey, bringing healing and encouragement to others."
+                ),
+                PrayerVerse(
+                    id: "prov-16-25",
+                    reference: "Proverbs 16:25",
+                    text: "There is a way which seems right to a man,\n  But its end is the way of death.",
+                    prayer: "Jesus, protect me from following paths that seem right but lead away from Your truth."
+                ),
+                PrayerVerse(
+                    id: "prov-16-26",
+                    reference: "Proverbs 16:26",
+                    text: "A worker's appetite works for him,\n  For his hunger urges him on.",
+                    prayer: "Father, give me diligence and motivation to work faithfully and responsibly."
+                ),
+                PrayerVerse(
+                    id: "prov-16-27",
+                    reference: "Proverbs 16:27",
+                    text: "A worthless man digs up evil,\n  While his words are like scorching fire.",
+                    prayer: "Lord, guard me from evil intentions and destructive speech."
+                ),
+                PrayerVerse(
+                    id: "prov-16-28",
+                    reference: "Proverbs 16:28",
+                    text: "A perverse man spreads strife,\n  And a slanderer separates intimate friends.",
+                    prayer: "Jesus, keep me from gossip, division, and anything that separates friends or families."
+                ),
+                PrayerVerse(
+                    id: "prov-16-29",
+                    reference: "Proverbs 16:29",
+                    text: "A man of violence entices his neighbor\n  And leads him in a way that is not good.",
+                    prayer: "Father, protect me from being influenced by those who encourage wrongdoing."
+                ),
+                PrayerVerse(
+                    id: "prov-16-30",
+                    reference: "Proverbs 16:30",
+                    text: "He who winks his eyes does so to devise perverse things;\n  He who compresses his lips brings evil to pass.",
+                    prayer: "Lord, help me reject evil schemes and keep my mind fixed on what is good."
+                ),
+                PrayerVerse(
+                    id: "prov-16-31",
+                    reference: "Proverbs 16:31",
+                    text: "A gray head is a crown of glory;\n  It is found in the way of righteousness.",
+                    prayer: "Jesus, thank You for the honor that comes from a life lived in righteousness and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "prov-16-32",
+                    reference: "Proverbs 16:32",
+                    text: "He who is slow to anger is better than the mighty,\n  And he who rules his spirit, than he who captures a city.",
+                    prayer: "Father, give me patience and self-control. Help me rule my spirit better than conquering a city."
+                ),
+                PrayerVerse(
+                    id: "prov-16-33",
+                    reference: "Proverbs 16:33",
+                    text: "The lot is cast into the lap,\n  But its every decision is from the Lord.",
+                    prayer: "Lord, remind me that every outcome is ultimately in Your hands. Help me trust Your sovereignty and wisdom in all things."
+                ),
+                PrayerVerse(
+                    id: "prov-16-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
         PrayerDay(dayNumber: 17, title: "Love Faithful Friendship", chapterReference: "Proverbs 17", summary: "Pray for covenant love and trustworthy companionship.", verses: []),
         PrayerDay(dayNumber: 18, title: "Listen Before Speaking", chapterReference: "Proverbs 18", summary: "Ask for listening ears and humble understanding.", verses: []),
         PrayerDay(dayNumber: 19, title: "Practice Compassion", chapterReference: "Proverbs 19", summary: "Pray for mercy toward those in need.", verses: []),
