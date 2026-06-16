@@ -23,206 +23,206 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-1-1",
                     reference: "Proverbs 1:1",
-                    text: "The proverbs of Solomon introduce a treasure of wisdom.",
+                    text: "The proverbs of Solomon the son of David, king of Israel:",
                     prayer: "Lord, thank You for preserving wisdom through Your Word. Open my heart to receive the teaching of Proverbs with humility and eagerness."
                 ),
                 PrayerVerse(
                     id: "prov-1-2",
                     reference: "Proverbs 1:2",
-                    text: "Purpose: to know wisdom and instruction.",
+                    text: "To know wisdom and instruction,\n  To discern the sayings of understanding,",
                     prayer: "Father, help me truly know wisdom—not just facts—but instruction that shapes my character and daily choices."
                 ),
                 PrayerVerse(
                     id: "prov-1-3",
                     reference: "Proverbs 1:3",
-                    text: "To receive wise dealing, righteousness, justice, and equity.",
+                    text: "To receive instruction in wise behavior,\n  Righteousness, justice and equity;",
                     prayer: "God, train me to receive wisdom that produces righteousness, justice, and integrity in every area of my life."
                 ),
                 PrayerVerse(
                     id: "prov-1-4",
                     reference: "Proverbs 1:4",
-                    text: "To give prudence to the simple and knowledge to the young.",
+                    text: "To give prudence to the naive,\n  To the youth knowledge and discretion,",
                     prayer: "Grant me prudence and sound judgment. Make me teachable like a child, eager to learn Your ways."
                 ),
                 PrayerVerse(
                     id: "prov-1-5",
                     reference: "Proverbs 1:5",
-                    text: "The wise hear and increase learning.",
+                    text: "A wise man will hear and increase in learning,\n  And a man of understanding will acquire wise counsel,",
                     prayer: "Keep me listening, Lord. Grow me beyond complacency so I keep increasing in understanding all my days."
                 ),
                 PrayerVerse(
                     id: "prov-1-6",
                     reference: "Proverbs 1:6",
-                    text: "Understanding proverbs, sayings, and riddles of the wise.",
+                    text: "To understand a proverb and a figure,\n  The words of the wise and their riddles.",
                     prayer: "Spirit of God, grant insight to understand the sayings of the wise and to apply them rightly."
                 ),
                 PrayerVerse(
                     id: "prov-1-7",
                     reference: "Proverbs 1:7",
-                    text: "The fear of the Lord is the beginning of knowledge.",
+                    text: "The fear of the Lord is the beginning of knowledge;\n  Fools despise wisdom and instruction.",
                     prayer: "Lord, root me in holy reverence. Let awe of You be the foundation of my thoughts, desires, and decisions."
                 ),
                 PrayerVerse(
                     id: "prov-1-8",
                     reference: "Proverbs 1:8",
-                    text: "Hear your father's instruction; don't forsake your mother's teaching.",
-                    prayer: "Give me a teachable spirit. Help me honor godly counsel and remember the faithful instruction I’ve received."
+                    text: "Hear, my son, your father's instruction\n  And do not forsake your mother's teaching;",
+                    prayer: "Give me a teachable spirit. Help me honor godly counsel and remember the faithful instruction I've received."
                 ),
                 PrayerVerse(
                     id: "prov-1-9",
                     reference: "Proverbs 1:9",
-                    text: "Instruction is a graceful garland and a beautiful adornment.",
+                    text: "Indeed, they are a graceful wreath to your head\n  And ornaments about your neck.",
                     prayer: "Make wisdom my adornment, Lord. Let Your truth be visible in my demeanor, words, and actions."
                 ),
                 PrayerVerse(
                     id: "prov-1-10",
                     reference: "Proverbs 1:10",
-                    text: "If sinners entice you, do not consent.",
+                    text: "My son, if sinners entice you,\n  Do not consent.",
                     prayer: "Strengthen my will to say no to temptation. Anchor me in Your ways when enticing paths appear."
                 ),
                 PrayerVerse(
                     id: "prov-1-11",
                     reference: "Proverbs 1:11",
-                    text: "Do not join violent or predatory schemes.",
+                    text: "If they say, \"Come with us,\n  Let us lie in wait for blood,\n  Let us ambush the innocent without cause;",
                     prayer: "Keep me far from any plan that harms others. Form in me a heart that protects, serves, and seeks peace."
                 ),
                 PrayerVerse(
                     id: "prov-1-12",
                     reference: "Proverbs 1:12",
-                    text: "The wicked lurk to swallow lives like Sheol.",
+                    text: "Let us swallow them alive like Sheol,\n  Even whole, as those who go down to the pit;",
                     prayer: "Guard me from hidden traps and destructive alliances. Lead me in paths of life, not death."
                 ),
                 PrayerVerse(
                     id: "prov-1-13",
                     reference: "Proverbs 1:13",
-                    text: "Promises of easy gain and stolen treasure.",
+                    text: "We will find all kinds of precious wealth,\n  We will fill our houses with spoil;",
                     prayer: "Lord, free me from greed and shortcuts. Teach me to value honest work and contentment over quick profit."
                 ),
                 PrayerVerse(
                     id: "prov-1-14",
                     reference: "Proverbs 1:14",
-                    text: "Do not throw in your lot with them.",
+                    text: "Throw in your lot with us,\n  We shall all have one purse,\"",
                     prayer: "Give me courage to stand apart when the crowd chooses compromise. Help me choose integrity over approval."
                 ),
                 PrayerVerse(
                     id: "prov-1-15",
                     reference: "Proverbs 1:15",
-                    text: "Keep your feet from their path.",
+                    text: "My son, do not walk in the way with them.\n  Keep your feet from their path,",
                     prayer: "Order my steps, Lord. Keep my feet on Your straight path and away from every slippery way."
                 ),
                 PrayerVerse(
                     id: "prov-1-16",
                     reference: "Proverbs 1:16",
-                    text: "Their feet run to evil and hurry to shed blood.",
+                    text: "For their feet run to evil\n  And they hasten to shed blood.",
                     prayer: "Turn my haste into patience and my impulses into prayerful discernment. Make me quick to do good, not evil."
                 ),
                 PrayerVerse(
                     id: "prov-1-17",
                     reference: "Proverbs 1:17",
-                    text: "A net spread in sight of any bird is useless.",
-                    prayer: "Give me spiritual sight to recognize obvious traps. Make me wise to the enemy’s schemes."
+                    text: "Indeed, it is useless to spread the baited net\n  In the sight of any bird;",
+                    prayer: "Give me spiritual sight to recognize obvious traps. Make me wise to the enemy's schemes."
                 ),
                 PrayerVerse(
                     id: "prov-1-18",
                     reference: "Proverbs 1:18",
-                    text: "The violent set a trap for their own lives.",
+                    text: "But they lie in wait for their own blood;\n  They ambush their own lives.",
                     prayer: "Expose self-destructive patterns in me, Lord, and replace them with Your life-giving ways."
                 ),
                 PrayerVerse(
                     id: "prov-1-19",
                     reference: "Proverbs 1:19",
-                    text: "Greedy gain steals the life of its possessors.",
+                    text: "So are the ways of everyone who gains by violence;\n  It takes away the life of its possessors.",
                     prayer: "Root out greed and envy from my heart. Teach me generosity, contentment, and trust in Your provision."
                 ),
                 PrayerVerse(
                     id: "prov-1-20",
                     reference: "Proverbs 1:20",
-                    text: "Wisdom cries aloud in the streets.",
-                    prayer: "Help me hear wisdom’s voice in ordinary places. Tune my ears to Your call amid the noise of life."
+                    text: "Wisdom shouts in the street,\n  She lifts her voice in the square;",
+                    prayer: "Help me hear wisdom's voice in ordinary places. Tune my ears to Your call amid the noise of life."
                 ),
                 PrayerVerse(
                     id: "prov-1-21",
                     reference: "Proverbs 1:21",
-                    text: "She raises her voice at the city gates.",
+                    text: "At the head of the noisy streets she cries out;\n  At the entrance of the gates in the city she utters her sayings:",
                     prayer: "Let Your wisdom shape my public life—my work, my conversations, and my influence for good."
                 ),
                 PrayerVerse(
                     id: "prov-1-22",
                     reference: "Proverbs 1:22",
-                    text: "How long will the simple love being simple?",
+                    text: "\"How long, O naive ones, will you love being simple-minded?\n  And scoffers delight themselves in scoffing\n  And fools hate knowledge?",
                     prayer: "Lord, deliver me from loving ease and resisting growth. Give me desire to mature and to seek understanding."
                 ),
                 PrayerVerse(
                     id: "prov-1-23",
                     reference: "Proverbs 1:23",
-                    text: "Turn at my reproof; I will pour out my spirit to you.",
+                    text: "Turn to my reproof,\n  Behold, I will pour out my spirit on you;\n  I will make my words known to you.",
                     prayer: "When You correct me, help me turn quickly. Pour out Your Spirit and make Your words clear to me."
                 ),
                 PrayerVerse(
                     id: "prov-1-24",
                     reference: "Proverbs 1:24",
-                    text: "Because I called and you refused...",
+                    text: "Because I called and you refused,\n  I stretched out my hand and no one paid attention;",
                     prayer: "Keep me from stubborn refusal. Give me a soft heart that answers when You call."
                 ),
                 PrayerVerse(
                     id: "prov-1-25",
                     reference: "Proverbs 1:25",
-                    text: "You ignored all my counsel and would have none of my reproof.",
+                    text: "And you neglected all my counsel\n  And did not want my reproof;",
                     prayer: "Forgive me for the times I ignored Your counsel. Teach me to welcome Your correction as an expression of love."
                 ),
                 PrayerVerse(
                     id: "prov-1-26",
                     reference: "Proverbs 1:26",
-                    text: "I also will laugh at your calamity...",
-                    prayer: "Lord, sober my heart. Help me respond today so I won’t reap the sorrow of delayed obedience."
+                    text: "I will also laugh at your calamity;\n  I will mock when your dread comes,",
+                    prayer: "Lord, sober my heart. Help me respond today so I won't reap the sorrow of delayed obedience."
                 ),
                 PrayerVerse(
                     id: "prov-1-27",
                     reference: "Proverbs 1:27",
-                    text: "When terror strikes like a storm...",
+                    text: "When your dread comes like a storm\n  And your calamity comes like a whirlwind,\n  When distress and anguish come upon you.",
                     prayer: "Be my refuge when trouble comes. Teach me to build my life on Your wisdom before storms arrive."
                 ),
                 PrayerVerse(
                     id: "prov-1-28",
                     reference: "Proverbs 1:28",
-                    text: "Then they will call on me, but I will not answer.",
+                    text: "Then they will call on me, but I will not answer;\n  They will seek me diligently but they will not find me,",
                     prayer: "Keep me from delaying repentance. Draw me to seek You now, while Your voice is near."
                 ),
                 PrayerVerse(
                     id: "prov-1-29",
                     reference: "Proverbs 1:29",
-                    text: "They hated knowledge and did not choose the fear of the Lord.",
+                    text: "Because they hated knowledge\n  And did not choose the fear of the Lord.",
                     prayer: "Place in me a deep love for truth and a willing choice to fear You above all."
                 ),
                 PrayerVerse(
                     id: "prov-1-30",
                     reference: "Proverbs 1:30",
-                    text: "They would have none of my counsel and despised my reproof.",
+                    text: "They would not accept my counsel,\n  They spurned all my reproof.",
                     prayer: "Make me quick to receive Your counsel and eager to be corrected, that I may walk securely."
                 ),
                 PrayerVerse(
                     id: "prov-1-31",
                     reference: "Proverbs 1:31",
-                    text: "They shall eat the fruit of their way.",
+                    text: "So they shall eat of the fruit of their own way\n  And be satiated with their own devices.",
                     prayer: "Spare me from the bitter fruit of my own stubbornness. Lead me to sow seeds of wisdom and reap life."
                 ),
                 PrayerVerse(
                     id: "prov-1-32",
                     reference: "Proverbs 1:32",
-                    text: "The simple are killed by turning away; fools are destroyed by complacency.",
+                    text: "For the waywardness of the naive will kill them,\n  And the complacency of fools will destroy them.",
                     prayer: "Rescue me from complacency. Keep me awake, attentive, and responsive to Your guidance."
                 ),
                 PrayerVerse(
                     id: "prov-1-33",
                     reference: "Proverbs 1:33",
-                    text: "Whoever listens to me will dwell secure and be at ease, without dread of disaster.",
+                    text: "But he who listens to me shall live securely\n  And will be at ease from the dread of evil.\"",
                     prayer: "Lord, I choose to listen to You. Let Your wisdom make me dwell secure, at peace, and unafraid in Your care."
                 ),
                 PrayerVerse(
                     id: "prov-1-closing",
                     reference: "Closing",
-                    text: "In Jesus’ name, Amen. 🙏🏻",
-                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
                 )
             ]
         ),
@@ -381,211 +381,211 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-3-1",
                     reference: "Proverbs 3:1",
-                    text: "Dear Jesus, help me never forget Your teachings and let my heart faithfully keep Your commandments.",
+                    text: "My son, do not forget my teaching,\n  But let your heart keep my commandments;",
                     prayer: "Dear Jesus, help me never forget Your teachings and let my heart faithfully keep Your commandments."
                 ),
                 PrayerVerse(
                     id: "prov-3-2",
                     reference: "Proverbs 3:2",
-                    text: "Father, thank You for the promise of long life, peace, and well-being that comes from walking in Your wisdom. Help me follow Your ways daily.",
+                    text: "For length of days and years of life\n  And peace they will add to you.",
                     prayer: "Father, thank You for the promise of long life, peace, and well-being that comes from walking in Your wisdom. Help me follow Your ways daily."
                 ),
                 PrayerVerse(
                     id: "prov-3-3",
                     reference: "Proverbs 3:3",
-                    text: "Lord, let kindness and truth never leave me. Help me bind them around my neck and write them upon my heart.",
+                    text: "Do not let kindness and truth leave you;\n  Bind them around your neck,\n  Write them on the tablet of your heart.",
                     prayer: "Lord, let kindness and truth never leave me. Help me bind them around my neck and write them upon my heart."
                 ),
                 PrayerVerse(
                     id: "prov-3-4",
                     reference: "Proverbs 3:4",
-                    text: "Jesus, help me find favor and good understanding in the sight of God and people.",
+                    text: "So you will find favor and good repute\n  In the sight of God and man.",
                     prayer: "Jesus, help me find favor and good understanding in the sight of God and people."
                 ),
                 PrayerVerse(
                     id: "prov-3-5",
                     reference: "Proverbs 3:5",
-                    text: "Father, help me trust in You with all my heart and never rely solely on my own understanding.",
+                    text: "Trust in the Lord with all your heart\n  And do not lean on your own understanding.",
                     prayer: "Father, help me trust in You with all my heart and never rely solely on my own understanding."
                 ),
                 PrayerVerse(
                     id: "prov-3-6",
                     reference: "Proverbs 3:6",
-                    text: "Lord, help me acknowledge You in all my ways, and faithfully follow the path You have prepared for me.",
+                    text: "In all your ways acknowledge Him,\n  And He will make your paths straight.",
                     prayer: "Lord, help me acknowledge You in all my ways, and faithfully follow the path You have prepared for me."
                 ),
                 PrayerVerse(
                     id: "prov-3-7",
                     reference: "Proverbs 3:7",
-                    text: "Jesus, keep me from becoming wise in my own eyes. Teach me to fear You and turn away from evil.",
+                    text: "Do not be wise in your own eyes;\n  Fear the Lord and turn away from evil.",
                     prayer: "Jesus, keep me from becoming wise in my own eyes. Teach me to fear You and turn away from evil."
                 ),
                 PrayerVerse(
                     id: "prov-3-8",
                     reference: "Proverbs 3:8",
-                    text: "Father, let obedience to You bring health, strength, and renewal to my life.",
+                    text: "It will be healing to your body\n  And refreshment to your bones.",
                     prayer: "Father, let obedience to You bring health, strength, and renewal to my life."
                 ),
                 PrayerVerse(
                     id: "prov-3-9",
                     reference: "Proverbs 3:9",
-                    text: "Lord, teach me to honor You with my possessions and with the first fruits of all You provide.",
+                    text: "Honor the Lord from your wealth\n  And from the first of all your produce;",
                     prayer: "Lord, teach me to honor You with my possessions and with the first fruits of all You provide."
                 ),
                 PrayerVerse(
                     id: "prov-3-10",
                     reference: "Proverbs 3:10",
-                    text: "Jesus, help me trust You as my provider and remain faithful with every blessing You place in my hands.",
+                    text: "So your barns will be filled with plenty\n  And your vats will overflow with new wine.",
                     prayer: "Jesus, help me trust You as my provider and remain faithful with every blessing You place in my hands."
                 ),
                 PrayerVerse(
                     id: "prov-3-11",
                     reference: "Proverbs 3:11",
-                    text: "Father, help me not despise Your discipline or become discouraged when You correct me.",
+                    text: "My son, do not reject the discipline of the Lord\n  Or loathe His reproof,",
                     prayer: "Father, help me not despise Your discipline or become discouraged when You correct me."
                 ),
                 PrayerVerse(
                     id: "prov-3-12",
                     reference: "Proverbs 3:12",
-                    text: "Lord, thank You for loving me as a Father loves His child. Help me receive Your correction with humility.",
+                    text: "For whom the Lord loves He reproves,\n  Even as a father corrects the son in whom he delights.",
                     prayer: "Lord, thank You for loving me as a Father loves His child. Help me receive Your correction with humility."
                 ),
                 PrayerVerse(
                     id: "prov-3-13",
                     reference: "Proverbs 3:13",
-                    text: "Jesus, help me find wisdom and understanding and treasure them above all earthly riches.",
+                    text: "How blessed is the man who finds wisdom\n  And the man who gains understanding.",
                     prayer: "Jesus, help me find wisdom and understanding and treasure them above all earthly riches."
                 ),
                 PrayerVerse(
                     id: "prov-3-14",
                     reference: "Proverbs 3:14",
-                    text: "Father, teach me to value wisdom more than silver and greater than material gain.",
+                    text: "For her profit is better than the profit of silver\n  And her gain better than fine gold.",
                     prayer: "Father, teach me to value wisdom more than silver and greater than material gain."
                 ),
                 PrayerVerse(
                     id: "prov-3-15",
                     reference: "Proverbs 3:15",
-                    text: "Lord, remind me that wisdom is more precious than jewels and that nothing compares to the treasure of knowing You.",
+                    text: "She is more precious than jewels;\n  And nothing you desire compares with her.",
                     prayer: "Lord, remind me that wisdom is more precious than jewels and that nothing compares to the treasure of knowing You."
                 ),
                 PrayerVerse(
                     id: "prov-3-16",
                     reference: "Proverbs 3:16",
-                    text: "Jesus, thank You that wisdom brings blessings, stability, and purpose. Help me walk in it daily.",
+                    text: "Long life is in her right hand;\n  In her left hand are riches and honor.",
                     prayer: "Jesus, thank You that wisdom brings blessings, stability, and purpose. Help me walk in it daily."
                 ),
                 PrayerVerse(
                     id: "prov-3-17",
                     reference: "Proverbs 3:17",
-                    text: "Father, let my ways be pleasant and my paths filled with peace as I follow Your guidance.",
+                    text: "Her ways are pleasant ways\n  And all her paths are peace.",
                     prayer: "Father, let my ways be pleasant and my paths filled with peace as I follow Your guidance."
                 ),
                 PrayerVerse(
                     id: "prov-3-18",
                     reference: "Proverbs 3:18",
-                    text: "Lord, let Your wisdom become a tree of life to me, bringing growth, strength, and blessing.",
+                    text: "She is a tree of life to those who take hold of her,\n  And happy are all who hold her fast.",
                     prayer: "Lord, let Your wisdom become a tree of life to me, bringing growth, strength, and blessing."
                 ),
                 PrayerVerse(
                     id: "prov-3-19",
                     reference: "Proverbs 3:19",
-                    text: "Jesus, thank You for creating the earth through wisdom. Help me learn from Your perfect design.",
+                    text: "The Lord by wisdom founded the earth,\n  By understanding He established the heavens.",
                     prayer: "Jesus, thank You for creating the earth through wisdom. Help me learn from Your perfect design."
                 ),
                 PrayerVerse(
                     id: "prov-3-20",
                     reference: "Proverbs 3:20",
-                    text: "Father, thank You for Your understanding and power displayed throughout creation.",
+                    text: "By His knowledge the deeps were broken up\n  And the skies drip with dew.",
                     prayer: "Father, thank You for Your understanding and power displayed throughout creation."
                 ),
                 PrayerVerse(
                     id: "prov-3-21",
                     reference: "Proverbs 3:21",
-                    text: "Lord, help me preserve sound wisdom and discretion and never let them depart from my sight.",
+                    text: "My son, let them not vanish from your sight;\n  Keep sound wisdom and discretion,",
                     prayer: "Lord, help me preserve sound wisdom and discretion and never let them depart from my sight."
                 ),
                 PrayerVerse(
                     id: "prov-3-22",
                     reference: "Proverbs 3:22",
-                    text: "Jesus, let wisdom bring life to my soul and grace to my life.",
+                    text: "So they will be life to your soul\n  And adornment to your neck.",
                     prayer: "Jesus, let wisdom bring life to my soul and grace to my life."
                 ),
                 PrayerVerse(
                     id: "prov-3-23",
                     reference: "Proverbs 3:23",
-                    text: "Father, help me walk securely in Your ways and keep my feet from stumbling.",
+                    text: "Then you will walk in your way securely\n  And your foot will not stumble.",
                     prayer: "Father, help me walk securely in Your ways and keep my feet from stumbling."
                 ),
                 PrayerVerse(
                     id: "prov-3-24",
                     reference: "Proverbs 3:24",
-                    text: "Lord, grant me peaceful rest and remove fear and anxiety from my heart.",
+                    text: "When you lie down, you will not be afraid;\n  When you lie down, your sleep will be sweet.",
                     prayer: "Lord, grant me peaceful rest and remove fear and anxiety from my heart."
                 ),
                 PrayerVerse(
                     id: "prov-3-25",
                     reference: "Proverbs 3:25",
-                    text: "Jesus, help me not be afraid of sudden fear or trouble when it comes.",
+                    text: "Do not be afraid of sudden fear\n  Nor of the onslaught of the wicked when it comes;",
                     prayer: "Jesus, help me not be afraid of sudden fear or trouble when it comes."
                 ),
                 PrayerVerse(
                     id: "prov-3-26",
                     reference: "Proverbs 3:26",
-                    text: "Father, be my confidence and keep me safe from every trap of the enemy.",
+                    text: "For the Lord will be your confidence\n  And will keep your foot from being caught.",
                     prayer: "Father, be my confidence and keep me safe from every trap of the enemy."
                 ),
                 PrayerVerse(
                     id: "prov-3-27",
                     reference: "Proverbs 3:27",
-                    text: "Lord, help me never withhold good from those to whom it is due when it is within my power to help.",
+                    text: "Do not withhold good from those to whom it is due,\n  When it is in your power to do it.",
                     prayer: "Lord, help me never withhold good from those to whom it is due when it is within my power to help."
                 ),
                 PrayerVerse(
                     id: "prov-3-28",
                     reference: "Proverbs 3:28",
-                    text: "Jesus, teach me generosity and prompt obedience when I have the opportunity to bless others.",
+                    text: "Do not say to your neighbor, \"Go, and come back,\n  And tomorrow I will give it,\"\n  When you have it with you.",
                     prayer: "Jesus, teach me generosity and prompt obedience when I have the opportunity to bless others."
                 ),
                 PrayerVerse(
                     id: "prov-3-29",
                     reference: "Proverbs 3:29",
-                    text: "Father, keep me from planning harm against anyone, especially those who trust me.",
+                    text: "Do not devise harm against your neighbor,\n  While he lives securely beside you.",
                     prayer: "Father, keep me from planning harm against anyone, especially those who trust me."
                 ),
                 PrayerVerse(
                     id: "prov-3-30",
                     reference: "Proverbs 3:30",
-                    text: "Lord, help me live peacefully with others and avoid unnecessary conflict.",
+                    text: "Do not contend with a man without cause,\n  If he has done you no harm.",
                     prayer: "Lord, help me live peacefully with others and avoid unnecessary conflict."
                 ),
                 PrayerVerse(
                     id: "prov-3-31",
                     reference: "Proverbs 3:31",
-                    text: "Jesus, protect my heart from envy and keep me from admiring sinful ways.",
+                    text: "Do not envy a man of violence\n  And do not choose any of his ways.",
                     prayer: "Jesus, protect my heart from envy and keep me from admiring sinful ways."
                 ),
                 PrayerVerse(
                     id: "prov-3-32",
                     reference: "Proverbs 3:32",
-                    text: "Father, help me walk in integrity, knowing that You delight in those who are upright.",
+                    text: "For the devious are an abomination to the Lord;\n  But He is intimate with the upright.",
                     prayer: "Father, help me walk in integrity, knowing that You delight in those who are upright."
                 ),
                 PrayerVerse(
                     id: "prov-3-33",
                     reference: "Proverbs 3:33",
-                    text: "Lord, let Your blessing rest upon my home and help me live in a way that honors You.",
+                    text: "The curse of the Lord is on the house of the wicked,\n  But He blesses the dwelling of the righteous.",
                     prayer: "Lord, let Your blessing rest upon my home and help me live in a way that honors You."
                 ),
                 PrayerVerse(
                     id: "prov-3-34",
                     reference: "Proverbs 3:34",
-                    text: "Jesus, teach me humility and help me receive the grace You freely give.",
+                    text: "Though He scoffs at the scoffers,\n  Yet He gives grace to the afflicted.",
                     prayer: "Jesus, teach me humility and help me receive the grace You freely give."
                 ),
                 PrayerVerse(
                     id: "prov-3-35",
                     reference: "Proverbs 3:35",
-                    text: "Father, let wisdom guide my life so that I may walk in honor and reflect Your glory.",
+                    text: "The wise will inherit honor,\n  But fools display dishonor.",
                     prayer: "Father, let wisdom guide my life so that I may walk in honor and reflect Your glory."
                 ),
                 PrayerVerse(
