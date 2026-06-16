@@ -1885,8 +1885,416 @@ enum ProverbsPrayerData {
                 )
             ]
         ),
-        PrayerDay(dayNumber: 11, title: "Live Honestly", chapterReference: "Proverbs 11", summary: "Pray for integrity in every hidden place.", verses: []),
-        PrayerDay(dayNumber: 12, title: "Love Correction", chapterReference: "Proverbs 12", summary: "Ask for a teachable spirit that embraces growth.", verses: []),
+        PrayerDay(
+            dayNumber: 11,
+            title: "Live Honestly",
+            chapterReference: "Proverbs 11",
+            summary: "Pray for integrity in every hidden place.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-11-1",
+                    reference: "Proverbs 11:1",
+                    text: "A false balance is an abomination to the Lord,\n  But a just weight is His delight.",
+                    prayer: "Dear Jesus, help me walk in honesty and integrity. Let me never deceive others, but live truthfully and fairly in all that I do."
+                ),
+                PrayerVerse(
+                    id: "prov-11-2",
+                    reference: "Proverbs 11:2",
+                    text: "When pride comes, then comes dishonor,\n  But with the humble is wisdom.",
+                    prayer: "Father, remove pride from my heart and teach me humility. Help me walk in wisdom and depend on You instead of myself."
+                ),
+                PrayerVerse(
+                    id: "prov-11-3",
+                    reference: "Proverbs 11:3",
+                    text: "The integrity of the upright will guide them,\n  But the crookedness of the treacherous will destroy them.",
+                    prayer: "Lord, let integrity guide my life. Keep me faithful and upright in every decision I make."
+                ),
+                PrayerVerse(
+                    id: "prov-11-4",
+                    reference: "Proverbs 11:4",
+                    text: "Riches do not profit in the day of wrath,\n  But righteousness delivers from death.",
+                    prayer: "Jesus, remind me that riches cannot save the soul. Help me value righteousness and eternal things above worldly wealth."
+                ),
+                PrayerVerse(
+                    id: "prov-11-5",
+                    reference: "Proverbs 11:5",
+                    text: "The righteousness of the blameless will smooth his way,\n  But the wicked will fall by his own wickedness.",
+                    prayer: "Father, make my path straight through righteousness. Keep me from falling because of wickedness or compromise."
+                ),
+                PrayerVerse(
+                    id: "prov-11-6",
+                    reference: "Proverbs 11:6",
+                    text: "The righteousness of the upright will deliver them,\n  But the treacherous will be caught by their own greed.",
+                    prayer: "Lord, deliver me through righteousness and protect me from being trapped by sinful desires."
+                ),
+                PrayerVerse(
+                    id: "prov-11-7",
+                    reference: "Proverbs 11:7",
+                    text: "When a wicked man dies, his expectation will perish,\n  And the hope of strong men perishes.",
+                    prayer: "Jesus, help me place my hope in You alone and not in temporary things that fade away."
+                ),
+                PrayerVerse(
+                    id: "prov-11-8",
+                    reference: "Proverbs 11:8",
+                    text: "The righteous is delivered from trouble,\n  But the wicked takes his place.",
+                    prayer: "Father, rescue me from trouble and help me remain faithful during difficult times."
+                ),
+                PrayerVerse(
+                    id: "prov-11-9",
+                    reference: "Proverbs 11:9",
+                    text: "With his mouth the godless man destroys his neighbor,\n  But through knowledge the righteous will be delivered.",
+                    prayer: "Lord, guard my mouth from destructive speech. Let my words bring wisdom, healing, and truth."
+                ),
+                PrayerVerse(
+                    id: "prov-11-10",
+                    reference: "Proverbs 11:10",
+                    text: "When it goes well with the righteous, the city rejoices,\n  And when the wicked perish, there is joyful shouting.",
+                    prayer: "Jesus, let righteousness bring joy and peace to my community and the people around me."
+                ),
+                PrayerVerse(
+                    id: "prov-11-11",
+                    reference: "Proverbs 11:11",
+                    text: "By the blessing of the upright a city is exalted,\n  But by the mouth of the wicked it is torn down.",
+                    prayer: "Father, help me use my words to build others up instead of tearing them down."
+                ),
+                PrayerVerse(
+                    id: "prov-11-12",
+                    reference: "Proverbs 11:12",
+                    text: "He who despises his neighbor lacks sense,\n  But a man of understanding keeps silent.",
+                    prayer: "Lord, give me understanding and self-control so I do not despise or dishonor others."
+                ),
+                PrayerVerse(
+                    id: "prov-11-13",
+                    reference: "Proverbs 11:13",
+                    text: "He who goes about as a talebearer reveals secrets,\n  But he who is trustworthy conceals a matter.",
+                    prayer: "Jesus, help me be trustworthy and faithful with every secret and responsibility given to me."
+                ),
+                PrayerVerse(
+                    id: "prov-11-14",
+                    reference: "Proverbs 11:14",
+                    text: "Where there is no guidance the people fall,\n  But in abundance of counselors there is victory.",
+                    prayer: "Father, surround me with wise counsel and teach me to seek godly advice before making decisions."
+                ),
+                PrayerVerse(
+                    id: "prov-11-15",
+                    reference: "Proverbs 11:15",
+                    text: "He who is guarantor for a stranger will surely suffer for it,\n  But he who hates being a guarantor is secure.",
+                    prayer: "Lord, give me wisdom and discernment in financial commitments and relationships."
+                ),
+                PrayerVerse(
+                    id: "prov-11-16",
+                    reference: "Proverbs 11:16",
+                    text: "A gracious woman attains honor,\n  And ruthless men attain riches.",
+                    prayer: "Jesus, help me value grace, kindness, and godly character more than power or riches."
+                ),
+                PrayerVerse(
+                    id: "prov-11-17",
+                    reference: "Proverbs 11:17",
+                    text: "The merciful man does himself good,\n  But the cruel man does himself harm.",
+                    prayer: "Father, teach me mercy and compassion. Let kindness flow from my life toward others."
+                ),
+                PrayerVerse(
+                    id: "prov-11-18",
+                    reference: "Proverbs 11:18",
+                    text: "The wicked earns deceptive wages,\n  But he who sows righteousness gets a true reward.",
+                    prayer: "Lord, help me sow righteousness faithfully so I may reap lasting and eternal rewards."
+                ),
+                PrayerVerse(
+                    id: "prov-11-19",
+                    reference: "Proverbs 11:19",
+                    text: "He who is steadfast in righteousness will attain to life,\n  And he who pursues evil will bring about his own death.",
+                    prayer: "Jesus, lead me in righteousness and life. Keep me far from paths that lead to destruction."
+                ),
+                PrayerVerse(
+                    id: "prov-11-20",
+                    reference: "Proverbs 11:20",
+                    text: "The perverse in heart are an abomination to the Lord,\n  But the blameless in their walk are His delight.",
+                    prayer: "Father, let my heart and ways be pleasing before You. Purify my motives and intentions."
+                ),
+                PrayerVerse(
+                    id: "prov-11-21",
+                    reference: "Proverbs 11:21",
+                    text: "Assuredly, the evil man will not go unpunished,\n  But the descendants of the righteous will be delivered.",
+                    prayer: "Lord, remind me that evil will not go unpunished. Help me remain faithful and upright before You."
+                ),
+                PrayerVerse(
+                    id: "prov-11-22",
+                    reference: "Proverbs 11:22",
+                    text: "As a ring of gold in a swine's snout\n  So is a beautiful woman who lacks discretion.",
+                    prayer: "Jesus, teach me that true beauty comes from wisdom, purity, and godly character."
+                ),
+                PrayerVerse(
+                    id: "prov-11-23",
+                    reference: "Proverbs 11:23",
+                    text: "The desire of the righteous is only good,\n  But the expectation of the wicked is wrath.",
+                    prayer: "Father, let my desires be good, pure, and pleasing in Your sight."
+                ),
+                PrayerVerse(
+                    id: "prov-11-24",
+                    reference: "Proverbs 11:24",
+                    text: "There is one who scatters, and yet increases all the more,\n  And there is one who withholds what is justly due, and yet it results only in want.",
+                    prayer: "Lord, teach me generosity and trust. Help me give freely and bless others joyfully."
+                ),
+                PrayerVerse(
+                    id: "prov-11-25",
+                    reference: "Proverbs 11:25",
+                    text: "The generous man will be prosperous,\n  And he who waters will himself be watered.",
+                    prayer: "Jesus, make me a blessing to others, and refresh my soul as I refresh those around me."
+                ),
+                PrayerVerse(
+                    id: "prov-11-26",
+                    reference: "Proverbs 11:26",
+                    text: "He who withholds grain, the people will curse him,\n  But blessing will be on the head of him who sells it.",
+                    prayer: "Father, help me not withhold good from others selfishly, but share with wisdom and kindness."
+                ),
+                PrayerVerse(
+                    id: "prov-11-27",
+                    reference: "Proverbs 11:27",
+                    text: "He who diligently seeks good seeks favor,\n  But he who seeks evil, evil will come to him.",
+                    prayer: "Lord, help me diligently seek what is good and pleasing before You every day."
+                ),
+                PrayerVerse(
+                    id: "prov-11-28",
+                    reference: "Proverbs 11:28",
+                    text: "He who trusts in his riches will fall,\n  But the righteous will flourish like the green leaf.",
+                    prayer: "Jesus, keep me from trusting in riches or material things. Let my confidence rest in You alone."
+                ),
+                PrayerVerse(
+                    id: "prov-11-29",
+                    reference: "Proverbs 11:29",
+                    text: "He who troubles his own house will inherit wind,\n  And the foolish will be servant to the wisehearted.",
+                    prayer: "Father, help me bring peace and wisdom into my home and relationships."
+                ),
+                PrayerVerse(
+                    id: "prov-11-30",
+                    reference: "Proverbs 11:30",
+                    text: "The fruit of the righteous is a tree of life,\n  And he who is wise wins souls.",
+                    prayer: "Lord, let my life bear righteous fruit that draws others closer to You."
+                ),
+                PrayerVerse(
+                    id: "prov-11-31",
+                    reference: "Proverbs 11:31",
+                    text: "If the righteous will be rewarded in the earth,\n  How much more the wicked and the sinner!",
+                    prayer: "Jesus, remind me that righteousness matters deeply and that every action has eternal value. Help me walk faithfully before You always."
+                ),
+                PrayerVerse(
+                    id: "prov-11-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
+        PrayerDay(
+            dayNumber: 12,
+            title: "Love Correction",
+            chapterReference: "Proverbs 12",
+            summary: "Ask for a teachable spirit that embraces growth.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-12-1",
+                    reference: "Proverbs 12:1",
+                    text: "Whoever loves discipline loves knowledge,
+  But he who hates reproof is stupid.",
+                    prayer: "Dear Jesus, help me love correction and wisdom. Teach me to receive discipline with humility and a willing heart."
+                ),
+                PrayerVerse(
+                    id: "prov-12-2",
+                    reference: "Proverbs 12:2",
+                    text: "A good man will obtain favor from the Lord,
+  But He will condemn a man who devises evil.",
+                    prayer: "Father, let my life find favor in Your sight through goodness, honesty, and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "prov-12-3",
+                    reference: "Proverbs 12:3",
+                    text: "A man will not be established by wickedness,
+  But the root of the righteous will not be moved.",
+                    prayer: "Lord, establish my life on righteousness so that I may remain strong and unshaken."
+                ),
+                PrayerVerse(
+                    id: "prov-12-4",
+                    reference: "Proverbs 12:4",
+                    text: "An excellent wife is the crown of her husband,
+  But she who shames him is like rottenness in his bones.",
+                    prayer: "Jesus, help me become a person of noble character who brings honor, encouragement, and peace to others."
+                ),
+                PrayerVerse(
+                    id: "prov-12-5",
+                    reference: "Proverbs 12:5",
+                    text: "The thoughts of the righteous are just,
+  But the counsels of the wicked are deceitful.",
+                    prayer: "Father, purify my thoughts and intentions. Let my plans be righteous, honest, and wise."
+                ),
+                PrayerVerse(
+                    id: "prov-12-6",
+                    reference: "Proverbs 12:6",
+                    text: "The words of the wicked lie in wait for blood,
+  But the mouth of the upright will deliver them.",
+                    prayer: "Lord, protect me from harmful and deceitful words. Help my speech bring deliverance, truth, and life."
+                ),
+                PrayerVerse(
+                    id: "prov-12-7",
+                    reference: "Proverbs 12:7",
+                    text: "The wicked are overthrown and are no more,
+  But the house of the righteous will stand.",
+                    prayer: "Jesus, keep my house and my life rooted firmly in righteousness so they may endure."
+                ),
+                PrayerVerse(
+                    id: "prov-12-8",
+                    reference: "Proverbs 12:8",
+                    text: "A man will be praised according to his insight,
+  But one of perverse mind will be despised.",
+                    prayer: "Father, give me wisdom and understanding so my life reflects good judgment and discernment."
+                ),
+                PrayerVerse(
+                    id: "prov-12-9",
+                    reference: "Proverbs 12:9",
+                    text: "Better is he who is lightly esteemed and has a servant
+  Than he who honors himself and lacks bread.",
+                    prayer: "Lord, teach me humility and contentment. Help me value honest work over pride and appearances."
+                ),
+                PrayerVerse(
+                    id: "prov-12-10",
+                    reference: "Proverbs 12:10",
+                    text: "A righteous man has regard for the life of his animal,
+  But even the compassion of the wicked is cruel.",
+                    prayer: "Jesus, make me compassionate and caring toward every living thing. Fill my heart with mercy and kindness."
+                ),
+                PrayerVerse(
+                    id: "prov-12-11",
+                    reference: "Proverbs 12:11",
+                    text: "He who tills his land will have plenty of bread,
+  But he who pursues worthless things lacks sense.",
+                    prayer: "Father, help me work diligently and faithfully instead of wasting my life on worthless pursuits."
+                ),
+                PrayerVerse(
+                    id: "prov-12-12",
+                    reference: "Proverbs 12:12",
+                    text: "The wicked man desires the booty of evil men,
+  But the root of the righteous yields fruit.",
+                    prayer: "Lord, let my life bear good and lasting fruit through righteousness and integrity."
+                ),
+                PrayerVerse(
+                    id: "prov-12-13",
+                    reference: "Proverbs 12:13",
+                    text: "An evil man is ensnared by the transgression of his lips,
+  But the righteous will escape from trouble.",
+                    prayer: "Jesus, guard my mouth from sinful speech and deliver me from traps created by careless words."
+                ),
+                PrayerVerse(
+                    id: "prov-12-14",
+                    reference: "Proverbs 12:14",
+                    text: "A man will be satisfied with good by the fruit of his words,
+  And the deeds of a man’s hands will return to him.",
+                    prayer: "Father, let the words of my mouth and the work of my hands produce goodness and blessing."
+                ),
+                PrayerVerse(
+                    id: "prov-12-15",
+                    reference: "Proverbs 12:15",
+                    text: "The way of a fool is right in his own eyes,
+  But a wise man is he who listens to counsel.",
+                    prayer: "Lord, give me a teachable spirit that listens to wisdom and correction instead of relying only on myself."
+                ),
+                PrayerVerse(
+                    id: "prov-12-16",
+                    reference: "Proverbs 12:16",
+                    text: "A fool’s anger is known at once,
+  But a prudent man conceals dishonor.",
+                    prayer: "Jesus, help me respond with patience and self-control instead of anger or offense."
+                ),
+                PrayerVerse(
+                    id: "prov-12-17",
+                    reference: "Proverbs 12:17",
+                    text: "He who speaks truth tells what is right,
+  But a false witness, deceit.",
+                    prayer: "Father, let me always speak truthfully and honestly in every situation."
+                ),
+                PrayerVerse(
+                    id: "prov-12-18",
+                    reference: "Proverbs 12:18",
+                    text: "There is one who speaks rashly like the thrusts of a sword,
+  But the tongue of the wise brings healing.",
+                    prayer: "Lord, make my words healing and gentle instead of reckless or destructive."
+                ),
+                PrayerVerse(
+                    id: "prov-12-19",
+                    reference: "Proverbs 12:19",
+                    text: "Truthful lips will be established forever,
+  But a lying tongue is only for a moment.",
+                    prayer: "Jesus, establish truth in my life and remove every form of deception from my heart and lips."
+                ),
+                PrayerVerse(
+                    id: "prov-12-20",
+                    reference: "Proverbs 12:20",
+                    text: "Deceit is in the heart of those who devise evil,
+  But counselors of peace have joy.",
+                    prayer: "Father, fill my heart with peace and righteousness instead of evil intentions or deceit."
+                ),
+                PrayerVerse(
+                    id: "prov-12-21",
+                    reference: "Proverbs 12:21",
+                    text: "No harm befalls the righteous,
+  But the wicked are filled with trouble.",
+                    prayer: "Lord, protect me from harm and help me remain faithful even during difficult times."
+                ),
+                PrayerVerse(
+                    id: "prov-12-22",
+                    reference: "Proverbs 12:22",
+                    text: "Lying lips are an abomination to the Lord,
+  But those who deal faithfully are His delight.",
+                    prayer: "Jesus, let my life be marked by honesty and faithfulness because truthful living pleases You."
+                ),
+                PrayerVerse(
+                    id: "prov-12-23",
+                    reference: "Proverbs 12:23",
+                    text: "A prudent man conceals knowledge,
+  But the heart of fools proclaims folly.",
+                    prayer: "Father, give me wisdom and humility so I do not speak foolishly or boastfully."
+                ),
+                PrayerVerse(
+                    id: "prov-12-24",
+                    reference: "Proverbs 12:24",
+                    text: "The hand of the diligent will rule,
+  But the slack hand will be put to forced labor.",
+                    prayer: "Lord, teach me diligence, responsibility, and discipline in all my work."
+                ),
+                PrayerVerse(
+                    id: "prov-12-25",
+                    reference: "Proverbs 12:25",
+                    text: "Anxiety in a man’s heart weighs it down,
+  But a good word makes it glad.",
+                    prayer: "Jesus, lift anxiety and heaviness from my heart. Surround me with encouraging and life-giving words."
+                ),
+                PrayerVerse(
+                    id: "prov-12-26",
+                    reference: "Proverbs 12:26",
+                    text: "The righteous is a guide to his neighbor,
+  But the way of the wicked leads them astray.",
+                    prayer: "Father, help me choose wise and godly friendships that lead me closer to You."
+                ),
+                PrayerVerse(
+                    id: "prov-12-27",
+                    reference: "Proverbs 12:27",
+                    text: "A lazy man does not roast his prey,
+  But the precious possession of a man is diligence.",
+                    prayer: "Lord, remove laziness from my life and help me value the blessings and opportunities You give me."
+                ),
+                PrayerVerse(
+                    id: "prov-12-28",
+                    reference: "Proverbs 12:28",
+                    text: "In the way of righteousness is life,
+  And in its pathway there is no death.",
+                    prayer: "Jesus, lead me in the path of righteousness and everlasting life. Keep my steps aligned with Your truth always."
+                ),
+                PrayerVerse(
+                    id: "prov-12-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
         PrayerDay(dayNumber: 13, title: "Guard Your Words", chapterReference: "Proverbs 13", summary: "Pray for restraint, wisdom, and healing speech.", verses: []),
         PrayerDay(dayNumber: 14, title: "Build a Wise Home", chapterReference: "Proverbs 14", summary: "Invite peace, patience, and wisdom into your relationships.", verses: []),
         PrayerDay(dayNumber: 15, title: "Choose Gentle Answers", chapterReference: "Proverbs 15", summary: "Pray for gentle responses and a listening spirit.", verses: []),
