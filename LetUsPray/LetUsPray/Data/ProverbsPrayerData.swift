@@ -3801,7 +3801,206 @@ enum ProverbsPrayerData {
                 )
             ]
         ),
-        PrayerDay(dayNumber: 21, title: "Place Hope in the Lord", chapterReference: "Proverbs 21", summary: "Pray for a heart anchored in God's justice and mercy.", verses: []),
+        PrayerDay(
+            dayNumber: 21,
+            title: "Place Hope in the Lord",
+            chapterReference: "Proverbs 21",
+            summary: "Pray for a heart anchored in God's justice and mercy.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-21-1",
+                    reference: "Proverbs 21:1",
+                    text: "The king's heart is like channels of water in the hand of the Lord;\n  He turns it wherever He wishes.",
+                    prayer: "Dear Jesus, guide the hearts of leaders and direct my own heart according to Your will."
+                ),
+                PrayerVerse(
+                    id: "prov-21-2",
+                    reference: "Proverbs 21:2",
+                    text: "Every man's way is right in his own eyes,\n  But the Lord weighs the hearts.",
+                    prayer: "Father, examine my heart and motives. Help me walk in ways that are truly pleasing to You."
+                ),
+                PrayerVerse(
+                    id: "prov-21-3",
+                    reference: "Proverbs 21:3",
+                    text: "To do righteousness and justice\n  Is desired by the Lord more than sacrifice.",
+                    prayer: "Lord, teach me to value righteousness and justice more than outward religious acts."
+                ),
+                PrayerVerse(
+                    id: "prov-21-4",
+                    reference: "Proverbs 21:4",
+                    text: "Haughty eyes and a proud heart,\n  The lamp of the wicked, is sin.",
+                    prayer: "Jesus, remove pride, arrogance, and selfish ambition from my heart."
+                ),
+                PrayerVerse(
+                    id: "prov-21-5",
+                    reference: "Proverbs 21:5",
+                    text: "The plans of the diligent lead surely to advantage,\n  But everyone who is hasty comes surely to poverty.",
+                    prayer: "Father, bless diligent planning and keep me from haste, impatience, and careless decisions."
+                ),
+                PrayerVerse(
+                    id: "prov-21-6",
+                    reference: "Proverbs 21:6",
+                    text: "The acquisition of treasures by a lying tongue\n  Is a fleeting vapor, the pursuit of death.",
+                    prayer: "Lord, keep me from gaining anything through lies or dishonesty."
+                ),
+                PrayerVerse(
+                    id: "prov-21-7",
+                    reference: "Proverbs 21:7",
+                    text: "The violence of the wicked will drag them away,\n  Because they refuse to act with justice.",
+                    prayer: "Jesus, protect me from violence, injustice, and refusing to do what is right."
+                ),
+                PrayerVerse(
+                    id: "prov-21-8",
+                    reference: "Proverbs 21:8",
+                    text: "The way of a guilty man is crooked,\n  But as for the pure, his conduct is upright.",
+                    prayer: "Father, make my way pure, honest, and upright before You."
+                ),
+                PrayerVerse(
+                    id: "prov-21-9",
+                    reference: "Proverbs 21:9",
+                    text: "It is better to live in a corner of a roof\n  Than in a house shared with a contentious woman.",
+                    prayer: "Lord, help me bring peace into my home and relationships instead of conflict and strife."
+                ),
+                PrayerVerse(
+                    id: "prov-21-10",
+                    reference: "Proverbs 21:10",
+                    text: "The soul of the wicked desires evil;\n  His neighbor finds no favor in his eyes.",
+                    prayer: "Jesus, cleanse my desires and keep my heart from craving evil."
+                ),
+                PrayerVerse(
+                    id: "prov-21-11",
+                    reference: "Proverbs 21:11",
+                    text: "When the scoffer is punished, the naive becomes wise;\n  But when the wise is instructed, he receives knowledge.",
+                    prayer: "Father, help me learn wisdom through correction, instruction, and understanding."
+                ),
+                PrayerVerse(
+                    id: "prov-21-12",
+                    reference: "Proverbs 21:12",
+                    text: "The righteous one considers the house of the wicked,\n  Turning the wicked to ruin.",
+                    prayer: "Lord, give me discernment to see evil clearly and trust Your justice."
+                ),
+                PrayerVerse(
+                    id: "prov-21-13",
+                    reference: "Proverbs 21:13",
+                    text: "He who shuts his ear to the cry of the poor\n  Will also cry himself and not be answered.",
+                    prayer: "Jesus, give me compassion for the poor and needy, and help me respond with generosity."
+                ),
+                PrayerVerse(
+                    id: "prov-21-14",
+                    reference: "Proverbs 21:14",
+                    text: "A gift in secret subdues anger,\n  And a bribe in the bosom, strong wrath.",
+                    prayer: "Father, help me act with wisdom, humility, and peace in tense situations."
+                ),
+                PrayerVerse(
+                    id: "prov-21-15",
+                    reference: "Proverbs 21:15",
+                    text: "The exercise of justice is joy for the righteous,\n  But is terror to the workers of iniquity.",
+                    prayer: "Lord, let justice bring joy to my heart and teach me to love what is right."
+                ),
+                PrayerVerse(
+                    id: "prov-21-16",
+                    reference: "Proverbs 21:16",
+                    text: "A man who wanders from the way of understanding\n  Will rest in the assembly of the dead.",
+                    prayer: "Jesus, keep me from wandering away from understanding and wisdom."
+                ),
+                PrayerVerse(
+                    id: "prov-21-17",
+                    reference: "Proverbs 21:17",
+                    text: "He who loves pleasure will become a poor man;\n  He who loves wine and oil will not become rich.",
+                    prayer: "Father, help me avoid destructive pleasures and live with discipline and contentment."
+                ),
+                PrayerVerse(
+                    id: "prov-21-18",
+                    reference: "Proverbs 21:18",
+                    text: "The wicked is a ransom for the righteous,\n  And the treacherous is in the place of the upright.",
+                    prayer: "Lord, deliver me from wickedness and guide me in righteousness."
+                ),
+                PrayerVerse(
+                    id: "prov-21-19",
+                    reference: "Proverbs 21:19",
+                    text: "It is better to live in a desert land\n  Than with a contentious and vexing woman.",
+                    prayer: "Jesus, teach me patience, peace, and humility in my relationships."
+                ),
+                PrayerVerse(
+                    id: "prov-21-20",
+                    reference: "Proverbs 21:20",
+                    text: "There is precious treasure and oil in the dwelling of the wise,\n  But a foolish man swallows it up.",
+                    prayer: "Father, help me steward resources wisely and avoid wastefulness."
+                ),
+                PrayerVerse(
+                    id: "prov-21-21",
+                    reference: "Proverbs 21:21",
+                    text: "He who pursues righteousness and loyalty\n  Finds life, righteousness and honor.",
+                    prayer: "Lord, help me pursue righteousness and kindness so my life may reflect honor and peace."
+                ),
+                PrayerVerse(
+                    id: "prov-21-22",
+                    reference: "Proverbs 21:22",
+                    text: "A wise man scales the city of the mighty\n  And brings down the stronghold in which they trust.",
+                    prayer: "Jesus, give me wisdom stronger than human strength and confidence."
+                ),
+                PrayerVerse(
+                    id: "prov-21-23",
+                    reference: "Proverbs 21:23",
+                    text: "He who guards his mouth and his tongue,\n  Guards his soul from troubles.",
+                    prayer: "Father, guard my mouth and tongue so I may stay away from trouble."
+                ),
+                PrayerVerse(
+                    id: "prov-21-24",
+                    reference: "Proverbs 21:24",
+                    text: ""Proud," "Haughty," "Scoffer," are his names,\n  Who acts with insolent pride.",
+                    prayer: "Lord, remove pride, arrogance, and scoffing from my life."
+                ),
+                PrayerVerse(
+                    id: "prov-21-25",
+                    reference: "Proverbs 21:25",
+                    text: "The desire of the sluggard puts him to death,\n  For his hands refuse to work;",
+                    prayer: "Jesus, deliver me from laziness and teach me diligent action."
+                ),
+                PrayerVerse(
+                    id: "prov-21-26",
+                    reference: "Proverbs 21:26",
+                    text: "All day long he is craving,\n  While the righteous gives and does not hold back.",
+                    prayer: "Father, make me generous and willing to give without selfishness."
+                ),
+                PrayerVerse(
+                    id: "prov-21-27",
+                    reference: "Proverbs 21:27",
+                    text: "The sacrifice of the wicked is an abomination,\n  How much more when he brings it with evil intent!",
+                    prayer: "Lord, purify my worship and keep me from offering anything with wrong motives."
+                ),
+                PrayerVerse(
+                    id: "prov-21-28",
+                    reference: "Proverbs 21:28",
+                    text: "A false witness will perish,\n  But the man who listens to the truth will speak forever.",
+                    prayer: "Jesus, help me speak truthfully and listen carefully with wisdom."
+                ),
+                PrayerVerse(
+                    id: "prov-21-29",
+                    reference: "Proverbs 21:29",
+                    text: "A wicked man displays a bold face,\n  But as for the upright, he makes his way sure.",
+                    prayer: "Father, keep me from stubbornness and help me walk uprightly."
+                ),
+                PrayerVerse(
+                    id: "prov-21-30",
+                    reference: "Proverbs 21:30",
+                    text: "There is no wisdom and no understanding\n  And no counsel against the Lord.",
+                    prayer: "Lord, remind me that no wisdom, understanding, or counsel can stand against You."
+                ),
+                PrayerVerse(
+                    id: "prov-21-31",
+                    reference: "Proverbs 21:31",
+                    text: "The horse is prepared for the day of battle,\n  But victory belongs to the Lord.",
+                    prayer: "Jesus, help me prepare faithfully while trusting that victory belongs to You."
+                ),
+                PrayerVerse(
+                    id: "prov-21-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
         PrayerDay(dayNumber: 22, title: "Pursue Humility", chapterReference: "Proverbs 22", summary: "Ask for lowliness of heart and lasting reverence.", verses: []),
         PrayerDay(dayNumber: 23, title: "Fix Your Eyes on Wisdom", chapterReference: "Proverbs 23", summary: "Pray for focus, sobriety, and inner stability.", verses: []),
         PrayerDay(dayNumber: 24, title: "Do Not Envy Evil", chapterReference: "Proverbs 24", summary: "Ask for courage to choose righteousness over comparison.", verses: []),
