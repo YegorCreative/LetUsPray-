@@ -3607,7 +3607,200 @@ enum ProverbsPrayerData {
                 )
             ]
         ),
-        PrayerDay(dayNumber: 20, title: "Receive Wise Counsel", chapterReference: "Proverbs 20", summary: "Invite trustworthy counsel and honest reflection.", verses: []),
+        PrayerDay(
+            dayNumber: 20,
+            title: "Receive Wise Counsel",
+            chapterReference: "Proverbs 20",
+            summary: "Invite trustworthy counsel and honest reflection.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-20-1",
+                    reference: "Proverbs 20:1",
+                    text: "Wine is a mocker, strong drink a brawler,\n  And whoever is intoxicated by it is not wise.",
+                    prayer: "Dear Jesus, give me self-control and wisdom. Keep me from anything that clouds my judgment or leads me away from You."
+                ),
+                PrayerVerse(
+                    id: "prov-20-2",
+                    reference: "Proverbs 20:2",
+                    text: "The terror of a king is like the growling of a lion;\n  He who provokes him to anger forfeits his own life.",
+                    prayer: "Father, help me respect authority and respond with wisdom instead of rebellion or pride."
+                ),
+                PrayerVerse(
+                    id: "prov-20-3",
+                    reference: "Proverbs 20:3",
+                    text: "Keeping away from strife is an honor for a man,\n  But any fool will quarrel.",
+                    prayer: "Lord, teach me to avoid unnecessary conflict and walk in peace with others."
+                ),
+                PrayerVerse(
+                    id: "prov-20-4",
+                    reference: "Proverbs 20:4",
+                    text: "The sluggard does not plow after the autumn,\n  So he begs during the harvest and has nothing.",
+                    prayer: "Jesus, remove laziness from my life and help me work faithfully in every season."
+                ),
+                PrayerVerse(
+                    id: "prov-20-5",
+                    reference: "Proverbs 20:5",
+                    text: "A plan in the heart of a man is like deep water,\n  But a man of understanding draws it out.",
+                    prayer: "Father, give me discernment to understand deep matters of the heart with wisdom and patience."
+                ),
+                PrayerVerse(
+                    id: "prov-20-6",
+                    reference: "Proverbs 20:6",
+                    text: "Many a man proclaims his own loyalty,\n  But who can find a trustworthy man?",
+                    prayer: "Lord, make me faithful, trustworthy, and true in my love and commitments."
+                ),
+                PrayerVerse(
+                    id: "prov-20-7",
+                    reference: "Proverbs 20:7",
+                    text: "A righteous man who walks in his integrity—\n  How blessed are his sons after him.",
+                    prayer: "Jesus, help me walk in integrity so my life becomes a blessing to those who come after me."
+                ),
+                PrayerVerse(
+                    id: "prov-20-8",
+                    reference: "Proverbs 20:8",
+                    text: "A king who sits on the throne of justice\n  Disperses all evil with his eyes.",
+                    prayer: "Father, establish justice and righteousness in every place of leadership and judgment."
+                ),
+                PrayerVerse(
+                    id: "prov-20-9",
+                    reference: "Proverbs 20:9",
+                    text: "Who can say, "I have cleansed my heart,\n  I am pure from my sin"?",
+                    prayer: "Lord, cleanse my heart and forgive my sins. Make me pure through Your grace."
+                ),
+                PrayerVerse(
+                    id: "prov-20-10",
+                    reference: "Proverbs 20:10",
+                    text: "Differing weights and differing measures,\n  Both of them are abominable to the Lord.",
+                    prayer: "Jesus, keep me from dishonesty, unfairness, and anything that displeases You."
+                ),
+                PrayerVerse(
+                    id: "prov-20-11",
+                    reference: "Proverbs 20:11",
+                    text: "It is by his deeds that a lad distinguishes himself\n  If his conduct is pure and right.",
+                    prayer: "Father, let my actions reveal purity, integrity, and faithfulness before You."
+                ),
+                PrayerVerse(
+                    id: "prov-20-12",
+                    reference: "Proverbs 20:12",
+                    text: "The hearing ear and the seeing eye,\n  The Lord has made both of them.",
+                    prayer: "Lord, thank You for giving me ears to hear and eyes to see. Help me use them wisely."
+                ),
+                PrayerVerse(
+                    id: "prov-20-13",
+                    reference: "Proverbs 20:13",
+                    text: "Do not love sleep, or you will become poor;\n  Open your eyes, and you will be satisfied with food.",
+                    prayer: "Jesus, teach me diligence and responsibility instead of laziness and neglect."
+                ),
+                PrayerVerse(
+                    id: "prov-20-14",
+                    reference: "Proverbs 20:14",
+                    text: ""Bad, bad," says the buyer,\n  But when he goes his way, then he boasts.",
+                    prayer: "Father, keep me honest in business, speech, and every exchange with others."
+                ),
+                PrayerVerse(
+                    id: "prov-20-15",
+                    reference: "Proverbs 20:15",
+                    text: "There is gold, and an abundance of jewels;\n  But the lips of knowledge are a more precious thing.",
+                    prayer: "Lord, help me treasure wise speech more than gold, jewels, or earthly possessions."
+                ),
+                PrayerVerse(
+                    id: "prov-20-16",
+                    reference: "Proverbs 20:16",
+                    text: "Take his garment when he becomes surety for a stranger;\n  And for foreigners, hold him in pledge.",
+                    prayer: "Jesus, give me wisdom in commitments and protect me from careless financial obligations."
+                ),
+                PrayerVerse(
+                    id: "prov-20-17",
+                    reference: "Proverbs 20:17",
+                    text: "Bread obtained by falsehood is sweet to a man,\n  But afterward his mouth will be filled with gravel.",
+                    prayer: "Father, keep me from enjoying anything gained by deceit, because its end brings bitterness."
+                ),
+                PrayerVerse(
+                    id: "prov-20-18",
+                    reference: "Proverbs 20:18",
+                    text: "Prepare plans by consultation,\n  And make war by wise guidance.",
+                    prayer: "Lord, help me make plans with wise counsel and careful discernment."
+                ),
+                PrayerVerse(
+                    id: "prov-20-19",
+                    reference: "Proverbs 20:19",
+                    text: "He who goes about as a slanderer reveals secrets,\n  Therefore do not associate with a gossip.",
+                    prayer: "Jesus, guard me from gossip and keep me from trusting those who spread secrets."
+                ),
+                PrayerVerse(
+                    id: "prov-20-20",
+                    reference: "Proverbs 20:20",
+                    text: "He who curses his father or his mother,\n  His lamp will go out in time of darkness.",
+                    prayer: "Father, help me honor my parents and reject every form of disrespect and dishonor."
+                ),
+                PrayerVerse(
+                    id: "prov-20-21",
+                    reference: "Proverbs 20:21",
+                    text: "An inheritance gained hurriedly at the beginning\n  Will not be blessed in the end.",
+                    prayer: "Lord, teach me patience and keep me from chasing blessings in ways that dishonor You."
+                ),
+                PrayerVerse(
+                    id: "prov-20-22",
+                    reference: "Proverbs 20:22",
+                    text: "Do not say, "I will repay evil";\n  Wait for the Lord, and He will save you.",
+                    prayer: "Jesus, keep me from revenge. Help me wait on You and trust You to act justly."
+                ),
+                PrayerVerse(
+                    id: "prov-20-23",
+                    reference: "Proverbs 20:23",
+                    text: "Differing weights are an abomination to the Lord,\n  And a false scale is not good.",
+                    prayer: "Father, make me honest and fair in every dealing, because dishonesty displeases You."
+                ),
+                PrayerVerse(
+                    id: "prov-20-24",
+                    reference: "Proverbs 20:24",
+                    text: "Man's steps are ordained by the Lord,\n  How then can man understand his way?",
+                    prayer: "Lord, direct my steps and help me trust You even when I do not understand the path."
+                ),
+                PrayerVerse(
+                    id: "prov-20-25",
+                    reference: "Proverbs 20:25",
+                    text: "It is a trap for a man to say rashly, "It is holy!"\n  And after the vows to make inquiry.",
+                    prayer: "Jesus, help me be careful with vows, promises, and commitments made before You."
+                ),
+                PrayerVerse(
+                    id: "prov-20-26",
+                    reference: "Proverbs 20:26",
+                    text: "A wise king winnows the wicked,\n  And drives the threshing wheel over them.",
+                    prayer: "Father, give leaders wisdom to separate evil from righteousness and rule with justice."
+                ),
+                PrayerVerse(
+                    id: "prov-20-27",
+                    reference: "Proverbs 20:27",
+                    text: "The spirit of man is the lamp of the Lord,\n  Searching all the innermost parts of his being.",
+                    prayer: "Lord, search my heart and reveal what needs to be purified, healed, and surrendered to You."
+                ),
+                PrayerVerse(
+                    id: "prov-20-28",
+                    reference: "Proverbs 20:28",
+                    text: "Loyalty and truth preserve the king,\n  And he upholds his throne by righteousness.",
+                    prayer: "Jesus, let mercy and truth preserve my life and establish my leadership through righteousness."
+                ),
+                PrayerVerse(
+                    id: "prov-20-29",
+                    reference: "Proverbs 20:29",
+                    text: "The glory of young men is their strength,\n  And the honor of old men is their gray hair.",
+                    prayer: "Father, help me honor both the strength of youth and the wisdom of age."
+                ),
+                PrayerVerse(
+                    id: "prov-20-30",
+                    reference: "Proverbs 20:30",
+                    text: "Stripes that wound scour away evil,\n  And strokes reach the innermost parts.",
+                    prayer: "Lord, use correction, discipline, and conviction to cleanse my heart and draw me closer to You."
+                ),
+                PrayerVerse(
+                    id: "prov-20-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
         PrayerDay(dayNumber: 21, title: "Place Hope in the Lord", chapterReference: "Proverbs 21", summary: "Pray for a heart anchored in God's justice and mercy.", verses: []),
         PrayerDay(dayNumber: 22, title: "Pursue Humility", chapterReference: "Proverbs 22", summary: "Ask for lowliness of heart and lasting reverence.", verses: []),
         PrayerDay(dayNumber: 23, title: "Fix Your Eyes on Wisdom", chapterReference: "Proverbs 23", summary: "Pray for focus, sobriety, and inner stability.", verses: []),
