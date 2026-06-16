@@ -3419,7 +3419,194 @@ enum ProverbsPrayerData {
                 )
             ]
         ),
-        PrayerDay(dayNumber: 19, title: "Practice Compassion", chapterReference: "Proverbs 19", summary: "Pray for mercy toward those in need.", verses: []),
+        PrayerDay(
+            dayNumber: 19,
+            title: "Practice Compassion",
+            chapterReference: "Proverbs 19",
+            summary: "Pray for mercy toward those in need.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-19-1",
+                    reference: "Proverbs 19:1",
+                    text: "Better is a poor man who walks in his integrity\n  Than he who is perverse in speech and is a fool.",
+                    prayer: "Dear Jesus, help me walk in integrity even when life feels difficult. Let my character honor You more than wealth or status."
+                ),
+                PrayerVerse(
+                    id: "prov-19-2",
+                    reference: "Proverbs 19:2",
+                    text: "Also it is not good for a person to be without knowledge,\n  And he who hurries his footsteps errs.",
+                    prayer: "Father, give me knowledge, wisdom, and patience so I do not rush into foolish decisions."
+                ),
+                PrayerVerse(
+                    id: "prov-19-3",
+                    reference: "Proverbs 19:3",
+                    text: "The foolishness of man ruins his way,\n  And his heart rages against the Lord.",
+                    prayer: "Lord, keep my heart from blaming You for the consequences of my own choices. Teach me humility and repentance."
+                ),
+                PrayerVerse(
+                    id: "prov-19-4",
+                    reference: "Proverbs 19:4",
+                    text: "Wealth adds many friends,\n  But a poor man is separated from his friend.",
+                    prayer: "Jesus, help me value true friendship and not relationships based only on wealth or advantage."
+                ),
+                PrayerVerse(
+                    id: "prov-19-5",
+                    reference: "Proverbs 19:5",
+                    text: "A false witness will not go unpunished,\n  And he who tells lies will not escape.",
+                    prayer: "Father, keep me from lies, false testimony, and deceit. Let truth always guide my words."
+                ),
+                PrayerVerse(
+                    id: "prov-19-6",
+                    reference: "Proverbs 19:6",
+                    text: "Many will seek the favor of a generous man,\n  And every man is a friend to him who gives gifts.",
+                    prayer: "Lord, help me seek favor through kindness and integrity, not manipulation or selfish gain."
+                ),
+                PrayerVerse(
+                    id: "prov-19-7",
+                    reference: "Proverbs 19:7",
+                    text: "All the brothers of a poor man hate him;\n  How much more do his friends abandon him!\n  He pursues them with words, but they are gone.",
+                    prayer: "Jesus, teach me compassion toward those who feel rejected, forgotten, or alone."
+                ),
+                PrayerVerse(
+                    id: "prov-19-8",
+                    reference: "Proverbs 19:8",
+                    text: "He who gets wisdom loves his own soul;\n  He who keeps understanding will find good.",
+                    prayer: "Father, help me gain wisdom and understanding because they bring life and blessing to my soul."
+                ),
+                PrayerVerse(
+                    id: "prov-19-9",
+                    reference: "Proverbs 19:9",
+                    text: "A false witness will not go unpunished,\n  And he who tells lies will perish.",
+                    prayer: "Lord, remove falsehood from my lips and help me live honestly before You and others."
+                ),
+                PrayerVerse(
+                    id: "prov-19-10",
+                    reference: "Proverbs 19:10",
+                    text: "Luxury is not fitting for a fool;\n  Much less for a slave to rule over princes.",
+                    prayer: "Jesus, teach me humility, responsibility, and wisdom in every position You give me."
+                ),
+                PrayerVerse(
+                    id: "prov-19-11",
+                    reference: "Proverbs 19:11",
+                    text: "A man's discretion makes him slow to anger,\n  And it is his glory to overlook a transgression.",
+                    prayer: "Father, give me patience, discretion, and the grace to overlook offenses with love."
+                ),
+                PrayerVerse(
+                    id: "prov-19-12",
+                    reference: "Proverbs 19:12",
+                    text: "The king's wrath is like the roaring of a lion,\n  But his favor is like dew on the grass.",
+                    prayer: "Lord, help me honor authority wisely and seek favor through righteousness and humility."
+                ),
+                PrayerVerse(
+                    id: "prov-19-13",
+                    reference: "Proverbs 19:13",
+                    text: "A foolish son is destruction to his father,\n  And the contentions of a wife are a constant dripping.",
+                    prayer: "Jesus, help me live wisely so my choices bring peace, not grief, to my home."
+                ),
+                PrayerVerse(
+                    id: "prov-19-14",
+                    reference: "Proverbs 19:14",
+                    text: "House and wealth are an inheritance from fathers,\n  But a prudent wife is from the Lord.",
+                    prayer: "Father, thank You for every good gift. Bless families with wisdom, love, and understanding."
+                ),
+                PrayerVerse(
+                    id: "prov-19-15",
+                    reference: "Proverbs 19:15",
+                    text: "Laziness casts into a deep sleep,\n  And an idle man will suffer hunger.",
+                    prayer: "Lord, remove laziness and spiritual sleep from my life. Awaken diligence and purpose in me."
+                ),
+                PrayerVerse(
+                    id: "prov-19-16",
+                    reference: "Proverbs 19:16",
+                    text: "He who keeps the commandment keeps his soul,\n  But he who is careless of conduct will die.",
+                    prayer: "Jesus, help me keep Your commandments and walk carefully in the way of life."
+                ),
+                PrayerVerse(
+                    id: "prov-19-17",
+                    reference: "Proverbs 19:17",
+                    text: "One who is gracious to a poor man lends to the Lord,\n  And He will repay him for his good deed.",
+                    prayer: "Father, give me generosity toward the poor and remind me that serving others honors You."
+                ),
+                PrayerVerse(
+                    id: "prov-19-18",
+                    reference: "Proverbs 19:18",
+                    text: "Discipline your son while there is hope,\n  And do not desire his death.",
+                    prayer: "Lord, teach me loving correction, discipline, and guidance that leads to life."
+                ),
+                PrayerVerse(
+                    id: "prov-19-19",
+                    reference: "Proverbs 19:19",
+                    text: "A man of great anger will bear the penalty,\n  For if you rescue him, you will only have to do it again.",
+                    prayer: "Jesus, give me self-control and patience so anger does not rule my heart."
+                ),
+                PrayerVerse(
+                    id: "prov-19-20",
+                    reference: "Proverbs 19:20",
+                    text: "Listen to counsel and accept discipline,\n  That you may be wise the rest of your days.",
+                    prayer: "Father, help me listen to counsel and receive instruction so I may grow wise."
+                ),
+                PrayerVerse(
+                    id: "prov-19-21",
+                    reference: "Proverbs 19:21",
+                    text: "Many plans are in a man's heart,\n  But the counsel of the Lord will stand.",
+                    prayer: "Lord, I surrender my plans to You. Let Your purpose stand in my life."
+                ),
+                PrayerVerse(
+                    id: "prov-19-22",
+                    reference: "Proverbs 19:22",
+                    text: "What is desirable in a man is his kindness,\n  And it is better to be a poor man than a liar.",
+                    prayer: "Jesus, let kindness and faithfulness define my character more than possessions or appearances."
+                ),
+                PrayerVerse(
+                    id: "prov-19-23",
+                    reference: "Proverbs 19:23",
+                    text: "The fear of the Lord leads to life,\n  So that one may sleep satisfied, untouched by evil.",
+                    prayer: "Father, teach me the fear of the Lord so I may live in peace, security, and satisfaction."
+                ),
+                PrayerVerse(
+                    id: "prov-19-24",
+                    reference: "Proverbs 19:24",
+                    text: "The sluggard buries his hand in the dish,\n  But will not even bring it back to his mouth.",
+                    prayer: "Lord, remove laziness and hesitation from me. Help me act faithfully on what You place before me."
+                ),
+                PrayerVerse(
+                    id: "prov-19-25",
+                    reference: "Proverbs 19:25",
+                    text: "Strike a scoffer and the naive may become shrewd,\n  But reprove one who has understanding and he will gain knowledge.",
+                    prayer: "Jesus, help me learn from correction and gain understanding through wisdom."
+                ),
+                PrayerVerse(
+                    id: "prov-19-26",
+                    reference: "Proverbs 19:26",
+                    text: "He who assaults his father and drives his mother away\n  Is a shameful and disgraceful son.",
+                    prayer: "Father, help me honor my family and never bring shame through selfish or foolish choices."
+                ),
+                PrayerVerse(
+                    id: "prov-19-27",
+                    reference: "Proverbs 19:27",
+                    text: "Cease listening, my son, to discipline,\n  And you will stray from the words of knowledge.",
+                    prayer: "Lord, keep me from turning away from instruction and drifting from knowledge."
+                ),
+                PrayerVerse(
+                    id: "prov-19-28",
+                    reference: "Proverbs 19:28",
+                    text: "A rascally witness makes a mockery of justice,\n  And the mouth of the wicked spreads iniquity.",
+                    prayer: "Jesus, keep my mouth and heart far from falsehood, mockery, and injustice."
+                ),
+                PrayerVerse(
+                    id: "prov-19-29",
+                    reference: "Proverbs 19:29",
+                    text: "Judgments are prepared for scoffers,\n  And blows for the back of fools.",
+                    prayer: "Father, protect me from pride, mockery, and foolishness. Teach me to walk humbly in wisdom."
+                ),
+                PrayerVerse(
+                    id: "prov-19-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
         PrayerDay(dayNumber: 20, title: "Receive Wise Counsel", chapterReference: "Proverbs 20", summary: "Invite trustworthy counsel and honest reflection.", verses: []),
         PrayerDay(dayNumber: 21, title: "Place Hope in the Lord", chapterReference: "Proverbs 21", summary: "Pray for a heart anchored in God's justice and mercy.", verses: []),
         PrayerDay(dayNumber: 22, title: "Pursue Humility", chapterReference: "Proverbs 22", summary: "Ask for lowliness of heart and lasting reverence.", verses: []),
