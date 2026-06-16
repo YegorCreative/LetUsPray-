@@ -235,140 +235,140 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-2-1",
                     reference: "Proverbs 2:1",
-                    text: "Dear Jesus, help me receive Your words and treasure Your commandments in my heart.",
+                    text: "My son, if you will receive my words\n  And treasure my commandments within you,",
                     prayer: "Dear Jesus, help me receive Your words and treasure Your commandments in my heart."
                 ),
                 PrayerVerse(
                     id: "prov-2-2",
                     reference: "Proverbs 2:2",
-                    text: "Father, make my ears attentive to wisdom and my heart eager to understand Your truth.",
+                    text: "Make your ear attentive to wisdom,\n  Incline your heart to understanding;",
                     prayer: "Father, make my ears attentive to wisdom and my heart eager to understand Your truth."
                 ),
                 PrayerVerse(
                     id: "prov-2-3",
                     reference: "Proverbs 2:3",
-                    text: "Lord, give me a hunger for discernment and understanding. Teach me to seek wisdom earnestly.",
+                    text: "For if you cry for discernment,\n  Lift your voice for understanding;",
                     prayer: "Lord, give me a hunger for discernment and understanding. Teach me to seek wisdom earnestly."
                 ),
                 PrayerVerse(
                     id: "prov-2-4",
                     reference: "Proverbs 2:4",
-                    text: "Jesus, help me pursue wisdom as diligently as one searches for silver and hidden treasure.",
+                    text: "If you seek her as silver\n  And search for her as for hidden treasures;",
                     prayer: "Jesus, help me pursue wisdom as diligently as one searches for silver and hidden treasure."
                 ),
                 PrayerVerse(
                     id: "prov-2-5",
                     reference: "Proverbs 2:5",
-                    text: "Father, reveal to me the fear of the Lord and help me grow in the knowledge of God.",
+                    text: "Then you will discern the fear of the Lord\n  And discover the knowledge of God.",
                     prayer: "Father, reveal to me the fear of the Lord and help me grow in the knowledge of God."
                 ),
                 PrayerVerse(
                     id: "prov-2-6",
                     reference: "Proverbs 2:6",
-                    text: "Lord, thank You for being the source of wisdom. Fill me with knowledge, understanding, and discernment.",
+                    text: "For the Lord gives wisdom;\n  From His mouth come knowledge and understanding.",
                     prayer: "Lord, thank You for being the source of wisdom. Fill me with knowledge, understanding, and discernment."
                 ),
                 PrayerVerse(
                     id: "prov-2-7",
                     reference: "Proverbs 2:7",
-                    text: "Jesus, store up sound wisdom for me and be my shield as I walk in integrity.",
+                    text: "He stores up sound wisdom for the upright;\n  He is a shield to those who walk in integrity,",
                     prayer: "Jesus, store up sound wisdom for me and be my shield as I walk in integrity."
                 ),
                 PrayerVerse(
                     id: "prov-2-8",
                     reference: "Proverbs 2:8",
-                    text: "Father, guard my path and protect my steps as I seek to follow You faithfully.",
+                    text: "Guarding the paths of justice,\n  And He preserves the way of His godly ones.",
                     prayer: "Father, guard my path and protect my steps as I seek to follow You faithfully."
                 ),
                 PrayerVerse(
                     id: "prov-2-9",
                     reference: "Proverbs 2:9",
-                    text: "Lord, help me understand righteousness, justice, fairness, and every good path.",
+                    text: "Then you will discern righteousness and justice\n  And equity and every good course.",
                     prayer: "Lord, help me understand righteousness, justice, fairness, and every good path."
                 ),
                 PrayerVerse(
                     id: "prov-2-10",
                     reference: "Proverbs 2:10",
-                    text: "Jesus, let wisdom enter my heart and make knowledge delightful to my soul.",
+                    text: "For wisdom will enter your heart\n  And knowledge will be pleasant to your soul;",
                     prayer: "Jesus, let wisdom enter my heart and make knowledge delightful to my soul."
                 ),
                 PrayerVerse(
                     id: "prov-2-11",
                     reference: "Proverbs 2:11",
-                    text: "Father, let discretion watch over me and understanding protect me from harm.",
+                    text: "Discretion will guard you,\n  Understanding will watch over you,",
                     prayer: "Father, let discretion watch over me and understanding protect me from harm."
                 ),
                 PrayerVerse(
                     id: "prov-2-12",
                     reference: "Proverbs 2:12",
-                    text: "Lord, deliver me from evil ways and from people who speak what is corrupt and deceptive.",
+                    text: "To deliver you from the way of evil,\n  From the man who speaks perverse things;",
                     prayer: "Lord, deliver me from evil ways and from people who speak what is corrupt and deceptive."
                 ),
                 PrayerVerse(
                     id: "prov-2-13",
                     reference: "Proverbs 2:13",
-                    text: "Jesus, keep me from abandoning the path of righteousness and walking in darkness.",
+                    text: "From those who leave the paths of uprightness\n  To walk in the ways of darkness;",
                     prayer: "Jesus, keep me from abandoning the path of righteousness and walking in darkness."
                 ),
                 PrayerVerse(
                     id: "prov-2-14",
                     reference: "Proverbs 2:14",
-                    text: "Father, protect me from finding pleasure in evil or delighting in sin.",
+                    text: "Who delight in doing evil\n  And rejoice in the perversity of evil;",
                     prayer: "Father, protect me from finding pleasure in evil or delighting in sin."
                 ),
                 PrayerVerse(
                     id: "prov-2-15",
                     reference: "Proverbs 2:15",
-                    text: "Lord, keep my feet from crooked paths and guide me in Your truth.",
+                    text: "Whose paths are crooked,\n  And who are devious in their ways;",
                     prayer: "Lord, keep my feet from crooked paths and guide me in Your truth."
                 ),
                 PrayerVerse(
                     id: "prov-2-16",
                     reference: "Proverbs 2:16",
-                    text: "Jesus, protect me from sexual temptation and from voices that seek to pull me away from You.",
+                    text: "To deliver you from the strange woman,\n  From the adulteress who flatters with her words;",
                     prayer: "Jesus, protect me from sexual temptation and from voices that seek to pull me away from You."
                 ),
                 PrayerVerse(
                     id: "prov-2-17",
                     reference: "Proverbs 2:17",
-                    text: "Father, help me remain faithful to every covenant and commitment that honors You.",
+                    text: "That leaves the companion of her youth\n  And forgets the covenant of her God;",
                     prayer: "Father, help me remain faithful to every covenant and commitment that honors You."
                 ),
                 PrayerVerse(
                     id: "prov-2-18",
                     reference: "Proverbs 2:18",
-                    text: "Lord, keep me far from paths that lead to spiritual death and destruction.",
+                    text: "For her house sinks down to death\n  And her tracks lead to the dead;",
                     prayer: "Lord, keep me far from paths that lead to spiritual death and destruction."
                 ),
                 PrayerVerse(
                     id: "prov-2-19",
                     reference: "Proverbs 2:19",
-                    text: "Jesus, preserve me from choices that separate me from Your wisdom and life.",
+                    text: "None who go to her return again,\n  Nor do they reach the paths of life.",
                     prayer: "Jesus, preserve me from choices that separate me from Your wisdom and life."
                 ),
                 PrayerVerse(
                     id: "prov-2-20",
                     reference: "Proverbs 2:20",
-                    text: "Father, help me walk in the company of the righteous and follow the ways of godly people.",
+                    text: "So you will walk in the way of good men\n  And keep to the paths of the righteous.",
                     prayer: "Father, help me walk in the company of the righteous and follow the ways of godly people."
                 ),
                 PrayerVerse(
                     id: "prov-2-21",
                     reference: "Proverbs 2:21",
-                    text: "Lord, establish me among those who are upright and faithful before You.",
+                    text: "For the upright will live in the land\n  And the blameless will remain in it;",
                     prayer: "Lord, establish me among those who are upright and faithful before You."
                 ),
                 PrayerVerse(
                     id: "prov-2-22",
                     reference: "Proverbs 2:22",
-                    text: "Jesus, keep me from wickedness and help me remain firmly rooted in Your truth all the days of my life.",
+                    text: "But the wicked will be cut off from the land\n  And the treacherous will be uprooted from it.",
                     prayer: "Jesus, keep me from wickedness and help me remain firmly rooted in Your truth all the days of my life."
                 ),
                 PrayerVerse(
                     id: "prov-2-closing",
                     reference: "Closing",
-                    text: "In Jesus’ name, Amen. 🙏🏻",
-                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
                 )
             ]
         ),
@@ -1702,4 +1702,3 @@ enum ProverbsPrayerData {
         PrayerDay(dayNumber: 30, title: "Live with Noble Strength", chapterReference: "Proverbs 30-31", summary: "Close the journey by praying for wisdom, strength, and reverence.", verses: [])
     ]
 }
-

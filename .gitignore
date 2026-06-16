@@ -1,0 +1,16 @@
+# API Keys and Secrets
+APIConfig.json
+api-config.json
+*.secret
+
+# Xcode
+*.xcuserstate
+xcuserdata/
+*.xcuserdatad/
+
+# Build Files
+build/
+DerivedData/
+
+# macOS
+.DS_Store
