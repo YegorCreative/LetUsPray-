@@ -1679,7 +1679,212 @@ enum ProverbsPrayerData {
                 )
             ]
         ),
-        PrayerDay(dayNumber: 10, title: "Speak with Grace", chapterReference: "Proverbs 10", summary: "Invite God to shape your words with grace and truth.", verses: []),
+        PrayerDay(
+            dayNumber: 10,
+            title: "Speak with Grace",
+            chapterReference: "Proverbs 10",
+            summary: "Invite God to shape your words with grace and truth.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-10-1",
+                    reference: "Proverbs 10:1",
+                    text: "The proverbs of Solomon.\n  A wise son makes a father glad,\n  But a foolish son is a grief to his mother.",
+                    prayer: "Dear Jesus, help me live wisely and faithfully so that my life brings joy to those who love and care for me."
+                ),
+                PrayerVerse(
+                    id: "prov-10-2",
+                    reference: "Proverbs 10:2",
+                    text: "Ill-gotten gains do not profit,\n  But righteousness delivers from death.",
+                    prayer: "Father, keep me from pursuing dishonest gain. Help me value righteousness above earthly wealth."
+                ),
+                PrayerVerse(
+                    id: "prov-10-3",
+                    reference: "Proverbs 10:3",
+                    text: "The Lord will not allow the righteous to hunger,\n  But He will reject the craving of the wicked.",
+                    prayer: "Lord, thank You for providing for the righteous. Help me trust You as my provider every day."
+                ),
+                PrayerVerse(
+                    id: "prov-10-4",
+                    reference: "Proverbs 10:4",
+                    text: "Poor is he who works with a negligent hand,\n  But the hand of the diligent makes rich.",
+                    prayer: "Jesus, remove laziness from my life and teach me diligence, responsibility, and faithful work."
+                ),
+                PrayerVerse(
+                    id: "prov-10-5",
+                    reference: "Proverbs 10:5",
+                    text: "He who gathers in summer is a son who acts wisely,\n  But he who sleeps in harvest is a son who acts shamefully.",
+                    prayer: "Father, help me recognize opportunities and use each season wisely for Your glory."
+                ),
+                PrayerVerse(
+                    id: "prov-10-6",
+                    reference: "Proverbs 10:6",
+                    text: "Blessings are on the head of the righteous,\n  But the mouth of the wicked conceals violence.",
+                    prayer: "Lord, let Your blessings rest upon my life as I walk in righteousness and obedience."
+                ),
+                PrayerVerse(
+                    id: "prov-10-7",
+                    reference: "Proverbs 10:7",
+                    text: "The memory of the righteous is blessed,\n  But the name of the wicked will rot.",
+                    prayer: "Jesus, help me leave behind a godly legacy that honors You and blesses others."
+                ),
+                PrayerVerse(
+                    id: "prov-10-8",
+                    reference: "Proverbs 10:8",
+                    text: "The wise of heart will receive commands,\n  But a babbling fool will be ruined.",
+                    prayer: "Father, give me a teachable heart that gladly receives wisdom and instruction."
+                ),
+                PrayerVerse(
+                    id: "prov-10-9",
+                    reference: "Proverbs 10:9",
+                    text: "He who walks in integrity walks securely,\n  But he who perverts his ways will be found out.",
+                    prayer: "Lord, help me walk in integrity so that I may live securely and confidently before You."
+                ),
+                PrayerVerse(
+                    id: "prov-10-10",
+                    reference: "Proverbs 10:10",
+                    text: "He who winks the eye causes trouble,\n  And a babbling fool will be ruined.",
+                    prayer: "Jesus, guard me from deceitful behavior and foolish speech that causes harm."
+                ),
+                PrayerVerse(
+                    id: "prov-10-11",
+                    reference: "Proverbs 10:11",
+                    text: "The mouth of the righteous is a fountain of life,\n  But the mouth of the wicked conceals violence.",
+                    prayer: "Father, let my words become a fountain of life, encouragement, and truth."
+                ),
+                PrayerVerse(
+                    id: "prov-10-12",
+                    reference: "Proverbs 10:12",
+                    text: "Hatred stirs up strife,\n  But love covers all transgressions.",
+                    prayer: "Lord, remove hatred from my heart and fill me with love that covers offenses and promotes peace."
+                ),
+                PrayerVerse(
+                    id: "prov-10-13",
+                    reference: "Proverbs 10:13",
+                    text: "On the lips of the discerning, wisdom is found,\n  But a rod is for the back of him who lacks understanding.",
+                    prayer: "Jesus, place wisdom upon my lips and understanding within my heart."
+                ),
+                PrayerVerse(
+                    id: "prov-10-14",
+                    reference: "Proverbs 10:14",
+                    text: "Wise men store up knowledge,\n  But with the mouth of the foolish, ruin is at hand.",
+                    prayer: "Father, help me store up knowledge and use it wisely for the benefit of others."
+                ),
+                PrayerVerse(
+                    id: "prov-10-15",
+                    reference: "Proverbs 10:15",
+                    text: "The rich man's wealth is his fortress,\n  The ruin of the poor is their poverty.",
+                    prayer: "Lord, teach me not to trust in wealth but in You alone."
+                ),
+                PrayerVerse(
+                    id: "prov-10-16",
+                    reference: "Proverbs 10:16",
+                    text: "The wages of the righteous is life,\n  The income of the wicked, punishment.",
+                    prayer: "Jesus, let the work of my hands produce righteousness and honor You."
+                ),
+                PrayerVerse(
+                    id: "prov-10-17",
+                    reference: "Proverbs 10:17",
+                    text: "He is on the path of life who heeds instruction,\n  But he who ignores reproof goes astray.",
+                    prayer: "Father, help me remain on the path of life by accepting correction and instruction."
+                ),
+                PrayerVerse(
+                    id: "prov-10-18",
+                    reference: "Proverbs 10:18",
+                    text: "He who conceals hatred has lying lips,\n  And he who spreads slander is a fool.",
+                    prayer: "Lord, keep me from lying, slander, gossip, and hidden hatred."
+                ),
+                PrayerVerse(
+                    id: "prov-10-19",
+                    reference: "Proverbs 10:19",
+                    text: "When there are many words, transgression is unavoidable,\n  But he who restrains his lips is wise.",
+                    prayer: "Jesus, teach me restraint and wisdom in my speech. Help me speak only what is helpful and true."
+                ),
+                PrayerVerse(
+                    id: "prov-10-20",
+                    reference: "Proverbs 10:20",
+                    text: "The tongue of the righteous is as choice silver,\n  The heart of the wicked is worth little.",
+                    prayer: "Father, let my words be valuable, pure, and pleasing in Your sight."
+                ),
+                PrayerVerse(
+                    id: "prov-10-21",
+                    reference: "Proverbs 10:21",
+                    text: "The lips of the righteous feed many,\n  But fools die for lack of understanding.",
+                    prayer: "Lord, use my life and words to nourish, encourage, and strengthen others."
+                ),
+                PrayerVerse(
+                    id: "prov-10-22",
+                    reference: "Proverbs 10:22",
+                    text: "It is the blessing of the Lord that makes rich,\n  And He adds no sorrow to it.",
+                    prayer: "Jesus, thank You for the blessings You give. Help me enjoy them with gratitude and humility."
+                ),
+                PrayerVerse(
+                    id: "prov-10-23",
+                    reference: "Proverbs 10:23",
+                    text: "Doing wickedness is like sport to a fool,\n  And so is wisdom to a man of understanding.",
+                    prayer: "Father, help me delight in wisdom rather than foolishness or sinful pleasures."
+                ),
+                PrayerVerse(
+                    id: "prov-10-24",
+                    reference: "Proverbs 10:24",
+                    text: "What the wicked fears will come upon him,\n  But the desire of the righteous will be granted.",
+                    prayer: "Lord, protect me from fear and help me trust in Your promises."
+                ),
+                PrayerVerse(
+                    id: "prov-10-25",
+                    reference: "Proverbs 10:25",
+                    text: "When the whirlwind passes, the wicked is no more,\n  But the righteous has an everlasting foundation.",
+                    prayer: "Jesus, establish my life upon a foundation that remains firm through every storm."
+                ),
+                PrayerVerse(
+                    id: "prov-10-26",
+                    reference: "Proverbs 10:26",
+                    text: "Like vinegar to the teeth and smoke to the eyes,\n  So is the lazy one to those who send him.",
+                    prayer: "Father, help me be reliable, trustworthy, and diligent in every responsibility."
+                ),
+                PrayerVerse(
+                    id: "prov-10-27",
+                    reference: "Proverbs 10:27",
+                    text: "The fear of the Lord prolongs life,\n  But the years of the wicked will be shortened.",
+                    prayer: "Lord, teach me to fear You and walk faithfully before You all my days."
+                ),
+                PrayerVerse(
+                    id: "prov-10-28",
+                    reference: "Proverbs 10:28",
+                    text: "The hope of the righteous is gladness,\n  But the expectation of the wicked perishes.",
+                    prayer: "Jesus, fill my heart with the joy and hope that come from righteousness."
+                ),
+                PrayerVerse(
+                    id: "prov-10-29",
+                    reference: "Proverbs 10:29",
+                    text: "The way of the Lord is a stronghold to the upright,\n  But ruin to the workers of iniquity.",
+                    prayer: "Father, let Your way be my refuge, strength, and protection."
+                ),
+                PrayerVerse(
+                    id: "prov-10-30",
+                    reference: "Proverbs 10:30",
+                    text: "The righteous will never be shaken,\n  But the wicked will not dwell in the land.",
+                    prayer: "Lord, establish me firmly in righteousness so that I remain faithful to You."
+                ),
+                PrayerVerse(
+                    id: "prov-10-31",
+                    reference: "Proverbs 10:31",
+                    text: "The mouth of the righteous flows with wisdom,\n  But the perverted tongue will be cut out.",
+                    prayer: "Jesus, let wisdom continually flow from my life and speech."
+                ),
+                PrayerVerse(
+                    id: "prov-10-32",
+                    reference: "Proverbs 10:32",
+                    text: "The lips of the righteous bring forth what is acceptable,\n  But the mouth of the wicked what is perverted.",
+                    prayer: "Father, help my words bring grace, truth, encouragement, and blessing to everyone I encounter."
+                ),
+                PrayerVerse(
+                    id: "prov-10-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
         PrayerDay(dayNumber: 11, title: "Live Honestly", chapterReference: "Proverbs 11", summary: "Pray for integrity in every hidden place.", verses: []),
         PrayerDay(dayNumber: 12, title: "Love Correction", chapterReference: "Proverbs 12", summary: "Ask for a teachable spirit that embraces growth.", verses: []),
         PrayerDay(dayNumber: 13, title: "Guard Your Words", chapterReference: "Proverbs 13", summary: "Pray for restraint, wisdom, and healing speech.", verses: []),
