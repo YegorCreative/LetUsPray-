@@ -784,139 +784,139 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-5-1",
                     reference: "Proverbs 5:1",
-                    text: "Dear Jesus, help me pay attention to Your wisdom and incline my heart to Your understanding.",
+                    text: "My son, give attention to my wisdom,\n  Incline your ear to my understanding;",
                     prayer: "Dear Jesus, help me pay attention to Your wisdom and incline my heart to Your understanding."
                 ),
                 PrayerVerse(
                     id: "prov-5-2",
                     reference: "Proverbs 5:2",
-                    text: "Father, help me preserve discretion and let my lips speak knowledge, truth, and wisdom.",
+                    text: "That you may observe discretion\n  And your lips may reserve knowledge.",
                     prayer: "Father, help me preserve discretion and let my lips speak knowledge, truth, and wisdom."
                 ),
                 PrayerVerse(
                     id: "prov-5-3",
                     reference: "Proverbs 5:3",
-                    text: "Lord, give me discernment to recognize temptation, even when it appears attractive and appealing.",
+                    text: "For the lips of an adulteress drip honey\n  And smoother than oil is her speech;",
                     prayer: "Lord, give me discernment to recognize temptation, even when it appears attractive and appealing."
                 ),
                 PrayerVerse(
                     id: "prov-5-4",
                     reference: "Proverbs 5:4",
-                    text: "Jesus, protect me from paths that seem pleasant at first but lead to bitterness and pain.",
+                    text: "But in the end she is bitter as wormwood,\n  Sharp as a two-edged sword.",
                     prayer: "Jesus, protect me from paths that seem pleasant at first but lead to bitterness and pain."
                 ),
                 PrayerVerse(
                     id: "prov-5-5",
                     reference: "Proverbs 5:5",
-                    text: "Father, keep my feet from walking toward spiritual destruction and separation from You.",
+                    text: "Her feet go down to death,\n  Her steps take hold of Sheol.",
                     prayer: "Father, keep my feet from walking toward spiritual destruction and separation from You."
                 ),
                 PrayerVerse(
                     id: "prov-5-6",
                     reference: "Proverbs 5:6",
-                    text: "Lord, help me stay focused on Your path of life and not be led astray by confusion or deception.",
+                    text: "She does not ponder the path of life;\n  Her ways are unstable, she does not know it.",
                     prayer: "Lord, help me stay focused on Your path of life and not be led astray by confusion or deception."
                 ),
                 PrayerVerse(
                     id: "prov-5-7",
                     reference: "Proverbs 5:7",
-                    text: "Jesus, help me listen carefully to Your instruction and never turn away from Your wisdom.",
+                    text: "Now then, my sons, listen to me\n  And do not depart from the words of my mouth.",
                     prayer: "Jesus, help me listen carefully to Your instruction and never turn away from Your wisdom."
                 ),
                 PrayerVerse(
                     id: "prov-5-8",
                     reference: "Proverbs 5:8",
-                    text: "Father, keep me far from temptation and from anything that seeks to pull me away from You.",
+                    text: "Keep your way far from her\n  And do not go near the door of her house,",
                     prayer: "Father, keep me far from temptation and from anything that seeks to pull me away from You."
                 ),
                 PrayerVerse(
                     id: "prov-5-9",
                     reference: "Proverbs 5:9",
-                    text: "Lord, protect my honor, strength, and years from being wasted through foolish choices.",
+                    text: "Or you will give your vigor to others\n  And your years to the cruel one;",
                     prayer: "Lord, protect my honor, strength, and years from being wasted through foolish choices."
                 ),
                 PrayerVerse(
                     id: "prov-5-10",
                     reference: "Proverbs 5:10",
-                    text: "Jesus, help me steward my resources wisely and keep me from losing what You have entrusted to me.",
+                    text: "And strangers will be filled with your strength\n  And your hard-earned goods will go to the house of an alien;",
                     prayer: "Jesus, help me steward my resources wisely and keep me from losing what You have entrusted to me."
                 ),
                 PrayerVerse(
                     id: "prov-5-11",
                     reference: "Proverbs 5:11",
-                    text: "Father, spare me from future regret and sorrow caused by sinful decisions.",
+                    text: "And you groan at your final end,\n  When your flesh and your body are consumed;",
                     prayer: "Father, spare me from future regret and sorrow caused by sinful decisions."
                 ),
                 PrayerVerse(
                     id: "prov-5-12",
                     reference: "Proverbs 5:12",
-                    text: "Lord, give me a heart that welcomes correction, instruction, and wisdom while there is still time.",
+                    text: "And you say, "How I have hated instruction!\n  And my heart spurned reproof!",
                     prayer: "Lord, give me a heart that welcomes correction, instruction, and wisdom while there is still time."
                 ),
                 PrayerVerse(
                     id: "prov-5-13",
                     reference: "Proverbs 5:13",
-                    text: "Jesus, help me listen to godly counsel and obey wise instruction.",
+                    text: "I have not listened to the voice of my teachers,\n  Nor inclined my ear to my instructors!",
                     prayer: "Jesus, help me listen to godly counsel and obey wise instruction."
                 ),
                 PrayerVerse(
                     id: "prov-5-14",
                     reference: "Proverbs 5:14",
-                    text: "Father, protect me from public shame and the consequences of hidden sin.",
+                    text: "I was almost in utter ruin\n  In the midst of the assembly and congregation."",
                     prayer: "Father, protect me from public shame and the consequences of hidden sin."
                 ),
                 PrayerVerse(
                     id: "prov-5-15",
                     reference: "Proverbs 5:15",
-                    text: "Lord, teach me faithfulness and contentment in the relationships and blessings You have given me.",
+                    text: "Drink water from your own cistern\n  And fresh water from your own well.",
                     prayer: "Lord, teach me faithfulness and contentment in the relationships and blessings You have given me."
                 ),
                 PrayerVerse(
                     id: "prov-5-16",
                     reference: "Proverbs 5:16",
-                    text: "Jesus, help me honor Your design for love, commitment, and purity.",
+                    text: "Should your springs be dispersed abroad,\n  Streams of water in the streets?",
                     prayer: "Jesus, help me honor Your design for love, commitment, and purity."
                 ),
                 PrayerVerse(
                     id: "prov-5-17",
                     reference: "Proverbs 5:17",
-                    text: "Father, let my heart remain faithful and devoted to the covenant relationships You have established.",
+                    text: "Let them be yours alone\n  And not for strangers with you.",
                     prayer: "Father, let my heart remain faithful and devoted to the covenant relationships You have established."
                 ),
                 PrayerVerse(
                     id: "prov-5-18",
                     reference: "Proverbs 5:18",
-                    text: "Lord, bless my relationships with joy, faithfulness, gratitude, and love.",
+                    text: "Let your fountain be blessed,\n  And rejoice in the wife of your youth.",
                     prayer: "Lord, bless my relationships with joy, faithfulness, gratitude, and love."
                 ),
                 PrayerVerse(
                     id: "prov-5-19",
                     reference: "Proverbs 5:19",
-                    text: "Jesus, help me find satisfaction, delight, and contentment in the blessings You have provided.",
+                    text: "As a loving hind and a graceful doe,\n  Let her breasts satisfy you at all times;\n  Be exhilarated always with her love.",
                     prayer: "Jesus, help me find satisfaction, delight, and contentment in the blessings You have provided."
                 ),
                 PrayerVerse(
                     id: "prov-5-20",
                     reference: "Proverbs 5:20",
-                    text: "Father, keep my heart from wandering toward temptation and unfaithfulness.",
+                    text: "For why should you, my son, be exhilarated with an adulteress\n  And embrace the bosom of a foreigner?",
                     prayer: "Father, keep my heart from wandering toward temptation and unfaithfulness."
                 ),
                 PrayerVerse(
                     id: "prov-5-21",
                     reference: "Proverbs 5:21",
-                    text: "Lord, remind me that all my ways are before Your eyes and that nothing is hidden from You.",
+                    text: "For the ways of a man are before the eyes of the Lord,\n  And He watches all his paths.",
                     prayer: "Lord, remind me that all my ways are before Your eyes and that nothing is hidden from You."
                 ),
                 PrayerVerse(
                     id: "prov-5-22",
                     reference: "Proverbs 5:22",
-                    text: "Jesus, keep me from becoming trapped by my own sins and foolish decisions.",
+                    text: "His own iniquities will capture the wicked,\n  And he will be held with the cords of his sin.",
                     prayer: "Jesus, keep me from becoming trapped by my own sins and foolish decisions."
                 ),
                 PrayerVerse(
                     id: "prov-5-23",
                     reference: "Proverbs 5:23",
-                    text: "Father, help me walk in self-control, wisdom, and obedience so I do not drift from Your path.",
+                    text: "He will die for lack of instruction,\n  And in the greatness of his folly he will go astray.",
                     prayer: "Father, help me walk in self-control, wisdom, and obedience so I do not drift from Your path."
                 ),
                 PrayerVerse(
