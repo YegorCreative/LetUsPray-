@@ -1566,116 +1566,116 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-9-1",
                     reference: "Proverbs 9:1",
-                    text: "Dear Jesus, help me build my life upon the foundation of Your wisdom and truth.",
+                    text: "Wisdom has built her house,\n  She has hewn out her seven pillars;",
                     prayer: "Dear Jesus, help me build my life upon the foundation of Your wisdom and truth."
                 ),
                 PrayerVerse(
                     id: "prov-9-2",
                     reference: "Proverbs 9:2",
-                    text: "Father, thank You for preparing spiritual nourishment for those who seek You. Help me come to Your table daily.",
+                    text: "She has prepared her food, she has mixed her wine;\n  She has also set her table;",
                     prayer: "Father, thank You for preparing spiritual nourishment for those who seek You. Help me come to Your table daily."
                 ),
                 PrayerVerse(
                     id: "prov-9-3",
                     reference: "Proverbs 9:3",
-                    text: "Lord, let Your wisdom call clearly into my heart and draw me closer to You.",
+                    text: "She has sent out her maidens, she calls\n  From the tops of the heights of the city:",
                     prayer: "Lord, let Your wisdom call clearly into my heart and draw me closer to You."
                 ),
                 PrayerVerse(
                     id: "prov-9-4",
                     reference: "Proverbs 9:4",
-                    text: "Jesus, help me humbly answer Your invitation to learn, grow, and walk in understanding.",
+                    text: "\"Whoever is naive, let him turn in here!\"\n  To him who lacks understanding she says,",
                     prayer: "Jesus, help me humbly answer Your invitation to learn, grow, and walk in understanding."
                 ),
                 PrayerVerse(
                     id: "prov-9-5",
                     reference: "Proverbs 9:5",
-                    text: "Father, feed my soul with Your Word and satisfy me with Your truth.",
+                    text: "\"Come, eat of my food\n  And drink of the wine I have mixed.",
                     prayer: "Father, feed my soul with Your Word and satisfy me with Your truth."
                 ),
                 PrayerVerse(
                     id: "prov-9-6",
                     reference: "Proverbs 9:6",
-                    text: "Lord, help me leave behind foolishness and walk in the way of wisdom and life.",
+                    text: "Forsake your folly and live,\n  And proceed in the way of understanding.\"",
                     prayer: "Lord, help me leave behind foolishness and walk in the way of wisdom and life."
                 ),
                 PrayerVerse(
                     id: "prov-9-7",
                     reference: "Proverbs 9:7",
-                    text: "Jesus, give me discernment to know when to speak and when to remain silent. Help me receive correction with humility.",
+                    text: "He who corrects a scoffer gets dishonor for himself,\n  And he who reproves a wicked man gets insults for himself.",
                     prayer: "Jesus, give me discernment to know when to speak and when to remain silent. Help me receive correction with humility."
                 ),
                 PrayerVerse(
                     id: "prov-9-8",
                     reference: "Proverbs 9:8",
-                    text: "Father, protect me from pride and teach me to welcome wise rebuke and instruction.",
+                    text: "Do not reprove a scoffer, or he will hate you,\n  Reprove a wise man and he will love you.",
                     prayer: "Father, protect me from pride and teach me to welcome wise rebuke and instruction."
                 ),
                 PrayerVerse(
                     id: "prov-9-9",
                     reference: "Proverbs 9:9",
-                    text: "Lord, help me continue growing in wisdom, knowledge, and understanding throughout my life.",
+                    text: "Give instruction to a wise man and he will be still wiser,\n  Teach a righteous man and he will increase his learning.",
                     prayer: "Lord, help me continue growing in wisdom, knowledge, and understanding throughout my life."
                 ),
                 PrayerVerse(
                     id: "prov-9-10",
                     reference: "Proverbs 9:10",
-                    text: "Jesus, teach me that the fear of the Lord is the beginning of wisdom and that knowing You is true understanding.",
+                    text: "The fear of the Lord is the beginning of wisdom,\n  And the knowledge of the Holy One is understanding.",
                     prayer: "Jesus, teach me that the fear of the Lord is the beginning of wisdom and that knowing You is true understanding."
                 ),
                 PrayerVerse(
                     id: "prov-9-11",
                     reference: "Proverbs 9:11",
-                    text: "Father, let wisdom add blessing, purpose, and fruitfulness to my life according to Your will.",
+                    text: "For by me your days will be multiplied,\n  And years of life will be added to you.",
                     prayer: "Father, let wisdom add blessing, purpose, and fruitfulness to my life according to Your will."
                 ),
                 PrayerVerse(
                     id: "prov-9-12",
                     reference: "Proverbs 9:12",
-                    text: "Lord, help me take personal responsibility for my choices and faithfully pursue wisdom.",
+                    text: "If you are wise, you are wise for yourself,\n  And if you scoff, you alone will bear it.",
                     prayer: "Lord, help me take personal responsibility for my choices and faithfully pursue wisdom."
                 ),
                 PrayerVerse(
                     id: "prov-9-13",
                     reference: "Proverbs 9:13",
-                    text: "Jesus, help me recognize foolishness and avoid voices that lead me away from Your truth.",
+                    text: "The woman of folly is boisterous,\n  She is naive and knows nothing.",
                     prayer: "Jesus, help me recognize foolishness and avoid voices that lead me away from Your truth."
                 ),
                 PrayerVerse(
                     id: "prov-9-14",
                     reference: "Proverbs 9:14",
-                    text: "Father, protect me from distractions and temptations that seek to draw me off the path of righteousness.",
+                    text: "She sits at the doorway of her house,\n  On a seat by the high places of the city,",
                     prayer: "Father, protect me from distractions and temptations that seek to draw me off the path of righteousness."
                 ),
                 PrayerVerse(
                     id: "prov-9-15",
                     reference: "Proverbs 9:15",
-                    text: "Lord, help me stay focused on the path You have set before me.",
+                    text: "Calling to those who pass by,\n  Who are making their paths straight:",
                     prayer: "Lord, help me stay focused on the path You have set before me."
                 ),
                 PrayerVerse(
                     id: "prov-9-16",
                     reference: "Proverbs 9:16",
-                    text: "Jesus, give me discernment when temptation disguises itself as something desirable or harmless.",
+                    text: "\"Whoever is naive, let him turn in here,\"\n  And to him who lacks understanding she says,",
                     prayer: "Jesus, give me discernment when temptation disguises itself as something desirable or harmless."
                 ),
                 PrayerVerse(
                     id: "prov-9-17",
                     reference: "Proverbs 9:17",
-                    text: "Father, help me reject the false pleasures of sin and choose the lasting joy found in You.",
+                    text: "\"Stolen water is sweet;\n  And bread eaten in secret is pleasant.\"",
                     prayer: "Father, help me reject the false pleasures of sin and choose the lasting joy found in You."
                 ),
                 PrayerVerse(
                     id: "prov-9-18",
                     reference: "Proverbs 9:18",
-                    text: "Lord, remind me that the path of foolishness leads to destruction, but Your way leads to life everlasting.",
+                    text: "But he does not know that the dead are there,\n  That her guests are in the depths of Sheol.",
                     prayer: "Lord, remind me that the path of foolishness leads to destruction, but Your way leads to life everlasting."
                 ),
                 PrayerVerse(
                     id: "prov-9-closing",
                     reference: "Closing",
-                    text: "In Jesus’ name, Amen. 🙏🏻",
-                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
                 )
             ]
         ),
