@@ -3079,7 +3079,188 @@ enum ProverbsPrayerData {
                 )
             ]
         ),
-        PrayerDay(dayNumber: 17, title: "Love Faithful Friendship", chapterReference: "Proverbs 17", summary: "Pray for covenant love and trustworthy companionship.", verses: []),
+        PrayerDay(
+            dayNumber: 17,
+            title: "Love Faithful Friendship",
+            chapterReference: "Proverbs 17",
+            summary: "Pray for covenant love and trustworthy companionship.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-17-1",
+                    reference: "Proverbs 17:1",
+                    text: "Better is a dry morsel and quietness with it\n  Than a house full of feasting with strife.",
+                    prayer: "Dear Jesus, teach me to value peace, love, and quietness more than abundance with conflict."
+                ),
+                PrayerVerse(
+                    id: "prov-17-2",
+                    reference: "Proverbs 17:2",
+                    text: "A servant who acts wisely will rule over a son who acts shamefully,\n  And will share in the inheritance among brothers.",
+                    prayer: "Father, help me live with wisdom, responsibility, and honor in every place You position me."
+                ),
+                PrayerVerse(
+                    id: "prov-17-3",
+                    reference: "Proverbs 17:3",
+                    text: "The refining pot is for silver and the furnace for gold,\n  But the Lord tests hearts.",
+                    prayer: "Lord, refine my heart and purify me through every season of testing."
+                ),
+                PrayerVerse(
+                    id: "prov-17-4",
+                    reference: "Proverbs 17:4",
+                    text: "An evildoer listens to wicked lips;\n  A liar pays attention to a destructive tongue.",
+                    prayer: "Jesus, protect my ears from evil speech and my heart from listening to deception."
+                ),
+                PrayerVerse(
+                    id: "prov-17-5",
+                    reference: "Proverbs 17:5",
+                    text: "He who mocks the poor taunts his Maker;\n  He who rejoices at calamity will not go unpunished.",
+                    prayer: "Father, give me compassion for the poor and keep me from mocking anyone made in Your image."
+                ),
+                PrayerVerse(
+                    id: "prov-17-6",
+                    reference: "Proverbs 17:6",
+                    text: "Grandchildren are the crown of old men,\n  And the glory of sons is their fathers.",
+                    prayer: "Lord, bless families with love, honor, wisdom, and generational faithfulness."
+                ),
+                PrayerVerse(
+                    id: "prov-17-7",
+                    reference: "Proverbs 17:7",
+                    text: "Excellent speech is not fitting for a fool,\n  Much less are lying lips to a prince.",
+                    prayer: "Jesus, let my words match righteousness, truth, and integrity."
+                ),
+                PrayerVerse(
+                    id: "prov-17-8",
+                    reference: "Proverbs 17:8",
+                    text: "A bribe is a charm in the sight of its owner;\n  Wherever he turns, he prospers.",
+                    prayer: "Father, help me never use gifts, influence, or favor dishonestly, but walk in purity."
+                ),
+                PrayerVerse(
+                    id: "prov-17-9",
+                    reference: "Proverbs 17:9",
+                    text: "He who conceals a transgression seeks love,\n  But he who repeats a matter separates intimate friends.",
+                    prayer: "Lord, teach me to cover offenses with love and seek reconciliation instead of division."
+                ),
+                PrayerVerse(
+                    id: "prov-17-10",
+                    reference: "Proverbs 17:10",
+                    text: "A rebuke goes deeper into one who has understanding\n  Than a hundred blows into a fool.",
+                    prayer: "Jesus, give me a teachable heart that receives correction quickly and humbly."
+                ),
+                PrayerVerse(
+                    id: "prov-17-11",
+                    reference: "Proverbs 17:11",
+                    text: "A rebellious man seeks only evil,\n  So a cruel messenger will be sent against him.",
+                    prayer: "Father, remove rebellion from my heart and lead me in obedience and peace."
+                ),
+                PrayerVerse(
+                    id: "prov-17-12",
+                    reference: "Proverbs 17:12",
+                    text: "Let a man meet a bear robbed of her cubs,\n  Rather than a fool in his folly.",
+                    prayer: "Lord, protect me from foolishness and help me avoid destructive choices."
+                ),
+                PrayerVerse(
+                    id: "prov-17-13",
+                    reference: "Proverbs 17:13",
+                    text: "He who returns evil for good,\n  Evil will not depart from his house.",
+                    prayer: "Jesus, keep me from repaying good with evil. Teach me gratitude and righteousness."
+                ),
+                PrayerVerse(
+                    id: "prov-17-14",
+                    reference: "Proverbs 17:14",
+                    text: "The beginning of strife is like letting out water,\n  So abandon the quarrel before it breaks out.",
+                    prayer: "Father, help me stop conflict before it grows and choose peace before arguments begin."
+                ),
+                PrayerVerse(
+                    id: "prov-17-15",
+                    reference: "Proverbs 17:15",
+                    text: "He who justifies the wicked and he who condemns the righteous,\n  Both of them alike are an abomination to the Lord.",
+                    prayer: "Lord, help me love justice, hate evil, and judge rightly with wisdom."
+                ),
+                PrayerVerse(
+                    id: "prov-17-16",
+                    reference: "Proverbs 17:16",
+                    text: "Why is there a price in the hand of a fool to buy wisdom,\n  When he has no sense?",
+                    prayer: "Jesus, give me a heart that truly desires wisdom and values it above every opportunity."
+                ),
+                PrayerVerse(
+                    id: "prov-17-17",
+                    reference: "Proverbs 17:17",
+                    text: "A friend loves at all times,\n  And a brother is born for adversity.",
+                    prayer: "Father, make me a faithful friend who loves at all times and supports others in hardship."
+                ),
+                PrayerVerse(
+                    id: "prov-17-18",
+                    reference: "Proverbs 17:18",
+                    text: "A man lacking in sense pledges\n  And becomes guarantor in the presence of his neighbor.",
+                    prayer: "Lord, give me wisdom in commitments, agreements, and financial responsibilities."
+                ),
+                PrayerVerse(
+                    id: "prov-17-19",
+                    reference: "Proverbs 17:19",
+                    text: "He who loves transgression loves strife;\n  He who raises his door seeks destruction.",
+                    prayer: "Jesus, keep me from loving conflict, pride, or anything that leads to destruction."
+                ),
+                PrayerVerse(
+                    id: "prov-17-20",
+                    reference: "Proverbs 17:20",
+                    text: "He who has a crooked mind finds no good,\n  And he who is perverted in his language falls into evil.",
+                    prayer: "Father, purify my heart and straighten my speech so I may walk in blessing."
+                ),
+                PrayerVerse(
+                    id: "prov-17-21",
+                    reference: "Proverbs 17:21",
+                    text: "He who sires a fool does so to his sorrow,\n  And the father of a fool has no joy.",
+                    prayer: "Lord, help me live wisely and bring joy, not grief, to those who care for me."
+                ),
+                PrayerVerse(
+                    id: "prov-17-22",
+                    reference: "Proverbs 17:22",
+                    text: "A joyful heart is good medicine,\n  But a broken spirit dries up the bones.",
+                    prayer: "Jesus, fill my heart with joy, healing, and hope. Strengthen my spirit in You."
+                ),
+                PrayerVerse(
+                    id: "prov-17-23",
+                    reference: "Proverbs 17:23",
+                    text: "A wicked man receives a bribe from the bosom\n  To pervert the ways of justice.",
+                    prayer: "Father, keep me from corruption, bribery, and dishonest gain."
+                ),
+                PrayerVerse(
+                    id: "prov-17-24",
+                    reference: "Proverbs 17:24",
+                    text: "Wisdom is in the presence of the one who has understanding,\n  But the eyes of a fool are on the ends of the earth.",
+                    prayer: "Lord, keep wisdom before my eyes and help me stay focused on Your truth."
+                ),
+                PrayerVerse(
+                    id: "prov-17-25",
+                    reference: "Proverbs 17:25",
+                    text: "A foolish son is a grief to his father\n  And bitterness to her who bore him.",
+                    prayer: "Jesus, help me live wisely and honor my family through obedience and righteousness."
+                ),
+                PrayerVerse(
+                    id: "prov-17-26",
+                    reference: "Proverbs 17:26",
+                    text: "It is also not good to fine the righteous,\n  Nor to strike the noble for their uprightness.",
+                    prayer: "Father, help me value justice and never punish or condemn what is right."
+                ),
+                PrayerVerse(
+                    id: "prov-17-27",
+                    reference: "Proverbs 17:27",
+                    text: "He who restrains his words has knowledge,\n  And he who has a cool spirit is a man of understanding.",
+                    prayer: "Lord, teach me restraint in speech and give me a calm, understanding spirit."
+                ),
+                PrayerVerse(
+                    id: "prov-17-28",
+                    reference: "Proverbs 17:28",
+                    text: "Even a fool, when he keeps silent, is considered wise;\n  When he closes his lips, he is considered prudent.",
+                    prayer: "Jesus, help me know when to speak and when to remain silent with wisdom."
+                ),
+                PrayerVerse(
+                    id: "prov-17-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
         PrayerDay(dayNumber: 18, title: "Listen Before Speaking", chapterReference: "Proverbs 18", summary: "Ask for listening ears and humble understanding.", verses: []),
         PrayerDay(dayNumber: 19, title: "Practice Compassion", chapterReference: "Proverbs 19", summary: "Pray for mercy toward those in need.", verses: []),
         PrayerDay(dayNumber: 20, title: "Receive Wise Counsel", chapterReference: "Proverbs 20", summary: "Invite trustworthy counsel and honest reflection.", verses: []),
