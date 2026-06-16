@@ -4001,7 +4001,194 @@ enum ProverbsPrayerData {
                 )
             ]
         ),
-        PrayerDay(dayNumber: 22, title: "Pursue Humility", chapterReference: "Proverbs 22", summary: "Ask for lowliness of heart and lasting reverence.", verses: []),
+        PrayerDay(
+            dayNumber: 22,
+            title: "Pursue Humility",
+            chapterReference: "Proverbs 22",
+            summary: "Ask for lowliness of heart and lasting reverence.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-22-1",
+                    reference: "Proverbs 22:1",
+                    text: "A good name is to be more desired than great wealth,\n  Favor is better than silver and gold.",
+                    prayer: "Dear Jesus, help me value a good name and integrity more than riches, status, or worldly success."
+                ),
+                PrayerVerse(
+                    id: "prov-22-2",
+                    reference: "Proverbs 22:2",
+                    text: "The rich and the poor have a common bond,\n  The Lord is the maker of them all.",
+                    prayer: "Father, remind me that every person is made by You. Teach me humility, respect, and compassion for all people."
+                ),
+                PrayerVerse(
+                    id: "prov-22-3",
+                    reference: "Proverbs 22:3",
+                    text: "The prudent sees the evil and hides himself,\n  But the naive go on, and are punished for it.",
+                    prayer: "Lord, give me wisdom to see danger and avoid it instead of walking carelessly into harm."
+                ),
+                PrayerVerse(
+                    id: "prov-22-4",
+                    reference: "Proverbs 22:4",
+                    text: "The reward of humility and the fear of the Lord\n  Are riches, honor and life.",
+                    prayer: "Jesus, teach me humility and reverence for You, and let my life be blessed through wisdom and obedience."
+                ),
+                PrayerVerse(
+                    id: "prov-22-5",
+                    reference: "Proverbs 22:5",
+                    text: "Thorns and snares are in the way of the perverse;\n  He who guards himself will be far from them.",
+                    prayer: "Father, keep me from crooked paths and help me guard my soul carefully."
+                ),
+                PrayerVerse(
+                    id: "prov-22-6",
+                    reference: "Proverbs 22:6",
+                    text: "Train up a child in the way he should go,\n  Even when he is old he will not depart from it.",
+                    prayer: "Lord, help me train, guide, and influence others in the way they should go, especially the next generation."
+                ),
+                PrayerVerse(
+                    id: "prov-22-7",
+                    reference: "Proverbs 22:7",
+                    text: "The rich rules over the poor,\n  And the borrower becomes the lender's slave.",
+                    prayer: "Jesus, give me wisdom with money, debt, lending, and borrowing so I may live responsibly and freely."
+                ),
+                PrayerVerse(
+                    id: "prov-22-8",
+                    reference: "Proverbs 22:8",
+                    text: "He who sows iniquity will reap vanity,\n  And the rod of his fury will perish.",
+                    prayer: "Father, keep me from sowing injustice, and help me plant righteousness, mercy, and truth."
+                ),
+                PrayerVerse(
+                    id: "prov-22-9",
+                    reference: "Proverbs 22:9",
+                    text: "He who is generous will be blessed,\n  For he gives some of his food to the poor.",
+                    prayer: "Lord, make me generous and willing to share with those in need."
+                ),
+                PrayerVerse(
+                    id: "prov-22-10",
+                    reference: "Proverbs 22:10",
+                    text: "Drive out the scoffer, and contention will go out,\n  Even strife and dishonor will cease.",
+                    prayer: "Jesus, help me remove strife, mockery, and division from my life and relationships."
+                ),
+                PrayerVerse(
+                    id: "prov-22-11",
+                    reference: "Proverbs 22:11",
+                    text: "He who loves purity of heart\n  And whose speech is gracious, the king is his friend.",
+                    prayer: "Father, purify my heart and make my speech gracious and pleasing."
+                ),
+                PrayerVerse(
+                    id: "prov-22-12",
+                    reference: "Proverbs 22:12",
+                    text: "The eyes of the Lord preserve knowledge,\n  But He overthrows the words of the treacherous man.",
+                    prayer: "Lord, preserve true knowledge and protect me from deceitful words."
+                ),
+                PrayerVerse(
+                    id: "prov-22-13",
+                    reference: "Proverbs 22:13",
+                    text: "The sluggard says, "There is a lion outside;\n  I will be killed in the streets!"",
+                    prayer: "Jesus, deliver me from excuses, fear, and laziness that keep me from doing what is right."
+                ),
+                PrayerVerse(
+                    id: "prov-22-14",
+                    reference: "Proverbs 22:14",
+                    text: "The mouth of an adulteress is a deep pit;\n  He who is cursed of the Lord will fall into it.",
+                    prayer: "Father, protect me from temptation and from paths that lead away from Your favor."
+                ),
+                PrayerVerse(
+                    id: "prov-22-15",
+                    reference: "Proverbs 22:15",
+                    text: "Foolishness is bound up in the heart of a child;\n  The rod of discipline will remove it far from him.",
+                    prayer: "Lord, teach me discipline, correction, and wisdom that leads away from foolishness."
+                ),
+                PrayerVerse(
+                    id: "prov-22-16",
+                    reference: "Proverbs 22:16",
+                    text: "He who oppresses the poor to make more for himself\n  Or who gives to the rich, will only come to poverty.",
+                    prayer: "Jesus, keep me from oppressing others or seeking gain through selfishness and injustice."
+                ),
+                PrayerVerse(
+                    id: "prov-22-17",
+                    reference: "Proverbs 22:17",
+                    text: "Incline your ear and hear the words of the wise,\n  And apply your mind to my knowledge;",
+                    prayer: "Father, help me incline my ear to wisdom and apply my heart to knowledge."
+                ),
+                PrayerVerse(
+                    id: "prov-22-18",
+                    reference: "Proverbs 22:18",
+                    text: "For it will be pleasant if you keep them within you,\n  That they may be ready on your lips.",
+                    prayer: "Lord, let Your truth be pleasant within me and ready on my lips."
+                ),
+                PrayerVerse(
+                    id: "prov-22-19",
+                    reference: "Proverbs 22:19",
+                    text: "So that your trust may be in the Lord,\n  I have taught you today, even you.",
+                    prayer: "Jesus, teach me to trust in You fully and return my heart to You daily."
+                ),
+                PrayerVerse(
+                    id: "prov-22-20",
+                    reference: "Proverbs 22:20",
+                    text: "Have I not written to you excellent things\n  Of counsels and knowledge,",
+                    prayer: "Father, help me receive excellent counsel, wisdom, and instruction from Your Word."
+                ),
+                PrayerVerse(
+                    id: "prov-22-21",
+                    reference: "Proverbs 22:21",
+                    text: "To make you know the certainty of the words of truth\n  That you may correctly answer him who sent you?",
+                    prayer: "Lord, make me truthful and faithful so I can give sound answers to others."
+                ),
+                PrayerVerse(
+                    id: "prov-22-22",
+                    reference: "Proverbs 22:22",
+                    text: "Do not rob the poor because he is poor,\n  Or crush the afflicted at the gate;",
+                    prayer: "Jesus, give me compassion for the poor and keep me from taking advantage of the vulnerable."
+                ),
+                PrayerVerse(
+                    id: "prov-22-23",
+                    reference: "Proverbs 22:23",
+                    text: "For the Lord will plead their case\n  And take the life of those who rob them.",
+                    prayer: "Father, defend the cause of the needy and teach me to walk in justice and mercy."
+                ),
+                PrayerVerse(
+                    id: "prov-22-24",
+                    reference: "Proverbs 22:24",
+                    text: "Do not associate with a man given to anger;\n  Or go with a hot-tempered man,",
+                    prayer: "Lord, keep me from close companionship with angry and violent people."
+                ),
+                PrayerVerse(
+                    id: "prov-22-25",
+                    reference: "Proverbs 22:25",
+                    text: "Or you will learn his ways\n  And find a snare for yourself.",
+                    prayer: "Jesus, protect me from learning destructive patterns and becoming trapped by them."
+                ),
+                PrayerVerse(
+                    id: "prov-22-26",
+                    reference: "Proverbs 22:26",
+                    text: "Do not be among those who give pledges,\n  Among those who become guarantors for debts.",
+                    prayer: "Father, give me wisdom in financial agreements and keep me from careless pledges."
+                ),
+                PrayerVerse(
+                    id: "prov-22-27",
+                    reference: "Proverbs 22:27",
+                    text: "If you have nothing with which to pay,\n  Why should he take your bed from under you?",
+                    prayer: "Lord, help me live responsibly so I do not lose what You have entrusted to me."
+                ),
+                PrayerVerse(
+                    id: "prov-22-28",
+                    reference: "Proverbs 22:28",
+                    text: "Do not move the ancient boundary\n  Which your fathers have set.",
+                    prayer: "Jesus, help me honor what is right, established, and faithful before You."
+                ),
+                PrayerVerse(
+                    id: "prov-22-29",
+                    reference: "Proverbs 22:29",
+                    text: "Do you see a man skilled in his work?\n  He will stand before kings;\n  He will not stand before obscure men.",
+                    prayer: "Father, teach me skill, diligence, and excellence in my work so I may serve You faithfully."
+                ),
+                PrayerVerse(
+                    id: "prov-22-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
         PrayerDay(dayNumber: 23, title: "Fix Your Eyes on Wisdom", chapterReference: "Proverbs 23", summary: "Pray for focus, sobriety, and inner stability.", verses: []),
         PrayerDay(dayNumber: 24, title: "Do Not Envy Evil", chapterReference: "Proverbs 24", summary: "Ask for courage to choose righteousness over comparison.", verses: []),
         PrayerDay(dayNumber: 25, title: "Wait with Patience", chapterReference: "Proverbs 25", summary: "Pray for restraint, patience, and thoughtful words.", verses: []),
