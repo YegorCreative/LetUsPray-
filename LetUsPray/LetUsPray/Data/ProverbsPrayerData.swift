@@ -3261,7 +3261,164 @@ enum ProverbsPrayerData {
                 )
             ]
         ),
-        PrayerDay(dayNumber: 18, title: "Listen Before Speaking", chapterReference: "Proverbs 18", summary: "Ask for listening ears and humble understanding.", verses: []),
+        PrayerDay(
+            dayNumber: 18,
+            title: "Listen Before Speaking",
+            chapterReference: "Proverbs 18",
+            summary: "Ask for listening ears and humble understanding.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-18-1",
+                    reference: "Proverbs 18:1",
+                    text: "He who separates himself seeks his own desire,\n  He quarrels against all sound wisdom.",
+                    prayer: "Dear Jesus, keep me from selfish isolation and help me seek wisdom, humility, and godly community."
+                ),
+                PrayerVerse(
+                    id: "prov-18-2",
+                    reference: "Proverbs 18:2",
+                    text: "A fool does not delight in understanding,\n  But only in revealing his own mind.",
+                    prayer: "Father, give me a heart that delights in understanding instead of only expressing my own opinions."
+                ),
+                PrayerVerse(
+                    id: "prov-18-3",
+                    reference: "Proverbs 18:3",
+                    text: "When a wicked man comes, contempt also comes,\n  And with dishonor comes scorn.",
+                    prayer: "Lord, keep me from wickedness and shame. Help me walk in honor and righteousness."
+                ),
+                PrayerVerse(
+                    id: "prov-18-4",
+                    reference: "Proverbs 18:4",
+                    text: "The words of a man's mouth are deep waters;\n  The fountain of wisdom is a bubbling brook.",
+                    prayer: "Jesus, let my words be deep, wise, refreshing, and filled with life."
+                ),
+                PrayerVerse(
+                    id: "prov-18-5",
+                    reference: "Proverbs 18:5",
+                    text: "To show partiality to the wicked is not good,\n  Nor to thrust aside the righteous in judgment.",
+                    prayer: "Father, help me treat people with justice and never show partiality toward wickedness."
+                ),
+                PrayerVerse(
+                    id: "prov-18-6",
+                    reference: "Proverbs 18:6",
+                    text: "A fool's lips bring strife,\n  And his mouth calls for blows.",
+                    prayer: "Lord, guard my lips from conflict, foolishness, and words that invite trouble."
+                ),
+                PrayerVerse(
+                    id: "prov-18-7",
+                    reference: "Proverbs 18:7",
+                    text: "A fool's mouth is his ruin,\n  And his lips are the snare of his soul.",
+                    prayer: "Jesus, protect me from destructive speech and help me speak with wisdom and self-control."
+                ),
+                PrayerVerse(
+                    id: "prov-18-8",
+                    reference: "Proverbs 18:8",
+                    text: "The words of a whisperer are like dainty morsels,\n  And they go down into the innermost parts of the body.",
+                    prayer: "Father, keep me from gossip and from receiving words that poison the heart."
+                ),
+                PrayerVerse(
+                    id: "prov-18-9",
+                    reference: "Proverbs 18:9",
+                    text: "He also who is slack in his work\n  Is brother to him who destroys.",
+                    prayer: "Lord, remove laziness and negligence from my life. Teach me diligence and faithful stewardship."
+                ),
+                PrayerVerse(
+                    id: "prov-18-10",
+                    reference: "Proverbs 18:10",
+                    text: "The name of the Lord is a strong tower;\n  The righteous runs into it and is safe.",
+                    prayer: "Jesus, thank You that Your name is a strong tower. Help me run to You for safety and refuge."
+                ),
+                PrayerVerse(
+                    id: "prov-18-11",
+                    reference: "Proverbs 18:11",
+                    text: "A rich man's wealth is his strong city,\n  And like a high wall in his own imagination.",
+                    prayer: "Father, keep me from trusting in wealth as my security. Let You alone be my fortress."
+                ),
+                PrayerVerse(
+                    id: "prov-18-12",
+                    reference: "Proverbs 18:12",
+                    text: "Before destruction the heart of man is haughty,\n  But humility goes before honor.",
+                    prayer: "Lord, humble my heart before destruction and teach me that honor comes through humility."
+                ),
+                PrayerVerse(
+                    id: "prov-18-13",
+                    reference: "Proverbs 18:13",
+                    text: "He who gives an answer before he hears,\n  It is folly and shame to him.",
+                    prayer: "Jesus, teach me to listen before I answer and to understand before I speak."
+                ),
+                PrayerVerse(
+                    id: "prov-18-14",
+                    reference: "Proverbs 18:14",
+                    text: "The spirit of a man can endure his sickness,\n  But as for a broken spirit who can bear it?",
+                    prayer: "Father, strengthen my spirit and sustain me in times of weakness, sickness, and discouragement."
+                ),
+                PrayerVerse(
+                    id: "prov-18-15",
+                    reference: "Proverbs 18:15",
+                    text: "The mind of the prudent acquires knowledge,\n  And the ear of the wise seeks knowledge.",
+                    prayer: "Lord, give me a heart that acquires knowledge and ears that seek wisdom."
+                ),
+                PrayerVerse(
+                    id: "prov-18-16",
+                    reference: "Proverbs 18:16",
+                    text: "A man's gift makes room for him\n  And brings him before great men.",
+                    prayer: "Jesus, help me use gifts wisely and with integrity, never for manipulation or pride."
+                ),
+                PrayerVerse(
+                    id: "prov-18-17",
+                    reference: "Proverbs 18:17",
+                    text: "The first to plead his case seems right,\n  Until another comes and examines him.",
+                    prayer: "Father, give me discernment to hear both sides of a matter before making judgments."
+                ),
+                PrayerVerse(
+                    id: "prov-18-18",
+                    reference: "Proverbs 18:18",
+                    text: "The cast lot puts an end to strife\n  And decides between the mighty ones.",
+                    prayer: "Lord, guide decisions, settle disputes, and bring peace where there is conflict."
+                ),
+                PrayerVerse(
+                    id: "prov-18-19",
+                    reference: "Proverbs 18:19",
+                    text: "A brother offended is harder to be won than a strong city,\n  And contentions are like the bars of a citadel.",
+                    prayer: "Jesus, help me guard relationships carefully and repair offenses with humility and love."
+                ),
+                PrayerVerse(
+                    id: "prov-18-20",
+                    reference: "Proverbs 18:20",
+                    text: "With the fruit of a man's mouth his stomach will be satisfied;\n  He will be satisfied with the product of his lips.",
+                    prayer: "Father, let the fruit of my words bring blessing, peace, and life."
+                ),
+                PrayerVerse(
+                    id: "prov-18-21",
+                    reference: "Proverbs 18:21",
+                    text: "Death and life are in the power of the tongue,\n  And those who love it will eat its fruit.",
+                    prayer: "Lord, teach me that life and death are in the power of the tongue. Help me speak life."
+                ),
+                PrayerVerse(
+                    id: "prov-18-22",
+                    reference: "Proverbs 18:22",
+                    text: "He who finds a wife finds a good thing\n  And obtains favor from the Lord.",
+                    prayer: "Jesus, bless marriage, covenant love, and the gift of godly companionship."
+                ),
+                PrayerVerse(
+                    id: "prov-18-23",
+                    reference: "Proverbs 18:23",
+                    text: "The poor man utters supplications,\n  But the rich man answers roughly.",
+                    prayer: "Father, give me compassion for the poor and humility in how I speak to others."
+                ),
+                PrayerVerse(
+                    id: "prov-18-24",
+                    reference: "Proverbs 18:24",
+                    text: "A man of too many friends comes to ruin,\n  But there is a friend who sticks closer than a brother.",
+                    prayer: "Lord, make me a faithful friend and surround me with friendships rooted in loyalty, wisdom, and love."
+                ),
+                PrayerVerse(
+                    id: "prov-18-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
         PrayerDay(dayNumber: 19, title: "Practice Compassion", chapterReference: "Proverbs 19", summary: "Pray for mercy toward those in need.", verses: []),
         PrayerDay(dayNumber: 20, title: "Receive Wise Counsel", chapterReference: "Proverbs 20", summary: "Invite trustworthy counsel and honest reflection.", verses: []),
         PrayerDay(dayNumber: 21, title: "Place Hope in the Lord", chapterReference: "Proverbs 21", summary: "Pray for a heart anchored in God's justice and mercy.", verses: []),
