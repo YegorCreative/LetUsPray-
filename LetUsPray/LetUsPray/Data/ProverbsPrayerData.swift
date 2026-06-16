@@ -2267,7 +2267,170 @@ enum ProverbsPrayerData {
                 )
             ]
         ),
-        PrayerDay(dayNumber: 13, title: "Guard Your Words", chapterReference: "Proverbs 13", summary: "Pray for restraint, wisdom, and healing speech.", verses: []),
+        PrayerDay(
+            dayNumber: 13,
+            title: "Guard Your Words",
+            chapterReference: "Proverbs 13",
+            summary: "Pray for restraint, wisdom, and healing speech.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-13-1",
+                    reference: "Proverbs 13:1",
+                    text: "A wise son accepts his father's discipline,\n  But a scoffer does not listen to rebuke.",
+                    prayer: "Dear Jesus, help me listen to wisdom, correction, and instruction with humility and a teachable heart."
+                ),
+                PrayerVerse(
+                    id: "prov-13-2",
+                    reference: "Proverbs 13:2",
+                    text: "From the fruit of a man's mouth he enjoys good,\n  But the desire of the treacherous is violence.",
+                    prayer: "Father, let the words of my mouth produce goodness, peace, and life instead of harm or sin."
+                ),
+                PrayerVerse(
+                    id: "prov-13-3",
+                    reference: "Proverbs 13:3",
+                    text: "The one who guards his mouth preserves his life;\n  The one who opens wide his lips comes to ruin.",
+                    prayer: "Lord, guard my mouth and help me speak carefully, wisely, and truthfully."
+                ),
+                PrayerVerse(
+                    id: "prov-13-4",
+                    reference: "Proverbs 13:4",
+                    text: "The soul of the sluggard craves and gets nothing,\n  But the soul of the diligent is made fat.",
+                    prayer: "Jesus, remove laziness from my life and teach me diligence, discipline, and faithful work."
+                ),
+                PrayerVerse(
+                    id: "prov-13-5",
+                    reference: "Proverbs 13:5",
+                    text: "A righteous man hates falsehood,\n  But a wicked man acts disgustingly and shamefully.",
+                    prayer: "Father, help me hate falsehood and walk in honesty, integrity, and righteousness."
+                ),
+                PrayerVerse(
+                    id: "prov-13-6",
+                    reference: "Proverbs 13:6",
+                    text: "Righteousness guards the one whose way is blameless,\n  But wickedness subverts the sinner.",
+                    prayer: "Lord, let righteousness protect and guide my life, keeping me from falling into sin."
+                ),
+                PrayerVerse(
+                    id: "prov-13-7",
+                    reference: "Proverbs 13:7",
+                    text: "There is one who pretends to be rich, but has nothing;\n  Another pretends to be poor, but has great wealth.",
+                    prayer: "Jesus, keep me humble whether I have little or much. Let my true treasure be found in You."
+                ),
+                PrayerVerse(
+                    id: "prov-13-8",
+                    reference: "Proverbs 13:8",
+                    text: "The ransom of a man's life is his wealth,\n  But the poor hears no rebuke.",
+                    prayer: "Father, teach me wisdom in handling wealth, possessions, and responsibility."
+                ),
+                PrayerVerse(
+                    id: "prov-13-9",
+                    reference: "Proverbs 13:9",
+                    text: "The light of the righteous rejoices,\n  But the lamp of the wicked goes out.",
+                    prayer: "Lord, let the light of righteousness shine brightly through my life and never grow dim."
+                ),
+                PrayerVerse(
+                    id: "prov-13-10",
+                    reference: "Proverbs 13:10",
+                    text: "Through insolence comes nothing but strife,\n  But wisdom is with those who receive counsel.",
+                    prayer: "Jesus, remove pride and selfish ambition from my heart. Teach me humility and wisdom."
+                ),
+                PrayerVerse(
+                    id: "prov-13-11",
+                    reference: "Proverbs 13:11",
+                    text: "Wealth obtained by fraud dwindles,\n  But the one who gathers by labor increases it.",
+                    prayer: "Father, help me gain what I have honestly, patiently, and faithfully without greed or shortcuts."
+                ),
+                PrayerVerse(
+                    id: "prov-13-12",
+                    reference: "Proverbs 13:12",
+                    text: "Hope deferred makes the heart sick,\n  But desire fulfilled is a tree of life.",
+                    prayer: "Lord, strengthen my heart when hope feels delayed, and remind me that Your timing is perfect."
+                ),
+                PrayerVerse(
+                    id: "prov-13-13",
+                    reference: "Proverbs 13:13",
+                    text: "The one who despises the word will be in debt to it,\n  But the one who fears the commandment will be rewarded.",
+                    prayer: "Jesus, help me honor Your Word and obey Your instruction with reverence and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "prov-13-14",
+                    reference: "Proverbs 13:14",
+                    text: "The teaching of the wise is a fountain of life,\n  To turn aside from the snares of death.",
+                    prayer: "Father, let wisdom be a fountain of life within me, guiding me away from destruction."
+                ),
+                PrayerVerse(
+                    id: "prov-13-15",
+                    reference: "Proverbs 13:15",
+                    text: "Good understanding produces favor,\n  But the way of the treacherous is hard.",
+                    prayer: "Lord, give me good understanding and favor as I walk faithfully before You and others."
+                ),
+                PrayerVerse(
+                    id: "prov-13-16",
+                    reference: "Proverbs 13:16",
+                    text: "Every prudent man acts with knowledge,\n  But a fool displays folly.",
+                    prayer: "Jesus, help me act with wisdom, discernment, and understanding instead of foolishness."
+                ),
+                PrayerVerse(
+                    id: "prov-13-17",
+                    reference: "Proverbs 13:17",
+                    text: "A wicked messenger falls into adversity,\n  But a faithful envoy brings healing.",
+                    prayer: "Father, make me trustworthy, faithful, and dependable in every responsibility You give me."
+                ),
+                PrayerVerse(
+                    id: "prov-13-18",
+                    reference: "Proverbs 13:18",
+                    text: "Poverty and shame will come to him who neglects discipline,\n  But he who regards reproof will be honored.",
+                    prayer: "Lord, help me receive correction and discipline so that I may grow in wisdom and honor."
+                ),
+                PrayerVerse(
+                    id: "prov-13-19",
+                    reference: "Proverbs 13:19",
+                    text: "Desire realized is sweet to the soul,\n  But it is an abomination to fools to turn away from evil.",
+                    prayer: "Jesus, let my desires align with what is righteous and pleasing before You."
+                ),
+                PrayerVerse(
+                    id: "prov-13-20",
+                    reference: "Proverbs 13:20",
+                    text: "He who walks with wise men will be wise,\n  But the companion of fools will suffer harm.",
+                    prayer: "Father, surround me with wise, godly, and encouraging people who help me grow spiritually."
+                ),
+                PrayerVerse(
+                    id: "prov-13-21",
+                    reference: "Proverbs 13:21",
+                    text: "Adversity pursues sinners,\n  But the righteous will be rewarded with prosperity.",
+                    prayer: "Lord, let goodness, mercy, and righteousness follow me as I walk faithfully with You."
+                ),
+                PrayerVerse(
+                    id: "prov-13-22",
+                    reference: "Proverbs 13:22",
+                    text: "A good man leaves an inheritance to his children's children,\n  And the wealth of the sinner is stored up for the righteous.",
+                    prayer: "Jesus, help me leave behind a legacy of faithfulness, wisdom, and blessing for future generations."
+                ),
+                PrayerVerse(
+                    id: "prov-13-23",
+                    reference: "Proverbs 13:23",
+                    text: "Abundant food is in the fallow ground of the poor,\n  But it is swept away by injustice.",
+                    prayer: "Father, help me steward every opportunity and resource wisely and justly."
+                ),
+                PrayerVerse(
+                    id: "prov-13-24",
+                    reference: "Proverbs 13:24",
+                    text: "He who withholds his rod hates his son,\n  But he who loves him disciplines him diligently.",
+                    prayer: "Lord, teach me loving discipline, correction, and responsibility rooted in wisdom and care."
+                ),
+                PrayerVerse(
+                    id: "prov-13-25",
+                    reference: "Proverbs 13:25",
+                    text: "The righteous has enough to satisfy his appetite,\n  But the stomach of the wicked is in need.",
+                    prayer: "Jesus, thank You for providing for my needs. Teach me contentment, gratitude, and trust in You always."
+                ),
+                PrayerVerse(
+                    id: "prov-13-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
         PrayerDay(dayNumber: 14, title: "Build a Wise Home", chapterReference: "Proverbs 14", summary: "Invite peace, patience, and wisdom into your relationships.", verses: []),
         PrayerDay(dayNumber: 15, title: "Choose Gentle Answers", chapterReference: "Proverbs 15", summary: "Pray for gentle responses and a listening spirit.", verses: []),
         PrayerDay(dayNumber: 16, title: "Commit Your Plans", chapterReference: "Proverbs 16", summary: "Offer your plans to God and ask Him to establish them.", verses: []),
