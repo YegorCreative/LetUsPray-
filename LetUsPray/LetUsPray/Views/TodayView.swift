@@ -67,7 +67,9 @@ struct TodayView: View {
 
             Text(AppMetadata.tagline)
                 .font(AppTypography.callout())
-                .foregroundStyle(AppColors.textSecondary)
+                .italic()
+                .fontWeight(.semibold)
+                .foregroundStyle(AppColors.textPrimary)
                 .fixedSize(horizontal: false, vertical: true)
 
             Text(activePlan.subtitle)

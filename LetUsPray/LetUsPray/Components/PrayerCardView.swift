@@ -8,23 +8,37 @@ struct PrayerCardView: View {
     private var isClosingPrayer: Bool {
         verse.id.hasSuffix("-closing") || verse.reference.lowercased() == "closing"
     }
+    
+    private var closingText: String {
+        // Remove emoji from the prayer text
+        verse.prayer
+            .replacingOccurrences(of: "🙏🏻", with: "")
+            .replacingOccurrences(of: "🙏", with: "")
+            .trimmingCharacters(in: .whitespaces)
+    }
 
     var body: some View {
         GlassCard {
             if isClosingPrayer {
                 // Simplified layout for closing prayers
-                VStack(alignment: .leading, spacing: AppSpacing.medium) {
+                VStack(alignment: .center, spacing: AppSpacing.medium) {
                     Text(verse.reference)
                         .font(AppTypography.caption())
                         .foregroundStyle(AppColors.accent)
                         .textCase(.uppercase)
                     
-                    Text(verse.prayer)
-                        .font(.system(size: 18, weight: .semibold, design: .rounded))
-                        .foregroundStyle(AppColors.textPrimary)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .lineSpacing(5)
-                        .frame(maxWidth: .infinity, alignment: .center)
+                    VStack(spacing: AppSpacing.small) {
+                        Text(closingText)
+                            .font(.system(size: 18, weight: .semibold, design: .rounded))
+                            .foregroundStyle(AppColors.textPrimary)
+                            .multilineTextAlignment(.center)
+                        
+                        // Use SF Symbol for praying hands that can be styled
+                        Image(systemName: "hands.sparkles.fill")
+                            .font(.system(size: 32, weight: .medium))
+                            .foregroundStyle(.white.opacity(0.85))
+                    }
+                    .frame(maxWidth: .infinity)
                 }
             } else {
                 // Normal layout for regular prayers

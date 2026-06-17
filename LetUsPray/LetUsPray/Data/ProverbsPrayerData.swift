@@ -4,7 +4,7 @@ enum ProverbsPrayerData {
     static let plan = PrayerPlan(
         id: "31-days-in-proverbs",
         title: "31 Days in Proverbs",
-        subtitle: "Pray Through Scripture One Verse at a Time",
+        subtitle: "Journey through wisdom, one day at a time",
         description: "A gentle guided journey through Proverbs, helping you pray for wisdom, humility, trust, and steady obedience.",
         category: .wisdom,
         durationDays: 31,
