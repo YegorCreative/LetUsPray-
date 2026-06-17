@@ -3,17 +3,17 @@ import Foundation
 enum PrayerPlansRepository {
     static let allPlans: [PrayerPlan] = [
         ProverbsPrayerData.plan,
-        PrayerPlan(
-            id: "psalms-journey",
-            title: "Psalms Journey",
-            subtitle: "Pray the language of worship, lament, and trust",
-            description: "A reflective journey through selected Psalms, shaping prayer through praise, honesty, and deep dependence on God.",
-            category: .psalms,
-            durationDays: 21,
-            accentColorName: "psalms",
-            coverIcon: "music.note.list",
-            days: []
-        ),
+        // Psalms collections (10 groups of 15 psalms each)
+        PsalmsPrayerData.collection1,
+        PsalmsPrayerData.collection2,
+        PsalmsPrayerData.collection3,
+        PsalmsPrayerData.collection4,
+        PsalmsPrayerData.collection5,
+        PsalmsPrayerData.collection6,
+        PsalmsPrayerData.collection7,
+        PsalmsPrayerData.collection8,
+        PsalmsPrayerData.collection9,
+        PsalmsPrayerData.collection10,
         PrayerPlan(
             id: "gospel-of-john",
             title: "Gospel of John",
@@ -51,7 +51,7 @@ enum PrayerPlansRepository {
 
     static let featuredPlans: [PrayerPlan] = [
         ProverbsPrayerData.plan,
-        allPlans[1]
+        PsalmsPrayerData.collection1
     ]
 
     static func planByID(_ id: String) -> PrayerPlan? {

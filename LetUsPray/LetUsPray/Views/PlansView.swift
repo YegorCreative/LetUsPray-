@@ -6,6 +6,12 @@ struct PlansView: View {
     @Binding var completedDayNumbers: Set<Int>
     @Binding var savedVerseIDs: Set<String>
     @Binding var analytics: PrayerAnalyticsSnapshot
+    
+    @State private var showPsalmsOverview = false
+    
+    private func isPsalmsCollection(_ plan: PrayerPlan) -> Bool {
+        plan.id.starts(with: "psalms-")
+    }
 
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -18,6 +24,14 @@ struct PlansView: View {
             .padding(.bottom, AppSpacing.xxLarge)
         }
         .toolbarBackground(.hidden, for: .navigationBar)
+        .navigationDestination(isPresented: $showPsalmsOverview) {
+            PsalmsOverviewView(
+                activePlanID: $activePlanID,
+                completedDayNumbers: $completedDayNumbers,
+                savedVerseIDs: $savedVerseIDs,
+                analytics: $analytics
+            )
+        }
     }
 
     private var featuredSection: some View {
@@ -27,22 +41,32 @@ struct PlansView: View {
                 .foregroundStyle(AppColors.textPrimary)
 
             ForEach(viewModel.featuredPlans) { plan in
-                NavigationLink {
-                    PlanDetailView(
-                        plan: plan,
-                        isActive: activePlanID == plan.id,
-                        completedDayNumbers: $completedDayNumbers,
-                        savedVerseIDs: $savedVerseIDs,
-                        analytics: $analytics,
-                        onStartJourney: {
-                            activePlanID = plan.id
-                            viewModel.setActivePlan(id: plan.id)
-                        }
-                    )
-                } label: {
-                    planCard(for: plan, isFeatured: true)
+                if isPsalmsCollection(plan) {
+                    // Show special Psalms overview for any Psalms collection
+                    Button {
+                        showPsalmsOverview = true
+                    } label: {
+                        planCard(for: plan, isFeatured: true, showAsOverview: true)
+                    }
+                    .buttonStyle(.plain)
+                } else {
+                    NavigationLink {
+                        PlanDetailView(
+                            plan: plan,
+                            isActive: activePlanID == plan.id,
+                            completedDayNumbers: $completedDayNumbers,
+                            savedVerseIDs: $savedVerseIDs,
+                            analytics: $analytics,
+                            onStartJourney: {
+                                activePlanID = plan.id
+                                viewModel.setActivePlan(id: plan.id)
+                            }
+                        )
+                    } label: {
+                        planCard(for: plan, isFeatured: true, showAsOverview: false)
+                    }
+                    .buttonStyle(.plain)
                 }
-                .buttonStyle(.plain)
             }
         }
     }
@@ -54,29 +78,44 @@ struct PlansView: View {
                 .foregroundStyle(AppColors.textPrimary)
 
             ForEach(viewModel.allPlans) { plan in
-                NavigationLink {
-                    PlanDetailView(
-                        plan: plan,
-                        isActive: activePlanID == plan.id,
-                        completedDayNumbers: $completedDayNumbers,
-                        savedVerseIDs: $savedVerseIDs,
-                        analytics: $analytics,
-                        onStartJourney: {
-                            activePlanID = plan.id
-                            viewModel.setActivePlan(id: plan.id)
-                        }
-                    )
-                } label: {
-                    planCard(for: plan, isFeatured: false)
+                if isPsalmsCollection(plan) {
+                    // Show special Psalms overview for any Psalms collection
+                    Button {
+                        showPsalmsOverview = true
+                    } label: {
+                        planCard(for: plan, isFeatured: false, showAsOverview: true)
+                    }
+                    .buttonStyle(.plain)
+                } else {
+                    NavigationLink {
+                        PlanDetailView(
+                            plan: plan,
+                            isActive: activePlanID == plan.id,
+                            completedDayNumbers: $completedDayNumbers,
+                            savedVerseIDs: $savedVerseIDs,
+                            analytics: $analytics,
+                            onStartJourney: {
+                                activePlanID = plan.id
+                                viewModel.setActivePlan(id: plan.id)
+                            }
+                        )
+                    } label: {
+                        planCard(for: plan, isFeatured: false, showAsOverview: false)
+                    }
+                    .buttonStyle(.plain)
                 }
-                .buttonStyle(.plain)
             }
         }
     }
 
-    private func planCard(for plan: PrayerPlan, isFeatured: Bool) -> some View {
+    private func planCard(for plan: PrayerPlan, isFeatured: Bool, showAsOverview: Bool = false) -> some View {
         let accent = plan.category.brandAccent
         let gradient = plan.category.brandGradient
+        
+        // For Psalms overview, show special title
+        let displayTitle = showAsOverview ? "Psalms Journey" : plan.title
+        let displaySubtitle = showAsOverview ? "Explore 10 collections of worship and prayer" : plan.subtitle
+        let displayDays = showAsOverview ? "150 Psalms" : "\(plan.durationDays) Days"
 
         return GlassCard(padding: isFeatured ? AppSpacing.heroPadding : AppSpacing.large) {
             HStack(alignment: .center, spacing: AppSpacing.medium) {
@@ -92,11 +131,11 @@ struct PlansView: View {
 
                 VStack(alignment: .leading, spacing: 7) {
                     HStack(alignment: .firstTextBaseline) {
-                        Text(plan.title)
+                        Text(displayTitle)
                             .font(isFeatured ? AppTypography.title2() : AppTypography.headline())
                             .foregroundStyle(AppColors.textPrimary)
 
-                        if activePlanID == plan.id {
+                        if !showAsOverview && activePlanID == plan.id {
                             Text("Active")
                                 .font(AppTypography.caption())
                                 .foregroundStyle(accent)
@@ -110,14 +149,18 @@ struct PlansView: View {
                         }
                     }
 
-                    Text(plan.subtitle)
+                    Text(displaySubtitle)
                         .font(AppTypography.footnote())
                         .foregroundStyle(AppColors.textSecondary)
                         .lineLimit(2)
 
                     HStack(spacing: AppSpacing.small) {
-                        Label("\(plan.durationDays) Days", systemImage: "calendar")
-                        Label(plan.category.displayTitle, systemImage: plan.category.brandIcon)
+                        Label(displayDays, systemImage: "calendar")
+                        if !showAsOverview {
+                            Label(plan.category.displayTitle, systemImage: plan.category.brandIcon)
+                        } else {
+                            Label("10 Collections", systemImage: "square.grid.2x2")
+                        }
                     }
                     .font(AppTypography.caption())
                     .foregroundStyle(AppColors.textTertiary)
