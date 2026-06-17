@@ -4813,11 +4813,1133 @@ enum ProverbsPrayerData {
                 )
             ]
         ),
-        PrayerDay(dayNumber: 26, title: "Seek Steady Character", chapterReference: "Proverbs 26", summary: "Ask God to form maturity and consistency in you.", verses: []),
-        PrayerDay(dayNumber: 27, title: "Live Attentively", chapterReference: "Proverbs 27", summary: "Pray for awareness, faithful friendship, and daily wisdom.", verses: []),
-        PrayerDay(dayNumber: 28, title: "Walk Uprightly", chapterReference: "Proverbs 28", summary: "Invite bold integrity and wholehearted repentance.", verses: []),
-        PrayerDay(dayNumber: 29, title: "Welcome Correction", chapterReference: "Proverbs 29", summary: "Pray for humility that responds quickly to truth.", verses: []),
-        PrayerDay(dayNumber: 30, title: "Seek the Lord's Wisdom", chapterReference: "Proverbs 30", summary: "Pray for humility and a heart that seeks God's truth.", verses: []),
-        PrayerDay(dayNumber: 31, title: "Live with Noble Strength", chapterReference: "Proverbs 31", summary: "Close the journey by praying for wisdom, strength, and reverence.", verses: [])
+        PrayerDay(
+            dayNumber: 26,
+            title: "Seek Steady Character",
+            chapterReference: "Proverbs 26",
+            summary: "Ask God to form maturity and consistency in you.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-26-1",
+                    reference: "Proverbs 26:1",
+                    text: "Like snow in summer and like rain in harvest,\n  So honor is not fitting for a fool.",
+                    prayer: "Dear Jesus, help me understand the difference between honor and foolishness, and teach me to value wisdom rightly."
+                ),
+                PrayerVerse(
+                    id: "prov-26-2",
+                    reference: "Proverbs 26:2",
+                    text: "Like a sparrow in its flitting, like a swallow in its flying,\n  So a curse without cause does not alight.",
+                    prayer: "Father, protect me from false accusations, careless words, and curses that have no rightful place in my life."
+                ),
+                PrayerVerse(
+                    id: "prov-26-3",
+                    reference: "Proverbs 26:3",
+                    text: "A whip is for the horse, a bridle for the donkey,\n  And a rod for the back of fools.",
+                    prayer: "Lord, teach me discipline and correction that leads to wisdom, humility, and growth."
+                ),
+                PrayerVerse(
+                    id: "prov-26-4",
+                    reference: "Proverbs 26:4",
+                    text: "Do not answer a fool according to his folly,\n  Or you will also be like him.",
+                    prayer: "Jesus, give me discernment to know when not to answer foolishness on its own terms."
+                ),
+                PrayerVerse(
+                    id: "prov-26-5",
+                    reference: "Proverbs 26:5",
+                    text: "Answer a fool as his folly deserves,\n  That he not be wise in his own eyes.",
+                    prayer: "Father, give me wisdom to respond rightly when foolishness must be corrected."
+                ),
+                PrayerVerse(
+                    id: "prov-26-6",
+                    reference: "Proverbs 26:6",
+                    text: "He cuts off his own feet and drinks violence\n  Who sends a message by the hand of a fool.",
+                    prayer: "Lord, help me entrust important matters to faithful and wise people."
+                ),
+                PrayerVerse(
+                    id: "prov-26-7",
+                    reference: "Proverbs 26:7",
+                    text: "Like the legs which are useless to the lame,\n  So is a proverb in the mouth of fools.",
+                    prayer: "Jesus, let wisdom be alive in me, not empty words without understanding."
+                ),
+                PrayerVerse(
+                    id: "prov-26-8",
+                    reference: "Proverbs 26:8",
+                    text: "Like one who binds a stone in a sling,\n  So is he who gives honor to a fool.",
+                    prayer: "Father, teach me not to honor foolishness or reward what leads away from truth."
+                ),
+                PrayerVerse(
+                    id: "prov-26-9",
+                    reference: "Proverbs 26:9",
+                    text: "Like a thorn which falls into the hand of a drunkard,\n  So is a proverb in the mouth of fools.",
+                    prayer: "Lord, help me handle wisdom with reverence, humility, and understanding."
+                ),
+                PrayerVerse(
+                    id: "prov-26-10",
+                    reference: "Proverbs 26:10",
+                    text: "Like an archer who wounds everyone,\n  So is he who hires a fool or who hires those who pass by.",
+                    prayer: "Jesus, give me discernment in who I partner with, hire, follow, or trust."
+                ),
+                PrayerVerse(
+                    id: "prov-26-11",
+                    reference: "Proverbs 26:11",
+                    text: "Like a dog that returns to its vomit\n  Is a fool who repeats his folly.",
+                    prayer: "Father, keep me from returning to old sins, habits, and foolish patterns."
+                ),
+                PrayerVerse(
+                    id: "prov-26-12",
+                    reference: "Proverbs 26:12",
+                    text: "Do you see a man wise in his own eyes?\n  There is more hope for a fool than for him.",
+                    prayer: "Lord, protect me from being wise in my own eyes. Keep me humble and teachable."
+                ),
+                PrayerVerse(
+                    id: "prov-26-13",
+                    reference: "Proverbs 26:13",
+                    text: "The sluggard says, \"There is a lion in the road!\n  A lion is in the open square!\"",
+                    prayer: "Jesus, remove excuses, fear, and laziness that keep me from faithful action."
+                ),
+                PrayerVerse(
+                    id: "prov-26-14",
+                    reference: "Proverbs 26:14",
+                    text: "As the door turns on its hinges,\n  So does the sluggard on his bed.",
+                    prayer: "Father, awaken me from spiritual laziness and help me move with purpose."
+                ),
+                PrayerVerse(
+                    id: "prov-26-15",
+                    reference: "Proverbs 26:15",
+                    text: "The sluggard buries his hand in the dish;\n  He is weary of bringing it to his mouth again.",
+                    prayer: "Lord, teach me diligence and follow-through instead of delay and neglect."
+                ),
+                PrayerVerse(
+                    id: "prov-26-16",
+                    reference: "Proverbs 26:16",
+                    text: "The sluggard is wiser in his own eyes\n  Than seven men who can give a discreet answer.",
+                    prayer: "Jesus, keep me from prideful self-deception and help me listen to wise counsel."
+                ),
+                PrayerVerse(
+                    id: "prov-26-17",
+                    reference: "Proverbs 26:17",
+                    text: "Like one who takes a dog by the ears\n  Is he who passes by and meddles with strife not belonging to him.",
+                    prayer: "Father, give me wisdom not to involve myself in conflicts that are not mine to carry."
+                ),
+                PrayerVerse(
+                    id: "prov-26-18",
+                    reference: "Proverbs 26:18",
+                    text: "Like a madman who throws\n  Firebrands, arrows and death,",
+                    prayer: "Lord, protect me from careless behavior that harms others."
+                ),
+                PrayerVerse(
+                    id: "prov-26-19",
+                    reference: "Proverbs 26:19",
+                    text: "So is the man who deceives his neighbor,\n  And says, \"Was I not joking?\"",
+                    prayer: "Jesus, keep me from joking, deceiving, or speaking in ways that damage trust."
+                ),
+                PrayerVerse(
+                    id: "prov-26-20",
+                    reference: "Proverbs 26:20",
+                    text: "For lack of wood the fire goes out,\n  And where there is no whisperer, contention quiets down.",
+                    prayer: "Father, help me stop gossip, division, and strife before they spread."
+                ),
+                PrayerVerse(
+                    id: "prov-26-21",
+                    reference: "Proverbs 26:21",
+                    text: "Like charcoal to hot embers and wood to fire,\n  So is a contentious man to kindle strife.",
+                    prayer: "Lord, make me a peacemaker instead of someone who fuels conflict."
+                ),
+                PrayerVerse(
+                    id: "prov-26-22",
+                    reference: "Proverbs 26:22",
+                    text: "The words of a whisperer are like dainty morsels,\n  And they go down into the innermost parts of the body.",
+                    prayer: "Jesus, guard my heart from receiving gossip as something enjoyable or desirable."
+                ),
+                PrayerVerse(
+                    id: "prov-26-23",
+                    reference: "Proverbs 26:23",
+                    text: "Like an earthen vessel overlaid with silver dross\n  Are burning lips and a wicked heart.",
+                    prayer: "Father, let my words and heart match in sincerity, truth, and purity."
+                ),
+                PrayerVerse(
+                    id: "prov-26-24",
+                    reference: "Proverbs 26:24",
+                    text: "He who hates disguises it with his lips,\n  But he lays up deceit in his heart.",
+                    prayer: "Lord, expose hidden hatred and cleanse my heart from hypocrisy."
+                ),
+                PrayerVerse(
+                    id: "prov-26-25",
+                    reference: "Proverbs 26:25",
+                    text: "When he speaks graciously, do not believe him,\n  For there are seven abominations in his heart.",
+                    prayer: "Jesus, give me discernment when words sound gracious but motives are not pure."
+                ),
+                PrayerVerse(
+                    id: "prov-26-26",
+                    reference: "Proverbs 26:26",
+                    text: "Though his hatred covers itself with guile,\n  His wickedness will be revealed before the assembly.",
+                    prayer: "Father, reveal what is hidden and bring truth, justice, and repentance."
+                ),
+                PrayerVerse(
+                    id: "prov-26-27",
+                    reference: "Proverbs 26:27",
+                    text: "He who digs a pit will fall into it,\n  And he who rolls a stone, it will come back on him.",
+                    prayer: "Lord, keep me from setting traps for others and protect me from schemes of evil."
+                ),
+                PrayerVerse(
+                    id: "prov-26-28",
+                    reference: "Proverbs 26:28",
+                    text: "A lying tongue hates those it crushes,\n  And a flattering mouth works ruin.",
+                    prayer: "Jesus, remove lying and flattery from my life. Let my words be honest, loving, and true."
+                ),
+                PrayerVerse(
+                    id: "prov-26-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
+        PrayerDay(
+            dayNumber: 27,
+            title: "Live Attentively",
+            chapterReference: "Proverbs 27",
+            summary: "Pray for awareness, faithful friendship, and daily wisdom.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-27-1",
+                    reference: "Proverbs 27:1",
+                    text: "Do not boast about tomorrow,\n  For you do not know what a day may bring forth.",
+                    prayer: "Dear Jesus, help me live humbly and not boast about tomorrow, knowing that every day belongs to You."
+                ),
+                PrayerVerse(
+                    id: "prov-27-2",
+                    reference: "Proverbs 27:2",
+                    text: "Let another praise you, and not your own mouth;\n  A stranger, and not your own lips.",
+                    prayer: "Father, teach me humility and keep me from seeking praise for myself."
+                ),
+                PrayerVerse(
+                    id: "prov-27-3",
+                    reference: "Proverbs 27:3",
+                    text: "A stone is heavy and the sand weighty,\n  But the provocation of a fool is heavier than both of them.",
+                    prayer: "Lord, protect me from foolishness that becomes heavy, destructive, and burdensome."
+                ),
+                PrayerVerse(
+                    id: "prov-27-4",
+                    reference: "Proverbs 27:4",
+                    text: "Wrath is fierce and anger is a flood,\n  But who can stand before jealousy?",
+                    prayer: "Jesus, guard my heart from anger, wrath, jealousy, and envy."
+                ),
+                PrayerVerse(
+                    id: "prov-27-5",
+                    reference: "Proverbs 27:5",
+                    text: "Better is open rebuke\n  Than love that is concealed.",
+                    prayer: "Father, help me receive honest correction as love instead of rejecting it in pride."
+                ),
+                PrayerVerse(
+                    id: "prov-27-6",
+                    reference: "Proverbs 27:6",
+                    text: "Faithful are the wounds of a friend,\n  But deceitful are the kisses of an enemy.",
+                    prayer: "Lord, give me faithful friends who love me enough to speak truth, and make me that kind of friend to others."
+                ),
+                PrayerVerse(
+                    id: "prov-27-7",
+                    reference: "Proverbs 27:7",
+                    text: "A sated man loathes honey,\n  But to a famished man any bitter thing is sweet.",
+                    prayer: "Jesus, teach me gratitude and contentment so I do not overlook the blessings You provide."
+                ),
+                PrayerVerse(
+                    id: "prov-27-8",
+                    reference: "Proverbs 27:8",
+                    text: "Like a bird that wanders from her nest,\n  So is a man who wanders from his home.",
+                    prayer: "Father, keep me rooted in the place and purpose You have given me."
+                ),
+                PrayerVerse(
+                    id: "prov-27-9",
+                    reference: "Proverbs 27:9",
+                    text: "Oil and perfume make the heart glad,\n  So a man's counsel is sweet to his friend.",
+                    prayer: "Lord, thank You for the sweetness of wise counsel and faithful friendship."
+                ),
+                PrayerVerse(
+                    id: "prov-27-10",
+                    reference: "Proverbs 27:10",
+                    text: "Do not forsake your own friend or your father's friend,\n  And do not go to your brother's house in the day of your calamity;\n  Better is a neighbor who is near than a brother far away.",
+                    prayer: "Jesus, help me value loyal relationships and be present for those You place in my life."
+                ),
+                PrayerVerse(
+                    id: "prov-27-11",
+                    reference: "Proverbs 27:11",
+                    text: "Be wise, my son, and make my heart glad,\n  That I may reply to him who reproaches me.",
+                    prayer: "Father, make my heart wise so my life brings joy and honor to You."
+                ),
+                PrayerVerse(
+                    id: "prov-27-12",
+                    reference: "Proverbs 27:12",
+                    text: "A prudent man sees evil and hides himself,\n  The naive proceed and pay the penalty.",
+                    prayer: "Lord, give me discernment to see danger and avoid it with wisdom."
+                ),
+                PrayerVerse(
+                    id: "prov-27-13",
+                    reference: "Proverbs 27:13",
+                    text: "Take his garment when he becomes surety for a stranger;\n  And for an adulterous woman hold him in pledge.",
+                    prayer: "Jesus, give me wisdom in financial commitments and protect me from careless promises."
+                ),
+                PrayerVerse(
+                    id: "prov-27-14",
+                    reference: "Proverbs 27:14",
+                    text: "He who blesses his friend with a loud voice early in the morning,\n  It will be reckoned a curse to him.",
+                    prayer: "Father, help me speak with timing, sensitivity, and wisdom."
+                ),
+                PrayerVerse(
+                    id: "prov-27-15",
+                    reference: "Proverbs 27:15",
+                    text: "A constant dripping on a day of steady rain\n  And a contentious woman are alike;",
+                    prayer: "Lord, help me bring peace into my home and not constant conflict."
+                ),
+                PrayerVerse(
+                    id: "prov-27-16",
+                    reference: "Proverbs 27:16",
+                    text: "He who would restrain her restrains the wind,\n  And grasps oil with his right hand.",
+                    prayer: "Jesus, teach me patience, gentleness, and wisdom in difficult relationships."
+                ),
+                PrayerVerse(
+                    id: "prov-27-17",
+                    reference: "Proverbs 27:17",
+                    text: "Iron sharpens iron,\n  So one man sharpens another.",
+                    prayer: "Father, sharpen me through godly friendships, correction, and encouragement."
+                ),
+                PrayerVerse(
+                    id: "prov-27-18",
+                    reference: "Proverbs 27:18",
+                    text: "He who tends the fig tree will eat its fruit,\n  And he who cares for his master will be honored.",
+                    prayer: "Lord, help me faithfully care for what You have entrusted to me."
+                ),
+                PrayerVerse(
+                    id: "prov-27-19",
+                    reference: "Proverbs 27:19",
+                    text: "As in water face reflects face,\n  So the heart of man reflects man.",
+                    prayer: "Jesus, search my heart and reveal what truly lives within me."
+                ),
+                PrayerVerse(
+                    id: "prov-27-20",
+                    reference: "Proverbs 27:20",
+                    text: "Sheol and Abaddon are never satisfied,\n  Nor are the eyes of man ever satisfied.",
+                    prayer: "Father, keep my desires from becoming endless and uncontrolled."
+                ),
+                PrayerVerse(
+                    id: "prov-27-21",
+                    reference: "Proverbs 27:21",
+                    text: "The crucible is for silver and the furnace for gold,\n  And each is tested by the praise accorded him.",
+                    prayer: "Lord, refine my character through praise, testing, and responsibility."
+                ),
+                PrayerVerse(
+                    id: "prov-27-22",
+                    reference: "Proverbs 27:22",
+                    text: "Though you pound a fool in a mortar with a pestle along with crushed grain,\n  Yet his foolishness will not depart from him.",
+                    prayer: "Jesus, remove deep-rooted foolishness from my heart through Your wisdom and correction."
+                ),
+                PrayerVerse(
+                    id: "prov-27-23",
+                    reference: "Proverbs 27:23",
+                    text: "Know well the condition of your flocks,\n  And pay attention to your herds;",
+                    prayer: "Father, teach me to know the condition of what You have entrusted to my care."
+                ),
+                PrayerVerse(
+                    id: "prov-27-24",
+                    reference: "Proverbs 27:24",
+                    text: "For riches are not forever,\n  Nor does a crown endure to all generations.",
+                    prayer: "Lord, remind me that riches and status do not last forever."
+                ),
+                PrayerVerse(
+                    id: "prov-27-25",
+                    reference: "Proverbs 27:25",
+                    text: "When the grass disappears, the new growth is seen,\n  And the herbs of the mountains are gathered in,",
+                    prayer: "Jesus, help me recognize seasons of provision and steward them wisely."
+                ),
+                PrayerVerse(
+                    id: "prov-27-26",
+                    reference: "Proverbs 27:26",
+                    text: "The lambs will be for your clothing,\n  And the goats will bring the price of a field,",
+                    prayer: "Father, thank You for daily provision and practical blessings."
+                ),
+                PrayerVerse(
+                    id: "prov-27-27",
+                    reference: "Proverbs 27:27",
+                    text: "And there will be goats' milk enough for your food,\n  For the food of your household,\n  And sustenance for your maidens.",
+                    prayer: "Lord, provide what is needed for me, my household, and those under my care."
+                ),
+                PrayerVerse(
+                    id: "prov-27-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
+        PrayerDay(
+            dayNumber: 28,
+            title: "Walk Uprightly",
+            chapterReference: "Proverbs 28",
+            summary: "Invite bold integrity and wholehearted repentance.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-28-1",
+                    reference: "Proverbs 28:1",
+                    text: "The wicked flee when no one is pursuing,\n  But the righteous are bold as a lion.",
+                    prayer: "Dear Jesus, make me bold in righteousness and free me from fear, guilt, and compromise."
+                ),
+                PrayerVerse(
+                    id: "prov-28-2",
+                    reference: "Proverbs 28:2",
+                    text: "By the transgression of a land many are its princes,\n  But by a man of understanding and knowledge, so it endures.",
+                    prayer: "Father, bless leaders with wisdom, understanding, and stability."
+                ),
+                PrayerVerse(
+                    id: "prov-28-3",
+                    reference: "Proverbs 28:3",
+                    text: "A poor man who oppresses the lowly\n  Is like a driving rain which leaves no food.",
+                    prayer: "Lord, give me compassion for the poor and keep me from oppressing anyone in need."
+                ),
+                PrayerVerse(
+                    id: "prov-28-4",
+                    reference: "Proverbs 28:4",
+                    text: "Those who forsake the law praise the wicked,\n  But those who keep the law strive with them.",
+                    prayer: "Jesus, help me uphold Your law and stand against wickedness with courage."
+                ),
+                PrayerVerse(
+                    id: "prov-28-5",
+                    reference: "Proverbs 28:5",
+                    text: "Evil men do not understand justice,\n  But those who seek the Lord understand all things.",
+                    prayer: "Father, give me understanding and help me seek You in every decision."
+                ),
+                PrayerVerse(
+                    id: "prov-28-6",
+                    reference: "Proverbs 28:6",
+                    text: "Better is the poor who walks in his integrity\n  Than he who is crooked though he be rich.",
+                    prayer: "Lord, help me walk in integrity even when it costs me."
+                ),
+                PrayerVerse(
+                    id: "prov-28-7",
+                    reference: "Proverbs 28:7",
+                    text: "He who keeps the law is a discerning son,\n  But he who is a companion of gluttons humiliates his father.",
+                    prayer: "Jesus, make me wise, obedient, and discerning in my relationships."
+                ),
+                PrayerVerse(
+                    id: "prov-28-8",
+                    reference: "Proverbs 28:8",
+                    text: "He who increases his wealth by interest and usury\n  Gathers it for him who is gracious to the poor.",
+                    prayer: "Father, keep me from unjust gain and teach me generosity toward the poor."
+                ),
+                PrayerVerse(
+                    id: "prov-28-9",
+                    reference: "Proverbs 28:9",
+                    text: "He who turns away his ear from listening to the law,\n  Even his prayer is an abomination.",
+                    prayer: "Lord, help me listen to Your instruction so my prayers may be pleasing to You."
+                ),
+                PrayerVerse(
+                    id: "prov-28-10",
+                    reference: "Proverbs 28:10",
+                    text: "He who leads the upright astray in an evil way\n  Will himself fall into his own pit,\n  But the blameless will inherit good.",
+                    prayer: "Jesus, keep me from leading others astray and help me walk blamelessly."
+                ),
+                PrayerVerse(
+                    id: "prov-28-11",
+                    reference: "Proverbs 28:11",
+                    text: "The rich man is wise in his own eyes,\n  But the poor who has understanding sees through him.",
+                    prayer: "Father, protect me from pride in wealth or success. Give me true understanding."
+                ),
+                PrayerVerse(
+                    id: "prov-28-12",
+                    reference: "Proverbs 28:12",
+                    text: "When the righteous triumph, there is great glory,\n  But when the wicked rise, men hide themselves.",
+                    prayer: "Lord, let righteousness bring joy, light, and blessing to the people around me."
+                ),
+                PrayerVerse(
+                    id: "prov-28-13",
+                    reference: "Proverbs 28:13",
+                    text: "He who conceals his transgressions will not prosper,\n  But he who confesses and forsakes them will find compassion.",
+                    prayer: "Jesus, help me confess and forsake sin so I may receive Your mercy."
+                ),
+                PrayerVerse(
+                    id: "prov-28-14",
+                    reference: "Proverbs 28:14",
+                    text: "How blessed is the man who fears always,\n  But he who hardens his heart will fall into calamity.",
+                    prayer: "Father, keep my heart tender, reverent, and humble before You."
+                ),
+                PrayerVerse(
+                    id: "prov-28-15",
+                    reference: "Proverbs 28:15",
+                    text: "Like a roaring lion and a rushing bear\n  Is a wicked ruler over a poor people.",
+                    prayer: "Lord, protect the vulnerable from cruel, oppressive, or ungodly leadership."
+                ),
+                PrayerVerse(
+                    id: "prov-28-16",
+                    reference: "Proverbs 28:16",
+                    text: "A leader who is a great oppressor lacks understanding,\n  But he who hates unjust gain will prolong his days.",
+                    prayer: "Jesus, make me a leader with understanding, justice, and hatred for dishonest gain."
+                ),
+                PrayerVerse(
+                    id: "prov-28-17",
+                    reference: "Proverbs 28:17",
+                    text: "A man who is laden with the guilt of human blood\n  Will be a fugitive until death; let no one support him.",
+                    prayer: "Father, protect me from violence, guilt, and destructive choices."
+                ),
+                PrayerVerse(
+                    id: "prov-28-18",
+                    reference: "Proverbs 28:18",
+                    text: "He who walks blamelessly will be delivered,\n  But he who is crooked will fall all at once.",
+                    prayer: "Lord, preserve me as I walk blamelessly and keep me from crooked paths."
+                ),
+                PrayerVerse(
+                    id: "prov-28-19",
+                    reference: "Proverbs 28:19",
+                    text: "He who tills his land will have plenty of food,\n  But he who follows empty pursuits will have poverty in plenty.",
+                    prayer: "Jesus, teach me faithful work and keep me from chasing empty things."
+                ),
+                PrayerVerse(
+                    id: "prov-28-20",
+                    reference: "Proverbs 28:20",
+                    text: "A faithful man will abound with blessings,\n  But he who makes haste to be rich will not go unpunished.",
+                    prayer: "Father, make me faithful and patient instead of greedy or hurried for riches."
+                ),
+                PrayerVerse(
+                    id: "prov-28-21",
+                    reference: "Proverbs 28:21",
+                    text: "To show partiality is not good,\n  Because for a piece of bread a man will transgress.",
+                    prayer: "Lord, help me never show partiality or compromise truth for personal gain."
+                ),
+                PrayerVerse(
+                    id: "prov-28-22",
+                    reference: "Proverbs 28:22",
+                    text: "A man with an evil eye hastens after wealth\n  And does not know that want will come upon him.",
+                    prayer: "Jesus, remove greed from my heart and teach me contentment and trust."
+                ),
+                PrayerVerse(
+                    id: "prov-28-23",
+                    reference: "Proverbs 28:23",
+                    text: "He who rebukes a man will afterward find more favor\n  Than he who flatters with the tongue.",
+                    prayer: "Father, help me value honest correction more than flattering words."
+                ),
+                PrayerVerse(
+                    id: "prov-28-24",
+                    reference: "Proverbs 28:24",
+                    text: "He who robs his father or his mother\n  And says, \"It is not a transgression,\"\n  Is the companion of a man who destroys.",
+                    prayer: "Lord, help me honor my parents and never justify selfish or harmful actions."
+                ),
+                PrayerVerse(
+                    id: "prov-28-25",
+                    reference: "Proverbs 28:25",
+                    text: "An arrogant man stirs up strife,\n  But he who trusts in the Lord will prosper.",
+                    prayer: "Jesus, remove arrogance and greed from me, and help me trust You fully."
+                ),
+                PrayerVerse(
+                    id: "prov-28-26",
+                    reference: "Proverbs 28:26",
+                    text: "He who trusts in his own heart is a fool,\n  But he who walks wisely will be delivered.",
+                    prayer: "Father, keep me from trusting only in myself. Teach me to walk wisely."
+                ),
+                PrayerVerse(
+                    id: "prov-28-27",
+                    reference: "Proverbs 28:27",
+                    text: "He who gives to the poor will never want,\n  But he who shuts his eyes will have many curses.",
+                    prayer: "Lord, make me generous toward the poor and attentive to those in need."
+                ),
+                PrayerVerse(
+                    id: "prov-28-28",
+                    reference: "Proverbs 28:28",
+                    text: "When the wicked rise, men hide themselves;\n  But when they perish, the righteous increase.",
+                    prayer: "Jesus, let righteousness rise and flourish, and protect people from wicked influence."
+                ),
+                PrayerVerse(
+                    id: "prov-28-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
+        PrayerDay(
+            dayNumber: 29,
+            title: "Welcome Correction",
+            chapterReference: "Proverbs 29",
+            summary: "Pray for humility that responds quickly to truth.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-29-1",
+                    reference: "Proverbs 29:1",
+                    text: "A man who hardens his neck after much reproof\n  Will suddenly be broken beyond remedy.",
+                    prayer: "Dear Jesus, help me receive correction with humility and turn quickly from stubbornness before it leads to harm."
+                ),
+                PrayerVerse(
+                    id: "prov-29-2",
+                    reference: "Proverbs 29:2",
+                    text: "When the righteous increase, the people rejoice,\n  But when a wicked man rules, people groan.",
+                    prayer: "Father, let righteousness increase in my life, my home, and my community so joy may grow around me."
+                ),
+                PrayerVerse(
+                    id: "prov-29-3",
+                    reference: "Proverbs 29:3",
+                    text: "A man who loves wisdom makes his father glad,\n  But he who keeps company with harlots wastes his wealth.",
+                    prayer: "Lord, help me love wisdom and make choices that bring honor instead of grief."
+                ),
+                PrayerVerse(
+                    id: "prov-29-4",
+                    reference: "Proverbs 29:4",
+                    text: "The king gives stability to the land by justice,\n  But a man who takes bribes overthrows it.",
+                    prayer: "Jesus, establish justice, integrity, and righteousness in every place of leadership and authority."
+                ),
+                PrayerVerse(
+                    id: "prov-29-5",
+                    reference: "Proverbs 29:5",
+                    text: "A man who flatters his neighbor\n  Is spreading a net for his steps.",
+                    prayer: "Father, protect me from flattery and from using words to manipulate others."
+                ),
+                PrayerVerse(
+                    id: "prov-29-6",
+                    reference: "Proverbs 29:6",
+                    text: "By transgression an evil man is ensnared,\n  But the righteous sings and rejoices.",
+                    prayer: "Lord, keep me from the traps of sin and help me rejoice in righteousness."
+                ),
+                PrayerVerse(
+                    id: "prov-29-7",
+                    reference: "Proverbs 29:7",
+                    text: "The righteous is concerned for the rights of the poor,\n  The wicked does not understand such concern.",
+                    prayer: "Jesus, give me compassion and concern for the rights and needs of the poor."
+                ),
+                PrayerVerse(
+                    id: "prov-29-8",
+                    reference: "Proverbs 29:8",
+                    text: "Scorners set a city aflame,\n  But wise men turn away anger.",
+                    prayer: "Father, make me a peacemaker and keep me from stirring anger, conflict, or division."
+                ),
+                PrayerVerse(
+                    id: "prov-29-9",
+                    reference: "Proverbs 29:9",
+                    text: "When a wise man has a controversy with a foolish man,\n  The foolish man either rages or laughs, and there is no rest.",
+                    prayer: "Lord, give me wisdom when dealing with foolishness, conflict, and controversy."
+                ),
+                PrayerVerse(
+                    id: "prov-29-10",
+                    reference: "Proverbs 29:10",
+                    text: "Men of bloodshed hate the blameless,\n  But the upright are concerned for his life.",
+                    prayer: "Jesus, protect me from violence and help me honor those who walk uprightly."
+                ),
+                PrayerVerse(
+                    id: "prov-29-11",
+                    reference: "Proverbs 29:11",
+                    text: "A fool always loses his temper,\n  But a wise man holds it back.",
+                    prayer: "Father, teach me self-control so I do not pour out every thought or emotion foolishly."
+                ),
+                PrayerVerse(
+                    id: "prov-29-12",
+                    reference: "Proverbs 29:12",
+                    text: "If a ruler pays attention to falsehood,\n  All his ministers become wicked.",
+                    prayer: "Lord, give leaders discernment to reject lies and surround themselves with truth."
+                ),
+                PrayerVerse(
+                    id: "prov-29-13",
+                    reference: "Proverbs 29:13",
+                    text: "The poor man and the oppressor have this in common:\n  The Lord gives light to the eyes of both.",
+                    prayer: "Jesus, remind me that every person receives life and sight from You."
+                ),
+                PrayerVerse(
+                    id: "prov-29-14",
+                    reference: "Proverbs 29:14",
+                    text: "If a king judges the poor with truth,\n  His throne will be established forever.",
+                    prayer: "Father, bless leaders who judge the poor with truth, justice, and compassion."
+                ),
+                PrayerVerse(
+                    id: "prov-29-15",
+                    reference: "Proverbs 29:15",
+                    text: "The rod and reproof give wisdom,\n  But a child who gets his own way brings shame to his mother.",
+                    prayer: "Lord, teach me discipline, correction, and wisdom that bring growth and maturity."
+                ),
+                PrayerVerse(
+                    id: "prov-29-16",
+                    reference: "Proverbs 29:16",
+                    text: "When the wicked increase, transgression increases;\n  But the righteous will see their fall.",
+                    prayer: "Jesus, let righteousness stand firm even when wickedness appears to increase."
+                ),
+                PrayerVerse(
+                    id: "prov-29-17",
+                    reference: "Proverbs 29:17",
+                    text: "Correct your son, and he will give you comfort;\n  He will also delight your soul.",
+                    prayer: "Father, teach me loving correction that brings peace, wisdom, and rest."
+                ),
+                PrayerVerse(
+                    id: "prov-29-18",
+                    reference: "Proverbs 29:18",
+                    text: "Where there is no vision, the people are unrestrained,\n  But happy is he who keeps the law.",
+                    prayer: "Lord, give me vision, direction, and obedience to Your instruction."
+                ),
+                PrayerVerse(
+                    id: "prov-29-19",
+                    reference: "Proverbs 29:19",
+                    text: "A slave will not be instructed by words alone;\n  For though he understands, there will be no response.",
+                    prayer: "Jesus, help me respond not only with words but with obedience and action."
+                ),
+                PrayerVerse(
+                    id: "prov-29-20",
+                    reference: "Proverbs 29:20",
+                    text: "Do you see a man who is hasty in his words?\n  There is more hope for a fool than for him.",
+                    prayer: "Father, slow my speech and make me thoughtful, patient, and wise before I speak."
+                ),
+                PrayerVerse(
+                    id: "prov-29-21",
+                    reference: "Proverbs 29:21",
+                    text: "He who pampers his slave from childhood\n  Will in the end find him to be a son.",
+                    prayer: "Lord, teach me wisdom in leadership, responsibility, and care for others."
+                ),
+                PrayerVerse(
+                    id: "prov-29-22",
+                    reference: "Proverbs 29:22",
+                    text: "An angry man stirs up strife,\n  And a hot-tempered man abounds in transgression.",
+                    prayer: "Jesus, remove anger and hot temper from my heart before they produce sin and conflict."
+                ),
+                PrayerVerse(
+                    id: "prov-29-23",
+                    reference: "Proverbs 29:23",
+                    text: "A man's pride will bring him low,\n  But a humble spirit will obtain honor.",
+                    prayer: "Father, humble me and lift me up in the way that honors You."
+                ),
+                PrayerVerse(
+                    id: "prov-29-24",
+                    reference: "Proverbs 29:24",
+                    text: "He who is a partner with a thief hates his own life;\n  He hears the oath but tells nothing.",
+                    prayer: "Lord, keep me from partnering with wrongdoing or staying silent when truth is needed."
+                ),
+                PrayerVerse(
+                    id: "prov-29-25",
+                    reference: "Proverbs 29:25",
+                    text: "The fear of man brings a snare,\n  But he who trusts in the Lord will be exalted.",
+                    prayer: "Jesus, free me from the fear of people and teach me to trust safely in You."
+                ),
+                PrayerVerse(
+                    id: "prov-29-26",
+                    reference: "Proverbs 29:26",
+                    text: "Many seek the ruler's favor,\n  But justice for man comes from the Lord.",
+                    prayer: "Father, help me seek justice from You above human approval or favor."
+                ),
+                PrayerVerse(
+                    id: "prov-29-27",
+                    reference: "Proverbs 29:27",
+                    text: "An unjust man is abominable to the righteous,\n  And he who is upright in the way is abominable to the wicked.",
+                    prayer: "Lord, help me walk in righteousness even when the world rejects Your ways."
+                ),
+                PrayerVerse(
+                    id: "prov-29-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
+        PrayerDay(
+            dayNumber: 30,
+            title: "Seek the Lord's Wisdom",
+            chapterReference: "Proverbs 30",
+            summary: "Pray for humility and a heart that seeks God's truth.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-30-1",
+                    reference: "Proverbs 30:1",
+                    text: "The words of Agur the son of Jakeh, the oracle.\n    The man declares to Ithiel, to Ithiel and Ucal:",
+                    prayer: "Dear Jesus, teach me humility when I feel weary, confused, or limited in understanding."
+                ),
+                PrayerVerse(
+                    id: "prov-30-2",
+                    reference: "Proverbs 30:2",
+                    text: "Surely I am more stupid than any man,\n  And I do not have the understanding of a man.",
+                    prayer: "Father, remind me that I need Your wisdom and cannot depend on myself alone."
+                ),
+                PrayerVerse(
+                    id: "prov-30-3",
+                    reference: "Proverbs 30:3",
+                    text: "Neither have I learned wisdom,\n  Nor do I have the knowledge of the Holy One.",
+                    prayer: "Lord, reveal Your knowledge to me and help me grow in understanding of who You are."
+                ),
+                PrayerVerse(
+                    id: "prov-30-4",
+                    reference: "Proverbs 30:4",
+                    text: "Who has ascended into heaven and descended?\n  Who has gathered the wind in His fists?\n  Who has wrapped the waters in His garment?\n  Who has established all the ends of the earth?\n  What is His name or His son's name?\n  Surely you know!",
+                    prayer: "Jesus, You alone are holy, eternal, and sovereign over creation. Help me worship You with awe."
+                ),
+                PrayerVerse(
+                    id: "prov-30-5",
+                    reference: "Proverbs 30:5",
+                    text: "Every word of God is tested;\n  He is a shield to those who take refuge in Him.",
+                    prayer: "Father, thank You that every word of Yours is tested and true. Be my shield as I take refuge in You."
+                ),
+                PrayerVerse(
+                    id: "prov-30-6",
+                    reference: "Proverbs 30:6",
+                    text: "Do not add to His words\n  Or He will reprove you, and you will be proved a liar.",
+                    prayer: "Lord, keep me from adding to Your words or twisting Your truth. Help me honor Scripture faithfully."
+                ),
+                PrayerVerse(
+                    id: "prov-30-7",
+                    reference: "Proverbs 30:7",
+                    text: "Two things I asked of You,\n  Do not refuse me before I die:",
+                    prayer: "Jesus, shape my desires and give me what is truly good for my soul."
+                ),
+                PrayerVerse(
+                    id: "prov-30-8",
+                    reference: "Proverbs 30:8",
+                    text: "Keep deception and lies far from me,\n  Give me neither poverty nor riches;\n  Feed me with the food that is my portion,",
+                    prayer: "Father, remove falsehood and lies from me. Give me neither poverty nor riches, but what I need according to Your will."
+                ),
+                PrayerVerse(
+                    id: "prov-30-9",
+                    reference: "Proverbs 30:9",
+                    text: "That I not be full and deny You and say, \"Who is the Lord?\"\n  Or that I not be in want and steal,\n  And profane the name of my God.",
+                    prayer: "Lord, keep me from pride in abundance or dishonor in lack. Help me remain faithful in every season."
+                ),
+                PrayerVerse(
+                    id: "prov-30-10",
+                    reference: "Proverbs 30:10",
+                    text: "Do not slander a slave to his master,\n  Or he will curse you and you will be found guilty.",
+                    prayer: "Jesus, guard my tongue from accusation, slander, and careless words against others."
+                ),
+                PrayerVerse(
+                    id: "prov-30-11",
+                    reference: "Proverbs 30:11",
+                    text: "There is a kind of man who curses his father\n  And does not bless his mother.",
+                    prayer: "Father, help me honor my parents and reject disrespect, bitterness, and rebellion."
+                ),
+                PrayerVerse(
+                    id: "prov-30-12",
+                    reference: "Proverbs 30:12",
+                    text: "There is a kind who is pure in his own eyes,\n  Yet is not washed from his filthiness.",
+                    prayer: "Lord, cleanse me from self-righteousness and reveal where I still need repentance."
+                ),
+                PrayerVerse(
+                    id: "prov-30-13",
+                    reference: "Proverbs 30:13",
+                    text: "There is a kind—oh how lofty are his eyes!\n  And his eyelids are raised in arrogance.",
+                    prayer: "Jesus, remove pride and arrogance from my eyes and heart."
+                ),
+                PrayerVerse(
+                    id: "prov-30-14",
+                    reference: "Proverbs 30:14",
+                    text: "There is a kind of man whose teeth are like swords\n  And his jaw teeth like knives,\n  To devour the afflicted from the earth\n  And the needy from among men.",
+                    prayer: "Father, protect the poor, needy, and vulnerable from cruelty and oppression."
+                ),
+                PrayerVerse(
+                    id: "prov-30-15",
+                    reference: "Proverbs 30:15",
+                    text: "The leech has two daughters,\n  \"Give,\" \"Give.\"\n  There are three things that will not be satisfied,\n  Four that will not say, \"Enough\":",
+                    prayer: "Lord, free me from greed and desires that are never satisfied."
+                ),
+                PrayerVerse(
+                    id: "prov-30-16",
+                    reference: "Proverbs 30:16",
+                    text: "Sheol, and the barren womb,\n  Earth that is never satisfied with water,\n  And fire that never says, \"Enough.\"",
+                    prayer: "Jesus, teach me contentment and protect my heart from endless craving."
+                ),
+                PrayerVerse(
+                    id: "prov-30-17",
+                    reference: "Proverbs 30:17",
+                    text: "The eye that mocks a father\n  And scorns a mother,\n  The ravens of the valley will pick it out,\n  And the young eagles will eat it.",
+                    prayer: "Father, help me honor and obey my parents, and keep me from mockery or contempt."
+                ),
+                PrayerVerse(
+                    id: "prov-30-18",
+                    reference: "Proverbs 30:18",
+                    text: "There are three things which are too wonderful for me,\n  Four which I do not understand:",
+                    prayer: "Lord, fill me with wonder at the mysteries of Your creation and Your ways."
+                ),
+                PrayerVerse(
+                    id: "prov-30-19",
+                    reference: "Proverbs 30:19",
+                    text: "The way of an eagle in the sky,\n  The way of a serpent on a rock,\n  The way of a ship in the middle of the sea,\n  And the way of a man with a maid.",
+                    prayer: "Jesus, remind me that some things are beyond my understanding, and teach me to trust You."
+                ),
+                PrayerVerse(
+                    id: "prov-30-20",
+                    reference: "Proverbs 30:20",
+                    text: "This is the way of an adulterous woman:\n  She eats and wipes her mouth,\n  And says, \"I have done no wrong.\"",
+                    prayer: "Father, keep me from hidden sin, denial, and a hardened conscience."
+                ),
+                PrayerVerse(
+                    id: "prov-30-21",
+                    reference: "Proverbs 30:21",
+                    text: "Under three things the earth quakes,\n  And under four, it cannot bear up:",
+                    prayer: "Lord, help me live with wisdom, order, humility, and responsibility."
+                ),
+                PrayerVerse(
+                    id: "prov-30-22",
+                    reference: "Proverbs 30:22",
+                    text: "Under a slave when he becomes king,\n  And a fool when he is satisfied with food,",
+                    prayer: "Jesus, teach me humility in promotion, freedom, and blessing."
+                ),
+                PrayerVerse(
+                    id: "prov-30-23",
+                    reference: "Proverbs 30:23",
+                    text: "Under an unloved woman when she gets a husband,\n  And a maidservant when she supplants her mistress.",
+                    prayer: "Father, heal bitterness, rejection, and envy, and help me walk in peace."
+                ),
+                PrayerVerse(
+                    id: "prov-30-24",
+                    reference: "Proverbs 30:24",
+                    text: "Four things are small on the earth,\n  But they are exceedingly wise:",
+                    prayer: "Lord, teach me wisdom from even the smallest things You created."
+                ),
+                PrayerVerse(
+                    id: "prov-30-25",
+                    reference: "Proverbs 30:25",
+                    text: "The ants are not a strong people,\n  But they prepare their food in the summer;",
+                    prayer: "Jesus, help me prepare wisely and work diligently like the ants."
+                ),
+                PrayerVerse(
+                    id: "prov-30-26",
+                    reference: "Proverbs 30:26",
+                    text: "The shephanim are not mighty people,\n  Yet they make their houses in the rocks;",
+                    prayer: "Father, teach me to build my life on a secure foundation like the rock badgers."
+                ),
+                PrayerVerse(
+                    id: "prov-30-27",
+                    reference: "Proverbs 30:27",
+                    text: "The locusts have no king,\n  Yet all of them go out in ranks;",
+                    prayer: "Lord, help me walk in unity, order, and purpose like the locusts."
+                ),
+                PrayerVerse(
+                    id: "prov-30-28",
+                    reference: "Proverbs 30:28",
+                    text: "The lizard you may grasp with the hands,\n  Yet it is in kings' palaces.",
+                    prayer: "Jesus, teach me perseverance, courage, and faithfulness even in unlikely places."
+                ),
+                PrayerVerse(
+                    id: "prov-30-29",
+                    reference: "Proverbs 30:29",
+                    text: "There are three things which are stately in their march,\n  Even four which are stately when they walk:",
+                    prayer: "Father, help me walk with dignity, strength, and confidence rooted in You."
+                ),
+                PrayerVerse(
+                    id: "prov-30-30",
+                    reference: "Proverbs 30:30",
+                    text: "The lion which is mighty among beasts\n  And does not retreat before any,",
+                    prayer: "Lord, make me courageous and steadfast like a lion that does not retreat."
+                ),
+                PrayerVerse(
+                    id: "prov-30-31",
+                    reference: "Proverbs 30:31",
+                    text: "The strutting rooster, the male goat also,\n  And a king when his army is with him.",
+                    prayer: "Jesus, teach me noble strength, leadership, and confidence under Your authority."
+                ),
+                PrayerVerse(
+                    id: "prov-30-32",
+                    reference: "Proverbs 30:32",
+                    text: "If you have been foolish in exalting yourself\n  Or if you have plotted evil, put your hand on your mouth.",
+                    prayer: "Father, stop me quickly when pride or foolishness rises in my heart."
+                ),
+                PrayerVerse(
+                    id: "prov-30-33",
+                    reference: "Proverbs 30:33",
+                    text: "For the churning of milk produces butter,\n  And pressing the nose brings forth blood;\n  So the churning of anger produces strife.",
+                    prayer: "Lord, keep me from stirring anger, conflict, or strife. Teach me peace and self-control."
+                ),
+                PrayerVerse(
+                    id: "prov-30-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        ),
+        PrayerDay(
+            dayNumber: 31,
+            title: "Live with Noble Strength",
+            chapterReference: "Proverbs 31",
+            summary: "Close the journey by praying for wisdom, strength, and reverence.",
+            verses: [
+                PrayerVerse(
+                    id: "prov-31-1",
+                    reference: "Proverbs 31:1",
+                    text: "The words of King Lemuel, the oracle which his mother taught him:",
+                    prayer: "Dear Jesus, help me receive wise instruction with humility and honor the guidance You place in my life."
+                ),
+                PrayerVerse(
+                    id: "prov-31-2",
+                    reference: "Proverbs 31:2",
+                    text: "What, O my son?\n  And what, O son of my womb?\n  And what, O son of my vows?",
+                    prayer: "Father, teach me to listen carefully to words of wisdom, love, and correction."
+                ),
+                PrayerVerse(
+                    id: "prov-31-3",
+                    reference: "Proverbs 31:3",
+                    text: "Do not give your strength to women,\n  Or your ways to that which destroys kings.",
+                    prayer: "Lord, protect me from giving my strength, focus, and calling to anything that destroys purpose."
+                ),
+                PrayerVerse(
+                    id: "prov-31-4",
+                    reference: "Proverbs 31:4",
+                    text: "It is not for kings, O Lemuel,\n  It is not for kings to drink wine,\n  Or for rulers to desire strong drink,",
+                    prayer: "Jesus, give leaders self-control, sobriety, and wisdom in every responsibility."
+                ),
+                PrayerVerse(
+                    id: "prov-31-5",
+                    reference: "Proverbs 31:5",
+                    text: "For they will drink and forget what is decreed,\n  And pervert the rights of all the afflicted.",
+                    prayer: "Father, keep me from anything that causes me to forget justice, truth, or compassion."
+                ),
+                PrayerVerse(
+                    id: "prov-31-6",
+                    reference: "Proverbs 31:6",
+                    text: "Give strong drink to him who is perishing,\n  And wine to him whose life is bitter.",
+                    prayer: "Lord, give comfort and mercy to those who are suffering, grieving, or overwhelmed."
+                ),
+                PrayerVerse(
+                    id: "prov-31-7",
+                    reference: "Proverbs 31:7",
+                    text: "Let him drink and forget his poverty\n  And remember his trouble no more.",
+                    prayer: "Jesus, meet the brokenhearted with compassion and help them find hope in You."
+                ),
+                PrayerVerse(
+                    id: "prov-31-8",
+                    reference: "Proverbs 31:8",
+                    text: "Open your mouth for the mute,\n  For the rights of all the unfortunate.",
+                    prayer: "Father, give me courage to speak for those who cannot speak for themselves."
+                ),
+                PrayerVerse(
+                    id: "prov-31-9",
+                    reference: "Proverbs 31:9",
+                    text: "Open your mouth, judge righteously,\n  And defend the rights of the afflicted and needy.",
+                    prayer: "Lord, help me defend justice, righteousness, the poor, and the needy with wisdom and love."
+                ),
+                PrayerVerse(
+                    id: "prov-31-10",
+                    reference: "Proverbs 31:10",
+                    text: "An excellent wife, who can find?\n  For her worth is far above jewels.",
+                    prayer: "Jesus, teach me to value godly character, faithfulness, and wisdom as treasures greater than jewels."
+                ),
+                PrayerVerse(
+                    id: "prov-31-11",
+                    reference: "Proverbs 31:11",
+                    text: "The heart of her husband trusts in her,\n  And he will have no lack of gain.",
+                    prayer: "Father, make me trustworthy and faithful in every relationship and responsibility."
+                ),
+                PrayerVerse(
+                    id: "prov-31-12",
+                    reference: "Proverbs 31:12",
+                    text: "She does him good and not evil\n  All the days of her life.",
+                    prayer: "Lord, help me bring good, blessing, and encouragement to those You have placed in my life."
+                ),
+                PrayerVerse(
+                    id: "prov-31-13",
+                    reference: "Proverbs 31:13",
+                    text: "She looks for wool and flax\n  And works with her hands in delight.",
+                    prayer: "Jesus, teach me diligence, creativity, and joyful work."
+                ),
+                PrayerVerse(
+                    id: "prov-31-14",
+                    reference: "Proverbs 31:14",
+                    text: "She is like merchant ships;\n  She brings her food from afar.",
+                    prayer: "Father, help me provide, prepare, and serve with wisdom and excellence."
+                ),
+                PrayerVerse(
+                    id: "prov-31-15",
+                    reference: "Proverbs 31:15",
+                    text: "She rises also while it is still night\n  And gives food to her household\n  And portions to her maidens.",
+                    prayer: "Lord, give me discipline, responsibility, and care for those entrusted to me."
+                ),
+                PrayerVerse(
+                    id: "prov-31-16",
+                    reference: "Proverbs 31:16",
+                    text: "She considers a field and buys it;\n  From her earnings she plants a vineyard.",
+                    prayer: "Jesus, give me wisdom in decisions, investments, stewardship, and planning."
+                ),
+                PrayerVerse(
+                    id: "prov-31-17",
+                    reference: "Proverbs 31:17",
+                    text: "She girds herself with strength\n  And makes her arms strong.",
+                    prayer: "Father, strengthen me for the work, calling, and responsibilities You have given me."
+                ),
+                PrayerVerse(
+                    id: "prov-31-18",
+                    reference: "Proverbs 31:18",
+                    text: "She senses that her gain is good;\n  Her lamp does not go out at night.",
+                    prayer: "Lord, help me recognize fruitful work and remain faithful through long seasons of labor."
+                ),
+                PrayerVerse(
+                    id: "prov-31-19",
+                    reference: "Proverbs 31:19",
+                    text: "She stretches out her hands to the distaff,\n  And her hands grasp the spindle.",
+                    prayer: "Jesus, bless the work of my hands and teach me skill, patience, and perseverance."
+                ),
+                PrayerVerse(
+                    id: "prov-31-20",
+                    reference: "Proverbs 31:20",
+                    text: "She extends her hand to the poor,\n  And she stretches out her hands to the needy.",
+                    prayer: "Father, open my hands to the poor and needy with generosity and compassion."
+                ),
+                PrayerVerse(
+                    id: "prov-31-21",
+                    reference: "Proverbs 31:21",
+                    text: "She is not afraid of the snow for her household,\n  For all her household are clothed with scarlet.",
+                    prayer: "Lord, help me prepare wisely and care faithfully for my household."
+                ),
+                PrayerVerse(
+                    id: "prov-31-22",
+                    reference: "Proverbs 31:22",
+                    text: "She makes coverings for herself;\n  Her clothing is fine linen and purple.",
+                    prayer: "Jesus, teach me dignity, beauty, excellence, and stewardship in what I create and carry."
+                ),
+                PrayerVerse(
+                    id: "prov-31-23",
+                    reference: "Proverbs 31:23",
+                    text: "Her husband is known in the gates,\n  When he sits among the elders of the land.",
+                    prayer: "Father, bless the influence, honor, and reputation of those who walk faithfully before You."
+                ),
+                PrayerVerse(
+                    id: "prov-31-24",
+                    reference: "Proverbs 31:24",
+                    text: "She makes linen garments and sells them,\n  And supplies belts to the tradesmen.",
+                    prayer: "Lord, teach me excellence, diligence, and wisdom in business and provision."
+                ),
+                PrayerVerse(
+                    id: "prov-31-25",
+                    reference: "Proverbs 31:25",
+                    text: "Strength and dignity are her clothing,\n  And she smiles at the future.",
+                    prayer: "Jesus, clothe me with strength and dignity, and help me smile at the future with faith."
+                ),
+                PrayerVerse(
+                    id: "prov-31-26",
+                    reference: "Proverbs 31:26",
+                    text: "She opens her mouth in wisdom,\n  And the teaching of kindness is on her tongue.",
+                    prayer: "Father, let wisdom and kindness be on my tongue."
+                ),
+                PrayerVerse(
+                    id: "prov-31-27",
+                    reference: "Proverbs 31:27",
+                    text: "She looks well to the ways of her household,\n  And does not eat the bread of idleness.",
+                    prayer: "Lord, help me watch carefully over my responsibilities and reject laziness."
+                ),
+                PrayerVerse(
+                    id: "prov-31-28",
+                    reference: "Proverbs 31:28",
+                    text: "Her children rise up and bless her;\n  Her husband also, and he praises her, saying:",
+                    prayer: "Jesus, let my life bless my family and cause others to see Your goodness."
+                ),
+                PrayerVerse(
+                    id: "prov-31-29",
+                    reference: "Proverbs 31:29",
+                    text: ""Many daughters have done nobly,\n  But you excel them all."",
+                    prayer: "Father, help me pursue excellence with humility and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "prov-31-30",
+                    reference: "Proverbs 31:30",
+                    text: "Charm is deceitful and beauty is vain,\n  But a woman who fears the Lord, she shall be praised.",
+                    prayer: "Lord, remind me that charm is deceitful and beauty is vain, but reverence for You is worthy of praise."
+                ),
+                PrayerVerse(
+                    id: "prov-31-31",
+                    reference: "Proverbs 31:31",
+                    text: "Give her the product of her hands,\n  And let her works praise her in the gates.",
+                    prayer: "Jesus, let the fruit of my life honor You and bless others."
+                ),
+                PrayerVerse(
+                    id: "prov-31-closing",
+                    reference: "Closing",
+                    text: "In Jesus' name, Amen. 🙏🏻",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
+        )
     ]
 }
