@@ -14,7 +14,7 @@ enum PrayerTheme {
     static let heroGradient = BrandGradients.activityHero
 
     static let buttonGradient = LinearGradient(
-        colors: [AppColors.voltLime, AppColors.electricCyan, AppColors.activityPink.opacity(0.92)],
+        colors: [AppColors.voltLime, AppColors.voltLime],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
     )

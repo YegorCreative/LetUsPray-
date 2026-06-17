@@ -5918,7 +5918,7 @@ enum ProverbsPrayerData {
                 PrayerVerse(
                     id: "prov-31-29",
                     reference: "Proverbs 31:29",
-                    text: ""Many daughters have done nobly,\n  But you excel them all."",
+                    text: "\"Many daughters have done nobly,\n  But you excel them all.\"",
                     prayer: "Father, help me pursue excellence with humility and faithfulness."
                 ),
                 PrayerVerse(
