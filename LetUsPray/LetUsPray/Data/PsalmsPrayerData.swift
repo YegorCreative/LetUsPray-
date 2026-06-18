@@ -407,14 +407,160 @@ enum PsalmsPrayerData {
             title: "Morning Prayer",
             chapterReference: "Psalm 5",
             summary: "Pray for guidance and protection at the start of each day.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-5-1",
+                    reference: "Psalm 5:1",
+                    text: "Give ear to my words, O Lord,\n  Consider my groaning.",
+                    prayer: "Lord, hear my words and understand the cries of my heart. Even when I struggle to express myself, You know every thought and concern I bring before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-5-2",
+                    reference: "Psalm 5:2",
+                    text: "Heed the sound of my cry for help, my King and my God,\n  For to You I pray.",
+                    prayer: "Father, I lift my voice to You, my King and my God. Thank You that I can come boldly into Your presence with every prayer and request."
+                ),
+                PrayerVerse(
+                    id: "psalm-5-3",
+                    reference: "Psalm 5:3",
+                    text: "In the morning, O Lord, You will hear my voice;\n  In the morning I will order my prayer to You and eagerly watch.",
+                    prayer: "Lord, help me begin each day seeking You first. Let my morning be filled with prayer, expectation, and confidence that You are at work in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-5-4",
+                    reference: "Psalm 5:4",
+                    text: "For You are not a God who takes pleasure in wickedness;\n  No evil dwells with You.",
+                    prayer: "Father, You are holy and righteous. Keep me from sin and help me live in a way that reflects Your goodness and purity."
+                ),
+                PrayerVerse(
+                    id: "psalm-5-5",
+                    reference: "Psalm 5:5",
+                    text: "The boastful shall not stand before Your eyes;\n  You hate all who do iniquity.",
+                    prayer: "Lord, protect me from pride and arrogance. Teach me humility and a heart that seeks to honor You above all else."
+                ),
+                PrayerVerse(
+                    id: "psalm-5-6",
+                    reference: "Psalm 5:6",
+                    text: "You destroy those who speak falsehood;\n  The Lord abhors the man of bloodshed and deceit.",
+                    prayer: "Father, help me walk in truth and integrity. Let my words and actions reflect honesty, faithfulness, and love."
+                ),
+                PrayerVerse(
+                    id: "psalm-5-7",
+                    reference: "Psalm 5:7",
+                    text: "But as for me, by Your abundant lovingkindness I will enter Your house,\n  At Your holy temple I will bow in reverence for You.",
+                    prayer: "Lord, thank You for Your abundant lovingkindness. Because of Your mercy, I can come into Your presence with reverence, gratitude, and worship."
+                ),
+                PrayerVerse(
+                    id: "psalm-5-8",
+                    reference: "Psalm 5:8",
+                    text: "O Lord, lead me in Your righteousness because of my foes;\n  Make Your way straight before me.",
+                    prayer: "Father, lead me in Your righteousness. Make Your path clear before me and guide my decisions according to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-5-9",
+                    reference: "Psalm 5:9",
+                    text: "There is nothing reliable in what they say;\n  Their inward part is destruction itself.\n  Their throat is an open grave;\n  They flatter with their tongue.",
+                    prayer: "Lord, guard my mouth and my heart. Help me speak words that bring life, encouragement, truth, and grace to those around me."
+                ),
+                PrayerVerse(
+                    id: "psalm-5-10",
+                    reference: "Psalm 5:10",
+                    text: "Hold them guilty, O God;\n  By their own devices let them fall!\n  In the multitude of their transgressions thrust them out,\n  For they are rebellious against You.",
+                    prayer: "Father, establish Your justice and righteousness. Keep me from rebellion and help me remain faithful to Your ways."
+                ),
+                PrayerVerse(
+                    id: "psalm-5-11",
+                    reference: "Psalm 5:11",
+                    text: "But let all who take refuge in You be glad,\n  Let them ever sing for joy;\n  And may You shelter them,\n  That those who love Your name may exult in You.",
+                    prayer: "Lord, let all who trust in You rejoice. Fill my heart with gladness and confidence as I rest under Your protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-5-12",
+                    reference: "Psalm 5:12",
+                    text: "For it is You who blesses the righteous man, O Lord,\n  You surround him with favor as with a shield.",
+                    prayer: "Father, thank You for Your favor. Surround me with Your blessing and protection like a shield, and help me walk confidently in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-5-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing my prayers and welcoming me into Your presence through Your mercy. Lead me in righteousness, guard my heart and words, and help me trust in Your protection every day. May my life bring honor to You and may Your favor surround me wherever I go.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 6,
             title: "Have Mercy",
             chapterReference: "Psalm 6",
             summary: "Pray for healing and God's compassion in distress.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-6-1",
+                    reference: "Psalm 6:1",
+                    text: "O Lord, do not rebuke me in Your anger,\n  Nor chasten me in Your wrath.",
+                    prayer: "Lord, when I fall short and need correction, discipline me with mercy and love. Help me receive Your guidance with a humble and willing heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-6-2",
+                    reference: "Psalm 6:2",
+                    text: "Be gracious to me, O Lord, for I am pining away;\n  Heal me, O Lord, for my bones are dismayed.",
+                    prayer: "Father, have compassion on me in my weakness. Strengthen me physically, emotionally, and spiritually when I feel worn down and discouraged."
+                ),
+                PrayerVerse(
+                    id: "psalm-6-3",
+                    reference: "Psalm 6:3",
+                    text: "And my soul is greatly dismayed;\n  But You, O Lord—how long?",
+                    prayer: "Lord, when my soul is troubled and overwhelmed, remind me that You are near. Fill me with Your peace and help me trust in Your timing."
+                ),
+                PrayerVerse(
+                    id: "psalm-6-4",
+                    reference: "Psalm 6:4",
+                    text: "Return, O Lord, rescue my soul;\n  Save me because of Your lovingkindness.",
+                    prayer: "Father, turn toward me in Your lovingkindness. Rescue me from despair and draw me closer to Your presence and comfort."
+                ),
+                PrayerVerse(
+                    id: "psalm-6-5",
+                    reference: "Psalm 6:5",
+                    text: "For there is no mention of You in death;\n  In Sheol who will give You thanks?",
+                    prayer: "Lord, let my life be a testimony of Your faithfulness. Help me use every day You give me to praise You and glorify Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-6-6",
+                    reference: "Psalm 6:6",
+                    text: "I am weary with my sighing;\n  Every night I make my bed swim,\n  I dissolve my couch with my tears.",
+                    prayer: "Father, You see every tear and every burden I carry. Thank You for understanding my pain even when no one else does."
+                ),
+                PrayerVerse(
+                    id: "psalm-6-7",
+                    reference: "Psalm 6:7",
+                    text: "My eye has wasted away with grief;\n  It has become old because of all my adversaries.",
+                    prayer: "Lord, when grief, disappointment, or hardship weigh heavily on me, renew my strength and restore my hope in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-6-8",
+                    reference: "Psalm 6:8",
+                    text: "Depart from me, all you who do iniquity,\n  For the Lord has heard the voice of my weeping.",
+                    prayer: "Father, help me separate myself from anything that pulls me away from You. Strengthen my resolve to walk in righteousness and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-6-9",
+                    reference: "Psalm 6:9",
+                    text: "The Lord has heard my supplication,\n  The Lord receives my prayer.",
+                    prayer: "Lord, thank You for hearing my prayers. Give me confidence that You listen to every cry of my heart and answer according to Your perfect will."
+                ),
+                PrayerVerse(
+                    id: "psalm-6-10",
+                    reference: "Psalm 6:10",
+                    text: "All my enemies will be ashamed and greatly dismayed;\n  They shall turn back, they will suddenly be ashamed.",
+                    prayer: "Father, bring victory over every fear, struggle, and attack against my faith. Let Your power be seen in my life and remind me that You are my defender."
+                ),
+                PrayerVerse(
+                    id: "psalm-6-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your mercy when I am weak and Your comfort when I am troubled. You see every tear, hear every prayer, and remain faithful through every season. Strengthen my heart, renew my hope, and help me trust completely in Your unfailing love and care.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 7,
