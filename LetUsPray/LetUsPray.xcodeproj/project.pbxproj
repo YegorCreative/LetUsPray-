@@ -7,17 +7,40 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		AB21E9462FDCA07C0074FCB7 /* LetUsPray.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = LetUsPray.xcodeproj; sourceTree = "<group>"; };
-		AB271BA82FDDAAF000785AE3 /* LetUsPray.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = LetUsPray.xcodeproj; sourceTree = "<group>"; };
-		AB271BFA2FDDAB8A00785AE3 /* Info 2.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info 2.plist"; sourceTree = "<group>"; };
-		AB7534922FDC505900F9D8A7 /* LetUsPray.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = LetUsPray.xcodeproj; sourceTree = "<group>"; };
-		ABCA094E2FDB370F004C5D69 /* LetUsPray.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LetUsPray.xcodeproj; path = LetUsPray/Data/LetUsPray.xcodeproj; sourceTree = SOURCE_ROOT; };
 		ABF777472FE09FF1003D9593 /* LetUsPray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetUsPray.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		ABF777482FE09FF1003D9593 /* Exceptions for "LetUsPray" folder in "LetUsPray" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Data/PsalmsPrayerData.swift.backup,
+				File.txt,
+				LaunchScreen.storyboard.backup,
+				LaunchScreen.storyboard.bak,
+				Resources/AppIconDirection.md,
+				"Resources/Bible/Proverbs/Proverbs 1.rtf",
+				"Resources/Bible/Proverbs/Proverbs 2 The Pursuit of Wisdom.rtf",
+				"Resources/Bible/Proverbs/Proverbs 3 The Rewards of Wisdom.rtf",
+				"Resources/Bible/Proverbs/Proverbs 4 The Father's Instruction.rtfd",
+				"Resources/Bible/Proverbs/Proverbs 5 The Pitfalls of Immorality.rtf",
+				"Resources/Bible/Proverbs/Proverbs 6 Counsel.rtfd",
+				"Resources/Bible/Proverbs/Proverbs 7 The Wiles of the Harlot.rtf",
+				"Resources/Bible/Proverbs/Proverbs 8 Wisdom.rtf",
+				"Resources/Bible/Proverbs/Proverbs 9 Wisdom's Invitation.rtf",
+				"Resources/Bible/Proverbs/Proverbs 10.rtf",
+				"Resources/Bible/Proverbs/Proverbs 11.rtf",
+			);
+			target = ABDF10B12FD3CB48009A879B /* LetUsPray */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		ABDF10B42FD3CB48009A879B /* LetUsPray */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				ABF777482FE09FF1003D9593 /* Exceptions for "LetUsPray" folder in "LetUsPray" target */,
+			);
 			path = LetUsPray;
 			sourceTree = "<group>";
 		};
@@ -37,27 +60,7 @@
 		AB21E96B2FDCA07C0074FCB7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		AB271BCD2FDDAAF000785AE3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		AB7534B72FDC505900F9D8A7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		ABCA094F2FDB370F004C5D69 /* Products */ = {
-			isa = PBXGroup;
-			children = (
+				ABF777472FE09FF1003D9593 /* LetUsPray.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,8 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				ABDF10B42FD3CB48009A879B /* LetUsPray */,
-				AB271BFA2FDDAB8A00785AE3 /* Info 2.plist */,
-				ABF777472FE09FF1003D9593 /* LetUsPray.app */,
+				AB21E96B2FDCA07C0074FCB7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,26 +123,8 @@
 			mainGroup = ABDF10A92FD3CB48009A879B;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = ABDF10A92FD3CB48009A879B;
+			productRefGroup = AB21E96B2FDCA07C0074FCB7 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = ABCA094F2FDB370F004C5D69 /* Products */;
-					ProjectRef = ABCA094E2FDB370F004C5D69 /* LetUsPray.xcodeproj */;
-				},
-				{
-					ProductGroup = AB21E96B2FDCA07C0074FCB7 /* Products */;
-					ProjectRef = AB21E9462FDCA07C0074FCB7 /* LetUsPray.xcodeproj */;
-				},
-				{
-					ProductGroup = AB271BCD2FDDAAF000785AE3 /* Products */;
-					ProjectRef = AB271BA82FDDAAF000785AE3 /* LetUsPray.xcodeproj */;
-				},
-				{
-					ProductGroup = AB7534B72FDC505900F9D8A7 /* Products */;
-					ProjectRef = AB7534922FDC505900F9D8A7 /* LetUsPray.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				ABDF10B12FD3CB48009A879B /* LetUsPray */,
@@ -222,7 +206,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -297,11 +281,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3YPJ6GZ2J6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = LetUsPray;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -312,14 +298,16 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yegorcreative.LetUsPray;
+				PRODUCT_BUNDLE_IDENTIFIER = com.letuspray.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -329,11 +317,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3YPJ6GZ2J6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = LetUsPray;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -344,9 +334,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yegorcreative.LetUsPray;
+				PRODUCT_BUNDLE_IDENTIFIER = com.letuspray.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
