@@ -1,0 +1,118 @@
+PROJECT: LetUsPray
+
+STRICT RULES:
+Do not audit.
+Do not inspect unrelated files.
+Do not redesign.
+Do not refactor.
+Only update Psalm 10.
+Follow the existing Proverbs-style structure already used in this project.
+Before editing, identify the existing file that contains Psalm prayer data and update only that file unless the build requires one directly related fix.
+
+GOAL:
+Add Psalm 10 as a complete verse-by-verse prayer journey using NASB1995 verse text paired with the prayers below.
+
+API DETAILS:
+Bible ID:
+b8ee27bcd1cae43a-01
+
+Book ID:
+PSA
+
+Endpoint pattern:
+https://api.scripture.api.bible/v1/bibles/b8ee27bcd1cae43a-01/verses/PSA.10.{verse}?content-type=text&include-notes=false&include-titles=false&include-verse-numbers=false
+
+TASK:
+Fetch Psalm 10:1 through Psalm 10:18 only.
+Do not skip verses.
+Do not add extra verses.
+Do not invent verse text.
+Do not include verse numbers inside the verse text.
+Use the existing app data model exactly.
+
+STABLE IDS REQUIRED:
+psalm-10-1
+psalm-10-2
+psalm-10-3
+psalm-10-4
+psalm-10-5
+psalm-10-6
+psalm-10-7
+psalm-10-8
+psalm-10-9
+psalm-10-10
+psalm-10-11
+psalm-10-12
+psalm-10-13
+psalm-10-14
+psalm-10-15
+psalm-10-16
+psalm-10-17
+psalm-10-18
+psalm-10-closing
+
+PRAYER CONTENT:
+
+psalm-10-1
+Lord, when You seem distant and I do not understand what You are doing, help me trust that You are still near and faithfully working in my life.
+
+psalm-10-2
+Father, when I see pride, injustice, and wrongdoing around me, keep my heart from discouragement and remind me that You see everything.
+
+psalm-10-3
+Lord, protect me from selfish ambition and pride. Help me find my satisfaction in You rather than in worldly success or personal gain.
+
+psalm-10-4
+Father, keep me from living as though I do not need You. Teach me to seek You daily with humility and dependence.
+
+psalm-10-5
+Lord, when the wicked appear to prosper, help me remember that Your justice is perfect and Your timing is never late.
+
+psalm-10-6
+Father, guard me against false confidence and self-reliance. Let my security always be found in You alone.
+
+psalm-10-7
+Lord, help my words reflect Your love and truth. Keep my mouth from deceit, bitterness, and harmful speech.
+
+psalm-10-8
+Father, protect the vulnerable, the hurting, and those who feel forgotten. Help me be a source of compassion and encouragement to others.
+
+psalm-10-9
+Lord, deliver people from those who seek to exploit or harm them. Let Your protection and justice prevail.
+
+psalm-10-10
+Father, strengthen those who have been oppressed or broken by life’s hardships. Lift them up and surround them with Your care.
+
+psalm-10-11
+Lord, remind me that nothing escapes Your attention. You see every struggle, every injustice, and every cry for help.
+
+psalm-10-12
+Father, arise and demonstrate Your power. Bring hope to those who are suffering and comfort to those who are weary.
+
+psalm-10-13
+Lord, help me never doubt Your justice or Your authority. Keep my faith anchored in Your character and promises.
+
+psalm-10-14
+Father, thank You for seeing the troubles and grief of Your people. Help me trust that You are actively working even when I cannot see it.
+
+psalm-10-15
+Lord, break the power of evil and strengthen what is good and righteous. Let Your kingdom continue to grow in my heart and in the world.
+
+psalm-10-16
+Father, thank You that You reign forever. No earthly power can overcome Your eternal kingdom.
+
+psalm-10-17
+Lord, hear the desires and prayers of those who seek You. Strengthen our hearts and help us remain faithful in every season.
+
+psalm-10-18
+Father, defend the fatherless, the vulnerable, and those who have no one to help them. Use me to reflect Your compassion and care.
+
+psalm-10-closing
+Lord, thank You for being the righteous King who sees every injustice and hears every prayer. When I am discouraged by what I see around me, help me trust in Your perfect justice and unfailing love. Strengthen my faith, guard my heart from pride, and help me walk humbly with You, knowing that Your kingdom reigns forever.
+
+In Jesus’ name, Amen. 🙏🏻
+
+BUILD:
+After updating Psalm 10, run the project build.
+If the build fails, fix only the issue directly caused by this Psalm 10 update.
+Do not make unrelated improvements.

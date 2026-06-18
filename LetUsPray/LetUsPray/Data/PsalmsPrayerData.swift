@@ -683,21 +683,324 @@ enum PsalmsPrayerData {
             title: "How Majestic",
             chapterReference: "Psalm 8",
             summary: "Pray in awe of God's majesty and care for humanity.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-8-1",
+                    reference: "Psalm 8:1",
+                    text: "O Lord, our Lord,\n  How majestic is Your name in all the earth,\n  Who have displayed Your splendor above the heavens!",
+                    prayer: "Lord, our Lord, how majestic is Your name in all the earth. Help me recognize Your greatness and worship You with awe and gratitude each day."
+                ),
+                PrayerVerse(
+                    id: "psalm-8-2",
+                    reference: "Psalm 8:2",
+                    text: "From the mouth of infants and nursing babes You have established strength\n  Because of Your adversaries,\n  To make the enemy and the revengeful cease.",
+                    prayer: "Father, thank You for displaying Your strength through the humble and the weak. Help me trust that Your power is made perfect even when I feel inadequate."
+                ),
+                PrayerVerse(
+                    id: "psalm-8-3",
+                    reference: "Psalm 8:3",
+                    text: "When I consider Your heavens, the work of Your fingers,\n  The moon and the stars, which You have ordained;",
+                    prayer: "Lord, when I look at the heavens and the wonders of creation, remind me of Your wisdom, creativity, and power that sustain all things."
+                ),
+                PrayerVerse(
+                    id: "psalm-8-4",
+                    reference: "Psalm 8:4",
+                    text: "What is man that You take thought of him,\n  And the son of man that You care for him?",
+                    prayer: "Father, thank You for caring about me even though I am small compared to the vastness of Your creation. Help me never forget how deeply You love and value me."
+                ),
+                PrayerVerse(
+                    id: "psalm-8-5",
+                    reference: "Psalm 8:5",
+                    text: "Yet You have made him a little lower than God,\n  And You crown him with glory and majesty!",
+                    prayer: "Lord, thank You for creating humanity with dignity and purpose. Help me live in a way that reflects the honor You have given me as Your creation."
+                ),
+                PrayerVerse(
+                    id: "psalm-8-6",
+                    reference: "Psalm 8:6",
+                    text: "You make him to rule over the works of Your hands;\n  You have put all things under his feet,",
+                    prayer: "Father, teach me to be a faithful steward of the responsibilities You have entrusted to me. Give me wisdom to manage them according to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-8-7",
+                    reference: "Psalm 8:7",
+                    text: "All sheep and oxen,\n  And also the beasts of the field,",
+                    prayer: "Lord, thank You for the abundance of Your creation and the blessings You provide. Help me use every gift responsibly and with gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-8-8",
+                    reference: "Psalm 8:8",
+                    text: "The birds of the heavens and the fish of the sea,\n  Whatever passes through the paths of the seas.",
+                    prayer: "Father, remind me that all creation belongs to You. Help me care for what You have made and recognize Your hand in every part of life."
+                ),
+                PrayerVerse(
+                    id: "psalm-8-9",
+                    reference: "Psalm 8:9",
+                    text: "O Lord, our Lord,\n  How majestic is Your name in all the earth!",
+                    prayer: "Lord, our Lord, how majestic is Your name in all the earth. May my life continually bring glory, honor, and praise to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-8-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for the beauty of Your creation and the wonder of Your love. Though You are the Creator of the universe, You care deeply for me and call me by name. Help me live with gratitude, humility, and purpose, honoring You in all that I do and praising Your majestic name forever.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 9,
             title: "I Will Give Thanks",
             chapterReference: "Psalm 9",
             summary: "Pray with thanksgiving for God's righteous judgment.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-9-1",
+                    reference: "Psalm 9:1",
+                    text: "I will give thanks to the Lord with all my heart;\n  I will tell of all Your wonders.",
+                    prayer: "Lord, I will give thanks to You with all my heart. Help me remember Your goodness and continually praise You for all that You have done in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-2",
+                    reference: "Psalm 9:2",
+                    text: "I will be glad and exult in You;\n  I will sing praise to Your name, O Most High.",
+                    prayer: "Father, fill my heart with joy in Your presence. Let my life be a song of praise that honors Your holy name."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-3",
+                    reference: "Psalm 9:3",
+                    text: "When my enemies turn back,\n  They stumble and perish before You.",
+                    prayer: "Lord, thank You for being my defender. When challenges arise, remind me that Your power is greater than every obstacle before me."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-4",
+                    reference: "Psalm 9:4",
+                    text: "For You have maintained my just cause;\n  You have sat on the throne judging righteously.",
+                    prayer: "Father, thank You for upholding justice and righteousness. Help me trust that You see every situation clearly and judge perfectly."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-5",
+                    reference: "Psalm 9:5",
+                    text: "You have rebuked the nations, You have destroyed the wicked;\n  You have blotted out their name forever and ever.",
+                    prayer: "Lord, remind me that evil will not prevail forever. Strengthen my faith when I see injustice and help me trust in Your timing."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-6",
+                    reference: "Psalm 9:6",
+                    text: "The enemy has come to an end in perpetual ruins,\n  And You have uprooted the cities;\n  The very memory of them has perished.",
+                    prayer: "Father, earthly powers rise and fall, but Your kingdom remains forever. Help me build my life upon what is eternal rather than temporary."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-7",
+                    reference: "Psalm 9:7",
+                    text: "But the Lord abides forever;\n  He has established His throne for judgment,",
+                    prayer: "Lord, thank You that You reign forever. When life feels uncertain, remind me that Your throne is established and Your rule never changes."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-8",
+                    reference: "Psalm 9:8",
+                    text: "And He will judge the world in righteousness;\n  He will execute judgment for the peoples with equity.",
+                    prayer: "Father, You judge the world with righteousness and truth. Help me walk uprightly and trust Your wisdom in all things."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-9",
+                    reference: "Psalm 9:9",
+                    text: "The Lord also will be a stronghold for the oppressed,\n  A stronghold in times of trouble;",
+                    prayer: "Lord, be my refuge in times of trouble. When I feel overwhelmed, help me find safety, strength, and comfort in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-10",
+                    reference: "Psalm 9:10",
+                    text: "And those who know Your name will put their trust in You,\n  For You, O Lord, have not forsaken those who seek You.",
+                    prayer: "Father, help me know You more deeply. Strengthen my trust in You and remind me that You never forsake those who seek You."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-11",
+                    reference: "Psalm 9:11",
+                    text: "Sing praises to the Lord, who dwells in Zion;\n  Declare among the peoples His deeds.",
+                    prayer: "Lord, let my life proclaim Your greatness. Help me share Your goodness with others and speak of the wonderful things You have done."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-12",
+                    reference: "Psalm 9:12",
+                    text: "For He who requires blood remembers them;\n  He does not forget the cry of the afflicted.",
+                    prayer: "Father, thank You that You remember those who call upon You. Comfort those who suffer and help me trust that You hear every prayer."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-13",
+                    reference: "Psalm 9:13",
+                    text: "Be gracious to me, O Lord;\n  See my affliction from those who hate me,\n  You who lift me up from the gates of death,",
+                    prayer: "Lord, be gracious to me in my struggles. Lift me up when I feel weak and give me strength to persevere through difficult seasons."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-14",
+                    reference: "Psalm 9:14",
+                    text: "That I may tell of all Your praises,\n  That in the gates of the daughter of Zion\n  I may rejoice in Your salvation.",
+                    prayer: "Father, let my life overflow with praise. Help me rejoice in the salvation and grace You have freely given."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-15",
+                    reference: "Psalm 9:15",
+                    text: "The nations have sunk down in the pit which they have made;\n  In the net which they hid, their own foot has been caught.",
+                    prayer: "Lord, remind me that human plans cannot overcome Your purposes. Help me place my confidence in You rather than worldly power."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-16",
+                    reference: "Psalm 9:16",
+                    text: "The Lord has made Himself known;\n  He has executed judgment.\n  In the work of his own hands the wicked is snared. Higgaion Selah.",
+                    prayer: "Father, You reveal Your righteousness through all You do. Help me recognize Your hand at work and honor You in every circumstance."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-17",
+                    reference: "Psalm 9:17",
+                    text: "The wicked will return to Sheol,\n  Even all the nations who forget God.",
+                    prayer: "Lord, keep my heart close to You. Protect me from drifting away and help me walk faithfully in Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-18",
+                    reference: "Psalm 9:18",
+                    text: "For the needy will not always be forgotten,\n  Nor the hope of the afflicted perish forever.",
+                    prayer: "Father, thank You that You do not forget those who place their hope in You. Strengthen my faith when I am waiting for Your answer."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-19",
+                    reference: "Psalm 9:19",
+                    text: "Arise, O Lord, do not let man prevail;\n  Let the nations be judged before You.",
+                    prayer: "Lord, arise and display Your power. Let Your will be accomplished in the earth and in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-20",
+                    reference: "Psalm 9:20",
+                    text: "Put them in fear, O Lord;\n  Let the nations know that they are but men. Selah.",
+                    prayer: "Father, remind all people of their need for You. Keep me humble before You and teach me to depend on Your grace every day."
+                ),
+                PrayerVerse(
+                    id: "psalm-9-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my refuge, my righteous Judge, and my faithful King. Help me trust You in every circumstance, praise You with all my heart, and remember Your goodness throughout my life. Strengthen my faith, deepen my trust, and keep my eyes fixed upon Your eternal kingdom.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 10,
             title: "Why Stand Far Off?",
             chapterReference: "Psalm 10",
             summary: "Pray for God's intervention against injustice.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-10-1",
+                    reference: "Psalm 10:1",
+                    text: "Why do You stand afar off, O Lord?\n  Why do You hide Yourself in times of trouble?",
+                    prayer: "Lord, when You seem distant and I do not understand what You are doing, help me trust that You are still near and faithfully working in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-2",
+                    reference: "Psalm 10:2",
+                    text: "In pride the wicked hotly pursue the afflicted;\n  Let them be caught in the plots which they have devised.",
+                    prayer: "Father, when I see pride, injustice, and wrongdoing around me, keep my heart from discouragement and remind me that You see everything."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-3",
+                    reference: "Psalm 10:3",
+                    text: "For the wicked boasts of his heart's desire,\n  And the greedy man curses and spurns the Lord.",
+                    prayer: "Lord, protect me from selfish ambition and pride. Help me find my satisfaction in You rather than in worldly success or personal gain."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-4",
+                    reference: "Psalm 10:4",
+                    text: "The wicked, in the haughtiness of his countenance, does not seek Him.\n  All his thoughts are, \"There is no God.\"",
+                    prayer: "Father, keep me from living as though I do not need You. Teach me to seek You daily with humility and dependence."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-5",
+                    reference: "Psalm 10:5",
+                    text: "His ways prosper at all times;\n  Your judgments are on high, out of his sight;\n  As for all his adversaries, he snorts at them.",
+                    prayer: "Lord, when the wicked appear to prosper, help me remember that Your justice is perfect and Your timing is never late."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-6",
+                    reference: "Psalm 10:6",
+                    text: "He says to himself, \"I will not be moved;\n  Throughout all generations I will not be in adversity.\"",
+                    prayer: "Father, guard me against false confidence and self-reliance. Let my security always be found in You alone."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-7",
+                    reference: "Psalm 10:7",
+                    text: "His mouth is full of curses and deceit and oppression;\n  Under his tongue is mischief and wickedness.",
+                    prayer: "Lord, help my words reflect Your love and truth. Keep my mouth from deceit, bitterness, and harmful speech."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-8",
+                    reference: "Psalm 10:8",
+                    text: "He sits in the lurking places of the villages;\n  In the hiding places he kills the innocent;\n  His eyes stealthily watch for the unfortunate.",
+                    prayer: "Father, protect the vulnerable, the hurting, and those who feel forgotten. Help me be a source of compassion and encouragement to others."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-9",
+                    reference: "Psalm 10:9",
+                    text: "He lurks in a hiding place as a lion in his lair;\n  He lurks to catch the afflicted;\n  He catches the afflicted when he draws him into his net.",
+                    prayer: "Lord, deliver people from those who seek to exploit or harm them. Let Your protection and justice prevail."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-10",
+                    reference: "Psalm 10:10",
+                    text: "He crouches, he bows down,\n  And the unfortunate fall by his mighty ones.",
+                    prayer: "Father, strengthen those who have been oppressed or broken by life's hardships. Lift them up and surround them with Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-11",
+                    reference: "Psalm 10:11",
+                    text: "He says to himself, \"God has forgotten;\n  He has hidden His face; He will never see it.\"",
+                    prayer: "Lord, remind me that nothing escapes Your attention. You see every struggle, every injustice, and every cry for help."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-12",
+                    reference: "Psalm 10:12",
+                    text: "Arise, O Lord; O God, lift up Your hand.\n  Do not forget the afflicted.",
+                    prayer: "Father, arise and demonstrate Your power. Bring hope to those who are suffering and comfort to those who are weary."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-13",
+                    reference: "Psalm 10:13",
+                    text: "Why has the wicked spurned God?\n  He has said to himself, \"You will not require it.\"",
+                    prayer: "Lord, help me never doubt Your justice or Your authority. Keep my faith anchored in Your character and promises."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-14",
+                    reference: "Psalm 10:14",
+                    text: "You have seen it, for You have beheld mischief and vexation to take it into Your hand.\n  The unfortunate commits himself to You;\n  You have been the helper of the orphan.",
+                    prayer: "Father, thank You for seeing the troubles and grief of Your people. Help me trust that You are actively working even when I cannot see it."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-15",
+                    reference: "Psalm 10:15",
+                    text: "Break the arm of the wicked and the evildoer,\n  Seek out his wickedness until You find none.",
+                    prayer: "Lord, break the power of evil and strengthen what is good and righteous. Let Your kingdom continue to grow in my heart and in the world."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-16",
+                    reference: "Psalm 10:16",
+                    text: "The Lord is King forever and ever;\n  Nations have perished from His land.",
+                    prayer: "Father, thank You that You reign forever. No earthly power can overcome Your eternal kingdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-17",
+                    reference: "Psalm 10:17",
+                    text: "O Lord, You have heard the desire of the humble;\n  You will strengthen their heart, You will incline Your ear",
+                    prayer: "Lord, hear the desires and prayers of those who seek You. Strengthen our hearts and help us remain faithful in every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-18",
+                    reference: "Psalm 10:18",
+                    text: "To vindicate the orphan and the oppressed,\n  So that man who is of the earth will no longer cause terror.",
+                    prayer: "Father, defend the fatherless, the vulnerable, and those who have no one to help them. Use me to reflect Your compassion and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-10-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being the righteous King who sees every injustice and hears every prayer. When I am discouraged by what I see around me, help me trust in Your perfect justice and unfailing love. Strengthen my faith, guard my heart from pride, and help me walk humbly with You, knowing that Your kingdom reigns forever.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 11,
