@@ -1007,21 +1007,168 @@ enum PsalmsPrayerData {
             title: "In the Lord I Take Refuge",
             chapterReference: "Psalm 11",
             summary: "Pray for courage and trust when foundations are shaken.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-11-1",
+                    reference: "Psalm 11:1",
+                    text: "In the Lord I take refuge;\n  How can you say to my soul, \"Flee as a bird to your mountain;",
+                    prayer: "Lord, You are my refuge and my strength. When fear tries to overwhelm me, help me place my confidence in You rather than running from the challenges before me."
+                ),
+                PrayerVerse(
+                    id: "psalm-11-2",
+                    reference: "Psalm 11:2",
+                    text: "For, behold, the wicked bend the bow,\n  They make ready their arrow upon the string\n  To shoot in darkness at the upright in heart.",
+                    prayer: "Father, when I face hidden dangers, opposition, or attacks against my faith, remind me that You see what I cannot see and are watching over me."
+                ),
+                PrayerVerse(
+                    id: "psalm-11-3",
+                    reference: "Psalm 11:3",
+                    text: "If the foundations are destroyed,\n  What can the righteous do?\"",
+                    prayer: "Lord, when foundations around me seem shaken, help me remain firmly grounded in Your truth, knowing that You never change."
+                ),
+                PrayerVerse(
+                    id: "psalm-11-4",
+                    reference: "Psalm 11:4",
+                    text: "The Lord is in His holy temple; the Lord's throne is in heaven;\n  His eyes behold, His eyelids test the sons of men.",
+                    prayer: "Father, thank You that You are on Your holy throne. Nothing escapes Your notice, and You remain sovereign over every situation in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-11-5",
+                    reference: "Psalm 11:5",
+                    text: "The Lord tests the righteous and the wicked,\n  And the one who loves violence His soul hates.",
+                    prayer: "Lord, examine my heart and reveal areas where I need to grow. Help me pursue righteousness and walk faithfully before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-11-6",
+                    reference: "Psalm 11:6",
+                    text: "Upon the wicked He will rain snares;\n  Fire and brimstone and burning wind will be the portion of their cup.",
+                    prayer: "Father, remind me that You are just and holy. Help me live with reverence for You and trust that You will deal rightly with all things."
+                ),
+                PrayerVerse(
+                    id: "psalm-11-7",
+                    reference: "Psalm 11:7",
+                    text: "For the Lord is righteous, He loves righteousness;\n  The upright will behold His face.",
+                    prayer: "Lord, because You are righteous, help me love what is right and pleasing in Your sight. Let my life reflect Your character and goodness each day."
+                ),
+                PrayerVerse(
+                    id: "psalm-11-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my refuge when life feels uncertain. Help me trust in Your sovereignty, remain grounded in Your truth, and walk faithfully before You. When fear or doubt arise, remind me that You are on the throne, watching over me with perfect wisdom, righteousness, and love.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 12,
             title: "Help, Lord",
             chapterReference: "Psalm 12",
             summary: "Pray for truth and protection from deceit.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-12-1",
+                    reference: "Psalm 12:1",
+                    text: "Help, Lord, for the godly man ceases to be,\n  For the faithful disappear from among the sons of men.",
+                    prayer: "Lord, when faithfulness seems rare and truth is difficult to find, help me remain devoted to You and steadfast in my walk with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-12-2",
+                    reference: "Psalm 12:2",
+                    text: "They speak falsehood to one another;\n  With flattering lips and with a double heart they speak.",
+                    prayer: "Father, guard my heart from deception and dishonesty. Help me speak truthfully and sincerely in all my relationships."
+                ),
+                PrayerVerse(
+                    id: "psalm-12-3",
+                    reference: "Psalm 12:3",
+                    text: "May the Lord cut off all flattering lips,\n  The tongue that speaks great things;",
+                    prayer: "Lord, protect me from prideful speech and selfish words. Teach me to use my tongue to encourage, uplift, and honor You."
+                ),
+                PrayerVerse(
+                    id: "psalm-12-4",
+                    reference: "Psalm 12:4",
+                    text: "Who have said, \"With our tongue we will prevail;\n  Our lips are our own; who is lord over us?\"",
+                    prayer: "Father, keep me from relying on my own strength or abilities. Remind me that every good thing I have comes from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-12-5",
+                    reference: "Psalm 12:5",
+                    text: "\"Because of the devastation of the afflicted, because of the groaning of the needy,\n  Now I will arise,\" says the Lord; \"I will set him in the safety for which he longs.\"",
+                    prayer: "Lord, thank You for seeing the struggles of the vulnerable and the oppressed. Help me reflect Your compassion and care toward those who are hurting."
+                ),
+                PrayerVerse(
+                    id: "psalm-12-6",
+                    reference: "Psalm 12:6",
+                    text: "The words of the Lord are pure words;\n  As silver tried in a furnace on the earth, refined seven times.",
+                    prayer: "Father, thank You that Your words are pure, trustworthy, and true. Help me build my life upon the foundation of Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-12-7",
+                    reference: "Psalm 12:7",
+                    text: "You, O Lord, will keep them;\n  You will preserve him from this generation forever.",
+                    prayer: "Lord, thank You for Your protection and faithfulness. Keep me secure in Your care and help me trust You through every season of life."
+                ),
+                PrayerVerse(
+                    id: "psalm-12-8",
+                    reference: "Psalm 12:8",
+                    text: "The wicked strut about on every side\n  When vileness is exalted among the sons of men.",
+                    prayer: "Father, even when the world celebrates what is wrong, help me stand firmly for truth, righteousness, and obedience to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-12-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for the truth and reliability of Your Word. In a world where faithfulness can be difficult to find, help me remain faithful to You. Guard my speech, strengthen my character, and help me walk in truth and integrity. Let my life reflect Your goodness and bring honor to Your name.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 13,
             title: "How Long?",
             chapterReference: "Psalm 13",
             summary: "Pray through seasons of waiting and darkness.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-13-1",
+                    reference: "Psalm 13:1",
+                    text: "How long, O Lord? Will You forget me forever?\n  How long will You hide Your face from me?",
+                    prayer: "Lord, when I feel forgotten or distant from Your presence, help me remember that You have never abandoned me and that Your love remains constant."
+                ),
+                PrayerVerse(
+                    id: "psalm-13-2",
+                    reference: "Psalm 13:2",
+                    text: "How long shall I take counsel in my soul,\n  Having sorrow in my heart all the day?\n  How long will my enemy be exalted over me?",
+                    prayer: "Father, when anxiety, confusion, or sorrow fill my heart, give me peace that surpasses understanding and help me trust Your plan."
+                ),
+                PrayerVerse(
+                    id: "psalm-13-3",
+                    reference: "Psalm 13:3",
+                    text: "Consider and answer me, O Lord my God;\n  Enlighten my eyes, or I will sleep the sleep of death,",
+                    prayer: "Lord, hear my prayer and open my eyes to Your faithfulness. Strengthen me when I feel weak and renew my hope in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-13-4",
+                    reference: "Psalm 13:4",
+                    text: "And my enemy will say, \"I have overcome him,\"\n  And my adversaries will rejoice when I am shaken.",
+                    prayer: "Father, do not let fear or discouragement gain victory over my heart. Help me stand firm in faith and confidence in Your promises."
+                ),
+                PrayerVerse(
+                    id: "psalm-13-5",
+                    reference: "Psalm 13:5",
+                    text: "But I have trusted in Your lovingkindness;\n  My heart shall rejoice in Your salvation.",
+                    prayer: "Lord, I trust in Your lovingkindness. Even when I cannot see the outcome, help me rest in Your unfailing mercy and grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-13-6",
+                    reference: "Psalm 13:6",
+                    text: "I will sing to the Lord,\n  Because He has dealt bountifully with me.",
+                    prayer: "Father, I will sing and rejoice because of Your goodness. Fill my heart with gratitude and help me remember all the ways You have blessed me."
+                ),
+                PrayerVerse(
+                    id: "psalm-13-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You that even when I struggle with doubt, fear, or waiting, Your love never fails. Help me trust in Your mercy, rejoice in Your salvation, and remember Your faithfulness through every season of life. Strengthen my heart, renew my hope, and teach me to praise You even while I wait for Your answers.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 14,
