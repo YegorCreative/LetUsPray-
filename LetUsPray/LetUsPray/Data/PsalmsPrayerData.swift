@@ -1359,7 +1359,104 @@ enum PsalmsPrayerData {
             title: "Hear a Just Cause",
             chapterReference: "Psalm 17",
             summary: "Pray for vindication and protection.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-17-1",
+                    reference: "Psalm 17:1",
+                    text: "Hear a just cause, O Lord, give heed to my cry;\n  Give ear to my prayer, which is not from deceitful lips.",
+                    prayer: "Lord, hear my prayer and listen to the cries of my heart. Help me approach You with sincerity, honesty, and faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-17-2",
+                    reference: "Psalm 17:2",
+                    text: "Let my judgment come forth from Your presence;\n  Let Your eyes look with equity.",
+                    prayer: "Father, I place my life before You. Let Your wisdom guide me and Your righteousness direct my steps."
+                ),
+                PrayerVerse(
+                    id: "psalm-17-3",
+                    reference: "Psalm 17:3",
+                    text: "You have tried my heart;\n  You have visited me by night;\n  You have tested me and You find nothing;\n  I have purposed that my mouth will not transgress.",
+                    prayer: "Lord, search my heart and examine my thoughts. Reveal anything within me that needs to change and help me grow in holiness."
+                ),
+                PrayerVerse(
+                    id: "psalm-17-4",
+                    reference: "Psalm 17:4",
+                    text: "As for the deeds of men, by the word of Your lips\n  I have kept from the paths of the violent.",
+                    prayer: "Father, protect me from paths that lead to sin and destruction. Strengthen me to walk according to Your Word and Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-17-5",
+                    reference: "Psalm 17:5",
+                    text: "My steps have held fast to Your paths.\n  My feet have not slipped.",
+                    prayer: "Lord, establish my steps and keep me from stumbling. Help me remain faithful and steady in my walk with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-17-6",
+                    reference: "Psalm 17:6",
+                    text: "I have called upon You, for You will answer me, O God;\n  Incline Your ear to me, hear my speech.",
+                    prayer: "Father, thank You that I can call upon You and know that You hear me. Increase my confidence in Your faithfulness and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-17-7",
+                    reference: "Psalm 17:7",
+                    text: "Wondrously show Your lovingkindness,\n  O Savior of those who take refuge at Your right hand\n  From those who rise up against them.",
+                    prayer: "Lord, display the wonders of Your lovingkindness in my life. Let Your mercy and grace be evident in every circumstance I face."
+                ),
+                PrayerVerse(
+                    id: "psalm-17-8",
+                    reference: "Psalm 17:8",
+                    text: "Keep me as the apple of the eye;\n  Hide me in the shadow of Your wings",
+                    prayer: "Father, keep me as the apple of Your eye and hide me under the shadow of Your wings. Help me rest securely in Your protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-17-9",
+                    reference: "Psalm 17:9",
+                    text: "From the wicked who despoil me,\n  My deadly enemies who surround me.",
+                    prayer: "Lord, defend me from spiritual attacks, temptation, and anything that seeks to draw me away from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-17-10",
+                    reference: "Psalm 17:10",
+                    text: "They have closed their unfeeling heart,\n  With their mouth they speak proudly.",
+                    prayer: "Father, guard my heart from pride and selfishness. Teach me humility and dependence upon Your grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-17-11",
+                    reference: "Psalm 17:11",
+                    text: "They have now surrounded us in our steps;\n  They set their eyes to cast us down to the ground.",
+                    prayer: "Lord, when I feel surrounded by difficulties, remind me that You are near and that nothing can separate me from Your love."
+                ),
+                PrayerVerse(
+                    id: "psalm-17-12",
+                    reference: "Psalm 17:12",
+                    text: "He is like a lion that is eager to tear,\n  And as a young lion lurking in hiding places.",
+                    prayer: "Father, strengthen me when I face opposition or fear. Help me trust that You are greater than every challenge before me."
+                ),
+                PrayerVerse(
+                    id: "psalm-17-13",
+                    reference: "Psalm 17:13",
+                    text: "Arise, O Lord, confront him, bring him low;\n  Deliver my soul from the wicked with Your sword,",
+                    prayer: "Lord, arise and be my defender. Fight the battles I cannot fight on my own and give me victory according to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-17-14",
+                    reference: "Psalm 17:14",
+                    text: "From men with Your hand, O Lord,\n  From men of the world, whose portion is in this life,\n  And whose belly You fill with Your treasure;\n  They are satisfied with children,\n  And leave their abundance to their babes.",
+                    prayer: "Father, help me value eternal treasures above earthly possessions. Let my heart be focused on Your kingdom rather than temporary things."
+                ),
+                PrayerVerse(
+                    id: "psalm-17-15",
+                    reference: "Psalm 17:15",
+                    text: "As for me, I shall behold Your face in righteousness;\n  I will be satisfied with Your likeness when I awake.",
+                    prayer: "Lord, my greatest desire is to be in Your presence. Continue transforming me into Your likeness and satisfy my soul with Your love."
+                ),
+                PrayerVerse(
+                    id: "psalm-17-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing my prayers, protecting me, and guiding my steps. Search my heart, keep me close to You, and help me walk faithfully in Your ways. When challenges arise, remind me that I am secure in Your care and that my greatest joy is found in Your presence. Transform me daily into the person You have called me to be.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 18,
