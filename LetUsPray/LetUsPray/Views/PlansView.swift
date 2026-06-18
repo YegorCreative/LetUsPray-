@@ -10,7 +10,7 @@ struct PlansView: View {
     @State private var showPsalmsOverview = false
     
     private func isPsalmsCollection(_ plan: PrayerPlan) -> Bool {
-        plan.id.starts(with: "psalms-")
+        plan.category == .psalms
     }
 
     var body: some View {

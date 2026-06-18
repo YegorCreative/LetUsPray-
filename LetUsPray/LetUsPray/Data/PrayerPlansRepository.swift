@@ -1,19 +1,22 @@
 import Foundation
 
 enum PrayerPlansRepository {
+    // Main Psalms Journey entry point (just for display in Plans list)
+    private static let psalmsJourneyEntry = PrayerPlan(
+        id: "psalms-journey-overview",
+        title: "Psalms Journey",
+        subtitle: "Explore 10 collections of worship and prayer",
+        description: "A complete journey through all 150 Psalms, organized into 10 collections of 15 psalms each. Choose any collection to begin.",
+        category: .psalms,
+        durationDays: 150,
+        accentColorName: "psalms",
+        coverIcon: "music.note.list",
+        days: []
+    )
+    
     static let allPlans: [PrayerPlan] = [
         ProverbsPrayerData.plan,
-        // Psalms collections (10 groups of 15 psalms each)
-        PsalmsPrayerData.collection1,
-        PsalmsPrayerData.collection2,
-        PsalmsPrayerData.collection3,
-        PsalmsPrayerData.collection4,
-        PsalmsPrayerData.collection5,
-        PsalmsPrayerData.collection6,
-        PsalmsPrayerData.collection7,
-        PsalmsPrayerData.collection8,
-        PsalmsPrayerData.collection9,
-        PsalmsPrayerData.collection10,
+        psalmsJourneyEntry,
         PrayerPlan(
             id: "gospel-of-john",
             title: "Gospel of John",
@@ -51,10 +54,20 @@ enum PrayerPlansRepository {
 
     static let featuredPlans: [PrayerPlan] = [
         ProverbsPrayerData.plan,
-        PsalmsPrayerData.collection1
+        psalmsJourneyEntry
     ]
 
     static func planByID(_ id: String) -> PrayerPlan? {
-        allPlans.first(where: { $0.id == id })
+        // First check the main plans list
+        if let plan = allPlans.first(where: { $0.id == id }) {
+            return plan
+        }
+        
+        // If not found, check Psalm collections
+        if id.starts(with: "psalms-") {
+            return PsalmsPrayerData.allCollections.first(where: { $0.id == id })
+        }
+        
+        return nil
     }
 }

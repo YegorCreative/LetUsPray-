@@ -135,272 +135,36 @@ enum PsalmsPrayerData {
         collection1, collection2, collection3, collection4, collection5,
         collection6, collection7, collection8, collection9, collection10
     ]
-    
-    // Legacy single plan (for backward compatibility)
-    static let plan = collection1
-    
+
     // MARK: - Psalms 1-15
     private static let psalms1to15: [PrayerDay] = [
-        // Book I: Psalms 1-15
         PrayerDay(
             dayNumber: 1,
             title: "Blessed is the One",
             chapterReference: "Psalm 1",
             summary: "Pray for delight in God's Word and fruitfulness in life.",
-            verses: [
-                PrayerVerse(
-                    id: "psalm-1-1",
-                    reference: "Psalm 1:1",
-                    text: "How blessed is the man who does not walk in the counsel of the wicked,\n  Nor stand in the path of sinners,\n  Nor sit in the seat of scoffers!",
-                    prayer: "Lord, keep me from walking in the counsel of the wicked. Guard my heart from voices, habits, and influences that pull me away from You. Teach me to choose Your path with wisdom and courage."
-                ),
-                PrayerVerse(
-                    id: "psalm-1-2",
-                    reference: "Psalm 1:2",
-                    text: "But his delight is in the law of the Lord,\n  And in His law he meditates day and night.",
-                    prayer: "Father, give me delight in Your Word. Let Scripture become the place where my soul finds direction, comfort, correction, and joy. Help me meditate on Your truth day and night."
-                ),
-                PrayerVerse(
-                    id: "psalm-1-3",
-                    reference: "Psalm 1:3",
-                    text: "He will be like a tree firmly planted by streams of water,\n  Which yields its fruit in its season\n  And its leaf does not wither;\n  And in whatever he does, he prospers.",
-                    prayer: "Lord, make my life like a tree planted by streams of water. Let my roots grow deep in You, and let my life bear fruit in the right season. Strengthen me so I do not wither when life feels dry or difficult."
-                ),
-                PrayerVerse(
-                    id: "psalm-1-4",
-                    reference: "Psalm 1:4",
-                    text: "The wicked are not so,\n  But they are like chaff which the wind drives away.",
-                    prayer: "Father, do not let my life become empty or unstable like chaff blown by the wind. Anchor me in righteousness, humility, and obedience so I am not carried away by temptation or pride."
-                ),
-                PrayerVerse(
-                    id: "psalm-1-5",
-                    reference: "Psalm 1:5",
-                    text: "Therefore the wicked will not stand in the judgment,\n  Nor sinners in the assembly of the righteous.",
-                    prayer: "Lord, prepare me to stand before You with a clean heart. Lead me away from sin and into the gathering of the righteous. Let my life reflect that I belong to You."
-                ),
-                PrayerVerse(
-                    id: "psalm-1-6",
-                    reference: "Psalm 1:6",
-                    text: "For the Lord knows the way of the righteous,\n  But the way of the wicked will perish.",
-                    prayer: "Father, thank You that You know the way of the righteous. Guide my steps, protect my path, and keep me close to You. Let my life follow the way that leads to blessing, peace, and eternal life."
-                ),
-                PrayerVerse(
-                    id: "psalm-1-closing",
-                    reference: "Closing",
-                    text: "Lord, let Psalm 1 become the foundation of my walk with You. Teach me to reject what leads me away from You and delight in what brings me closer to You. Plant me deeply in Your Word, make my life fruitful, and keep my path steady in Your presence.",
-                    prayer: "In Jesus' name, Amen. 🙏🏻"
-                )
-            ]
+            verses: []
         ),
         PrayerDay(
             dayNumber: 2,
             title: "The Lord's Anointed",
             chapterReference: "Psalm 2",
             summary: "Pray for submission to God's sovereignty and trust in His Son.",
-            verses: [
-                PrayerVerse(
-                    id: "psalm-2-1",
-                    reference: "Psalm 2:1",
-                    text: "Why are the nations in an uproar\n  And the peoples devising a vain thing?",
-                    prayer: "Lord, when the world rebels against You and follows its own ways, help me remain faithful. Keep my heart focused on Your truth rather than the confusion and pride around me."
-                ),
-                PrayerVerse(
-                    id: "psalm-2-2",
-                    reference: "Psalm 2:2",
-                    text: "The kings of the earth take their stand\n  And the rulers take counsel together\n  Against the Lord and against His Anointed, saying,",
-                    prayer: "Father, even when leaders and people oppose Your will, remind me that Your authority stands forever. Help me trust Your kingdom above every earthly power."
-                ),
-                PrayerVerse(
-                    id: "psalm-2-3",
-                    reference: "Psalm 2:3",
-                    text: "\"Let us tear their fetters apart\n  And cast away their cords from us!\"",
-                    prayer: "Lord, protect me from the temptation to resist Your guidance. Teach me to see Your commands not as burdens, but as loving direction that leads to freedom and life."
-                ),
-                PrayerVerse(
-                    id: "psalm-2-4",
-                    reference: "Psalm 2:4",
-                    text: "He who sits in the heavens laughs,\n  The Lord scoffs at them.",
-                    prayer: "Father, thank You that nothing surprises You. When circumstances seem out of control, help me remember that You remain seated on the throne, sovereign over all things."
-                ),
-                PrayerVerse(
-                    id: "psalm-2-5",
-                    reference: "Psalm 2:5",
-                    text: "Then He will speak to them in His anger\n  And terrify them in His fury, saying,",
-                    prayer: "Lord, give me a healthy reverence for Your holiness. Help me take Your Word seriously and live in a way that honors and pleases You."
-                ),
-                PrayerVerse(
-                    id: "psalm-2-6",
-                    reference: "Psalm 2:6",
-                    text: "\"But as for Me, I have installed My King\n  Upon Zion, My holy mountain.\"",
-                    prayer: "Father, thank You for establishing Your King. Help me willingly submit my life to Your rule and trust the plans You have ordained from the beginning."
-                ),
-                PrayerVerse(
-                    id: "psalm-2-7",
-                    reference: "Psalm 2:7",
-                    text: "\"I will surely tell of the decree of the Lord:\n  He said to Me, 'You are My Son,\n  Today I have begotten You.\"",
-                    prayer: "Lord Jesus, thank You for being the Son of God. Strengthen my faith in You and help me live as Your disciple, following You with love, obedience, and devotion."
-                ),
-                PrayerVerse(
-                    id: "psalm-2-8",
-                    reference: "Psalm 2:8",
-                    text: "Ask of Me, and I will surely give the nations as Your inheritance,\n  And the very ends of the earth as Your possession.",
-                    prayer: "Father, thank You that all nations belong to You. Let Your kingdom grow throughout the earth, and help me be a faithful witness wherever You place me."
-                ),
-                PrayerVerse(
-                    id: "psalm-2-9",
-                    reference: "Psalm 2:9",
-                    text: "You shall break them with a rod of iron,\n  You shall shatter them like earthenware.'",
-                    prayer: "Lord, remind me of Your power and justice. Help me walk humbly before You, knowing that You alone are the righteous Judge over all creation."
-                ),
-                PrayerVerse(
-                    id: "psalm-2-10",
-                    reference: "Psalm 2:10",
-                    text: "Now therefore, O kings, show discernment;\n  Take warning, O judges of the earth.",
-                    prayer: "Father, grant me wisdom. Help me make decisions that honor You and reflect the truth of Your Word in every area of my life."
-                ),
-                PrayerVerse(
-                    id: "psalm-2-11",
-                    reference: "Psalm 2:11",
-                    text: "Worship the Lord with reverence\n  And rejoice with trembling.",
-                    prayer: "Lord, teach me to serve You with reverence and joy. Let my worship be sincere, my obedience wholehearted, and my heart filled with gratitude."
-                ),
-                PrayerVerse(
-                    id: "psalm-2-12",
-                    reference: "Psalm 2:12",
-                    text: "Do homage to the Son, that He not become angry, and you perish in the way,\n  For His wrath may soon be kindled.\n  How blessed are all who take refuge in Him!",
-                    prayer: "Father, I place my trust in Your Son. Thank You for the refuge, mercy, and salvation found in Jesus Christ. Keep me close to Him and strengthen my confidence in His unfailing love."
-                ),
-                PrayerVerse(
-                    id: "psalm-2-closing",
-                    reference: "Closing",
-                    text: "Lord, thank You for reminding me that You reign over every nation, every ruler, and every circumstance. Help me walk in wisdom, humility, and obedience before You. May I trust fully in Jesus, serve You with joy, and find my refuge in Your eternal kingdom.",
-                    prayer: "In Jesus' name, Amen. 🙏🏻"
-                )
-            ]
+            verses: []
         ),
         PrayerDay(
             dayNumber: 3,
             title: "Shield Around Me",
             chapterReference: "Psalm 3",
             summary: "Pray for peace and protection in times of trouble.",
-            verses: [
-                PrayerVerse(
-                    id: "psalm-3-1",
-                    reference: "Psalm 3:1",
-                    text: "O Lord, how my adversaries have increased!\n  Many are rising up against me.",
-                    prayer: "Lord, when troubles increase around me and opposition rises against me, help me remember that You are greater than every challenge I face."
-                ),
-                PrayerVerse(
-                    id: "psalm-3-2",
-                    reference: "Psalm 3:2",
-                    text: "Many are saying of my soul,\n  \"There is no deliverance for him in God.\" Selah.",
-                    prayer: "Father, when others doubt, criticize, or question Your work in my life, help me place my confidence in You rather than the opinions of people."
-                ),
-                PrayerVerse(
-                    id: "psalm-3-3",
-                    reference: "Psalm 3:3",
-                    text: "But You, O Lord, are a shield about me,\n  My glory, and the One who lifts my head.",
-                    prayer: "Lord, thank You for being my shield and protector. You are my glory and the One who lifts my head when I feel discouraged, defeated, or weary."
-                ),
-                PrayerVerse(
-                    id: "psalm-3-4",
-                    reference: "Psalm 3:4",
-                    text: "I was crying to the Lord with my voice,\n  And He answered me from His holy mountain. Selah.",
-                    prayer: "Father, thank You for hearing my prayers. Give me confidence that when I call upon You, You listen and respond according to Your perfect will."
-                ),
-                PrayerVerse(
-                    id: "psalm-3-5",
-                    reference: "Psalm 3:5",
-                    text: "I lay down and slept;\n  I awoke, for the Lord sustains me.",
-                    prayer: "Lord, thank You for the peace that comes from trusting You. Help me rest without fear, knowing that You watch over me day and night."
-                ),
-                PrayerVerse(
-                    id: "psalm-3-6",
-                    reference: "Psalm 3:6",
-                    text: "I will not be afraid of ten thousands of people\n  Who have set themselves against me round about.",
-                    prayer: "Father, remove fear from my heart. Even when difficulties surround me on every side, help me stand firm in faith and trust Your protection."
-                ),
-                PrayerVerse(
-                    id: "psalm-3-7",
-                    reference: "Psalm 3:7",
-                    text: "Arise, O Lord; save me, O my God!\n  For You have smitten all my enemies on the cheek;\n  You have shattered the teeth of the wicked.",
-                    prayer: "Lord, arise and deliver me from every battle I cannot fight alone. Be my defender, my strength, and my source of victory in every season."
-                ),
-                PrayerVerse(
-                    id: "psalm-3-8",
-                    reference: "Psalm 3:8",
-                    text: "Salvation belongs to the Lord;\n  Your blessing be upon Your people! Selah.",
-                    prayer: "Father, salvation belongs to You alone. Thank You for Your blessing, mercy, and faithfulness. Let Your favor rest upon my life and help me walk confidently in Your care."
-                ),
-                PrayerVerse(
-                    id: "psalm-3-closing",
-                    reference: "Closing",
-                    text: "Lord, thank You for being my shield, my protector, and my source of peace. When challenges come, help me trust in Your power rather than my fears. Remind me that You hear my prayers, sustain me through every trial, and provide the victory that only You can give.",
-                    prayer: "In Jesus' name, Amen. 🙏🏻"
-                )
-            ]
+            verses: []
         ),
         PrayerDay(
             dayNumber: 4,
             title: "Answer When I Call",
             chapterReference: "Psalm 4",
             summary: "Pray for confidence in God's faithfulness.",
-            verses: [
-                PrayerVerse(
-                    id: "psalm-4-1",
-                    reference: "Psalm 4:1",
-                    text: "Answer me when I call, O God of my righteousness!\n  You have relieved me in my distress;\n  Be gracious to me and hear my prayer.",
-                    prayer: "Lord, when I call to You, hear my prayer. In times of trouble and distress, remind me that You are my righteousness and my source of mercy."
-                ),
-                PrayerVerse(
-                    id: "psalm-4-2",
-                    reference: "Psalm 4:2",
-                    text: "O sons of men, how long will my honor become a reproach?\n  How long will you love what is worthless and aim at deception? Selah.",
-                    prayer: "Father, keep me from pursuing empty things that have no eternal value. Help me seek truth, purpose, and a life that honors You."
-                ),
-                PrayerVerse(
-                    id: "psalm-4-3",
-                    reference: "Psalm 4:3",
-                    text: "But know that the Lord has set apart the godly man for Himself;\n  The Lord hears when I call to Him.",
-                    prayer: "Lord, thank You for setting apart those who belong to You. Help me live as Your child and trust that You hear me whenever I call upon You."
-                ),
-                PrayerVerse(
-                    id: "psalm-4-4",
-                    reference: "Psalm 4:4",
-                    text: "Tremble, and do not sin;\n  Meditate in your heart upon your bed, and be still. Selah.",
-                    prayer: "Father, teach me to respond to challenges without sin. Search my heart, quiet my thoughts, and help me rest in Your wisdom."
-                ),
-                PrayerVerse(
-                    id: "psalm-4-5",
-                    reference: "Psalm 4:5",
-                    text: "Offer the sacrifices of righteousness,\n  And trust in the Lord.",
-                    prayer: "Lord, let my worship be sincere and pleasing to You. Help me place my trust fully in You and offer my life as a living sacrifice of praise."
-                ),
-                PrayerVerse(
-                    id: "psalm-4-6",
-                    reference: "Psalm 4:6",
-                    text: "Many are saying, \"Who will show us any good?\"\n  Lift up the light of Your countenance upon us, O Lord!",
-                    prayer: "Father, when I am tempted to seek happiness in worldly things, remind me that true blessing comes from Your presence and favor."
-                ),
-                PrayerVerse(
-                    id: "psalm-4-7",
-                    reference: "Psalm 4:7",
-                    text: "You have put gladness in my heart,\n  More than when their grain and new wine abound.",
-                    prayer: "Lord, fill my heart with joy that surpasses every earthly success or possession. Let Your peace and gladness overflow within me."
-                ),
-                PrayerVerse(
-                    id: "psalm-4-8",
-                    reference: "Psalm 4:8",
-                    text: "In peace I will both lie down and sleep,\n  For You alone, O Lord, make me to dwell in safety.",
-                    prayer: "Father, thank You for the security found in You alone. Help me lie down and sleep in peace, knowing that You watch over me and keep me safe."
-                ),
-                PrayerVerse(
-                    id: "psalm-4-closing",
-                    reference: "Closing",
-                    text: "Lord, thank You for hearing my prayers and surrounding me with Your peace. Help me trust You more deeply, seek Your presence above all else, and rest securely in Your care. Fill my heart with lasting joy and teach me to walk faithfully with You each day.",
-                    prayer: "In Jesus' name, Amen. 🙏🏻"
-                )
-            ]
+            verses: []
         ),
         PrayerDay(
             dayNumber: 5,
@@ -480,109 +244,109 @@ enum PsalmsPrayerData {
             verses: []
         )
     ]
-    
+
     // MARK: - Psalms 16-30
     private static let psalms16to30: [PrayerDay] = [
         PrayerDay(
-            dayNumber: 16,
+            dayNumber: 1,
             title: "You Are My Lord",
             chapterReference: "Psalm 16",
             summary: "Pray for joy and security in God alone.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 17,
+            dayNumber: 2,
             title: "Hear a Just Cause",
             chapterReference: "Psalm 17",
             summary: "Pray for vindication and protection.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 18,
+            dayNumber: 3,
             title: "I Love You, Lord",
             chapterReference: "Psalm 18",
             summary: "Pray in gratitude for God's deliverance and strength.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 19,
+            dayNumber: 4,
             title: "The Heavens Declare",
             chapterReference: "Psalm 19",
             summary: "Pray in awe of God's creation and Word.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 20,
+            dayNumber: 5,
             title: "May the Lord Answer",
             chapterReference: "Psalm 20",
             summary: "Pray for trust in God's name and strength.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 21,
+            dayNumber: 6,
             title: "The King Rejoices",
             chapterReference: "Psalm 21",
             summary: "Pray with gratitude for God's blessings and faithfulness.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 22,
+            dayNumber: 7,
             title: "My God, My God",
             chapterReference: "Psalm 22",
             summary: "Pray through suffering with hope in God's deliverance.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 23,
+            dayNumber: 8,
             title: "The Lord is My Shepherd",
             chapterReference: "Psalm 23",
             summary: "Pray for peace and trust in God's provision.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 24,
+            dayNumber: 9,
             title: "Lift Up Your Heads",
             chapterReference: "Psalm 24",
             summary: "Pray in worship of the King of glory.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 25,
+            dayNumber: 10,
             title: "To You, O Lord",
             chapterReference: "Psalm 25",
             summary: "Pray for guidance and forgiveness.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 26,
+            dayNumber: 11,
             title: "Vindicate Me",
             chapterReference: "Psalm 26",
             summary: "Pray for integrity and faithfulness.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 27,
+            dayNumber: 12,
             title: "The Lord is My Light",
             chapterReference: "Psalm 27",
             summary: "Pray for courage and confidence in God's presence.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 28,
+            dayNumber: 13,
             title: "To You I Call",
             chapterReference: "Psalm 28",
             summary: "Pray for God to hear and deliver.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 29,
+            dayNumber: 14,
             title: "Ascribe to the Lord",
             chapterReference: "Psalm 29",
             summary: "Pray in worship of God's powerful voice.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 30,
+            dayNumber: 15,
             title: "You Lifted Me Up",
             chapterReference: "Psalm 30",
             summary: "Pray in thanksgiving for God's healing and restoration.",
@@ -593,105 +357,105 @@ enum PsalmsPrayerData {
     // MARK: - Psalms 31-45
     private static let psalms31to45: [PrayerDay] = [
         PrayerDay(
-            dayNumber: 31,
+            dayNumber: 1,
             title: "Into Your Hands",
             chapterReference: "Psalm 31",
             summary: "Pray for trust and refuge in times of distress.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 32,
+            dayNumber: 2,
             title: "Blessed is the Forgiven",
             chapterReference: "Psalm 32",
             summary: "Pray for confession and forgiveness.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 33,
+            dayNumber: 3,
             title: "Sing Joyfully",
             chapterReference: "Psalm 33",
             summary: "Pray in praise of God's faithfulness and creation.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 34,
+            dayNumber: 4,
             title: "Taste and See",
             chapterReference: "Psalm 34",
             summary: "Pray for trust in God's goodness and deliverance.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 35,
+            dayNumber: 5,
             title: "Contend for Me",
             chapterReference: "Psalm 35",
             summary: "Pray for God's defense and vindication.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 36,
+            dayNumber: 6,
             title: "Your Love Reaches",
             chapterReference: "Psalm 36",
             summary: "Pray in awe of God's unfailing love.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 37,
+            dayNumber: 7,
             title: "Do Not Fret",
             chapterReference: "Psalm 37",
             summary: "Pray for patience and trust in God's timing.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 38,
+            dayNumber: 8,
             title: "Do Not Forsake Me",
             chapterReference: "Psalm 38",
             summary: "Pray for healing and God's presence in suffering.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 39,
+            dayNumber: 9,
             title: "Show Me My End",
             chapterReference: "Psalm 39",
             summary: "Pray for perspective and hope.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 40,
+            dayNumber: 10,
             title: "I Waited Patiently",
             chapterReference: "Psalm 40",
             summary: "Pray with gratitude for answered prayer.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 41,
+            dayNumber: 11,
             title: "Blessed is He Who Cares",
             chapterReference: "Psalm 41",
             summary: "Pray for compassion and healing.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 42,
+            dayNumber: 12,
             title: "As the Deer Pants",
             chapterReference: "Psalm 42",
             summary: "Pray for deep longing and hope in God.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 43,
+            dayNumber: 13,
             title: "Send Your Light",
             chapterReference: "Psalm 43",
             summary: "Pray for guidance and vindication.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 44,
+            dayNumber: 14,
             title: "In God We Make Our Boast",
             chapterReference: "Psalm 44",
             summary: "Pray for trust in God despite difficulties.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 45,
+            dayNumber: 15,
             title: "My Heart Overflows",
             chapterReference: "Psalm 45",
             summary: "Pray in worship of the King.",
@@ -702,105 +466,105 @@ enum PsalmsPrayerData {
     // MARK: - Psalms 46-60
     private static let psalms46to60: [PrayerDay] = [
         PrayerDay(
-            dayNumber: 46,
+            dayNumber: 1,
             title: "God is Our Refuge",
             chapterReference: "Psalm 46",
             summary: "Pray for strength and peace in chaos.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 47,
+            dayNumber: 2,
             title: "Clap Your Hands",
             chapterReference: "Psalm 47",
             summary: "Pray in joyful worship of God's kingship.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 48,
+            dayNumber: 3,
             title: "Great is the Lord",
             chapterReference: "Psalm 48",
             summary: "Pray in praise of God's greatness.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 49,
+            dayNumber: 4,
             title: "Why Should I Fear?",
             chapterReference: "Psalm 49",
             summary: "Pray for wisdom about wealth and eternity.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 50,
+            dayNumber: 5,
             title: "The Mighty One Speaks",
             chapterReference: "Psalm 50",
             summary: "Pray for true worship and gratitude.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 51,
+            dayNumber: 6,
             title: "Create in Me a Clean Heart",
             chapterReference: "Psalm 51",
             summary: "Pray for repentance and restoration.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 52,
+            dayNumber: 7,
             title: "God Will Bring You Down",
             chapterReference: "Psalm 52",
             summary: "Pray for trust in God's justice.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 53,
+            dayNumber: 8,
             title: "Who Will Bring Salvation?",
             chapterReference: "Psalm 53",
             summary: "Pray for God's deliverance.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 54,
+            dayNumber: 9,
             title: "Save Me by Your Name",
             chapterReference: "Psalm 54",
             summary: "Pray for God's powerful help.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 55,
+            dayNumber: 10,
             title: "Cast Your Cares",
             chapterReference: "Psalm 55",
             summary: "Pray for peace in betrayal and pain.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 56,
+            dayNumber: 11,
             title: "When I Am Afraid",
             chapterReference: "Psalm 56",
             summary: "Pray for trust over fear.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 57,
+            dayNumber: 12,
             title: "My Heart is Steadfast",
             chapterReference: "Psalm 57",
             summary: "Pray for confidence in God's mercy.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 58,
+            dayNumber: 13,
             title: "Do You Judge Uprightly?",
             chapterReference: "Psalm 58",
             summary: "Pray for God's righteous judgment.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 59,
+            dayNumber: 14,
             title: "Deliver Me from Enemies",
             chapterReference: "Psalm 59",
             summary: "Pray for protection and deliverance.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 60,
+            dayNumber: 15,
             title: "You Have Rejected Us",
             chapterReference: "Psalm 60",
             summary: "Pray for restoration and victory.",
@@ -811,105 +575,105 @@ enum PsalmsPrayerData {
     // MARK: - Psalms 61-75
     private static let psalms61to75: [PrayerDay] = [
         PrayerDay(
-            dayNumber: 61,
+            dayNumber: 1,
             title: "Hear My Cry",
             chapterReference: "Psalm 61",
             summary: "Pray for refuge and security in God.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 62,
+            dayNumber: 2,
             title: "My Soul Finds Rest",
             chapterReference: "Psalm 62",
             summary: "Pray for quiet trust in God alone.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 63,
+            dayNumber: 3,
             title: "You Are My God",
             chapterReference: "Psalm 63",
             summary: "Pray for earnest seeking after God.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 64,
+            dayNumber: 4,
             title: "Protect Me from the Wicked",
             chapterReference: "Psalm 64",
             summary: "Pray for God's shield against evil.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 65,
+            dayNumber: 5,
             title: "Praise Awaits You",
             chapterReference: "Psalm 65",
             summary: "Pray in gratitude for God's provision.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 66,
+            dayNumber: 6,
             title: "Shout for Joy",
             chapterReference: "Psalm 66",
             summary: "Pray in celebration of God's awesome deeds.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 67,
+            dayNumber: 7,
             title: "May God Be Gracious",
             chapterReference: "Psalm 67",
             summary: "Pray for God's blessing and salvation for all.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 68,
+            dayNumber: 8,
             title: "Let God Arise",
             chapterReference: "Psalm 68",
             summary: "Pray in worship of God's mighty power.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 69,
+            dayNumber: 9,
             title: "Save Me, O God",
             chapterReference: "Psalm 69",
             summary: "Pray for deliverance in overwhelming distress.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 70,
+            dayNumber: 10,
             title: "Hasten to Help Me",
             chapterReference: "Psalm 70",
             summary: "Pray for urgent help from God.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 71,
+            dayNumber: 11,
             title: "You Are My Hope",
             chapterReference: "Psalm 71",
             summary: "Pray for lifelong trust in God.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 72,
+            dayNumber: 12,
             title: "Endow the King",
             chapterReference: "Psalm 72",
             summary: "Pray for righteous leadership and justice.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 73,
+            dayNumber: 13,
             title: "Who Have I But You?",
             chapterReference: "Psalm 73",
             summary: "Pray for perspective when the wicked prosper.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 74,
+            dayNumber: 14,
             title: "Remember Your Congregation",
             chapterReference: "Psalm 74",
             summary: "Pray for God's intervention and restoration.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 75,
+            dayNumber: 15,
             title: "We Give Thanks",
             chapterReference: "Psalm 75",
             summary: "Pray in gratitude for God's judgment.",
@@ -920,105 +684,105 @@ enum PsalmsPrayerData {
     // MARK: - Psalms 76-90
     private static let psalms76to90: [PrayerDay] = [
         PrayerDay(
-            dayNumber: 76,
+            dayNumber: 1,
             title: "You Are Resplendent",
             chapterReference: "Psalm 76",
             summary: "Pray in awe of God's majesty.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 77,
+            dayNumber: 2,
             title: "I Cried to God",
             chapterReference: "Psalm 77",
             summary: "Pray for remembrance of God's faithfulness.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 78,
+            dayNumber: 3,
             title: "Tell the Next Generation",
             chapterReference: "Psalm 78",
             summary: "Pray for faithfulness in teaching God's ways.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 79,
+            dayNumber: 4,
             title: "Help Us, O God",
             chapterReference: "Psalm 79",
             summary: "Pray for mercy and deliverance.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 80,
+            dayNumber: 5,
             title: "Restore Us",
             chapterReference: "Psalm 80",
             summary: "Pray for renewal and God's favor.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 81,
+            dayNumber: 6,
             title: "Sing for Joy",
             chapterReference: "Psalm 81",
             summary: "Pray for obedience and celebration.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 82,
+            dayNumber: 7,
             title: "Defend the Weak",
             chapterReference: "Psalm 82",
             summary: "Pray for justice and righteousness.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 83,
+            dayNumber: 8,
             title: "Do Not Keep Silent",
             chapterReference: "Psalm 83",
             summary: "Pray for God to act against enemies.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 84,
+            dayNumber: 9,
             title: "How Lovely is Your Dwelling",
             chapterReference: "Psalm 84",
             summary: "Pray for love of God's presence.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 85,
+            dayNumber: 10,
             title: "Show Us Your Mercy",
             chapterReference: "Psalm 85",
             summary: "Pray for revival and God's favor.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 86,
+            dayNumber: 11,
             title: "Teach Me Your Way",
             chapterReference: "Psalm 86",
             summary: "Pray for guidance and a undivided heart.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 87,
+            dayNumber: 12,
             title: "Glorious Things",
             chapterReference: "Psalm 87",
             summary: "Pray in celebration of God's city.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 88,
+            dayNumber: 13,
             title: "Darkness is My Friend",
             chapterReference: "Psalm 88",
             summary: "Pray honestly through deep despair.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 89,
+            dayNumber: 14,
             title: "I Will Sing of Your Love",
             chapterReference: "Psalm 89",
             summary: "Pray for trust in God's covenant faithfulness.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 90,
+            dayNumber: 15,
             title: "Teach Us to Number Our Days",
             chapterReference: "Psalm 90",
             summary: "Pray for wisdom about the brevity of life.",
@@ -1029,105 +793,105 @@ enum PsalmsPrayerData {
     // MARK: - Psalms 91-105
     private static let psalms91to105: [PrayerDay] = [
         PrayerDay(
-            dayNumber: 91,
+            dayNumber: 1,
             title: "Under His Wings",
             chapterReference: "Psalm 91",
             summary: "Pray for protection and refuge.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 92,
+            dayNumber: 2,
             title: "It is Good to Praise",
             chapterReference: "Psalm 92",
             summary: "Pray in thanksgiving for God's works.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 93,
+            dayNumber: 3,
             title: "The Lord Reigns",
             chapterReference: "Psalm 93",
             summary: "Pray in worship of God's sovereign rule.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 94,
+            dayNumber: 4,
             title: "God of Vengeance",
             chapterReference: "Psalm 94",
             summary: "Pray for God's justice and discipline.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 95,
+            dayNumber: 5,
             title: "Come, Let Us Worship",
             chapterReference: "Psalm 95",
             summary: "Pray with a heart of worship and obedience.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 96,
+            dayNumber: 6,
             title: "Sing to the Lord",
             chapterReference: "Psalm 96",
             summary: "Pray in joyful praise of God's glory.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 97,
+            dayNumber: 7,
             title: "The Lord Reigns, Let the Earth Rejoice",
             chapterReference: "Psalm 97",
             summary: "Pray in celebration of God's righteous reign.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 98,
+            dayNumber: 8,
             title: "A New Song",
             chapterReference: "Psalm 98",
             summary: "Pray with joy for God's salvation.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 99,
+            dayNumber: 9,
             title: "Holy is He",
             chapterReference: "Psalm 99",
             summary: "Pray in reverence of God's holiness.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 100,
+            dayNumber: 10,
             title: "Shout for Joy",
             chapterReference: "Psalm 100",
             summary: "Pray with thanksgiving and gladness.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 101,
+            dayNumber: 11,
             title: "I Will Walk in Integrity",
             chapterReference: "Psalm 101",
             summary: "Pray for blameless living.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 102,
+            dayNumber: 12,
             title: "Hear My Prayer",
             chapterReference: "Psalm 102",
             summary: "Pray for comfort in affliction.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 103,
+            dayNumber: 13,
             title: "Praise the Lord, O My Soul",
             chapterReference: "Psalm 103",
             summary: "Pray in gratitude for God's benefits and compassion.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 104,
+            dayNumber: 14,
             title: "How Many Are Your Works",
             chapterReference: "Psalm 104",
             summary: "Pray in awe of God's creation.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 105,
+            dayNumber: 15,
             title: "Give Thanks to the Lord",
             chapterReference: "Psalm 105",
             summary: "Pray with remembrance of God's faithfulness.",
@@ -1138,105 +902,105 @@ enum PsalmsPrayerData {
     // MARK: - Psalms 106-120
     private static let psalms106to120: [PrayerDay] = [
         PrayerDay(
-            dayNumber: 106,
+            dayNumber: 1,
             title: "We Have Sinned",
             chapterReference: "Psalm 106",
             summary: "Pray in confession and repentance.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 107,
+            dayNumber: 2,
             title: "Give Thanks for His Unfailing Love",
             chapterReference: "Psalm 107",
             summary: "Pray in gratitude for God's deliverance.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 108,
+            dayNumber: 3,
             title: "My Heart is Steadfast",
             chapterReference: "Psalm 108",
             summary: "Pray with confidence in God's help.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 109,
+            dayNumber: 4,
             title: "God of My Praise",
             chapterReference: "Psalm 109",
             summary: "Pray for God's vindication.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 110,
+            dayNumber: 5,
             title: "Sit at My Right Hand",
             chapterReference: "Psalm 110",
             summary: "Pray in worship of the Messianic King.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 111,
+            dayNumber: 6,
             title: "Great Are His Works",
             chapterReference: "Psalm 111",
             summary: "Pray in praise of God's deeds.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 112,
+            dayNumber: 7,
             title: "Blessed is the One Who Fears",
             chapterReference: "Psalm 112",
             summary: "Pray for righteousness and generosity.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 113,
+            dayNumber: 8,
             title: "Who is Like the Lord?",
             chapterReference: "Psalm 113",
             summary: "Pray in worship of God's incomparable nature.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 114,
+            dayNumber: 9,
             title: "When Israel Came Out",
             chapterReference: "Psalm 114",
             summary: "Pray in remembrance of God's mighty deliverance.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 115,
+            dayNumber: 10,
             title: "Not to Us",
             chapterReference: "Psalm 115",
             summary: "Pray for God's glory alone.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 116,
+            dayNumber: 11,
             title: "I Love the Lord",
             chapterReference: "Psalm 116",
             summary: "Pray in gratitude for answered prayer.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 117,
+            dayNumber: 12,
             title: "Praise the Lord, All Nations",
             chapterReference: "Psalm 117",
             summary: "Pray for universal praise of God.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 118,
+            dayNumber: 13,
             title: "His Love Endures Forever",
             chapterReference: "Psalm 118",
             summary: "Pray in thanksgiving for God's steadfast love.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 119,
+            dayNumber: 14,
             title: "Your Word is a Lamp",
             chapterReference: "Psalm 119",
             summary: "Pray for love of God's Word and obedience.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 120,
+            dayNumber: 15,
             title: "I Call on the Lord",
             chapterReference: "Psalm 120",
             summary: "Pray for deliverance from deceit.",
@@ -1247,105 +1011,105 @@ enum PsalmsPrayerData {
     // MARK: - Psalms 121-135
     private static let psalms121to135: [PrayerDay] = [
         PrayerDay(
-            dayNumber: 121,
+            dayNumber: 1,
             title: "I Lift Up My Eyes",
             chapterReference: "Psalm 121",
             summary: "Pray for God's watchful protection.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 122,
+            dayNumber: 2,
             title: "I Rejoiced",
             chapterReference: "Psalm 122",
             summary: "Pray for love of God's house and peace.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 123,
+            dayNumber: 3,
             title: "To You I Lift My Eyes",
             chapterReference: "Psalm 123",
             summary: "Pray for mercy and relief from contempt.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 124,
+            dayNumber: 4,
             title: "If the Lord Had Not Been",
             chapterReference: "Psalm 124",
             summary: "Pray in gratitude for God's deliverance.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 125,
+            dayNumber: 5,
             title: "Those Who Trust",
             chapterReference: "Psalm 125",
             summary: "Pray for steadfast trust in God.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 126,
+            dayNumber: 6,
             title: "Restore Our Fortunes",
             chapterReference: "Psalm 126",
             summary: "Pray for restoration and joy.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 127,
+            dayNumber: 7,
             title: "Unless the Lord Builds",
             chapterReference: "Psalm 127",
             summary: "Pray for dependence on God in all endeavors.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 128,
+            dayNumber: 8,
             title: "Blessed Are All Who Fear",
             chapterReference: "Psalm 128",
             summary: "Pray for blessing in family and work.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 129,
+            dayNumber: 9,
             title: "Often They Have Afflicted Me",
             chapterReference: "Psalm 129",
             summary: "Pray for endurance through persecution.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 130,
+            dayNumber: 10,
             title: "Out of the Depths",
             chapterReference: "Psalm 130",
             summary: "Pray for forgiveness and hope.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 131,
+            dayNumber: 11,
             title: "My Heart is Not Proud",
             chapterReference: "Psalm 131",
             summary: "Pray for humility and quiet trust.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 132,
+            dayNumber: 12,
             title: "Remember David",
             chapterReference: "Psalm 132",
             summary: "Pray for God's presence and promises.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 133,
+            dayNumber: 13,
             title: "How Good and Pleasant",
             chapterReference: "Psalm 133",
             summary: "Pray for unity among believers.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 134,
+            dayNumber: 14,
             title: "Praise the Lord at Night",
             chapterReference: "Psalm 134",
             summary: "Pray with nighttime worship and blessing.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 135,
+            dayNumber: 15,
             title: "Praise the Name of the Lord",
             chapterReference: "Psalm 135",
             summary: "Pray in praise of God's greatness.",
@@ -1356,109 +1120,110 @@ enum PsalmsPrayerData {
     // MARK: - Psalms 136-150
     private static let psalms136to150: [PrayerDay] = [
         PrayerDay(
-            dayNumber: 136,
+            dayNumber: 1,
             title: "His Love Endures Forever",
             chapterReference: "Psalm 136",
             summary: "Pray in thanksgiving for God's enduring love.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 137,
+            dayNumber: 2,
             title: "By the Rivers of Babylon",
             chapterReference: "Psalm 137",
             summary: "Pray with longing for home and restoration.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 138,
+            dayNumber: 3,
             title: "I Will Praise You",
             chapterReference: "Psalm 138",
             summary: "Pray with wholehearted thanksgiving.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 139,
+            dayNumber: 4,
             title: "You Have Searched Me",
             chapterReference: "Psalm 139",
             summary: "Pray in awe of God's intimate knowledge.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 140,
+            dayNumber: 5,
             title: "Rescue Me from Evil",
             chapterReference: "Psalm 140",
             summary: "Pray for protection from the wicked.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 141,
+            dayNumber: 6,
             title: "Set a Guard",
             chapterReference: "Psalm 141",
             summary: "Pray for control over words and actions.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 142,
+            dayNumber: 7,
             title: "I Cry Aloud",
             chapterReference: "Psalm 142",
             summary: "Pray for refuge when overwhelmed.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 143,
+            dayNumber: 8,
             title: "Do Not Bring to Judgment",
             chapterReference: "Psalm 143",
             summary: "Pray for mercy and guidance.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 144,
+            dayNumber: 9,
             title: "Praise to the Rock",
             chapterReference: "Psalm 144",
             summary: "Pray for God's strength in battle.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 145,
+            dayNumber: 10,
             title: "Great is the Lord",
             chapterReference: "Psalm 145",
             summary: "Pray in exaltation of God's greatness.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 146,
+            dayNumber: 11,
             title: "Praise the Lord, My Soul",
             chapterReference: "Psalm 146",
             summary: "Pray with trust in God's help.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 147,
+            dayNumber: 12,
             title: "He Heals the Brokenhearted",
             chapterReference: "Psalm 147",
             summary: "Pray in praise of God's care and power.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 148,
+            dayNumber: 13,
             title: "Praise from Heaven and Earth",
             chapterReference: "Psalm 148",
             summary: "Pray in cosmic worship of the Creator.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 149,
+            dayNumber: 14,
             title: "Sing a New Song",
             chapterReference: "Psalm 149",
             summary: "Pray with joyful praise and celebration.",
             verses: []
         ),
         PrayerDay(
-            dayNumber: 150,
+            dayNumber: 15,
             title: "Let Everything That Has Breath",
             chapterReference: "Psalm 150",
             summary: "Pray in final, resounding praise of God.",
             verses: []
         )
     ]
+
 }

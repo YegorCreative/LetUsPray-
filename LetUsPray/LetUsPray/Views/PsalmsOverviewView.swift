@@ -7,6 +7,8 @@ struct PsalmsOverviewView: View {
     @Binding var analytics: PrayerAnalyticsSnapshot
     @Environment(\.dismiss) private var dismiss
     
+    @State private var selectedCollection: PrayerPlan?
+    
     private let collections = PsalmsPrayerData.allCollections
     
     var body: some View {
@@ -26,6 +28,18 @@ struct PsalmsOverviewView: View {
         }
         .navigationTitle("Psalms Journey")
         .navigationBarTitleDisplayMode(.large)
+        .navigationDestination(item: $selectedCollection) { collection in
+            PlanDetailView(
+                plan: collection,
+                isActive: activePlanID == collection.id,
+                completedDayNumbers: completedDayNumbersBinding(for: collection),
+                savedVerseIDs: $savedVerseIDs,
+                analytics: $analytics,
+                onStartJourney: {
+                    activePlanID = collection.id
+                }
+            )
+        }
     }
     
     private var headerSection: some View {
@@ -86,8 +100,7 @@ struct PsalmsOverviewView: View {
                         collection: collection,
                         completedCount: completedCount(for: collection),
                         onSelect: {
-                            activePlanID = collection.id
-                            dismiss()
+                            selectedCollection = collection
                         }
                     )
                 }
@@ -97,6 +110,24 @@ struct PsalmsOverviewView: View {
     
     private func completedCount(for collection: PrayerPlan) -> Int {
         analytics.completedDaysByPlan[collection.id] ?? 0
+    }
+    
+    private func completedDayNumbersBinding(for collection: PrayerPlan) -> Binding<Set<Int>> {
+        Binding(
+            get: {
+                // Get the completed days for this specific collection from storage
+                let rawValue = UserDefaults.standard.string(forKey: PrayerStorageKeys.completedDaysByPlan) ?? "{}"
+                let allCompleted = PrayerStorageCodec.decodeCompletedDaysByPlan(rawValue)
+                return allCompleted[collection.id] ?? []
+            },
+            set: { newValue in
+                // Update completed days for this collection in storage
+                let rawValue = UserDefaults.standard.string(forKey: PrayerStorageKeys.completedDaysByPlan) ?? "{}"
+                var allCompleted = PrayerStorageCodec.decodeCompletedDaysByPlan(rawValue)
+                allCompleted[collection.id] = newValue
+                UserDefaults.standard.set(PrayerStorageCodec.encodeCompletedDaysByPlan(allCompleted), forKey: PrayerStorageKeys.completedDaysByPlan)
+            }
+        )
     }
 }
 
