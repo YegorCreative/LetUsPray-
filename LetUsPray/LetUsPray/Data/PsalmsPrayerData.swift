@@ -1175,14 +1175,100 @@ enum PsalmsPrayerData {
             title: "The Fool Says",
             chapterReference: "Psalm 14",
             summary: "Pray for wisdom and righteous living.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-14-1",
+                    reference: "Psalm 14:1",
+                    text: "The fool has said in his heart, \"There is no God.\"\n  They are corrupt, they have committed abominable deeds;\n  There is no one who does good.",
+                    prayer: "Lord, help me never live as though You do not exist. Keep my heart anchored in faith, wisdom, and reverence for You in all that I do."
+                ),
+                PrayerVerse(
+                    id: "psalm-14-2",
+                    reference: "Psalm 14:2",
+                    text: "The Lord has looked down from heaven upon the sons of men\n  To see if there are any who understand,\n  Who seek after God.",
+                    prayer: "Father, search my heart and help me seek You sincerely. Give me a desire to know You more deeply and walk closely with You each day."
+                ),
+                PrayerVerse(
+                    id: "psalm-14-3",
+                    reference: "Psalm 14:3",
+                    text: "They have all turned aside, together they have become corrupt;\n  There is no one who does good, not even one.",
+                    prayer: "Lord, I recognize that without Your grace I fall short. Thank You for Your mercy and forgiveness that restore me when I fail."
+                ),
+                PrayerVerse(
+                    id: "psalm-14-4",
+                    reference: "Psalm 14:4",
+                    text: "Do all the workers of wickedness not know,\n  Who eat up my people as they eat bread,\n  And do not call upon the Lord?",
+                    prayer: "Father, protect me from hardness of heart and spiritual blindness. Help me treat others with compassion, kindness, and love."
+                ),
+                PrayerVerse(
+                    id: "psalm-14-5",
+                    reference: "Psalm 14:5",
+                    text: "There they are in great dread,\n  For God is with the righteous generation.",
+                    prayer: "Lord, thank You for being present with those who seek You. Strengthen my faith and remind me that You are near in every circumstance."
+                ),
+                PrayerVerse(
+                    id: "psalm-14-6",
+                    reference: "Psalm 14:6",
+                    text: "You would put to shame the counsel of the afflicted,\n  But the Lord is his refuge.",
+                    prayer: "Father, be a refuge for those who are struggling, discouraged, and burdened. Help me trust in Your protection and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-14-7",
+                    reference: "Psalm 14:7",
+                    text: "Oh, that the salvation of Israel would come out of Zion!\n  When the Lord restores His captive people,\n  Jacob will rejoice, Israel will be glad.",
+                    prayer: "Lord, thank You for the salvation and hope You provide. Fill my heart with joy as I look forward to the fulfillment of Your promises and the restoration You bring."
+                ),
+                PrayerVerse(
+                    id: "psalm-14-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your grace, mercy, and salvation. Help me seek You with my whole heart and walk in wisdom rather than relying on my own understanding. Keep me close to You, strengthen my faith, and remind me daily that true hope, security, and joy are found in Your presence alone.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 15,
             title: "Who May Dwell?",
             chapterReference: "Psalm 15",
             summary: "Pray for integrity and blameless living.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-15-1",
+                    reference: "Psalm 15:1",
+                    text: "O Lord, who may abide in Your tent?\n  Who may dwell on Your holy hill?",
+                    prayer: "Lord, I desire to dwell in Your presence and walk closely with You. Help me live a life that honors You and reflects Your holiness."
+                ),
+                PrayerVerse(
+                    id: "psalm-15-2",
+                    reference: "Psalm 15:2",
+                    text: "He who walks with integrity, and works righteousness,\n  And speaks truth in his heart.",
+                    prayer: "Father, help me walk with integrity, do what is right, and speak truth from my heart. Let my character reflect Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-15-3",
+                    reference: "Psalm 15:3",
+                    text: "He does not slander with his tongue,\n  Nor does evil to his neighbor,\n  Nor takes up a reproach against his friend;",
+                    prayer: "Lord, guard my tongue from gossip, slander, and harmful words. Help me use my speech to encourage, uplift, and bless others."
+                ),
+                PrayerVerse(
+                    id: "psalm-15-4",
+                    reference: "Psalm 15:4",
+                    text: "In whose eyes a reprobate is despised,\n  But who honors those who fear the Lord;\n  He swears to his own hurt and does not change;",
+                    prayer: "Father, teach me to value what You value and honor those who faithfully follow You. Help me remain faithful to my commitments and promises."
+                ),
+                PrayerVerse(
+                    id: "psalm-15-5",
+                    reference: "Psalm 15:5",
+                    text: "He does not put out his money at interest,\n  Nor does he take a bribe against the innocent.\n  He who does these things will never be shaken.",
+                    prayer: "Lord, help me act with generosity, fairness, and compassion. Let my life be marked by honesty and righteousness in every relationship and decision."
+                ),
+                PrayerVerse(
+                    id: "psalm-15-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for showing me what it means to walk in integrity and righteousness. Help me live truthfully, speak wisely, keep my commitments, and treat others with love and fairness. May my life honor You and reflect the character of someone who delights in Your presence and seeks to follow You faithfully each day.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         )
     ]
     
@@ -1193,7 +1279,80 @@ enum PsalmsPrayerData {
             title: "You Are My Lord",
             chapterReference: "Psalm 16",
             summary: "Pray for joy and security in God alone.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-16-1",
+                    reference: "Psalm 16:1",
+                    text: "Preserve me, O God, for I take refuge in You.",
+                    prayer: "Lord, preserve and protect me, for I take refuge in You. Help me trust Your care and guidance in every season of life."
+                ),
+                PrayerVerse(
+                    id: "psalm-16-2",
+                    reference: "Psalm 16:2",
+                    text: "I said to the Lord, \"You are my Lord;\n  I have no good besides You.\"",
+                    prayer: "Father, You are my Lord, and apart from You I have no true good. Help me find my satisfaction and purpose in You alone."
+                ),
+                PrayerVerse(
+                    id: "psalm-16-3",
+                    reference: "Psalm 16:3",
+                    text: "As for the saints who are in the earth,\n  They are the majestic ones in whom is all my delight.",
+                    prayer: "Lord, thank You for the fellowship of Your people. Help me encourage, support, and walk alongside those who seek to follow You faithfully."
+                ),
+                PrayerVerse(
+                    id: "psalm-16-4",
+                    reference: "Psalm 16:4",
+                    text: "The sorrows of those who have bartered for another god will be multiplied;\n  I shall not pour out their drink offerings of blood,\n  Nor will I take their names upon my lips.",
+                    prayer: "Father, keep my heart from idols and anything that would take Your place in my life. Help me worship You with undivided devotion."
+                ),
+                PrayerVerse(
+                    id: "psalm-16-5",
+                    reference: "Psalm 16:5",
+                    text: "The Lord is the portion of my inheritance and my cup;\n  You support my lot.",
+                    prayer: "Lord, thank You for being my portion and my inheritance. Remind me that my greatest treasure is found in a relationship with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-16-6",
+                    reference: "Psalm 16:6",
+                    text: "The lines have fallen to me in pleasant places;\n  Indeed, my heritage is beautiful to me.",
+                    prayer: "Father, thank You for the blessings You have given me. Help me recognize Your goodness and remain grateful for Your provision."
+                ),
+                PrayerVerse(
+                    id: "psalm-16-7",
+                    reference: "Psalm 16:7",
+                    text: "I will bless the Lord who has counseled me;\n  Indeed, my mind instructs me in the night.",
+                    prayer: "Lord, I praise You for Your counsel and wisdom. Guide my decisions and teach me to follow Your direction in all things."
+                ),
+                PrayerVerse(
+                    id: "psalm-16-8",
+                    reference: "Psalm 16:8",
+                    text: "I have set the Lord continually before me;\n  Because He is at my right hand, I will not be shaken.",
+                    prayer: "Father, help me keep my eyes fixed on You. When challenges arise, remind me that You are near and that I can stand firm in Your strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-16-9",
+                    reference: "Psalm 16:9",
+                    text: "Therefore my heart is glad and my glory rejoices;\n  My flesh also will dwell securely.",
+                    prayer: "Lord, fill my heart with joy and confidence in Your promises. Let me rest securely in the hope that comes from knowing You."
+                ),
+                PrayerVerse(
+                    id: "psalm-16-10",
+                    reference: "Psalm 16:10",
+                    text: "For You will not abandon my soul to Sheol;\n  Nor will You allow Your Holy One to undergo decay.",
+                    prayer: "Father, thank You for the hope of salvation and eternal life. Thank You for the victory that is found through Jesus Christ."
+                ),
+                PrayerVerse(
+                    id: "psalm-16-11",
+                    reference: "Psalm 16:11",
+                    text: "You will make known to me the path of life;\n  In Your presence is fullness of joy;\n  In Your right hand there are pleasures forever.",
+                    prayer: "Lord, show me the path of life. Fill me with the joy of Your presence and help me walk daily in the fullness of Your love and grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-16-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my refuge, my inheritance, and my source of joy. Help me keep my eyes fixed on You, trust Your guidance, and walk faithfully in Your ways. Fill my heart with gratitude for Your blessings and confidence in the eternal hope found through Jesus Christ. May I find lasting joy in Your presence every day of my life.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 17,
