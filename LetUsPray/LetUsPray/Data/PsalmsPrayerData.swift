@@ -567,7 +567,116 @@ enum PsalmsPrayerData {
             title: "Refuge in You",
             chapterReference: "Psalm 7",
             summary: "Pray for vindication and trust in God's justice.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-7-1",
+                    reference: "Psalm 7:1",
+                    text: "O Lord my God, in You I have taken refuge;\n  Save me from all those who pursue me, and deliver me,",
+                    prayer: "Lord, I take refuge in You. When I face trouble, fear, or opposition, help me run to You first and trust in Your protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-7-2",
+                    reference: "Psalm 7:2",
+                    text: "Or he will tear my soul like a lion,\n  Dragging me away, while there is none to deliver.",
+                    prayer: "Father, deliver me from every danger that seeks to harm my faith, my peace, or my relationship with You. Keep me secure in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-7-3",
+                    reference: "Psalm 7:3",
+                    text: "O Lord my God, if I have done this,\n  If there is injustice in my hands,",
+                    prayer: "Lord, search my heart and reveal anything within me that is not pleasing to You. Help me walk in honesty and integrity before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-7-4",
+                    reference: "Psalm 7:4",
+                    text: "If I have rewarded evil to my friend,\n  Or have plundered him who without cause was my adversary,",
+                    prayer: "Father, if I have wronged others, give me humility to seek forgiveness and make things right. Teach me to live with a clear conscience."
+                ),
+                PrayerVerse(
+                    id: "psalm-7-5",
+                    reference: "Psalm 7:5",
+                    text: "Let the enemy pursue my soul and overtake it;\n  And let him trample my life down to the ground\n  And lay my glory in the dust. Selah.",
+                    prayer: "Lord, help me take responsibility for my actions and remain accountable before You. Shape my character according to Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-7-6",
+                    reference: "Psalm 7:6",
+                    text: "Arise, O Lord, in Your anger;\n  Lift up Yourself against the rage of my adversaries,\n  And arouse Yourself for me; You have appointed judgment.",
+                    prayer: "Father, arise in Your righteousness and bring justice where it is needed. Help me trust You instead of seeking revenge or taking matters into my own hands."
+                ),
+                PrayerVerse(
+                    id: "psalm-7-7",
+                    reference: "Psalm 7:7",
+                    text: "Let the assembly of the peoples encompass You,\n  And over them return on high.",
+                    prayer: "Lord, You reign over all people and nations. Help me remember that You are sovereign and worthy of all honor and worship."
+                ),
+                PrayerVerse(
+                    id: "psalm-7-8",
+                    reference: "Psalm 7:8",
+                    text: "The Lord judges the peoples;\n  Vindicate me, O Lord, according to my righteousness and my integrity that is in me.",
+                    prayer: "Father, You know my heart completely. Lead me to walk in integrity and dependence upon Your grace every day."
+                ),
+                PrayerVerse(
+                    id: "psalm-7-9",
+                    reference: "Psalm 7:9",
+                    text: "O let the evil of the wicked come to an end, but establish the righteous;\n  For the righteous God tries the hearts and minds.",
+                    prayer: "Lord, bring an end to wickedness and establish righteousness. Purify my heart and strengthen me to live according to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-7-10",
+                    reference: "Psalm 7:10",
+                    text: "My shield is with God,\n  Who saves the upright in heart.",
+                    prayer: "Father, thank You for being my shield and defender. Protect me from harm and strengthen me when I feel weak or vulnerable."
+                ),
+                PrayerVerse(
+                    id: "psalm-7-11",
+                    reference: "Psalm 7:11",
+                    text: "God is a righteous judge,\n  And a God who has indignation every day.",
+                    prayer: "Lord, thank You for Your perfect justice. Help me trust that You always judge rightly and act according to truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-7-12",
+                    reference: "Psalm 7:12",
+                    text: "If a man does not repent, He will sharpen His sword;\n  He has bent His bow and made it ready.",
+                    prayer: "Father, keep me quick to repent when I stray from Your path. Help me respond to Your correction with humility and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-7-13",
+                    reference: "Psalm 7:13",
+                    text: "He has also prepared for Himself deadly weapons;\n  He makes His arrows fiery shafts.",
+                    prayer: "Lord, remind me that You are holy and just. Let my life reflect reverence for You and a desire to honor You in all things."
+                ),
+                PrayerVerse(
+                    id: "psalm-7-14",
+                    reference: "Psalm 7:14",
+                    text: "Behold, he travails with wickedness,\n  And he conceives mischief and brings forth falsehood.",
+                    prayer: "Father, protect me from deceit and sinful desires. Help me choose truth and righteousness instead of temptation."
+                ),
+                PrayerVerse(
+                    id: "psalm-7-15",
+                    reference: "Psalm 7:15",
+                    text: "He has dug a pit and hollowed it out,\n  And has fallen into the hole which he made.",
+                    prayer: "Lord, keep me from creating problems through careless actions or selfish decisions. Give me wisdom to walk faithfully before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-7-16",
+                    reference: "Psalm 7:16",
+                    text: "His mischief will return upon his own head,\n  And his violence will descend upon his own pate.",
+                    prayer: "Father, remind me that every choice has consequences. Help me sow righteousness, kindness, and faithfulness in my daily life."
+                ),
+                PrayerVerse(
+                    id: "psalm-7-17",
+                    reference: "Psalm 7:17",
+                    text: "I will give thanks to the Lord according to His righteousness\n  And will sing praise to the name of the Lord Most High.",
+                    prayer: "Lord, I praise You for Your righteousness and goodness. May my heart continually worship You and give thanks for Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-7-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my refuge, my defender, and my righteous Judge. Search my heart, guide my steps, and help me walk in integrity before You. Teach me to trust Your justice, rely on Your protection, and continually praise You for Your faithfulness and love.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 8,
