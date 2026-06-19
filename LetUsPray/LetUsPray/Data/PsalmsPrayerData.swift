@@ -2235,7 +2235,50 @@ enum PsalmsPrayerData {
             title: "The Lord is My Shepherd",
             chapterReference: "Psalm 23",
             summary: "Pray for peace and trust in God's provision.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-23-1",
+                    reference: "Psalm 23:1",
+                    text: "The Lord is my shepherd,\n  I shall not want.",
+                    prayer: "Lord, You are my Shepherd, and I lack nothing when I follow You. Thank You for providing for my needs and caring for me with perfect love."
+                ),
+                PrayerVerse(
+                    id: "psalm-23-2",
+                    reference: "Psalm 23:2",
+                    text: "He makes me lie down in green pastures;\n  He leads me beside quiet waters.",
+                    prayer: "Father, lead me beside quiet waters and into places of rest. Teach me to slow down, trust You, and find peace in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-23-3",
+                    reference: "Psalm 23:3",
+                    text: "He restores my soul;\n  He guides me in the paths of righteousness\n  For His name’s sake.",
+                    prayer: "Lord, restore my soul when I am weary and burdened. Guide me in paths of righteousness so that my life brings honor to Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-23-4",
+                    reference: "Psalm 23:4",
+                    text: "Even though I walk through the valley of the shadow of death,\n  I fear no evil, for You are with me;\n  Your rod and Your staff, they comfort me.",
+                    prayer: "Father, even when I walk through dark valleys and difficult seasons, help me fear no evil because You are with me. Let Your presence comfort and strengthen me."
+                ),
+                PrayerVerse(
+                    id: "psalm-23-5",
+                    reference: "Psalm 23:5",
+                    text: "You prepare a table before me in the presence of my enemies;\n  You have anointed my head with oil;\n  My cup overflows.",
+                    prayer: "Lord, thank You for blessing me even in the presence of challenges and opposition. Fill my life with Your favor, grace, and abundant provision."
+                ),
+                PrayerVerse(
+                    id: "psalm-23-6",
+                    reference: "Psalm 23:6",
+                    text: "Surely goodness and lovingkindness will follow me all the days of my life,\n  And I will dwell in the house of the Lord forever.",
+                    prayer: "Father, thank You that Your goodness and lovingkindness follow me all the days of my life. Help me dwell in Your presence and remain close to You forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-23-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my Shepherd, my Provider, and my Protector. Lead me in paths of righteousness, restore my soul when I am weary, and give me peace in every season. Help me trust You through both the green pastures and the dark valleys, knowing that You are always with me. May Your goodness and mercy surround me throughout my life, and may my heart always find rest in Your presence.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 24,
