@@ -2757,14 +2757,166 @@ enum PsalmsPrayerData {
             title: "Ascribe to the Lord",
             chapterReference: "Psalm 29",
             summary: "Pray in worship of God's powerful voice.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-29-1",
+                    reference: "Psalm 29:1",
+                    text: "Ascribe to the Lord, O sons of the mighty,\n  Ascribe to the Lord glory and strength.",
+                    prayer: "Lord, I give You glory and honor because You alone are worthy of all praise. Help me recognize Your greatness and worship You wholeheartedly."
+                ),
+                PrayerVerse(
+                    id: "psalm-29-2",
+                    reference: "Psalm 29:2",
+                    text: "Ascribe to the Lord the glory due to His name;\n  Worship the Lord in holy array.",
+                    prayer: "Father, let my worship reflect the beauty of Your holiness. Teach me to honor Your name with reverence, gratitude, and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-29-3",
+                    reference: "Psalm 29:3",
+                    text: "The voice of the Lord is upon the waters;\n  The God of glory thunders,\n  The Lord is over many waters.",
+                    prayer: "Lord, Your voice is powerful over all creation. Help me listen carefully when You speak through Your Word and Your Spirit."
+                ),
+                PrayerVerse(
+                    id: "psalm-29-4",
+                    reference: "Psalm 29:4",
+                    text: "The voice of the Lord is powerful,\n  The voice of the Lord is majestic.",
+                    prayer: "Father, thank You for the strength and authority of Your voice. Strengthen my faith so I may trust Your promises completely."
+                ),
+                PrayerVerse(
+                    id: "psalm-29-5",
+                    reference: "Psalm 29:5",
+                    text: "The voice of the Lord breaks the cedars;\n  Yes, the Lord breaks in pieces the cedars of Lebanon.",
+                    prayer: "Lord, nothing can withstand Your power. Remind me that no obstacle, challenge, or fear is greater than You."
+                ),
+                PrayerVerse(
+                    id: "psalm-29-6",
+                    reference: "Psalm 29:6",
+                    text: "He makes Lebanon skip like a calf,\n  And Sirion like a young wild ox.",
+                    prayer: "Father, You rule over all creation with wisdom and authority. Help me trust Your sovereignty in every circumstance."
+                ),
+                PrayerVerse(
+                    id: "psalm-29-7",
+                    reference: "Psalm 29:7",
+                    text: "The voice of the Lord hews out flames of fire.",
+                    prayer: "Lord, Your power is unmatched. Let Your presence break through the fears and doubts that seek to discourage me."
+                ),
+                PrayerVerse(
+                    id: "psalm-29-8",
+                    reference: "Psalm 29:8",
+                    text: "The voice of the Lord shakes the wilderness;\n  The Lord shakes the wilderness of Kadesh.",
+                    prayer: "Father, when life feels uncertain and unstable, help me remember that You remain in control and that Your purposes stand forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-29-9",
+                    reference: "Psalm 29:9",
+                    text: "The voice of the Lord makes the deer to calve\n  And strips the forests bare;\n  And in His temple everything says, “Glory!”",
+                    prayer: "Lord, let my response to Your majesty be worship. Fill my heart with awe and gratitude for who You are."
+                ),
+                PrayerVerse(
+                    id: "psalm-29-10",
+                    reference: "Psalm 29:10",
+                    text: "The Lord sat as King at the flood;\n  Yes, the Lord sits as King forever.",
+                    prayer: "Father, You sit enthroned forever. Thank You that no event, circumstance, or earthly power can threaten Your reign."
+                ),
+                PrayerVerse(
+                    id: "psalm-29-11",
+                    reference: "Psalm 29:11",
+                    text: "The Lord will give strength to His people;\n  The Lord will bless His people with peace.",
+                    prayer: "Lord, thank You for giving strength to Your people and blessing us with peace. Help me rest securely in Your care and provision."
+                ),
+                PrayerVerse(
+                    id: "psalm-29-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your majesty, power, and authority over all creation. Help me listen to Your voice, trust in Your sovereignty, and worship You with my whole heart. When life feels uncertain, remind me that You reign forever and that Your peace is available to all who trust in You. Strengthen my faith and fill my heart with awe, gratitude, and confidence in Your unfailing love.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 30,
             title: "You Lifted Me Up",
             chapterReference: "Psalm 30",
             summary: "Pray in thanksgiving for God's healing and restoration.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-30-1",
+                    reference: "Psalm 30:1",
+                    text: "I will extol You, O Lord, for You have lifted me up,\n  And have not let my enemies rejoice over me.",
+                    prayer: "Lord, I exalt You because You have lifted me up and carried me through difficult seasons. Thank You for Your faithfulness and deliverance."
+                ),
+                PrayerVerse(
+                    id: "psalm-30-2",
+                    reference: "Psalm 30:2",
+                    text: "O Lord my God,\n  I cried to You for help, and You healed me.",
+                    prayer: "Father, when I cried out to You, You heard me. Thank You for listening to my prayers and bringing healing to my heart and soul."
+                ),
+                PrayerVerse(
+                    id: "psalm-30-3",
+                    reference: "Psalm 30:3",
+                    text: "O Lord, You have brought up my soul from Sheol;\n  You have kept me alive, that I would not go down to the pit.",
+                    prayer: "Lord, thank You for rescuing me from despair and giving me new life, hope, and purpose through Your grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-30-4",
+                    reference: "Psalm 30:4",
+                    text: "Sing praise to the Lord, you His godly ones,\n  And give thanks to His holy name.",
+                    prayer: "Father, help me join with Your people in giving thanks and praising Your holy name for all You have done."
+                ),
+                PrayerVerse(
+                    id: "psalm-30-5",
+                    reference: "Psalm 30:5",
+                    text: "For His anger is but for a moment,\n  His favor is for a lifetime;\n  Weeping may last for the night,\n  But a shout of joy comes in the morning.",
+                    prayer: "Lord, thank You that Your anger is temporary but Your favor lasts a lifetime. Remind me that seasons of sorrow will not last forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-30-6",
+                    reference: "Psalm 30:6",
+                    text: "Now as for me, I said in my prosperity,\n  “I will never be moved.”",
+                    prayer: "Father, protect me from pride and self-reliance. Help me remember that every blessing comes from Your hand."
+                ),
+                PrayerVerse(
+                    id: "psalm-30-7",
+                    reference: "Psalm 30:7",
+                    text: "O Lord, by Your favor You have made my mountain to stand strong;\n  You hid Your face, I was dismayed.",
+                    prayer: "Lord, when I feel secure, help me continue depending upon You. When difficulties come, remind me that You are my strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-30-8",
+                    reference: "Psalm 30:8",
+                    text: "To You, O Lord, I called,\n  And to the Lord I made supplication:",
+                    prayer: "Father, I call upon You in every circumstance. Thank You that I can always come before You in prayer."
+                ),
+                PrayerVerse(
+                    id: "psalm-30-9",
+                    reference: "Psalm 30:9",
+                    text: "“What profit is there in my blood, if I go down to the pit?\n  Will the dust praise You? Will it declare Your faithfulness?",
+                    prayer: "Lord, help me use my life to glorify You. Let every day be an opportunity to honor and worship You."
+                ),
+                PrayerVerse(
+                    id: "psalm-30-10",
+                    reference: "Psalm 30:10",
+                    text: "“Hear, O Lord, and be gracious to me;\n  O Lord, be my helper.”",
+                    prayer: "Father, hear my prayer and have mercy upon me. Be my helper and guide through every challenge I face."
+                ),
+                PrayerVerse(
+                    id: "psalm-30-11",
+                    reference: "Psalm 30:11",
+                    text: "You have turned for me my mourning into dancing;\n  You have loosed my sackcloth and girded me with gladness,",
+                    prayer: "Lord, thank You for turning mourning into joy. Restore hope where there is discouragement and bring peace where there is pain."
+                ),
+                PrayerVerse(
+                    id: "psalm-30-12",
+                    reference: "Psalm 30:12",
+                    text: "That my soul may sing praise to You and not be silent.\n  O Lord my God, I will give thanks to You forever.",
+                    prayer: "Father, let my heart continually praise You. May gratitude, worship, and thanksgiving fill my life every day."
+                ),
+                PrayerVerse(
+                    id: "psalm-30-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your healing, restoration, and faithfulness. When I walk through difficult seasons, remind me that joy comes through Your presence and that Your favor endures forever. Turn my sorrow into praise, strengthen my faith, and help me live a life filled with gratitude and worship. May my heart continually honor You for all You have done and all You continue to do.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         )
     ]
 
