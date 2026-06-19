@@ -1777,7 +1777,98 @@ enum PsalmsPrayerData {
             title: "The Heavens Declare",
             chapterReference: "Psalm 19",
             summary: "Pray in awe of God's creation and Word.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-19-1",
+                    reference: "Psalm 19:1",
+                    text: "The heavens are telling of the glory of God;\n  And their expanse is declaring the work of His hands.",
+                    prayer: "Lord, the heavens declare Your glory and creation displays Your handiwork. Help me recognize Your greatness wherever I look and worship You with wonder and gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-19-2",
+                    reference: "Psalm 19:2",
+                    text: "Day to day pours forth speech,\n  And night to night reveals knowledge.",
+                    prayer: "Father, thank You that creation continually testifies to Your wisdom and power. Open my eyes to see Your presence in the world around me."
+                ),
+                PrayerVerse(
+                    id: "psalm-19-3",
+                    reference: "Psalm 19:3",
+                    text: "There is no speech, nor are there words;\n  Their voice is not heard.",
+                    prayer: "Lord, even when words are not spoken, Your creation proclaims Your majesty. Help me listen carefully to the ways You reveal Yourself."
+                ),
+                PrayerVerse(
+                    id: "psalm-19-4",
+                    reference: "Psalm 19:4",
+                    text: "Their line has gone out through all the earth,\n  And their utterances to the end of the world.\n  In them He has placed a tent for the sun,",
+                    prayer: "Father, Your witness extends throughout the earth. Let my life also be a testimony that points others toward Your goodness and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-19-5",
+                    reference: "Psalm 19:5",
+                    text: "Which is as a bridegroom coming out of his chamber;\n  It rejoices as a strong man to run his course.",
+                    prayer: "Lord, thank You for the beauty, order, and purpose found in Your creation. Remind me that You are faithful and consistent in all Your ways."
+                ),
+                PrayerVerse(
+                    id: "psalm-19-6",
+                    reference: "Psalm 19:6",
+                    text: "Its rising is from one end of the heavens,\n  And its circuit to the other end of them;\n  And there is nothing hidden from its heat.",
+                    prayer: "Father, just as the sun reaches every part of the earth, let Your light shine into every area of my life and transform my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-19-7",
+                    reference: "Psalm 19:7",
+                    text: "The law of the Lord is perfect, restoring the soul;\n  The testimony of the Lord is sure, making wise the simple.",
+                    prayer: "Lord, thank You for Your perfect Word that restores the soul. Help me delight in Scripture and allow it to guide my thoughts and actions."
+                ),
+                PrayerVerse(
+                    id: "psalm-19-8",
+                    reference: "Psalm 19:8",
+                    text: "The precepts of the Lord are right, rejoicing the heart;\n  The commandment of the Lord is pure, enlightening the eyes.",
+                    prayer: "Father, Your commandments are right and bring joy to the heart. Teach me to obey You with gladness and trust."
+                ),
+                PrayerVerse(
+                    id: "psalm-19-9",
+                    reference: "Psalm 19:9",
+                    text: "The fear of the Lord is clean, enduring forever;\n  The judgments of the Lord are true; they are righteous altogether.",
+                    prayer: "Lord, Your truth is pure and enduring. Help me build my life upon what is eternal rather than what is temporary."
+                ),
+                PrayerVerse(
+                    id: "psalm-19-10",
+                    reference: "Psalm 19:10",
+                    text: "They are more desirable than gold, yes, than much fine gold;\n  Sweeter also than honey and the drippings of the honeycomb.",
+                    prayer: "Father, let me treasure Your Word above worldly riches and pleasures. Help me value Your wisdom above all else."
+                ),
+                PrayerVerse(
+                    id: "psalm-19-11",
+                    reference: "Psalm 19:11",
+                    text: "Moreover, by them Your servant is warned;\n  In keeping them there is great reward.",
+                    prayer: "Lord, thank You for warning, teaching, and guiding me through Your Word. Keep me attentive to Your instruction each day."
+                ),
+                PrayerVerse(
+                    id: "psalm-19-12",
+                    reference: "Psalm 19:12",
+                    text: "Who can discern his errors? Acquit me of hidden faults.",
+                    prayer: "Father, reveal hidden sins and blind spots within my heart. Help me repent quickly and walk in humility before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-19-13",
+                    reference: "Psalm 19:13",
+                    text: "Also keep back Your servant from presumptuous sins;\n  Let them not rule over me;\n  Then I will be blameless,\n  And I shall be acquitted of great transgression.",
+                    prayer: "Lord, keep me from willful sin and protect me from anything that seeks to control my life apart from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-19-14",
+                    reference: "Psalm 19:14",
+                    text: "Let the words of my mouth and the meditation of my heart\n  Be acceptable in Your sight,\n  O Lord, my rock and my Redeemer.",
+                    prayer: "Father, let the words of my mouth and the meditation of my heart be pleasing in Your sight. You are my Rock and my Redeemer."
+                ),
+                PrayerVerse(
+                    id: "psalm-19-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for revealing Yourself through creation and through Your Word. Open my eyes to Your glory, teach me Your truth, and transform my heart through Your presence. Help me treasure Your wisdom, walk in obedience, and honor You with my thoughts, words, and actions. May my life reflect Your goodness and bring glory to Your name.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 20,
