@@ -2927,28 +2927,530 @@ enum PsalmsPrayerData {
             title: "Into Your Hands",
             chapterReference: "Psalm 31",
             summary: "Pray for trust and refuge in times of distress.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-31-1",
+                    reference: "Psalm 31:1",
+                    text: "In You, O Lord, I have taken refuge;\n  Let me never be ashamed;\n  In Your righteousness deliver me.",
+                    prayer: "Lord, I take refuge in You. Help me trust in Your righteousness and deliverance when challenges arise."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-2",
+                    reference: "Psalm 31:2",
+                    text: "Incline Your ear to me, rescue me quickly;\n  Be to me a rock of strength,\n  A stronghold to save me.",
+                    prayer: "Father, incline Your ear to my prayers. Be my rock of strength and my safe place in times of need."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-3",
+                    reference: "Psalm 31:3",
+                    text: "For You are my rock and my fortress;\n  For Your name’s sake You will lead me and guide me.",
+                    prayer: "Lord, You are my fortress and my guide. Lead me according to Your wisdom and help me follow Your direction faithfully."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-4",
+                    reference: "Psalm 31:4",
+                    text: "You will pull me out of the net which they have secretly laid for me,\n  For You are my strength.",
+                    prayer: "Father, rescue me from traps, temptations, and anything that seeks to draw me away from Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-5",
+                    reference: "Psalm 31:5",
+                    text: "Into Your hand I commit my spirit;\n  You have ransomed me, O Lord, God of truth.",
+                    prayer: "Lord, I place my life into Your hands. Thank You for Your faithfulness and for redeeming me through Your love."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-6",
+                    reference: "Psalm 31:6",
+                    text: "I hate those who regard vain idols,\n  But I trust in the Lord.",
+                    prayer: "Father, keep my heart devoted to You alone. Help me reject anything that competes with my trust in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-7",
+                    reference: "Psalm 31:7",
+                    text: "I will rejoice and be glad in Your lovingkindness,\n  Because You have seen my affliction;\n  You have known the troubles of my soul,",
+                    prayer: "Lord, thank You for Your lovingkindness and mercy. You see my struggles and care deeply about every concern I bring to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-8",
+                    reference: "Psalm 31:8",
+                    text: "And You have not given me over into the hand of the enemy;\n  You have set my feet in a large place.",
+                    prayer: "Father, thank You for setting me in a place of freedom. Help me walk confidently in the liberty You provide."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-9",
+                    reference: "Psalm 31:9",
+                    text: "Be gracious to me, O Lord, for I am in distress;\n  My eye is wasted away from grief, my soul and my body also.",
+                    prayer: "Lord, have mercy on me when I am distressed. Strengthen me when I feel weary and overwhelmed."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-10",
+                    reference: "Psalm 31:10",
+                    text: "For my life is spent with sorrow\n  And my years with sighing;\n  My strength has failed because of my iniquity,\n  And my body has wasted away.",
+                    prayer: "Father, when sorrow or difficulty weighs upon me, renew my strength and remind me of Your sustaining grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-11",
+                    reference: "Psalm 31:11",
+                    text: "Because of all my adversaries, I have become a reproach,\n  Especially to my neighbors,\n  And an object of dread to my acquaintances;\n  Those who see me in the street flee from me.",
+                    prayer: "Lord, when I feel rejected or misunderstood, help me remember that my identity is secure in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-12",
+                    reference: "Psalm 31:12",
+                    text: "I am forgotten as a dead man, out of mind;\n  I am like a broken vessel.",
+                    prayer: "Father, even when I feel forgotten by others, remind me that I am never forgotten by You."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-13",
+                    reference: "Psalm 31:13",
+                    text: "For I have heard the slander of many,\n  Terror is on every side;\n  While they took counsel together against me,\n  They schemed to take away my life.",
+                    prayer: "Lord, protect me from fear and anxiety. Help me trust You when circumstances seem threatening or uncertain."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-14",
+                    reference: "Psalm 31:14",
+                    text: "But as for me, I trust in You, O Lord,\n  I say, “You are my God.”",
+                    prayer: "Father, I place my trust in You. Strengthen my faith and help me depend on Your promises."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-15",
+                    reference: "Psalm 31:15",
+                    text: "My times are in Your hand;\n  Deliver me from the hand of my enemies and from those who persecute me.",
+                    prayer: "Lord, my times are in Your hands. Help me trust Your timing, Your plans, and Your purposes for my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-16",
+                    reference: "Psalm 31:16",
+                    text: "Make Your face to shine upon Your servant;\n  Save me in Your lovingkindness.",
+                    prayer: "Father, let Your face shine upon me and fill me with the assurance of Your love and favor."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-17",
+                    reference: "Psalm 31:17",
+                    text: "Let me not be put to shame, O Lord, for I call upon You;\n  Let the wicked be put to shame, let them be silent in Sheol.",
+                    prayer: "Lord, help me call upon You with confidence, knowing that You hear and answer according to Your perfect will."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-18",
+                    reference: "Psalm 31:18",
+                    text: "Let the lying lips be mute,\n  Which speak arrogantly against the righteous\n  With pride and contempt.",
+                    prayer: "Father, establish truth and righteousness. Guard me from deception and help me speak with integrity."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-19",
+                    reference: "Psalm 31:19",
+                    text: "How great is Your goodness,\n  Which You have stored up for those who fear You,\n  Which You have wrought for those who take refuge in You,\n  Before the sons of men!",
+                    prayer: "Lord, thank You for the abundance of Your goodness stored up for those who trust in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-20",
+                    reference: "Psalm 31:20",
+                    text: "You hide them in the secret place of Your presence from the conspiracies of man;\n  You keep them secretly in a shelter from the strife of tongues.",
+                    prayer: "Father, hide me in the shelter of Your presence. Protect me from discouragement, fear, and harmful influences."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-21",
+                    reference: "Psalm 31:21",
+                    text: "Blessed be the Lord,\n  For He has made marvelous His lovingkindness to me in a besieged city.",
+                    prayer: "Lord, thank You for Your wonderful lovingkindness and for showing Your faithfulness throughout my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-22",
+                    reference: "Psalm 31:22",
+                    text: "As for me, I said in my alarm,\n  “I am cut off from before Your eyes”;\n  Nevertheless You heard the voice of my supplications\n  When I cried to You.",
+                    prayer: "Father, when I feel abandoned or afraid, remind me that You hear every prayer and never leave me alone."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-23",
+                    reference: "Psalm 31:23",
+                    text: "O love the Lord, all you His godly ones!\n  The Lord preserves the faithful\n  And fully recompenses the proud doer.",
+                    prayer: "Lord, help me love You wholeheartedly and remain faithful to You in every season of life."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-24",
+                    reference: "Psalm 31:24",
+                    text: "Be strong and let your heart take courage,\n  All you who hope in the Lord.",
+                    prayer: "Father, strengthen my heart as I wait for You. Fill me with courage, hope, and confidence in Your promises."
+                ),
+                PrayerVerse(
+                    id: "psalm-31-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my refuge, my fortress, and my faithful protector. When fear, sorrow, or uncertainty come, help me place my trust fully in You. Strengthen my heart, guide my steps, and remind me that my life is safely in Your hands. Fill me with courage, peace, and hope as I continue to follow You. May I rest securely in Your love and faithfulness every day.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 32,
             title: "Blessed is the Forgiven",
             chapterReference: "Psalm 32",
             summary: "Pray for confession and forgiveness.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-32-1",
+                    reference: "Psalm 32:1",
+                    text: "How blessed is he whose transgression is forgiven,\n  Whose sin is covered!",
+                    prayer: "Lord, thank You for the blessing of forgiveness. Thank You for covering my sins and extending Your mercy to me through Your grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-32-2",
+                    reference: "Psalm 32:2",
+                    text: "How blessed is the man to whom the Lord does not impute iniquity,\n  And in whose spirit there is no deceit!",
+                    prayer: "Father, thank You for not counting my sins against me when I come before You with a sincere and repentant heart. Help me walk in honesty and integrity."
+                ),
+                PrayerVerse(
+                    id: "psalm-32-3",
+                    reference: "Psalm 32:3",
+                    text: "When I kept silent about my sin, my body wasted away\n  Through my groaning all day long.",
+                    prayer: "Lord, when I am tempted to hide my failures, remind me that true freedom comes through confession and repentance before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-32-4",
+                    reference: "Psalm 32:4",
+                    text: "For day and night Your hand was heavy upon me;\n  My vitality was drained away as with the fever heat of summer. Selah.",
+                    prayer: "Father, help me recognize Your loving discipline in my life and respond with humility rather than resistance."
+                ),
+                PrayerVerse(
+                    id: "psalm-32-5",
+                    reference: "Psalm 32:5",
+                    text: "I acknowledged my sin to You,\n  And my iniquity I did not hide;\n  I said, “I will confess my transgressions to the Lord”;\n  And You forgave the guilt of my sin. Selah.",
+                    prayer: "Lord, thank You that when I confess my sins, You forgive me completely. Help me live in the freedom and peace of Your forgiveness."
+                ),
+                PrayerVerse(
+                    id: "psalm-32-6",
+                    reference: "Psalm 32:6",
+                    text: "Therefore, let everyone who is godly pray to You in a time when You may be found;\n  Surely in a flood of great waters they will not reach him.",
+                    prayer: "Father, teach me to seek You while You may be found. Help me make prayer and fellowship with You a daily priority."
+                ),
+                PrayerVerse(
+                    id: "psalm-32-7",
+                    reference: "Psalm 32:7",
+                    text: "You are my hiding place; You preserve me from trouble;\n  You surround me with songs of deliverance. Selah.",
+                    prayer: "Lord, You are my hiding place and my protection. Surround me with Your presence and deliver me from fear and trouble."
+                ),
+                PrayerVerse(
+                    id: "psalm-32-8",
+                    reference: "Psalm 32:8",
+                    text: "I will instruct you and teach you in the way which you should go;\n  I will counsel you with My eye upon you.",
+                    prayer: "Father, thank You for Your guidance. Teach me the way I should go and help me follow Your direction faithfully."
+                ),
+                PrayerVerse(
+                    id: "psalm-32-9",
+                    reference: "Psalm 32:9",
+                    text: "Do not be as the horse or as the mule which have no understanding,\n  Whose trappings include bit and bridle to hold them in check,\n  Otherwise they will not come near to you.",
+                    prayer: "Lord, help me be willing and obedient rather than stubborn or resistant to Your leading. Give me a teachable spirit."
+                ),
+                PrayerVerse(
+                    id: "psalm-32-10",
+                    reference: "Psalm 32:10",
+                    text: "Many are the sorrows of the wicked,\n  But he who trusts in the Lord, lovingkindness shall surround him.",
+                    prayer: "Father, thank You for surrounding those who trust in You with lovingkindness. Help me rest securely in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-32-11",
+                    reference: "Psalm 32:11",
+                    text: "Be glad in the Lord and rejoice, you righteous ones;\n  And shout for joy, all you who are upright in heart.",
+                    prayer: "Lord, fill my heart with joy and gladness because of Your forgiveness, grace, and faithfulness. Let my life be marked by worship and gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-32-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for the gift of forgiveness and the freedom that comes through Your mercy. Help me walk honestly before You, quickly confess my sins, and trust fully in Your grace. Guide my steps, teach me Your ways, and surround me with Your lovingkindness. May my heart be filled with joy as I live each day in the assurance of Your forgiveness and love.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 33,
             title: "Sing Joyfully",
             chapterReference: "Psalm 33",
             summary: "Pray in praise of God's faithfulness and creation.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-33-1",
+                    reference: "Psalm 33:1",
+                    text: "Sing for joy in the Lord, O you righteous ones;\n  Praise is becoming to the upright.",
+                    prayer: "Lord, I rejoice in You and praise Your holy name. Fill my heart with joy as I worship You for Your goodness and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-2",
+                    reference: "Psalm 33:2",
+                    text: "Give thanks to the Lord with the lyre;\n  Sing praises to Him with a harp of ten strings.",
+                    prayer: "Father, help me worship You with gratitude and sincerity. Let my praise be an expression of my love and devotion to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-3",
+                    reference: "Psalm 33:3",
+                    text: "Sing to Him a new song;\n  Play skillfully with a shout of joy.",
+                    prayer: "Lord, place a new song in my heart. Help me continually celebrate Your faithfulness with joy and thanksgiving."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-4",
+                    reference: "Psalm 33:4",
+                    text: "For the word of the Lord is upright,\n  And all His work is done in faithfulness.",
+                    prayer: "Father, Your Word is upright and true. Help me trust Your promises and build my life upon Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-5",
+                    reference: "Psalm 33:5",
+                    text: "He loves righteousness and justice;\n  The earth is full of the lovingkindness of the Lord.",
+                    prayer: "Lord, thank You for loving righteousness and justice. Help me reflect Your character by treating others with fairness, compassion, and integrity."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-6",
+                    reference: "Psalm 33:6",
+                    text: "By the word of the Lord the heavens were made,\n  And by the breath of His mouth all their host.",
+                    prayer: "Father, thank You for creating the heavens by Your Word. Remind me of Your limitless power and authority over all creation."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-7",
+                    reference: "Psalm 33:7",
+                    text: "He gathers the waters of the sea together as a heap;\n  He lays up the deeps in storehouses.",
+                    prayer: "Lord, You hold all things together according to Your wisdom. Help me trust Your control over every circumstance in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-8",
+                    reference: "Psalm 33:8",
+                    text: "Let all the earth fear the Lord;\n  Let all the inhabitants of the world stand in awe of Him.",
+                    prayer: "Father, teach me to live with reverence and awe before You. May my heart honor and respect Your greatness."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-9",
+                    reference: "Psalm 33:9",
+                    text: "For He spoke, and it was done;\n  He commanded, and it stood fast.",
+                    prayer: "Lord, You speak and creation obeys. Strengthen my faith in Your power and Your ability to accomplish all Your purposes."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-10",
+                    reference: "Psalm 33:10",
+                    text: "The Lord nullifies the counsel of the nations;\n  He frustrates the plans of the peoples.",
+                    prayer: "Father, thank You that no human plan can overcome Your will. Help me trust Your purposes even when I do not understand them."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-11",
+                    reference: "Psalm 33:11",
+                    text: "The counsel of the Lord stands forever,\n  The plans of His heart from generation to generation.",
+                    prayer: "Lord, Your plans stand forever. Align my heart with Your will and help me follow the path You have prepared for me."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-12",
+                    reference: "Psalm 33:12",
+                    text: "Blessed is the nation whose God is the Lord,\n  The people whom He has chosen for His own inheritance.",
+                    prayer: "Father, thank You for the blessing of belonging to You. Help me live as part of Your people with gratitude and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-13",
+                    reference: "Psalm 33:13",
+                    text: "The Lord looks from heaven;\n  He sees all the sons of men;",
+                    prayer: "Lord, thank You that You see every person and every situation. Nothing escapes Your loving attention."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-14",
+                    reference: "Psalm 33:14",
+                    text: "From His dwelling place He looks out\n  On all the inhabitants of the earth,",
+                    prayer: "Father, remind me that You are present everywhere and fully aware of everything happening in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-15",
+                    reference: "Psalm 33:15",
+                    text: "He who fashions the hearts of them all,\n  He who understands all their works.",
+                    prayer: "Lord, You formed my heart and understand me completely. Help me trust You with every concern, fear, and desire."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-16",
+                    reference: "Psalm 33:16",
+                    text: "The king is not saved by a mighty army;\n  A warrior is not delivered by great strength.",
+                    prayer: "Father, keep me from placing my confidence in worldly power or human strength. Teach me to trust in You alone."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-17",
+                    reference: "Psalm 33:17",
+                    text: "A horse is a false hope for victory;\n  Nor does it deliver anyone by its great strength.",
+                    prayer: "Lord, earthly resources cannot save me, but You are my true source of security and hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-18",
+                    reference: "Psalm 33:18",
+                    text: "Behold, the eye of the Lord is on those who fear Him,\n  On those who hope for His lovingkindness,",
+                    prayer: "Father, thank You for watching over those who fear You and place their hope in Your lovingkindness."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-19",
+                    reference: "Psalm 33:19",
+                    text: "To deliver their soul from death\n  And to keep them alive in famine.",
+                    prayer: "Lord, preserve and sustain me through every season of life. Thank You for Your faithful provision and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-20",
+                    reference: "Psalm 33:20",
+                    text: "Our soul waits for the Lord;\n  He is our help and our shield.",
+                    prayer: "Father, I wait for You with expectation and trust. You are my help and my shield."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-21",
+                    reference: "Psalm 33:21",
+                    text: "For our heart rejoices in Him,\n  Because we trust in His holy name.",
+                    prayer: "Lord, fill my heart with joy because I trust in Your holy name and Your unfailing promises."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-22",
+                    reference: "Psalm 33:22",
+                    text: "Let Your lovingkindness, O Lord, be upon us,\n  According as we have hoped in You.",
+                    prayer: "Father, let Your lovingkindness rest upon me as I place my hope completely in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-33-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your power, faithfulness, and unfailing love. Help me trust Your Word, rely on Your strength, and place my hope fully in You. Remind me that Your plans are perfect and that Your lovingkindness never fails. Fill my heart with worship, gratitude, and confidence as I follow You each day. May my life bring honor and glory to Your holy name.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 34,
             title: "Taste and See",
             chapterReference: "Psalm 34",
             summary: "Pray for trust in God's goodness and deliverance.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-34-1",
+                    reference: "Psalm 34:1",
+                    text: "I will bless the Lord at all times;\n  His praise shall continually be in my mouth.",
+                    prayer: "Lord, I will bless You at all times. Help me keep praise on my lips regardless of my circumstances."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-2",
+                    reference: "Psalm 34:2",
+                    text: "My soul will make its boast in the Lord;\n  The humble will hear it and rejoice.",
+                    prayer: "Father, let my soul boast in You alone. May my life point others to Your goodness and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-3",
+                    reference: "Psalm 34:3",
+                    text: "O magnify the Lord with me,\n  And let us exalt His name together.",
+                    prayer: "Lord, help me join with others in worship and magnify Your name together with joyful hearts."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-4",
+                    reference: "Psalm 34:4",
+                    text: "I sought the Lord, and He answered me,\n  And delivered me from all my fears.",
+                    prayer: "Father, thank You for hearing me when I seek You. Deliver me from fears that try to overwhelm my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-5",
+                    reference: "Psalm 34:5",
+                    text: "They looked to Him and were radiant,\n  And their faces will never be ashamed.",
+                    prayer: "Lord, help me keep my eyes fixed on You. Let Your presence fill me with hope, confidence, and joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-6",
+                    reference: "Psalm 34:6",
+                    text: "This poor man cried, and the Lord heard him\n  And saved him out of all his troubles.",
+                    prayer: "Father, when I feel weak and needy, remind me that You hear my prayers and come to my rescue."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-7",
+                    reference: "Psalm 34:7",
+                    text: "The angel of the Lord encamps around those who fear Him,\n  And rescues them.",
+                    prayer: "Lord, thank You for surrounding Your people with Your protection. Help me rest securely in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-8",
+                    reference: "Psalm 34:8",
+                    text: "O taste and see that the Lord is good;\n  How blessed is the man who takes refuge in Him!",
+                    prayer: "Father, help me experience and recognize Your goodness each day. Teach me to trust You more deeply."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-9",
+                    reference: "Psalm 34:9",
+                    text: "O fear the Lord, you His saints;\n  For to those who fear Him there is no want.",
+                    prayer: "Lord, teach me to fear You with reverence and awe. Thank You for providing for those who place their trust in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-10",
+                    reference: "Psalm 34:10",
+                    text: "The young lions do lack and suffer hunger;\n  But they who seek the Lord shall not be in want of any good thing.",
+                    prayer: "Father, remind me that You are my provider. Even when resources seem limited, You are enough."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-11",
+                    reference: "Psalm 34:11",
+                    text: "Come, you children, listen to me;\n  I will teach you the fear of the Lord.",
+                    prayer: "Lord, give me a teachable heart that desires to learn Your ways and grow in wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-12",
+                    reference: "Psalm 34:12",
+                    text: "Who is the man who desires life\n  And loves length of days that he may see good?",
+                    prayer: "Father, help me live a life that is meaningful, fruitful, and pleasing in Your sight."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-13",
+                    reference: "Psalm 34:13",
+                    text: "Keep your tongue from evil\n  And your lips from speaking deceit.",
+                    prayer: "Lord, guard my tongue from evil and my lips from deceit. Help my words reflect Your truth and love."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-14",
+                    reference: "Psalm 34:14",
+                    text: "Depart from evil and do good;\n  Seek peace and pursue it.",
+                    prayer: "Father, help me turn away from evil and pursue what is good. Teach me to seek peace and live it out daily."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-15",
+                    reference: "Psalm 34:15",
+                    text: "The eyes of the Lord are toward the righteous\n  And His ears are open to their cry.",
+                    prayer: "Lord, thank You that Your eyes are upon the righteous and that You hear their prayers."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-16",
+                    reference: "Psalm 34:16",
+                    text: "The face of the Lord is against evildoers,\n  To cut off the memory of them from the earth.",
+                    prayer: "Father, remind me that You are a God of justice and righteousness. Help me trust Your judgment."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-17",
+                    reference: "Psalm 34:17",
+                    text: "The righteous cry, and the Lord hears\n  And delivers them out of all their troubles.",
+                    prayer: "Lord, thank You for hearing the cries of Your people and delivering them from trouble according to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-18",
+                    reference: "Psalm 34:18",
+                    text: "The Lord is near to the brokenhearted\n  And saves those who are crushed in spirit.",
+                    prayer: "Father, stay close to those who are brokenhearted. Bring comfort, healing, and hope to hurting hearts."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-19",
+                    reference: "Psalm 34:19",
+                    text: "Many are the afflictions of the righteous,\n  But the Lord delivers him out of them all.",
+                    prayer: "Lord, even when I face many difficulties, help me trust that You remain faithful and present with me."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-20",
+                    reference: "Psalm 34:20",
+                    text: "He keeps all his bones,\n  Not one of them is broken.",
+                    prayer: "Father, thank You for Your protection and care. Guard my life according to Your perfect purposes."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-21",
+                    reference: "Psalm 34:21",
+                    text: "Evil shall slay the wicked,\n  And those who hate the righteous will be condemned.",
+                    prayer: "Lord, keep me on the path of righteousness and protect me from the consequences of sin and rebellion."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-22",
+                    reference: "Psalm 34:22",
+                    text: "The Lord redeems the soul of His servants,\n  And none of those who take refuge in Him will be condemned.",
+                    prayer: "Father, thank You for redeeming Your servants and providing refuge for all who trust in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-34-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your goodness, protection, and faithfulness. Help me praise You in every season, trust You in every circumstance, and seek You with all my heart. Guard my words, guide my steps, and keep me close to You. When fears arise, remind me that You hear my prayers and surround me with Your care. May my life continually reflect Your goodness and bring glory to Your name.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 35,
