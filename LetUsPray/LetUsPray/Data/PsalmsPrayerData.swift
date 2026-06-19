@@ -2035,7 +2035,200 @@ enum PsalmsPrayerData {
             title: "My God, My God",
             chapterReference: "Psalm 22",
             summary: "Pray through suffering with hope in God's deliverance.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-22-1",
+                    reference: "Psalm 22:1",
+                    text: "My God, my God, why have You forsaken me?\n  Far from my deliverance are the words of my groaning.",
+                    prayer: "Lord, when I feel alone, forgotten, or distant from Your presence, help me trust that You are still with me and that Your love never fails."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-2",
+                    reference: "Psalm 22:2",
+                    text: "O my God, I cry by day, but You do not answer;\n  And by night, but I have no rest.",
+                    prayer: "Father, when my prayers seem unanswered, give me perseverance to continue seeking You and confidence that You hear every cry of my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-3",
+                    reference: "Psalm 22:3",
+                    text: "Yet You are holy,\n  O You who are enthroned upon the praises of Israel.",
+                    prayer: "Lord, You are holy and worthy of all praise. Help me worship You even in difficult seasons and trust in Your perfect character."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-4",
+                    reference: "Psalm 22:4",
+                    text: "In You our fathers trusted;\n  They trusted and You delivered them.",
+                    prayer: "Father, thank You for Your faithfulness throughout generations. Strengthen my faith as I remember how You have cared for Your people."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-5",
+                    reference: "Psalm 22:5",
+                    text: "To You they cried out and were delivered;\n  In You they trusted and were not disappointed.",
+                    prayer: "Lord, help me trust in You completely. Remind me that those who place their hope in You are never ultimately disappointed."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-6",
+                    reference: "Psalm 22:6",
+                    text: "But I am a worm and not a man,\n  A reproach of men and despised by the people.",
+                    prayer: "Father, when I feel rejected, insignificant, or misunderstood, remind me of my value in Your eyes and Your unfailing love for me."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-7",
+                    reference: "Psalm 22:7",
+                    text: "All who see me sneer at me;\n  They separate with the lip, they wag the head, saying,",
+                    prayer: "Lord, help me endure criticism, rejection, and mockery with grace, keeping my focus on You rather than the opinions of others."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-8",
+                    reference: "Psalm 22:8",
+                    text: "“Commit yourself to the Lord; let Him deliver him;\n  Let Him rescue him, because He delights in him.”",
+                    prayer: "Father, teach me to trust You deeply, knowing that You are faithful even when circumstances are difficult to understand."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-9",
+                    reference: "Psalm 22:9",
+                    text: "Yet You are He who brought me forth from the womb;\n  You made me trust when upon my mother’s breasts.",
+                    prayer: "Lord, thank You for watching over me from the very beginning of my life. Help me rest in Your care and provision."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-10",
+                    reference: "Psalm 22:10",
+                    text: "Upon You I was cast from birth;\n  You have been my God from my mother’s womb.",
+                    prayer: "Father, You have been faithful through every season. Strengthen my confidence in Your continued presence and guidance."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-11",
+                    reference: "Psalm 22:11",
+                    text: "Be not far from me, for trouble is near;\n  For there is none to help.",
+                    prayer: "Lord, stay near to me in times of trouble. Help me remember that I never face challenges alone because You are with me."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-12",
+                    reference: "Psalm 22:12",
+                    text: "Many bulls have surrounded me;\n  Strong bulls of Bashan have encircled me.",
+                    prayer: "Father, when I feel surrounded by difficulties and pressures, remind me that You are greater than every obstacle before me."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-13",
+                    reference: "Psalm 22:13",
+                    text: "They open wide their mouth at me,\n  As a ravening and a roaring lion.",
+                    prayer: "Lord, protect me from fear and discouragement. Help me stand firm in faith when life feels overwhelming."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-14",
+                    reference: "Psalm 22:14",
+                    text: "I am poured out like water,\n  And all my bones are out of joint;\n  My heart is like wax;\n  It is melted within me.",
+                    prayer: "Father, when I feel weak and exhausted, renew my strength and sustain me with Your power."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-15",
+                    reference: "Psalm 22:15",
+                    text: "My strength is dried up like a potsherd,\n  And my tongue cleaves to my jaws;\n  And You lay me in the dust of death.",
+                    prayer: "Lord, satisfy my thirsty soul with Your presence. Refresh me spiritually and draw me closer to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-16",
+                    reference: "Psalm 22:16",
+                    text: "For dogs have surrounded me;\n  A band of evildoers has encompassed me;\n  They pierced my hands and my feet.",
+                    prayer: "Father, protect me from harm and from those things that seek to pull me away from Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-17",
+                    reference: "Psalm 22:17",
+                    text: "I can count all my bones.\n  They look, they stare at me;",
+                    prayer: "Lord, You know every detail of my life and every struggle I face. Help me trust Your care even when I feel vulnerable."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-18",
+                    reference: "Psalm 22:18",
+                    text: "They divide my garments among them,\n  And for my clothing they cast lots.",
+                    prayer: "Father, when circumstances seem unfair, remind me that You remain sovereign and that Your purposes will prevail."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-19",
+                    reference: "Psalm 22:19",
+                    text: "But You, O Lord, be not far off;\n  O You my help, hasten to my assistance.",
+                    prayer: "Lord, do not be far from me. Be my strength and help when I need You most."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-20",
+                    reference: "Psalm 22:20",
+                    text: "Deliver my soul from the sword,\n  My only life from the power of the dog.",
+                    prayer: "Father, rescue me from spiritual danger and guard my heart against temptation and fear."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-21",
+                    reference: "Psalm 22:21",
+                    text: "Save me from the lion’s mouth;\n  From the horns of the wild oxen You answer me.",
+                    prayer: "Lord, thank You for hearing my prayers and delivering me according to Your perfect will."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-22",
+                    reference: "Psalm 22:22",
+                    text: "I will tell of Your name to my brethren;\n  In the midst of the assembly I will praise You.",
+                    prayer: "Father, help me share Your goodness with others and openly declare Your faithfulness in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-23",
+                    reference: "Psalm 22:23",
+                    text: "You who fear the Lord, praise Him;\n  All you descendants of Jacob, glorify Him,\n  And stand in awe of Him, all you descendants of Israel.",
+                    prayer: "Lord, teach me to honor and reverence You with my whole heart. Let my worship be sincere and pleasing to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-24",
+                    reference: "Psalm 22:24",
+                    text: "For He has not despised nor abhorred the affliction of the afflicted;\n  Nor has He hidden His face from him;\n  But when he cried to Him for help, He heard.",
+                    prayer: "Father, thank You that You do not ignore those who cry out to You. Help me trust Your compassion and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-25",
+                    reference: "Psalm 22:25",
+                    text: "From You comes my praise in the great assembly;\n  I shall pay my vows before those who fear Him.",
+                    prayer: "Lord, let my life continually be filled with praise and gratitude for all You have done."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-26",
+                    reference: "Psalm 22:26",
+                    text: "The afflicted will eat and be satisfied;\n  Those who seek Him will praise the Lord.\n  Let your heart live forever!",
+                    prayer: "Father, satisfy the hungry, encourage the weary, and help me reflect Your generosity toward others."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-27",
+                    reference: "Psalm 22:27",
+                    text: "All the ends of the earth will remember and turn to the Lord,\n  And all the families of the nations will worship before You.",
+                    prayer: "Lord, may people throughout the world come to know and worship You. Use my life to point others toward Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-28",
+                    reference: "Psalm 22:28",
+                    text: "For the kingdom is the Lord’s\n  And He rules over the nations.",
+                    prayer: "Father, You are King over all nations. Help me trust in Your authority and sovereign rule."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-29",
+                    reference: "Psalm 22:29",
+                    text: "All the prosperous of the earth will eat and worship,\n  All those who go down to the dust will bow before Him,\n  Even he who cannot keep his soul alive.",
+                    prayer: "Lord, remind me that every person ultimately depends upon You. Keep my heart humble before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-30",
+                    reference: "Psalm 22:30",
+                    text: "Posterity will serve Him;\n  It will be told of the Lord to the coming generation.",
+                    prayer: "Father, let future generations know Your faithfulness. Help me leave a legacy that honors You."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-31",
+                    reference: "Psalm 22:31",
+                    text: "They will come and will declare His righteousness\n  To a people who will be born, that He has performed it.",
+                    prayer: "Lord, may Your righteousness and salvation be proclaimed to all people. Use my life as a testimony of Your grace and goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-22-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being near even when I feel alone and for remaining faithful through every trial. Help me trust You in seasons of suffering, weakness, and uncertainty. Strengthen my faith, renew my hope, and fill my heart with praise. May my life testify to Your goodness, and may I always remember that You are my Savior, my King, and my faithful Deliverer.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 23,
