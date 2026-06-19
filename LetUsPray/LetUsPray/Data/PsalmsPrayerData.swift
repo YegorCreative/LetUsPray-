@@ -1875,7 +1875,68 @@ enum PsalmsPrayerData {
             title: "May the Lord Answer",
             chapterReference: "Psalm 20",
             summary: "Pray for trust in God's name and strength.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-20-1",
+                    reference: "Psalm 20:1",
+                    text: "May the Lord answer you in the day of trouble!\n  May the name of the God of Jacob set you securely on high!",
+                    prayer: "Lord, in times of trouble, thank You for hearing my prayers. Be my refuge, my strength, and my help when I need You most."
+                ),
+                PrayerVerse(
+                    id: "psalm-20-2",
+                    reference: "Psalm 20:2",
+                    text: "May He send you help from the sanctuary\n  And support you from Zion!",
+                    prayer: "Father, send Your help from Your holy presence. Strengthen me and provide exactly what I need for every challenge before me."
+                ),
+                PrayerVerse(
+                    id: "psalm-20-3",
+                    reference: "Psalm 20:3",
+                    text: "May He remember all your meal offerings\n  And find your burnt offering acceptable! Selah.",
+                    prayer: "Lord, receive my worship and devotion. Help me honor You with a sincere heart and a life that brings glory to Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-20-4",
+                    reference: "Psalm 20:4",
+                    text: "May He grant you your heart’s desire\n  And fulfill all your counsel!",
+                    prayer: "Father, align my desires with Your will. Fulfill the plans and purposes You have prepared for my life according to Your wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-20-5",
+                    reference: "Psalm 20:5",
+                    text: "We will sing for joy over your victory,\n  And in the name of our God we will set up our banners.\n  May the Lord fulfill all your petitions.",
+                    prayer: "Lord, let my life be marked by joy in Your salvation. May every victory point back to Your faithfulness and goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-20-6",
+                    reference: "Psalm 20:6",
+                    text: "Now I know that the Lord saves His anointed;\n  He will answer him from His holy heaven\n  With the saving strength of His right hand.",
+                    prayer: "Father, thank You for hearing the prayers of Your people. Help me trust that You are working even when I cannot yet see the answer."
+                ),
+                PrayerVerse(
+                    id: "psalm-20-7",
+                    reference: "Psalm 20:7",
+                    text: "Some boast in chariots and some in horses,\n  But we will boast in the name of the Lord, our God.",
+                    prayer: "Lord, teach me to trust in Your name above all earthly power, resources, abilities, or possessions. You alone are my confidence."
+                ),
+                PrayerVerse(
+                    id: "psalm-20-8",
+                    reference: "Psalm 20:8",
+                    text: "They have bowed down and fallen,\n  But we have risen and stood upright.",
+                    prayer: "Father, when others stumble because they rely on temporary things, help me stand firm because my hope is rooted in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-20-9",
+                    reference: "Psalm 20:9",
+                    text: "Save, O Lord;\n  May the King answer us in the day we call.",
+                    prayer: "Lord, You are King over all. Hear my prayers and guide my life according to Your perfect will and purpose."
+                ),
+                PrayerVerse(
+                    id: "psalm-20-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing my prayers and being my source of strength and salvation. Help me trust in You above all else and place my confidence in Your power rather than my own abilities. Align my heart with Your will, establish my steps, and remind me that every victory comes from Your hand. May my life bring honor and glory to Your name.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 21,
