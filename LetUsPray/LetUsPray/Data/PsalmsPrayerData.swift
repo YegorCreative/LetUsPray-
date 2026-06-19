@@ -4505,14 +4505,214 @@ enum PsalmsPrayerData {
             title: "Send Your Light",
             chapterReference: "Psalm 43",
             summary: "Pray for guidance and vindication.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-43-1",
+                    reference: "Psalm 43:1",
+                    text: "Vindicate me, O God, and plead my case against an ungodly nation;\n  O deliver me from the deceitful and unjust man!",
+                    prayer: "Lord, defend my cause and help me trust in Your justice. When I face unfair situations, remind me that You are my righteous Judge."
+                ),
+                PrayerVerse(
+                    id: "psalm-43-2",
+                    reference: "Psalm 43:2",
+                    text: "For You are the God of my strength; why have You rejected me?\n  Why do I go mourning because of the oppression of the enemy?",
+                    prayer: "Father, You are my strength and refuge. When I feel rejected, discouraged, or confused, help me remain secure in Your love."
+                ),
+                PrayerVerse(
+                    id: "psalm-43-3",
+                    reference: "Psalm 43:3",
+                    text: "O send out Your light and Your truth, let them lead me;\n  Let them bring me to Your holy hill\n  And to Your dwelling places.",
+                    prayer: "Lord, send out Your light and Your truth to guide me. Lead me closer to Your presence and direct my steps according to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-43-4",
+                    reference: "Psalm 43:4",
+                    text: "Then I will go to the altar of God,\n  To God my exceeding joy;\n  And upon the lyre I shall praise You, O God, my God.",
+                    prayer: "Father, bring me into deeper fellowship with You. Let my heart find joy, peace, and satisfaction in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-43-5",
+                    reference: "Psalm 43:5",
+                    text: "Why are you in despair, O my soul?\n  And why are you disturbed within me?\n  Hope in God, for I shall again praise Him,\n  The help of my countenance and my God.",
+                    prayer: "Lord, when my soul is discouraged, help me place my hope in You. Remind me that You are my Savior, my help, and my God."
+                ),
+                PrayerVerse(
+                    id: "psalm-43-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my strength, my guide, and my source of hope. When I face uncertainty or discouragement, help me trust in Your truth and follow Your light. Draw me closer to Your presence and fill my heart with joy that comes from knowing You. May I continually place my hope in You and praise You as my Savior and my God.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 44,
             title: "In God We Make Our Boast",
             chapterReference: "Psalm 44",
             summary: "Pray for trust in God despite difficulties.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-44-1",
+                    reference: "Psalm 44:1",
+                    text: "O God, we have heard with our ears,\n  Our fathers have told us\n  The work that You did in their days,\n  In the days of old.",
+                    prayer: "Lord, thank You for the testimonies of Your faithfulness throughout generations. Help me remember all that You have done."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-2",
+                    reference: "Psalm 44:2",
+                    text: "You with Your own hand drove out the nations;\n  Then You planted them;\n  You afflicted the peoples,\n  Then You spread them abroad.",
+                    prayer: "Father, thank You for Your power and guidance throughout history. Remind me that You are still working today."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-3",
+                    reference: "Psalm 44:3",
+                    text: "For by their own sword they did not possess the land,\n  And their own arm did not save them,\n  But Your right hand and Your arm and the light of Your presence,\n  For You favored them.",
+                    prayer: "Lord, victory comes not through human strength but through Your favor and presence. Help me trust You completely."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-4",
+                    reference: "Psalm 44:4",
+                    text: "You are my King, O God;\n  Command victories for Jacob.",
+                    prayer: "Father, You are my King and my God. Rule over my life and direct my steps according to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-5",
+                    reference: "Psalm 44:5",
+                    text: "Through You we will push back our adversaries;\n  Through Your name we will trample down those who rise up against us.",
+                    prayer: "Lord, through Your strength help me overcome every challenge and remain faithful in every circumstance."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-6",
+                    reference: "Psalm 44:6",
+                    text: "For I will not trust in my bow,\n  Nor will my sword save me.",
+                    prayer: "Father, keep me from placing my confidence in my own abilities. Teach me to rely upon You."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-7",
+                    reference: "Psalm 44:7",
+                    text: "But You have saved us from our adversaries,\n  And You have put to shame those who hate us.",
+                    prayer: "Lord, thank You for delivering Your people. Help me remember that You are my source of help and protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-8",
+                    reference: "Psalm 44:8",
+                    text: "In God we have boasted all day long,\n  And we will give thanks to Your name forever. Selah.",
+                    prayer: "Father, may my life continually praise You and give glory to Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-9",
+                    reference: "Psalm 44:9",
+                    text: "Yet You have rejected us and brought us to dishonor,\n  And do not go out with our armies.",
+                    prayer: "Lord, when I feel abandoned or confused by circumstances, help me continue trusting Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-10",
+                    reference: "Psalm 44:10",
+                    text: "You cause us to turn back from the adversary;\n  And those who hate us have taken spoil for themselves.",
+                    prayer: "Father, when setbacks come, strengthen my heart and remind me that You have not forgotten me."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-11",
+                    reference: "Psalm 44:11",
+                    text: "You give us as sheep to be eaten\n  And have scattered us among the nations.",
+                    prayer: "Lord, protect Your people and sustain us through seasons of hardship and uncertainty."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-12",
+                    reference: "Psalm 44:12",
+                    text: "You sell Your people cheaply,\n  And have not profited by their sale.",
+                    prayer: "Father, help me trust You when I do not understand what You are doing in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-13",
+                    reference: "Psalm 44:13",
+                    text: "You make us a reproach to our neighbors,\n  A scoffing and a derision to those around us.",
+                    prayer: "Lord, when I face criticism, rejection, or misunderstanding, help me respond with grace and faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-14",
+                    reference: "Psalm 44:14",
+                    text: "You make us a byword among the nations,\n  A laughingstock among the peoples.",
+                    prayer: "Father, strengthen me when I feel discouraged by the opinions or actions of others."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-15",
+                    reference: "Psalm 44:15",
+                    text: "All day long my dishonor is before me\n  And my humiliation has overwhelmed me,",
+                    prayer: "Lord, You know every burden I carry. Help me bring my pain and concerns honestly before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-16",
+                    reference: "Psalm 44:16",
+                    text: "Because of the voice of him who reproaches and reviles,\n  Because of the presence of the enemy and the avenger.",
+                    prayer: "Father, remind me that Your approval matters more than the approval of people."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-17",
+                    reference: "Psalm 44:17",
+                    text: "All this has come upon us, but we have not forgotten You,\n  And we have not dealt falsely with Your covenant.",
+                    prayer: "Lord, help me remain faithful to You even when life becomes difficult or confusing."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-18",
+                    reference: "Psalm 44:18",
+                    text: "Our heart has not turned back,\n  And our steps have not deviated from Your way,",
+                    prayer: "Father, keep my heart from turning away from You. Strengthen my commitment to follow You."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-19",
+                    reference: "Psalm 44:19",
+                    text: "Yet You have crushed us in a place of jackals\n  And covered us with the shadow of death.",
+                    prayer: "Lord, when I walk through dark seasons, help me trust that You are still present and working."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-20",
+                    reference: "Psalm 44:20",
+                    text: "If we had forgotten the name of our God\n  Or extended our hands to a strange god,",
+                    prayer: "Father, guard my heart against idolatry and anything that seeks to take Your place in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-21",
+                    reference: "Psalm 44:21",
+                    text: "Would not God find this out?\n  For He knows the secrets of the heart.",
+                    prayer: "Lord, You know every thought and motive of my heart. Help me live with sincerity and integrity before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-22",
+                    reference: "Psalm 44:22",
+                    text: "But for Your sake we are killed all day long;\n  We are considered as sheep to be slaughtered.",
+                    prayer: "Father, help me remain faithful even when following You requires sacrifice or endurance."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-23",
+                    reference: "Psalm 44:23",
+                    text: "Arouse Yourself, why do You sleep, O Lord?\n  Awake, do not reject us forever.",
+                    prayer: "Lord, hear my prayers and respond according to Your perfect wisdom and love."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-24",
+                    reference: "Psalm 44:24",
+                    text: "Why do You hide Your face\n  And forget our affliction and our oppression?",
+                    prayer: "Father, when You seem distant, help me trust that You are still near and attentive to my needs."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-25",
+                    reference: "Psalm 44:25",
+                    text: "For our soul has sunk down into the dust;\n  Our body cleaves to the earth.",
+                    prayer: "Lord, lift me up when I feel overwhelmed, discouraged, or weighed down by life’s challenges."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-26",
+                    reference: "Psalm 44:26",
+                    text: "Rise up, be our help,\n  And redeem us for the sake of Your lovingkindness.",
+                    prayer: "Father, arise and help Your people. Thank You for Your unfailing love and faithful redemption."
+                ),
+                PrayerVerse(
+                    id: "psalm-44-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your faithfulness throughout every generation. Help me trust You not only during seasons of victory but also during times of uncertainty and hardship. Strengthen my faith when I do not understand Your plans, and remind me that Your love never fails. Keep my heart devoted to You, help me persevere through every challenge, and teach me to rely completely on Your strength and grace. May my life continually bring glory to Your name.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 45,
