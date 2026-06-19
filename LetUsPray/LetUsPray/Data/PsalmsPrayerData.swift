@@ -5085,14 +5085,286 @@ enum PsalmsPrayerData {
             title: "Why Should I Fear?",
             chapterReference: "Psalm 49",
             summary: "Pray for wisdom about wealth and eternity.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-49-1",
+                    reference: "Psalm 49:1",
+                    text: "Hear this, all peoples;\n  Give ear, all inhabitants of the world,",
+                    prayer: "Lord, help me listen carefully to Your wisdom and apply Your truth to my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-2",
+                    reference: "Psalm 49:2",
+                    text: "Both low and high,\n  Rich and poor together.",
+                    prayer: "Father, remind me that Your Word is for all people, regardless of status, wealth, or position."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-3",
+                    reference: "Psalm 49:3",
+                    text: "My mouth will speak wisdom,\n  And the meditation of my heart will be understanding.",
+                    prayer: "Lord, fill my heart with wisdom and understanding that comes from knowing You."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-4",
+                    reference: "Psalm 49:4",
+                    text: "I will incline my ear to a proverb;\n  I will express my riddle on the harp.",
+                    prayer: "Father, help me seek Your truth and grow in spiritual discernment every day."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-5",
+                    reference: "Psalm 49:5",
+                    text: "Why should I fear in days of adversity,\n  When the iniquity of my foes surrounds me,",
+                    prayer: "Lord, when fear surrounds me, help me trust in Your presence and protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-6",
+                    reference: "Psalm 49:6",
+                    text: "Even those who trust in their wealth\n  And boast in the abundance of their riches?",
+                    prayer: "Father, keep me from placing confidence in wealth, possessions, or worldly success."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-7",
+                    reference: "Psalm 49:7",
+                    text: "No man can by any means redeem his brother\n  Or give to God a ransom for him—",
+                    prayer: "Lord, remind me that no earthly resource can purchase salvation. Thank You for the gift of redemption through Your grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-8",
+                    reference: "Psalm 49:8",
+                    text: "For the redemption of his soul is costly,\n  And he should cease trying forever—",
+                    prayer: "Father, thank You that true redemption comes from You alone and cannot be earned by human effort."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-9",
+                    reference: "Psalm 49:9",
+                    text: "That he should live on eternally,\n  That he should not undergo decay.",
+                    prayer: "Lord, help me live with an eternal perspective rather than focusing only on temporary things."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-10",
+                    reference: "Psalm 49:10",
+                    text: "For he sees that even wise men die;\n  The stupid and the senseless alike perish\n  And leave their wealth to others.",
+                    prayer: "Father, remind me that earthly life is brief and that wisdom is found in preparing for eternity."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-11",
+                    reference: "Psalm 49:11",
+                    text: "Their inner thought is that their houses are forever\n  And their dwelling places to all generations;\n  They have called their lands after their own names.",
+                    prayer: "Lord, help me avoid placing my identity in accomplishments, possessions, or reputation."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-12",
+                    reference: "Psalm 49:12",
+                    text: "But man in his pomp will not endure;\n  He is like the beasts that perish.",
+                    prayer: "Father, teach me humility and remind me that all earthly glory fades away."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-13",
+                    reference: "Psalm 49:13",
+                    text: "This is the way of those who are foolish,\n  And of those after them who approve their words. Selah.",
+                    prayer: "Lord, keep me from foolish pride and help me walk in wisdom and dependence upon You."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-14",
+                    reference: "Psalm 49:14",
+                    text: "As sheep they are appointed for Sheol;\n  Death shall be their shepherd;\n  And the upright shall rule over them in the morning,\n  And their form shall be for Sheol to consume\n  So that they have no habitation.",
+                    prayer: "Father, thank You for showing me the path that leads to eternal life and hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-15",
+                    reference: "Psalm 49:15",
+                    text: "But God will redeem my soul from the power of Sheol,\n  For He will receive me. Selah.",
+                    prayer: "Lord, thank You for redeeming my soul and giving me the promise of everlasting life with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-16",
+                    reference: "Psalm 49:16",
+                    text: "Do not be afraid when a man becomes rich,\n  When the glory of his house is increased;",
+                    prayer: "Father, help me remain content and faithful when others prosper materially."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-17",
+                    reference: "Psalm 49:17",
+                    text: "For when he dies he will carry nothing away;\n  His glory will not descend after him.",
+                    prayer: "Lord, remind me that earthly possessions cannot be taken into eternity and that true treasure is found in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-18",
+                    reference: "Psalm 49:18",
+                    text: "Though while he lives he congratulates himself—\n  And though men praise you when you do well for yourself—",
+                    prayer: "Father, keep me from seeking the praise of people more than the approval of You."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-19",
+                    reference: "Psalm 49:19",
+                    text: "He shall go to the generation of his fathers;\n  They will never see the light.",
+                    prayer: "Lord, help me live wisely and faithfully so that my life reflects eternal values."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-20",
+                    reference: "Psalm 49:20",
+                    text: "Man in his pomp, yet without understanding,\n  Is like the beasts that perish.",
+                    prayer: "Father, grant me understanding and help me walk according to Your wisdom rather than the wisdom of the world."
+                ),
+                PrayerVerse(
+                    id: "psalm-49-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for teaching me what truly matters. Help me live with an eternal perspective and place my trust in You rather than in wealth, possessions, or worldly success. Fill me with wisdom, humility, and contentment. Thank You for redeeming my life and giving me the hope of eternity with You. May my heart remain focused on Your kingdom and Your purposes above all else.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 50,
             title: "The Mighty One Speaks",
             chapterReference: "Psalm 50",
             summary: "Pray for true worship and gratitude.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-50-1",
+                    reference: "Psalm 50:1",
+                    text: "The Mighty One, God, the Lord, has spoken,\n  And summoned the earth from the rising of the sun to its setting.",
+                    prayer: "Lord, You are the mighty God who speaks with authority. Help me listen carefully and respond faithfully to Your voice."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-2",
+                    reference: "Psalm 50:2",
+                    text: "Out of Zion, the perfection of beauty,\n  God has shone forth.",
+                    prayer: "Father, Your glory shines with perfection. Help me recognize Your majesty and worship You with reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-3",
+                    reference: "Psalm 50:3",
+                    text: "May our God come and not keep silence;\n  Fire devours before Him,\n  And it is very tempestuous around Him.",
+                    prayer: "Lord, thank You that You are holy and just. Help me live in a way that honors Your righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-4",
+                    reference: "Psalm 50:4",
+                    text: "He summons the heavens above,\n  And the earth, to judge His people:",
+                    prayer: "Father, You see all things and judge perfectly. Help me live with integrity before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-5",
+                    reference: "Psalm 50:5",
+                    text: "“Gather My godly ones to Me,\n  Those who have made a covenant with Me by sacrifice.”",
+                    prayer: "Lord, thank You for calling Your people into relationship with You. Help me remain faithful to the covenant You have established through Christ."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-6",
+                    reference: "Psalm 50:6",
+                    text: "And the heavens declare His righteousness,\n  For God Himself is judge. Selah.",
+                    prayer: "Father, Your judgments are true and righteous. Help me trust Your wisdom in all things."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-7",
+                    reference: "Psalm 50:7",
+                    text: "“Hear, O My people, and I will speak;\n  O Israel, I will testify against you;\n  I am God, your God.",
+                    prayer: "Lord, give me ears to hear Your instruction and a heart willing to obey."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-8",
+                    reference: "Psalm 50:8",
+                    text: "I do not reprove you for your sacrifices,\n  And your burnt offerings are continually before Me.",
+                    prayer: "Father, remind me that You desire more than outward actions—you desire a heart devoted to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-9",
+                    reference: "Psalm 50:9",
+                    text: "I shall take no young bull out of your house\n  Nor male goats out of your folds.",
+                    prayer: "Lord, help me remember that everything belongs to You and that You are not dependent upon anything I can offer."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-10",
+                    reference: "Psalm 50:10",
+                    text: "For every beast of the forest is Mine,\n  The cattle on a thousand hills.",
+                    prayer: "Father, thank You as the Creator and Owner of all things. Teach me to be a faithful steward of what You have entrusted to me."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-11",
+                    reference: "Psalm 50:11",
+                    text: "I know every bird of the mountains,\n  And everything that moves in the field is Mine.",
+                    prayer: "Lord, You know every detail of creation and every detail of my life. Thank You for Your care and attention."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-12",
+                    reference: "Psalm 50:12",
+                    text: "If I were hungry I would not tell you,\n  For the world is Mine, and all it contains.",
+                    prayer: "Father, remind me that You are completely self-sufficient and worthy of worship simply because of who You are."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-13",
+                    reference: "Psalm 50:13",
+                    text: "Shall I eat the flesh of bulls\n  Or drink the blood of male goats?",
+                    prayer: "Lord, help me understand the true meaning of worship and devotion to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-14",
+                    reference: "Psalm 50:14",
+                    text: "Offer to God a sacrifice of thanksgiving\n  And pay your vows to the Most High;",
+                    prayer: "Father, let gratitude and thanksgiving become a regular part of my life and relationship with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-15",
+                    reference: "Psalm 50:15",
+                    text: "Call upon Me in the day of trouble;\n  I shall rescue you, and you will honor Me.”",
+                    prayer: "Lord, thank You for inviting me to call upon You in times of trouble. Help me trust You completely."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-16",
+                    reference: "Psalm 50:16",
+                    text: "But to the wicked God says,\n  “What right have you to tell of My statutes\n  And to take My covenant in your mouth?",
+                    prayer: "Father, help me not merely speak Your truth but live it faithfully every day."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-17",
+                    reference: "Psalm 50:17",
+                    text: "For you hate discipline,\n  And you cast My words behind you.",
+                    prayer: "Lord, reveal areas where I resist correction and give me a teachable and humble heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-18",
+                    reference: "Psalm 50:18",
+                    text: "When you see a thief, you are pleased with him,\n  And you associate with adulterers.",
+                    prayer: "Father, keep me from compromising with sin and help me walk in obedience to Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-19",
+                    reference: "Psalm 50:19",
+                    text: "You let your mouth loose in evil\n  And your tongue frames deceit.",
+                    prayer: "Lord, guard my speech and help my words reflect truth, grace, and wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-20",
+                    reference: "Psalm 50:20",
+                    text: "You sit and speak against your brother;\n  You slander your own mother’s son.",
+                    prayer: "Father, protect my relationships and help me treat others with kindness, honesty, and love."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-21",
+                    reference: "Psalm 50:21",
+                    text: "These things you have done and I kept silence;\n  You thought that I was just like you;\n  I will reprove you and state the case in order before your eyes.",
+                    prayer: "Lord, forgive me when I make assumptions about You that are not true. Help me know You as You have revealed Yourself."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-22",
+                    reference: "Psalm 50:22",
+                    text: "“Now consider this, you who forget God,\n  Or I will tear you in pieces, and there will be none to deliver.",
+                    prayer: "Father, help me remember Your warnings and respond to them with repentance and faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-23",
+                    reference: "Psalm 50:23",
+                    text: "He who offers a sacrifice of thanksgiving honors Me;\n  And to him who orders his way aright\n  I shall show the salvation of God.”",
+                    prayer: "Lord, let my life be marked by thanksgiving, obedience, and worship that glorifies You."
+                ),
+                PrayerVerse(
+                    id: "psalm-50-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your holiness, justice, and mercy. Help me worship You not only with my words but also with my life. Teach me to walk in obedience, gratitude, and sincerity before You. Guard my heart from hypocrisy, strengthen my faith, and help me trust You in every circumstance. May my life continually bring honor and glory to Your name through genuine worship and faithful devotion.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 51,
