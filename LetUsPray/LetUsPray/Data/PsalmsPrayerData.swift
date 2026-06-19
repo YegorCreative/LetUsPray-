@@ -4919,7 +4919,68 @@ enum PsalmsPrayerData {
             title: "Clap Your Hands",
             chapterReference: "Psalm 47",
             summary: "Pray in joyful worship of God's kingship.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-47-1",
+                    reference: "Psalm 47:1",
+                    text: "O clap your hands, all peoples;\n  Shout to God with the voice of joy.",
+                    prayer: "Lord, I praise You with joy and thanksgiving. Help me celebrate Your goodness and greatness with all my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-47-2",
+                    reference: "Psalm 47:2",
+                    text: "For the Lord Most High is to be feared,\n  A great King over all the earth.",
+                    prayer: "Father, You are the Most High God, worthy of reverence and worship. Help me live in awe of Your majesty."
+                ),
+                PrayerVerse(
+                    id: "psalm-47-3",
+                    reference: "Psalm 47:3",
+                    text: "He subdues peoples under us\n  And nations under our feet.",
+                    prayer: "Lord, thank You for Your authority over every nation and every people. Remind me that You reign over all creation."
+                ),
+                PrayerVerse(
+                    id: "psalm-47-4",
+                    reference: "Psalm 47:4",
+                    text: "He chooses our inheritance for us,\n  The glory of Jacob whom He loves. Selah.",
+                    prayer: "Father, thank You for the blessings and inheritance You provide for Your people. Help me walk faithfully in Your promises."
+                ),
+                PrayerVerse(
+                    id: "psalm-47-5",
+                    reference: "Psalm 47:5",
+                    text: "God has ascended with a shout,\n  The Lord, with the sound of a trumpet.",
+                    prayer: "Lord, let my worship be joyful and sincere as I honor You as King over all."
+                ),
+                PrayerVerse(
+                    id: "psalm-47-6",
+                    reference: "Psalm 47:6",
+                    text: "Sing praises to God, sing praises;\n  Sing praises to our King, sing praises.",
+                    prayer: "Father, fill my heart with songs of praise. Help me continually worship You throughout my daily life."
+                ),
+                PrayerVerse(
+                    id: "psalm-47-7",
+                    reference: "Psalm 47:7",
+                    text: "For God is the King of all the earth;\n  Sing praises with a skillful psalm.",
+                    prayer: "Lord, You are King over all the earth. Give me wisdom to live under Your rule and according to Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-47-8",
+                    reference: "Psalm 47:8",
+                    text: "God reigns over the nations,\n  God sits on His holy throne.",
+                    prayer: "Father, thank You that Your throne is established forever. Help me trust in Your sovereign authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-47-9",
+                    reference: "Psalm 47:9",
+                    text: "The princes of the people have assembled themselves as the people of the God of Abraham,\n  For the shields of the earth belong to God;\n  He is highly exalted.",
+                    prayer: "Lord, thank You that people from every nation belong to You. Help me see Your kingdom perspective and love others as You do."
+                ),
+                PrayerVerse(
+                    id: "psalm-47-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being the King over all the earth. You are worthy of all praise, honor, and worship. Help me live with joy, gratitude, and reverence as I follow You. Remind me that Your kingdom is eternal and that Your authority is above every earthly power. May my life continually bring glory to Your name, and may my heart remain devoted to worshiping You as my Lord and King.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 48,
