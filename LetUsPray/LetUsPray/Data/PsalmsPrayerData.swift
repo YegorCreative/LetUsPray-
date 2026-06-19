@@ -2609,6 +2609,78 @@ enum PsalmsPrayerData {
                     reference: "Psalm 27:3",
                     text: "Though a host encamp against me,\n  My heart will not fear;\n  Though war arise against me,\n  In spite of this I shall be confident.",
                     prayer: "Lord, even when challenges surround me, help my heart remain confident and secure in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-27-4",
+                    reference: "Psalm 27:4",
+                    text: "One thing I have asked from the Lord, that I shall seek:\n  That I may dwell in the house of the Lord all the days of my life,\n  To behold the beauty of the Lord\n  And to meditate in His temple.",
+                    prayer: "Father, my greatest desire is to be near You. Help me seek Your presence above all else and delight in Your beauty and goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-27-5",
+                    reference: "Psalm 27:5",
+                    text: "For in the day of trouble He will conceal me in His tabernacle;\n  In the secret place of His tent He will hide me;\n  He will lift me up on a rock.",
+                    prayer: "Lord, in times of trouble, hide me in the shelter of Your care. Keep me secure and strengthen my faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-27-6",
+                    reference: "Psalm 27:6",
+                    text: "And now my head will be lifted up above my enemies around me,\n  And I will offer in His tent sacrifices with shouts of joy;\n  I will sing, yes, I will sing praises to the Lord.",
+                    prayer: "Father, let my response to Your faithfulness be praise and worship. Fill my heart with gratitude for all You have done."
+                ),
+                PrayerVerse(
+                    id: "psalm-27-7",
+                    reference: "Psalm 27:7",
+                    text: "Hear, O Lord, when I cry with my voice,\n  And be gracious to me and answer me.",
+                    prayer: "Lord, hear my voice when I call to You. Thank You for listening to my prayers and responding with mercy and love."
+                ),
+                PrayerVerse(
+                    id: "psalm-27-8",
+                    reference: "Psalm 27:8",
+                    text: "When You said, “Seek My face,” my heart said to You,\n  “Your face, O Lord, I shall seek.”",
+                    prayer: "Father, when You call me to seek You, help me respond with a willing and eager heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-27-9",
+                    reference: "Psalm 27:9",
+                    text: "Do not hide Your face from me,\n  Do not turn Your servant away in anger;\n  You have been my help;\n  Do not abandon me nor forsake me,\n  O God of my salvation!",
+                    prayer: "Lord, do not let me drift from Your presence. Guide me, teach me, and help me remain close to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-27-10",
+                    reference: "Psalm 27:10",
+                    text: "For my father and my mother have forsaken me,\n  But the Lord will take me up.",
+                    prayer: "Father, even if others fail me, thank You that Your love never fails. Help me rest securely in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-27-11",
+                    reference: "Psalm 27:11",
+                    text: "Teach me Your way, O Lord,\n  And lead me in a level path\n  Because of my foes.",
+                    prayer: "Lord, teach me Your way and lead me on a straight path. Give me wisdom to follow Your direction faithfully."
+                ),
+                PrayerVerse(
+                    id: "psalm-27-12",
+                    reference: "Psalm 27:12",
+                    text: "Do not deliver me over to the desire of my adversaries,\n  For false witnesses have risen against me,\n  And such as breathe out violence.",
+                    prayer: "Father, protect me from false accusations, harmful influences, and anything that seeks to pull me away from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-27-13",
+                    reference: "Psalm 27:13",
+                    text: "I would have despaired unless I had believed that I would see the goodness of the Lord\n  In the land of the living.",
+                    prayer: "Lord, help me believe that I will see Your goodness even in difficult seasons. Strengthen my faith and hope in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-27-14",
+                    reference: "Psalm 27:14",
+                    text: "Wait for the Lord;\n  Be strong and let your heart take courage;\n  Yes, wait for the Lord.",
+                    prayer: "Father, teach me to wait patiently for You. Give me courage, perseverance, and confidence in Your perfect timing."
+                ),
+                PrayerVerse(
+                    id: "psalm-27-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my light, my salvation, and my strength. Help me seek Your presence above all else and trust You in every circumstance. When fear arises, remind me that You are with me. Teach me to wait upon You with patience and confidence, knowing that Your goodness and faithfulness never fail. May my life be filled with worship, trust, and devotion to You.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
                 )
             ]
         ),
@@ -2617,7 +2689,68 @@ enum PsalmsPrayerData {
             title: "To You I Call",
             chapterReference: "Psalm 28",
             summary: "Pray for God to hear and deliver.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-28-1",
+                    reference: "Psalm 28:1",
+                    text: "To You, O Lord, I call;\n  My rock, do not be deaf to me,\n  For if You are silent to me,\n  I will become like those who go down to the pit.",
+                    prayer: "Lord, You are my rock and my refuge. When I call to You, hear my prayer and help me trust that You are listening."
+                ),
+                PrayerVerse(
+                    id: "psalm-28-2",
+                    reference: "Psalm 28:2",
+                    text: "Hear the voice of my supplications when I cry to You for help,\n  When I lift up my hands toward Your holy sanctuary.",
+                    prayer: "Father, I lift my hands and my heart toward You. Thank You for inviting me into Your presence and hearing my cries for mercy."
+                ),
+                PrayerVerse(
+                    id: "psalm-28-3",
+                    reference: "Psalm 28:3",
+                    text: "Do not drag me away with the wicked\n  And with those who work iniquity,\n  Who speak peace with their neighbors,\n  While evil is in their hearts.",
+                    prayer: "Lord, keep me from being influenced by evil or hypocrisy. Help me walk in sincerity, truth, and integrity before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-28-4",
+                    reference: "Psalm 28:4",
+                    text: "Requite them according to their work and according to the evil of their practices;\n  Requite them according to the deeds of their hands;\n  Repay them their recompense.",
+                    prayer: "Father, You are perfectly just. Help me trust Your judgment and leave every matter in Your hands rather than seeking my own revenge."
+                ),
+                PrayerVerse(
+                    id: "psalm-28-5",
+                    reference: "Psalm 28:5",
+                    text: "Because they do not regard the works of the Lord\n  Nor the deeds of His hands,\n  He will tear them down and not build them up.",
+                    prayer: "Lord, open my eyes to recognize Your works and Your hand in my life. Help me appreciate Your wisdom, power, and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-28-6",
+                    reference: "Psalm 28:6",
+                    text: "Blessed be the Lord,\n  Because He has heard the voice of my supplication.",
+                    prayer: "Father, thank You for hearing my prayers. Fill my heart with gratitude as I remember how You have answered and sustained me."
+                ),
+                PrayerVerse(
+                    id: "psalm-28-7",
+                    reference: "Psalm 28:7",
+                    text: "The Lord is my strength and my shield;\n  My heart trusts in Him, and I am helped;\n  Therefore my heart exults,\n  And with my song I shall thank Him.",
+                    prayer: "Lord, You are my strength and my shield. Help me trust You completely and rejoice in the protection and peace You provide."
+                ),
+                PrayerVerse(
+                    id: "psalm-28-8",
+                    reference: "Psalm 28:8",
+                    text: "The Lord is their strength,\n  And He is a saving defense to His anointed.",
+                    prayer: "Father, thank You for being the strength of Your people. Encourage and sustain all who place their hope in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-28-9",
+                    reference: "Psalm 28:9",
+                    text: "Save Your people and bless Your inheritance;\n  Be their shepherd also, and carry them forever.",
+                    prayer: "Lord, bless and shepherd Your people. Guide us with Your wisdom, carry us through every season, and keep us close to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-28-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my rock, my strength, and my shield. Thank You for hearing my prayers and surrounding me with Your protection. Help me trust You completely, walk in integrity, and rest in Your faithfulness. Shepherd my life according to Your will, strengthen my faith, and fill my heart with praise for all You have done and all You will do.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 29,
