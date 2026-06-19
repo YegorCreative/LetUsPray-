@@ -4333,14 +4333,172 @@ enum PsalmsPrayerData {
             title: "Blessed is He Who Cares",
             chapterReference: "Psalm 41",
             summary: "Pray for compassion and healing.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-41-1",
+                    reference: "Psalm 41:1",
+                    text: "How blessed is he who considers the helpless;\n  The Lord will deliver him in a day of trouble.",
+                    prayer: "Lord, help me care for those who are poor, hurting, and in need. Give me a compassionate heart that reflects Your love."
+                ),
+                PrayerVerse(
+                    id: "psalm-41-2",
+                    reference: "Psalm 41:2",
+                    text: "The Lord will protect him and keep him alive,\n  And he shall be called blessed upon the earth;\n  And do not give him over to the desire of his enemies.",
+                    prayer: "Father, thank You for Your protection and care. Help me trust Your provision and faithfulness in every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-41-3",
+                    reference: "Psalm 41:3",
+                    text: "The Lord will sustain him upon his sickbed;\n  In his illness, You restore him to health.",
+                    prayer: "Lord, strengthen those who are sick, weary, or struggling. Bring healing, comfort, and restoration according to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-41-4",
+                    reference: "Psalm 41:4",
+                    text: "As for me, I said, “O Lord, be gracious to me;\n  Heal my soul, for I have sinned against You.”",
+                    prayer: "Father, I ask for Your mercy. Forgive my sins, renew my spirit, and draw me closer to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-41-5",
+                    reference: "Psalm 41:5",
+                    text: "My enemies speak evil against me,\n  “When will he die, and his name perish?”",
+                    prayer: "Lord, when others speak negatively about me or misunderstand me, help me respond with grace and wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-41-6",
+                    reference: "Psalm 41:6",
+                    text: "And when he comes to see me, he speaks falsehood;\n  His heart gathers wickedness to itself;\n  When he goes outside, he tells it.",
+                    prayer: "Father, give me discernment regarding the intentions of others and help me walk in truth and integrity."
+                ),
+                PrayerVerse(
+                    id: "psalm-41-7",
+                    reference: "Psalm 41:7",
+                    text: "All who hate me whisper together against me;\n  Against me they devise my hurt, saying,",
+                    prayer: "Lord, protect me from discouragement when I face criticism, gossip, or opposition."
+                ),
+                PrayerVerse(
+                    id: "psalm-41-8",
+                    reference: "Psalm 41:8",
+                    text: "“A wicked thing is poured out upon him,\n  That when he lies down, he will not rise up again.”",
+                    prayer: "Father, remind me that my identity is secure in You and not in the opinions of others."
+                ),
+                PrayerVerse(
+                    id: "psalm-41-9",
+                    reference: "Psalm 41:9",
+                    text: "Even my close friend in whom I trusted,\n  Who ate my bread,\n  Has lifted up his heel against me.",
+                    prayer: "Lord, when I experience disappointment or betrayal, help me trust You and find healing in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-41-10",
+                    reference: "Psalm 41:10",
+                    text: "But You, O Lord, be gracious to me and raise me up,\n  That I may repay them.",
+                    prayer: "Father, thank You for Your mercy and restoration. Strengthen me and help me continue walking faithfully with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-41-11",
+                    reference: "Psalm 41:11",
+                    text: "By this I know that You are pleased with me,\n  Because my enemy does not shout in triumph over me.",
+                    prayer: "Lord, thank You for the assurance of Your favor and Your presence in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-41-12",
+                    reference: "Psalm 41:12",
+                    text: "As for me, You uphold me in my integrity,\n  And You set me in Your presence forever.",
+                    prayer: "Father, uphold me in integrity and help me remain faithful before You all the days of my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-41-13",
+                    reference: "Psalm 41:13",
+                    text: "Blessed be the Lord, the God of Israel,\n  From everlasting to everlasting.\n  Amen and Amen.",
+                    prayer: "Lord, You are worthy of praise forever. Let my heart continually worship and glorify Your holy name."
+                ),
+                PrayerVerse(
+                    id: "psalm-41-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your mercy, compassion, and faithfulness. Help me care for others as You care for me. Strengthen me in times of weakness, heal my heart when I am wounded, and uphold me in integrity and truth. When I face disappointment, criticism, or betrayal, remind me that You are my refuge and my strength. May my life continually bring praise and honor to Your name.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 42,
             title: "As the Deer Pants",
             chapterReference: "Psalm 42",
             summary: "Pray for deep longing and hope in God.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-42-1",
+                    reference: "Psalm 42:1",
+                    text: "As the deer pants for the water brooks,\n  So my soul pants for You, O God.",
+                    prayer: "Lord, just as a deer longs for water, help my soul hunger and thirst for Your presence above all else."
+                ),
+                PrayerVerse(
+                    id: "psalm-42-2",
+                    reference: "Psalm 42:2",
+                    text: "My soul thirsts for God, for the living God;\n  When shall I come and appear before God?",
+                    prayer: "Father, deepen my desire to know You and draw near to You each day. Let my heart find satisfaction in You alone."
+                ),
+                PrayerVerse(
+                    id: "psalm-42-3",
+                    reference: "Psalm 42:3",
+                    text: "My tears have been my food day and night,\n  While they say to me all day long, “Where is your God?”",
+                    prayer: "Lord, when I experience sorrow or discouragement, remind me that You are near and that You hear every prayer."
+                ),
+                PrayerVerse(
+                    id: "psalm-42-4",
+                    reference: "Psalm 42:4",
+                    text: "These things I remember and I pour out my soul within me.\n  For I used to go along with the throng and lead them in procession to the house of God,\n  With the voice of joy and thanksgiving, a multitude keeping festival.",
+                    prayer: "Father, help me remember Your faithfulness in seasons of joy and worship. Let those memories strengthen my faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-42-5",
+                    reference: "Psalm 42:5",
+                    text: "Why are you in despair, O my soul?\n  And why have you become disturbed within me?\n  Hope in God, for I shall again praise Him\n  For the help of His presence.",
+                    prayer: "Lord, when my soul feels downcast, help me place my hope in You and continue praising You for Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-42-6",
+                    reference: "Psalm 42:6",
+                    text: "O my God, my soul is in despair within me;\n  Therefore I remember You from the land of the Jordan\n  And the peaks of Hermon, from Mount Mizar.",
+                    prayer: "Father, when I feel overwhelmed or distant, remind me of Your presence and Your promises."
+                ),
+                PrayerVerse(
+                    id: "psalm-42-7",
+                    reference: "Psalm 42:7",
+                    text: "Deep calls to deep at the sound of Your waterfalls;\n  All Your breakers and Your waves have rolled over me.",
+                    prayer: "Lord, even when life feels like deep waters crashing around me, help me trust that You remain in control."
+                ),
+                PrayerVerse(
+                    id: "psalm-42-8",
+                    reference: "Psalm 42:8",
+                    text: "The Lord will command His lovingkindness in the daytime;\n  And His song will be with me in the night,\n  A prayer to the God of my life.",
+                    prayer: "Father, thank You for Your lovingkindness that follows me day and night. Fill my heart with confidence in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-42-9",
+                    reference: "Psalm 42:9",
+                    text: "I will say to God my rock, “Why have You forgotten me?\n  Why do I go mourning because of the oppression of the enemy?”",
+                    prayer: "Lord, You are my rock. Help me bring my questions, concerns, and struggles honestly before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-42-10",
+                    reference: "Psalm 42:10",
+                    text: "As a shattering of my bones, my adversaries revile me,\n  While they say to me all day long, “Where is your God?”",
+                    prayer: "Father, when others challenge my faith or circumstances seem difficult, strengthen my confidence in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-42-11",
+                    reference: "Psalm 42:11",
+                    text: "Why are you in despair, O my soul?\n  And why have you become disturbed within me?\n  Hope in God, for I shall yet praise Him,\n  The help of my countenance and my God.",
+                    prayer: "Lord, when my soul is discouraged, remind me once again to place my hope in You. You are my Savior and my God."
+                ),
+                PrayerVerse(
+                    id: "psalm-42-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being the One my soul longs for. When I feel weary, discouraged, or overwhelmed, draw me closer to Your presence. Help me place my hope in You, trust Your faithfulness, and remember Your goodness even during difficult seasons. Refresh my spirit, strengthen my faith, and fill my heart with the peace that comes from knowing You. May my life continually praise You as my Savior and my God.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 43,
