@@ -3457,14 +3457,268 @@ enum PsalmsPrayerData {
             title: "Contend for Me",
             chapterReference: "Psalm 35",
             summary: "Pray for God's defense and vindication.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-35-1",
+                    reference: "Psalm 35:1",
+                    text: "Contend, O Lord, with those who contend with me;\n  Fight against those who fight against me.",
+                    prayer: "Lord, fight for me when I face battles beyond my strength. Be my defender and help me trust You completely."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-2",
+                    reference: "Psalm 35:2",
+                    text: "Take hold of buckler and shield\n  And rise up for my help.",
+                    prayer: "Father, thank You for being my shield and protection. Strengthen me when I feel vulnerable or afraid."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-3",
+                    reference: "Psalm 35:3",
+                    text: "Draw also the spear and the battle-axe to meet those who pursue me;\n  Say to my soul, “I am your salvation.”",
+                    prayer: "Lord, remind my soul that You are my salvation. Fill my heart with confidence in Your deliverance and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-4",
+                    reference: "Psalm 35:4",
+                    text: "Let those be ashamed and dishonored who seek my life;\n  Let those be turned back and humiliated who devise evil against me.",
+                    prayer: "Father, frustrate every plan that seeks to harm me spiritually and draw me away from Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-5",
+                    reference: "Psalm 35:5",
+                    text: "Let them be like chaff before the wind,\n  With the angel of the Lord driving them on.",
+                    prayer: "Lord, remove obstacles placed by the enemy and lead me securely in the path You have prepared."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-6",
+                    reference: "Psalm 35:6",
+                    text: "Let their way be dark and slippery,\n  With the angel of the Lord pursuing them.",
+                    prayer: "Father, guide me through difficult and uncertain seasons. Let Your light direct my steps."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-7",
+                    reference: "Psalm 35:7",
+                    text: "For without cause they hid their net for me;\n  Without cause they dug a pit for my soul.",
+                    prayer: "Lord, protect me from hidden traps, temptations, and dangers that I cannot see."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-8",
+                    reference: "Psalm 35:8",
+                    text: "Let destruction come upon him unawares,\n  And let the net which he hid catch himself;\n  Into that very destruction let him fall.",
+                    prayer: "Father, I trust Your justice. Help me place every wrong and every hurt into Your hands."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-9",
+                    reference: "Psalm 35:9",
+                    text: "And my soul shall rejoice in the Lord;\n  It shall exult in His salvation.",
+                    prayer: "Lord, let my soul rejoice in Your salvation and celebrate the victories You bring into my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-10",
+                    reference: "Psalm 35:10",
+                    text: "All my bones will say, “Lord, who is like You,\n  Who delivers the afflicted from him who is too strong for him,\n  And the afflicted and the needy from him who robs him?”",
+                    prayer: "Father, thank You for rescuing the weak, the needy, and those who trust in You. Help me remember Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-11",
+                    reference: "Psalm 35:11",
+                    text: "Malicious witnesses rise up;\n  They ask me of things that I do not know.",
+                    prayer: "Lord, when others misunderstand or falsely accuse me, help me respond with wisdom, grace, and integrity."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-12",
+                    reference: "Psalm 35:12",
+                    text: "They repay me evil for good,\n  To the bereavement of my soul.",
+                    prayer: "Father, when I experience disappointment or betrayal, comfort my heart and remind me that You never fail."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-13",
+                    reference: "Psalm 35:13",
+                    text: "But as for me, when they were sick, my clothing was sackcloth;\n  I humbled my soul with fasting,\n  And my prayer kept returning to my bosom.",
+                    prayer: "Lord, teach me to pray for others, even those who may oppose or hurt me. Help me reflect Your mercy."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-14",
+                    reference: "Psalm 35:14",
+                    text: "I went about as though it were my friend or brother;\n  I bowed down mourning, as one who sorrows for a mother.",
+                    prayer: "Father, give me a compassionate heart that genuinely cares for others and seeks their good."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-15",
+                    reference: "Psalm 35:15",
+                    text: "But at my stumbling they rejoiced and gathered themselves together;\n  The smiters whom I did not know gathered together against me,\n  They slandered me without ceasing.",
+                    prayer: "Lord, when I feel rejected or mocked, help me find my identity and security in You alone."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-16",
+                    reference: "Psalm 35:16",
+                    text: "Like godless jesters at a feast,\n  They gnashed at me with their teeth.",
+                    prayer: "Father, guard my heart from bitterness. Teach me to forgive and trust You with every injustice."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-17",
+                    reference: "Psalm 35:17",
+                    text: "Lord, how long will You look on?\n  Rescue my soul from their ravages,\n  My only life from the lions.",
+                    prayer: "Lord, rescue me from discouragement and despair. Renew my strength and restore my hope in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-18",
+                    reference: "Psalm 35:18",
+                    text: "I will give You thanks in the great congregation;\n  I will praise You among a mighty throng.",
+                    prayer: "Father, I will give thanks to You publicly and praise You for Your faithfulness in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-19",
+                    reference: "Psalm 35:19",
+                    text: "Do not let those who are wrongfully my enemies rejoice over me;\n  Nor let those who hate me without cause wink maliciously.",
+                    prayer: "Lord, protect me from those who rejoice in wrongdoing. Help me remain faithful to truth and righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-20",
+                    reference: "Psalm 35:20",
+                    text: "For they do not speak peace,\n  But they devise deceitful words against those who are quiet in the land.",
+                    prayer: "Father, let peace, truth, and integrity guide my relationships and conversations."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-21",
+                    reference: "Psalm 35:21",
+                    text: "They opened their mouth wide against me;\n  They said, “Aha, aha, our eyes have seen it!”",
+                    prayer: "Lord, when others speak against me, help me trust that You know the truth and see every situation clearly."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-22",
+                    reference: "Psalm 35:22",
+                    text: "You have seen it, O Lord, do not keep silent;\n  O Lord, do not be far from me.",
+                    prayer: "Father, thank You that You see my struggles and understand every challenge I face."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-23",
+                    reference: "Psalm 35:23",
+                    text: "Stir up Yourself, and awake to my right\n  And to my cause, my God and my Lord.",
+                    prayer: "Lord, arise and defend me according to Your perfect wisdom and justice."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-24",
+                    reference: "Psalm 35:24",
+                    text: "Judge me, O Lord my God, according to Your righteousness,\n  And do not let them rejoice over me.",
+                    prayer: "Father, judge righteously and help me trust Your timing in every circumstance."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-25",
+                    reference: "Psalm 35:25",
+                    text: "Do not let them say in their heart, “Aha, our desire!”\n  Do not let them say, “We have swallowed him up!”",
+                    prayer: "Lord, do not allow fear or discouragement to gain victory in my life. Strengthen my faith in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-26",
+                    reference: "Psalm 35:26",
+                    text: "Let those be ashamed and humiliated altogether who rejoice at my distress;\n  Let those be clothed with shame and dishonor who magnify themselves over me.",
+                    prayer: "Father, bring humility where there is pride and establish righteousness where there is wrongdoing."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-27",
+                    reference: "Psalm 35:27",
+                    text: "Let them shout for joy and rejoice, who favor my vindication;\n  And let them say continually, “The Lord be magnified,\n  Who delights in the prosperity of His servant.”",
+                    prayer: "Lord, let those who love You rejoice in Your goodness. Fill my heart with gratitude and praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-28",
+                    reference: "Psalm 35:28",
+                    text: "And my tongue shall declare Your righteousness\n  And Your praise all day long.",
+                    prayer: "Father, may my tongue continually speak of Your righteousness and declare Your praise throughout the day."
+                ),
+                PrayerVerse(
+                    id: "psalm-35-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my defender, protector, and source of strength. When I face difficulties, misunderstandings, or spiritual battles, help me trust You completely. Guard my heart from fear, bitterness, and discouragement. Fill me with compassion, faith, and confidence in Your justice. May my life continually praise You and testify to Your faithfulness, goodness, and salvation.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 36,
             title: "Your Love Reaches",
             chapterReference: "Psalm 36",
             summary: "Pray in awe of God's unfailing love.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-36-1",
+                    reference: "Psalm 36:1",
+                    text: "Transgression speaks to the ungodly within his heart;\n  There is no fear of God before his eyes.",
+                    prayer: "Lord, protect my heart from the deception of sin. Help me walk in reverence for You and remain sensitive to Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-36-2",
+                    reference: "Psalm 36:2",
+                    text: "For it flatters him in his own eyes\n  Concerning the discovery of his iniquity and the hatred of it.",
+                    prayer: "Father, guard me from self-deception and pride. Give me humility to recognize my need for Your grace every day."
+                ),
+                PrayerVerse(
+                    id: "psalm-36-3",
+                    reference: "Psalm 36:3",
+                    text: "The words of his mouth are wickedness and deceit;\n  He has ceased to be wise and to do good.",
+                    prayer: "Lord, let my words reflect wisdom, kindness, and truth. Keep me from speech that dishonors You."
+                ),
+                PrayerVerse(
+                    id: "psalm-36-4",
+                    reference: "Psalm 36:4",
+                    text: "He plans wickedness upon his bed;\n  He sets himself on a path that is not good;\n  He does not despise evil.",
+                    prayer: "Father, help me reject sinful paths and choose what is good, righteous, and pleasing in Your sight."
+                ),
+                PrayerVerse(
+                    id: "psalm-36-5",
+                    reference: "Psalm 36:5",
+                    text: "Your lovingkindness, O Lord, extends to the heavens,\n  Your faithfulness reaches to the skies.",
+                    prayer: "Lord, thank You for Your lovingkindness that reaches to the heavens. Your faithfulness is beyond measure, and I trust in Your unfailing love."
+                ),
+                PrayerVerse(
+                    id: "psalm-36-6",
+                    reference: "Psalm 36:6",
+                    text: "Your righteousness is like the mountains of God;\n  Your judgments are like a great deep.\n  O Lord, You preserve man and beast.",
+                    prayer: "Father, Your righteousness and justice are perfect. Help me rest confidently in Your wisdom and Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-36-7",
+                    reference: "Psalm 36:7",
+                    text: "How precious is Your lovingkindness, O God!\n  And the children of men take refuge in the shadow of Your wings.",
+                    prayer: "Lord, thank You for the precious gift of Your love. Help me find refuge under the shadow of Your wings."
+                ),
+                PrayerVerse(
+                    id: "psalm-36-8",
+                    reference: "Psalm 36:8",
+                    text: "They drink their fill of the abundance of Your house;\n  And You give them to drink of the river of Your delights.",
+                    prayer: "Father, satisfy my soul with the abundance of Your presence. Fill my life with the joy that comes from knowing You."
+                ),
+                PrayerVerse(
+                    id: "psalm-36-9",
+                    reference: "Psalm 36:9",
+                    text: "For with You is the fountain of life;\n  In Your light we see light.",
+                    prayer: "Lord, You are the source of life and light. Help me walk in Your truth and allow Your light to guide my path."
+                ),
+                PrayerVerse(
+                    id: "psalm-36-10",
+                    reference: "Psalm 36:10",
+                    text: "O continue Your lovingkindness to those who know You,\n  And Your righteousness to the upright in heart.",
+                    prayer: "Father, continue pouring out Your lovingkindness upon those who know You. Help me remain faithful and devoted to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-36-11",
+                    reference: "Psalm 36:11",
+                    text: "Let not the foot of pride come upon me,\n  And let not the hand of the wicked drive me away.",
+                    prayer: "Lord, protect me from pride and from influences that seek to pull me away from Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-36-12",
+                    reference: "Psalm 36:12",
+                    text: "There the doers of iniquity have fallen;\n  They have been thrust down and cannot rise.",
+                    prayer: "Father, thank You that evil will not ultimately prevail. Help me trust in Your victory, justice, and sovereign plan."
+                ),
+                PrayerVerse(
+                    id: "psalm-36-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your unfailing love, faithfulness, and righteousness. Protect my heart from sin and pride, and help me walk daily in Your truth. Let me find refuge in Your presence and satisfaction in Your love. Guide me by Your light, strengthen my faith, and help me trust fully in Your perfect justice and care. May my life reflect gratitude for Your goodness and glory.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 37,
