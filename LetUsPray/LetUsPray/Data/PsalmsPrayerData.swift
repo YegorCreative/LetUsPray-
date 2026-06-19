@@ -2505,7 +2505,86 @@ enum PsalmsPrayerData {
             title: "Vindicate Me",
             chapterReference: "Psalm 26",
             summary: "Pray for integrity and faithfulness.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-26-1",
+                    reference: "Psalm 26:1",
+                    text: "Vindicate me, O Lord, for I have walked in my integrity,\n  And I have trusted in the Lord without wavering.",
+                    prayer: "Lord, examine my life and help me walk in integrity. Strengthen my faith so that I may trust You without wavering."
+                ),
+                PrayerVerse(
+                    id: "psalm-26-2",
+                    reference: "Psalm 26:2",
+                    text: "Examine me, O Lord, and try me;\n  Test my mind and my heart.",
+                    prayer: "Father, search my heart and test my motives. Reveal anything within me that does not honor You and transform me by Your grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-26-3",
+                    reference: "Psalm 26:3",
+                    text: "For Your lovingkindness is before my eyes,\n  And I have walked in Your truth.",
+                    prayer: "Lord, thank You for Your lovingkindness that is always before me. Help me walk daily in Your truth and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-26-4",
+                    reference: "Psalm 26:4",
+                    text: "I do not sit with deceitful men,\n  Nor will I go with pretenders.",
+                    prayer: "Father, protect me from deceptive influences and from relationships that would draw me away from Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-26-5",
+                    reference: "Psalm 26:5",
+                    text: "I hate the assembly of evildoers,\n  And I will not sit with the wicked.",
+                    prayer: "Lord, give me wisdom to avoid paths that lead to sin. Help me choose companions and influences that encourage me toward righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-26-6",
+                    reference: "Psalm 26:6",
+                    text: "I shall wash my hands in innocence,\n  And I will go about Your altar, O Lord,",
+                    prayer: "Father, cleanse my heart and renew my spirit. Help me come before You with humility, gratitude, and a desire to worship."
+                ),
+                PrayerVerse(
+                    id: "psalm-26-7",
+                    reference: "Psalm 26:7",
+                    text: "That I may proclaim with the voice of thanksgiving\n  And declare all Your wonders.",
+                    prayer: "Lord, let my life be filled with thanksgiving. Help me continually proclaim Your goodness and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-26-8",
+                    reference: "Psalm 26:8",
+                    text: "O Lord, I love the habitation of Your house\n  And the place where Your glory dwells.",
+                    prayer: "Father, I love Your presence. Draw me closer to You and help me delight in spending time with You each day."
+                ),
+                PrayerVerse(
+                    id: "psalm-26-9",
+                    reference: "Psalm 26:9",
+                    text: "Do not take my soul away along with sinners,\n  Nor my life with men of bloodshed,",
+                    prayer: "Lord, keep me separate from sin and guide me in paths that bring honor to Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-26-10",
+                    reference: "Psalm 26:10",
+                    text: "In whose hands is a wicked scheme,\n  And whose right hand is full of bribes.",
+                    prayer: "Father, protect me from corruption, dishonesty, and selfish ambition. Help me pursue integrity in every area of life."
+                ),
+                PrayerVerse(
+                    id: "psalm-26-11",
+                    reference: "Psalm 26:11",
+                    text: "But as for me, I shall walk in my integrity;\n  Redeem me, and be gracious to me.",
+                    prayer: "Lord, help me walk blamelessly before You. Thank You for Your mercy that restores and strengthens me."
+                ),
+                PrayerVerse(
+                    id: "psalm-26-12",
+                    reference: "Psalm 26:12",
+                    text: "My foot stands on a level place;\n  In the congregations I shall bless the Lord.",
+                    prayer: "Father, place my feet on steady ground. Let my life be a testimony of worship, gratitude, and faithfulness to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-26-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your truth, mercy, and lovingkindness. Search my heart, purify my motives, and help me walk with integrity before You. Draw me closer to Your presence and teach me to live a life of worship, gratitude, and obedience. May my steps remain firm in Your ways, and may my life bring glory to Your name.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 27,
