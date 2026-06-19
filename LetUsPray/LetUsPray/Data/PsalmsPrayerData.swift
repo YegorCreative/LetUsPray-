@@ -5567,21 +5567,258 @@ enum PsalmsPrayerData {
             title: "Who Will Bring Salvation?",
             chapterReference: "Psalm 53",
             summary: "Pray for God's deliverance.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-53-1",
+                    reference: "Psalm 53:1",
+                    text: "Lord, help me never live as though You are not present. Keep my heart grounded in faith, wisdom, and reverence for You.",
+                    prayer: "Lord, help me never live as though You are not present. Keep my heart grounded in faith, wisdom, and reverence for You."
+                ),
+                PrayerVerse(
+                    id: "psalm-53-2",
+                    reference: "Psalm 53:2",
+                    text: "Father, search my heart and draw me closer to You. Help me seek You sincerely and live with understanding that comes from Your truth.",
+                    prayer: "Father, search my heart and draw me closer to You. Help me seek You sincerely and live with understanding that comes from Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-53-3",
+                    reference: "Psalm 53:3",
+                    text: "Lord, I acknowledge my need for Your grace. Forgive me when I fall short and lead me back into righteousness.",
+                    prayer: "Lord, I acknowledge my need for Your grace. Forgive me when I fall short and lead me back into righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-53-4",
+                    reference: "Psalm 53:4",
+                    text: "Father, protect me from spiritual blindness and from actions that harm others. Teach me to walk in compassion, humility, and obedience.",
+                    prayer: "Father, protect me from spiritual blindness and from actions that harm others. Teach me to walk in compassion, humility, and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-53-5",
+                    reference: "Psalm 53:5",
+                    text: "Lord, when fear rises suddenly, remind me that You are with Your people and that Your presence is greater than every threat.",
+                    prayer: "Lord, when fear rises suddenly, remind me that You are with Your people and that Your presence is greater than every threat."
+                ),
+                PrayerVerse(
+                    id: "psalm-53-6",
+                    reference: "Psalm 53:6",
+                    text: "Father, thank You for the salvation and restoration You provide. Fill my heart with joy as I trust in Your deliverance and faithfulness.",
+                    prayer: "Father, thank You for the salvation and restoration You provide. Fill my heart with joy as I trust in Your deliverance and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-53-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your mercy, salvation, and restoring grace. Keep my heart from foolishness and unbelief, and help me seek You with sincerity and humility. Teach me to live with wisdom, compassion, and faithfulness. May my life reflect trust in Your presence, confidence in Your deliverance, and joy in the salvation You provide.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 54,
             title: "Save Me by Your Name",
             chapterReference: "Psalm 54",
             summary: "Pray for God's powerful help.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-54-1",
+                    reference: "Psalm 54:1",
+                    text: "Lord, save me by Your name and defend me by Your power. Help me trust that You are able to deliver me in every situation.",
+                    prayer: "Lord, save me by Your name and defend me by Your power. Help me trust that You are able to deliver me in every situation."
+                ),
+                PrayerVerse(
+                    id: "psalm-54-2",
+                    reference: "Psalm 54:2",
+                    text: "Father, hear my prayer and listen to the words of my mouth. Thank You that I can bring every concern before You.",
+                    prayer: "Father, hear my prayer and listen to the words of my mouth. Thank You that I can bring every concern before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-54-3",
+                    reference: "Psalm 54:3",
+                    text: "Lord, when opposition rises against me, protect my heart from fear and help me remain faithful to You.",
+                    prayer: "Lord, when opposition rises against me, protect my heart from fear and help me remain faithful to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-54-4",
+                    reference: "Psalm 54:4",
+                    text: "Father, thank You for being my helper and the One who sustains my life. Strengthen me with Your presence and care.",
+                    prayer: "Father, thank You for being my helper and the One who sustains my life. Strengthen me with Your presence and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-54-5",
+                    reference: "Psalm 54:5",
+                    text: "Lord, I trust Your justice and faithfulness. Help me leave every battle and every burden in Your hands.",
+                    prayer: "Lord, I trust Your justice and faithfulness. Help me leave every battle and every burden in Your hands."
+                ),
+                PrayerVerse(
+                    id: "psalm-54-6",
+                    reference: "Psalm 54:6",
+                    text: "Father, let my worship be willing and sincere. Help me give thanks to Your name because You are good.",
+                    prayer: "Father, let my worship be willing and sincere. Help me give thanks to Your name because You are good."
+                ),
+                PrayerVerse(
+                    id: "psalm-54-7",
+                    reference: "Psalm 54:7",
+                    text: "Lord, thank You for delivering me from trouble and for showing Your faithfulness in my life. Help me remember Your goodness and walk confidently in Your care.",
+                    prayer: "Lord, thank You for delivering me from trouble and for showing Your faithfulness in my life. Help me remember Your goodness and walk confidently in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-54-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my helper, defender, and deliverer. When I face trouble or opposition, help me trust in Your name and rely on Your strength. Hear my prayers, sustain my life, and teach me to worship You with gratitude and faith. May my confidence remain in Your goodness and faithfulness every day.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 55,
             title: "Cast Your Cares",
             chapterReference: "Psalm 55",
             summary: "Pray for peace in betrayal and pain.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-55-1",
+                    reference: "Psalm 55:1",
+                    text: "Lord, hear my prayer and do not hide Yourself from my plea. Thank You that I can bring every burden before You.",
+                    prayer: "Lord, hear my prayer and do not hide Yourself from my plea. Thank You that I can bring every burden before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-2",
+                    reference: "Psalm 55:2",
+                    text: "Father, when my thoughts are troubled and my heart is overwhelmed, help me find peace in Your presence.",
+                    prayer: "Father, when my thoughts are troubled and my heart is overwhelmed, help me find peace in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-3",
+                    reference: "Psalm 55:3",
+                    text: "Lord, when opposition or pressure surrounds me, strengthen my faith and help me trust You completely.",
+                    prayer: "Lord, when opposition or pressure surrounds me, strengthen my faith and help me trust You completely."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-4",
+                    reference: "Psalm 55:4",
+                    text: "Father, You know every fear within my heart. Draw near to me and give me courage.",
+                    prayer: "Father, You know every fear within my heart. Draw near to me and give me courage."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-5",
+                    reference: "Psalm 55:5",
+                    text: "Lord, when anxiety overwhelms me, remind me that You are my refuge and my strength.",
+                    prayer: "Lord, when anxiety overwhelms me, remind me that You are my refuge and my strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-6",
+                    reference: "Psalm 55:6",
+                    text: "Father, there are times I want to run away from difficulties. Help me find safety and rest in You instead.",
+                    prayer: "Father, there are times I want to run away from difficulties. Help me find safety and rest in You instead."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-7",
+                    reference: "Psalm 55:7",
+                    text: "Lord, thank You that Your presence follows me wherever I go. Keep me close to You.",
+                    prayer: "Lord, thank You that Your presence follows me wherever I go. Keep me close to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-8",
+                    reference: "Psalm 55:8",
+                    text: "Father, be my shelter during life's storms and protect me with Your peace.",
+                    prayer: "Father, be my shelter during life's storms and protect me with Your peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-9",
+                    reference: "Psalm 55:9",
+                    text: "Lord, bring wisdom, order, and truth where there is confusion and conflict.",
+                    prayer: "Lord, bring wisdom, order, and truth where there is confusion and conflict."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-10",
+                    reference: "Psalm 55:10",
+                    text: "Father, protect my heart from becoming consumed by negativity, fear, or division.",
+                    prayer: "Father, protect my heart from becoming consumed by negativity, fear, or division."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-11",
+                    reference: "Psalm 55:11",
+                    text: "Lord, help me remain faithful to You even when surrounded by corruption or wrongdoing.",
+                    prayer: "Lord, help me remain faithful to You even when surrounded by corruption or wrongdoing."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-12",
+                    reference: "Psalm 55:12",
+                    text: "Father, when I experience hurt from others, help me respond with grace and wisdom.",
+                    prayer: "Father, when I experience hurt from others, help me respond with grace and wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-13",
+                    reference: "Psalm 55:13",
+                    text: "Lord, You understand the pain of broken relationships. Bring healing and restoration to my heart.",
+                    prayer: "Lord, You understand the pain of broken relationships. Bring healing and restoration to my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-14",
+                    reference: "Psalm 55:14",
+                    text: "Father, thank You for the gift of fellowship and community. Help me value relationships that honor You.",
+                    prayer: "Father, thank You for the gift of fellowship and community. Help me value relationships that honor You."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-15",
+                    reference: "Psalm 55:15",
+                    text: "Lord, protect me from evil influences and keep my heart firmly grounded in Your truth.",
+                    prayer: "Lord, protect me from evil influences and keep my heart firmly grounded in Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-16",
+                    reference: "Psalm 55:16",
+                    text: "Father, I call upon You because You are my Savior and Deliverer. Thank You for hearing me.",
+                    prayer: "Father, I call upon You because You are my Savior and Deliverer. Thank You for hearing me."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-17",
+                    reference: "Psalm 55:17",
+                    text: "Lord, help me bring every concern to You in prayer throughout the day.",
+                    prayer: "Lord, help me bring every concern to You in prayer throughout the day."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-18",
+                    reference: "Psalm 55:18",
+                    text: "Father, thank You for giving peace to those who trust in You. Strengthen my confidence in Your care.",
+                    prayer: "Father, thank You for giving peace to those who trust in You. Strengthen my confidence in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-19",
+                    reference: "Psalm 55:19",
+                    text: "Lord, You are eternal and unchanging. Help me trust Your wisdom and Your timing.",
+                    prayer: "Lord, You are eternal and unchanging. Help me trust Your wisdom and Your timing."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-20",
+                    reference: "Psalm 55:20",
+                    text: "Father, teach me to walk with integrity and faithfulness in all my relationships.",
+                    prayer: "Father, teach me to walk with integrity and faithfulness in all my relationships."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-21",
+                    reference: "Psalm 55:21",
+                    text: "Lord, give me discernment and wisdom when dealing with words that sound good but do not reflect truth.",
+                    prayer: "Lord, give me discernment and wisdom when dealing with words that sound good but do not reflect truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-22",
+                    reference: "Psalm 55:22",
+                    text: "Father, I cast my burdens upon You. Thank You for sustaining me and caring for every detail of my life.",
+                    prayer: "Father, I cast my burdens upon You. Thank You for sustaining me and caring for every detail of my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-23",
+                    reference: "Psalm 55:23",
+                    text: "Lord, help me trust You completely and walk faithfully in Your ways each day.",
+                    prayer: "Lord, help me trust You completely and walk faithfully in Your ways each day."
+                ),
+                PrayerVerse(
+                    id: "psalm-55-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my refuge, strength, and faithful helper. When fear, anxiety, or disappointment come, remind me that I can cast every burden upon You. Strengthen my faith, heal my heart, and guide me with Your wisdom. Help me trust You completely, walk faithfully in Your truth, and rest securely in Your unfailing love.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 56,

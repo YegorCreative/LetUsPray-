@@ -14,7 +14,6 @@
 		ABF777482FE09FF1003D9593 /* Exceptions for "LetUsPray" folder in "LetUsPray" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Data/PsalmsPrayerData.swift.backup,
 				File.txt,
 				LaunchScreen.storyboard.backup,
 				LaunchScreen.storyboard.bak,
