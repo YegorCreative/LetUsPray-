@@ -2285,14 +2285,220 @@ enum PsalmsPrayerData {
             title: "Lift Up Your Heads",
             chapterReference: "Psalm 24",
             summary: "Pray in worship of the King of glory.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-24-1",
+                    reference: "Psalm 24:1",
+                    text: "The earth is the Lord’s, and all it contains,\n  The world, and those who dwell in it.",
+                    prayer: "Lord, the earth and everything in it belong to You. Help me remember that all I have comes from Your hand and should be used for Your glory."
+                ),
+                PrayerVerse(
+                    id: "psalm-24-2",
+                    reference: "Psalm 24:2",
+                    text: "For He has founded it upon the seas\n  And established it upon the rivers.",
+                    prayer: "Father, thank You for creating and sustaining all things. Remind me daily of Your power, wisdom, and authority over creation."
+                ),
+                PrayerVerse(
+                    id: "psalm-24-3",
+                    reference: "Psalm 24:3",
+                    text: "Who may ascend into the hill of the Lord?\n  And who may stand in His holy place?",
+                    prayer: "Lord, I desire to draw near to You and stand in Your presence. Help me pursue a life that honors You and reflects Your holiness."
+                ),
+                PrayerVerse(
+                    id: "psalm-24-4",
+                    reference: "Psalm 24:4",
+                    text: "He who has clean hands and a pure heart,\n  Who has not lifted up his soul to falsehood\n  And has not sworn deceitfully.",
+                    prayer: "Father, give me clean hands and a pure heart. Help me live with integrity, sincerity, and faithfulness in all that I do."
+                ),
+                PrayerVerse(
+                    id: "psalm-24-5",
+                    reference: "Psalm 24:5",
+                    text: "He shall receive a blessing from the Lord\n  And righteousness from the God of his salvation.",
+                    prayer: "Lord, thank You for Your blessing and righteousness. Help me walk humbly before You and receive Your grace with gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-24-6",
+                    reference: "Psalm 24:6",
+                    text: "This is the generation of those who seek Him,\n  Who seek Your face—even Jacob. Selah.",
+                    prayer: "Father, let me be among those who seek Your face. Create within me a deeper desire to know You and follow You wholeheartedly."
+                ),
+                PrayerVerse(
+                    id: "psalm-24-7",
+                    reference: "Psalm 24:7",
+                    text: "Lift up your heads, O gates,\n  And be lifted up, O ancient doors,\n  That the King of glory may come in!",
+                    prayer: "Lord, open the doors of my heart and let the King of Glory reign fully in my life. Remove anything that stands in the way of Your rule."
+                ),
+                PrayerVerse(
+                    id: "psalm-24-8",
+                    reference: "Psalm 24:8",
+                    text: "Who is the King of glory?\n  The Lord strong and mighty,\n  The Lord mighty in battle.",
+                    prayer: "Father, You are strong and mighty. Help me trust in Your power when I face challenges that seem greater than my own strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-24-9",
+                    reference: "Psalm 24:9",
+                    text: "Lift up your heads, O gates,\n  And lift them up, O ancient doors,\n  That the King of glory may come in!",
+                    prayer: "Lord, once again I open my heart to You. May every area of my life be surrendered to Your leadership and guidance."
+                ),
+                PrayerVerse(
+                    id: "psalm-24-10",
+                    reference: "Psalm 24:10",
+                    text: "Who is this King of glory?\n  The Lord of hosts,\n  He is the King of glory. Selah.",
+                    prayer: "Father, You are the King of Glory. May my life bring honor, praise, and worship to Your holy name forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-24-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being the Creator of all things and the King of Glory. Help me live with clean hands and a pure heart, seeking Your presence above all else. Reign over every area of my life and teach me to trust in Your power, walk in Your righteousness, and worship You with my whole heart. May my life continually bring glory and honor to You.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 25,
             title: "To You, O Lord",
             chapterReference: "Psalm 25",
             summary: "Pray for guidance and forgiveness.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-25-1",
+                    reference: "Psalm 25:1",
+                    text: "To You, O Lord, I lift up my soul.",
+                    prayer: "Lord, I lift up my soul to You. Help me place my trust fully in Your hands and seek You above all else."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-2",
+                    reference: "Psalm 25:2",
+                    text: "O my God, in You I trust,\n  Do not let me be ashamed;\n  Do not let my enemies exult over me.",
+                    prayer: "Father, I trust in You. Keep me from fear, shame, and discouragement, and strengthen my confidence in Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-3",
+                    reference: "Psalm 25:3",
+                    text: "Indeed, none of those who wait for You will be ashamed;\n  Those who deal treacherously without cause will be ashamed.",
+                    prayer: "Lord, thank You that those who hope in You will not be disappointed. Help me patiently wait for Your timing and Your promises."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-4",
+                    reference: "Psalm 25:4",
+                    text: "Make me know Your ways, O Lord;\n  Teach me Your paths.",
+                    prayer: "Father, show me Your ways and teach me Your paths. Guide my decisions and direct my steps according to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-5",
+                    reference: "Psalm 25:5",
+                    text: "Lead me in Your truth and teach me,\n  For You are the God of my salvation;\n  For You I wait all the day.",
+                    prayer: "Lord, lead me in Your truth and teach me. Help me remain humble and willing to follow wherever You lead."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-6",
+                    reference: "Psalm 25:6",
+                    text: "Remember, O Lord, Your compassion and Your lovingkindnesses,\n  For they have been from of old.",
+                    prayer: "Father, thank You for Your compassion and lovingkindness that have been present throughout every season of my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-7",
+                    reference: "Psalm 25:7",
+                    text: "Do not remember the sins of my youth or my transgressions;\n  According to Your lovingkindness remember me,\n  For Your goodness’ sake, O Lord.",
+                    prayer: "Lord, forgive my sins and shortcomings. Help me walk in the freedom of Your mercy and grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-8",
+                    reference: "Psalm 25:8",
+                    text: "Good and upright is the Lord;\n  Therefore He instructs sinners in the way.",
+                    prayer: "Father, thank You that You are good and upright. Thank You for patiently teaching those who seek You."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-9",
+                    reference: "Psalm 25:9",
+                    text: "He leads the humble in justice,\n  And He teaches the humble His way.",
+                    prayer: "Lord, give me a humble heart that is willing to learn from You and follow Your instruction."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-10",
+                    reference: "Psalm 25:10",
+                    text: "All the paths of the Lord are lovingkindness and truth\n  To those who keep His covenant and His testimonies.",
+                    prayer: "Father, all Your ways are loving and faithful. Help me trust Your guidance even when I do not fully understand it."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-11",
+                    reference: "Psalm 25:11",
+                    text: "For Your name’s sake, O Lord,\n  Pardon my iniquity, for it is great.",
+                    prayer: "Lord, for the sake of Your name, forgive my sins and continue Your work of transformation in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-12",
+                    reference: "Psalm 25:12",
+                    text: "Who is the man who fears the Lord?\n  He will instruct him in the way he should choose.",
+                    prayer: "Father, help me fear You with reverence and awe. Teach me the way I should go and establish my path."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-13",
+                    reference: "Psalm 25:13",
+                    text: "His soul will abide in prosperity,\n  And his descendants will inherit the land.",
+                    prayer: "Lord, thank You for the blessings that come from walking with You. Help me live faithfully and enjoy the peace You provide."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-14",
+                    reference: "Psalm 25:14",
+                    text: "The secret of the Lord is for those who fear Him,\n  And He will make them know His covenant.",
+                    prayer: "Father, thank You for revealing Yourself to those who seek You. Draw me into a deeper relationship with You each day."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-15",
+                    reference: "Psalm 25:15",
+                    text: "My eyes are continually toward the Lord,\n  For He will pluck my feet out of the net.",
+                    prayer: "Lord, keep my eyes fixed on You. Deliver me from distractions and help me focus on Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-16",
+                    reference: "Psalm 25:16",
+                    text: "Turn to me and be gracious to me,\n  For I am lonely and afflicted.",
+                    prayer: "Father, turn toward me with Your mercy and compassion when I feel lonely, burdened, or overwhelmed."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-17",
+                    reference: "Psalm 25:17",
+                    text: "The troubles of my heart are enlarged;\n  Bring me out of my distresses.",
+                    prayer: "Lord, bring relief to my troubles and grant me peace in the midst of every challenge."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-18",
+                    reference: "Psalm 25:18",
+                    text: "Look upon my affliction and my trouble,\n  And forgive all my sins.",
+                    prayer: "Father, see my struggles and forgive my sins. Thank You for Your grace that continually restores me."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-19",
+                    reference: "Psalm 25:19",
+                    text: "Look upon my enemies, for they are many,\n  And they hate me with violent hatred.",
+                    prayer: "Lord, protect me from those things that seek to harm my faith and draw me away from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-20",
+                    reference: "Psalm 25:20",
+                    text: "Guard my soul and deliver me;\n  Do not let me be ashamed, for I take refuge in You.",
+                    prayer: "Father, guard my soul and keep me secure in Your care. Help me continue trusting in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-21",
+                    reference: "Psalm 25:21",
+                    text: "Let integrity and uprightness preserve me,\n  For I wait for You.",
+                    prayer: "Lord, let integrity and uprightness guide my life as I wait upon You and depend on Your wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-22",
+                    reference: "Psalm 25:22",
+                    text: "Redeem Israel, O God,\n  Out of all his troubles.",
+                    prayer: "Father, bring deliverance and restoration to Your people. May Your grace and mercy be known throughout the world."
+                ),
+                PrayerVerse(
+                    id: "psalm-25-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your guidance, mercy, and faithfulness. Teach me Your ways, lead me in Your truth, and help me trust You in every circumstance. Forgive my sins, strengthen my faith, and keep my eyes fixed upon You. May I walk humbly before You, experience the peace of Your presence, and follow You faithfully all the days of my life.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 26,
