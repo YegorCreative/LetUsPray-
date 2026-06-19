@@ -1943,7 +1943,92 @@ enum PsalmsPrayerData {
             title: "The King Rejoices",
             chapterReference: "Psalm 21",
             summary: "Pray with gratitude for God's blessings and faithfulness.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-21-1",
+                    reference: "Psalm 21:1",
+                    text: "O Lord, in Your strength the king will be glad,\n  And in Your salvation how greatly he will rejoice!",
+                    prayer: "Lord, I rejoice in Your strength and power. Thank You for sustaining me and giving me victory through Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-21-2",
+                    reference: "Psalm 21:2",
+                    text: "You have given him his heart’s desire,\n  And You have not withheld the request of his lips. Selah.",
+                    prayer: "Father, thank You for hearing the desires of my heart when they align with Your will. Help me trust Your timing and Your answers."
+                ),
+                PrayerVerse(
+                    id: "psalm-21-3",
+                    reference: "Psalm 21:3",
+                    text: "For You meet him with the blessings of good things;\n  You set a crown of fine gold on his head.",
+                    prayer: "Lord, thank You for the blessings You pour into my life. Help me recognize Your goodness and respond with gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-21-4",
+                    reference: "Psalm 21:4",
+                    text: "He asked life of You,\n  You gave it to him,\n  Length of days forever and ever.",
+                    prayer: "Father, thank You for the gift of life and the hope of eternity through Jesus Christ. Help me live each day with purpose and faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-21-5",
+                    reference: "Psalm 21:5",
+                    text: "His glory is great through Your salvation,\n  Splendor and majesty You place upon him.",
+                    prayer: "Lord, all honor and glory belong to You. Keep me humble and remind me that every good thing comes from Your hand."
+                ),
+                PrayerVerse(
+                    id: "psalm-21-6",
+                    reference: "Psalm 21:6",
+                    text: "For You make him most blessed forever;\n  You make him joyful with gladness in Your presence.",
+                    prayer: "Father, thank You for the joy found in Your presence. Let my heart remain anchored in the peace and gladness You provide."
+                ),
+                PrayerVerse(
+                    id: "psalm-21-7",
+                    reference: "Psalm 21:7",
+                    text: "For the king trusts in the Lord,\n  And through the lovingkindness of the Most High he will not be shaken.",
+                    prayer: "Lord, help me trust in Your unfailing love. When challenges arise, strengthen my faith and keep me steady in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-21-8",
+                    reference: "Psalm 21:8",
+                    text: "Your hand will find out all your enemies;\n  Your right hand will find out those who hate you.",
+                    prayer: "Father, nothing escapes Your notice. Thank You that You see every situation and that Your justice is perfect."
+                ),
+                PrayerVerse(
+                    id: "psalm-21-9",
+                    reference: "Psalm 21:9",
+                    text: "You will make them as a fiery oven in the time of your anger;\n  The Lord will swallow them up in His wrath,\n  And fire will devour them.",
+                    prayer: "Lord, remind me that You are holy and righteous. Help me live with reverence for You and confidence in Your authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-21-10",
+                    reference: "Psalm 21:10",
+                    text: "Their offspring You will destroy from the earth,\n  And their descendants from among the sons of men.",
+                    prayer: "Father, establish Your purposes from generation to generation. Let my life be part of the legacy of faith that points others to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-21-11",
+                    reference: "Psalm 21:11",
+                    text: "Though they intended evil against You\n  And devised a plot,\n  They will not succeed.",
+                    prayer: "Lord, protect me from evil plans and harmful influences. Give me wisdom to recognize temptation and strength to resist it."
+                ),
+                PrayerVerse(
+                    id: "psalm-21-12",
+                    reference: "Psalm 21:12",
+                    text: "For You will make them turn their back;\n  You will aim with Your bowstrings at their faces.",
+                    prayer: "Father, thank You that no power can overcome Your will. Help me trust in Your sovereignty over every circumstance."
+                ),
+                PrayerVerse(
+                    id: "psalm-21-13",
+                    reference: "Psalm 21:13",
+                    text: "Be exalted, O Lord, in Your strength;\n  We will sing and praise Your power.",
+                    prayer: "Lord, be exalted in all the earth. May my life continually praise You and proclaim Your greatness."
+                ),
+                PrayerVerse(
+                    id: "psalm-21-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your strength, Your blessings, and Your unfailing love. Help me trust You in every season, rejoice in Your faithfulness, and remain humble before You. Fill my heart with gratitude, strengthen my faith, and let my life bring honor and glory to Your name. May I find lasting joy in Your presence and confidence in Your power.",
+                    prayer: "In Jesus’name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 22,
