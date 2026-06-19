@@ -4839,7 +4839,80 @@ enum PsalmsPrayerData {
             title: "God is Our Refuge",
             chapterReference: "Psalm 46",
             summary: "Pray for strength and peace in chaos.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-46-1",
+                    reference: "Psalm 46:1",
+                    text: "God is our refuge and strength,\n  A very present help in trouble.",
+                    prayer: "Lord, thank You for being my refuge and strength, a very present help in times of trouble. Help me run to You first in every circumstance."
+                ),
+                PrayerVerse(
+                    id: "psalm-46-2",
+                    reference: "Psalm 46:2",
+                    text: "Therefore we will not fear, though the earth should change\n  And though the mountains slip into the heart of the sea;",
+                    prayer: "Father, when life feels unstable and uncertain, help me trust You and remain unshaken by fear."
+                ),
+                PrayerVerse(
+                    id: "psalm-46-3",
+                    reference: "Psalm 46:3",
+                    text: "Though its waters roar and foam,\n  Though the mountains quake at its swelling pride. Selah.",
+                    prayer: "Lord, even when chaos surrounds me, remind me that You are in control and that Your power is greater than any storm."
+                ),
+                PrayerVerse(
+                    id: "psalm-46-4",
+                    reference: "Psalm 46:4",
+                    text: "There is a river whose streams make glad the city of God,\n  The holy dwelling places of the Most High.",
+                    prayer: "Father, thank You for the peace and joy found in Your presence. Refresh my soul with the living water that comes from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-46-5",
+                    reference: "Psalm 46:5",
+                    text: "God is in the midst of her, she will not be moved;\n  God will help her when morning dawns.",
+                    prayer: "Lord, because You are with me, I do not need to fear. Strengthen my faith and help me rest securely in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-46-6",
+                    reference: "Psalm 46:6",
+                    text: "The nations made an uproar, the kingdoms tottered;\n  He raised His voice, the earth melted.",
+                    prayer: "Father, nations rise and fall, but Your kingdom stands forever. Help me place my hope in what is eternal."
+                ),
+                PrayerVerse(
+                    id: "psalm-46-7",
+                    reference: "Psalm 46:7",
+                    text: "The Lord of hosts is with us;\n  The God of Jacob is our stronghold. Selah.",
+                    prayer: "Lord, thank You for being with Your people. You are my fortress, my defender, and my safe place."
+                ),
+                PrayerVerse(
+                    id: "psalm-46-8",
+                    reference: "Psalm 46:8",
+                    text: "Come, behold the works of the Lord,\n  Who has wrought desolations in the earth.",
+                    prayer: "Father, help me recognize Your mighty works and remember Your faithfulness throughout history and in my own life."
+                ),
+                PrayerVerse(
+                    id: "psalm-46-9",
+                    reference: "Psalm 46:9",
+                    text: "He makes wars to cease to the end of the earth;\n  He breaks the bow and cuts the spear in two;\n  He burns the chariots with fire.",
+                    prayer: "Lord, thank You for bringing peace and for having authority over every conflict and struggle."
+                ),
+                PrayerVerse(
+                    id: "psalm-46-10",
+                    reference: "Psalm 46:10",
+                    text: "“Cease striving and know that I am God;\n  I will be exalted among the nations, I will be exalted in the earth.”",
+                    prayer: "Father, teach me to be still and know that You are God. Quiet my anxious thoughts and help me rest in Your sovereignty."
+                ),
+                PrayerVerse(
+                    id: "psalm-46-11",
+                    reference: "Psalm 46:11",
+                    text: "The Lord of hosts is with us;\n  The God of Jacob is our stronghold. Selah.",
+                    prayer: "Lord, thank You for being my refuge and strength. Help me walk confidently knowing that You are always with me."
+                ),
+                PrayerVerse(
+                    id: "psalm-46-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my refuge, strength, and ever-present help. When fear, uncertainty, or difficulty come, remind me that You remain in control. Help me trust You completely, rest in Your presence, and find peace in Your promises. Teach me to be still before You and remember that You are God over every circumstance. Strengthen my faith and help me live each day with confidence in Your unfailing love and protection.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 47,
