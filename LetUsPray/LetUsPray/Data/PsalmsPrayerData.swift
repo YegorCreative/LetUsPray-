@@ -3725,28 +3725,608 @@ enum PsalmsPrayerData {
             title: "Do Not Fret",
             chapterReference: "Psalm 37",
             summary: "Pray for patience and trust in God's timing.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-37-1",
+                    reference: "Psalm 37:1",
+                    text: "Do not fret because of evildoers,\n  Be not envious toward wrongdoers.",
+                    prayer: "Lord, help me not become discouraged when I see wrongdoing prosper. Keep my eyes focused on You and Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-2",
+                    reference: "Psalm 37:2",
+                    text: "For they will wither quickly like the grass\n  And fade like the green herb.",
+                    prayer: "Father, remind me that earthly success is temporary, but Your kingdom and Your promises endure forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-3",
+                    reference: "Psalm 37:3",
+                    text: "Trust in the Lord and do good;\n  Dwell in the land and cultivate faithfulness.",
+                    prayer: "Lord, help me trust in You and continue doing good. Teach me to live faithfully wherever You have placed me."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-4",
+                    reference: "Psalm 37:4",
+                    text: "Delight yourself in the Lord;\n  And He will give you the desires of your heart.",
+                    prayer: "Father, help me delight myself in You above all else. Shape my desires so they align with Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-5",
+                    reference: "Psalm 37:5",
+                    text: "Commit your way to the Lord,\n  Trust also in Him, and He will do it.",
+                    prayer: "Lord, I commit my life and my plans to You. Guide my steps and help me trust Your direction."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-6",
+                    reference: "Psalm 37:6",
+                    text: "He will bring forth your righteousness as the light\n  And your judgment as the noonday.",
+                    prayer: "Father, thank You that You bring righteousness and truth into the light. Help me trust Your timing."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-7",
+                    reference: "Psalm 37:7",
+                    text: "Rest in the Lord and wait patiently for Him;\n  Do not fret because of him who prospers in his way,\n  Because of the man who carries out wicked schemes.",
+                    prayer: "Lord, teach me to rest in You and wait patiently for Your work to unfold in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-8",
+                    reference: "Psalm 37:8",
+                    text: "Cease from anger and forsake wrath;\n  Do not fret; it leads only to evildoing.",
+                    prayer: "Father, remove anger, bitterness, and frustration from my heart. Fill me instead with peace and trust."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-9",
+                    reference: "Psalm 37:9",
+                    text: "For evildoers will be cut off,\n  But those who wait for the Lord, they will inherit the land.",
+                    prayer: "Lord, help me remember that those who hope in You will inherit blessings far greater than anything this world offers."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-10",
+                    reference: "Psalm 37:10",
+                    text: "Yet a little while and the wicked man will be no more;\n  And you will look carefully for his place and he will not be there.",
+                    prayer: "Father, remind me that evil is temporary, but Your reign is eternal."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-11",
+                    reference: "Psalm 37:11",
+                    text: "But the humble will inherit the land\n  And will delight themselves in abundant prosperity.",
+                    prayer: "Lord, cultivate humility within me and help me experience the peace that comes from trusting You."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-12",
+                    reference: "Psalm 37:12",
+                    text: "The wicked plots against the righteous\n  And gnashes at him with his teeth.",
+                    prayer: "Father, when others oppose what is right, help me remain faithful and confident in Your protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-13",
+                    reference: "Psalm 37:13",
+                    text: "The Lord laughs at him,\n  For He sees his day is coming.",
+                    prayer: "Lord, thank You that You see the end from the beginning and that nothing takes You by surprise."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-14",
+                    reference: "Psalm 37:14",
+                    text: "The wicked have drawn the sword and bent their bow\n  To cast down the afflicted and the needy,\n  To slay those who are upright in conduct.",
+                    prayer: "Father, protect the vulnerable and help me stand for what is right with courage and compassion."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-15",
+                    reference: "Psalm 37:15",
+                    text: "Their sword will enter their own heart,\n  And their bows will be broken.",
+                    prayer: "Lord, I trust that Your justice will prevail. Help me leave judgment in Your hands."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-16",
+                    reference: "Psalm 37:16",
+                    text: "Better is the little of the righteous\n  Than the abundance of many wicked.",
+                    prayer: "Father, teach me to value a life of righteousness over worldly wealth and success."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-17",
+                    reference: "Psalm 37:17",
+                    text: "For the arms of the wicked will be broken,\n  But the Lord sustains the righteous.",
+                    prayer: "Lord, thank You for sustaining those who trust in You. Strengthen me through every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-18",
+                    reference: "Psalm 37:18",
+                    text: "The Lord knows the days of the blameless,\n  And their inheritance will be forever.",
+                    prayer: "Father, thank You that You know every detail of my life and faithfully care for me."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-19",
+                    reference: "Psalm 37:19",
+                    text: "They will not be ashamed in the time of evil,\n  And in the days of famine they will have abundance.",
+                    prayer: "Lord, help me trust You during difficult times and remember that You are my provider."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-20",
+                    reference: "Psalm 37:20",
+                    text: "But the wicked will perish;\n  And the enemies of the Lord will be like the glory of the pastures,\n  They vanish—like smoke they vanish away.",
+                    prayer: "Father, remind me that only what is built upon You will last forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-21",
+                    reference: "Psalm 37:21",
+                    text: "The wicked borrows and does not pay back,\n  But the righteous is gracious and gives.",
+                    prayer: "Lord, help me live generously and reflect Your kindness toward others."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-22",
+                    reference: "Psalm 37:22",
+                    text: "For those blessed by Him will inherit the land,\n  But those cursed by Him will be cut off.",
+                    prayer: "Father, thank You for Your blessing upon those who follow You. Help me walk faithfully in Your ways."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-23",
+                    reference: "Psalm 37:23",
+                    text: "The steps of a man are established by the Lord,\n  And He delights in his way.",
+                    prayer: "Lord, establish my steps and guide me according to Your purpose and wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-24",
+                    reference: "Psalm 37:24",
+                    text: "When he falls, he will not be hurled headlong,\n  Because the Lord is the One who holds his hand.",
+                    prayer: "Father, when I stumble, thank You for lifting me up and helping me continue forward."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-25",
+                    reference: "Psalm 37:25",
+                    text: "I have been young and now I am old,\n  Yet I have not seen the righteous forsaken\n  Or his descendants begging bread.",
+                    prayer: "Lord, thank You for Your lifelong faithfulness and provision. Help me remember Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-26",
+                    reference: "Psalm 37:26",
+                    text: "All day long he is gracious and lends,\n  And his descendants are a blessing.",
+                    prayer: "Father, let generosity and compassion characterize my life as they reflect Your heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-27",
+                    reference: "Psalm 37:27",
+                    text: "Depart from evil and do good,\n  So you will abide forever.",
+                    prayer: "Lord, help me turn away from evil and pursue what is good and pleasing in Your sight."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-28",
+                    reference: "Psalm 37:28",
+                    text: "For the Lord loves justice\n  And does not forsake His godly ones;\n  They are preserved forever,\n  But the descendants of the wicked will be cut off.",
+                    prayer: "Father, thank You for loving justice and never abandoning those who trust in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-29",
+                    reference: "Psalm 37:29",
+                    text: "The righteous will inherit the land\n  And dwell in it forever.",
+                    prayer: "Lord, help me focus on the eternal inheritance You have prepared for Your people."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-30",
+                    reference: "Psalm 37:30",
+                    text: "The mouth of the righteous utters wisdom,\n  And his tongue speaks justice.",
+                    prayer: "Father, let wisdom guide my words and help me speak truth with grace and love."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-31",
+                    reference: "Psalm 37:31",
+                    text: "The law of his God is in his heart;\n  His steps do not slip.",
+                    prayer: "Lord, write Your Word upon my heart so that I may walk faithfully in Your ways."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-32",
+                    reference: "Psalm 37:32",
+                    text: "The wicked spies upon the righteous\n  And seeks to kill him.",
+                    prayer: "Father, protect me from those things that seek to pull me away from You and weaken my faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-33",
+                    reference: "Psalm 37:33",
+                    text: "The Lord will not leave him in his hand\n  Or let him be condemned when he is judged.",
+                    prayer: "Lord, thank You that You never abandon Your people and that Your hand remains upon us."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-34",
+                    reference: "Psalm 37:34",
+                    text: "Wait for the Lord and keep His way,\n  And He will exalt you to inherit the land;\n  When the wicked are cut off, you will see it.",
+                    prayer: "Father, help me wait patiently for You and trust Your perfect timing in all things."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-35",
+                    reference: "Psalm 37:35",
+                    text: "I have seen a wicked, violent man\n  Spreading himself like a luxuriant tree in its native soil.",
+                    prayer: "Lord, remind me that worldly power is temporary and cannot compare to Your eternal kingdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-36",
+                    reference: "Psalm 37:36",
+                    text: "Then he passed away, and lo, he was no more;\n  I sought for him, but he could not be found.",
+                    prayer: "Father, help me keep an eternal perspective and remember what truly matters."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-37",
+                    reference: "Psalm 37:37",
+                    text: "Mark the blameless man, and behold the upright;\n  For the man of peace will have a posterity.",
+                    prayer: "Lord, help me pursue integrity, peace, and faithfulness throughout my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-38",
+                    reference: "Psalm 37:38",
+                    text: "But transgressors will be altogether destroyed;\n  The posterity of the wicked will be cut off.",
+                    prayer: "Father, strengthen my resolve to walk in obedience and remain faithful to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-39",
+                    reference: "Psalm 37:39",
+                    text: "But the salvation of the righteous is from the Lord;\n  He is their strength in time of trouble.",
+                    prayer: "Lord, thank You for being my salvation, my refuge, and my strength in times of trouble."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-40",
+                    reference: "Psalm 37:40",
+                    text: "The Lord helps them and delivers them;\n  He delivers them from the wicked and saves them,\n  Because they take refuge in Him.",
+                    prayer: "Father, thank You for helping and delivering those who trust in You. May my confidence always remain in Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-37-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your faithfulness, justice, and provision. Help me trust You when I am tempted to compare my life to others or become discouraged by what I see around me. Teach me to delight in You, commit my ways to You, and wait patiently for Your perfect timing. Establish my steps, strengthen my faith, and help me live with integrity, generosity, and peace. May my life remain firmly rooted in Your promises and Your unfailing love.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 38,
             title: "Do Not Forsake Me",
             chapterReference: "Psalm 38",
             summary: "Pray for healing and God's presence in suffering.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-38-1",
+                    reference: "Psalm 38:1",
+                    text: "O Lord, rebuke me not in Your wrath,\n  And chasten me not in Your burning anger.",
+                    prayer: "Lord, when You correct me, help me receive Your discipline with humility and a willing heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-2",
+                    reference: "Psalm 38:2",
+                    text: "For Your arrows have sunk deep into me,\n  And Your hand has pressed down on me.",
+                    prayer: "Father, remind me that Your correction comes from love and is meant to draw me closer to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-3",
+                    reference: "Psalm 38:3",
+                    text: "There is no soundness in my flesh because of Your indignation;\n  There is no health in my bones because of my sin.",
+                    prayer: "Lord, reveal areas of my life that need healing and restoration. Help me turn fully to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-4",
+                    reference: "Psalm 38:4",
+                    text: "For my iniquities are gone over my head;\n  As a heavy burden they weigh too much for me.",
+                    prayer: "Father, when the weight of sin and failure feels overwhelming, remind me of Your mercy and forgiveness."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-5",
+                    reference: "Psalm 38:5",
+                    text: "My wounds grow foul and fester\n  Because of my folly.",
+                    prayer: "Lord, help me recognize the consequences of sin and give me wisdom to walk in obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-6",
+                    reference: "Psalm 38:6",
+                    text: "I am bent over and greatly bowed down;\n  I go mourning all day long.",
+                    prayer: "Father, when I feel burdened and discouraged, strengthen me and lift my eyes toward Your hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-7",
+                    reference: "Psalm 38:7",
+                    text: "For my loins are filled with burning,\n  And there is no soundness in my flesh.",
+                    prayer: "Lord, bring healing to every area of weakness in my life—physically, emotionally, and spiritually."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-8",
+                    reference: "Psalm 38:8",
+                    text: "I am benumbed and badly crushed;\n  I groan because of the agitation of my heart.",
+                    prayer: "Father, when I feel exhausted and overwhelmed, renew my strength and sustain me by Your grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-9",
+                    reference: "Psalm 38:9",
+                    text: "Lord, all my desire is before You;\n  And my sighing is not hidden from You.",
+                    prayer: "Lord, You know every desire and struggle within my heart. Thank You for understanding me completely."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-10",
+                    reference: "Psalm 38:10",
+                    text: "My heart throbs, my strength fails me;\n  And the light of my eyes, even that has gone from me.",
+                    prayer: "Father, when my strength fails, remind me that Your power is made perfect in weakness."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-11",
+                    reference: "Psalm 38:11",
+                    text: "My loved ones and my friends stand aloof from my plague;\n  And my kinsmen stand afar off.",
+                    prayer: "Lord, when I feel isolated or alone, help me remember that You never leave nor forsake me."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-12",
+                    reference: "Psalm 38:12",
+                    text: "Those who seek my life lay snares for me;\n  And those who seek to injure me have threatened destruction,\n  And they devise treachery all day long.",
+                    prayer: "Father, protect me from harmful influences and from those things that seek to draw me away from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-13",
+                    reference: "Psalm 38:13",
+                    text: "But I, like a deaf man, do not hear;\n  And I am like a mute man who does not open his mouth.",
+                    prayer: "Lord, teach me when to remain silent and when to speak with wisdom and grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-14",
+                    reference: "Psalm 38:14",
+                    text: "Yes, I am like a man who does not hear,\n  And in whose mouth are no arguments.",
+                    prayer: "Father, help me respond to difficult situations with patience, humility, and trust in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-15",
+                    reference: "Psalm 38:15",
+                    text: "For I hope in You, O Lord;\n  You will answer, O Lord my God.",
+                    prayer: "Lord, I place my hope in You. Thank You for hearing my prayers and caring for my needs."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-16",
+                    reference: "Psalm 38:16",
+                    text: "For I said, “May they not rejoice over me,\n  Who, when my foot slips, would magnify themselves against me.”",
+                    prayer: "Father, keep me from discouragement and help me trust You even when circumstances seem difficult."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-17",
+                    reference: "Psalm 38:17",
+                    text: "For I am ready to fall,\n  And my sorrow is continually before me.",
+                    prayer: "Lord, when I stumble, strengthen me and help me continue walking faithfully with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-18",
+                    reference: "Psalm 38:18",
+                    text: "For I confess my iniquity;\n  I am full of anxiety because of my sin.",
+                    prayer: "Father, thank You for the freedom that comes through confession and repentance. Help me walk honestly before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-19",
+                    reference: "Psalm 38:19",
+                    text: "But my enemies are vigorous and strong,\n  And many are those who hate me wrongfully.",
+                    prayer: "Lord, give me wisdom when facing opposition and help me respond with faith and integrity."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-20",
+                    reference: "Psalm 38:20",
+                    text: "And those who repay evil for good,\n  They oppose me, because I follow what is good.",
+                    prayer: "Father, help me continue pursuing what is right, even when it is difficult."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-21",
+                    reference: "Psalm 38:21",
+                    text: "Do not forsake me, O Lord;\n  O my God, do not be far from me!",
+                    prayer: "Lord, stay near to me in every season. Let Your presence be my comfort and strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-22",
+                    reference: "Psalm 38:22",
+                    text: "Make haste to help me,\n  O Lord, my salvation!",
+                    prayer: "Father, come quickly to help me. Thank You for being my Savior, my refuge, and my hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-38-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your mercy, patience, and faithfulness. When I feel burdened by weakness, failure, or difficult circumstances, help me turn to You with honesty and trust. Strengthen me, restore me, and remind me that Your grace is greater than my shortcomings. Stay near to me, guide my steps, and help me walk faithfully in Your ways. May my hope always remain in You.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 39,
             title: "Show Me My End",
             chapterReference: "Psalm 39",
             summary: "Pray for perspective and hope.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-39-1",
+                    reference: "Psalm 39:1",
+                    text: "I said, “I will guard my ways\n  That I may not sin with my tongue;\n  I will guard my mouth as with a muzzle\n  While the wicked are in my presence.”",
+                    prayer: "Lord, help me guard my words and speak with wisdom, especially in difficult situations. Let my speech honor You."
+                ),
+                PrayerVerse(
+                    id: "psalm-39-2",
+                    reference: "Psalm 39:2",
+                    text: "I was mute and silent,\n  I refrained even from good,\n  And my sorrow grew worse.",
+                    prayer: "Father, teach me patience and self-control when I am tempted to speak impulsively or react in frustration."
+                ),
+                PrayerVerse(
+                    id: "psalm-39-3",
+                    reference: "Psalm 39:3",
+                    text: "My heart was hot within me,\n  While I was musing the fire burned;\n  Then I spoke with my tongue:",
+                    prayer: "Lord, when emotions rise within me, help me bring them before You in prayer rather than allowing them to control me."
+                ),
+                PrayerVerse(
+                    id: "psalm-39-4",
+                    reference: "Psalm 39:4",
+                    text: "“Lord, make me to know my end\n  And what is the extent of my days;\n  Let me know how transient I am.",
+                    prayer: "Father, remind me of the brevity of life. Help me live each day with purpose, wisdom, and an eternal perspective."
+                ),
+                PrayerVerse(
+                    id: "psalm-39-5",
+                    reference: "Psalm 39:5",
+                    text: "Behold, You have made my days as handbreadths,\n  And my lifetime as nothing in Your sight;\n  Surely every man at his best is a mere breath. Selah.",
+                    prayer: "Lord, teach me humility. Help me remember that my life is temporary and that true significance is found in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-39-6",
+                    reference: "Psalm 39:6",
+                    text: "Surely every man walks about as a phantom;\n  Surely they make an uproar for nothing;\n  He amasses riches and does not know who will gather them.",
+                    prayer: "Father, keep me from chasing things that will not last. Help me invest my time and energy in what has eternal value."
+                ),
+                PrayerVerse(
+                    id: "psalm-39-7",
+                    reference: "Psalm 39:7",
+                    text: "“And now, Lord, for what do I wait?\n  My hope is in You.",
+                    prayer: "Lord, You are my hope. When uncertainty surrounds me, help me place my confidence fully in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-39-8",
+                    reference: "Psalm 39:8",
+                    text: "Deliver me from all my transgressions;\n  Make me not the reproach of the foolish.",
+                    prayer: "Father, forgive my sins and shortcomings. Thank You for Your mercy and grace that continually restore me."
+                ),
+                PrayerVerse(
+                    id: "psalm-39-9",
+                    reference: "Psalm 39:9",
+                    text: "I have become mute, I do not open my mouth,\n  Because it is You who have done it.",
+                    prayer: "Lord, help me trust Your sovereignty even when I do not understand what You are doing in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-39-10",
+                    reference: "Psalm 39:10",
+                    text: "Remove Your plague from me;\n  Because of the opposition of Your hand I am perishing.",
+                    prayer: "Father, when I experience hardship or correction, help me respond with humility and a willingness to learn from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-39-11",
+                    reference: "Psalm 39:11",
+                    text: "With reproofs You chasten a man for iniquity;\n  You consume as a moth what is precious to him;\n  Surely every man is a mere breath. Selah.",
+                    prayer: "Lord, remind me that earthly things fade away, but Your truth and Your kingdom endure forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-39-12",
+                    reference: "Psalm 39:12",
+                    text: "“Hear my prayer, O Lord, and give ear to my cry;\n  Do not be silent at my tears;\n  For I am a stranger with You,\n  A sojourner like all my fathers.",
+                    prayer: "Father, hear my prayers and see my tears. Thank You for caring about every burden and concern I bring before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-39-13",
+                    reference: "Psalm 39:13",
+                    text: "Turn Your gaze away from me, that I may smile again\n  Before I depart and am no more.”",
+                    prayer: "Lord, renew my strength and fill me with hope. Help me walk faithfully through every season of life with confidence in Your love."
+                ),
+                PrayerVerse(
+                    id: "psalm-39-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for reminding me that life is brief and that my hope is found in You alone. Help me use my time wisely, guard my words carefully, and keep an eternal perspective in all that I do. Forgive my sins, strengthen my faith, and teach me to trust You through every season of life. May my heart remain fixed on You, and may my life bring glory to Your name.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 40,
             title: "I Waited Patiently",
             chapterReference: "Psalm 40",
             summary: "Pray with gratitude for answered prayer.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-40-1",
+                    reference: "Psalm 40:1",
+                    text: "I waited patiently for the Lord;\n  And He inclined to me and heard my cry.",
+                    prayer: "Lord, thank You for hearing my prayers as I patiently wait for You. Help me trust Your timing and remain faithful while I wait."
+                ),
+                PrayerVerse(
+                    id: "psalm-40-2",
+                    reference: "Psalm 40:2",
+                    text: "He brought me up out of the pit of destruction, out of the miry clay,\n  And He set my feet upon a rock making my footsteps firm.",
+                    prayer: "Father, thank You for lifting me out of difficult situations and placing my feet on solid ground. Strengthen my faith in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-40-3",
+                    reference: "Psalm 40:3",
+                    text: "He put a new song in my mouth, a song of praise to our God;\n  Many will see and fear\n  And will trust in the Lord.",
+                    prayer: "Lord, place a new song of praise in my heart. May my life testify to Your goodness and inspire others to trust You."
+                ),
+                PrayerVerse(
+                    id: "psalm-40-4",
+                    reference: "Psalm 40:4",
+                    text: "How blessed is the man who has made the Lord his trust,\n  And has not turned to the proud, nor to those who lapse into falsehood.",
+                    prayer: "Father, help me place my trust completely in You rather than in worldly influences or human strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-40-5",
+                    reference: "Psalm 40:5",
+                    text: "Many, O Lord my God, are the wonders which You have done,\n  And Your thoughts toward us;\n  There is none to compare with You.\n  If I would declare and speak of them,\n  They would be too numerous to count.",
+                    prayer: "Lord, thank You for Your wonderful works and countless blessings. Help me never lose sight of Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-40-6",
+                    reference: "Psalm 40:6",
+                    text: "Sacrifice and meal offering You have not desired;\n  My ears You have opened;\n  Burnt offering and sin offering You have not required.",
+                    prayer: "Father, teach me that what You desire most is a heart that loves, obeys, and honors You."
+                ),
+                PrayerVerse(
+                    id: "psalm-40-7",
+                    reference: "Psalm 40:7",
+                    text: "Then I said, “Behold, I come;\n  In the scroll of the book it is written of me.",
+                    prayer: "Lord, help me willingly follow Your plans and purposes for my life with faith and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-40-8",
+                    reference: "Psalm 40:8",
+                    text: "I delight to do Your will, O my God;\n  Your Law is within my heart.”",
+                    prayer: "Father, let Your will become my delight. Write Your truth deeply upon my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-40-9",
+                    reference: "Psalm 40:9",
+                    text: "I have proclaimed glad tidings of righteousness in the great congregation;\n  Behold, I will not restrain my lips,\n  O Lord, You know.",
+                    prayer: "Lord, help me boldly share Your goodness and faithfulness with those around me."
+                ),
+                PrayerVerse(
+                    id: "psalm-40-10",
+                    reference: "Psalm 40:10",
+                    text: "I have not hidden Your righteousness within my heart;\n  I have spoken of Your faithfulness and Your salvation;\n  I have not concealed Your lovingkindness and Your truth from the great congregation.",
+                    prayer: "Father, let my life proclaim Your righteousness, salvation, and unfailing love."
+                ),
+                PrayerVerse(
+                    id: "psalm-40-11",
+                    reference: "Psalm 40:11",
+                    text: "You, O Lord, will not withhold Your compassion from me;\n  Your lovingkindness and Your truth will continually preserve me.",
+                    prayer: "Lord, do not withhold Your mercy from me. Surround me daily with Your lovingkindness and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-40-12",
+                    reference: "Psalm 40:12",
+                    text: "For evils beyond number have surrounded me;\n  My iniquities have overtaken me, so that I am not able to see;\n  They are more numerous than the hairs of my head,\n  And my heart has failed me.",
+                    prayer: "Father, when troubles surround me, remind me that Your grace is greater than my fears and failures."
+                ),
+                PrayerVerse(
+                    id: "psalm-40-13",
+                    reference: "Psalm 40:13",
+                    text: "Be pleased, O Lord, to deliver me;\n  Make haste, O Lord, to help me.",
+                    prayer: "Lord, come quickly to help me in times of need. Thank You that I can always call upon You."
+                ),
+                PrayerVerse(
+                    id: "psalm-40-14",
+                    reference: "Psalm 40:14",
+                    text: "Let those be ashamed and humiliated together\n  Who seek my life to destroy it;\n  Let those be turned back and dishonored\n  Who delight in my hurt.",
+                    prayer: "Father, protect me from discouragement and from anything that seeks to draw me away from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-40-15",
+                    reference: "Psalm 40:15",
+                    text: "Let those be appalled because of their shame\n  Who say to me, “Aha, aha!”",
+                    prayer: "Lord, establish truth and righteousness. Help me remain faithful even when facing opposition."
+                ),
+                PrayerVerse(
+                    id: "psalm-40-16",
+                    reference: "Psalm 40:16",
+                    text: "Let all who seek You rejoice and be glad in You;\n  Let those who love Your salvation say continually,\n  “The Lord be magnified!”",
+                    prayer: "Father, fill the hearts of those who seek You with joy, peace, and confidence in Your salvation."
+                ),
+                PrayerVerse(
+                    id: "psalm-40-17",
+                    reference: "Psalm 40:17",
+                    text: "Since I am afflicted and needy,\n  Let the Lord be mindful of me.\n  You are my help and my deliverer;\n  Do not delay, O my God.",
+                    prayer: "Lord, though I am needy and dependent upon You, thank You for thinking of me and caring for every detail of my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-40-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing my prayers, sustaining me through difficult seasons, and faithfully guiding my life. Help me trust Your timing, delight in Your will, and boldly share Your goodness with others. When troubles arise, remind me that You are my help and my deliverer. Fill my heart with gratitude, strengthen my faith, and help me walk in obedience to You every day. May my life continually proclaim Your love, mercy, and salvation.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 41,
