@@ -4719,7 +4719,116 @@ enum PsalmsPrayerData {
             title: "My Heart Overflows",
             chapterReference: "Psalm 45",
             summary: "Pray in worship of the King.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-45-1",
+                    reference: "Psalm 45:1",
+                    text: "My heart overflows with a good theme;\n  I address my verses to the King;\n  My tongue is the pen of a ready writer.",
+                    prayer: "Lord, fill my heart with words that honor and glorify You. Let my life reflect praise, worship, and devotion to Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-45-2",
+                    reference: "Psalm 45:2",
+                    text: "You are fairer than the sons of men;\n  Grace is poured upon Your lips;\n  Therefore God has blessed You forever.",
+                    prayer: "Father, thank You for the beauty of Your character, Your grace, and Your truth. Help me become more like You each day."
+                ),
+                PrayerVerse(
+                    id: "psalm-45-3",
+                    reference: "Psalm 45:3",
+                    text: "Gird Your sword on Your thigh, O Mighty One,\n  In Your splendor and Your majesty!",
+                    prayer: "Lord, You are mighty and powerful. Help me trust in Your strength rather than my own abilities."
+                ),
+                PrayerVerse(
+                    id: "psalm-45-4",
+                    reference: "Psalm 45:4",
+                    text: "And in Your majesty ride on victoriously,\n  For the cause of truth and meekness and righteousness;\n  Let Your right hand teach You awesome things.",
+                    prayer: "Father, thank You that You reign in truth, humility, and righteousness. Teach me to reflect those qualities in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-45-5",
+                    reference: "Psalm 45:5",
+                    text: "Your arrows are sharp;\n  The peoples fall under You;\n  Your arrows are in the heart of the King’s enemies.",
+                    prayer: "Lord, let Your truth penetrate my heart and transform my thoughts, attitudes, and actions."
+                ),
+                PrayerVerse(
+                    id: "psalm-45-6",
+                    reference: "Psalm 45:6",
+                    text: "Your throne, O God, is forever and ever;\n  A scepter of uprightness is the scepter of Your kingdom.",
+                    prayer: "Father, Your throne is everlasting. Help me place my confidence in Your eternal kingdom rather than temporary things."
+                ),
+                PrayerVerse(
+                    id: "psalm-45-7",
+                    reference: "Psalm 45:7",
+                    text: "You have loved righteousness and hated wickedness;\n  Therefore God, Your God, has anointed You\n  With the oil of joy above Your fellows.",
+                    prayer: "Lord, You love righteousness and hate evil. Give me a heart that desires what is good and pleasing in Your sight."
+                ),
+                PrayerVerse(
+                    id: "psalm-45-8",
+                    reference: "Psalm 45:8",
+                    text: "All Your garments are fragrant with myrrh and aloes and cassia;\n  Out of ivory palaces stringed instruments have made You glad.",
+                    prayer: "Father, let my life be marked by joy that comes from walking closely with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-45-9",
+                    reference: "Psalm 45:9",
+                    text: "Kings’ daughters are among Your noble ladies;\n  At Your right hand stands the queen in gold from Ophir.",
+                    prayer: "Lord, thank You for the honor and privilege of belonging to You. Help me live as a faithful servant of Your kingdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-45-10",
+                    reference: "Psalm 45:10",
+                    text: "Listen, O daughter, give attention and incline your ear:\n  Forget your people and your father’s house;",
+                    prayer: "Father, help me leave behind anything that competes with my devotion to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-45-11",
+                    reference: "Psalm 45:11",
+                    text: "Then the King will desire your beauty.\n  Because He is your Lord, bow down to Him.",
+                    prayer: "Lord, may my heart be fully devoted to You. Teach me to worship You with sincerity and reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-45-12",
+                    reference: "Psalm 45:12",
+                    text: "The daughter of Tyre will come with a gift;\n  The rich among the people will seek your favor.",
+                    prayer: "Father, let my life be a blessing to others and a testimony of Your goodness and grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-45-13",
+                    reference: "Psalm 45:13",
+                    text: "The King’s daughter is all glorious within;\n  Her clothing is interwoven with gold.",
+                    prayer: "Lord, thank You for the beauty that comes from a life transformed by Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-45-14",
+                    reference: "Psalm 45:14",
+                    text: "She will be led to the King in embroidered work;\n  The virgins, her companions who follow her,\n  Will be brought to You.",
+                    prayer: "Father, help me walk with purity, humility, and faithfulness as I follow You."
+                ),
+                PrayerVerse(
+                    id: "psalm-45-15",
+                    reference: "Psalm 45:15",
+                    text: "They will be led forth with gladness and rejoicing;\n  They will enter into the King’s palace.",
+                    prayer: "Lord, fill my heart with joy and gladness as I live in fellowship with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-45-16",
+                    reference: "Psalm 45:16",
+                    text: "In place of your fathers will be your sons;\n  You shall make them princes in all the earth.",
+                    prayer: "Father, help me leave a legacy of faith that points future generations toward You."
+                ),
+                PrayerVerse(
+                    id: "psalm-45-17",
+                    reference: "Psalm 45:17",
+                    text: "I will cause Your name to be remembered in all generations;\n  Therefore the peoples will give You thanks forever and ever.",
+                    prayer: "Lord, may Your name be remembered and praised throughout every generation. Use my life to bring honor to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-45-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your righteousness, beauty, truth, and eternal reign. Help me live a life that honors You in every thought, word, and action. Draw my heart closer to You and teach me to delight in Your presence. Fill me with joy, strengthen my faith, and help me leave a legacy that reflects Your goodness. May my life continually glorify Your name and point others toward Your everlasting kingdom.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         )
     ]
 
