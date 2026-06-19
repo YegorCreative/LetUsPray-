@@ -2591,7 +2591,26 @@ enum PsalmsPrayerData {
             title: "The Lord is My Light",
             chapterReference: "Psalm 27",
             summary: "Pray for courage and confidence in God's presence.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-27-1",
+                    reference: "Psalm 27:1",
+                    text: "The Lord is my light and my salvation;\n  Whom shall I fear?\n  The Lord is the defense of my life;\n  Whom shall I dread?",
+                    prayer: "Lord, You are my light and my salvation. When fear tries to overwhelm me, help me remember that You are my strength and my refuge."
+                ),
+                PrayerVerse(
+                    id: "psalm-27-2",
+                    reference: "Psalm 27:2",
+                    text: "When evildoers came upon me to devour my flesh,\n  My adversaries and my enemies, they stumbled and fell.",
+                    prayer: "Father, when opposition rises against me, remind me that You are my defender and that I can trust You completely."
+                ),
+                PrayerVerse(
+                    id: "psalm-27-3",
+                    reference: "Psalm 27:3",
+                    text: "Though a host encamp against me,\n  My heart will not fear;\n  Though war arise against me,\n  In spite of this I shall be confident.",
+                    prayer: "Lord, even when challenges surround me, help my heart remain confident and secure in Your presence."
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 28,
