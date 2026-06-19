@@ -1463,7 +1463,314 @@ enum PsalmsPrayerData {
             title: "I Love You, Lord",
             chapterReference: "Psalm 18",
             summary: "Pray in gratitude for God's deliverance and strength.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-18-1",
+                    reference: "Psalm 18:1",
+                    text: "“I love You, O Lord, my strength.”",
+                    prayer: "Lord, I love You because You are my strength. Thank You for sustaining me through every season and giving me power when I feel weak."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-2",
+                    reference: "Psalm 18:2",
+                    text: "The Lord is my rock and my fortress and my deliverer,\n  My God, my rock, in whom I take refuge;\n  My shield and the horn of my salvation, my stronghold.",
+                    prayer: "Father, You are my rock, my fortress, and my deliverer. Help me place my trust completely in Your protection and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-3",
+                    reference: "Psalm 18:3",
+                    text: "I call upon the Lord, who is worthy to be praised,\n  And I am saved from my enemies.",
+                    prayer: "Lord, I call upon You because You are worthy of praise. Thank You for hearing my prayers and rescuing me from fear and trouble."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-4",
+                    reference: "Psalm 18:4",
+                    text: "The cords of death encompassed me,\n  And the torrents of ungodliness terrified me.",
+                    prayer: "Father, when difficulties surround me and I feel overwhelmed, remind me that You are greater than every trial I face."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-5",
+                    reference: "Psalm 18:5",
+                    text: "The cords of Sheol surrounded me;\n  The snares of death confronted me.",
+                    prayer: "Lord, when I feel trapped by fear, anxiety, or discouragement, deliver me and lead me into Your peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-6",
+                    reference: "Psalm 18:6",
+                    text: "In my distress I called upon the Lord,\n  And cried to my God for help;\n  He heard my voice out of His temple,\n  And my cry for help before Him came into His ears.",
+                    prayer: "Father, thank You that I can call upon You in my distress and know that You hear my voice."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-7",
+                    reference: "Psalm 18:7",
+                    text: "Then the earth shook and quaked;\n  And the foundations of the mountains were trembling\n  And were shaken, because He was angry.",
+                    prayer: "Lord, display Your power in my life. Help me remember that nothing is impossible for You."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-8",
+                    reference: "Psalm 18:8",
+                    text: "Smoke went up out of His nostrils,\n  And fire from His mouth devoured;\n  Coals were kindled by it.",
+                    prayer: "Father, You are holy and mighty. Fill me with reverence and awe for Your greatness."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-9",
+                    reference: "Psalm 18:9",
+                    text: "He bowed the heavens also, and came down\n  With thick darkness under His feet.",
+                    prayer: "Lord, thank You that You draw near to Your people. Help me recognize Your presence even in difficult moments."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-10",
+                    reference: "Psalm 18:10",
+                    text: "He rode upon a cherub and flew;\n  And He sped upon the wings of the wind.",
+                    prayer: "Father, You move with power and authority. Strengthen my faith in Your ability to accomplish Your purposes."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-11",
+                    reference: "Psalm 18:11",
+                    text: "He made darkness His hiding place, His canopy around Him,\n  Darkness of waters, thick clouds of the skies.",
+                    prayer: "Lord, even when I cannot clearly see what You are doing, help me trust Your wisdom and guidance."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-12",
+                    reference: "Psalm 18:12",
+                    text: "From the brightness before Him passed His thick clouds,\n  Hailstones and coals of fire.",
+                    prayer: "Father, let Your light shine into every dark place of my life and reveal Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-13",
+                    reference: "Psalm 18:13",
+                    text: "The Lord also thundered in the heavens,\n  And the Most High uttered His voice,\n  Hailstones and coals of fire.",
+                    prayer: "Lord, Your voice is powerful and majestic. Help me listen carefully and obey when You speak through Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-14",
+                    reference: "Psalm 18:14",
+                    text: "He sent out His arrows, and scattered them,\n  And lightning flashes in abundance, and routed them.",
+                    prayer: "Father, fight the battles I cannot fight alone. Defend me against every spiritual attack and temptation."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-15",
+                    reference: "Psalm 18:15",
+                    text: "Then the channels of water appeared,\n  And the foundations of the world were laid bare\n  At Your rebuke, O Lord,\n  At the blast of the breath of Your nostrils.",
+                    prayer: "Lord, thank You for revealing Your power and faithfulness throughout history and in my own life."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-16",
+                    reference: "Psalm 18:16",
+                    text: "He sent from on high, He took me;\n  He drew me out of many waters.",
+                    prayer: "Father, reach down and lift me up when I feel overwhelmed. Rescue me from despair and strengthen my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-17",
+                    reference: "Psalm 18:17",
+                    text: "He delivered me from my strong enemy,\n  And from those who hated me, for they were too mighty for me.",
+                    prayer: "Lord, deliver me from challenges that are too great for me to overcome on my own. Be my source of victory and hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-18",
+                    reference: "Psalm 18:18",
+                    text: "They confronted me in the day of my calamity,\n  But the Lord was my stay.",
+                    prayer: "Father, when trouble comes unexpectedly, help me lean upon You and trust Your support."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-19",
+                    reference: "Psalm 18:19",
+                    text: "He brought me forth also into a broad place;\n  He rescued me, because He delighted in me.",
+                    prayer: "Lord, thank You for bringing me into a place of freedom. Help me walk confidently in the liberty You provide."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-20",
+                    reference: "Psalm 18:20",
+                    text: "The Lord has rewarded me according to my righteousness;\n  According to the cleanness of my hands He has recompensed me.",
+                    prayer: "Father, help me pursue righteousness and integrity in every area of my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-21",
+                    reference: "Psalm 18:21",
+                    text: "For I have kept the ways of the Lord,\n  And have not wickedly departed from my God.",
+                    prayer: "Lord, strengthen me to remain faithful to Your ways and not turn away from Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-22",
+                    reference: "Psalm 18:22",
+                    text: "For all His ordinances were before me,\n  And I did not put away His statutes from me.",
+                    prayer: "Father, help me keep Your Word before me and apply it daily to my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-23",
+                    reference: "Psalm 18:23",
+                    text: "I was also blameless with Him,\n  And I kept myself from my iniquity.",
+                    prayer: "Lord, guard me from sin and help me walk with a sincere and wholehearted devotion to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-24",
+                    reference: "Psalm 18:24",
+                    text: "Therefore the Lord has recompensed me according to my righteousness,\n  According to the cleanness of my hands in His eyes.",
+                    prayer: "Father, thank You for seeing every act of faithfulness and every step of obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-25",
+                    reference: "Psalm 18:25",
+                    text: "With the kind You show Yourself kind;\n  With the blameless You show Yourself blameless;",
+                    prayer: "Lord, help me reflect Your mercy by showing grace and compassion to others."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-26",
+                    reference: "Psalm 18:26",
+                    text: "With the pure You show Yourself pure,\n  And with the crooked You show Yourself astute.",
+                    prayer: "Father, purify my heart and help me walk in humility and truth before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-27",
+                    reference: "Psalm 18:27",
+                    text: "For You save an afflicted people,\n  But haughty eyes You abase.",
+                    prayer: "Lord, thank You for lifting up the humble and helping those who place their trust in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-28",
+                    reference: "Psalm 18:28",
+                    text: "For You light my lamp;\n  The Lord my God illumines my darkness.",
+                    prayer: "Father, be the light that guides my path and illuminates every decision I make."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-29",
+                    reference: "Psalm 18:29",
+                    text: "For by You I can run upon a troop;\n  And by my God I can leap over a wall.",
+                    prayer: "Lord, with Your strength I can overcome obstacles that seem impossible. Increase my faith and courage."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-30",
+                    reference: "Psalm 18:30",
+                    text: "As for God, His way is blameless;\n  The word of the Lord is tried;\n  He is a shield to all who take refuge in Him.",
+                    prayer: "Father, Your way is perfect and Your Word is proven true. Help me trust You completely."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-31",
+                    reference: "Psalm 18:31",
+                    text: "For who is God, but the Lord?\n  And who is a rock, except our God,",
+                    prayer: "Lord, there is no rock like You. Keep my foundation secure in Your unchanging character."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-32",
+                    reference: "Psalm 18:32",
+                    text: "The God who girds me with strength\n  And makes my way blameless?",
+                    prayer: "Father, equip me with strength and help me walk confidently in the path You have prepared for me."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-33",
+                    reference: "Psalm 18:33",
+                    text: "He makes my feet like hinds’ feet,\n  And sets me upon my high places.",
+                    prayer: "Lord, give me stability and confidence when life feels uncertain."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-34",
+                    reference: "Psalm 18:34",
+                    text: "He trains my hands for battle,\n  So that my arms can bend a bow of bronze.",
+                    prayer: "Father, prepare me for every challenge and help me stand firm in faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-35",
+                    reference: "Psalm 18:35",
+                    text: "You have also given me the shield of Your salvation,\n  And Your right hand upholds me;\n  And Your gentleness makes me great.",
+                    prayer: "Lord, thank You for Your salvation and Your gentle care. Your kindness has sustained me throughout my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-36",
+                    reference: "Psalm 18:36",
+                    text: "You enlarge my steps under me,\n  And my feet have not slipped.",
+                    prayer: "Father, direct my steps and keep me from stumbling as I follow You."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-37",
+                    reference: "Psalm 18:37",
+                    text: "I pursued my enemies and overtook them,\n  And I did not turn back until they were consumed.",
+                    prayer: "Lord, help me persevere through every challenge and remain faithful until the end."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-38",
+                    reference: "Psalm 18:38",
+                    text: "I shattered them, so that they were not able to rise;\n  They fell under my feet.",
+                    prayer: "Father, give me victory over the sins, fears, and obstacles that seek to hinder my walk with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-39",
+                    reference: "Psalm 18:39",
+                    text: "For You have girded me with strength for battle;\n  You have subdued under me those who rose up against me.",
+                    prayer: "Lord, strengthen me for every battle and remind me that true victory comes from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-40",
+                    reference: "Psalm 18:40",
+                    text: "You have also made my enemies turn their backs to me,\n  And I destroyed those who hated me.",
+                    prayer: "Father, protect me from those things that seek to pull me away from Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-41",
+                    reference: "Psalm 18:41",
+                    text: "They cried for help, but there was none to save,\n  Even to the Lord, but He did not answer them.",
+                    prayer: "Lord, help me seek You first in every circumstance and trust You above all else."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-42",
+                    reference: "Psalm 18:42",
+                    text: "Then I beat them fine as the dust before the wind;\n  I emptied them out as the mire of the streets.",
+                    prayer: "Father, remove pride, selfishness, and anything that prevents me from growing closer to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-43",
+                    reference: "Psalm 18:43",
+                    text: "You have delivered me from the contentions of the people;\n  You have placed me as head of the nations;\n  A people whom I have not known serve me.",
+                    prayer: "Lord, thank You for Your deliverance and faithfulness throughout every season of life."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-44",
+                    reference: "Psalm 18:44",
+                    text: "As soon as they hear, they obey me;\n  Foreigners submit to me.",
+                    prayer: "Father, may my life be a testimony that points others toward Your goodness and grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-45",
+                    reference: "Psalm 18:45",
+                    text: "Foreigners fade away,\n  And come trembling out of their fortresses.",
+                    prayer: "Lord, help me remain steadfast and faithful regardless of changing circumstances."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-46",
+                    reference: "Psalm 18:46",
+                    text: "The Lord lives, and blessed be my rock;\n  And exalted be the God of my salvation,",
+                    prayer: "Father, You live and reign forever. May my heart continually praise and exalt Your holy name."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-47",
+                    reference: "Psalm 18:47",
+                    text: "The God who executes vengeance for me,\n  And subdues peoples under me.",
+                    prayer: "Lord, thank You for bringing justice and establishing Your purposes in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-48",
+                    reference: "Psalm 18:48",
+                    text: "He delivers me from my enemies;\n  Surely You lift me above those who rise up against me;\n  You rescue me from the violent man.",
+                    prayer: "Father, rescue me from every form of evil and help me walk securely in Your protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-49",
+                    reference: "Psalm 18:49",
+                    text: "Therefore I will give thanks to You among the nations, O Lord,\n  And I will sing praises to Your name.",
+                    prayer: "Lord, I will give thanks to You among all people and praise Your name for Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-50",
+                    reference: "Psalm 18:50",
+                    text: "He gives great deliverance to His king,\n  And shows lovingkindness to His anointed,\n  To David and his descendants forever.",
+                    prayer: "Father, thank You for Your steadfast love, Your salvation, and Your covenant faithfulness that endures forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-18-closing",
+                    reference: "Closing",
+                    text: "Lord, You are my rock, my fortress, and my deliverer. Thank You for Your strength, protection, and unfailing love. Through every trial, victory, and season of life, help me trust in Your perfect ways and rely on Your power rather than my own. Guide my steps, strengthen my faith, and fill my heart with gratitude as I walk closely with You each day.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 19,
