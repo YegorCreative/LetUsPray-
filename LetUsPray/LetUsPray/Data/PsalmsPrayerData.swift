@@ -4987,7 +4987,98 @@ enum PsalmsPrayerData {
             title: "Great is the Lord",
             chapterReference: "Psalm 48",
             summary: "Pray in praise of God's greatness.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-48-1",
+                    reference: "Psalm 48:1",
+                    text: "Great is the Lord, and greatly to be praised,\n  In the city of our God, His holy mountain.",
+                    prayer: "Lord, You are great and greatly to be praised. Help me worship You with reverence, gratitude, and joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-48-2",
+                    reference: "Psalm 48:2",
+                    text: "Beautiful in elevation, the joy of the whole earth,\n  Is Mount Zion in the far north,\n  The city of the great King.",
+                    prayer: "Father, thank You for the beauty and majesty of Your kingdom. Help me keep my focus on what is eternal."
+                ),
+                PrayerVerse(
+                    id: "psalm-48-3",
+                    reference: "Psalm 48:3",
+                    text: "God, in her palaces,\n  Has made Himself known as a stronghold.",
+                    prayer: "Lord, thank You for being known as a refuge for Your people. Help me run to You whenever I face challenges."
+                ),
+                PrayerVerse(
+                    id: "psalm-48-4",
+                    reference: "Psalm 48:4",
+                    text: "For, lo, the kings assembled themselves,\n  They passed by together.",
+                    prayer: "Father, remind me that earthly powers are limited, but Your authority is without end."
+                ),
+                PrayerVerse(
+                    id: "psalm-48-5",
+                    reference: "Psalm 48:5",
+                    text: "They saw it, then they were amazed;\n  They were terrified, they fled in alarm.",
+                    prayer: "Lord, thank You that Your presence causes fear and uncertainty to fade. Help me trust You completely."
+                ),
+                PrayerVerse(
+                    id: "psalm-48-6",
+                    reference: "Psalm 48:6",
+                    text: "Panic seized them there,\n  Anguish, as of a woman in childbirth.",
+                    prayer: "Father, when anxiety or fear comes, strengthen my heart and remind me that You are near."
+                ),
+                PrayerVerse(
+                    id: "psalm-48-7",
+                    reference: "Psalm 48:7",
+                    text: "With the east wind\n  You break the ships of Tarshish.",
+                    prayer: "Lord, no force on earth can stand against Your purposes. Help me trust in Your sovereign power."
+                ),
+                PrayerVerse(
+                    id: "psalm-48-8",
+                    reference: "Psalm 48:8",
+                    text: "As we have heard, so have we seen\n  In the city of the Lord of hosts, in the city of our God;\n  God will establish her forever. Selah.",
+                    prayer: "Father, thank You for Your faithfulness throughout generations. Help me remember Your works and trust Your promises."
+                ),
+                PrayerVerse(
+                    id: "psalm-48-9",
+                    reference: "Psalm 48:9",
+                    text: "We have thought on Your lovingkindness, O God,\n  In the midst of Your temple.",
+                    prayer: "Lord, I meditate on Your lovingkindness. Fill my heart with gratitude for Your mercy and grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-48-10",
+                    reference: "Psalm 48:10",
+                    text: "As is Your name, O God,\n  So is Your praise to the ends of the earth;\n  Your right hand is full of righteousness.",
+                    prayer: "Father, Your name is worthy of praise throughout the earth. Let my life bring honor and glory to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-48-11",
+                    reference: "Psalm 48:11",
+                    text: "Let Mount Zion be glad,\n  Let the daughters of Judah rejoice\n  Because of Your judgments.",
+                    prayer: "Lord, thank You for Your righteousness and perfect justice. Help me walk in Your ways."
+                ),
+                PrayerVerse(
+                    id: "psalm-48-12",
+                    reference: "Psalm 48:12",
+                    text: "Walk about Zion and go around her;\n  Count her towers;",
+                    prayer: "Father, help me remember and celebrate the ways You have worked in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-48-13",
+                    reference: "Psalm 48:13",
+                    text: "Consider her ramparts;\n  Go through her palaces,\n  That you may tell it to the next generation.",
+                    prayer: "Lord, let me faithfully pass on the testimony of Your goodness to future generations."
+                ),
+                PrayerVerse(
+                    id: "psalm-48-14",
+                    reference: "Psalm 48:14",
+                    text: "For such is God,\n  Our God forever and ever;\n  He will guide us until death.",
+                    prayer: "Father, thank You for being my God forever and ever. Guide me throughout my life and keep me close to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-48-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your greatness, faithfulness, and lovingkindness. You are my refuge, my guide, and my eternal King. Help me trust in Your power, remember Your goodness, and walk faithfully in Your ways. Let my life continually bring praise to Your name, and help me share the testimony of Your faithfulness with others. Thank You for leading me today and for being my God forever.",
+                    prayer: "In Jesus’ name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 49,
