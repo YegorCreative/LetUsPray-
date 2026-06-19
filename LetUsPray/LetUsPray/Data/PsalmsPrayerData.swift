@@ -5371,14 +5371,196 @@ enum PsalmsPrayerData {
             title: "Create in Me a Clean Heart",
             chapterReference: "Psalm 51",
             summary: "Pray for repentance and restoration.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-51-1",
+                    reference: "Psalm 51:1",
+                    text: "Be gracious to me, O God, according to Your lovingkindness;\n  According to the greatness of Your compassion blot out my transgressions.",
+                    prayer: "Lord, have mercy on me according to Your lovingkindness. Thank You for Your compassion and unfailing love."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-2",
+                    reference: "Psalm 51:2",
+                    text: "Wash me thoroughly from my iniquity\n  And cleanse me from my sin.",
+                    prayer: "Father, cleanse me from sin and wash away anything that separates me from closer fellowship with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-3",
+                    reference: "Psalm 51:3",
+                    text: "For I know my transgressions,\n  And my sin is ever before me.",
+                    prayer: "Lord, help me honestly recognize my failures and bring them before You with humility and repentance."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-4",
+                    reference: "Psalm 51:4",
+                    text: "Against You, You only, I have sinned\n  And done what is evil in Your sight,\n  So that You are justified when You speak\n  And blameless when You judge.",
+                    prayer: "Father, help me acknowledge when I have sinned against You and trust in Your forgiveness and grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-5",
+                    reference: "Psalm 51:5",
+                    text: "Behold, I was brought forth in iniquity,\n  And in sin my mother conceived me.",
+                    prayer: "Lord, remind me of my need for Your mercy and Your transforming work within my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-6",
+                    reference: "Psalm 51:6",
+                    text: "Behold, You desire truth in the innermost being,\n  And in the hidden part You will make me know wisdom.",
+                    prayer: "Father, You desire truth in my innermost being. Help me live with honesty, integrity, and sincerity before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-7",
+                    reference: "Psalm 51:7",
+                    text: "Purify me with hyssop, and I shall be clean;\n  Wash me, and I shall be whiter than snow.",
+                    prayer: "Lord, cleanse my heart and make me spiritually clean. Thank You for the forgiveness found in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-8",
+                    reference: "Psalm 51:8",
+                    text: "Make me to hear joy and gladness,\n  Let the bones which You have broken rejoice.",
+                    prayer: "Father, restore joy to my heart and help me rejoice again in Your grace and salvation."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-9",
+                    reference: "Psalm 51:9",
+                    text: "Hide Your face from my sins\n  And blot out all my iniquities.",
+                    prayer: "Lord, remove the guilt and shame of past failures and help me walk in the freedom of Your forgiveness."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-10",
+                    reference: "Psalm 51:10",
+                    text: "Create in me a clean heart, O God,\n  And renew a steadfast spirit within me.",
+                    prayer: "Father, create in me a clean heart and renew a steadfast spirit within me."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-11",
+                    reference: "Psalm 51:11",
+                    text: "Do not cast me away from Your presence\n  And do not take Your Holy Spirit from me.",
+                    prayer: "Lord, help me remain close to You and sensitive to the leading of Your Spirit."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-12",
+                    reference: "Psalm 51:12",
+                    text: "Restore to me the joy of Your salvation\n  And sustain me with a willing spirit.",
+                    prayer: "Father, restore to me the joy of Your salvation and sustain me with a willing and faithful spirit."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-13",
+                    reference: "Psalm 51:13",
+                    text: "Then I will teach transgressors Your ways,\n  And sinners will be converted to You.",
+                    prayer: "Lord, use my testimony of Your grace to encourage others and point them toward You."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-14",
+                    reference: "Psalm 51:14",
+                    text: "Deliver me from bloodguiltiness, O God, the God of my salvation;\n  Then my tongue will joyfully sing of Your righteousness.",
+                    prayer: "Father, thank You for Your deliverance and mercy. Let my life proclaim Your righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-15",
+                    reference: "Psalm 51:15",
+                    text: "O Lord, open my lips,\n  That my mouth may declare Your praise.",
+                    prayer: "Lord, open my lips so that my mouth may declare Your praise and worship."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-16",
+                    reference: "Psalm 51:16",
+                    text: "For You do not delight in sacrifice, otherwise I would give it;\n  You are not pleased with burnt offering.",
+                    prayer: "Father, remind me that You desire a surrendered heart more than outward religious activity."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-17",
+                    reference: "Psalm 51:17",
+                    text: "The sacrifices of God are a broken spirit;\n  A broken and a contrite heart, O God, You will not despise.",
+                    prayer: "Lord, give me a humble and contrite spirit that remains dependent upon Your grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-18",
+                    reference: "Psalm 51:18",
+                    text: "By Your favor do good to Zion;\n  Build the walls of Jerusalem.",
+                    prayer: "Father, bless and strengthen Your people. Build up and encourage Your church according to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-19",
+                    reference: "Psalm 51:19",
+                    text: "Then You will delight in righteous sacrifices,\n  In burnt offering and whole burnt offering;\n  Then young bulls will be offered on Your altar.",
+                    prayer: "Lord, let my worship be pleasing to You as it flows from a sincere and devoted heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-51-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your mercy, forgiveness, and unfailing love. Create in me a clean heart and renew a steadfast spirit within me. Help me walk in humility, honesty, and obedience before You. Restore the joy of my salvation and draw me closer to Your presence each day. May my life reflect Your grace, and may my worship come from a heart that is fully surrendered to You.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 52,
             title: "God Will Bring You Down",
             chapterReference: "Psalm 52",
             summary: "Pray for trust in God's justice.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-52-1",
+                    reference: "Psalm 52:1",
+                    text: "[Psalm 52:1 - verse text to be added]",
+                    prayer: "Lord, help me never boast in wrongdoing or place confidence in anything that opposes Your truth. Let my confidence be in Your goodness alone."
+                ),
+                PrayerVerse(
+                    id: "psalm-52-2",
+                    reference: "Psalm 52:2",
+                    text: "[Psalm 52:2 - verse text to be added]",
+                    prayer: "Father, guard my tongue and my words. Help me speak truthfully, kindly, and in ways that honor You."
+                ),
+                PrayerVerse(
+                    id: "psalm-52-3",
+                    reference: "Psalm 52:3",
+                    text: "[Psalm 52:3 - verse text to be added]",
+                    prayer: "Lord, help me love what is good and reject what is evil. Shape my heart to desire righteousness and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-52-4",
+                    reference: "Psalm 52:4",
+                    text: "[Psalm 52:4 - verse text to be added]",
+                    prayer: "Father, protect me from deception and from using words that harm others. Let my speech reflect Your love and wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-52-5",
+                    reference: "Psalm 52:5",
+                    text: "[Psalm 52:5 - verse text to be added]",
+                    prayer: "Lord, remind me that only what is rooted in You will endure. Help me build my life upon Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-52-6",
+                    reference: "Psalm 52:6",
+                    text: "[Psalm 52:6 - verse text to be added]",
+                    prayer: "Father, help me learn from Your wisdom and walk humbly before You with reverence and faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-52-7",
+                    reference: "Psalm 52:7",
+                    text: "[Psalm 52:7 - verse text to be added]",
+                    prayer: "Lord, keep me from trusting in wealth, success, or worldly security. Teach me to rely completely upon You."
+                ),
+                PrayerVerse(
+                    id: "psalm-52-8",
+                    reference: "Psalm 52:8",
+                    text: "[Psalm 52:8 - verse text to be added]",
+                    prayer: "Father, thank You that I can flourish in Your presence like an olive tree. Help me remain rooted in Your unfailing love."
+                ),
+                PrayerVerse(
+                    id: "psalm-52-9",
+                    reference: "Psalm 52:9",
+                    text: "[Psalm 52:9 - verse text to be added]",
+                    prayer: "Lord, I will praise You for all You have done. Help me wait patiently upon You and trust in Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-52-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for the truths of Psalm 52. Help me trust in Your justice and live a life that honors You.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 53,
