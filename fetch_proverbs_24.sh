@@ -11,8 +11,6 @@ for i in $(seq 1 34); do
     VERSE_ID="PRO.24.$i"
     URL="${BASE_URL}/bibles/${BIBLE_ID}/verses/${VERSE_ID}?content-type=text&include-notes=false&include-titles=false&include-verse-numbers=false"
     
-    echo "Fetching Proverbs 24:$i..." >&2
-    
     RESPONSE=$(curl -s -H "api-key: ${API_KEY}" "${URL}")
     
     # Extract the content field from JSON response
@@ -25,12 +23,8 @@ for i in $(seq 1 34); do
         echo "  \"$i\": \"$VERSE_TEXT\""
     fi
     
-    echo "✓ Proverbs 24:$i" >&2
-    
     # Small delay to be nice to the API
     sleep 0.3
 done
 
 echo "}"
-
-
