@@ -67,6 +67,7 @@ struct PlansView: View {
                         planCard(for: plan, isFeatured: true, showAsOverview: false)
                     }
                     .buttonStyle(.plain)
+                    .contentShape(Rectangle())
                 }
             }
         }
@@ -105,6 +106,7 @@ struct PlansView: View {
                         planCard(for: plan, isFeatured: false, showAsOverview: false)
                     }
                     .buttonStyle(.plain)
+                    .contentShape(Rectangle())
                 }
             }
         }

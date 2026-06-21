@@ -9,23 +9,20 @@ struct PlanDetailView: View {
     let onStartJourney: () -> Void
 
     var body: some View {
-        ZStack {
-            PrayerBackground()
-
-            ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading, spacing: AppSpacing.large) {
-                    coverSection
-                    metadataSection
-                    actionSection
-                    if !plan.days.isEmpty {
-                        journeyDaysSection
-                    }
+        ScrollView(showsIndicators: false) {
+            VStack(alignment: .leading, spacing: AppSpacing.large) {
+                coverSection
+                metadataSection
+                actionSection
+                if !plan.days.isEmpty {
+                    journeyDaysSection
                 }
-                .padding(.horizontal, AppSpacing.large)
-                .padding(.top, AppSpacing.medium)
-                .padding(.bottom, AppSpacing.xxLarge)
             }
+            .padding(.horizontal, AppSpacing.large)
+            .padding(.top, AppSpacing.medium)
+            .padding(.bottom, AppSpacing.xxLarge)
         }
+        .background(PrayerBackground())
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(.hidden, for: .navigationBar)
     }
@@ -130,6 +127,7 @@ struct PlanDetailView: View {
                     )
                 }
                 .buttonStyle(.plain)
+                .contentShape(Rectangle())
             }
         }
     }
@@ -152,6 +150,7 @@ struct PlanDetailView: View {
                     JourneyDayCard(day: day, isCompleted: completedDayNumbers.contains(day.dayNumber))
                 }
                 .buttonStyle(.plain)
+                .contentShape(Rectangle())
             }
         }
     }

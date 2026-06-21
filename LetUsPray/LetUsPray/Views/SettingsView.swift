@@ -110,6 +110,7 @@ struct SettingsView: View {
                     }
                 }
                 .buttonStyle(.plain)
+                .contentShape(Rectangle())
             }
         }
     }

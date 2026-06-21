@@ -11,37 +11,34 @@ struct PrayerDetailView: View {
     }
 
     var body: some View {
-        ZStack {
-            PrayerBackground()
+        ScrollView(showsIndicators: false) {
+            VStack(alignment: .leading, spacing: AppSpacing.large) {
+                headerCard
 
-            ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading, spacing: AppSpacing.large) {
-                    headerCard
+                Text("Loaded \(day.verses.count) prayers")
+                    .font(AppTypography.caption())
+                    .foregroundStyle(AppColors.textTertiary)
+                    .frame(maxWidth: .infinity, alignment: .center)
 
-                    Text("Loaded \(day.verses.count) prayers")
-                        .font(AppTypography.caption())
-                        .foregroundStyle(AppColors.textTertiary)
-                        .frame(maxWidth: .infinity, alignment: .center)
-
-                    if day.verses.isEmpty {
-                        placeholderCard
-                    } else {
-                        ForEach(day.verses) { verse in
-                            PrayerCardView(
-                                verse: verse,
-                                isSaved: savedVerseIDs.contains(verse.id),
-                                onToggleSaved: {
-                                    toggleSaved(verseID: verse.id)
-                                }
-                            )
-                        }
+                if day.verses.isEmpty {
+                    placeholderCard
+                } else {
+                    ForEach(day.verses) { verse in
+                        PrayerCardView(
+                            verse: verse,
+                            isSaved: savedVerseIDs.contains(verse.id),
+                            onToggleSaved: {
+                                toggleSaved(verseID: verse.id)
+                            }
+                        )
                     }
                 }
-                .padding(.horizontal, AppSpacing.large)
-                .padding(.top, AppSpacing.medium)
-                .padding(.bottom, AppSpacing.xxLarge)
             }
+            .padding(.horizontal, AppSpacing.large)
+            .padding(.top, AppSpacing.medium)
+            .padding(.bottom, AppSpacing.xxLarge)
         }
+        .background(PrayerBackground())
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(.hidden, for: .navigationBar)
     }

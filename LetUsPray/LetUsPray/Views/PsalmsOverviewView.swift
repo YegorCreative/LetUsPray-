@@ -12,20 +12,17 @@ struct PsalmsOverviewView: View {
     private let collections = PsalmsPrayerData.allCollections
     
     var body: some View {
-        ZStack {
-            PrayerBackground()
-            
-            ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading, spacing: AppSpacing.large) {
-                    headerSection
-                    introductionSection
-                    collectionsGrid
-                }
-                .padding(.horizontal, AppSpacing.large)
-                .padding(.top, AppSpacing.medium)
-                .padding(.bottom, AppSpacing.xxLarge)
+        ScrollView(showsIndicators: false) {
+            VStack(alignment: .leading, spacing: AppSpacing.large) {
+                headerSection
+                introductionSection
+                collectionsGrid
             }
+            .padding(.horizontal, AppSpacing.large)
+            .padding(.top, AppSpacing.medium)
+            .padding(.bottom, AppSpacing.xxLarge)
         }
+        .background(PrayerBackground())
         .navigationTitle("Psalms Journey")
         .navigationBarTitleDisplayMode(.large)
         .navigationDestination(item: $selectedCollection) { collection in
@@ -216,6 +213,7 @@ struct CollectionCard: View {
             }
         }
         .buttonStyle(.plain)
+        .contentShape(Rectangle())
     }
 }
 

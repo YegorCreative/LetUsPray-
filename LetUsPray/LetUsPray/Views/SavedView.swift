@@ -60,6 +60,7 @@ struct SavedView: View {
                                             .background(.thinMaterial, in: Circle())
                                     }
                                     .buttonStyle(.plain)
+                                    .contentShape(Rectangle())
                                 }
 
                                 VStack(alignment: .leading, spacing: AppSpacing.small) {

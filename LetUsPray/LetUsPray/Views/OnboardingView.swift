@@ -77,6 +77,7 @@ struct OnboardingView: View {
                        )
                    }
                    .buttonStyle(.plain)
+                   .contentShape(Rectangle())
                    .padding(.horizontal, AppSpacing.large)
                    .scaleEffect(isLastPage ? 1.02 : 1)
                    .animation(.spring(response: 0.34, dampingFraction: 0.84), value: isLastPage)

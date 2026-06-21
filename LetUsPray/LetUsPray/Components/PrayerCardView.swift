@@ -71,6 +71,7 @@ struct PrayerCardView: View {
                                 .background(.thinMaterial, in: Circle())
                         }
                         .buttonStyle(.plain)
+                        .contentShape(Rectangle())
                         .accessibilityLabel(isSaved ? "Remove saved prayer" : "Save prayer")
                     }
 

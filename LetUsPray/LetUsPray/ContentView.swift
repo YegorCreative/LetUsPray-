@@ -39,18 +39,15 @@ struct ContentView: View {
     private var mainAppExperience: some View {
         TabView {
             NavigationStack {
-                ZStack {
-                    PrayerBackground()
-
-                    TodayView(
-                        viewModel: viewModel,
-                        completedDayNumbers: completedDayNumbersBinding,
-                        savedVerseIDs: savedVerseIDsBinding,
-                        prayerStreak: prayerStreakBinding,
-                        analytics: analyticsBinding,
-                        onOpenDay: { selectedTodayDay = $0 }
-                    )
-                }
+                TodayView(
+                    viewModel: viewModel,
+                    completedDayNumbers: completedDayNumbersBinding,
+                    savedVerseIDs: savedVerseIDsBinding,
+                    prayerStreak: prayerStreakBinding,
+                    analytics: analyticsBinding,
+                    onOpenDay: { selectedTodayDay = $0 }
+                )
+                .background(PrayerBackground())
                 .navigationDestination(item: $selectedTodayDay) { day in
                     PrayerDetailView(
                         plan: viewModel.activePlan,
@@ -65,45 +62,36 @@ struct ContentView: View {
             }
 
             NavigationStack {
-                ZStack {
-                    PrayerBackground()
-
-                    PlansView(
-                        viewModel: viewModel,
-                        activePlanID: $activePlanID,
-                        completedDayNumbers: completedDayNumbersBinding,
-                        savedVerseIDs: savedVerseIDsBinding,
-                        analytics: analyticsBinding
-                    )
-                }
+                PlansView(
+                    viewModel: viewModel,
+                    activePlanID: $activePlanID,
+                    completedDayNumbers: completedDayNumbersBinding,
+                    savedVerseIDs: savedVerseIDsBinding,
+                    analytics: analyticsBinding
+                )
+                .background(PrayerBackground())
             }
             .tabItem {
                 Label("Plans", systemImage: "books.vertical.fill")
             }
 
             NavigationStack {
-                ZStack {
-                    PrayerBackground()
-
-                    SavedView(
-                        viewModel: viewModel,
-                        savedVerseIDs: savedVerseIDsBinding,
-                        analytics: analyticsBinding
-                    )
-                }
+                SavedView(
+                    viewModel: viewModel,
+                    savedVerseIDs: savedVerseIDsBinding,
+                    analytics: analyticsBinding
+                )
+                .background(PrayerBackground())
             }
             .tabItem {
                 Label("Saved", systemImage: "bookmark.fill")
             }
 
             NavigationStack {
-                ZStack {
-                    PrayerBackground()
-
-                    SettingsView {
-                        hasCompletedOnboarding = false
-                    }
+                SettingsView {
+                    hasCompletedOnboarding = false
                 }
+                .background(PrayerBackground())
             }
             .tabItem {
                 Label("Settings", systemImage: "gearshape.fill")
