@@ -49,6 +49,7 @@ struct PlansView: View {
                         planCard(for: plan, isFeatured: true, showAsOverview: true)
                     }
                     .buttonStyle(.plain)
+                    .contentShape(Rectangle())
                 } else {
                     NavigationLink {
                         PlanDetailView(
@@ -86,6 +87,7 @@ struct PlansView: View {
                         planCard(for: plan, isFeatured: false, showAsOverview: true)
                     }
                     .buttonStyle(.plain)
+                    .contentShape(Rectangle())
                 } else {
                     NavigationLink {
                         PlanDetailView(

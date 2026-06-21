@@ -125,6 +125,7 @@ struct TodayView: View {
                         PrimaryPrayerButton(title: "Open Today's Prayer", systemImage: "arrow.right.circle.fill")
                     }
                     .buttonStyle(.plain)
+                    .contentShape(Rectangle())
 
                     Button(action: { markDayAsPrayed(dayNumber: day.dayNumber) }) {
                         PrimaryPrayerButton(
@@ -135,6 +136,7 @@ struct TodayView: View {
                         .scaleEffect(completionPulse ? 1.02 : 1.0)
                     }
                     .buttonStyle(.plain)
+                    .contentShape(Rectangle())
                 }
             }
         }
@@ -194,6 +196,7 @@ struct TodayView: View {
                 JourneyDayCard(day: day, isCompleted: completedDayNumbers.contains(day.dayNumber))
             }
             .buttonStyle(.plain)
+            .contentShape(Rectangle())
         }
     }
 
