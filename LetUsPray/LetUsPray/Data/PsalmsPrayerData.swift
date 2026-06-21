@@ -7378,7 +7378,159 @@ enum PsalmsPrayerData {
             title: "You Are My Hope",
             chapterReference: "Psalm 71",
             summary: "Pray for lifelong trust in God.",
-            verses: []
+            // JSON resource: psalm_71_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-71-1",
+                    reference: "Psalm 71:1",
+                    text: "In You, O Lord, I have taken refuge;\n  Let me never be ashamed.",
+                    prayer: "Lord, I take refuge in You. Keep me from shame and help me trust in Your righteousness and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-2",
+                    reference: "Psalm 71:2",
+                    text: "In Your righteousness deliver me and rescue me;\n  Incline Your ear to me and save me.",
+                    prayer: "Father, deliver me and rescue me according to Your righteousness. Incline Your ear to me and save me."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-3",
+                    reference: "Psalm 71:3",
+                    text: "Be to me a rock of habitation to which I may continually come;\n  You have given commandment to save me,\n  For You are my rock and my fortress.",
+                    prayer: "Lord, be my rock of refuge, my strong fortress, and my place of safety. Help me run to You in every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-4",
+                    reference: "Psalm 71:4",
+                    text: "Rescue me, O my God, out of the hand of the wicked,\n  Out of the grasp of the wrongdoer and ruthless man,",
+                    prayer: "Father, rescue me from wickedness, injustice, and anything that seeks to harm my faith or peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-5",
+                    reference: "Psalm 71:5",
+                    text: "For You are my hope;\n  O Lord God, You are my confidence from my youth.",
+                    prayer: "Lord, You are my hope and my confidence. Help me trust You from this day forward with a steady and faithful heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-6",
+                    reference: "Psalm 71:6",
+                    text: "By You I have been sustained from my birth;\n  You are He who took me from my mother's womb;\n  My praise is continually of You.",
+                    prayer: "Father, You have sustained me from the beginning of my life. Let my praise continually be directed to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-7",
+                    reference: "Psalm 71:7",
+                    text: "I have become a marvel to many,\n  For You are my strong refuge.",
+                    prayer: "Lord, let my life be a testimony of Your strength, protection, and faithfulness to those around me."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-8",
+                    reference: "Psalm 71:8",
+                    text: "My mouth is filled with Your praise\n  And with Your glory all day long.",
+                    prayer: "Father, fill my mouth with Your praise and let my life declare Your glory throughout the day."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-9",
+                    reference: "Psalm 71:9",
+                    text: "Do not cast me off in the time of old age;\n  Do not forsake me when my strength fails.",
+                    prayer: "Lord, do not cast me away in any season of weakness. Stay near to me and strengthen me when I feel tired or vulnerable."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-10",
+                    reference: "Psalm 71:10",
+                    text: "For my enemies have spoken against me;\n  And those who watch for my life have consulted together,",
+                    prayer: "Father, protect me from voices that speak against me or try to discourage my faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-11",
+                    reference: "Psalm 71:11",
+                    text: "Saying, “God has forsaken him;\n  Pursue and seize him, for there is no one to deliver.”",
+                    prayer: "Lord, when others assume I am alone or abandoned, remind me that You are always with me."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-12",
+                    reference: "Psalm 71:12",
+                    text: "O God, do not be far from me;\n  O my God, hasten to my help!",
+                    prayer: "Father, do not be far from me. Come quickly to help me and surround me with Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-13",
+                    reference: "Psalm 71:13",
+                    text: "Let those who are adversaries of my soul be ashamed and consumed;\n  Let them be covered with reproach and dishonor, who seek to injure me.",
+                    prayer: "Lord, silence every accusation, fear, and attack that rises against my soul. Cover me with Your protection and peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-14",
+                    reference: "Psalm 71:14",
+                    text: "But as for me, I will hope continually,\n  And will praise You yet more and more.",
+                    prayer: "Father, help me hope continually in You and praise You more and more each day."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-15",
+                    reference: "Psalm 71:15",
+                    text: "My mouth shall tell of Your righteousness\n  And of Your salvation all day long;\n  For I do not know the sum of them.",
+                    prayer: "Lord, let my mouth tell of Your righteousness and salvation. Help me share Your goodness even beyond what I can fully understand."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-16",
+                    reference: "Psalm 71:16",
+                    text: "I will come with the mighty deeds of the Lord God;\n  I will make mention of Your righteousness, Yours alone.",
+                    prayer: "Father, help me walk in Your strength and proclaim Your righteousness alone."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-17",
+                    reference: "Psalm 71:17",
+                    text: "O God, You have taught me from my youth,\n  And I still declare Your wondrous deeds.",
+                    prayer: "Lord, You have taught me from my youth. Help me continue declaring Your wonderful works throughout my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-18",
+                    reference: "Psalm 71:18",
+                    text: "And even when I am old and gray, O God, do not forsake me,\n  Until I declare Your strength to this generation,\n  Your power to all who are to come.",
+                    prayer: "Father, even as seasons change, do not forsake me. Help me declare Your strength and power to the next generation."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-19",
+                    reference: "Psalm 71:19",
+                    text: "For Your righteousness, O God, reaches to the heavens,\n  You who have done great things;\n  O God, who is like You?",
+                    prayer: "Lord, Your righteousness reaches to the heavens. Thank You for the great things You have done; there is none like You."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-20",
+                    reference: "Psalm 71:20",
+                    text: "You who have shown me many troubles and distresses\n  Will revive me again,\n  And will bring me up again from the depths of the earth.",
+                    prayer: "Father, even after many troubles, revive me again and lift me up by Your grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-21",
+                    reference: "Psalm 71:21",
+                    text: "May You increase my greatness\n  And turn to comfort me.",
+                    prayer: "Lord, increase my strength, restore my comfort, and guide me deeper into Your peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-22",
+                    reference: "Psalm 71:22",
+                    text: "I will also praise You with a harp,\n  Even Your truth, O my God;\n  To You I will sing praises with the lyre,\n  O Holy One of Israel.",
+                    prayer: "Father, I will praise You for Your faithfulness. Let my worship honor Your truth and Your holiness."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-23",
+                    reference: "Psalm 71:23",
+                    text: "My lips will shout for joy when I sing praises to You;\n  And my soul, which You have redeemed.",
+                    prayer: "Lord, let my lips shout for joy because You have redeemed my soul and filled my life with hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-24",
+                    reference: "Psalm 71:24",
+                    text: "My tongue also will utter Your righteousness all day long;\n  For they are ashamed, for they are humiliated who seek my hurt.",
+                    prayer: "Father, let my tongue speak of Your righteousness throughout the day. Help me remember that You are faithful, just, and good."
+                ),
+                PrayerVerse(
+                    id: "psalm-71-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my refuge, my hope, and my strength through every season of life. You have sustained me from the beginning, taught me through the years, and carried me through many troubles. Help me praise You continually, declare Your faithfulness to the next generation, and trust Your righteousness in every circumstance. May my life remain rooted in Your protection, comfort, and redeeming love.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 72,
