@@ -5997,7 +5997,81 @@ enum PsalmsPrayerData {
             title: "Do You Judge Uprightly?",
             chapterReference: "Psalm 58",
             summary: "Pray for God's righteous judgment.",
-            verses: []
+            // JSON resource: psalm_58_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-58-1",
+                    reference: "Psalm 58:1",
+                    text: "Do you indeed speak righteousness, O gods?\n  Do you judge uprightly, O sons of men?",
+                    prayer: "Lord, help me value justice, truth, and righteousness in every decision I make. Guard my heart from silence when I should stand for what is right."
+                ),
+                PrayerVerse(
+                    id: "psalm-58-2",
+                    reference: "Psalm 58:2",
+                    text: "No, in heart you work unrighteousness;\n  On earth you weigh out the violence of your hands.",
+                    prayer: "Father, protect me from hidden motives and selfish actions. Teach me to walk with integrity in both my thoughts and my choices."
+                ),
+                PrayerVerse(
+                    id: "psalm-58-3",
+                    reference: "Psalm 58:3",
+                    text: "The wicked are estranged from the womb;\n  These who speak lies go astray from birth.",
+                    prayer: "Lord, keep me from drifting away from Your truth. Draw my heart back to You whenever I am tempted toward sin or deception."
+                ),
+                PrayerVerse(
+                    id: "psalm-58-4",
+                    reference: "Psalm 58:4",
+                    text: "They have venom like the venom of a serpent;\n  Like a deaf cobra that stops up its ear,",
+                    prayer: "Father, guard my words and influence. Do not let bitterness, pride, or harmful speech take root in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-58-5",
+                    reference: "Psalm 58:5",
+                    text: "So that it does not hear the voice of charmers,\n  Or a skillful caster of spells.",
+                    prayer: "Lord, help me stay sensitive to Your voice. Keep my heart from becoming stubborn or resistant to Your correction."
+                ),
+                PrayerVerse(
+                    id: "psalm-58-6",
+                    reference: "Psalm 58:6",
+                    text: "O God, shatter their teeth in their mouth;\n  Break out the fangs of the young lions, O Lord.",
+                    prayer: "Father, break the power of evil, injustice, and deception. Strengthen what is righteous and protect those who are vulnerable."
+                ),
+                PrayerVerse(
+                    id: "psalm-58-7",
+                    reference: "Psalm 58:7",
+                    text: "Let them flow away like water that runs off;\n  When he aims his arrows, let them be as headless shafts.",
+                    prayer: "Lord, let every destructive plan lose its power. Guide me away from anything that cannot stand before Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-58-8",
+                    reference: "Psalm 58:8",
+                    text: "Let them be as a snail which melts away as it goes along,\n  Like the miscarriages of a woman which never see the sun.",
+                    prayer: "Father, remind me that evil is temporary and cannot overcome Your eternal righteousness. Help me trust Your justice."
+                ),
+                PrayerVerse(
+                    id: "psalm-58-9",
+                    reference: "Psalm 58:9",
+                    text: "Before your pots can feel the fire of thorns\n  He will sweep them away with a whirlwind, the green and the burning alike.",
+                    prayer: "Lord, act according to Your perfect wisdom and timing. Help me believe that You see every injustice and will make all things right."
+                ),
+                PrayerVerse(
+                    id: "psalm-58-10",
+                    reference: "Psalm 58:10",
+                    text: "The righteous will rejoice when he sees the vengeance;\n  He will wash his feet in the blood of the wicked.",
+                    prayer: "Father, teach me to rejoice not in revenge, but in the victory of Your righteousness, justice, and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-58-11",
+                    reference: "Psalm 58:11",
+                    text: "And men will say, \"Surely there is a reward for the righteous;\n  Surely there is a God who judges on earth!\"",
+                    prayer: "Lord, remind me that righteousness matters and that You are the Judge of all the earth. Help me live faithfully before You with reverence and trust."
+                ),
+                PrayerVerse(
+                    id: "psalm-58-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being perfectly just, righteous, and true. Help me stand for what is right, reject deception, and trust Your judgment over every situation. Guard my heart from bitterness or revenge, and teach me to walk with integrity, humility, and faith. May my life reflect confidence in Your justice and devotion to Your truth.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 59,
