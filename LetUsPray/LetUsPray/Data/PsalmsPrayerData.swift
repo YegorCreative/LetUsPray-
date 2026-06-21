@@ -6286,42 +6286,534 @@ enum PsalmsPrayerData {
             title: "Hear My Cry",
             chapterReference: "Psalm 61",
             summary: "Pray for refuge and security in God.",
-            verses: []
+            // JSON resource: psalm_61_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-61-1",
+                    reference: "Psalm 61:1",
+                    text: "Hear my cry, O God;\n  Give heed to my prayer.",
+                    prayer: "Lord, hear my cry and listen to my prayer. Thank You that I can come to You honestly with every need, fear, and burden."
+                ),
+                PrayerVerse(
+                    id: "psalm-61-2",
+                    reference: "Psalm 61:2",
+                    text: "From the end of the earth I call to You when my heart is faint;\n  Lead me to the rock that is higher than I.",
+                    prayer: "Father, when my heart feels overwhelmed, lead me to the rock that is higher than I am. Lift my eyes above my circumstances and help me rest in Your strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-61-3",
+                    reference: "Psalm 61:3",
+                    text: "For You have been a refuge for me,\n  A tower of strength against the enemy.",
+                    prayer: "Lord, thank You for being my refuge and strong tower. Protect me from fear, discouragement, and anything that rises against my faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-61-4",
+                    reference: "Psalm 61:4",
+                    text: "Let me dwell in Your tent forever;\n  Let me take refuge in the shelter of Your wings. Selah.",
+                    prayer: "Father, help me dwell in Your presence and take refuge under the shelter of Your wings. Let my soul find safety, peace, and comfort in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-61-5",
+                    reference: "Psalm 61:5",
+                    text: "For You have heard my vows, O God;\n  You have given me the inheritance of those who fear Your name.",
+                    prayer: "Lord, thank You for hearing my vows and knowing the devotion of my heart. Help me live faithfully as one who belongs to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-61-6",
+                    reference: "Psalm 61:6",
+                    text: "You will prolong the king's life;\n  His years will be as many generations.",
+                    prayer: "Father, sustain my life and guide my days according to Your purpose. Help me walk with wisdom, gratitude, and trust."
+                ),
+                PrayerVerse(
+                    id: "psalm-61-7",
+                    reference: "Psalm 61:7",
+                    text: "He will abide before God forever;\n  Appoint lovingkindness and truth that they may preserve him.",
+                    prayer: "Lord, let my life remain before You in faithfulness. Surround me with Your lovingkindness and truth, and keep me close to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-61-8",
+                    reference: "Psalm 61:8",
+                    text: "So I will sing praise to Your name forever,\n  That I may pay my vows day by day.",
+                    prayer: "Father, help me sing praise to Your name every day. Let my worship be faithful, sincere, and pleasing to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-61-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my refuge, my strong tower, and the rock higher than I am. When my heart is overwhelmed, lead me back to Your presence and shelter me under Your wings. Strengthen my faith, guide my days, and help me live with devotion, gratitude, and praise. May my life remain anchored in Your lovingkindness and truth.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 62,
             title: "My Soul Finds Rest",
             chapterReference: "Psalm 62",
             summary: "Pray for quiet trust in God alone.",
-            verses: []
+            // JSON resource: psalm_62_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-62-1",
+                    reference: "Psalm 62:1",
+                    text: "My soul waits in silence for God only;\n  From Him is my salvation.",
+                    prayer: "Lord, help my soul wait in silence before You. Teach me to rest in Your presence and trust that my salvation comes from You alone."
+                ),
+                PrayerVerse(
+                    id: "psalm-62-2",
+                    reference: "Psalm 62:2",
+                    text: "He only is my rock and my salvation,\n  My stronghold; I shall not be greatly shaken.",
+                    prayer: "Father, You are my rock, my salvation, and my stronghold. Keep me steady and secure so I will not be greatly shaken."
+                ),
+                PrayerVerse(
+                    id: "psalm-62-3",
+                    reference: "Psalm 62:3",
+                    text: "How long will you assail a man,\n  That you may murder him, all of you,\n  Like a leaning wall, like a tottering fence?",
+                    prayer: "Lord, when pressure, opposition, or discouragement comes against me, strengthen my heart and help me remain firm in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-62-4",
+                    reference: "Psalm 62:4",
+                    text: "They have counseled only to thrust him down from his high position;\n  They delight in falsehood;\n  They bless with their mouth,\n  But inwardly they curse. Selah.",
+                    prayer: "Father, protect me from deception, false words, and hidden motives. Help me walk in truth and discernment."
+                ),
+                PrayerVerse(
+                    id: "psalm-62-5",
+                    reference: "Psalm 62:5",
+                    text: "My soul, wait in silence for God only,\n  For my hope is from Him.",
+                    prayer: "Lord, teach my soul to wait quietly for You, because my hope comes from You alone."
+                ),
+                PrayerVerse(
+                    id: "psalm-62-6",
+                    reference: "Psalm 62:6",
+                    text: "He only is my rock and my salvation,\n  My stronghold; I shall not be shaken.",
+                    prayer: "Father, You are my rock, my salvation, and my stronghold. Help me trust You completely and remain unshaken in faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-62-7",
+                    reference: "Psalm 62:7",
+                    text: "On God my salvation and my glory rest;\n  The rock of my strength, my refuge is in God.",
+                    prayer: "Lord, my salvation and glory rest in You. Thank You for being the rock of my strength and my refuge."
+                ),
+                PrayerVerse(
+                    id: "psalm-62-8",
+                    reference: "Psalm 62:8",
+                    text: "Trust in Him at all times, O people;\n  Pour out your heart before Him;\n  God is a refuge for us. Selah.",
+                    prayer: "Father, help me trust in You at all times and pour out my heart before You. Thank You for being a refuge for Your people."
+                ),
+                PrayerVerse(
+                    id: "psalm-62-9",
+                    reference: "Psalm 62:9",
+                    text: "Men of low degree are only vanity and men of rank are a lie;\n  In the balances they go up;\n  They are together lighter than breath.",
+                    prayer: "Lord, remind me that human status, strength, and approval are temporary. Keep my heart anchored in what is eternal."
+                ),
+                PrayerVerse(
+                    id: "psalm-62-10",
+                    reference: "Psalm 62:10",
+                    text: "Do not trust in oppression\n  And do not vainly hope in robbery;\n  If riches increase, do not set your heart upon them.",
+                    prayer: "Father, keep me from trusting in dishonest gain, power, or possessions. Help me place my confidence in You alone."
+                ),
+                PrayerVerse(
+                    id: "psalm-62-11",
+                    reference: "Psalm 62:11",
+                    text: "Once God has spoken;\n  Twice I have heard this:\n  That power belongs to God;",
+                    prayer: "Lord, You have spoken with power and authority. Help me remember that all strength belongs to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-62-12",
+                    reference: "Psalm 62:12",
+                    text: "And lovingkindness is Yours, O Lord,\n  For You recompense a man according to his work.",
+                    prayer: "Father, thank You for Your lovingkindness and justice. Help me live faithfully, knowing that You see every heart and every action."
+                ),
+                PrayerVerse(
+                    id: "psalm-62-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my rock, my salvation, my refuge, and my strength. Teach my soul to wait quietly before You and to place my hope in You alone. Keep me from trusting in temporary things, and help me pour out my heart before You with honesty and faith. May my life remain steady, secure, and rooted in Your lovingkindness and power.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 63,
             title: "You Are My God",
             chapterReference: "Psalm 63",
             summary: "Pray for earnest seeking after God.",
-            verses: []
+            // JSON resource: psalm_63_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-63-1",
+                    reference: "Psalm 63:1",
+                    text: "O God, You are my God; I shall seek You earnestly;\n  My soul thirsts for You, my flesh yearns for You,\n  In a dry and weary land where there is no water.",
+                    prayer: "Lord, You are my God, and I seek You earnestly. Let my soul thirst for You and my heart long for Your presence above everything else."
+                ),
+                PrayerVerse(
+                    id: "psalm-63-2",
+                    reference: "Psalm 63:2",
+                    text: "Thus I have seen You in the sanctuary,\n  To see Your power and Your glory.",
+                    prayer: "Father, help me behold Your power and glory. Open my eyes to recognize Your presence and worship You with awe."
+                ),
+                PrayerVerse(
+                    id: "psalm-63-3",
+                    reference: "Psalm 63:3",
+                    text: "Because Your lovingkindness is better than life,\n  My lips will praise You.",
+                    prayer: "Lord, Your lovingkindness is better than life. Let my lips praise You with gratitude, joy, and devotion."
+                ),
+                PrayerVerse(
+                    id: "psalm-63-4",
+                    reference: "Psalm 63:4",
+                    text: "So I will bless You as long as I live;\n  I will lift up my hands in Your name.",
+                    prayer: "Father, help me bless You as long as I live. Teach me to lift my hands and my heart in worship to Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-63-5",
+                    reference: "Psalm 63:5",
+                    text: "My soul is satisfied as with marrow and fatness,\n  And my mouth offers praises with joyful lips.",
+                    prayer: "Lord, satisfy my soul with Your goodness. Fill my heart with joy so that my mouth praises You with gladness."
+                ),
+                PrayerVerse(
+                    id: "psalm-63-6",
+                    reference: "Psalm 63:6",
+                    text: "When I remember You on my bed,\n  I meditate on You in the night watches,",
+                    prayer: "Father, when I remember You in the quiet moments, draw my thoughts toward Your faithfulness and peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-63-7",
+                    reference: "Psalm 63:7",
+                    text: "For You have been my help,\n  And in the shadow of Your wings I sing for joy.",
+                    prayer: "Lord, thank You for being my help. Let me rejoice under the shadow of Your wings, safe in Your protection and love."
+                ),
+                PrayerVerse(
+                    id: "psalm-63-8",
+                    reference: "Psalm 63:8",
+                    text: "My soul clings to You;\n  Your right hand upholds me.",
+                    prayer: "Father, help my soul cling to You. Uphold me by Your right hand and keep me steady in faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-63-9",
+                    reference: "Psalm 63:9",
+                    text: "But those who seek my life to destroy it,\n  Will go into the depths of the earth.",
+                    prayer: "Lord, protect me from anything that seeks to harm my soul or pull me away from Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-63-10",
+                    reference: "Psalm 63:10",
+                    text: "They will be delivered over to the power of the sword;\n  They will be a prey for foxes.",
+                    prayer: "Father, remind me that evil cannot overcome Your justice. Help me trust that every outcome rests in Your hands."
+                ),
+                PrayerVerse(
+                    id: "psalm-63-11",
+                    reference: "Psalm 63:11",
+                    text: "But the king will rejoice in God;\n  Everyone who swears by Him will glory,\n  For the mouths of those who speak lies will be stopped.",
+                    prayer: "Lord, let my joy be found in You. Keep my heart faithful, truthful, and confident in Your righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-63-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for satisfying my soul with Your presence, love, and faithfulness. Teach me to seek You earnestly, praise You joyfully, and cling to You through every season. When my heart feels dry or weary, refresh me with Your goodness and uphold me by Your strength. May my life continually worship You and find its deepest joy in Your unfailing love.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 64,
             title: "Protect Me from the Wicked",
             chapterReference: "Psalm 64",
             summary: "Pray for God's shield against evil.",
-            verses: []
+            // JSON resource: psalm_64_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-64-1",
+                    reference: "Psalm 64:1",
+                    text: "Hear my voice, O God, in my complaint;\n  Preserve my life from dread of the enemy.",
+                    prayer: "Lord, hear my voice when I bring my concerns before You. Preserve my life from fear and help me trust in Your protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-64-2",
+                    reference: "Psalm 64:2",
+                    text: "Hide me from the secret counsel of evildoers,\n  From the tumult of those who do iniquity,",
+                    prayer: "Father, hide me from harmful plans and protect me from anything that rises against my peace, faith, or obedience to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-64-3",
+                    reference: "Psalm 64:3",
+                    text: "Who have sharpened their tongue like a sword.\n  They aimed bitter speech as their arrow,",
+                    prayer: "Lord, guard me from words that wound and accusations that discourage. Help me respond with wisdom, grace, and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-64-4",
+                    reference: "Psalm 64:4",
+                    text: "To shoot from concealment at the blameless;\n  Suddenly they shoot at him, and do not fear.",
+                    prayer: "Father, protect me from hidden attacks and unseen dangers. Keep my heart steady and confident in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-64-5",
+                    reference: "Psalm 64:5",
+                    text: "They hold fast to themselves an evil purpose;\n  They talk of laying snares secretly;\n  They say, \"Who can see them?\"",
+                    prayer: "Lord, when evil seems bold or hidden plans seem strong, remind me that You see everything and remain perfectly just."
+                ),
+                PrayerVerse(
+                    id: "psalm-64-6",
+                    reference: "Psalm 64:6",
+                    text: "They devise injustices, saying,\n  \"We are ready with a well-conceived plot\";\n  For the inward thought and the heart of a man are deep.",
+                    prayer: "Father, You know the depths of every heart. Search me, purify me, and keep my motives aligned with Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-64-7",
+                    reference: "Psalm 64:7",
+                    text: "But God will shoot at them with an arrow;\n  Suddenly they will be wounded.",
+                    prayer: "Lord, defend me with Your power and bring justice according to Your perfect wisdom and timing."
+                ),
+                PrayerVerse(
+                    id: "psalm-64-8",
+                    reference: "Psalm 64:8",
+                    text: "So they will make him stumble;\n  Their own tongue is against them;\n  All who see them will shake the head.",
+                    prayer: "Father, let falsehood and harmful words lose their power. Help truth, humility, and righteousness prevail."
+                ),
+                PrayerVerse(
+                    id: "psalm-64-9",
+                    reference: "Psalm 64:9",
+                    text: "Then all men will fear,\n  And they will declare the work of God,\n  And will consider what He has done.",
+                    prayer: "Lord, let my life lead others to recognize Your works and stand in awe of Your justice, wisdom, and power."
+                ),
+                PrayerVerse(
+                    id: "psalm-64-10",
+                    reference: "Psalm 64:10",
+                    text: "The righteous man will be glad in the Lord and will take refuge in Him;\n  And all the upright in heart will glory.",
+                    prayer: "Father, help me rejoice in You and take refuge in Your presence. Let my heart remain upright, thankful, and confident in Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-64-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my refuge, defender, and righteous Judge. Protect me from fear, harmful words, and hidden dangers. Search my heart, strengthen my faith, and help me walk in truth and integrity. May my life rejoice in Your protection and point others toward Your wisdom, justice, and unfailing love.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 65,
             title: "Praise Awaits You",
             chapterReference: "Psalm 65",
             summary: "Pray in gratitude for God's provision.",
-            verses: []
+            // JSON resource: psalm_65_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-65-1",
+                    reference: "Psalm 65:1",
+                    text: "There will be silence before You, and praise in Zion, O God,\n  And to You the vow will be performed.",
+                    prayer: "Lord, praise belongs to You. Help my heart remain faithful in worship, gratitude, and devotion to Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-65-2",
+                    reference: "Psalm 65:2",
+                    text: "O You who hear prayer,\n  To You all men come.",
+                    prayer: "Father, thank You for hearing prayer. Draw all people closer to You and teach me to bring every need before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-65-3",
+                    reference: "Psalm 65:3",
+                    text: "Iniquities prevail against me;\n  As for our transgressions, You forgive them.",
+                    prayer: "Lord, when sin and weakness feel overwhelming, thank You for providing forgiveness, mercy, and atonement."
+                ),
+                PrayerVerse(
+                    id: "psalm-65-4",
+                    reference: "Psalm 65:4",
+                    text: "How blessed is the one whom You choose and bring near to You\n  To dwell in Your courts.\n  We will be satisfied with the goodness of Your house,\n  Your holy temple.",
+                    prayer: "Father, thank You for the blessing of drawing near to You. Satisfy my soul with the goodness of Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-65-5",
+                    reference: "Psalm 65:5",
+                    text: "By awesome deeds You answer us in righteousness, O God of our salvation,\n  You who are the trust of all the ends of the earth and of the farthest sea;",
+                    prayer: "Lord, answer me with righteousness and saving power. Help me trust You as the hope of all the earth."
+                ),
+                PrayerVerse(
+                    id: "psalm-65-6",
+                    reference: "Psalm 65:6",
+                    text: "Who establishes the mountains by His strength,\n  Being girded with might;",
+                    prayer: "Father, You establish the mountains by Your strength. Remind me that Your power is greater than anything I face."
+                ),
+                PrayerVerse(
+                    id: "psalm-65-7",
+                    reference: "Psalm 65:7",
+                    text: "Who stills the roaring of the seas,\n  The roaring of their waves,\n  And the tumult of the peoples.",
+                    prayer: "Lord, You quiet the roaring seas and the noise of nations. Calm every storm within me and teach me to rest in Your authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-65-8",
+                    reference: "Psalm 65:8",
+                    text: "They who dwell in the ends of the earth stand in awe of Your signs;\n  You make the dawn and the sunset shout for joy.",
+                    prayer: "Father, let my heart stand in awe of Your works. Fill my days with joy as I recognize Your presence from morning to evening."
+                ),
+                PrayerVerse(
+                    id: "psalm-65-9",
+                    reference: "Psalm 65:9",
+                    text: "You visit the earth and cause it to overflow;\n  You greatly enrich it;\n  The stream of God is full of water;\n  You prepare their grain, for thus You prepare the earth.",
+                    prayer: "Lord, thank You for caring for the earth and providing abundantly. Teach me to recognize Your hand in every blessing."
+                ),
+                PrayerVerse(
+                    id: "psalm-65-10",
+                    reference: "Psalm 65:10",
+                    text: "You water its furrows abundantly,\n  You settle its ridges,\n  You soften it with showers,\n  You bless its growth.",
+                    prayer: "Father, prepare and nourish what You have planted in my life. Let growth come through Your grace and faithful provision."
+                ),
+                PrayerVerse(
+                    id: "psalm-65-11",
+                    reference: "Psalm 65:11",
+                    text: "You have crowned the year with Your bounty,\n  And Your paths drip with fatness.",
+                    prayer: "Lord, crown my days with Your goodness. Let every season of my life overflow with gratitude for Your abundance."
+                ),
+                PrayerVerse(
+                    id: "psalm-65-12",
+                    reference: "Psalm 65:12",
+                    text: "The pastures of the wilderness drip,\n  And the hills gird themselves with rejoicing.",
+                    prayer: "Father, let even the quiet places of my life be filled with Your blessing, peace, and joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-65-13",
+                    reference: "Psalm 65:13",
+                    text: "The meadows are clothed with flocks\n  And the valleys are covered with grain;\n  They shout for joy, yes, they sing.",
+                    prayer: "Lord, let all creation remind me to worship You. May my life also shout for joy and sing praise to Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-65-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing prayer, forgiving sin, and filling the earth with Your goodness. Help me draw near to You with gratitude and awe. Calm every storm within me, nourish what You have planted in my life, and crown my days with Your faithful provision. May my heart continually worship You and rejoice in Your abundant love.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 66,
             title: "Shout for Joy",
             chapterReference: "Psalm 66",
             summary: "Pray in celebration of God's awesome deeds.",
-            verses: []
+            // JSON resource: psalm_66_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-66-1",
+                    reference: "Psalm 66:1",
+                    text: "Shout joyfully to God, all the earth;",
+                    prayer: "Lord, let my heart shout joyfully to You. Help my life reflect praise, gratitude, and worship for Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-2",
+                    reference: "Psalm 66:2",
+                    text: "Sing the glory of His name;\n  Make His praise glorious.",
+                    prayer: "Father, help me sing the glory of Your name and give You the honor You deserve in every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-3",
+                    reference: "Psalm 66:3",
+                    text: "Say to God, \"How awesome are Your works!\n  Because of the greatness of Your power Your enemies will give feigned obedience to You.",
+                    prayer: "Lord, Your works are awesome and powerful. Help me stand in awe of Your greatness and trust Your authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-4",
+                    reference: "Psalm 66:4",
+                    text: "All the earth will worship You,\n  And will sing praises to You;\n  They will sing praises to Your name.\" Selah.",
+                    prayer: "Father, may all the earth worship You and sing praises to Your name. Let my life join creation in honoring You."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-5",
+                    reference: "Psalm 66:5",
+                    text: "Come and see the works of God,\n  Who is awesome in His deeds toward the sons of men.",
+                    prayer: "Lord, open my eyes to see Your wonderful works. Help me remember Your faithfulness and recognize Your hand in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-6",
+                    reference: "Psalm 66:6",
+                    text: "He turned the sea into dry land;\n  They passed through the river on foot;\n  There let us rejoice in Him!",
+                    prayer: "Father, thank You for making a way where there seemed to be no way. Help me rejoice in Your deliverance."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-7",
+                    reference: "Psalm 66:7",
+                    text: "He rules by His might forever;\n  His eyes keep watch on the nations;\n  Let not the rebellious exalt themselves. Selah.",
+                    prayer: "Lord, You rule forever by Your power. Keep my heart humble and help me trust Your sovereign authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-8",
+                    reference: "Psalm 66:8",
+                    text: "Bless our God, O peoples,\n  And sound His praise abroad,",
+                    prayer: "Father, help me bless You openly and let the sound of praise be heard from my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-9",
+                    reference: "Psalm 66:9",
+                    text: "Who keeps us in life\n  And does not allow our feet to slip.",
+                    prayer: "Lord, thank You for preserving my life and keeping my steps secure. Help me walk faithfully in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-10",
+                    reference: "Psalm 66:10",
+                    text: "For You have tried us, O God;\n  You have refined us as silver is refined.",
+                    prayer: "Father, when You test and refine me, help me trust that You are shaping my faith for Your purpose."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-11",
+                    reference: "Psalm 66:11",
+                    text: "You brought us into the net;\n  You laid an oppressive burden upon our loins.",
+                    prayer: "Lord, when I go through burdens or difficult seasons, strengthen me and keep my heart anchored in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-12",
+                    reference: "Psalm 66:12",
+                    text: "You made men ride over our heads;\n  We went through fire and through water,\n  Yet You brought us out into a place of abundance.",
+                    prayer: "Father, thank You for bringing me through trials into a place of abundance, peace, and renewed hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-13",
+                    reference: "Psalm 66:13",
+                    text: "I shall come into Your house with burnt offerings;\n  I shall pay You my vows,",
+                    prayer: "Lord, help me come before You with sincere worship and a faithful heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-14",
+                    reference: "Psalm 66:14",
+                    text: "Which my lips uttered\n  And my mouth spoke when I was in distress.",
+                    prayer: "Father, help me honor the commitments I make to You and live with integrity before Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-15",
+                    reference: "Psalm 66:15",
+                    text: "I shall offer to You burnt offerings of fat beasts,\n  With the smoke of rams;\n  I shall make an offering of bulls with male goats. Selah.",
+                    prayer: "Lord, let my worship be pleasing to You. May everything I offer come from a grateful and surrendered heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-16",
+                    reference: "Psalm 66:16",
+                    text: "Come and hear, all who fear God,\n  And I will tell of what He has done for my soul.",
+                    prayer: "Father, help me tell others what You have done for my soul. Give me courage to share Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-17",
+                    reference: "Psalm 66:17",
+                    text: "I cried to Him with my mouth,\n  And He was extolled with my tongue.",
+                    prayer: "Lord, let praise be on my tongue when I cry out to You. Help my prayers be filled with faith and gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-18",
+                    reference: "Psalm 66:18",
+                    text: "If I regard wickedness in my heart,\n  The Lord will not hear;",
+                    prayer: "Father, search my heart and remove anything that would hinder my fellowship with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-19",
+                    reference: "Psalm 66:19",
+                    text: "But certainly God has heard;\n  He has given heed to the voice of my prayer.",
+                    prayer: "Lord, thank You for hearing my prayer and listening to my voice. Strengthen my confidence in Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-20",
+                    reference: "Psalm 66:20",
+                    text: "Blessed be God,\n  Who has not turned away my prayer\n  Nor His lovingkindness from me.",
+                    prayer: "Father, blessed be Your name. Thank You for not turning away my prayer or removing Your lovingkindness from me."
+                ),
+                PrayerVerse(
+                    id: "psalm-66-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your awesome works, faithful deliverance, and unfailing love. Help me praise You with joy, trust You through refining seasons, and share Your goodness with others. Keep my heart pure before You, my steps secure in Your care, and my worship sincere. May my life continually bless Your name and testify to all You have done.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 67,
