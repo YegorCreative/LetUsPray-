@@ -6195,7 +6195,87 @@ enum PsalmsPrayerData {
             title: "You Have Rejected Us",
             chapterReference: "Psalm 60",
             summary: "Pray for restoration and victory.",
-            verses: []
+            // JSON resource: psalm_60_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-60-1",
+                    reference: "Psalm 60:1",
+                    text: "O God, You have rejected us. You have broken us;\n  You have been angry; O, restore us.",
+                    prayer: "Lord, when life feels shaken and difficult, help me return to You with humility. Restore me by Your mercy and lead me back into peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-60-2",
+                    reference: "Psalm 60:2",
+                    text: "You have made the land quake, You have split it open;\n  Heal its breaches, for it totters.",
+                    prayer: "Father, when the foundations around me feel broken, heal what has been fractured and steady my heart in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-60-3",
+                    reference: "Psalm 60:3",
+                    text: "You have made Your people experience hardship;\n  You have given us wine to drink that makes us stagger.",
+                    prayer: "Lord, when hardship feels heavy, give me strength to endure and wisdom to keep trusting You through every trial."
+                ),
+                PrayerVerse(
+                    id: "psalm-60-4",
+                    reference: "Psalm 60:4",
+                    text: "You have given a banner to those who fear You,\n  That it may be displayed because of the truth. Selah.",
+                    prayer: "Father, thank You for giving Your people a banner of truth. Help me stand under Your name with courage, faith, and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-60-5",
+                    reference: "Psalm 60:5",
+                    text: "That Your beloved may be delivered,\n  Save with Your right hand, and answer us!",
+                    prayer: "Lord, save those You love and answer us with Your power. Deliver me by Your right hand and help me trust Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-60-6",
+                    reference: "Psalm 60:6",
+                    text: "God has spoken in His holiness:\n  \"I will exult, I will portion out Shechem and measure out the valley of Succoth.",
+                    prayer: "Father, You speak with holiness and authority. Help me trust Your promises and remember that every place and every outcome belongs to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-60-7",
+                    reference: "Psalm 60:7",
+                    text: "Gilead is Mine, and Manasseh is Mine;\n  Ephraim also is the helmet of My head;\n  Judah is My scepter.",
+                    prayer: "Lord, You reign over every tribe, nation, and people. Help me rest in Your sovereignty and follow Your leadership with confidence."
+                ),
+                PrayerVerse(
+                    id: "psalm-60-8",
+                    reference: "Psalm 60:8",
+                    text: "Moab is My washbowl;\n  Over Edom I shall throw My shoe;\n  Shout loud, O Philistia, because of Me!\"",
+                    prayer: "Father, every enemy and every obstacle is under Your authority. Help me remember that nothing is greater than Your power."
+                ),
+                PrayerVerse(
+                    id: "psalm-60-9",
+                    reference: "Psalm 60:9",
+                    text: "Who will bring me into the besieged city?\n  Who will lead me to Edom?",
+                    prayer: "Lord, when I face challenges that seem impossible, lead me forward and give me courage to depend on You."
+                ),
+                PrayerVerse(
+                    id: "psalm-60-10",
+                    reference: "Psalm 60:10",
+                    text: "Have not You Yourself, O God, rejected us?\n  And will You not go forth with our armies, O God?",
+                    prayer: "Father, even when I feel distant or uncertain, draw me back to Your presence and remind me that my hope is in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-60-11",
+                    reference: "Psalm 60:11",
+                    text: "O give us help against the adversary,\n  For deliverance by man is in vain.",
+                    prayer: "Lord, give me help against trouble, because human strength is never enough. Teach me to rely on You completely."
+                ),
+                PrayerVerse(
+                    id: "psalm-60-12",
+                    reference: "Psalm 60:12",
+                    text: "Through God we shall do valiantly,\n  And it is He who will tread down our adversaries.",
+                    prayer: "Father, through You I can do valiantly. Thank You that true victory comes from Your strength, power, and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-60-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my help, my strength, and my victory. When life feels shaken or uncertain, restore my heart and lead me back to trust. Teach me to depend on Your power rather than human strength, and help me walk with courage under Your banner of truth. May my confidence always rest in Your faithfulness and sovereign care.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         )
     ]
 
