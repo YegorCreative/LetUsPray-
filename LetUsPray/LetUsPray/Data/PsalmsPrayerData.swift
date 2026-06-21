@@ -6820,28 +6820,558 @@ enum PsalmsPrayerData {
             title: "May God Be Gracious",
             chapterReference: "Psalm 67",
             summary: "Pray for God's blessing and salvation for all.",
-            verses: []
+            // JSON resource: psalm_67_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-67-1",
+                    reference: "Psalm 67:1",
+                    text: "God be gracious to us and bless us,\n  And cause His face to shine upon us— Selah.",
+                    prayer: "Lord, be gracious to me and bless me. Let Your face shine upon my life so that I may walk in Your favor, peace, and presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-67-2",
+                    reference: "Psalm 67:2",
+                    text: "That Your way may be known on the earth,\n  Your salvation among all nations.",
+                    prayer: "Father, make Your way known through my life. Help me reflect Your salvation, goodness, and truth to the people around me."
+                ),
+                PrayerVerse(
+                    id: "psalm-67-3",
+                    reference: "Psalm 67:3",
+                    text: "Let the peoples praise You, O God;\n  Let all the peoples praise You.",
+                    prayer: "Lord, may all people praise You. Let my heart join in worship and gratitude for who You are and all You have done."
+                ),
+                PrayerVerse(
+                    id: "psalm-67-4",
+                    reference: "Psalm 67:4",
+                    text: "Let the nations be glad and sing for joy;\n  For You will judge the peoples with uprightness\n  And guide the nations on the earth. Selah.",
+                    prayer: "Father, let the nations rejoice because You judge with fairness and guide the people of the earth. Help me trust Your righteous rule."
+                ),
+                PrayerVerse(
+                    id: "psalm-67-5",
+                    reference: "Psalm 67:5",
+                    text: "Let the peoples praise You, O God;\n  Let all the peoples praise You.",
+                    prayer: "Lord, may every people and every nation praise You. Let my life continually honor Your name with worship and thanksgiving."
+                ),
+                PrayerVerse(
+                    id: "psalm-67-6",
+                    reference: "Psalm 67:6",
+                    text: "The earth has yielded its produce;\n  God, our God, blesses us.",
+                    prayer: "Father, thank You for Your provision and blessing. Help me recognize every good gift as coming from Your hand."
+                ),
+                PrayerVerse(
+                    id: "psalm-67-7",
+                    reference: "Psalm 67:7",
+                    text: "God blesses us,\n  That all the ends of the earth may fear Him.",
+                    prayer: "Lord, bless us so that all the ends of the earth may fear and honor You. Use my life to point others toward Your greatness and grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-67-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your grace, blessing, and salvation. Let Your face shine upon my life and make Your ways known through me. Help me worship You with gratitude, trust Your righteous rule, and reflect Your goodness to others. May my life point people toward Your love, Your truth, and Your glory.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 68,
             title: "Let God Arise",
             chapterReference: "Psalm 68",
             summary: "Pray in worship of God's mighty power.",
-            verses: []
+            // JSON resource: psalm_68_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-68-1",
+                    reference: "Psalm 68:1",
+                    text: "Let God arise, let His enemies be scattered,\n  And let those who hate Him flee before Him.",
+                    prayer: "Lord, rise up in power and scatter everything that opposes Your truth, Your goodness, and Your will in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-2",
+                    reference: "Psalm 68:2",
+                    text: "As smoke is driven away, so drive them away;\n  As wax melts before the fire,\n  So let the wicked perish before God.",
+                    prayer: "Father, remove what is evil, false, and harmful. Let Your righteousness prevail and purify my heart before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-3",
+                    reference: "Psalm 68:3",
+                    text: "But let the righteous be glad; let them exult before God;\n  Yes, let them rejoice with gladness.",
+                    prayer: "Lord, help me rejoice in Your presence. Fill my heart with gladness because You are faithful, righteous, and good."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-4",
+                    reference: "Psalm 68:4",
+                    text: "Sing to God, sing praises to His name;\n  Lift up a song for Him who rides through the deserts,\n  Whose name is the Lord, and exult before Him.",
+                    prayer: "Father, teach me to sing praises to Your name. Help me worship You with joy and honor You as the One who reigns above all."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-5",
+                    reference: "Psalm 68:5",
+                    text: "A father of the fatherless and a judge for the widows,\n  Is God in His holy habitation.",
+                    prayer: "Lord, thank You for being a Father to the fatherless and a defender of the vulnerable. Help me reflect Your compassion and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-6",
+                    reference: "Psalm 68:6",
+                    text: "God makes a home for the lonely;\n  He leads out the prisoners into prosperity,\n  Only the rebellious dwell in a parched land.",
+                    prayer: "Father, thank You for placing the lonely in families and bringing freedom to those who are bound. Use my life to bring encouragement and hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-7",
+                    reference: "Psalm 68:7",
+                    text: "O God, when You went forth before Your people,\n  When You marched through the wilderness, Selah.",
+                    prayer: "Lord, thank You for leading Your people through every wilderness. Lead me faithfully through every season of uncertainty."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-8",
+                    reference: "Psalm 68:8",
+                    text: "The earth quaked;\n  The heavens also dropped rain at the presence of God;\n  Sinai itself quaked at the presence of God, the God of Israel.",
+                    prayer: "Father, creation trembles before Your presence. Help me live with reverence, awe, and confidence in Your power."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-9",
+                    reference: "Psalm 68:9",
+                    text: "You shed abroad a plentiful rain, O God;\n  You confirmed Your inheritance when it was parched.",
+                    prayer: "Lord, thank You for sending abundant rain and refreshing what is weary. Restore my soul when I feel dry or weak."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-10",
+                    reference: "Psalm 68:10",
+                    text: "Your creatures settled in it;\n  You provided in Your goodness for the poor, O God.",
+                    prayer: "Father, thank You for providing for Your people. Help me trust Your care and recognize Your goodness in every blessing."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-11",
+                    reference: "Psalm 68:11",
+                    text: "The Lord gives the command;\n  The women who proclaim the good tidings are a great host:",
+                    prayer: "Lord, let Your Word go forth with power. Help me receive Your truth and share Your goodness with faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-12",
+                    reference: "Psalm 68:12",
+                    text: "“Kings of armies flee, they flee,\n  And she who remains at home will divide the spoil!”",
+                    prayer: "Father, thank You for giving victory that does not depend on human strength. Help me trust in Your power and provision."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-13",
+                    reference: "Psalm 68:13",
+                    text: "When you lie down among the sheepfolds,\n  You are like the wings of a dove covered with silver,\n  And its pinions with glistening gold.",
+                    prayer: "Lord, even in ordinary places, You reveal beauty and blessing. Help me see Your grace in every part of my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-14",
+                    reference: "Psalm 68:14",
+                    text: "When the Almighty scattered the kings there,\n  It was snowing in Zalmon.",
+                    prayer: "Father, You scatter darkness and bring light. Let Your victory shine over every place of fear, confusion, or discouragement."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-15",
+                    reference: "Psalm 68:15",
+                    text: "A mountain of God is the mountain of Bashan;\n  A mountain of many peaks is the mountain of Bashan.",
+                    prayer: "Lord, Your mountain is majestic and strong. Help me remember that Your kingdom is greater than every earthly power."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-16",
+                    reference: "Psalm 68:16",
+                    text: "Why do you look with envy, O mountains with many peaks,\n  At the mountain which God has desired for His abode?\n  Surely the Lord will dwell there forever.",
+                    prayer: "Father, thank You for choosing to dwell with Your people. Make my heart a place where Your presence is welcomed and honored."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-17",
+                    reference: "Psalm 68:17",
+                    text: "The chariots of God are myriads, thousands upon thousands;\n  The Lord is among them as at Sinai, in holiness.",
+                    prayer: "Lord, You are surrounded by heavenly power and glory. Help me trust that You are never lacking strength, authority, or help."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-18",
+                    reference: "Psalm 68:18",
+                    text: "You have ascended on high, You have led captive Your captives;\n  You have received gifts among men,\n  Even among the rebellious also, that the Lord God may dwell there.",
+                    prayer: "Father, thank You for the victory and gifts You give. Help me use every blessing to honor You and serve others."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-19",
+                    reference: "Psalm 68:19",
+                    text: "Blessed be the Lord, who daily bears our burden,\n  The God who is our salvation. Selah.",
+                    prayer: "Lord, blessed be Your name. Thank You for daily bearing my burdens and sustaining me with Your grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-20",
+                    reference: "Psalm 68:20",
+                    text: "God is to us a God of deliverances;\n  And to God the Lord belong escapes from death.",
+                    prayer: "Father, You are the God of salvation and deliverance. Help me trust You with my life, my future, and every burden I carry."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-21",
+                    reference: "Psalm 68:21",
+                    text: "Surely God will shatter the head of His enemies,\n  The hairy crown of him who goes on in his guilty deeds.",
+                    prayer: "Lord, defeat the power of sin and anything that rebels against Your truth in my heart. Lead me in righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-22",
+                    reference: "Psalm 68:22",
+                    text: "The Lord said, “I will bring them back from Bashan.\n  I will bring them back from the depths of the sea;",
+                    prayer: "Father, no place is beyond Your reach. Thank You that You can rescue, restore, and bring back what seems lost."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-23",
+                    reference: "Psalm 68:23",
+                    text: "That your foot may shatter them in blood,\n  The tongue of your dogs may have its portion from your enemies.”",
+                    prayer: "Lord, establish Your justice and protect Your people. Help me trust Your righteous judgment in all things."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-24",
+                    reference: "Psalm 68:24",
+                    text: "They have seen Your procession, O God,\n  The procession of my God, my King, into the sanctuary.",
+                    prayer: "Father, help me recognize Your procession and movement in my life. Let me follow where You lead with worship and faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-25",
+                    reference: "Psalm 68:25",
+                    text: "The singers went on, the musicians after them,\n  In the midst of the maidens beating tambourines.",
+                    prayer: "Lord, let my life be filled with praise, worship, and joyful gratitude before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-26",
+                    reference: "Psalm 68:26",
+                    text: "Bless God in the congregations,\n  Even the Lord, you who are of the fountain of Israel.",
+                    prayer: "Father, help me bless You among Your people and honor You with a sincere and faithful heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-27",
+                    reference: "Psalm 68:27",
+                    text: "There is Benjamin, the youngest, ruling them,\n  The princes of Judah in their throng,\n  The princes of Zebulun, the princes of Naphtali.",
+                    prayer: "Lord, thank You for calling every person and every generation into Your purposes. Help me serve faithfully where You place me."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-28",
+                    reference: "Psalm 68:28",
+                    text: "Your God has commanded your strength;\n  Show Yourself strong, O God, who have acted on our behalf.",
+                    prayer: "Father, strengthen what You have worked in me. Confirm Your purposes and help me walk in Your power."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-29",
+                    reference: "Psalm 68:29",
+                    text: "Because of Your temple at Jerusalem\n  Kings will bring gifts to You.",
+                    prayer: "Lord, may my life bring offerings of praise and devotion to You, the King who is worthy of all honor."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-30",
+                    reference: "Psalm 68:30",
+                    text: "Rebuke the beasts in the reeds,\n  The herd of bulls with the calves of the peoples,\n  Trampling under foot the pieces of silver;\n  He has scattered the peoples who delight in war.",
+                    prayer: "Father, restrain evil and humble every proud power. Let peace, justice, and righteousness increase."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-31",
+                    reference: "Psalm 68:31",
+                    text: "Envoys will come out of Egypt;\n  Ethiopia will quickly stretch out her hands to God.",
+                    prayer: "Lord, draw people from every nation toward You. Let hearts everywhere lift their hands in worship and surrender."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-32",
+                    reference: "Psalm 68:32",
+                    text: "Sing to God, O kingdoms of the earth,\n  Sing praises to the Lord, Selah.",
+                    prayer: "Father, may all kingdoms of the earth sing praises to You. Help my life join that song with joy and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-33",
+                    reference: "Psalm 68:33",
+                    text: "To Him who rides upon the highest heavens, which are from ancient times;\n  Behold, He speaks forth with His voice, a mighty voice.",
+                    prayer: "Lord, You ride upon the highest heavens and speak with mighty power. Help me listen with reverence and trust."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-34",
+                    reference: "Psalm 68:34",
+                    text: "Ascribe strength to God;\n  His majesty is over Israel\n  And His strength is in the skies.",
+                    prayer: "Father, all strength belongs to You. Help me depend on Your power and give You glory for every victory."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-35",
+                    reference: "Psalm 68:35",
+                    text: "O God, You are awesome from Your sanctuary.\n  The God of Israel Himself gives strength and power to the people.\n  Blessed be God!",
+                    prayer: "Lord, You are awesome from Your sanctuary and You give strength to Your people. Thank You for being my source of power, help, and hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-68-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being mighty, compassionate, and faithful. You carry my burdens, provide for my needs, defend the vulnerable, and give strength to Your people. Help me walk in worship, trust Your power, and live under Your righteous rule. May my life continually praise You, reflect Your compassion, and declare Your glory to the world.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 69,
             title: "Save Me, O God",
             chapterReference: "Psalm 69",
             summary: "Pray for deliverance in overwhelming distress.",
-            verses: []
+            // JSON resource: psalm_69_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-69-1",
+                    reference: "Psalm 69:1",
+                    text: "Save me, O God,\n  For the waters have threatened my life.",
+                    prayer: "Lord, save me when I feel overwhelmed and surrounded by trouble. Lift me above the waters and keep my heart anchored in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-2",
+                    reference: "Psalm 69:2",
+                    text: "I have sunk in deep mire, and there is no foothold;\n  I have come into deep waters, and a flood overflows me.",
+                    prayer: "Father, when I feel stuck in deep places and unable to stand, place my feet on solid ground and strengthen my faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-3",
+                    reference: "Psalm 69:3",
+                    text: "I am weary with my crying; my throat is parched;\n  My eyes fail while I wait for my God.",
+                    prayer: "Lord, when I grow weary from crying out and waiting, renew my strength and remind me that You hear me."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-4",
+                    reference: "Psalm 69:4",
+                    text: "Those who hate me without a cause are more than the hairs of my head;\n  Those who would destroy me are powerful, being wrongfully my enemies;\n  What I did not steal, I then have to restore.",
+                    prayer: "Father, when I face opposition I do not understand, help me respond with faith, patience, and trust in Your justice."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-5",
+                    reference: "Psalm 69:5",
+                    text: "O God, it is You who knows my folly,\n  And my wrongs are not hidden from You.",
+                    prayer: "Lord, You know my foolishness and every hidden weakness. Search me, forgive me, and lead me into wisdom and humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-6",
+                    reference: "Psalm 69:6",
+                    text: "May those who wait for You not be ashamed through me, O Lord God of hosts;\n  May those who seek You not be dishonored through me, O God of Israel.",
+                    prayer: "Father, do not let my life bring shame to those who hope in You. Help me live faithfully and honor Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-7",
+                    reference: "Psalm 69:7",
+                    text: "Because for Your sake I have borne reproach;\n  Dishonor has covered my face.",
+                    prayer: "Lord, when following You brings rejection or misunderstanding, strengthen me to endure with love and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-8",
+                    reference: "Psalm 69:8",
+                    text: "I have become estranged from my brothers\n  And an alien to my mother's sons.",
+                    prayer: "Father, when I feel alone or distant from others, remind me that I am fully known and loved by You."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-9",
+                    reference: "Psalm 69:9",
+                    text: "For zeal for Your house has consumed me,\n  And the reproaches of those who reproach You have fallen on me.",
+                    prayer: "Lord, give me zeal for Your house and Your glory. Let my heart be devoted to what honors You."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-10",
+                    reference: "Psalm 69:10",
+                    text: "When I wept in my soul with fasting,\n  It became my reproach.",
+                    prayer: "Father, when humility or obedience is misunderstood, help me remain faithful to You rather than seeking human approval."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-11",
+                    reference: "Psalm 69:11",
+                    text: "When I made sackcloth my clothing,\n  I became a byword to them.",
+                    prayer: "Lord, teach me to endure ridicule or criticism with grace, keeping my eyes fixed on You."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-12",
+                    reference: "Psalm 69:12",
+                    text: "Those who sit in the gate talk about me,\n  And I am the song of the drunkards.",
+                    prayer: "Father, when others speak against me, help me rest in Your truth and remember that Your voice matters most."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-13",
+                    reference: "Psalm 69:13",
+                    text: "But as for me, my prayer is to You, O Lord, at an acceptable time;\n  O God, in the greatness of Your lovingkindness,\n  Answer me with Your saving truth.",
+                    prayer: "Lord, I pray to You in an acceptable time. Answer me according to Your abundant lovingkindness and saving truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-14",
+                    reference: "Psalm 69:14",
+                    text: "Deliver me from the mire and do not let me sink;\n  May I be delivered from my foes and from the deep waters.",
+                    prayer: "Father, deliver me from sinking under fear, shame, or discouragement. Rescue me from anything that pulls me away from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-15",
+                    reference: "Psalm 69:15",
+                    text: "May the flood of water not overflow me\n  Nor the deep swallow me up,\n  Nor the pit shut its mouth on me.",
+                    prayer: "Lord, do not let the flood overwhelm me. Keep me from being swallowed by despair and surround me with Your mercy."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-16",
+                    reference: "Psalm 69:16",
+                    text: "Answer me, O Lord, for Your lovingkindness is good;\n  According to the greatness of Your compassion, turn to me,",
+                    prayer: "Father, answer me because Your lovingkindness is good. Turn to me with compassion and renew my hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-17",
+                    reference: "Psalm 69:17",
+                    text: "And do not hide Your face from Your servant,\n  For I am in distress; answer me quickly.",
+                    prayer: "Lord, do not hide Your face from me in my distress. Draw near quickly and comfort my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-18",
+                    reference: "Psalm 69:18",
+                    text: "Oh draw near to my soul and redeem it;\n  Ransom me because of my enemies!",
+                    prayer: "Father, draw near to my soul and redeem me. Rescue me by Your grace and restore my peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-19",
+                    reference: "Psalm 69:19",
+                    text: "You know my reproach and my shame and my dishonor;\n  All my adversaries are before You.",
+                    prayer: "Lord, You know every reproach, shame, and burden I carry. Help me bring my pain honestly before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-20",
+                    reference: "Psalm 69:20",
+                    text: "Reproach has broken my heart and I am so sick.\n  And I looked for sympathy, but there was none,\n  And for comforters, but I found none.",
+                    prayer: "Father, when my heart feels broken and comfort feels far away, be my healer, companion, and source of strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-21",
+                    reference: "Psalm 69:21",
+                    text: "They also gave me gall for my food\n  And for my thirst they gave me vinegar to drink.",
+                    prayer: "Lord, when bitterness or disappointment comes near, protect my heart and help me receive the comfort only You can give."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-22",
+                    reference: "Psalm 69:22",
+                    text: "May their table before them become a snare;\n  And when they are in peace, may it become a trap.",
+                    prayer: "Father, remove anything that becomes a snare in my life. Help me recognize danger and walk in wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-23",
+                    reference: "Psalm 69:23",
+                    text: "May their eyes grow dim so that they cannot see,\n  And make their loins shake continually.",
+                    prayer: "Lord, open my eyes to truth and keep me from spiritual blindness. Strengthen me to walk uprightly before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-24",
+                    reference: "Psalm 69:24",
+                    text: "Pour out Your indignation on them,\n  And may Your burning anger overtake them.",
+                    prayer: "Father, I trust Your justice. Help me leave judgment in Your hands and walk humbly before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-25",
+                    reference: "Psalm 69:25",
+                    text: "May their camp be desolate;\n  May none dwell in their tents.",
+                    prayer: "Lord, let every place of emptiness in my life be restored by Your presence, mercy, and purpose."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-26",
+                    reference: "Psalm 69:26",
+                    text: "For they have persecuted him whom You Yourself have smitten,\n  And they tell of the pain of those whom You have wounded.",
+                    prayer: "Father, give me compassion for those who are wounded. Help me never add pain to someone You are healing."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-27",
+                    reference: "Psalm 69:27",
+                    text: "Add iniquity to their iniquity,\n  And may they not come into Your righteousness.",
+                    prayer: "Lord, protect me from hardening my heart. Lead me away from sin and deeper into righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-28",
+                    reference: "Psalm 69:28",
+                    text: "May they be blotted out of the book of life\n  And may they not be recorded with the righteous.",
+                    prayer: "Father, help me live in a way that honors the life You have given me and keeps my name rooted in Your grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-29",
+                    reference: "Psalm 69:29",
+                    text: "But I am afflicted and in pain;\n  May Your salvation, O God, set me securely on high.",
+                    prayer: "Lord, when I am afflicted or in pain, let Your salvation lift me up and restore my hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-30",
+                    reference: "Psalm 69:30",
+                    text: "I will praise the name of God with song\n  And magnify Him with thanksgiving.",
+                    prayer: "Father, I will praise Your name with song and magnify You with thanksgiving. Fill my heart with worship."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-31",
+                    reference: "Psalm 69:31",
+                    text: "And it will please the Lord better than an ox\n  Or a young bull with horns and hoofs.",
+                    prayer: "Lord, let my praise and gratitude be pleasing to You. May my worship come from a sincere and surrendered heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-32",
+                    reference: "Psalm 69:32",
+                    text: "The humble have seen it and are glad;\n  You who seek God, let your heart revive.",
+                    prayer: "Father, encourage the humble and those who seek You. Let their hearts be revived by Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-33",
+                    reference: "Psalm 69:33",
+                    text: "For the Lord hears the needy\n  And does not despise His who are prisoners.",
+                    prayer: "Lord, thank You for hearing the needy and not despising those who are bound or broken. Let Your mercy bring freedom."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-34",
+                    reference: "Psalm 69:34",
+                    text: "Let heaven and earth praise Him,\n  The seas and everything that moves in them.",
+                    prayer: "Father, let heaven, earth, and all creation praise You. Help my life join that worship with joy and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-35",
+                    reference: "Psalm 69:35",
+                    text: "For God will save Zion and build the cities of Judah,\n  That they may dwell there and possess it.",
+                    prayer: "Lord, save and restore Your people. Build what is broken and establish what belongs to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-36",
+                    reference: "Psalm 69:36",
+                    text: "The descendants of His servants will inherit it,\n  And those who love His name will dwell in it.",
+                    prayer: "Father, thank You for the inheritance You give to those who love Your name. Help me dwell faithfully in Your promises."
+                ),
+                PrayerVerse(
+                    id: "psalm-69-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing me when I am overwhelmed, weary, or brokenhearted. Rescue me from despair, restore my hope, and keep my heart faithful to You. Teach me to endure hardship with humility, trust Your justice, and praise Your name with gratitude. May my life be rooted in Your mercy, lifted by Your salvation, and devoted to Your glory.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 70,
             title: "Hasten to Help Me",
             chapterReference: "Psalm 70",
             summary: "Pray for urgent help from God.",
-            verses: []
+            // JSON resource: psalm_70_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-70-1",
+                    reference: "Psalm 70:1",
+                    text: "O God, hasten to deliver me;\n  O Lord, hasten to my help!",
+                    prayer: "Lord, come quickly to help me when I am in need. Teach me to call on You first and trust Your timing."
+                ),
+                PrayerVerse(
+                    id: "psalm-70-2",
+                    reference: "Psalm 70:2",
+                    text: "Let those be ashamed and humiliated\n  Who seek my life;\n  Let those be turned back and dishonored\n  Who delight in my hurt.",
+                    prayer: "Father, protect me from anything that seeks to harm my soul, weaken my faith, or pull me away from Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-70-3",
+                    reference: "Psalm 70:3",
+                    text: "Let those be turned back because of their shame\n  Who say, “Aha, aha!”",
+                    prayer: "Lord, turn back every voice of shame, fear, and discouragement. Help me listen instead to Your truth and love."
+                ),
+                PrayerVerse(
+                    id: "psalm-70-4",
+                    reference: "Psalm 70:4",
+                    text: "Let all who seek You rejoice and be glad in You;\n  And let those who love Your salvation say continually,\n  “Let God be magnified.”",
+                    prayer: "Father, let all who seek You rejoice and be glad in You. Fill my heart with joy in Your salvation and love."
+                ),
+                PrayerVerse(
+                    id: "psalm-70-5",
+                    reference: "Psalm 70:5",
+                    text: "But I am afflicted and needy;\n  Hasten to me, O God!\n  You are my help and my deliverer;\n  O Lord, do not delay.",
+                    prayer: "Lord, I am needy and dependent on You. You are my help and my deliverer, so please do not delay in strengthening and guiding me."
+                ),
+                PrayerVerse(
+                    id: "psalm-70-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my help, my deliverer, and my source of salvation. When I feel weak, rushed, afraid, or overwhelmed, help me seek You with confidence. Protect me from discouragement, fill me with joy in Your presence, and remind me that You are near to all who call upon You.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 71,
