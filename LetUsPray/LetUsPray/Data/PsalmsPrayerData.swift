@@ -6078,7 +6078,117 @@ enum PsalmsPrayerData {
             title: "Deliver Me from Enemies",
             chapterReference: "Psalm 59",
             summary: "Pray for protection and deliverance.",
-            verses: []
+            // JSON resource: psalm_59_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-59-1",
+                    reference: "Psalm 59:1",
+                    text: "Deliver me from my enemies, O my God;\n  Set me securely on high away from those who rise up against me.",
+                    prayer: "Lord, deliver me from every enemy and protect me from anything that rises against my faith, peace, or obedience to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-59-2",
+                    reference: "Psalm 59:2",
+                    text: "Deliver me from those who do iniquity\n  And save me from men of bloodshed.",
+                    prayer: "Father, rescue me from evil influences and guard my heart from anything that seeks to pull me away from Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-59-3",
+                    reference: "Psalm 59:3",
+                    text: "For behold, they have set an ambush for my life;\n  Fierce men launch an attack against me,\n  Not for my transgression nor for my sin, O Lord,",
+                    prayer: "Lord, when I feel attacked or misunderstood, help me trust that You see the truth and know every detail of my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-59-4",
+                    reference: "Psalm 59:4",
+                    text: "For no guilt of mine, they run and set themselves against me.\n  Arouse Yourself to help me, and see!",
+                    prayer: "Father, strengthen me when trouble comes without warning. Rise to help me and keep me steady in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-59-5",
+                    reference: "Psalm 59:5",
+                    text: "You, O Lord God of hosts, the God of Israel,\n  Awake to punish all the nations;\n  Do not be gracious to any who are treacherous in iniquity. Selah.",
+                    prayer: "Lord, You are the God of all authority. Act according to Your justice and help me trust Your wisdom in every situation."
+                ),
+                PrayerVerse(
+                    id: "psalm-59-6",
+                    reference: "Psalm 59:6",
+                    text: "They return at evening, they howl like a dog,\n  And go around the city.",
+                    prayer: "Father, protect me from repeated attacks, discouragement, or fear. Surround me with Your peace when trouble returns."
+                ),
+                PrayerVerse(
+                    id: "psalm-59-7",
+                    reference: "Psalm 59:7",
+                    text: "Behold, they belch forth with their mouth;\n  Swords are in their lips,\n  For, they say, \"Who hears?\"",
+                    prayer: "Lord, guard my words and protect me from harmful speech. Help me speak truth with wisdom, grace, and humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-59-8",
+                    reference: "Psalm 59:8",
+                    text: "But You, O Lord, laugh at them;\n  You scoff at all the nations.",
+                    prayer: "Father, remind me that You are not threatened by evil or opposition. Help me rest in Your power and sovereignty."
+                ),
+                PrayerVerse(
+                    id: "psalm-59-9",
+                    reference: "Psalm 59:9",
+                    text: "Because of his strength I will watch for You,\n  For God is my stronghold.",
+                    prayer: "Lord, You are my strength. Help me watch for Your help and trust You as my stronghold."
+                ),
+                PrayerVerse(
+                    id: "psalm-59-10",
+                    reference: "Psalm 59:10",
+                    text: "My God in His lovingkindness will meet me;\n  God will let me look triumphantly upon my foes.",
+                    prayer: "Father, thank You for meeting me with Your lovingkindness. Let me see Your faithfulness even in difficult moments."
+                ),
+                PrayerVerse(
+                    id: "psalm-59-11",
+                    reference: "Psalm 59:11",
+                    text: "Do not slay them, or my people will forget;\n  Scatter them by Your power, and bring them down,\n  O Lord, our shield.",
+                    prayer: "Lord, teach me to trust Your justice and timing. Help me learn from every trial and remain humble before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-59-12",
+                    reference: "Psalm 59:12",
+                    text: "On account of the sin of their mouth and the words of their lips,\n  Let them even be caught in their pride,\n  And on account of curses and lies which they utter.",
+                    prayer: "Father, protect me from pride, harmful words, and sinful attitudes. Let my speech and heart honor You."
+                ),
+                PrayerVerse(
+                    id: "psalm-59-13",
+                    reference: "Psalm 59:13",
+                    text: "Destroy them in wrath, destroy them that they may be no more;\n  That men may know that God rules in Jacob\n  To the ends of the earth. Selah.",
+                    prayer: "Lord, bring an end to evil and let Your righteousness be known. May Your rule be recognized throughout the earth."
+                ),
+                PrayerVerse(
+                    id: "psalm-59-14",
+                    reference: "Psalm 59:14",
+                    text: "They return at evening, they howl like a dog,\n  And go around the city.",
+                    prayer: "Father, when trouble seems to return again and again, help me not lose heart but remain faithful in prayer."
+                ),
+                PrayerVerse(
+                    id: "psalm-59-15",
+                    reference: "Psalm 59:15",
+                    text: "They wander about for food\n  And growl if they are not satisfied.",
+                    prayer: "Lord, keep me from restless striving and dissatisfaction. Help me find my security and satisfaction in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-59-16",
+                    reference: "Psalm 59:16",
+                    text: "But as for me, I shall sing of Your strength;\n  Yes, I shall joyfully sing of Your lovingkindness in the morning,\n  For You have been my stronghold\n  And a refuge in the day of my distress.",
+                    prayer: "Father, I will sing of Your strength and joyfully proclaim Your lovingkindness. Thank You for being my refuge in trouble."
+                ),
+                PrayerVerse(
+                    id: "psalm-59-17",
+                    reference: "Psalm 59:17",
+                    text: "O my strength, I will sing praises to You;\n  For God is my stronghold, the God who shows me lovingkindness.",
+                    prayer: "Lord, You are my strength and my stronghold. I praise You because Your lovingkindness never fails."
+                ),
+                PrayerVerse(
+                    id: "psalm-59-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my defender, my refuge, and my strength. When trouble surrounds me or fear rises within me, help me trust in Your protection and lovingkindness. Guard my heart, guide my words, and keep me faithful through every challenge. May my life continually praise You as my stronghold and my faithful God.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 60,
