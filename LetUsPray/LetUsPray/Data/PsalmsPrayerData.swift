@@ -5917,7 +5917,80 @@ enum PsalmsPrayerData {
             title: "My Heart is Steadfast",
             chapterReference: "Psalm 57",
             summary: "Pray for confidence in God's mercy.",
-            verses: []
+            verses: [
+                PrayerVerse(
+                    id: "psalm-57-1",
+                    reference: "Psalm 57:1",
+                    text: "Be gracious to me, O God, be gracious to me,\n  For my soul takes refuge in You;\n  And in the shadow of Your wings I will take refuge\n  Until destruction passes by.",
+                    prayer: "Lord, be gracious to me, for my soul takes refuge in You. Help me hide under the shadow of Your wings until every storm passes by."
+                ),
+                PrayerVerse(
+                    id: "psalm-57-2",
+                    reference: "Psalm 57:2",
+                    text: "I will cry to God Most High,\n  To God who accomplishes all things for me.",
+                    prayer: "Father, I cry out to You, the Most High God. Thank You for accomplishing Your purpose in my life and guiding me with faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-57-3",
+                    reference: "Psalm 57:3",
+                    text: "He will send from heaven and save me;\n  He reproaches him who tramples upon me. Selah.\n  God will send forth His lovingkindness and His truth.",
+                    prayer: "Lord, send Your help from heaven and rescue me according to Your lovingkindness and truth. Strengthen my confidence in Your deliverance."
+                ),
+                PrayerVerse(
+                    id: "psalm-57-4",
+                    reference: "Psalm 57:4",
+                    text: "My soul is among lions;\n  I must lie among those who breathe forth fire,\n  Even the sons of men, whose teeth are spears and arrows\n  And their tongue a sharp sword.",
+                    prayer: "Father, when I feel surrounded by danger, fear, or opposition, protect my heart and help me remain faithful to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-57-5",
+                    reference: "Psalm 57:5",
+                    text: "Be exalted above the heavens, O God;\n  Let Your glory be above all the earth.",
+                    prayer: "Lord, be exalted above the heavens and let Your glory be over all the earth. May my life bring honor and praise to Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-57-6",
+                    reference: "Psalm 57:6",
+                    text: "They have prepared a net for my steps;\n  My soul is bowed down;\n  They dug a pit before me;\n  They themselves have fallen into the midst of it. Selah.",
+                    prayer: "Father, protect me from hidden traps and discouragement. Lift me up when my soul feels bowed down."
+                ),
+                PrayerVerse(
+                    id: "psalm-57-7",
+                    reference: "Psalm 57:7",
+                    text: "My heart is steadfast, O God, my heart is steadfast;\n  I will sing, yes, I will sing praises!",
+                    prayer: "Lord, make my heart steadfast in You. Help me praise You with confidence, even in difficult seasons."
+                ),
+                PrayerVerse(
+                    id: "psalm-57-8",
+                    reference: "Psalm 57:8",
+                    text: "Awake, my glory!\n  Awake, harp and lyre!\n  I will awaken the dawn.",
+                    prayer: "Father, awaken praise within me. Let my soul rise with worship, gratitude, and renewed hope in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-57-9",
+                    reference: "Psalm 57:9",
+                    text: "I will give thanks to You, O Lord, among the peoples;\n  I will sing praises to You among the nations.",
+                    prayer: "Lord, help me give thanks to You among all people. Let my life declare Your goodness and faithfulness wherever I go."
+                ),
+                PrayerVerse(
+                    id: "psalm-57-10",
+                    reference: "Psalm 57:10",
+                    text: "For Your lovingkindness is great to the heavens\n  And Your truth to the clouds.",
+                    prayer: "Father, Your lovingkindness is great to the heavens and Your truth reaches to the skies. Help me rest in Your unfailing love."
+                ),
+                PrayerVerse(
+                    id: "psalm-57-11",
+                    reference: "Psalm 57:11",
+                    text: "Be exalted above the heavens, O God;\n  Let Your glory be above all the earth.",
+                    prayer: "Lord, be exalted above the heavens and let Your glory cover the earth. May everything in my life point back to Your greatness."
+                ),
+                PrayerVerse(
+                    id: "psalm-57-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my refuge in every storm. Help me trust Your lovingkindness, rest under Your protection, and praise You with a steadfast heart. When fear or trouble surrounds me, remind me that You are faithful, powerful, and near. May my life continually declare Your glory, Your goodness, and Your truth.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 58,
