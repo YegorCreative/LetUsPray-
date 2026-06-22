@@ -8309,7 +8309,447 @@ enum PsalmsPrayerData {
             title: "Tell the Next Generation",
             chapterReference: "Psalm 78",
             summary: "Pray for faithfulness in teaching God's ways.",
-            verses: []
+            // JSON resource: psalm_78_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-78-1",
+                    reference: "Psalm 78:1",
+                    text: "Listen, O my people, to my instruction;\n    Incline your ears to the words of my mouth.",
+                    prayer: "Lord, open my ears to Your instruction and help me listen carefully to the wisdom of Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-2",
+                    reference: "Psalm 78:2",
+                    text: "I will open my mouth in a parable;\n    I will utter dark sayings of old,",
+                    prayer: "Father, teach me to receive the truths You reveal and understand the lessons You want my heart to learn."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-3",
+                    reference: "Psalm 78:3",
+                    text: "Which we have heard and known,\n    And our fathers have told us.",
+                    prayer: "Lord, thank You for the testimonies passed down through generations. Help me remember and value what You have done."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-4",
+                    reference: "Psalm 78:4",
+                    text: "We will not conceal them from their children,\n    But tell to the generation to come the praises of the Lord,\n    And His strength and His wondrous works that He has done.",
+                    prayer: "Father, help me faithfully declare Your praise, strength, and wonderful works to the next generation."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-5",
+                    reference: "Psalm 78:5",
+                    text: "For He established a testimony in Jacob\n    And appointed a law in Israel,\n    Which He commanded our fathers\n    That they should teach them to their children,",
+                    prayer: "Lord, thank You for giving Your people truth and instruction. Help me build my life on Your Word and share it faithfully."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-6",
+                    reference: "Psalm 78:6",
+                    text: "That the generation to come might know, even the children yet to be born,\n    That they may arise and tell them to their children,",
+                    prayer: "Father, let future generations know Your goodness. Use my life to help others place their hope in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-7",
+                    reference: "Psalm 78:7",
+                    text: "That they should put their confidence in God\n    And not forget the works of God,\n    But keep His commandments,",
+                    prayer: "Lord, help me set my hope in You, remember Your works, and keep Your commandments with a faithful heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-8",
+                    reference: "Psalm 78:8",
+                    text: "And not be like their fathers,\n    A stubborn and rebellious generation,\n    A generation that did not prepare its heart\n    And whose spirit was not faithful to God.",
+                    prayer: "Father, keep me from stubbornness and rebellion. Give me a steadfast heart that remains faithful to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-9",
+                    reference: "Psalm 78:9",
+                    text: "The sons of Ephraim were archers equipped with bows,\n    Yet they turned back in the day of battle.",
+                    prayer: "Lord, when I am equipped for battle but tempted to retreat, give me courage to stand firm in faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-10",
+                    reference: "Psalm 78:10",
+                    text: "They did not keep the covenant of God\n    And refused to walk in His law;",
+                    prayer: "Father, help me keep Your covenant and walk obediently according to Your instruction."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-11",
+                    reference: "Psalm 78:11",
+                    text: "They forgot His deeds\n    And His miracles that He had shown them.",
+                    prayer: "Lord, protect me from forgetting Your works. Keep Your faithfulness fresh in my heart and mind."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-12",
+                    reference: "Psalm 78:12",
+                    text: "He wrought wonders before their fathers\n    In the land of Egypt, in the field of Zoan.",
+                    prayer: "Father, remind me of the wonders You have done for Your people and help me trust Your power today."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-13",
+                    reference: "Psalm 78:13",
+                    text: "He divided the sea and caused them to pass through,\n    And He made the waters stand up like a heap.",
+                    prayer: "Lord, You made a way through the sea. Help me believe that You can make a way through every impossible situation."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-14",
+                    reference: "Psalm 78:14",
+                    text: "Then He led them with the cloud by day\n    And all the night with a light of fire.",
+                    prayer: "Father, thank You for guiding Your people by day and night. Guide my steps with Your presence and wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-15",
+                    reference: "Psalm 78:15",
+                    text: "He split the rocks in the wilderness\n    And gave them abundant drink like the ocean depths.",
+                    prayer: "Lord, You provided water from the rock. Refresh my soul and provide for me in ways only You can."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-16",
+                    reference: "Psalm 78:16",
+                    text: "He brought forth streams also from the rock\n    And caused waters to run down like rivers.",
+                    prayer: "Father, let Your provision flow into the dry places of my life and remind me that You are faithful."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-17",
+                    reference: "Psalm 78:17",
+                    text: "Yet they still continued to sin against Him,\n    To rebel against the Most High in the desert.",
+                    prayer: "Lord, forgive me when I continue in sin despite Your goodness. Turn my heart back to obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-18",
+                    reference: "Psalm 78:18",
+                    text: "And in their heart they put God to the test\n    By asking food according to their desire.",
+                    prayer: "Father, protect me from testing You with unbelief. Help me trust Your care without demanding my own way."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-19",
+                    reference: "Psalm 78:19",
+                    text: "Then they spoke against God;\n    They said, “Can God prepare a table in the wilderness?",
+                    prayer: "Lord, forgive me when I question Your ability to provide. Strengthen my confidence in Your power."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-20",
+                    reference: "Psalm 78:20",
+                    text: "Behold, He struck the rock so that waters gushed out,\n    And streams were overflowing;\n    Can He give bread also?\n    Will He provide meat for His people?”",
+                    prayer: "Father, You have provided before, and You can provide again. Help me remember Your past faithfulness when I face present needs."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-21",
+                    reference: "Psalm 78:21",
+                    text: "Therefore the Lord heard and was full of wrath;\n    And a fire was kindled against Jacob\n    And anger also mounted against Israel,",
+                    prayer: "Lord, when my heart complains or doubts, correct me with mercy and lead me back to trust."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-22",
+                    reference: "Psalm 78:22",
+                    text: "Because they did not believe in God\n    And did not trust in His salvation.",
+                    prayer: "Father, help me believe in You fully and trust in Your salvation with a steady heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-23",
+                    reference: "Psalm 78:23",
+                    text: "Yet He commanded the clouds above\n    And opened the doors of heaven;",
+                    prayer: "Lord, thank You for opening heaven and providing for Your people. Help me receive Your gifts with gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-24",
+                    reference: "Psalm 78:24",
+                    text: "He rained down manna upon them to eat\n    And gave them food from heaven.",
+                    prayer: "Father, thank You for daily provision. Teach me not to take Your blessings for granted."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-25",
+                    reference: "Psalm 78:25",
+                    text: "Man did eat the bread of angels;\n    He sent them food in abundance.",
+                    prayer: "Lord, You fed Your people with abundance. Help me trust that You know exactly what I need."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-26",
+                    reference: "Psalm 78:26",
+                    text: "He caused the east wind to blow in the heavens\n    And by His power He directed the south wind.",
+                    prayer: "Father, command the winds and direct circumstances according to Your wisdom. Help me trust Your control over all things."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-27",
+                    reference: "Psalm 78:27",
+                    text: "When He rained meat upon them like the dust,\n    Even winged fowl like the sand of the seas,",
+                    prayer: "Lord, thank You for providing abundantly. Give me a grateful heart that recognizes Your generosity."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-28",
+                    reference: "Psalm 78:28",
+                    text: "Then He let them fall in the midst of their camp,\n    Round about their dwellings.",
+                    prayer: "Father, let Your provision reach the exact places where it is needed. Help me depend on Your timing."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-29",
+                    reference: "Psalm 78:29",
+                    text: "So they ate and were well filled,\n    And their desire He gave to them.",
+                    prayer: "Lord, thank You for satisfying needs according to Your will. Teach me contentment and gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-30",
+                    reference: "Psalm 78:30",
+                    text: "Before they had satisfied their desire,\n    While their food was in their mouths,",
+                    prayer: "Father, guard my heart from craving more than what You provide. Teach me to desire You above all."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-31",
+                    reference: "Psalm 78:31",
+                    text: "The anger of God rose against them\n    And killed some of their stoutest ones,\n    And subdued the choice men of Israel.",
+                    prayer: "Lord, help me take Your holiness seriously and live with reverence, humility, and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-32",
+                    reference: "Psalm 78:32",
+                    text: "In spite of all this they still sinned\n    And did not believe in His wonderful works.",
+                    prayer: "Father, forgive me when I see Your works yet still struggle to trust You. Strengthen my faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-33",
+                    reference: "Psalm 78:33",
+                    text: "So He brought their days to an end in futility\n    And their years in sudden terror.",
+                    prayer: "Lord, teach me not to waste my days in unbelief, but to live with purpose, trust, and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-34",
+                    reference: "Psalm 78:34",
+                    text: "When He killed them, then they sought Him,\n    And returned and searched diligently for God;",
+                    prayer: "Father, when hardship brings me back to You, help my repentance be sincere and lasting."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-35",
+                    reference: "Psalm 78:35",
+                    text: "And they remembered that God was their rock,\n    And the Most High God their Redeemer.",
+                    prayer: "Lord, remind me that You are my rock, my Redeemer, and the Most High God."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-36",
+                    reference: "Psalm 78:36",
+                    text: "But they deceived Him with their mouth\n    And lied to Him with their tongue.",
+                    prayer: "Father, keep my worship from becoming empty words. Let my devotion be sincere and true."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-37",
+                    reference: "Psalm 78:37",
+                    text: "For their heart was not steadfast toward Him,\n    Nor were they faithful in His covenant.",
+                    prayer: "Lord, make my heart steadfast before You and help me remain faithful to Your covenant."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-38",
+                    reference: "Psalm 78:38",
+                    text: "But He, being compassionate, forgave their iniquity and did not destroy them;\n    And often He restrained His anger\n    And did not arouse all His wrath.",
+                    prayer: "Father, thank You for being compassionate, forgiving, and patient. Your mercy holds back what I deserve."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-39",
+                    reference: "Psalm 78:39",
+                    text: "Thus He remembered that they were but flesh,\n    A wind that passes and does not return.",
+                    prayer: "Lord, remember my weakness with compassion. Help me depend on Your grace each day."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-40",
+                    reference: "Psalm 78:40",
+                    text: "How often they rebelled against Him in the wilderness\n    And grieved Him in the desert!",
+                    prayer: "Father, forgive me for the ways I grieve Your heart. Teach me to walk in obedience and gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-41",
+                    reference: "Psalm 78:41",
+                    text: "Again and again they tempted God,\n    And pained the Holy One of Israel.",
+                    prayer: "Lord, keep me from limiting You by unbelief. Help me trust Your power without fear."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-42",
+                    reference: "Psalm 78:42",
+                    text: "They did not remember His power,\n    The day when He redeemed them from the adversary,",
+                    prayer: "Father, help me remember Your hand of deliverance and the ways You have rescued me."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-43",
+                    reference: "Psalm 78:43",
+                    text: "When He performed His signs in Egypt\n    And His marvels in the field of Zoan,",
+                    prayer: "Lord, remind me of Your signs and wonders, and let them strengthen my faith in Your authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-44",
+                    reference: "Psalm 78:44",
+                    text: "And turned their rivers to blood,\n    And their streams, they could not drink.",
+                    prayer: "Father, You are sovereign over creation and judgment. Help me honor Your holiness."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-45",
+                    reference: "Psalm 78:45",
+                    text: "He sent among them swarms of flies which devoured them,\n    And frogs which destroyed them.",
+                    prayer: "Lord, protect me from the consequences of rebellion and lead me into the safety of obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-46",
+                    reference: "Psalm 78:46",
+                    text: "He gave also their crops to the grasshopper\n    And the product of their labor to the locust.",
+                    prayer: "Father, help me recognize that everything I have belongs to You and should be used for Your glory."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-47",
+                    reference: "Psalm 78:47",
+                    text: "He destroyed their vines with hailstones\n    And their sycamore trees with frost.",
+                    prayer: "Lord, when loss or hardship comes, help me remain faithful and trust Your purposes."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-48",
+                    reference: "Psalm 78:48",
+                    text: "He gave over their cattle also to the hailstones\n    And their herds to bolts of lightning.",
+                    prayer: "Father, protect what You have entrusted to me and help me steward every blessing wisely."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-49",
+                    reference: "Psalm 78:49",
+                    text: "He sent upon them His burning anger,\n    Fury and indignation and trouble,\n    A band of destroying angels.",
+                    prayer: "Lord, Your judgment is serious and holy. Teach me to live with reverence and awe before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-50",
+                    reference: "Psalm 78:50",
+                    text: "He leveled a path for His anger;\n    He did not spare their soul from death,\n    But gave over their life to the plague,",
+                    prayer: "Father, thank You for making a way of deliverance. Help me walk in the freedom of Your mercy."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-51",
+                    reference: "Psalm 78:51",
+                    text: "And smote all the firstborn in Egypt,\n    The first issue of their virility in the tents of Ham.",
+                    prayer: "Lord, remind me that every household and generation needs Your salvation and protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-52",
+                    reference: "Psalm 78:52",
+                    text: "But He led forth His own people like sheep\n    And guided them in the wilderness like a flock;",
+                    prayer: "Father, thank You for leading Your people like sheep. Shepherd my life with patience and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-53",
+                    reference: "Psalm 78:53",
+                    text: "He led them safely, so that they did not fear;\n    But the sea engulfed their enemies.",
+                    prayer: "Lord, guide me safely and keep fear from ruling my heart as I follow You."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-54",
+                    reference: "Psalm 78:54",
+                    text: "So He brought them to His holy land,\n    To this hill country which His right hand had gained.",
+                    prayer: "Father, bring me into the place You have prepared and help me recognize Your faithful hand."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-55",
+                    reference: "Psalm 78:55",
+                    text: "He also drove out the nations before them\n    And apportioned them for an inheritance by measurement,\n    And made the tribes of Israel dwell in their tents.",
+                    prayer: "Lord, thank You for providing inheritance and blessing. Help me receive Your gifts with humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-56",
+                    reference: "Psalm 78:56",
+                    text: "Yet they tempted and rebelled against the Most High God\n    And did not keep His testimonies,",
+                    prayer: "Father, protect me from testing You or resisting Your instruction. Give me a submissive heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-57",
+                    reference: "Psalm 78:57",
+                    text: "But turned back and acted treacherously like their fathers;\n    They turned aside like a treacherous bow.",
+                    prayer: "Lord, keep me from turning away like an unfaithful heart. Make me steady and trustworthy before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-58",
+                    reference: "Psalm 78:58",
+                    text: "For they provoked Him with their high places\n    And aroused His jealousy with their graven images.",
+                    prayer: "Father, remove every idol and divided affection from my life. Help me worship You alone."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-59",
+                    reference: "Psalm 78:59",
+                    text: "When God heard, He was filled with wrath\n    And greatly abhorred Israel;",
+                    prayer: "Lord, when sin grieves You, help me repent quickly and return to Your ways."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-60",
+                    reference: "Psalm 78:60",
+                    text: "So that He abandoned the dwelling place at Shiloh,\n    The tent which He had pitched among men,",
+                    prayer: "Father, help me never take Your presence for granted. Teach me to honor where You dwell."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-61",
+                    reference: "Psalm 78:61",
+                    text: "And gave up His strength to captivity\n    And His glory into the hand of the adversary.",
+                    prayer: "Lord, preserve what displays Your strength and glory in my life. Keep me close to Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-62",
+                    reference: "Psalm 78:62",
+                    text: "He also delivered His people to the sword,\n    And was filled with wrath at His inheritance.",
+                    prayer: "Father, protect Your people and lead us away from rebellion into faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-63",
+                    reference: "Psalm 78:63",
+                    text: "Fire devoured His young men,\n    And His virgins had no wedding songs.",
+                    prayer: "Lord, when judgment and loss come, teach me to learn, repent, and seek Your restoration."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-64",
+                    reference: "Psalm 78:64",
+                    text: "His priests fell by the sword,\n    And His widows could not weep.",
+                    prayer: "Father, comfort those who mourn and restore what has been broken by sin, loss, or hardship."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-65",
+                    reference: "Psalm 78:65",
+                    text: "Then the Lord awoke as if from sleep,\n    Like a warrior overcome by wine.",
+                    prayer: "Lord, rise up with power and mercy. Awaken hope where there has been discouragement."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-66",
+                    reference: "Psalm 78:66",
+                    text: "He drove His adversaries backward;\n    He put on them an everlasting reproach.",
+                    prayer: "Father, defeat what opposes Your will and establish Your righteousness in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-67",
+                    reference: "Psalm 78:67",
+                    text: "He also rejected the tent of Joseph,\n    And did not choose the tribe of Ephraim,",
+                    prayer: "Lord, help me trust Your choices, even when they are different from what I expected."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-68",
+                    reference: "Psalm 78:68",
+                    text: "But chose the tribe of Judah,\n    Mount Zion which He loved.",
+                    prayer: "Father, thank You for choosing what belongs to You. Help me value Your presence above all."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-69",
+                    reference: "Psalm 78:69",
+                    text: "And He built His sanctuary like the heights,\n    Like the earth which He has founded forever.",
+                    prayer: "Lord, establish Your work firmly and make my life a dwelling place for Your glory."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-70",
+                    reference: "Psalm 78:70",
+                    text: "He also chose David His servant\n    And took him from the sheepfolds;",
+                    prayer: "Father, thank You for calling ordinary people into Your purposes. Help me serve faithfully where You place me."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-71",
+                    reference: "Psalm 78:71",
+                    text: "From the care of the ewes with suckling lambs He brought him\n    To shepherd Jacob His people,\n    And Israel His inheritance.",
+                    prayer: "Lord, shape me into a faithful shepherd of what You entrust to me. Help me care for others with humility and love."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-72",
+                    reference: "Psalm 78:72",
+                    text: "So he shepherded them according to the integrity of his heart,\n    And guided them with his skillful hands.",
+                    prayer: "Father, give me integrity of heart and skillful hands. Help me lead, serve, and live faithfully before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-78-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your patience, compassion, guidance, and faithfulness through every generation. Help me remember Your works, trust Your provision, and walk in obedience to Your Word. Keep my heart from rebellion, unbelief, and forgetfulness. Teach me to pass on Your truth, serve with integrity, and live as a testimony of Your mercy and power.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 79,
