@@ -7537,28 +7537,546 @@ enum PsalmsPrayerData {
             title: "Endow the King",
             chapterReference: "Psalm 72",
             summary: "Pray for righteous leadership and justice.",
-            verses: []
+            // JSON resource: psalm_72_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-72-1",
+                    reference: "Psalm 72:1",
+                    text: "Give the king Your judgments, O God,\n  And Your righteousness to the king's son.",
+                    prayer: "Lord, give me wisdom to value justice and righteousness. Teach me to make decisions that honor You and reflect Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-2",
+                    reference: "Psalm 72:2",
+                    text: "May he judge Your people with righteousness\n  And Your afflicted with justice.",
+                    prayer: "Father, help me care about justice for all people. Let my actions reflect fairness, compassion, and righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-3",
+                    reference: "Psalm 72:3",
+                    text: "Let the mountains bring peace to the people,\n  And the hills, in righteousness.",
+                    prayer: "Lord, let peace and righteousness grow in my life. Make my heart a place where Your goodness is welcomed and seen."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-4",
+                    reference: "Psalm 72:4",
+                    text: "May he vindicate the afflicted of the people,\n  Save the children of the needy\n  And crush the oppressor.",
+                    prayer: "Father, defend the weak, the needy, and those who are oppressed. Use my life to reflect Your compassion and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-5",
+                    reference: "Psalm 72:5",
+                    text: "Let them fear You while the sun endures,\n  And as long as the moon, throughout all generations.",
+                    prayer: "Lord, teach me to live with reverence for You from generation to generation. Let my faithfulness point others toward Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-6",
+                    reference: "Psalm 72:6",
+                    text: "May he come down like rain upon the mown grass,\n  Like showers that water the earth.",
+                    prayer: "Father, let Your presence refresh my soul like rain on dry ground. Bring renewal, peace, and life where I feel weary."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-7",
+                    reference: "Psalm 72:7",
+                    text: "In his days may the righteous flourish,\n  And abundance of peace till the moon is no more.",
+                    prayer: "Lord, let righteousness flourish and peace increase in my life. Help me walk in Your ways with a steady and faithful heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-8",
+                    reference: "Psalm 72:8",
+                    text: "May he also rule from sea to sea\n  And from the River to the ends of the earth.",
+                    prayer: "Father, You reign over all. Help me trust Your authority and surrender every area of my life to Your rule."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-9",
+                    reference: "Psalm 72:9",
+                    text: "Let the nomads of the desert bow before him,\n  And his enemies lick the dust.",
+                    prayer: "Lord, every power and every enemy must bow before You. Help me remember that nothing is greater than Your authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-10",
+                    reference: "Psalm 72:10",
+                    text: "Let the kings of Tarshish and of the islands bring presents;\n  The kings of Sheba and Seba offer gifts.",
+                    prayer: "Father, may people from every place bring honor to You. Let my life also offer worship, gratitude, and devotion."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-11",
+                    reference: "Psalm 72:11",
+                    text: "And let all kings bow down before him,\n  All nations serve him.",
+                    prayer: "Lord, You are worthy of worship from every nation and every heart. Help me honor You as King over all."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-12",
+                    reference: "Psalm 72:12",
+                    text: "For he will deliver the needy when he cries for help,\n  The afflicted also, and him who has no helper.",
+                    prayer: "Father, thank You for hearing the needy and rescuing those who have no helper. Make me attentive to those who are hurting."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-13",
+                    reference: "Psalm 72:13",
+                    text: "He will have compassion on the poor and needy,\n  And the lives of the needy he will save.",
+                    prayer: "Lord, give me compassion for the poor and weak. Help me care about the lives of those who need mercy and protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-14",
+                    reference: "Psalm 72:14",
+                    text: "He will rescue their life from oppression and violence,\n  And their blood will be precious in his sight;",
+                    prayer: "Father, redeem people from oppression and violence. Teach me to value every life as precious in Your sight."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-15",
+                    reference: "Psalm 72:15",
+                    text: "So may he live, and may the gold of Sheba be given to him;\n  And let them pray for him continually;\n  Let them bless him all day long.",
+                    prayer: "Lord, may my life continually bless and honor You. Let prayer, praise, and gratitude remain alive in my heart each day."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-16",
+                    reference: "Psalm 72:16",
+                    text: "May there be abundance of grain in the earth on top of the mountains;\n  Its fruit will wave like the cedars of Lebanon;\n  And may those from the city flourish like vegetation of the earth.",
+                    prayer: "Father, let Your blessing produce fruitfulness in every area of my life. Help what You plant in me grow for Your glory."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-17",
+                    reference: "Psalm 72:17",
+                    text: "May his name endure forever;\n  May his name increase as long as the sun shines;\n  And let men bless themselves by him;\n  Let all nations call him blessed.",
+                    prayer: "Lord, may Your name endure forever and Your blessing reach every generation. Use my life to point others toward Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-18",
+                    reference: "Psalm 72:18",
+                    text: "Blessed be the Lord God, the God of Israel,\n  Who alone works wonders.",
+                    prayer: "Father, blessed are You, the God who alone works wonders. Help me remember Your power and praise You for all You do."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-19",
+                    reference: "Psalm 72:19",
+                    text: "And blessed be His glorious name forever;\n  And may the whole earth be filled with His glory.\n  Amen, and Amen.",
+                    prayer: "Lord, blessed be Your glorious name forever. Let the whole earth be filled with Your glory, and let my life join in that praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-20",
+                    reference: "Psalm 72:20",
+                    text: "The prayers of David the son of Jesse are ended.",
+                    prayer: "Father, thank You for faithful prayers that point generations toward You. Help my prayers and my life honor You to the end."
+                ),
+                PrayerVerse(
+                    id: "psalm-72-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your righteousness, justice, compassion, and glory. Teach me to care for the weak, defend what is right, and walk humbly under Your authority. Let peace and righteousness flourish in my heart, and let my life point others toward Your eternal kingdom. May Your name be blessed forever, and may the whole earth be filled with Your glory.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 73,
             title: "Who Have I But You?",
             chapterReference: "Psalm 73",
             summary: "Pray for perspective when the wicked prosper.",
-            verses: []
+            // JSON resource: psalm_73_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-73-1",
+                    reference: "Psalm 73:1",
+                    text: "Surely God is good to Israel,\n  To those who are pure in heart!",
+                    prayer: "Lord, thank You for being good to those who seek You with a pure heart. Help me trust Your goodness even when life feels confusing."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-2",
+                    reference: "Psalm 73:2",
+                    text: "But as for me, my feet came close to stumbling,\n  My steps had almost slipped.",
+                    prayer: "Father, when my steps feel unsteady and my faith feels weak, hold me close and keep me from slipping away from Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-3",
+                    reference: "Psalm 73:3",
+                    text: "For I was envious of the arrogant\n  As I saw the prosperity of the wicked.",
+                    prayer: "Lord, guard my heart from envy when I see others prosper. Help me focus on Your faithfulness instead of comparing my life to others."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-4",
+                    reference: "Psalm 73:4",
+                    text: "For there are no pains in their death,\n  And their body is fat.",
+                    prayer: "Father, when it seems like others live without struggle, remind me that appearances do not reveal the whole story."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-5",
+                    reference: "Psalm 73:5",
+                    text: "They are not in trouble as other men,\n  Nor are they plagued like mankind.",
+                    prayer: "Lord, keep my heart from frustration when life feels unfair. Help me trust that You see clearly and judge rightly."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-6",
+                    reference: "Psalm 73:6",
+                    text: "Therefore pride is their necklace;\n  The garment of violence covers them.",
+                    prayer: "Father, protect me from pride and arrogance. Clothe me instead with humility, compassion, and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-7",
+                    reference: "Psalm 73:7",
+                    text: "Their eye bulges from fatness;\n  The imaginations of their heart run riot.",
+                    prayer: "Lord, guard my desires from greed and selfishness. Teach me to be content in You and satisfied by Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-8",
+                    reference: "Psalm 73:8",
+                    text: "They mock and wickedly speak of oppression;\n  They speak from on high.",
+                    prayer: "Father, keep my words from arrogance, cruelty, or pride. Let my speech reflect truth, kindness, and wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-9",
+                    reference: "Psalm 73:9",
+                    text: "They have set their mouth against the heavens,\n  And their tongue parades through the earth.",
+                    prayer: "Lord, protect me from speaking as though I am above others. Help me walk humbly under Your authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-10",
+                    reference: "Psalm 73:10",
+                    text: "Therefore his people return to this place,\n  And waters of abundance are drunk by them.",
+                    prayer: "Father, give me discernment when people are influenced by false success or empty promises. Keep my heart anchored in Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-11",
+                    reference: "Psalm 73:11",
+                    text: "They say, “How does God know?\n  And is there knowledge with the Most High?”",
+                    prayer: "Lord, remind me that You see everything. Nothing is hidden from Your knowledge, wisdom, or justice."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-12",
+                    reference: "Psalm 73:12",
+                    text: "Behold, these are the wicked;\n  And always at ease, they have increased in wealth.",
+                    prayer: "Father, when the wicked seem at ease, help me remember that temporary prosperity is not the same as eternal security."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-13",
+                    reference: "Psalm 73:13",
+                    text: "Surely in vain I have kept my heart pure\n  And washed my hands in innocence;",
+                    prayer: "Lord, when I wonder whether faithfulness is worth it, remind me that walking with You is never empty or wasted."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-14",
+                    reference: "Psalm 73:14",
+                    text: "For I have been stricken all day long\n  And chastened every morning.",
+                    prayer: "Father, when discipline, hardship, or correction comes, help me trust that You are shaping my heart for good."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-15",
+                    reference: "Psalm 73:15",
+                    text: "If I had said, “I will speak thus,”\n  Behold, I would have betrayed the generation of Your children.",
+                    prayer: "Lord, guard my words when I am confused or discouraged. Help me not lead others into doubt, but bring my questions honestly to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-16",
+                    reference: "Psalm 73:16",
+                    text: "When I pondered to understand this,\n  It was troublesome in my sight",
+                    prayer: "Father, when I cannot understand what I see, give me patience, humility, and faith to wait for Your wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-17",
+                    reference: "Psalm 73:17",
+                    text: "Until I came into the sanctuary of God;\n  Then I perceived their end.",
+                    prayer: "Lord, bring me into Your presence and help me see life from Your eternal perspective."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-18",
+                    reference: "Psalm 73:18",
+                    text: "Surely You set them in slippery places;\n  You cast them down to destruction.",
+                    prayer: "Father, remind me that life built apart from You stands on unstable ground. Keep my feet firmly planted in Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-19",
+                    reference: "Psalm 73:19",
+                    text: "How they are destroyed in a moment!\n  They are utterly swept away by sudden terrors!",
+                    prayer: "Lord, help me remember how quickly earthly security can disappear. Teach me to build my life on what is eternal."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-20",
+                    reference: "Psalm 73:20",
+                    text: "Like a dream when one awakes,\n  O Lord, when aroused, You will despise their form.",
+                    prayer: "Father, let temporary things lose their power over my heart. Help me seek what lasts forever in Your kingdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-21",
+                    reference: "Psalm 73:21",
+                    text: "When my heart was embittered\n  And I was pierced within,",
+                    prayer: "Lord, when my heart becomes bitter or wounded, soften me with Your mercy and restore my peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-22",
+                    reference: "Psalm 73:22",
+                    text: "Then I was senseless and ignorant;\n  I was like a beast before You.",
+                    prayer: "Father, forgive me when I lack understanding or respond with foolishness. Teach me wisdom and humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-23",
+                    reference: "Psalm 73:23",
+                    text: "Nevertheless I am continually with You;\n  You have taken hold of my right hand.",
+                    prayer: "Lord, thank You that even when I struggle, I am continually with You. Hold my right hand and guide me with Your love."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-24",
+                    reference: "Psalm 73:24",
+                    text: "With Your counsel You will guide me,\n  And afterward receive me to glory.",
+                    prayer: "Father, guide me with Your counsel and lead me toward the hope and glory found in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-25",
+                    reference: "Psalm 73:25",
+                    text: "Whom have I in heaven but You?\n  And besides You, I desire nothing on earth.",
+                    prayer: "Lord, whom have I in heaven but You? Help me desire You above everything on earth."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-26",
+                    reference: "Psalm 73:26",
+                    text: "My flesh and my heart may fail,\n  But God is the strength of my heart and my portion forever.",
+                    prayer: "Father, when my flesh and heart fail, be the strength of my heart and my portion forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-27",
+                    reference: "Psalm 73:27",
+                    text: "For, behold, those who are far from You will perish;\n  You have destroyed all those who are unfaithful to You.",
+                    prayer: "Lord, keep me close to You and protect me from anything that would pull my heart away from Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-28",
+                    reference: "Psalm 73:28",
+                    text: "But as for me, the nearness of God is my good;\n  I have made the Lord God my refuge,\n  That I may tell of all Your works.",
+                    prayer: "Father, it is good for me to draw near to You. Help me make You my refuge and declare all Your works with gratitude and faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-73-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my strength, my portion, and my refuge. When life feels unfair or confusing, bring me into Your presence and help me see with eternal perspective. Guard my heart from envy, bitterness, and comparison, and teach me to desire You above all else. Hold my hand, guide me with Your counsel, and keep me close to You forever.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 74,
             title: "Remember Your Congregation",
             chapterReference: "Psalm 74",
             summary: "Pray for God's intervention and restoration.",
-            verses: []
+            // JSON resource: psalm_74_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-74-1",
+                    reference: "Psalm 74:1",
+                    text: "O God, why have You rejected us forever?\n  Why does Your anger smoke against the sheep of Your pasture?",
+                    prayer: "Lord, when I feel forgotten or distant from Your presence, help me remember that You are still faithful and near to Your people."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-2",
+                    reference: "Psalm 74:2",
+                    text: "Remember Your congregation, which You have purchased of old,\n  Which You have redeemed to be the tribe of Your inheritance;\n  And this Mount Zion, where You have dwelt.",
+                    prayer: "Father, remember Your people with mercy. Thank You for redeeming us and calling us to belong to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-3",
+                    reference: "Psalm 74:3",
+                    text: "Turn Your footsteps toward the perpetual ruins;\n  The enemy has damaged everything within the sanctuary.",
+                    prayer: "Lord, restore what has been broken and bring healing where there has been loss, damage, or discouragement."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-4",
+                    reference: "Psalm 74:4",
+                    text: "Your adversaries have roared in the midst of Your meeting place;\n  They have set up their own standards for signs.",
+                    prayer: "Father, when voices of opposition seem loud, help me stay anchored in Your truth and confidence in Your power."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-5",
+                    reference: "Psalm 74:5",
+                    text: "It seems as if one had lifted up\n  His axe in a forest of trees.",
+                    prayer: "Lord, protect what is holy and precious. Help me honor the things that belong to You with reverence and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-6",
+                    reference: "Psalm 74:6",
+                    text: "And now all its carved work\n  They smash with hatchet and hammers.",
+                    prayer: "Father, defend the work of Your hands and preserve what You have built in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-7",
+                    reference: "Psalm 74:7",
+                    text: "They have burned Your sanctuary to the ground;\n  They have defiled the dwelling place of Your name.",
+                    prayer: "Lord, when sacred things are treated carelessly, give me a heart that values Your presence, Your Word, and Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-8",
+                    reference: "Psalm 74:8",
+                    text: "They said in their heart, “Let us completely subdue them.”\n  They have burned all the meeting places of God in the land.",
+                    prayer: "Father, protect Your people and places of worship. Let Your truth remain strong through every generation."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-9",
+                    reference: "Psalm 74:9",
+                    text: "We do not see our signs;\n  There is no longer any prophet,\n  Nor is there any among us who knows how long.",
+                    prayer: "Lord, when I cannot clearly see signs of Your work, help me trust that You are still moving even in silence."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-10",
+                    reference: "Psalm 74:10",
+                    text: "How long, O God, will the adversary revile,\n  And the enemy spurn Your name forever?",
+                    prayer: "Father, when I wonder how long hardship will continue, strengthen my patience and renew my hope in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-11",
+                    reference: "Psalm 74:11",
+                    text: "Why do You withdraw Your hand, even Your right hand?\n  From within Your bosom, destroy them!",
+                    prayer: "Lord, do not hold back Your help. Stretch out Your hand in mercy and bring deliverance according to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-12",
+                    reference: "Psalm 74:12",
+                    text: "Yet God is my king from of old,\n  Who works deeds of deliverance in the midst of the earth.",
+                    prayer: "Father, thank You that You have been my King from long ago. Help me remember Your saving works and trust Your authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-13",
+                    reference: "Psalm 74:13",
+                    text: "You divided the sea by Your strength;\n  You broke the heads of the sea monsters in the waters.",
+                    prayer: "Lord, You rule over the sea and every force of chaos. Speak peace over every storm in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-14",
+                    reference: "Psalm 74:14",
+                    text: "You crushed the heads of Leviathan;\n  You gave him as food for the creatures of the wilderness.",
+                    prayer: "Father, You overcome every enemy and every power that rises against Your purposes. Help me trust Your victory."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-15",
+                    reference: "Psalm 74:15",
+                    text: "You broke open springs and torrents;\n  You dried up ever-flowing streams.",
+                    prayer: "Lord, You open springs and dry up rivers. Remind me that You can provide, redirect, and make a way where I see none."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-16",
+                    reference: "Psalm 74:16",
+                    text: "Yours is the day, Yours also is the night;\n  You have prepared the light and the sun.",
+                    prayer: "Father, the day and night belong to You. Help me trust Your care in both bright seasons and dark ones."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-17",
+                    reference: "Psalm 74:17",
+                    text: "You have established all the boundaries of the earth;\n  You have made summer and winter.",
+                    prayer: "Lord, You established the boundaries of the earth and formed the seasons. Help me rest in Your wisdom and order."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-18",
+                    reference: "Psalm 74:18",
+                    text: "Remember this, O Lord, that the enemy has reviled,\n  And a foolish people has spurned Your name.",
+                    prayer: "Father, when people mock Your name or reject Your truth, help me remain faithful, humble, and devoted to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-19",
+                    reference: "Psalm 74:19",
+                    text: "Do not deliver the soul of Your turtledove to the wild beast;\n  Do not forget the life of Your afflicted forever.",
+                    prayer: "Lord, protect the vulnerable and do not forget those who depend on You. Keep my soul safe in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-20",
+                    reference: "Psalm 74:20",
+                    text: "Consider the covenant;\n  For the dark places of the land are full of the habitations of violence.",
+                    prayer: "Father, remember Your covenant and shine Your light in dark places. Let Your faithfulness bring hope where there is fear."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-21",
+                    reference: "Psalm 74:21",
+                    text: "Let not the oppressed return dishonored;\n  Let the afflicted and needy praise Your name.",
+                    prayer: "Lord, do not let the oppressed turn away in shame. Let the poor and needy praise Your name through Your mercy and help."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-22",
+                    reference: "Psalm 74:22",
+                    text: "Arise, O God, and plead Your own cause;\n  Remember how the foolish man reproaches You all day long.",
+                    prayer: "Father, arise and defend Your cause. Help me trust that Your truth, justice, and glory will prevail."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-23",
+                    reference: "Psalm 74:23",
+                    text: "Do not forget the voice of Your adversaries,\n  The uproar of those who rise against You which ascends continually.",
+                    prayer: "Lord, do not forget the noise of opposition. Silence what dishonors You and let Your name be exalted above all."
+                ),
+                PrayerVerse(
+                    id: "psalm-74-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being King over every season, every storm, and every struggle. When I feel confused, forgotten, or surrounded by opposition, help me remember Your covenant, Your power, and Your faithfulness. Restore what is broken, defend what belongs to You, and keep my heart anchored in hope. May my life trust Your timing, honor Your name, and praise You through every season.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 75,
             title: "We Give Thanks",
             chapterReference: "Psalm 75",
             summary: "Pray in gratitude for God's judgment.",
-            verses: []
+            // JSON resource: psalm_75_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-75-1",
+                    reference: "Psalm 75:1",
+                    text: "We give thanks to You, O God, we give thanks,\n  For Your name is near;\n  Men declare Your wondrous works.",
+                    prayer: "Lord, I give thanks to You because Your name is near. Help me remember Your wonderful works and praise You with a grateful heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-75-2",
+                    reference: "Psalm 75:2",
+                    text: "“When I select an appointed time,\n  It is I who judge with equity.",
+                    prayer: "Father, thank You that You judge with fairness and perfect timing. Help me trust Your appointed seasons and Your righteous decisions."
+                ),
+                PrayerVerse(
+                    id: "psalm-75-3",
+                    reference: "Psalm 75:3",
+                    text: "“The earth and all who dwell in it melt;\n  It is I who have firmly set its pillars. Selah.",
+                    prayer: "Lord, when the world feels unstable, remind me that You hold everything together. Keep my heart steady in Your strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-75-4",
+                    reference: "Psalm 75:4",
+                    text: "“I said to the boastful, ‘Do not boast,’\n  And to the wicked, ‘Do not lift up the horn;",
+                    prayer: "Father, protect me from pride and arrogance. Teach me to walk humbly before You and others."
+                ),
+                PrayerVerse(
+                    id: "psalm-75-5",
+                    reference: "Psalm 75:5",
+                    text: "Do not lift up your horn on high,\n  Do not speak with insolent pride.’”",
+                    prayer: "Lord, keep me from lifting myself up in pride. Help me submit my heart, words, and actions to Your authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-75-6",
+                    reference: "Psalm 75:6",
+                    text: "For not from the east, nor from the west,\n  Nor from the desert comes exaltation;",
+                    prayer: "Father, remind me that promotion and honor do not come from human striving, but from Your hand."
+                ),
+                PrayerVerse(
+                    id: "psalm-75-7",
+                    reference: "Psalm 75:7",
+                    text: "But God is the Judge;\n  He puts down one and exalts another.",
+                    prayer: "Lord, You are the Judge who raises up and brings down according to Your wisdom. Help me trust Your justice and timing."
+                ),
+                PrayerVerse(
+                    id: "psalm-75-8",
+                    reference: "Psalm 75:8",
+                    text: "For a cup is in the hand of the Lord, and the wine foams;\n  It is well mixed, and He pours out of this;\n  Surely all the wicked of the earth must drain and drink down its dregs.",
+                    prayer: "Father, help me remember the seriousness of Your holiness and judgment. Teach me to live with reverence and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-75-9",
+                    reference: "Psalm 75:9",
+                    text: "But as for me, I will declare it forever;\n  I will sing praises to the God of Jacob.",
+                    prayer: "Lord, I will declare Your praise forever. Let my life continually testify to Your righteousness and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-75-10",
+                    reference: "Psalm 75:10",
+                    text: "And all the horns of the wicked He will cut off,\n  But the horns of the righteous will be lifted up.",
+                    prayer: "Father, remove pride and wickedness, and strengthen what is righteous. Help me walk in humility, truth, and faithfulness before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-75-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being near, righteous, and sovereign over every season. Help me trust Your timing, reject pride, and walk humbly before You. When life feels unstable, remind me that You hold all things together. May my life continually give thanks, declare Your praise, and reflect confidence in Your justice and faithfulness.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         )
     ]
 
