@@ -8756,49 +8756,699 @@ enum PsalmsPrayerData {
             title: "Help Us, O God",
             chapterReference: "Psalm 79",
             summary: "Pray for mercy and deliverance.",
-            verses: []
+            // JSON resource: psalm_79_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-79-1",
+                    reference: "Psalm 79:1",
+                    text: "O God, the nations have invaded Your inheritance;\n    They have defiled Your holy temple;\n    They have laid Jerusalem in ruins.",
+                    prayer: "Lord, when sacred things are broken or dishonored, help me grieve with faith and trust that You are still present and sovereign."
+                ),
+                PrayerVerse(
+                    id: "psalm-79-2",
+                    reference: "Psalm 79:2",
+                    text: "They have given the dead bodies of Your servants for food to the birds of the heavens,\n    The flesh of Your godly ones to the beasts of the earth.",
+                    prayer: "Father, protect Your people and bring dignity, mercy, and care where there has been loss, suffering, or destruction."
+                ),
+                PrayerVerse(
+                    id: "psalm-79-3",
+                    reference: "Psalm 79:3",
+                    text: "They have poured out their blood like water round about Jerusalem;\n    And there was no one to bury them.",
+                    prayer: "Lord, when sorrow surrounds me, help me bring my pain honestly before You and trust Your compassion."
+                ),
+                PrayerVerse(
+                    id: "psalm-79-4",
+                    reference: "Psalm 79:4",
+                    text: "We have become a reproach to our neighbors,\n    A scoffing and derision to those around us.",
+                    prayer: "Father, when I feel mocked, rejected, or misunderstood, remind me that my identity is secure in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-79-5",
+                    reference: "Psalm 79:5",
+                    text: "How long, O Lord? Will You be angry forever?\n    Will Your jealousy burn like fire?",
+                    prayer: "Lord, when hardship feels long and overwhelming, strengthen my patience and renew my hope in Your mercy."
+                ),
+                PrayerVerse(
+                    id: "psalm-79-6",
+                    reference: "Psalm 79:6",
+                    text: "Pour out Your wrath upon the nations which do not know You,\n    And upon the kingdoms which do not call upon Your name.",
+                    prayer: "Father, bring justice where Your name is rejected and Your truth is ignored. Help me trust Your righteous judgment."
+                ),
+                PrayerVerse(
+                    id: "psalm-79-7",
+                    reference: "Psalm 79:7",
+                    text: "For they have devoured Jacob\n    And laid waste his habitation.",
+                    prayer: "Lord, restore what has been damaged by sin, rebellion, or destruction. Let Your mercy bring healing and renewal."
+                ),
+                PrayerVerse(
+                    id: "psalm-79-8",
+                    reference: "Psalm 79:8",
+                    text: "Do not remember the iniquities of our forefathers against us;\n    Let Your compassion come quickly to meet us,\n    For we are brought very low.",
+                    prayer: "Father, do not remember past sins against me. Meet me with compassion and help me walk in repentance and grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-79-9",
+                    reference: "Psalm 79:9",
+                    text: "Help us, O God of our salvation, for the glory of Your name;\n    And deliver us and forgive our sins for Your name’s sake.",
+                    prayer: "Lord, help me for the glory of Your name. Deliver me, forgive me, and let my life reflect Your mercy and salvation."
+                ),
+                PrayerVerse(
+                    id: "psalm-79-10",
+                    reference: "Psalm 79:10",
+                    text: "Why should the nations say, “Where is their God?”\n    Let there be known among the nations in our sight,\n    Vengeance for the blood of Your servants which has been shed.",
+                    prayer: "Father, let Your name be honored among all people. Show Your faithfulness so others may know that You are God."
+                ),
+                PrayerVerse(
+                    id: "psalm-79-11",
+                    reference: "Psalm 79:11",
+                    text: "Let the groaning of the prisoner come before You;\n    According to the greatness of Your power preserve those who are doomed to die.",
+                    prayer: "Lord, hear the groaning of those who suffer. Bring freedom, mercy, and hope to those who feel trapped or condemned."
+                ),
+                PrayerVerse(
+                    id: "psalm-79-12",
+                    reference: "Psalm 79:12",
+                    text: "And return to our neighbors sevenfold into their bosom\n    The reproach with which they have reproached You, O Lord.",
+                    prayer: "Father, deal with injustice according to Your wisdom. Help me leave vengeance in Your hands and walk in faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-79-13",
+                    reference: "Psalm 79:13",
+                    text: "So we Your people and the sheep of Your pasture\n    Will give thanks to You forever;\n    To all generations we will tell of Your praise.",
+                    prayer: "Lord, thank You for making us the sheep of Your pasture. Help me give thanks to You forever and declare Your praise to every generation."
+                ),
+                PrayerVerse(
+                    id: "psalm-79-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being merciful, just, and faithful even in seasons of sorrow, loss, and confusion. Help me trust You when life feels broken, seek Your forgiveness with humility, and rely on Your compassion. Restore what has been damaged, defend Your name, and teach me to praise You through every generation. May my life remain grateful, faithful, and anchored in Your salvation.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 80,
             title: "Restore Us",
             chapterReference: "Psalm 80",
             summary: "Pray for renewal and God's favor.",
-            verses: []
+            // JSON resource: psalm_80_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-80-1",
+                    reference: "Psalm 80:1",
+                    text: "Oh, give ear, Shepherd of Israel,\n    You who lead Joseph like a flock;\n    You who are enthroned above the cherubim, shine forth!",
+                    prayer: "Lord, Shepherd of Your people, hear my prayer. Lead me with Your wisdom, care, and faithful presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-2",
+                    reference: "Psalm 80:2",
+                    text: "Before Ephraim and Benjamin and Manasseh, stir up Your power\n    And come to save us!",
+                    prayer: "Father, awaken Your strength and come to help me. Let Your power bring rescue, renewal, and hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-3",
+                    reference: "Psalm 80:3",
+                    text: "O God, restore us\n    And cause Your face to shine upon us, and we will be saved.",
+                    prayer: "Lord, restore me and let Your face shine upon me. Bring salvation, peace, and spiritual renewal to my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-4",
+                    reference: "Psalm 80:4",
+                    text: "O Lord God of hosts,\n    How long will You be angry with the prayer of Your people?",
+                    prayer: "Father, when prayer feels heavy and answers feel delayed, help me keep seeking You with faith and patience."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-5",
+                    reference: "Psalm 80:5",
+                    text: "You have fed them with the bread of tears,\n    And You have made them to drink tears in large measure.",
+                    prayer: "Lord, when sorrow feels like daily bread, comfort me with Your mercy and remind me that You are near."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-6",
+                    reference: "Psalm 80:6",
+                    text: "You make us an object of contention to our neighbors,\n    And our enemies laugh among themselves.",
+                    prayer: "Father, when conflict or opposition surrounds me, protect my heart from discouragement and keep me anchored in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-7",
+                    reference: "Psalm 80:7",
+                    text: "O God of hosts, restore us\n    And cause Your face to shine upon us, and we will be saved.",
+                    prayer: "Lord, restore me again and let Your face shine upon me. Let Your presence bring healing, strength, and salvation."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-8",
+                    reference: "Psalm 80:8",
+                    text: "You removed a vine from Egypt;\n    You drove out the nations and planted it.",
+                    prayer: "Father, thank You for planting and establishing Your people. Help me remain rooted in Your purpose and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-9",
+                    reference: "Psalm 80:9",
+                    text: "You cleared the ground before it,\n    And it took deep root and filled the land.",
+                    prayer: "Lord, prepare the ground of my heart so that faith, obedience, and love may grow deeply within me."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-10",
+                    reference: "Psalm 80:10",
+                    text: "The mountains were covered with its shadow,\n    And the cedars of God with its boughs.",
+                    prayer: "Father, let the life You plant in me grow strong and become a testimony of Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-11",
+                    reference: "Psalm 80:11",
+                    text: "It was sending out its branches to the sea\n    And its shoots to the River.",
+                    prayer: "Lord, expand the fruitfulness of my life according to Your will, and let my influence honor You."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-12",
+                    reference: "Psalm 80:12",
+                    text: "Why have You broken down its hedges,\n    So that all who pass that way pick its fruit?",
+                    prayer: "Father, when protection feels removed or life feels exposed, help me return to You and trust Your covering."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-13",
+                    reference: "Psalm 80:13",
+                    text: "A boar from the forest eats it away\n    And whatever moves in the field feeds on it.",
+                    prayer: "Lord, guard what You have planted in me from anything that would damage, weaken, or destroy it."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-14",
+                    reference: "Psalm 80:14",
+                    text: "O God of hosts, turn again now, we beseech You;\n    Look down from heaven and see, and take care of this vine,",
+                    prayer: "Father, turn again toward me with mercy. Look upon what You have planted and restore it by Your grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-15",
+                    reference: "Psalm 80:15",
+                    text: "Even the shoot which Your right hand has planted,\n    And on the son whom You have strengthened for Yourself.",
+                    prayer: "Lord, strengthen the work of Your hand. Establish what You have chosen and nurture what belongs to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-16",
+                    reference: "Psalm 80:16",
+                    text: "It is burned with fire, it is cut down;\n    They perish at the rebuke of Your countenance.",
+                    prayer: "Father, when things feel burned, broken, or cut down, bring renewal through Your presence and power."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-17",
+                    reference: "Psalm 80:17",
+                    text: "Let Your hand be upon the man of Your right hand,\n    Upon the son of man whom You made strong for Yourself.",
+                    prayer: "Lord, let Your hand be upon the one You strengthen. Uphold me by Your grace and help me remain faithful."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-18",
+                    reference: "Psalm 80:18",
+                    text: "Then we shall not turn back from You;\n    Revive us, and we will call upon Your name.",
+                    prayer: "Father, keep me from turning back from You. Revive me, and I will call upon Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-19",
+                    reference: "Psalm 80:19",
+                    text: "O Lord God of hosts, restore us;\n    Cause Your face to shine upon us, and we will be saved.",
+                    prayer: "Lord, restore me, let Your face shine upon me, and bring salvation, hope, and peace to my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-80-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my Shepherd, Restorer, and faithful Keeper. Restore what is weak, revive what has grown weary, and protect what You have planted in my life. Let Your face shine upon me, and lead me back into deeper trust, obedience, and hope. May my life remain rooted in Your presence and strengthened by Your grace.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 81,
             title: "Sing for Joy",
             chapterReference: "Psalm 81",
             summary: "Pray for obedience and celebration.",
-            verses: []
+            // JSON resource: psalm_81_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-81-1",
+                    reference: "Psalm 81:1",
+                    text: "Sing for joy to God our strength;\n    Shout joyfully to the God of Jacob.",
+                    prayer: "Lord, fill my heart with joyful praise. Help me sing to You with gratitude because You are my strength and my God."
+                ),
+                PrayerVerse(
+                    id: "psalm-81-2",
+                    reference: "Psalm 81:2",
+                    text: "Raise a song, strike the timbrel,\n    The sweet sounding lyre with the harp.",
+                    prayer: "Father, awaken worship within me. Let every part of my life join in praise to Your holy name."
+                ),
+                PrayerVerse(
+                    id: "psalm-81-3",
+                    reference: "Psalm 81:3",
+                    text: "Blow the trumpet at the new moon,\n    At the full moon, on our feast day.",
+                    prayer: "Lord, teach me to honor sacred rhythms of worship, remembrance, and celebration before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-81-4",
+                    reference: "Psalm 81:4",
+                    text: "For it is a statute for Israel,\n    An ordinance of the God of Jacob.",
+                    prayer: "Father, help me obey Your ways and remember the instructions You have given to Your people."
+                ),
+                PrayerVerse(
+                    id: "psalm-81-5",
+                    reference: "Psalm 81:5",
+                    text: "He established it for a testimony in Joseph\n    When he went throughout the land of Egypt.\n    I heard a language that I did not know:",
+                    prayer: "Lord, thank You for establishing testimony and truth among Your people. Help me listen when You speak."
+                ),
+                PrayerVerse(
+                    id: "psalm-81-6",
+                    reference: "Psalm 81:6",
+                    text: "“I relieved his shoulder of the burden,\n    His hands were freed from the basket.",
+                    prayer: "Father, thank You for lifting burdens and setting people free. Remove what weighs me down and lead me into Your rest."
+                ),
+                PrayerVerse(
+                    id: "psalm-81-7",
+                    reference: "Psalm 81:7",
+                    text: "You called in trouble and I rescued you;\n    I answered you in the hiding place of thunder;\n    I proved you at the waters of Meribah. Selah.",
+                    prayer: "Lord, when I cry out in distress, thank You for hearing and answering me. Help me trust Your presence in every trial."
+                ),
+                PrayerVerse(
+                    id: "psalm-81-8",
+                    reference: "Psalm 81:8",
+                    text: "Hear, O My people, and I will admonish you;\n    O Israel, if you would listen to Me!",
+                    prayer: "Father, give me ears to hear Your warning and instruction. Help my heart remain teachable and obedient."
+                ),
+                PrayerVerse(
+                    id: "psalm-81-9",
+                    reference: "Psalm 81:9",
+                    text: "Let there be no strange god among you;\n    Nor shall you worship any foreign god.",
+                    prayer: "Lord, keep me from idols and anything that competes with my devotion to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-81-10",
+                    reference: "Psalm 81:10",
+                    text: "I, the Lord, am your God,\n    Who brought you up from the land of Egypt;\n    Open your mouth wide and I will fill it.",
+                    prayer: "Father, You are the Lord my God who provides. Open my heart to receive what only You can give."
+                ),
+                PrayerVerse(
+                    id: "psalm-81-11",
+                    reference: "Psalm 81:11",
+                    text: "“But My people did not listen to My voice,\n    And Israel did not obey Me.",
+                    prayer: "Lord, forgive me when I resist Your voice or refuse Your ways. Draw me back to faithful obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-81-12",
+                    reference: "Psalm 81:12",
+                    text: "So I gave them over to the stubbornness of their heart,\n    To walk in their own devices.",
+                    prayer: "Father, protect me from stubbornness and from following the desires of my own heart apart from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-81-13",
+                    reference: "Psalm 81:13",
+                    text: "Oh that My people would listen to Me,\n    That Israel would walk in My ways!",
+                    prayer: "Lord, help me listen to You and walk in Your ways with humility, faith, and trust."
+                ),
+                PrayerVerse(
+                    id: "psalm-81-14",
+                    reference: "Psalm 81:14",
+                    text: "I would quickly subdue their enemies\n    And turn My hand against their adversaries.",
+                    prayer: "Father, defeat what opposes Your will in my life and lead me into freedom through obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-81-15",
+                    reference: "Psalm 81:15",
+                    text: "Those who hate the Lord would pretend obedience to Him,\n    And their time of punishment would be forever.",
+                    prayer: "Lord, let every false thing lose its power before You. Establish truth, reverence, and faithfulness in my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-81-16",
+                    reference: "Psalm 81:16",
+                    text: "But I would feed you with the finest of the wheat,\n    And with honey from the rock I would satisfy you.”",
+                    prayer: "Father, satisfy me with Your goodness. Feed my soul with what is pure, lasting, and life-giving."
+                ),
+                PrayerVerse(
+                    id: "psalm-81-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my strength, my deliverer, and my faithful provider. Teach me to listen to Your voice, reject every idol, and walk in Your ways with a willing heart. Free me from stubbornness, satisfy my soul with Your goodness, and let my life be filled with joyful praise and obedient worship.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 82,
             title: "Defend the Weak",
             chapterReference: "Psalm 82",
             summary: "Pray for justice and righteousness.",
-            verses: []
+            // JSON resource: psalm_82_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-82-1",
+                    reference: "Psalm 82:1",
+                    text: "God takes His stand in His own congregation;\n    He judges in the midst of the rulers.",
+                    prayer: "Lord, You stand as the righteous Judge over all. Help me remember that every authority is accountable to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-82-2",
+                    reference: "Psalm 82:2",
+                    text: "How long will you judge unjustly\n    And show partiality to the wicked? Selah.",
+                    prayer: "Father, protect my heart from partiality, injustice, or favoritism. Teach me to love what is fair, honest, and right."
+                ),
+                PrayerVerse(
+                    id: "psalm-82-3",
+                    reference: "Psalm 82:3",
+                    text: "Vindicate the weak and fatherless;\n    Do justice to the afflicted and destitute.",
+                    prayer: "Lord, help me defend the weak, the fatherless, the afflicted, and those who cannot defend themselves."
+                ),
+                PrayerVerse(
+                    id: "psalm-82-4",
+                    reference: "Psalm 82:4",
+                    text: "Rescue the weak and needy;\n    Deliver them out of the hand of the wicked.",
+                    prayer: "Father, use my life to bring help, protection, and compassion to those who are vulnerable or oppressed."
+                ),
+                PrayerVerse(
+                    id: "psalm-82-5",
+                    reference: "Psalm 82:5",
+                    text: "They do not know nor do they understand;\n    They walk about in darkness;\n    All the foundations of the earth are shaken.",
+                    prayer: "Lord, when people walk in darkness and confusion, let Your truth bring light, wisdom, and stability."
+                ),
+                PrayerVerse(
+                    id: "psalm-82-6",
+                    reference: "Psalm 82:6",
+                    text: "I said, “You are gods,\n    And all of you are sons of the Most High.",
+                    prayer: "Father, remind me that every person carries responsibility before You. Help me live with humility and reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-82-7",
+                    reference: "Psalm 82:7",
+                    text: "Nevertheless you will die like men\n    And fall like any one of the princes.”",
+                    prayer: "Lord, teach me to remember the limits of human power and the certainty of eternity. Keep my heart humble before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-82-8",
+                    reference: "Psalm 82:8",
+                    text: "Arise, O God, judge the earth!\n    For it is You who possesses all the nations.",
+                    prayer: "Father, arise and judge the earth with righteousness. Let Your justice, truth, and kingdom be known among all nations."
+                ),
+                PrayerVerse(
+                    id: "psalm-82-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being the righteous Judge over all the earth. Help me reject injustice, defend the vulnerable, and walk humbly before You. Teach me to value truth, mercy, and righteousness in every decision. May my life reflect Your justice and compassion, and may Your kingdom be honored among all people.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 83,
             title: "Do Not Keep Silent",
             chapterReference: "Psalm 83",
             summary: "Pray for God to act against enemies.",
-            verses: []
+            // JSON resource: psalm_83_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-83-1",
+                    reference: "Psalm 83:1",
+                    text: "O God, do not remain quiet;\n    Do not be silent and, O God, do not be still.",
+                    prayer: "Lord, do not let me mistake silence for absence. Help me trust that You are near, attentive, and faithful even when I am waiting."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-2",
+                    reference: "Psalm 83:2",
+                    text: "For behold, Your enemies make an uproar,\n    And those who hate You have exalted themselves.",
+                    prayer: "Father, when opposition rises loudly, keep my heart steady and remind me that You remain sovereign over every situation."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-3",
+                    reference: "Psalm 83:3",
+                    text: "They make shrewd plans against Your people,\n    And conspire together against Your treasured ones.",
+                    prayer: "Lord, protect Your people from hidden schemes and harmful intentions. Guard what belongs to You with mercy and power."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-4",
+                    reference: "Psalm 83:4",
+                    text: "They have said, “Come, and let us wipe them out as a nation,\n    That the name of Israel be remembered no more.”",
+                    prayer: "Father, preserve the identity and witness of Your people. Help me remain faithful when truth is opposed or forgotten."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-5",
+                    reference: "Psalm 83:5",
+                    text: "For they have conspired together with one mind;\n    Against You they make a covenant:",
+                    prayer: "Lord, when people unite against Your purposes, help me trust that Your plans cannot be defeated."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-6",
+                    reference: "Psalm 83:6",
+                    text: "The tents of Edom and the Ishmaelites,\n    Moab and the Hagrites;",
+                    prayer: "Father, You see every force that stands against Your people. Strengthen my confidence in Your protection and justice."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-7",
+                    reference: "Psalm 83:7",
+                    text: "Gebal and Ammon and Amalek,\n    Philistia with the inhabitants of Tyre;",
+                    prayer: "Lord, no alliance or opposition is greater than You. Help me rest in Your authority above every earthly power."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-8",
+                    reference: "Psalm 83:8",
+                    text: "Assyria also has joined with them;\n    They have become a help to the children of Lot. Selah.",
+                    prayer: "Father, when opposition seems strong or well-supported, remind me that Your strength is greater than all human power."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-9",
+                    reference: "Psalm 83:9",
+                    text: "Deal with them as with Midian,\n    As with Sisera and Jabin at the torrent of Kishon,",
+                    prayer: "Lord, remember Your past victories and faithfulness. Help me trust that You are still able to deliver today."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-10",
+                    reference: "Psalm 83:10",
+                    text: "Who were destroyed at En-dor,\n    Who became as dung for the ground.",
+                    prayer: "Father, remind me that pride and rebellion never have the final word. Your justice and truth will stand forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-11",
+                    reference: "Psalm 83:11",
+                    text: "Make their nobles like Oreb and Zeeb\n    And all their princes like Zebah and Zalmunna,",
+                    prayer: "Lord, bring down every proud thing that resists Your will. Establish humility, righteousness, and obedience in my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-12",
+                    reference: "Psalm 83:12",
+                    text: "Who said, “Let us possess for ourselves\n    The pastures of God.”",
+                    prayer: "Father, protect me from grasping for what belongs to You. Teach me to honor Your authority and trust Your provision."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-13",
+                    reference: "Psalm 83:13",
+                    text: "O my God, make them like the whirling dust,\n    Like chaff before the wind.",
+                    prayer: "Lord, scatter confusion, fear, and opposition like dust before the wind. Let Your truth remain firm in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-14",
+                    reference: "Psalm 83:14",
+                    text: "Like fire that burns the forest\n    And like a flame that sets the mountains on fire,",
+                    prayer: "Father, let Your power consume what is evil, false, or harmful. Purify my heart and strengthen what honors You."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-15",
+                    reference: "Psalm 83:15",
+                    text: "So pursue them with Your tempest\n    And terrify them with Your storm.",
+                    prayer: "Lord, pursue what opposes Your will and bring every hidden thing into Your light, justice, and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-16",
+                    reference: "Psalm 83:16",
+                    text: "Fill their faces with dishonor,\n    That they may seek Your name, O Lord.",
+                    prayer: "Father, let every heart that resists You be brought to humility, so that Your name may be sought and honored."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-17",
+                    reference: "Psalm 83:17",
+                    text: "Let them be ashamed and dismayed forever,\n    And let them be humiliated and perish,",
+                    prayer: "Lord, humble pride and expose false confidence. Help me live with reverence before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-18",
+                    reference: "Psalm 83:18",
+                    text: "That they may know that You alone, whose name is the Lord,\n    Are the Most High over all the earth.",
+                    prayer: "Father, let all people know that You alone are the Lord Most High over all the earth. May my life declare Your greatness."
+                ),
+                PrayerVerse(
+                    id: "psalm-83-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being the Most High over all the earth. When opposition, fear, or confusion surrounds me, help me trust Your power, justice, and faithful protection. Guard my heart from pride, strengthen my confidence in Your authority, and let my life honor Your name. May Your truth prevail, Your purposes stand, and Your glory be known among all people.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 84,
             title: "How Lovely is Your Dwelling",
             chapterReference: "Psalm 84",
             summary: "Pray for love of God's presence.",
-            verses: []
+            // JSON resource: psalm_84_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-84-1",
+                    reference: "Psalm 84:1",
+                    text: "How lovely are Your dwelling places,\n    O Lord of hosts!",
+                    prayer: "Lord, how lovely is Your dwelling place. Help me treasure Your presence above every comfort, achievement, or desire."
+                ),
+                PrayerVerse(
+                    id: "psalm-84-2",
+                    reference: "Psalm 84:2",
+                    text: "My soul longed and even yearned for the courts of the Lord;\n    My heart and my flesh sing for joy to the living God.",
+                    prayer: "Father, let my soul long for You with sincere devotion. May my heart and life cry out for the living God."
+                ),
+                PrayerVerse(
+                    id: "psalm-84-3",
+                    reference: "Psalm 84:3",
+                    text: "The bird also has found a house,\n    And the swallow a nest for herself, where she may lay her young,\n    Even Your altars, O Lord of hosts,\n    My King and my God.",
+                    prayer: "Lord, thank You that there is room near You for the weak, the small, and the weary. Let my heart find home in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-84-4",
+                    reference: "Psalm 84:4",
+                    text: "How blessed are those who dwell in Your house!\n    They are ever praising You. Selah.",
+                    prayer: "Father, blessed are those who dwell with You and continually praise Your name. Teach me to live a life of worship."
+                ),
+                PrayerVerse(
+                    id: "psalm-84-5",
+                    reference: "Psalm 84:5",
+                    text: "How blessed is the man whose strength is in You,\n    In whose heart are the highways to Zion!",
+                    prayer: "Lord, bless me with strength that comes from You. Set my heart on the path that leads closer to Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-84-6",
+                    reference: "Psalm 84:6",
+                    text: "Passing through the valley of Baca they make it a spring;\n    The early rain also covers it with blessings.",
+                    prayer: "Father, when I pass through dry or difficult places, turn them into places of blessing, growth, and renewed hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-84-7",
+                    reference: "Psalm 84:7",
+                    text: "They go from strength to strength,\n    Every one of them appears before God in Zion.",
+                    prayer: "Lord, lead me from strength to strength. Help me keep moving forward in faith until I stand before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-84-8",
+                    reference: "Psalm 84:8",
+                    text: "O Lord God of hosts, hear my prayer;\n    Give ear, O God of Jacob! Selah.",
+                    prayer: "Father, hear my prayer and listen with mercy. Thank You that I can call upon You with confidence."
+                ),
+                PrayerVerse(
+                    id: "psalm-84-9",
+                    reference: "Psalm 84:9",
+                    text: "Behold our shield, O God,\n    And look upon the face of Your anointed.",
+                    prayer: "Lord, look upon my life with grace. Cover me with Your favor and keep me close to Your anointed purpose."
+                ),
+                PrayerVerse(
+                    id: "psalm-84-10",
+                    reference: "Psalm 84:10",
+                    text: "For a day in Your courts is better than a thousand outside.\n    I would rather stand at the threshold of the house of my God\n    Than dwell in the tents of wickedness.",
+                    prayer: "Father, one day in Your presence is better than a thousand elsewhere. Help me value nearness to You above everything this world offers."
+                ),
+                PrayerVerse(
+                    id: "psalm-84-11",
+                    reference: "Psalm 84:11",
+                    text: "For the Lord God is a sun and shield;\n    The Lord gives grace and glory;\n    No good thing does He withhold from those who walk uprightly.",
+                    prayer: "Lord, You are my sun and shield. Thank You for giving grace, glory, protection, and every good thing according to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-84-12",
+                    reference: "Psalm 84:12",
+                    text: "O Lord of hosts,\n    How blessed is the man who trusts in You!",
+                    prayer: "Father, blessed is the one who trusts in You. Strengthen my trust and help me rest securely in Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-84-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for the beauty, safety, and joy of Your presence. Teach me to long for You above all else and to walk from strength to strength by Your grace. Turn dry valleys into places of blessing, guard me as my sun and shield, and help me trust You with all my heart. May my life remain rooted in worship, gratitude, and nearness to You.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 85,
             title: "Show Us Your Mercy",
             chapterReference: "Psalm 85",
             summary: "Pray for revival and God's favor.",
-            verses: []
+            // JSON resource: psalm_85_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-85-1",
+                    reference: "Psalm 85:1",
+                    text: "O Lord, You showed favor to Your land;\n    You restored the captivity of Jacob.",
+                    prayer: "Lord, thank You for showing favor and restoring what was broken. Help me recognize Your mercy in every season of renewal."
+                ),
+                PrayerVerse(
+                    id: "psalm-85-2",
+                    reference: "Psalm 85:2",
+                    text: "You forgave the iniquity of Your people;\n    You covered all their sin. Selah.",
+                    prayer: "Father, thank You for forgiving sin and covering shame with Your grace. Teach me to walk in repentance and gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-85-3",
+                    reference: "Psalm 85:3",
+                    text: "You withdrew all Your fury;\n    You turned away from Your burning anger.",
+                    prayer: "Lord, thank You for turning away wrath and offering mercy. Help me never take Your compassion for granted."
+                ),
+                PrayerVerse(
+                    id: "psalm-85-4",
+                    reference: "Psalm 85:4",
+                    text: "Restore us, O God of our salvation,\n    And cause Your indignation toward us to cease.",
+                    prayer: "Father, restore me again and draw my heart back to You. Let Your salvation renew my spirit and strengthen my faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-85-5",
+                    reference: "Psalm 85:5",
+                    text: "Will You be angry with us forever?\n    Will You prolong Your anger to all generations?",
+                    prayer: "Lord, when discipline feels long or difficult, help me trust Your purpose and wait for Your mercy with hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-85-6",
+                    reference: "Psalm 85:6",
+                    text: "Will You not Yourself revive us again,\n    That Your people may rejoice in You?",
+                    prayer: "Father, revive me again so that my heart may rejoice in You. Bring fresh life, joy, and worship into my soul."
+                ),
+                PrayerVerse(
+                    id: "psalm-85-7",
+                    reference: "Psalm 85:7",
+                    text: "Show us Your lovingkindness, O Lord,\n    And grant us Your salvation.",
+                    prayer: "Lord, show me Your lovingkindness and grant me Your salvation. Help me rest in Your faithful love."
+                ),
+                PrayerVerse(
+                    id: "psalm-85-8",
+                    reference: "Psalm 85:8",
+                    text: "I will hear what God the Lord will say;\n    For He will speak peace to His people, to His godly ones;\n    But let them not turn back to folly.",
+                    prayer: "Father, help me listen carefully to what You speak. Let Your peace guide me, and keep me from returning to foolishness."
+                ),
+                PrayerVerse(
+                    id: "psalm-85-9",
+                    reference: "Psalm 85:9",
+                    text: "Surely His salvation is near to those who fear Him,\n    That glory may dwell in our land.",
+                    prayer: "Lord, thank You that Your salvation is near to those who fear You. Let Your glory dwell in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-85-10",
+                    reference: "Psalm 85:10",
+                    text: "Lovingkindness and truth have met together;\n    Righteousness and peace have kissed each other.",
+                    prayer: "Father, let lovingkindness and truth meet in my heart. Let righteousness and peace shape the way I live."
+                ),
+                PrayerVerse(
+                    id: "psalm-85-11",
+                    reference: "Psalm 85:11",
+                    text: "Truth springs from the earth,\n    And righteousness looks down from heaven.",
+                    prayer: "Lord, let truth spring up in my life and righteousness shine over me. Help me live faithfully before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-85-12",
+                    reference: "Psalm 85:12",
+                    text: "Indeed, the Lord will give what is good,\n    And our land will yield its produce.",
+                    prayer: "Father, thank You for giving what is good. Let my life bear fruit through Your blessing and provision."
+                ),
+                PrayerVerse(
+                    id: "psalm-85-13",
+                    reference: "Psalm 85:13",
+                    text: "Righteousness will go before Him\n    And will make His footsteps into a way.",
+                    prayer: "Lord, let righteousness go before me and guide my steps. Help me walk in the path You prepare."
+                ),
+                PrayerVerse(
+                    id: "psalm-85-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your mercy, forgiveness, restoration, and peace. Revive my heart again and teach me to listen to Your voice. Let truth, righteousness, and lovingkindness shape my life, and keep me from returning to foolishness. May Your glory dwell in me, and may my steps follow the path of Your righteousness.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 86,
