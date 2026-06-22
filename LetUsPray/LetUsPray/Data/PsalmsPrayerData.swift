@@ -8087,14 +8087,222 @@ enum PsalmsPrayerData {
             title: "You Are Resplendent",
             chapterReference: "Psalm 76",
             summary: "Pray in awe of God's majesty.",
-            verses: []
+            // JSON resource: psalm_76_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-76-1",
+                    reference: "Psalm 76:1",
+                    text: "God is known in Judah;\n  His name is great in Israel.",
+                    prayer: "Lord, make Your name known in my life. Help me honor You with reverence, gratitude, and faithful obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-76-2",
+                    reference: "Psalm 76:2",
+                    text: "His tabernacle is in Salem;\n  His dwelling place also is in Zion.",
+                    prayer: "Father, thank You for dwelling among Your people. Let my heart be a place where Your presence is welcomed and honored."
+                ),
+                PrayerVerse(
+                    id: "psalm-76-3",
+                    reference: "Psalm 76:3",
+                    text: "There He broke the flaming arrows,\n  The shield and the sword and the weapons of war. Selah.",
+                    prayer: "Lord, break every weapon of fear, temptation, and opposition that rises against my faith. Let Your peace rule over me."
+                ),
+                PrayerVerse(
+                    id: "psalm-76-4",
+                    reference: "Psalm 76:4",
+                    text: "You are resplendent,\n  More majestic than the mountains of prey.",
+                    prayer: "Father, You are glorious and majestic. Help me see Your greatness above every earthly power or challenge."
+                ),
+                PrayerVerse(
+                    id: "psalm-76-5",
+                    reference: "Psalm 76:5",
+                    text: "The stouthearted were plundered,\n  They sank into sleep;\n  And none of the warriors could use his hands.",
+                    prayer: "Lord, no strength can stand against You. Teach me to rely on Your power instead of my own ability."
+                ),
+                PrayerVerse(
+                    id: "psalm-76-6",
+                    reference: "Psalm 76:6",
+                    text: "At Your rebuke, O God of Jacob,\n  Both rider and horse were cast into a dead sleep.",
+                    prayer: "Father, when You speak, all creation responds. Help me listen to Your voice with humility and trust."
+                ),
+                PrayerVerse(
+                    id: "psalm-76-7",
+                    reference: "Psalm 76:7",
+                    text: "You, even You, are to be feared;\n  And who may stand in Your presence when once You are angry?",
+                    prayer: "Lord, You are to be feared with holy reverence. Teach me to live with awe, respect, and obedience before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-76-8",
+                    reference: "Psalm 76:8",
+                    text: "You caused judgment to be heard from heaven;\n  The earth feared and was still",
+                    prayer: "Father, Your judgment is righteous and true. Help me trust Your justice even when I do not understand Your timing."
+                ),
+                PrayerVerse(
+                    id: "psalm-76-9",
+                    reference: "Psalm 76:9",
+                    text: "When God arose to judgment,\n  To save all the humble of the earth. Selah.",
+                    prayer: "Lord, thank You for rising to save the humble and afflicted. Help me trust Your compassion and protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-76-10",
+                    reference: "Psalm 76:10",
+                    text: "For the wrath of man shall praise You;\n  With a remnant of wrath You will gird Yourself.",
+                    prayer: "Father, even human anger cannot overpower Your purposes. Turn every situation toward Your glory and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-76-11",
+                    reference: "Psalm 76:11",
+                    text: "Make vows to the Lord your God and fulfill them;\n  Let all who are around Him bring gifts to Him who is to be feared.",
+                    prayer: "Lord, help me fulfill my commitments to You and bring offerings of praise, obedience, and devotion."
+                ),
+                PrayerVerse(
+                    id: "psalm-76-12",
+                    reference: "Psalm 76:12",
+                    text: "He will cut off the spirit of princes;\n  He is feared by the kings of the earth.",
+                    prayer: "Father, You are sovereign over every ruler, power, and authority. Help me trust Your rule above all earthly strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-76-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your power, majesty, justice, and saving mercy. Help me live with holy reverence, trust Your authority, and rest in Your protection. Break every fear that rises against my faith, and teach me to honor You with obedience, worship, and gratitude. May my life reflect confidence in Your sovereign rule and praise for Your glorious name.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 77,
             title: "I Cried to God",
             chapterReference: "Psalm 77",
             summary: "Pray for remembrance of God's faithfulness.",
-            verses: []
+            // JSON resource: psalm_77_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-77-1",
+                    reference: "Psalm 77:1",
+                    text: "My voice rises to God, and I will cry aloud;\n  My voice rises to God, and He will hear me.",
+                    prayer: "Lord, I cry aloud to You, trusting that You hear me. Help me bring every fear, burden, and question honestly before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-2",
+                    reference: "Psalm 77:2",
+                    text: "In the day of my trouble I sought the Lord;\n  In the night my hand was stretched out without weariness;\n  My soul refused to be comforted.",
+                    prayer: "Father, when I am in distress, teach me to seek You first. Comfort my heart when my soul feels weary and troubled."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-3",
+                    reference: "Psalm 77:3",
+                    text: "When I remember God, then I am disturbed;\n  When I sigh, then my spirit grows faint. Selah.",
+                    prayer: "Lord, when remembering my struggles makes me restless, steady my spirit and help me rest in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-4",
+                    reference: "Psalm 77:4",
+                    text: "You have held my eyelids open;\n  I am so troubled that I cannot speak.",
+                    prayer: "Father, when I cannot sleep or find words to pray, remain near to me and quiet my anxious thoughts."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-5",
+                    reference: "Psalm 77:5",
+                    text: "I have considered the days of old,\n  The years of long ago.",
+                    prayer: "Lord, help me remember the days of Your faithfulness. Let past testimonies strengthen my trust in You today."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-6",
+                    reference: "Psalm 77:6",
+                    text: "I will remember my song in the night;\n  I will meditate with my heart,\n  And my spirit ponders:",
+                    prayer: "Father, when I search my heart in the night, guide my thoughts toward Your truth, mercy, and unfailing love."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-7",
+                    reference: "Psalm 77:7",
+                    text: "Will the Lord reject forever?\n  And will He never be favorable again?",
+                    prayer: "Lord, when I wonder whether You have forgotten me, remind me that Your love is steadfast and Your presence remains near."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-8",
+                    reference: "Psalm 77:8",
+                    text: "Has His lovingkindness ceased forever?\n  Has His promise come to an end forever?",
+                    prayer: "Father, when doubts rise within me, help me remember that Your lovingkindness has not ended and Your promises have not failed."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-9",
+                    reference: "Psalm 77:9",
+                    text: "Has God forgotten to be gracious,\n  Or has He in anger withdrawn His compassion? Selah.",
+                    prayer: "Lord, when my pain makes it hard to see Your mercy, open my eyes again to Your compassion and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-10",
+                    reference: "Psalm 77:10",
+                    text: "Then I said, “It is my grief,\n  That the right hand of the Most High has changed.”",
+                    prayer: "Father, when my heart feels weak, help me turn my thoughts toward Your power and the works of Your mighty hand."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-11",
+                    reference: "Psalm 77:11",
+                    text: "I shall remember the deeds of the Lord;\n  Surely I will remember Your wonders of old.",
+                    prayer: "Lord, I will remember Your deeds. Help me recall Your wonders and trust that You are still working in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-12",
+                    reference: "Psalm 77:12",
+                    text: "I will meditate on all Your work\n  And muse on Your deeds.",
+                    prayer: "Father, teach me to meditate on all You have done and consider Your works with gratitude, faith, and reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-13",
+                    reference: "Psalm 77:13",
+                    text: "Your way, O God, is holy;\n  What god is great like our God?",
+                    prayer: "Lord, Your way is holy. Help me trust Your character and remember that there is no god as great as You."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-14",
+                    reference: "Psalm 77:14",
+                    text: "You are the God who works wonders;\n  You have made known Your strength among the peoples.",
+                    prayer: "Father, You are the God who works wonders. Show Your strength in my life and help me trust Your power."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-15",
+                    reference: "Psalm 77:15",
+                    text: "You have by Your power redeemed Your people,\n  The sons of Jacob and Joseph. Selah.",
+                    prayer: "Lord, thank You for redeeming Your people. Remind me that Your salvation is greater than every fear and trouble I face."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-16",
+                    reference: "Psalm 77:16",
+                    text: "The waters saw You, O God;\n  The waters saw You, they were in anguish;\n  The deeps also trembled.",
+                    prayer: "Father, creation responds to Your power. Help me stand in awe of Your greatness and trust Your authority over every storm."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-17",
+                    reference: "Psalm 77:17",
+                    text: "The clouds poured out water;\n  The skies gave forth a sound;\n  Your arrows flashed here and there.",
+                    prayer: "Lord, when life feels like thunder, rain, and lightning around me, help me remember that You remain sovereign over all things."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-18",
+                    reference: "Psalm 77:18",
+                    text: "The sound of Your thunder was in the whirlwind;\n  The lightnings lit up the world;\n  The earth trembled and shook.",
+                    prayer: "Father, Your voice is powerful and Your presence shakes creation. Help me listen with reverence and follow You with trust."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-19",
+                    reference: "Psalm 77:19",
+                    text: "Your way was in the sea\n  And Your paths in the mighty waters,\n  And Your footprints may not be known.",
+                    prayer: "Lord, even when Your path is hidden and I cannot see Your footprints, help me trust that You are leading me faithfully."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-20",
+                    reference: "Psalm 77:20",
+                    text: "You led Your people like a flock\n  By the hand of Moses and Aaron.",
+                    prayer: "Father, thank You for shepherding Your people with care. Lead me gently, guide me wisely, and keep me close to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-77-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing me when I cry out and for remaining faithful when my heart feels troubled. Help me remember Your works, trust Your promises, and meditate on Your goodness in every season. When Your path is hard to see, remind me that You are still guiding me as a faithful Shepherd. Strengthen my faith, quiet my fears, and keep my heart anchored in Your holy and unfailing love.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 78,
