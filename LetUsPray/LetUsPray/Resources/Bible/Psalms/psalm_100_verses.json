@@ -1,0 +1,32 @@
+{
+  "psalm-100-1": {
+    "verse": "Shout joyfully to the Lord, all the earth.",
+    "prayer": "Lord, help me shout joyfully to You with a heart full of gratitude, praise, and worship.",
+    "id": "psalm-100-1"
+  },
+  "psalm-100-2": {
+    "verse": "Serve the Lord with gladness;\n  Come before Him with joyful singing.",
+    "prayer": "Father, teach me to serve You with gladness and come before Your presence with joyful singing.",
+    "id": "psalm-100-2"
+  },
+  "psalm-100-3": {
+    "verse": "Know that the Lord Himself is God;\n  It is He who has made us, and not we ourselves;\n  We are His people and the sheep of His pasture.",
+    "prayer": "Lord, remind me that You are God. You made me, I belong to You, and I am part of Your flock and Your care.",
+    "id": "psalm-100-3"
+  },
+  "psalm-100-4": {
+    "verse": "Enter His gates with thanksgiving\n  And His courts with praise.\n  Give thanks to Him, bless His name.",
+    "prayer": "Father, help me enter Your gates with thanksgiving and Your courts with praise. Fill my heart with gratitude every day.",
+    "id": "psalm-100-4"
+  },
+  "psalm-100-5": {
+    "verse": "For the Lord is good;\n  His lovingkindness is everlasting\n  And His faithfulness to all generations.",
+    "prayer": "Lord, thank You for being good. Your lovingkindness endures forever, and Your faithfulness continues through every generation.",
+    "id": "psalm-100-5"
+  },
+  "psalm-100-closing": {
+    "verse": "",
+    "prayer": "Lord, thank You for Your goodness, lovingkindness, and everlasting faithfulness. Help me worship You with joy, serve You with gladness, and live each day with a grateful heart. Remind me that I belong to You and that Your care never fails. May my life continually enter Your presence with thanksgiving and praise.\n\nIn Jesus’ name, Amen.",
+    "id": "psalm-100-closing"
+  }
+}

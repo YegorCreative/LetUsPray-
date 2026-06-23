@@ -10695,42 +10695,426 @@ enum PsalmsPrayerData {
             title: "Sing to the Lord",
             chapterReference: "Psalm 96",
             summary: "Pray in joyful praise of God's glory.",
-            verses: []
+            // JSON resource: psalm_96_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-96-1",
+                    reference: "Psalm 96:1",
+                    text: "Sing to the Lord a new song;\n    Sing to the Lord, all the earth.",
+                    prayer: "Lord, help me sing a new song to You. Let my heart worship You with fresh gratitude, joy, and devotion."
+                ),
+                PrayerVerse(
+                    id: "psalm-96-2",
+                    reference: "Psalm 96:2",
+                    text: "Sing to the Lord, bless His name;\n    Proclaim good tidings of His salvation from day to day.",
+                    prayer: "Father, teach me to bless Your name and proclaim Your salvation day by day."
+                ),
+                PrayerVerse(
+                    id: "psalm-96-3",
+                    reference: "Psalm 96:3",
+                    text: "Tell of His glory among the nations,\n    His wonderful deeds among all the peoples.",
+                    prayer: "Lord, help me declare Your glory among the nations and Your wonderful deeds among all people."
+                ),
+                PrayerVerse(
+                    id: "psalm-96-4",
+                    reference: "Psalm 96:4",
+                    text: "For great is the Lord and greatly to be praised;\n    He is to be feared above all gods.",
+                    prayer: "Father, You are great and greatly to be praised. Fill my heart with reverence and awe before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-96-5",
+                    reference: "Psalm 96:5",
+                    text: "For all the gods of the peoples are idols,\n    But the Lord made the heavens.",
+                    prayer: "Lord, remind me that every false god is empty, but You alone made the heavens and reign over all creation."
+                ),
+                PrayerVerse(
+                    id: "psalm-96-6",
+                    reference: "Psalm 96:6",
+                    text: "Splendor and majesty are before Him,\n    Strength and beauty are in His sanctuary.",
+                    prayer: "Father, honor and majesty are before You. Strength and beauty are in Your sanctuary. Help me worship You with humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-96-7",
+                    reference: "Psalm 96:7",
+                    text: "Ascribe to the Lord, O families of the peoples,\n    Ascribe to the Lord glory and strength.",
+                    prayer: "Lord, help all people give You the glory and strength that belong to Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-96-8",
+                    reference: "Psalm 96:8",
+                    text: "Ascribe to the Lord the glory of His name;\n    Bring an offering and come into His courts.",
+                    prayer: "Father, help me give You the glory due Your name and bring my life before You as an offering of worship."
+                ),
+                PrayerVerse(
+                    id: "psalm-96-9",
+                    reference: "Psalm 96:9",
+                    text: "Worship the Lord in holy attire;\n    Tremble before Him, all the earth.",
+                    prayer: "Lord, teach me to worship You in holy reverence. Let my heart tremble with awe before Your beauty and holiness."
+                ),
+                PrayerVerse(
+                    id: "psalm-96-10",
+                    reference: "Psalm 96:10",
+                    text: "Say among the nations, “The Lord reigns;\n    Indeed, the world is firmly established, it will not be moved;\n    He will judge the peoples with equity.”",
+                    prayer: "Father, help me declare that You reign. Remind me that Your rule is firm, righteous, and trustworthy."
+                ),
+                PrayerVerse(
+                    id: "psalm-96-11",
+                    reference: "Psalm 96:11",
+                    text: "Let the heavens be glad, and let the earth rejoice;\n    Let the sea roar, and all it contains;",
+                    prayer: "Lord, let heaven rejoice and earth be glad. Help my life join creation in praising Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-96-12",
+                    reference: "Psalm 96:12",
+                    text: "Let the field exult, and all that is in it.\n    Then all the trees of the forest will sing for joy",
+                    prayer: "Father, let the fields and all that is in them rejoice. Open my eyes to see Your glory throughout creation."
+                ),
+                PrayerVerse(
+                    id: "psalm-96-13",
+                    reference: "Psalm 96:13",
+                    text: "Before the Lord, for He is coming,\n    For He is coming to judge the earth.\n    He will judge the world in righteousness\n    And the peoples in His faithfulness.",
+                    prayer: "Lord, You are coming to judge the earth with righteousness and truth. Help me live ready, faithful, and full of hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-96-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your glory, holiness, strength, and salvation. Teach me to worship You with a fresh song, declare Your goodness each day, and honor Your name with my life. Help me reject every false thing, rejoice in Your reign, and live with hope in Your righteous truth. May my life continually proclaim that You are worthy of all praise.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 97,
             title: "The Lord Reigns, Let the Earth Rejoice",
             chapterReference: "Psalm 97",
             summary: "Pray in celebration of God's righteous reign.",
-            verses: []
+            // JSON resource: psalm_97_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-97-1",
+                    reference: "Psalm 97:1",
+                    text: "The Lord reigns, let the earth rejoice;\n    Let the many islands be glad.",
+                    prayer: "Lord, You reign over all the earth. Help my heart rejoice in Your sovereignty, goodness, and power."
+                ),
+                PrayerVerse(
+                    id: "psalm-97-2",
+                    reference: "Psalm 97:2",
+                    text: "Clouds and thick darkness surround Him;\n    Righteousness and justice are the foundation of His throne.",
+                    prayer: "Father, righteousness and justice are the foundation of Your throne. Teach me to trust Your rule and walk in Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-97-3",
+                    reference: "Psalm 97:3",
+                    text: "Fire goes before Him\n    And burns up His adversaries round about.",
+                    prayer: "Lord, let everything that opposes Your holiness be consumed by Your presence. Purify my heart and lead me in righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-97-4",
+                    reference: "Psalm 97:4",
+                    text: "His lightnings lit up the world;\n    The earth saw and trembled.",
+                    prayer: "Father, Your glory lights up the world. Open my eyes to see Your majesty and stand in awe of Your power."
+                ),
+                PrayerVerse(
+                    id: "psalm-97-5",
+                    reference: "Psalm 97:5",
+                    text: "The mountains melted like wax at the presence of the Lord,\n    At the presence of the Lord of the whole earth.",
+                    prayer: "Lord, every mountain melts before You. Help me remember that no obstacle is greater than Your authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-97-6",
+                    reference: "Psalm 97:6",
+                    text: "The heavens declare His righteousness,\n    And all the peoples have seen His glory.",
+                    prayer: "Father, let my life declare Your righteousness and reflect Your glory to those around me."
+                ),
+                PrayerVerse(
+                    id: "psalm-97-7",
+                    reference: "Psalm 97:7",
+                    text: "Let all those be ashamed who serve graven images,\n    Who boast themselves of idols;\n    Worship Him, all you gods.",
+                    prayer: "Lord, keep me from idols and anything false that competes with worship of You. Help me honor You alone."
+                ),
+                PrayerVerse(
+                    id: "psalm-97-8",
+                    reference: "Psalm 97:8",
+                    text: "Zion heard this and was glad,\n    And the daughters of Judah have rejoiced\n    Because of Your judgments, O Lord.",
+                    prayer: "Father, let my heart rejoice in Your judgments because Your ways are righteous, true, and good."
+                ),
+                PrayerVerse(
+                    id: "psalm-97-9",
+                    reference: "Psalm 97:9",
+                    text: "For You are the Lord Most High over all the earth;\n    You are exalted far above all gods.",
+                    prayer: "Lord, You are exalted above all. Help me place You first in my thoughts, desires, and decisions."
+                ),
+                PrayerVerse(
+                    id: "psalm-97-10",
+                    reference: "Psalm 97:10",
+                    text: "Hate evil, you who love the Lord,\n    Who preserves the souls of His godly ones;\n    He delivers them from the hand of the wicked.",
+                    prayer: "Father, teach me to love what You love and hate what is evil. Preserve my soul and deliver me from darkness."
+                ),
+                PrayerVerse(
+                    id: "psalm-97-11",
+                    reference: "Psalm 97:11",
+                    text: "Light is sown like seed for the righteous\n    And gladness for the upright in heart.",
+                    prayer: "Lord, thank You for sowing light for the righteous and joy for those who are upright in heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-97-12",
+                    reference: "Psalm 97:12",
+                    text: "Be glad in the Lord, you righteous ones,\n    And give thanks to His holy name.",
+                    prayer: "Father, help me rejoice in You and give thanks to Your holy name with a faithful and grateful heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-97-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for reigning in righteousness, justice, holiness, and glory. Help me reject every idol, love what is good, and walk faithfully in Your truth. Let Your light and joy fill my heart, and may my life continually give thanks to Your holy name. Keep me close to You and let everything in me honor Your sovereign rule.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 98,
             title: "A New Song",
             chapterReference: "Psalm 98",
             summary: "Pray with joy for God's salvation.",
-            verses: []
+            // JSON resource: psalm_98_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-98-1",
+                    reference: "Psalm 98:1",
+                    text: "O sing to the Lord a new song,\n    For He has done wonderful things,\n    His right hand and His holy arm have gained the victory for Him.",
+                    prayer: "Lord, help me sing a new song to You because You have done wonderful things. Fill my heart with fresh praise and gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-98-2",
+                    reference: "Psalm 98:2",
+                    text: "The Lord has made known His salvation;\n    He has revealed His righteousness in the sight of the nations.",
+                    prayer: "Father, thank You for making Your salvation known. Help my life reflect Your righteousness and saving grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-98-3",
+                    reference: "Psalm 98:3",
+                    text: "He has remembered His lovingkindness and His faithfulness to the house of Israel;\n    All the ends of the earth have seen the salvation of our God.",
+                    prayer: "Lord, thank You for remembering Your lovingkindness and faithfulness. Help me trust that Your promises never fail."
+                ),
+                PrayerVerse(
+                    id: "psalm-98-4",
+                    reference: "Psalm 98:4",
+                    text: "Shout joyfully to the Lord, all the earth;\n    Break forth and sing for joy and sing praises.",
+                    prayer: "Father, let my heart shout joyfully to You. Fill my life with worship that honors Your greatness."
+                ),
+                PrayerVerse(
+                    id: "psalm-98-5",
+                    reference: "Psalm 98:5",
+                    text: "Sing praises to the Lord with the lyre,\n    With the lyre and the sound of melody.",
+                    prayer: "Lord, help me praise You with music, joy, and sincerity. Let my worship come from a grateful heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-98-6",
+                    reference: "Psalm 98:6",
+                    text: "With trumpets and the sound of the horn\n    Shout joyfully before the King, the Lord.",
+                    prayer: "Father, teach me to rejoice before You as King. Let my life celebrate Your rule with gladness and reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-98-7",
+                    reference: "Psalm 98:7",
+                    text: "Let the sea roar and all it contains,\n    The world and those who dwell in it.",
+                    prayer: "Lord, let all creation remind me of Your glory. Help me join the earth in praising Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-98-8",
+                    reference: "Psalm 98:8",
+                    text: "Let the rivers clap their hands,\n    Let the mountains sing together for joy",
+                    prayer: "Father, let the rivers clap and the mountains sing in my heart. Awaken joy and wonder as I behold Your works."
+                ),
+                PrayerVerse(
+                    id: "psalm-98-9",
+                    reference: "Psalm 98:9",
+                    text: "Before the Lord, for He is coming to judge the earth;\n    He will judge the world with righteousness\n    And the peoples with equity.",
+                    prayer: "Lord, You judge the earth with righteousness and fairness. Help me live faithfully, with hope in Your justice and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-98-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your salvation, righteousness, lovingkindness, and faithfulness. Teach me to sing a new song of praise and rejoice before You as King. Let my heart be filled with worship, my life reflect Your goodness, and my hope rest in Your righteous judgment. May everything in me join creation in declaring Your glory.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 99,
             title: "Holy is He",
             chapterReference: "Psalm 99",
             summary: "Pray in reverence of God's holiness.",
-            verses: []
+            // JSON resource: psalm_99_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-99-1",
+                    reference: "Psalm 99:1",
+                    text: "The Lord reigns, let the peoples tremble;\n    He is enthroned above the cherubim, let the earth shake!",
+                    prayer: "Lord, You reign above all. Help me live with reverence, awe, and trust before Your holy presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-99-2",
+                    reference: "Psalm 99:2",
+                    text: "The Lord is great in Zion,\n    And He is exalted above all the peoples.",
+                    prayer: "Father, You are great and exalted over all people. Keep my heart humble before Your majesty."
+                ),
+                PrayerVerse(
+                    id: "psalm-99-3",
+                    reference: "Psalm 99:3",
+                    text: "Let them praise Your great and awesome name;\n    Holy is He.",
+                    prayer: "Lord, let my life praise Your great and awesome name, for You are holy."
+                ),
+                PrayerVerse(
+                    id: "psalm-99-4",
+                    reference: "Psalm 99:4",
+                    text: "The strength of the King loves justice;\n    You have established equity;\n    You have executed justice and righteousness in Jacob.",
+                    prayer: "Father, You love justice and establish what is right. Help me walk in fairness, truth, and righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-99-5",
+                    reference: "Psalm 99:5",
+                    text: "Exalt the Lord our God\n    And worship at His footstool;\n    Holy is He.",
+                    prayer: "Lord, help me exalt You and worship at Your footstool with humility, gratitude, and reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-99-6",
+                    reference: "Psalm 99:6",
+                    text: "Moses and Aaron were among His priests,\n    And Samuel was among those who called on His name;\n    They called upon the Lord and He answered them.",
+                    prayer: "Father, thank You for hearing those who call upon Your name. Teach me to seek You faithfully in prayer."
+                ),
+                PrayerVerse(
+                    id: "psalm-99-7",
+                    reference: "Psalm 99:7",
+                    text: "He spoke to them in the pillar of cloud;\n    They kept His testimonies\n    And the statute that He gave them.",
+                    prayer: "Lord, thank You for speaking, guiding, and giving instruction. Help me obey Your Word with a willing heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-99-8",
+                    reference: "Psalm 99:8",
+                    text: "O Lord our God, You answered them;\n    You were a forgiving God to them,\n    And yet an avenger of their evil deeds.",
+                    prayer: "Father, thank You for being forgiving and just. Help me receive Your mercy and learn from Your correction."
+                ),
+                PrayerVerse(
+                    id: "psalm-99-9",
+                    reference: "Psalm 99:9",
+                    text: "Exalt the Lord our God\n    And worship at His holy hill,\n    For holy is the Lord our God.",
+                    prayer: "Lord, help me exalt You and worship at Your holy mountain, for You alone are holy."
+                ),
+                PrayerVerse(
+                    id: "psalm-99-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your holiness, justice, mercy, and faithful guidance. Help me worship You with reverence, obey Your Word with humility, and seek You faithfully in prayer. Teach me to walk in righteousness and trust Your holy rule over every part of my life. May my heart continually exalt Your great and awesome name.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 100,
             title: "Shout for Joy",
             chapterReference: "Psalm 100",
             summary: "Pray with thanksgiving and gladness.",
-            verses: []
+            // JSON resource: psalm_100_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-100-1",
+                    reference: "Psalm 100:1",
+                    text: "Shout joyfully to the Lord, all the earth.",
+                    prayer: "Lord, help me shout joyfully to You with a heart full of gratitude, praise, and worship."
+                ),
+                PrayerVerse(
+                    id: "psalm-100-2",
+                    reference: "Psalm 100:2",
+                    text: "Serve the Lord with gladness;\n    Come before Him with joyful singing.",
+                    prayer: "Father, teach me to serve You with gladness and come before Your presence with joyful singing."
+                ),
+                PrayerVerse(
+                    id: "psalm-100-3",
+                    reference: "Psalm 100:3",
+                    text: "Know that the Lord Himself is God;\n    It is He who has made us, and not we ourselves;\n    We are His people and the sheep of His pasture.",
+                    prayer: "Lord, remind me that You are God. You made me, I belong to You, and I am part of Your flock and Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-100-4",
+                    reference: "Psalm 100:4",
+                    text: "Enter His gates with thanksgiving\n    And His courts with praise.\n    Give thanks to Him, bless His name.",
+                    prayer: "Father, help me enter Your gates with thanksgiving and Your courts with praise. Fill my heart with gratitude every day."
+                ),
+                PrayerVerse(
+                    id: "psalm-100-5",
+                    reference: "Psalm 100:5",
+                    text: "For the Lord is good;\n    His lovingkindness is everlasting\n    And His faithfulness to all generations.",
+                    prayer: "Lord, thank You for being good. Your lovingkindness endures forever, and Your faithfulness continues through every generation."
+                ),
+                PrayerVerse(
+                    id: "psalm-100-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your goodness, lovingkindness, and everlasting faithfulness. Help me worship You with joy, serve You with gladness, and live each day with a grateful heart. Remind me that I belong to You and that Your care never fails. May my life continually enter Your presence with thanksgiving and praise.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 101,
             title: "I Will Walk in Integrity",
             chapterReference: "Psalm 101",
             summary: "Pray for blameless living.",
-            verses: []
+            // JSON resource: psalm_101_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-101-1",
+                    reference: "Psalm 101:1",
+                    text: "I will sing of lovingkindness and justice,\n    To You, O Lord, I will sing praises.",
+                    prayer: "Lord, help me sing of Your lovingkindness and justice. Let my life worship You with both gratitude and righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-101-2",
+                    reference: "Psalm 101:2",
+                    text: "I will give heed to the blameless way.\n    When will You come to me?\n    I will walk within my house in the integrity of my heart.",
+                    prayer: "Father, teach me to walk with integrity in my heart, my home, and every part of my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-101-3",
+                    reference: "Psalm 101:3",
+                    text: "I will set no worthless thing before my eyes;\n    I hate the work of those who fall away;\n    It shall not fasten its grip on me.",
+                    prayer: "Lord, guard my eyes from worthless things. Help me reject anything that pulls my heart away from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-101-4",
+                    reference: "Psalm 101:4",
+                    text: "A perverse heart shall depart from me;\n    I will know no evil.",
+                    prayer: "Father, remove crookedness from my heart. Keep me from evil and make my desires pure before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-101-5",
+                    reference: "Psalm 101:5",
+                    text: "Whoever secretly slanders his neighbor, him I will destroy;\n    No one who has a haughty look and an arrogant heart will I endure.",
+                    prayer: "Lord, protect me from pride, slander, and arrogance. Teach me to speak with humility, truth, and love."
+                ),
+                PrayerVerse(
+                    id: "psalm-101-6",
+                    reference: "Psalm 101:6",
+                    text: "My eyes shall be upon the faithful of the land, that they may dwell with me;\n    He who walks in a blameless way is the one who will minister to me.",
+                    prayer: "Father, help me value faithfulness and surround my life with what honors You."
+                ),
+                PrayerVerse(
+                    id: "psalm-101-7",
+                    reference: "Psalm 101:7",
+                    text: "He who practices deceit shall not dwell within my house;\n    He who speaks falsehood shall not maintain his position before me.",
+                    prayer: "Lord, keep deceit and falsehood far from me. Let honesty and integrity mark my words and actions."
+                ),
+                PrayerVerse(
+                    id: "psalm-101-8",
+                    reference: "Psalm 101:8",
+                    text: "Every morning I will destroy all the wicked of the land,\n    So as to cut off from the city of the Lord all those who do iniquity.",
+                    prayer: "Father, help me reject evil quickly and faithfully. Let my life be set apart for what is righteous and pleasing to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-101-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for calling me to a life of integrity, justice, and faithful devotion. Guard my eyes, purify my heart, and help me reject anything that dishonors You. Teach me to walk uprightly in my home, my words, and my actions. May my life reflect Your lovingkindness, truth, and righteousness.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 102,
