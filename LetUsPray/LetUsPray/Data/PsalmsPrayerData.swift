@@ -11451,14 +11451,510 @@ enum PsalmsPrayerData {
             title: "How Many Are Your Works",
             chapterReference: "Psalm 104",
             summary: "Pray in awe of God's creation.",
-            verses: []
+            // JSON resource: psalm_104_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-104-1",
+                    reference: "Psalm 104:1",
+                    text: "Bless the Lord, O my soul!\n    O Lord my God, You are very great;\n    You are clothed with splendor and majesty,",
+                    prayer: "Lord, my soul blesses You. You are very great, clothed with splendor, majesty, and glory beyond anything I can understand."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-2",
+                    reference: "Psalm 104:2",
+                    text: "Covering Yourself with light as with a cloak,\n    Stretching out heaven like a tent curtain.",
+                    prayer: "Father, You cover Yourself with light and stretch out the heavens by Your power. Help me stand in awe of Your greatness."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-3",
+                    reference: "Psalm 104:3",
+                    text: "He lays the beams of His upper chambers in the waters;\n    He makes the clouds His chariot;\n    He walks upon the wings of the wind;",
+                    prayer: "Lord, You rule over creation with wisdom and authority. Help me trust that every part of my life is held by Your hand."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-4",
+                    reference: "Psalm 104:4",
+                    text: "He makes the winds His messengers,\n    Flaming fire His ministers.",
+                    prayer: "Father, even the winds and flames serve Your purposes. Teach me to recognize Your power in all creation."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-5",
+                    reference: "Psalm 104:5",
+                    text: "He established the earth upon its foundations,\n    So that it will not totter forever and ever.",
+                    prayer: "Lord, You established the earth on its foundations. Keep my faith steady and rooted in Your unchanging truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-6",
+                    reference: "Psalm 104:6",
+                    text: "You covered it with the deep as with a garment;\n    The waters were standing above the mountains.",
+                    prayer: "Father, You covered the earth with the deep waters. Remind me that creation itself obeys Your command."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-7",
+                    reference: "Psalm 104:7",
+                    text: "At Your rebuke they fled,\n    At the sound of Your thunder they hurried away.",
+                    prayer: "Lord, at Your rebuke the waters flee. Help me remember that no chaos is greater than Your voice."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-8",
+                    reference: "Psalm 104:8",
+                    text: "The mountains rose; the valleys sank down\n    To the place which You established for them.",
+                    prayer: "Father, You shaped the mountains and valleys according to Your wisdom. Shape my life according to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-9",
+                    reference: "Psalm 104:9",
+                    text: "You set a boundary that they may not pass over,\n    So that they will not return to cover the earth.",
+                    prayer: "Lord, You set boundaries for the waters. Help me trust the boundaries and order You establish in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-10",
+                    reference: "Psalm 104:10",
+                    text: "He sends forth springs in the valleys;\n    They flow between the mountains;",
+                    prayer: "Father, thank You for sending springs into the valleys. Refresh the dry places of my soul with Your living water."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-11",
+                    reference: "Psalm 104:11",
+                    text: "They give drink to every beast of the field;\n    The wild donkeys quench their thirst.",
+                    prayer: "Lord, thank You for caring for every creature. Teach me to trust Your provision and compassion."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-12",
+                    reference: "Psalm 104:12",
+                    text: "Beside them the birds of the heavens dwell;\n    They lift up their voices among the branches.",
+                    prayer: "Father, let the beauty of creation remind me to praise You with joy and gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-13",
+                    reference: "Psalm 104:13",
+                    text: "He waters the mountains from His upper chambers;\n    The earth is satisfied with the fruit of His works.",
+                    prayer: "Lord, You water the mountains from Your dwelling place. Satisfy the earth and satisfy my heart with Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-14",
+                    reference: "Psalm 104:14",
+                    text: "He causes the grass to grow for the cattle,\n    And vegetation for the labor of man,\n    So that he may bring forth food from the earth,",
+                    prayer: "Father, thank You for causing grass and plants to grow for provision. Help me see Your care in daily blessings."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-15",
+                    reference: "Psalm 104:15",
+                    text: "And wine which makes man’s heart glad,\n    So that he may make his face glisten with oil,\n    And food which sustains man’s heart.",
+                    prayer: "Lord, thank You for giving gifts that gladden, strengthen, and sustain life. Teach me to receive Your provision with gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-16",
+                    reference: "Psalm 104:16",
+                    text: "The trees of the Lord drink their fill,\n    The cedars of Lebanon which He planted,",
+                    prayer: "Father, even the trees are satisfied by Your care. Let my life be deeply rooted and nourished by You."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-17",
+                    reference: "Psalm 104:17",
+                    text: "Where the birds build their nests,\n    And the stork, whose home is the fir trees.",
+                    prayer: "Lord, You provide places of shelter and belonging. Help me find my true home and safety in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-18",
+                    reference: "Psalm 104:18",
+                    text: "The high mountains are for the wild goats;\n    The cliffs are a refuge for the shephanim.",
+                    prayer: "Father, You care for every mountain creature and every hidden place. Remind me that nothing is outside Your attention."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-19",
+                    reference: "Psalm 104:19",
+                    text: "He made the moon for the seasons;\n    The sun knows the place of its setting.",
+                    prayer: "Lord, You made the moon for seasons and the sun to know its setting. Help me trust Your timing."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-20",
+                    reference: "Psalm 104:20",
+                    text: "You appoint darkness and it becomes night,\n    In which all the beasts of the forest prowl about.",
+                    prayer: "Father, even the night has purpose in Your creation. Help me trust You in seasons that feel dark or hidden."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-21",
+                    reference: "Psalm 104:21",
+                    text: "The young lions roar after their prey\n    And seek their food from God.",
+                    prayer: "Lord, You hear even the young lions seeking food. Thank You for hearing my needs and caring for me."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-22",
+                    reference: "Psalm 104:22",
+                    text: "When the sun rises they withdraw\n    And lie down in their dens.",
+                    prayer: "Father, You order the rhythms of creation. Teach me to live with wisdom, rest, and trust in Your design."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-23",
+                    reference: "Psalm 104:23",
+                    text: "Man goes forth to his work\n    And to his labor until evening.",
+                    prayer: "Lord, help me work faithfully in the day You give me and honor You with the labor of my hands."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-24",
+                    reference: "Psalm 104:24",
+                    text: "O Lord, how many are Your works!\n    In wisdom You have made them all;\n    The earth is full of Your possessions.",
+                    prayer: "Father, how many are Your works. In wisdom You made them all. Fill my heart with wonder at Your creation."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-25",
+                    reference: "Psalm 104:25",
+                    text: "There is the sea, great and broad,\n    In which are swarms without number,\n    Animals both small and great.",
+                    prayer: "Lord, the sea is vast and full of life You created. Help me marvel at Your creativity and power."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-26",
+                    reference: "Psalm 104:26",
+                    text: "There the ships move along,\n    And Leviathan, which You have formed to sport in it.",
+                    prayer: "Father, even the creatures of the sea exist under Your rule. Remind me that all creation belongs to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-27",
+                    reference: "Psalm 104:27",
+                    text: "They all wait for You\n    To give them their food in due season.",
+                    prayer: "Lord, all creatures look to You for food in due season. Help me look to You with trust and dependence."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-28",
+                    reference: "Psalm 104:28",
+                    text: "You give to them, they gather it up;\n    You open Your hand, they are satisfied with good.",
+                    prayer: "Father, when You give, creation gathers. Teach me to receive from Your open hand with gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-29",
+                    reference: "Psalm 104:29",
+                    text: "You hide Your face, they are dismayed;\n    You take away their spirit, they expire\n    And return to their dust.",
+                    prayer: "Lord, when Your face is hidden, creation is troubled. Keep me close to Your presence and sustain me by Your Spirit."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-30",
+                    reference: "Psalm 104:30",
+                    text: "You send forth Your Spirit, they are created;\n    And You renew the face of the ground.",
+                    prayer: "Father, send Your Spirit and renew what feels weary, empty, or lifeless within me."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-31",
+                    reference: "Psalm 104:31",
+                    text: "Let the glory of the Lord endure forever;\n    Let the Lord be glad in His works;",
+                    prayer: "Lord, may Your glory endure forever. May You rejoice in the works of Your hands, including the work You are doing in me."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-32",
+                    reference: "Psalm 104:32",
+                    text: "He looks at the earth, and it trembles;\n    He touches the mountains, and they smoke.",
+                    prayer: "Father, the earth trembles at Your look and the mountains smoke at Your touch. Help me live with holy reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-33",
+                    reference: "Psalm 104:33",
+                    text: "I will sing to the Lord as long as I live;\n    I will sing praise to my God while I have my being.",
+                    prayer: "Lord, I will sing to You as long as I live. Let praise remain on my lips through every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-34",
+                    reference: "Psalm 104:34",
+                    text: "Let my meditation be pleasing to Him;\n    As for me, I shall be glad in the Lord.",
+                    prayer: "Father, may my meditation be pleasing to You. Let my thoughts bring honor, worship, and joy to Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-35",
+                    reference: "Psalm 104:35",
+                    text: "Let sinners be consumed from the earth\n    And let the wicked be no more.\n    Bless the Lord, O my soul.\n    Praise the Lord!",
+                    prayer: "Lord, remove wickedness and cleanse what does not honor You. Let my soul bless You with sincerity and joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-104-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your majesty, wisdom, creativity, and faithful care over all creation. Help me see Your hand in the heavens, the earth, the seasons, and every daily provision. Refresh my soul, renew me by Your Spirit, and teach me to live with gratitude, reverence, and praise. May my thoughts be pleasing to You, and may my soul bless Your holy name.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 105,
             title: "Give Thanks to the Lord",
             chapterReference: "Psalm 105",
             summary: "Pray with remembrance of God's faithfulness.",
-            verses: []
+            // JSON resource: psalm_105_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-105-1",
+                    reference: "Psalm 105:1",
+                    text: "Oh give thanks to the Lord, call upon His name;\n    Make known His deeds among the peoples.",
+                    prayer: "Lord, help me give thanks to You and call upon Your name. Let my life make Your deeds known with gratitude and joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-2",
+                    reference: "Psalm 105:2",
+                    text: "Sing to Him, sing praises to Him;\n    Speak of all His wonders.",
+                    prayer: "Father, fill my mouth with songs of praise and help me speak often of Your wonderful works."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-3",
+                    reference: "Psalm 105:3",
+                    text: "Glory in His holy name;\n    Let the heart of those who seek the Lord be glad.",
+                    prayer: "Lord, let my heart glory in Your holy name. Help me rejoice as one who seeks You."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-4",
+                    reference: "Psalm 105:4",
+                    text: "Seek the Lord and His strength;\n    Seek His face continually.",
+                    prayer: "Father, teach me to seek You and Your strength continually. Keep my heart turned toward Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-5",
+                    reference: "Psalm 105:5",
+                    text: "Remember His wonders which He has done,\n    His marvels and the judgments uttered by His mouth,",
+                    prayer: "Lord, help me remember Your wonders, Your miracles, and the truth of Your judgments."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-6",
+                    reference: "Psalm 105:6",
+                    text: "O seed of Abraham, His servant,\n    O sons of Jacob, His chosen ones!",
+                    prayer: "Father, thank You for calling Your people to belong to You. Help me live as one who carries Your promises with faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-7",
+                    reference: "Psalm 105:7",
+                    text: "He is the Lord our God;\n    His judgments are in all the earth.",
+                    prayer: "Lord, You are my God, and Your judgments are over all the earth. Help me trust Your righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-8",
+                    reference: "Psalm 105:8",
+                    text: "He has remembered His covenant forever,\n    The word which He commanded to a thousand generations,",
+                    prayer: "Father, thank You for remembering Your covenant forever. Strengthen my confidence in Your faithful promises."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-9",
+                    reference: "Psalm 105:9",
+                    text: "The covenant which He made with Abraham,\n    And His oath to Isaac.",
+                    prayer: "Lord, thank You for keeping what You promised through every generation. Help me trust Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-10",
+                    reference: "Psalm 105:10",
+                    text: "Then He confirmed it to Jacob for a statute,\n    To Israel as an everlasting covenant,",
+                    prayer: "Father, establish my heart in Your covenant faithfulness and teach me to rely on Your unchanging truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-11",
+                    reference: "Psalm 105:11",
+                    text: "Saying, “To you I will give the land of Canaan\n    As the portion of your inheritance,”",
+                    prayer: "Lord, thank You for preparing inheritance and blessing for Your people. Help me receive Your promises with humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-12",
+                    reference: "Psalm 105:12",
+                    text: "When they were only a few men in number,\n    Very few, and strangers in it.",
+                    prayer: "Father, when I feel small, weak, or uncertain, remind me that Your promises are not limited by my strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-13",
+                    reference: "Psalm 105:13",
+                    text: "And they wandered about from nation to nation,\n    From one kingdom to another people.",
+                    prayer: "Lord, guide me faithfully through every place and season of life, just as You guided Your people."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-14",
+                    reference: "Psalm 105:14",
+                    text: "He permitted no man to oppress them,\n    And He reproved kings for their sakes:",
+                    prayer: "Father, thank You for protecting Your people. Keep me safe under Your watchful care."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-15",
+                    reference: "Psalm 105:15",
+                    text: "“Do not touch My anointed ones,\n    And do My prophets no harm.”",
+                    prayer: "Lord, help me honor what You have set apart and respect the people and purposes You have chosen."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-16",
+                    reference: "Psalm 105:16",
+                    text: "And He called for a famine upon the land;\n    He broke the whole staff of bread.",
+                    prayer: "Father, when seasons of lack or difficulty come, help me trust that You still provide and lead."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-17",
+                    reference: "Psalm 105:17",
+                    text: "He sent a man before them,\n    Joseph, who was sold as a slave.",
+                    prayer: "Lord, thank You for preparing help before the need is fully seen. Help me trust Your timing."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-18",
+                    reference: "Psalm 105:18",
+                    text: "They afflicted his feet with fetters,\n    He himself was laid in irons;",
+                    prayer: "Father, when hardship feels painful or confining, strengthen me and keep my faith steady."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-19",
+                    reference: "Psalm 105:19",
+                    text: "Until the time that his word came to pass,\n    The word of the Lord tested him.",
+                    prayer: "Lord, refine me through waiting seasons until Your word is fulfilled in Your perfect time."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-20",
+                    reference: "Psalm 105:20",
+                    text: "The king sent and released him,\n    The ruler of peoples, and set him free.",
+                    prayer: "Father, thank You that You can open doors no one else can open and bring freedom at the right time."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-21",
+                    reference: "Psalm 105:21",
+                    text: "He made him lord of his house\n    And ruler over all his possessions,",
+                    prayer: "Lord, help me steward responsibility with humility and wisdom when You entrust me with influence."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-22",
+                    reference: "Psalm 105:22",
+                    text: "To imprison his princes at will,\n    That he might teach his elders wisdom.",
+                    prayer: "Father, teach me to use every position, gift, or opportunity to honor You and serve others."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-23",
+                    reference: "Psalm 105:23",
+                    text: "Israel also came into Egypt;\n    Thus Jacob sojourned in the land of Ham.",
+                    prayer: "Lord, guide me when I enter new places or unfamiliar seasons. Help me trust Your presence wherever You lead."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-24",
+                    reference: "Psalm 105:24",
+                    text: "And He caused His people to be very fruitful,\n    And made them stronger than their adversaries.",
+                    prayer: "Father, thank You for strengthening Your people. Help me grow in faith, courage, and endurance."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-25",
+                    reference: "Psalm 105:25",
+                    text: "He turned their heart to hate His people,\n    To deal craftily with His servants.",
+                    prayer: "Lord, when opposition rises, remind me that You remain sovereign even over difficult circumstances."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-26",
+                    reference: "Psalm 105:26",
+                    text: "He sent Moses His servant,\n    And Aaron, whom He had chosen.",
+                    prayer: "Father, thank You for sending servants according to Your purpose. Help me obey when You call me."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-27",
+                    reference: "Psalm 105:27",
+                    text: "They performed His wondrous acts among them,\n    And miracles in the land of Ham.",
+                    prayer: "Lord, help me recognize Your signs and works, and respond with faith rather than fear."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-28",
+                    reference: "Psalm 105:28",
+                    text: "He sent darkness and made it dark;\n    And they did not rebel against His words.",
+                    prayer: "Father, when darkness comes, let Your power and purpose still be known. Help me trust You in unseen places."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-29",
+                    reference: "Psalm 105:29",
+                    text: "He turned their waters into blood\n    And caused their fish to die.",
+                    prayer: "Lord, You rule over creation and judgment. Help me live with reverence before Your authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-30",
+                    reference: "Psalm 105:30",
+                    text: "Their land swarmed with frogs\n    Even in the chambers of their kings.",
+                    prayer: "Father, remind me that all creation responds to Your command. Help me listen and obey Your voice."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-31",
+                    reference: "Psalm 105:31",
+                    text: "He spoke, and there came a swarm of flies\n    And gnats in all their territory.",
+                    prayer: "Lord, no detail is outside Your control. Teach me to trust Your power in both great and small things."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-32",
+                    reference: "Psalm 105:32",
+                    text: "He gave them hail for rain,\n    And flaming fire in their land.",
+                    prayer: "Father, even storms obey You. Help me find peace in Your authority over every situation."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-33",
+                    reference: "Psalm 105:33",
+                    text: "He struck down their vines also and their fig trees,\n    And shattered the trees of their territory.",
+                    prayer: "Lord, when what seems fruitful is shaken, help me trust Your purpose and remain faithful."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-34",
+                    reference: "Psalm 105:34",
+                    text: "He spoke, and locusts came,\n    And young locusts, even without number,",
+                    prayer: "Father, You command even what seems overwhelming. Help me remember Your sovereignty over all circumstances."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-35",
+                    reference: "Psalm 105:35",
+                    text: "And ate up all vegetation in their land,\n    And ate up the fruit of their ground.",
+                    prayer: "Lord, protect what You have planted in my life and help me depend on Your provision."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-36",
+                    reference: "Psalm 105:36",
+                    text: "He also struck down all the firstborn in their land,\n    The first fruits of all their vigor.",
+                    prayer: "Father, remind me that life and protection belong to You. Keep my household and heart under Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-37",
+                    reference: "Psalm 105:37",
+                    text: "Then He brought them out with silver and gold,\n    And among His tribes there was not one who stumbled.",
+                    prayer: "Lord, thank You for bringing Your people out with provision and strength. Lead me forward with confidence in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-38",
+                    reference: "Psalm 105:38",
+                    text: "Egypt was glad when they departed,\n    For the dread of them had fallen upon them.",
+                    prayer: "Father, when You move, nothing can stand against Your purpose. Help me trust Your deliverance."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-39",
+                    reference: "Psalm 105:39",
+                    text: "He spread a cloud for a covering,\n    And fire to illumine by night.",
+                    prayer: "Lord, thank You for covering and guiding Your people. Lead me by Your presence each day."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-40",
+                    reference: "Psalm 105:40",
+                    text: "They asked, and He brought quail,\n    And satisfied them with the bread of heaven.",
+                    prayer: "Father, thank You for hearing needs and providing daily bread. Teach me gratitude for every provision."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-41",
+                    reference: "Psalm 105:41",
+                    text: "He opened the rock and water flowed out;\n    It ran in the dry places like a river.",
+                    prayer: "Lord, bring water from the rock in dry places. Refresh my soul with Your life-giving presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-42",
+                    reference: "Psalm 105:42",
+                    text: "For He remembered His holy word\n    With Abraham His servant;",
+                    prayer: "Father, thank You for remembering Your holy word. Help me trust Your promises when I am waiting."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-43",
+                    reference: "Psalm 105:43",
+                    text: "And He brought forth His people with joy,\n    His chosen ones with a joyful shout.",
+                    prayer: "Lord, thank You for leading Your people out with joy. Let deliverance produce praise in my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-44",
+                    reference: "Psalm 105:44",
+                    text: "He gave them also the lands of the nations,\n    That they might take possession of the fruit of the peoples’ labor,",
+                    prayer: "Father, thank You for giving inheritance and blessing according to Your purpose. Help me steward Your gifts faithfully."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-45",
+                    reference: "Psalm 105:45",
+                    text: "So that they might keep His statutes\n    And observe His laws,\n    Praise the Lord!",
+                    prayer: "Lord, help me keep Your statutes and observe Your laws with gratitude, obedience, and praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-105-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your covenant faithfulness, mighty works, protection, provision, and perfect timing. Help me remember what You have done, seek Your strength continually, and trust Your promises through every season. Lead me with joy, refine me through waiting, and teach me to walk in obedience. May my life declare Your wonderful works and praise Your holy name.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         )
     ]
 
