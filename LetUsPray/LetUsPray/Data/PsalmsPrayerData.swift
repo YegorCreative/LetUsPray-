@@ -10200,35 +10200,495 @@ enum PsalmsPrayerData {
             title: "Under His Wings",
             chapterReference: "Psalm 91",
             summary: "Pray for protection and refuge.",
-            verses: []
+            // JSON resource: psalm_91_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-91-1",
+                    reference: "Psalm 91:1",
+                    text: "He who dwells in the shelter of the Most High\n    Will abide in the shadow of the Almighty.",
+                    prayer: "Lord, help me dwell in the shelter of the Most High and rest securely in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-91-2",
+                    reference: "Psalm 91:2",
+                    text: "I will say to the Lord, “My refuge and my fortress,\n    My God, in whom I trust!”",
+                    prayer: "Father, You are my refuge and fortress. Teach me to trust You with all my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-91-3",
+                    reference: "Psalm 91:3",
+                    text: "For it is He who delivers you from the snare of the trapper\n    And from the deadly pestilence.",
+                    prayer: "Lord, deliver me from hidden traps, fear, and anything that seeks to harm my soul."
+                ),
+                PrayerVerse(
+                    id: "psalm-91-4",
+                    reference: "Psalm 91:4",
+                    text: "He will cover you with His pinions,\n    And under His wings you may seek refuge;\n    His faithfulness is a shield and bulwark.",
+                    prayer: "Father, cover me with Your protection and let me find refuge under Your wings."
+                ),
+                PrayerVerse(
+                    id: "psalm-91-5",
+                    reference: "Psalm 91:5",
+                    text: "You will not be afraid of the terror by night,\n    Or of the arrow that flies by day;",
+                    prayer: "Lord, keep me from fear in the night and from anxiety during the day."
+                ),
+                PrayerVerse(
+                    id: "psalm-91-6",
+                    reference: "Psalm 91:6",
+                    text: "Of the pestilence that stalks in darkness,\n    Or of the destruction that lays waste at noon.",
+                    prayer: "Father, protect my heart from unseen dangers and help me rest in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-91-7",
+                    reference: "Psalm 91:7",
+                    text: "A thousand may fall at your side\n    And ten thousand at your right hand,\n    But it shall not approach you.",
+                    prayer: "Lord, when trouble surrounds me, help me remain confident in Your protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-91-8",
+                    reference: "Psalm 91:8",
+                    text: "You will only look on with your eyes\n    And see the recompense of the wicked.",
+                    prayer: "Father, help me trust Your justice and remember that You see all things clearly."
+                ),
+                PrayerVerse(
+                    id: "psalm-91-9",
+                    reference: "Psalm 91:9",
+                    text: "For you have made the Lord, my refuge,\n    Even the Most High, your dwelling place.",
+                    prayer: "Lord, because You are my refuge, help me make Your presence my dwelling place."
+                ),
+                PrayerVerse(
+                    id: "psalm-91-10",
+                    reference: "Psalm 91:10",
+                    text: "No evil will befall you,\n    Nor will any plague come near your tent.",
+                    prayer: "Father, guard my life and protect me from harm according to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-91-11",
+                    reference: "Psalm 91:11",
+                    text: "For He will give His angels charge concerning you,\n    To guard you in all your ways.",
+                    prayer: "Lord, thank You for commanding Your angels concerning Your people. Keep me in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-91-12",
+                    reference: "Psalm 91:12",
+                    text: "They will bear you up in their hands,\n    That you do not strike your foot against a stone.",
+                    prayer: "Father, guide my steps and protect me from stumbling as I walk with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-91-13",
+                    reference: "Psalm 91:13",
+                    text: "You will tread upon the lion and cobra,\n    The young lion and the serpent you will trample down.",
+                    prayer: "Lord, give me courage to overcome fear, temptation, and every spiritual threat through Your strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-91-14",
+                    reference: "Psalm 91:14",
+                    text: "“Because he has loved Me, therefore I will deliver him;\n    I will set him securely on high, because he has known My name.",
+                    prayer: "Father, help me cling to You in love and trust. Thank You for knowing my name and delivering me."
+                ),
+                PrayerVerse(
+                    id: "psalm-91-15",
+                    reference: "Psalm 91:15",
+                    text: "He will call upon Me, and I will answer him;\n    I will be with him in trouble;\n    I will rescue him and honor him.",
+                    prayer: "Lord, when I call upon You, thank You for answering me and being with me in trouble."
+                ),
+                PrayerVerse(
+                    id: "psalm-91-16",
+                    reference: "Psalm 91:16",
+                    text: "With a long life I will satisfy him\n    And let him see My salvation.”",
+                    prayer: "Father, satisfy me with the fullness of life found in You and let me see Your salvation."
+                ),
+                PrayerVerse(
+                    id: "psalm-91-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my refuge, fortress, shelter, and deliverer. Help me dwell in Your presence, trust Your protection, and call upon You with confidence. Guard my steps, quiet my fears, and strengthen my heart in every season. May my life rest securely under Your wings and rejoice in the salvation You provide.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 92,
             title: "It is Good to Praise",
             chapterReference: "Psalm 92",
             summary: "Pray in thanksgiving for God's works.",
-            verses: []
+            // JSON resource: psalm_92_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-92-1",
+                    reference: "Psalm 92:1",
+                    text: "It is good to give thanks to the Lord\n    And to sing praises to Your name, O Most High;",
+                    prayer: "Lord, it is good to give thanks to You and to sing praises to Your name. Fill my heart with gratitude and worship."
+                ),
+                PrayerVerse(
+                    id: "psalm-92-2",
+                    reference: "Psalm 92:2",
+                    text: "To declare Your lovingkindness in the morning\n    And Your faithfulness by night,",
+                    prayer: "Father, help me declare Your lovingkindness in the morning and Your faithfulness by night."
+                ),
+                PrayerVerse(
+                    id: "psalm-92-3",
+                    reference: "Psalm 92:3",
+                    text: "With the ten-stringed lute and with the harp,\n    With resounding music upon the lyre.",
+                    prayer: "Lord, let my worship be joyful, sincere, and pleasing to You in every season of life."
+                ),
+                PrayerVerse(
+                    id: "psalm-92-4",
+                    reference: "Psalm 92:4",
+                    text: "For You, O Lord, have made me glad by what You have done,\n    I will sing for joy at the works of Your hands.",
+                    prayer: "Father, thank You for making me glad through Your works. Help me rejoice in all that Your hands have done."
+                ),
+                PrayerVerse(
+                    id: "psalm-92-5",
+                    reference: "Psalm 92:5",
+                    text: "How great are Your works, O Lord!\n    Your thoughts are very deep.",
+                    prayer: "Lord, Your works are great and Your thoughts are deep. Teach me to trust Your wisdom beyond my understanding."
+                ),
+                PrayerVerse(
+                    id: "psalm-92-6",
+                    reference: "Psalm 92:6",
+                    text: "A senseless man has no knowledge,\n    Nor does a stupid man understand this:",
+                    prayer: "Father, give me spiritual understanding so I do not miss Your truth or take Your works lightly."
+                ),
+                PrayerVerse(
+                    id: "psalm-92-7",
+                    reference: "Psalm 92:7",
+                    text: "That when the wicked sprouted up like grass\n    And all who did iniquity flourished,\n    It was only that they might be destroyed forevermore.",
+                    prayer: "Lord, remind me that evil may appear to flourish for a moment, but only Your righteousness endures forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-92-8",
+                    reference: "Psalm 92:8",
+                    text: "But You, O Lord, are on high forever.",
+                    prayer: "Father, You are exalted forever. Help me keep my eyes lifted toward Your eternal greatness."
+                ),
+                PrayerVerse(
+                    id: "psalm-92-9",
+                    reference: "Psalm 92:9",
+                    text: "For, behold, Your enemies, O Lord,\n    For, behold, Your enemies will perish;\n    All who do iniquity will be scattered.",
+                    prayer: "Lord, thank You that everything opposed to You will not stand forever. Help me trust Your final victory."
+                ),
+                PrayerVerse(
+                    id: "psalm-92-10",
+                    reference: "Psalm 92:10",
+                    text: "But You have exalted my horn like that of the wild ox;\n    I have been anointed with fresh oil.",
+                    prayer: "Father, strengthen me with fresh grace and renew me with the oil of Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-92-11",
+                    reference: "Psalm 92:11",
+                    text: "And my eye has looked exultantly upon my foes,\n    My ears hear of the evildoers who rise up against me.",
+                    prayer: "Lord, help me see Your faithfulness clearly and rest in Your justice with confidence."
+                ),
+                PrayerVerse(
+                    id: "psalm-92-12",
+                    reference: "Psalm 92:12",
+                    text: "The righteous man will flourish like the palm tree,\n    He will grow like a cedar in Lebanon.",
+                    prayer: "Father, make me flourish like the righteous, growing strong and steady in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-92-13",
+                    reference: "Psalm 92:13",
+                    text: "Planted in the house of the Lord,\n    They will flourish in the courts of our God.",
+                    prayer: "Lord, plant me firmly in Your house so my life may bear fruit for Your glory."
+                ),
+                PrayerVerse(
+                    id: "psalm-92-14",
+                    reference: "Psalm 92:14",
+                    text: "They will still yield fruit in old age;\n    They shall be full of sap and very green,",
+                    prayer: "Father, let my life continue to be fruitful in every season, full of spiritual vitality and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-92-15",
+                    reference: "Psalm 92:15",
+                    text: "To declare that the Lord is upright;\n    He is my rock, and there is no unrighteousness in Him.",
+                    prayer: "Lord, may my life declare that You are upright, my rock, and completely faithful."
+                ),
+                PrayerVerse(
+                    id: "psalm-92-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your lovingkindness, faithfulness, and mighty works. Help me worship You with gratitude, trust Your deep wisdom, and remain planted in Your presence. Make my life fruitful in every season, strong in righteousness, and faithful in praise. May everything I do declare that You are my rock and that there is no unrighteousness in You.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 93,
             title: "The Lord Reigns",
             chapterReference: "Psalm 93",
             summary: "Pray in worship of God's sovereign rule.",
-            verses: []
+            // JSON resource: psalm_93_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-93-1",
+                    reference: "Psalm 93:1",
+                    text: "The Lord reigns, He is clothed with majesty;\n    The Lord has clothed and girded Himself with strength;\n    Indeed, the world is firmly established, it will not be moved.",
+                    prayer: "Lord, You reign in majesty and strength. Help me trust that You are sovereign over every part of my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-93-2",
+                    reference: "Psalm 93:2",
+                    text: "Your throne is established from of old;\n    You are from everlasting.",
+                    prayer: "Father, Your throne is established forever. Remind me that Your authority is eternal and unshakable."
+                ),
+                PrayerVerse(
+                    id: "psalm-93-3",
+                    reference: "Psalm 93:3",
+                    text: "The floods have lifted up, O Lord,\n    The floods have lifted up their voice,\n    The floods lift up their pounding waves.",
+                    prayer: "Lord, when the floods of life rise around me, keep my heart steady in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-93-4",
+                    reference: "Psalm 93:4",
+                    text: "More than the sounds of many waters,\n    Than the mighty breakers of the sea,\n    The Lord on high is mighty.",
+                    prayer: "Father, You are mightier than every rushing water and every storm. Help me rest in Your power and peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-93-5",
+                    reference: "Psalm 93:5",
+                    text: "Your testimonies are fully confirmed;\n    Holiness befits Your house,\n    O Lord, forevermore.",
+                    prayer: "Lord, Your testimonies are trustworthy and Your holiness endures forever. Help me build my life on Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-93-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for reigning with majesty, strength, and holiness. When life feels unstable or overwhelming, remind me that Your throne is established forever. Help me trust Your power above every storm and build my life on Your trustworthy Word. May my heart rest in Your sovereignty and honor Your holiness each day.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 94,
             title: "God of Vengeance",
             chapterReference: "Psalm 94",
             summary: "Pray for God's justice and discipline.",
-            verses: []
+            // JSON resource: psalm_94_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-94-1",
+                    reference: "Psalm 94:1",
+                    text: "O Lord, God of vengeance,\n    God of vengeance, shine forth!",
+                    prayer: "Lord, You are the God of justice. Help me trust You to make all things right in Your perfect wisdom and timing."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-2",
+                    reference: "Psalm 94:2",
+                    text: "Rise up, O Judge of the earth,\n    Render recompense to the proud.",
+                    prayer: "Father, rise up as the righteous Judge of the earth. Teach me to leave judgment in Your hands."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-3",
+                    reference: "Psalm 94:3",
+                    text: "How long shall the wicked, O Lord,\n    How long shall the wicked exult?",
+                    prayer: "Lord, when wrongdoing seems to continue unchecked, strengthen my patience and confidence in Your justice."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-4",
+                    reference: "Psalm 94:4",
+                    text: "They pour forth words, they speak arrogantly;\n    All who do wickedness vaunt themselves.",
+                    prayer: "Father, protect my heart from prideful words and arrogant attitudes. Teach me humility before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-5",
+                    reference: "Psalm 94:5",
+                    text: "They crush Your people, O Lord,\n    And afflict Your heritage.",
+                    prayer: "Lord, defend Your people and protect those who are vulnerable, mistreated, or oppressed."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-6",
+                    reference: "Psalm 94:6",
+                    text: "They slay the widow and the stranger\n    And murder the orphans.",
+                    prayer: "Father, care for the widow, the stranger, and the fatherless. Help me reflect Your compassion toward those in need."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-7",
+                    reference: "Psalm 94:7",
+                    text: "They have said, “The Lord does not see,\n    Nor does the God of Jacob pay heed.”",
+                    prayer: "Lord, remind me that You see every action and hear every word. Nothing is hidden from Your sight."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-8",
+                    reference: "Psalm 94:8",
+                    text: "Pay heed, you senseless among the people;\n    And when will you understand, stupid ones?",
+                    prayer: "Father, give me wisdom and keep me from foolishness. Help me understand Your truth and live with reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-9",
+                    reference: "Psalm 94:9",
+                    text: "He who planted the ear, does He not hear?\n    He who formed the eye, does He not see?",
+                    prayer: "Lord, You formed the ear and the eye. Help me remember that You hear, see, and know all things."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-10",
+                    reference: "Psalm 94:10",
+                    text: "He who chastens the nations, will He not rebuke,\n    Even He who teaches man knowledge?",
+                    prayer: "Father, You instruct nations and teach knowledge. Correct me with mercy and guide me into wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-11",
+                    reference: "Psalm 94:11",
+                    text: "The Lord knows the thoughts of man,\n    That they are a mere breath.",
+                    prayer: "Lord, You know the thoughts of people. Purify my mind and help my thoughts honor You."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-12",
+                    reference: "Psalm 94:12",
+                    text: "Blessed is the man whom You chasten, O Lord,\n    And whom You teach out of Your law;",
+                    prayer: "Father, blessed is the one You discipline and teach from Your Word. Help me receive Your correction with humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-13",
+                    reference: "Psalm 94:13",
+                    text: "That You may grant him relief from the days of adversity,\n    Until a pit is dug for the wicked.",
+                    prayer: "Lord, give me rest in difficult days and keep me steady while I wait for Your justice."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-14",
+                    reference: "Psalm 94:14",
+                    text: "For the Lord will not abandon His people,\n    Nor will He forsake His inheritance.",
+                    prayer: "Father, thank You that You will not abandon Your people. Help me trust Your covenant love."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-15",
+                    reference: "Psalm 94:15",
+                    text: "For judgment will again be righteous,\n    And all the upright in heart will follow it.",
+                    prayer: "Lord, let justice return to righteousness. Help me follow what is upright and pleasing to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-16",
+                    reference: "Psalm 94:16",
+                    text: "Who will stand up for me against evildoers?\n    Who will take his stand for me against those who do wickedness?",
+                    prayer: "Father, when evil rises, help me stand with courage for what is right."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-17",
+                    reference: "Psalm 94:17",
+                    text: "If the Lord had not been my help,\n    My soul would soon have dwelt in the abode of silence.",
+                    prayer: "Lord, thank You for being my help. Without You, my soul would quickly fall into silence and despair."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-18",
+                    reference: "Psalm 94:18",
+                    text: "If I should say, “My foot has slipped,”\n    Your lovingkindness, O Lord, will hold me up.",
+                    prayer: "Father, when my foot slips, hold me up with Your lovingkindness and steady my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-19",
+                    reference: "Psalm 94:19",
+                    text: "When my anxious thoughts multiply within me,\n    Your consolations delight my soul.",
+                    prayer: "Lord, when anxious thoughts multiply within me, let Your comforts delight and restore my soul."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-20",
+                    reference: "Psalm 94:20",
+                    text: "Can a throne of destruction be allied with You,\n    One which devises mischief by decree?",
+                    prayer: "Father, keep me from partnering with anything unjust or corrupt. Help me remain faithful to Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-21",
+                    reference: "Psalm 94:21",
+                    text: "They band themselves together against the life of the righteous\n    And condemn the innocent to death.",
+                    prayer: "Lord, protect the innocent and defend those who are treated wrongly."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-22",
+                    reference: "Psalm 94:22",
+                    text: "But the Lord has been my stronghold,\n    And my God the rock of my refuge.",
+                    prayer: "Father, thank You for being my stronghold, my refuge, and the rock where I can safely stand."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-23",
+                    reference: "Psalm 94:23",
+                    text: "He has brought back their wickedness upon them\n    And will destroy them in their evil;\n    The Lord our God will destroy them.",
+                    prayer: "Lord, I trust You to deal with evil and injustice according to Your righteousness. Keep my heart free from revenge and anchored in faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-94-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my righteous Judge, my help, my stronghold, and my refuge. When injustice troubles me or anxious thoughts multiply within me, help me trust Your wisdom and rest in Your comfort. Teach me through Your Word, steady me with Your lovingkindness, and give me courage to stand for what is right. May my heart remain faithful, humble, and secure in You.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 95,
             title: "Come, Let Us Worship",
             chapterReference: "Psalm 95",
             summary: "Pray with a heart of worship and obedience.",
-            verses: []
+            // JSON resource: psalm_95_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-95-1",
+                    reference: "Psalm 95:1",
+                    text: "O come, let us sing for joy to the Lord,\n    Let us shout joyfully to the rock of our salvation.",
+                    prayer: "Lord, help me come before You with joyful singing. Let my heart praise You as the rock of my salvation."
+                ),
+                PrayerVerse(
+                    id: "psalm-95-2",
+                    reference: "Psalm 95:2",
+                    text: "Let us come before His presence with thanksgiving,\n    Let us shout joyfully to Him with psalms.",
+                    prayer: "Father, teach me to enter Your presence with thanksgiving and worship You with songs of joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-95-3",
+                    reference: "Psalm 95:3",
+                    text: "For the Lord is a great God\n    And a great King above all gods,",
+                    prayer: "Lord, You are a great God and King above all. Help me live with reverence, trust, and awe before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-95-4",
+                    reference: "Psalm 95:4",
+                    text: "In whose hand are the depths of the earth,\n    The peaks of the mountains are His also.",
+                    prayer: "Father, the depths of the earth and the heights of the mountains belong to You. Remind me that all creation is in Your hands."
+                ),
+                PrayerVerse(
+                    id: "psalm-95-5",
+                    reference: "Psalm 95:5",
+                    text: "The sea is His, for it was He who made it,\n    And His hands formed the dry land.",
+                    prayer: "Lord, You made the sea and formed the dry land. Help me worship You as Creator and Sustainer of all things."
+                ),
+                PrayerVerse(
+                    id: "psalm-95-6",
+                    reference: "Psalm 95:6",
+                    text: "Come, let us worship and bow down,\n    Let us kneel before the Lord our Maker.",
+                    prayer: "Father, teach me to bow down in worship and kneel before You with humility and devotion."
+                ),
+                PrayerVerse(
+                    id: "psalm-95-7",
+                    reference: "Psalm 95:7",
+                    text: "For He is our God,\n    And we are the people of His pasture and the sheep of His hand.\n    Today, if you would hear His voice,",
+                    prayer: "Lord, You are my God, and I am one of the people of Your pasture. Help me listen to Your voice today."
+                ),
+                PrayerVerse(
+                    id: "psalm-95-8",
+                    reference: "Psalm 95:8",
+                    text: "Do not harden your hearts, as at Meribah,\n    As in the day of Massah in the wilderness,",
+                    prayer: "Father, keep my heart from becoming hardened. Help me respond to Your voice with obedience, humility, and faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-95-9",
+                    reference: "Psalm 95:9",
+                    text: "“When your fathers tested Me,\n    They tried Me, though they had seen My work.",
+                    prayer: "Lord, forgive me when I test You or doubt Your faithfulness despite all You have done."
+                ),
+                PrayerVerse(
+                    id: "psalm-95-10",
+                    reference: "Psalm 95:10",
+                    text: "For forty years I loathed that generation,\n    And said they are a people who err in their heart,\n    And they do not know My ways.",
+                    prayer: "Father, protect me from wandering in my heart. Teach me to know Your ways and remain faithful to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-95-11",
+                    reference: "Psalm 95:11",
+                    text: "Therefore I swore in My anger,\n    Truly they shall not enter into My rest.”",
+                    prayer: "Lord, help me enter the rest You provide through trust, obedience, and surrender to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-95-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my Creator, Shepherd, King, and rock of salvation. Help me worship You with joy, thanksgiving, humility, and reverence. Keep my heart soft toward Your voice, protect me from unbelief, and teach me to walk faithfully in Your ways. May my life honor You and rest securely in Your presence.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 96,
