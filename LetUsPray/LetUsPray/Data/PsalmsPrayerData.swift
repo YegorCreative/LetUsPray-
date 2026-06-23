@@ -9455,35 +9455,741 @@ enum PsalmsPrayerData {
             title: "Teach Me Your Way",
             chapterReference: "Psalm 86",
             summary: "Pray for guidance and a undivided heart.",
-            verses: []
+            // JSON resource: psalm_86_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-86-1",
+                    reference: "Psalm 86:1",
+                    text: "Incline Your ear, O Lord, and answer me;\n    For I am afflicted and needy.",
+                    prayer: "Lord, incline Your ear and answer me. When I feel poor, needy, or weak, help me come to You with trust and humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-86-2",
+                    reference: "Psalm 86:2",
+                    text: "Preserve my soul, for I am a godly man;\n    O You my God, save Your servant who trusts in You.",
+                    prayer: "Father, preserve my soul and keep me faithful to You. I trust in You as my God and my helper."
+                ),
+                PrayerVerse(
+                    id: "psalm-86-3",
+                    reference: "Psalm 86:3",
+                    text: "Be gracious to me, O Lord,\n    For to You I cry all day long.",
+                    prayer: "Lord, be gracious to me, for I call upon You throughout the day. Let Your mercy strengthen and sustain me."
+                ),
+                PrayerVerse(
+                    id: "psalm-86-4",
+                    reference: "Psalm 86:4",
+                    text: "Make glad the soul of Your servant,\n    For to You, O Lord, I lift up my soul.",
+                    prayer: "Father, bring gladness to my soul as I lift my heart to You. Restore joy where I feel weary or burdened."
+                ),
+                PrayerVerse(
+                    id: "psalm-86-5",
+                    reference: "Psalm 86:5",
+                    text: "For You, Lord, are good, and ready to forgive,\n    And abundant in lovingkindness to all who call upon You.",
+                    prayer: "Lord, thank You for being good, forgiving, and abundant in lovingkindness to all who call upon You."
+                ),
+                PrayerVerse(
+                    id: "psalm-86-6",
+                    reference: "Psalm 86:6",
+                    text: "Give ear, O Lord, to my prayer;\n    And give heed to the voice of my supplications!",
+                    prayer: "Father, hear my prayer and listen to my cry for mercy. Thank You that I can bring every need before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-86-7",
+                    reference: "Psalm 86:7",
+                    text: "In the day of my trouble I shall call upon You,\n    For You will answer me.",
+                    prayer: "Lord, in the day of trouble I call upon You because You answer me with wisdom, mercy, and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-86-8",
+                    reference: "Psalm 86:8",
+                    text: "There is no one like You among the gods, O Lord,\n    Nor are there any works like Yours.",
+                    prayer: "Father, there is no one like You. Help me worship You with reverence and trust Your works above all else."
+                ),
+                PrayerVerse(
+                    id: "psalm-86-9",
+                    reference: "Psalm 86:9",
+                    text: "All nations whom You have made shall come and worship before You, O Lord,\n    And they shall glorify Your name.",
+                    prayer: "Lord, may all nations come and worship before You. Let my life also glorify Your holy name."
+                ),
+                PrayerVerse(
+                    id: "psalm-86-10",
+                    reference: "Psalm 86:10",
+                    text: "For You are great and do wondrous deeds;\n    You alone are God.",
+                    prayer: "Father, You are great and do wondrous deeds. Remind me that You alone are God."
+                ),
+                PrayerVerse(
+                    id: "psalm-86-11",
+                    reference: "Psalm 86:11",
+                    text: "Teach me Your way, O Lord;\n    I will walk in Your truth;\n    Unite my heart to fear Your name.",
+                    prayer: "Lord, teach me Your way so I may walk in Your truth. Unite my heart to fear and honor Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-86-12",
+                    reference: "Psalm 86:12",
+                    text: "I will give thanks to You, O Lord my God, with all my heart,\n    And will glorify Your name forever.",
+                    prayer: "Father, help me give thanks to You with all my heart and glorify Your name forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-86-13",
+                    reference: "Psalm 86:13",
+                    text: "For Your lovingkindness toward me is great,\n    And You have delivered my soul from the depths of Sheol.",
+                    prayer: "Lord, thank You for Your great lovingkindness and for delivering my soul from the depths."
+                ),
+                PrayerVerse(
+                    id: "psalm-86-14",
+                    reference: "Psalm 86:14",
+                    text: "O God, arrogant men have risen up against me,\n    And a band of violent men have sought my life,\n    And they have not set You before them.",
+                    prayer: "Father, when pride, opposition, or harm rises against me, protect me and keep my heart steady in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-86-15",
+                    reference: "Psalm 86:15",
+                    text: "But You, O Lord, are a God merciful and gracious,\n    Slow to anger and abundant in lovingkindness and truth.",
+                    prayer: "Lord, thank You for being compassionate, gracious, slow to anger, and abundant in lovingkindness and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-86-16",
+                    reference: "Psalm 86:16",
+                    text: "Turn to me, and be gracious to me;\n    Oh grant Your strength to Your servant,\n    And save the son of Your handmaid.",
+                    prayer: "Father, turn to me and be gracious. Strengthen me as Your servant and help me walk faithfully before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-86-17",
+                    reference: "Psalm 86:17",
+                    text: "Show me a sign for good,\n    That those who hate me may see it and be ashamed,\n    Because You, O Lord, have helped me and comforted me.",
+                    prayer: "Lord, show me Your goodness and let my life be a testimony of Your help, comfort, and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-86-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your goodness, mercy, forgiveness, and steadfast love. Teach me Your way, unite my heart to honor You, and help me walk in Your truth every day. When trouble comes, remind me that You are compassionate, gracious, and faithful to answer. Strengthen me, comfort me, and let my life glorify Your name forever.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 87,
             title: "Glorious Things",
             chapterReference: "Psalm 87",
             summary: "Pray in celebration of God's city.",
-            verses: []
+            // JSON resource: psalm_87_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-87-1",
+                    reference: "Psalm 87:1",
+                    text: "His foundation is in the holy mountains.",
+                    prayer: "Lord, thank You for establishing what belongs to You on a holy foundation. Help my life be built firmly on Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-87-2",
+                    reference: "Psalm 87:2",
+                    text: "The Lord loves the gates of Zion\n    More than all the other dwelling places of Jacob.",
+                    prayer: "Father, thank You for loving the place where Your presence dwells. Teach me to treasure Your kingdom and Your people."
+                ),
+                PrayerVerse(
+                    id: "psalm-87-3",
+                    reference: "Psalm 87:3",
+                    text: "Glorious things are spoken of you,\n    O city of God. Selah.",
+                    prayer: "Lord, let glorious things be spoken of Your name and Your dwelling place. May my life reflect the beauty of belonging to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-87-4",
+                    reference: "Psalm 87:4",
+                    text: "“I shall mention Rahab and Babylon among those who know Me;\n    Behold, Philistia and Tyre with Ethiopia:\n    ‘This one was born there.’ ”",
+                    prayer: "Father, thank You that people from every nation can be known by You. Help me see others through the grace and welcome of Your kingdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-87-5",
+                    reference: "Psalm 87:5",
+                    text: "But of Zion it shall be said, “This one and that one were born in her”;\n    And the Most High Himself will establish her.",
+                    prayer: "Lord, establish Your people by Your strength. Help me find my identity in Your family and Your promises."
+                ),
+                PrayerVerse(
+                    id: "psalm-87-6",
+                    reference: "Psalm 87:6",
+                    text: "The Lord will count when He registers the peoples,\n    “This one was born there.” Selah.",
+                    prayer: "Father, thank You that You know each person by name. Remind me that I am seen, known, and counted by You."
+                ),
+                PrayerVerse(
+                    id: "psalm-87-7",
+                    reference: "Psalm 87:7",
+                    text: "Then those who sing as well as those who play the flutes shall say,\n    “All my springs of joy are in you.”",
+                    prayer: "Lord, let worship and joy flow from my life because every true source of life is found in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-87-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your holy foundation, Your kingdom, and Your welcoming love. Help me treasure Your presence, live as one who belongs to You, and see others through Your grace. Let my identity be rooted in Your promises, and let worship flow from my heart because every true source of life is found in You.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 88,
             title: "Darkness is My Friend",
             chapterReference: "Psalm 88",
             summary: "Pray honestly through deep despair.",
-            verses: []
+            // JSON resource: psalm_88_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-88-1",
+                    reference: "Psalm 88:1",
+                    text: "O Lord, the God of my salvation,\n    I have cried out by day and in the night before You.",
+                    prayer: "Lord, God of my salvation, I cry out to You in the day and in the night. Hear me and draw near to my pain."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-2",
+                    reference: "Psalm 88:2",
+                    text: "Let my prayer come before You;\n    Incline Your ear to my cry!",
+                    prayer: "Father, let my prayer come before You. Incline Your ear to my cry and remind me that You are listening."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-3",
+                    reference: "Psalm 88:3",
+                    text: "For my soul has had enough troubles,\n    And my life has drawn near to Sheol.",
+                    prayer: "Lord, when my soul feels full of trouble, hold me close and keep me anchored in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-4",
+                    reference: "Psalm 88:4",
+                    text: "I am reckoned among those who go down to the pit;\n    I have become like a man without strength,",
+                    prayer: "Father, when I feel weak, forgotten, or near despair, breathe strength and hope into my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-5",
+                    reference: "Psalm 88:5",
+                    text: "Forsaken among the dead,\n    Like the slain who lie in the grave,\n    Whom You remember no more,\n    And they are cut off from Your hand.",
+                    prayer: "Lord, when I feel cut off or alone, remind me that I am never beyond Your sight, love, or care."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-6",
+                    reference: "Psalm 88:6",
+                    text: "You have put me in the lowest pit,\n    In dark places, in the depths.",
+                    prayer: "Father, when I feel placed in darkness or deep sorrow, be the light that guides me through."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-7",
+                    reference: "Psalm 88:7",
+                    text: "Your wrath has rested upon me,\n    And You have afflicted me with all Your waves. Selah.",
+                    prayer: "Lord, when hardship feels heavy upon me, sustain me with Your mercy and help me endure with faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-8",
+                    reference: "Psalm 88:8",
+                    text: "You have removed my acquaintances far from me;\n    You have made me an object of loathing to them;\n    I am shut up and cannot go out.",
+                    prayer: "Father, when loneliness surrounds me, comfort me with Your presence and remind me that You are near."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-9",
+                    reference: "Psalm 88:9",
+                    text: "My eye has wasted away because of affliction;\n    I have called upon You every day, O Lord;\n    I have spread out my hands to You.",
+                    prayer: "Lord, when my eyes grow weary from sorrow, help me keep calling upon You and lifting my hands in prayer."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-10",
+                    reference: "Psalm 88:10",
+                    text: "Will You perform wonders for the dead?\n    Will the departed spirits rise and praise You? Selah.",
+                    prayer: "Father, when I cannot understand Your work, help me trust that Your power and mercy are still present."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-11",
+                    reference: "Psalm 88:11",
+                    text: "Will Your lovingkindness be declared in the grave,\n    Your faithfulness in Abaddon?",
+                    prayer: "Lord, let Your lovingkindness and faithfulness be known even in the darkest places of my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-12",
+                    reference: "Psalm 88:12",
+                    text: "Will Your wonders be made known in the darkness?\n    And Your righteousness in the land of forgetfulness?",
+                    prayer: "Father, reveal Your wonders in my darkness and teach me to recognize Your righteousness even when I feel overwhelmed."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-13",
+                    reference: "Psalm 88:13",
+                    text: "But I, O Lord, have cried out to You for help,\n    And in the morning my prayer comes before You.",
+                    prayer: "Lord, I cry to You for help. Let my morning begin with prayer, hope, and trust in Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-14",
+                    reference: "Psalm 88:14",
+                    text: "O Lord, why do You reject my soul?\n    Why do You hide Your face from me?",
+                    prayer: "Father, when I feel distant from You, remind me that You have not abandoned me and that Your love remains steady."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-15",
+                    reference: "Psalm 88:15",
+                    text: "I was afflicted and about to die from my youth on;\n    I suffer Your terrors; I am overcome.",
+                    prayer: "Lord, when suffering feels long and exhausting, strengthen me with grace and keep my heart from giving up."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-16",
+                    reference: "Psalm 88:16",
+                    text: "Your burning anger has passed over me;\n    Your terrors have destroyed me.",
+                    prayer: "Father, when fear and pressure overwhelm me, cover me with Your peace and hold me securely in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-17",
+                    reference: "Psalm 88:17",
+                    text: "They have surrounded me like water all day long;\n    They have encompassed me altogether.",
+                    prayer: "Lord, when troubles surround me like floodwaters, lift me above despair and help me breathe again in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-18",
+                    reference: "Psalm 88:18",
+                    text: "You have removed lover and friend far from me;\n    My acquaintances are in darkness.",
+                    prayer: "Father, when I feel alone or separated from comfort, be my closest companion and my unfailing hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-88-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing even the prayers that come from darkness, sorrow, and exhaustion. When I feel overwhelmed, lonely, or unable to understand what You are doing, help me keep crying out to You. Be near to me in pain, sustain me through hardship, and remind me that Your love is still present even when I cannot feel it. May my hope remain anchored in You, my God and my salvation.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 89,
             title: "I Will Sing of Your Love",
             chapterReference: "Psalm 89",
             summary: "Pray for trust in God's covenant faithfulness.",
-            verses: []
+            // JSON resource: psalm_89_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-89-1",
+                    reference: "Psalm 89:1",
+                    text: "I will sing of the lovingkindness of the Lord forever;\n    To all generations I will make known Your faithfulness with my mouth.",
+                    prayer: "Lord, I will sing of Your lovingkindness forever. Help me continually remember and declare Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-2",
+                    reference: "Psalm 89:2",
+                    text: "For I have said, “Lovingkindness will be built up forever;\n    In the heavens You will establish Your faithfulness.”",
+                    prayer: "Father, Your love stands firm forever and Your faithfulness reaches beyond what I can see. Help me trust Your promises."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-3",
+                    reference: "Psalm 89:3",
+                    text: "“I have made a covenant with My chosen;\n    I have sworn to David My servant,",
+                    prayer: "Lord, thank You for making and keeping Your covenant. Remind me that Your word is trustworthy and secure."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-4",
+                    reference: "Psalm 89:4",
+                    text: "I will establish your seed forever\n    And build up your throne to all generations.” Selah.",
+                    prayer: "Father, establish what You have promised according to Your perfect will. Strengthen my confidence in Your plans."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-5",
+                    reference: "Psalm 89:5",
+                    text: "The heavens will praise Your wonders, O Lord;\n    Your faithfulness also in the assembly of the holy ones.",
+                    prayer: "Lord, let the heavens praise Your wonders and let my life join in declaring Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-6",
+                    reference: "Psalm 89:6",
+                    text: "For who in the skies is comparable to the Lord?\n    Who among the sons of the mighty is like the Lord,",
+                    prayer: "Father, there is no one like You. Help me worship You with awe and reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-7",
+                    reference: "Psalm 89:7",
+                    text: "A God greatly feared in the council of the holy ones,\n    And awesome above all those who are around Him?",
+                    prayer: "Lord, You are greatly feared and honored among Your people. Teach me to approach You with humility and respect."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-8",
+                    reference: "Psalm 89:8",
+                    text: "O Lord God of hosts, who is like You, O mighty Lord?\n    Your faithfulness also surrounds You.",
+                    prayer: "Father, thank You for Your unmatched power and faithfulness. Help me trust You above every earthly strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-9",
+                    reference: "Psalm 89:9",
+                    text: "You rule the swelling of the sea;\n    When its waves rise, You still them.",
+                    prayer: "Lord, You rule over the raging sea. Speak peace over every storm in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-10",
+                    reference: "Psalm 89:10",
+                    text: "You Yourself crushed Rahab like one who is slain;\n    You scattered Your enemies with Your mighty arm.",
+                    prayer: "Father, You defeat what opposes Your will. Strengthen me to trust Your victory and power."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-11",
+                    reference: "Psalm 89:11",
+                    text: "The heavens are Yours, the earth also is Yours;\n    The world and all it contains, You have founded them.",
+                    prayer: "Lord, heaven and earth belong to You. Help me remember that all creation is under Your authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-12",
+                    reference: "Psalm 89:12",
+                    text: "The north and the south, You have created them;\n    Tabor and Hermon shout for joy at Your name.",
+                    prayer: "Father, thank You for the beauty and strength of Your creation. Let it continually remind me of Your greatness."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-13",
+                    reference: "Psalm 89:13",
+                    text: "You have a strong arm;\n    Your hand is mighty, Your right hand is exalted.",
+                    prayer: "Lord, Your arm is mighty and Your hand is strong. Help me rely on Your power instead of my own."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-14",
+                    reference: "Psalm 89:14",
+                    text: "Righteousness and justice are the foundation of Your throne;\n    Lovingkindness and truth go before You.",
+                    prayer: "Father, righteousness and justice are the foundation of Your throne. Let truth and mercy shape my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-15",
+                    reference: "Psalm 89:15",
+                    text: "How blessed are the people who know the joyful sound!\n    O Lord, they walk in the light of Your countenance.",
+                    prayer: "Lord, blessed are those who walk in the light of Your presence. Help me live daily in fellowship with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-16",
+                    reference: "Psalm 89:16",
+                    text: "In Your name they rejoice all the day,\n    And by Your righteousness they are exalted.",
+                    prayer: "Father, let my joy be found in Your name and not in temporary things."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-17",
+                    reference: "Psalm 89:17",
+                    text: "For You are the glory of their strength,\n    And by Your favor our horn is exalted.",
+                    prayer: "Lord, You are the glory of our strength. Help me depend on You for every victory and accomplishment."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-18",
+                    reference: "Psalm 89:18",
+                    text: "For our shield belongs to the Lord,\n    And our king to the Holy One of Israel.",
+                    prayer: "Father, thank You for being my shield and protector. Keep me secure in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-19",
+                    reference: "Psalm 89:19",
+                    text: "Once You spoke in vision to Your godly ones,\n    And said, “I have given help to one who is mighty;\n    I have exalted one chosen from the people.",
+                    prayer: "Lord, thank You for raising up servants according to Your purpose. Help me faithfully fulfill what You call me to do."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-20",
+                    reference: "Psalm 89:20",
+                    text: "I have found David My servant;\n    With My holy oil I have anointed him,",
+                    prayer: "Father, thank You for choosing and anointing those who serve You. Let me walk faithfully in my calling."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-21",
+                    reference: "Psalm 89:21",
+                    text: "With whom My hand will be established;\n    My arm also will strengthen him.",
+                    prayer: "Lord, strengthen me with Your hand and establish me through Your grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-22",
+                    reference: "Psalm 89:22",
+                    text: "The enemy will not deceive him,\n    Nor the son of wickedness afflict him.",
+                    prayer: "Father, protect me from the attacks of the enemy and keep me secure in Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-23",
+                    reference: "Psalm 89:23",
+                    text: "But I shall crush his adversaries before him,\n    And strike those who hate him.",
+                    prayer: "Lord, defeat what opposes Your purposes and help me remain steadfast in faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-24",
+                    reference: "Psalm 89:24",
+                    text: "My faithfulness and My lovingkindness will be with him,\n    And in My name his horn will be exalted.",
+                    prayer: "Father, let Your faithfulness and lovingkindness remain upon me throughout every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-25",
+                    reference: "Psalm 89:25",
+                    text: "I shall also set his hand on the sea\n    And his right hand on the rivers.",
+                    prayer: "Lord, expand my influence only according to Your will and for Your glory."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-26",
+                    reference: "Psalm 89:26",
+                    text: "He will cry to Me, ‘You are my Father,\n    My God, and the rock of my salvation.’",
+                    prayer: "Father, help me call upon You as my Father, my God, and the rock of my salvation."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-27",
+                    reference: "Psalm 89:27",
+                    text: "I also shall make him My firstborn,\n    The highest of the kings of the earth.",
+                    prayer: "Lord, thank You for giving honor according to Your purpose. Keep me humble before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-28",
+                    reference: "Psalm 89:28",
+                    text: "My lovingkindness I will keep for him forever,\n    And My covenant shall be confirmed to him.",
+                    prayer: "Father, thank You that Your covenant love endures forever. Help me trust in Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-29",
+                    reference: "Psalm 89:29",
+                    text: "So I will establish his descendants forever\n    And his throne as the days of heaven.",
+                    prayer: "Lord, establish what honors You and let future generations know of Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-30",
+                    reference: "Psalm 89:30",
+                    text: "“If his sons forsake My law\n    And do not walk in My judgments,",
+                    prayer: "Father, when I wander from Your ways, lovingly correct me and draw me back to obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-31",
+                    reference: "Psalm 89:31",
+                    text: "If they violate My statutes\n    And do not keep My commandments,",
+                    prayer: "Lord, keep me from neglecting Your commands and help me walk faithfully before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-32",
+                    reference: "Psalm 89:32",
+                    text: "Then I will punish their transgression with the rod\n    And their iniquity with stripes.",
+                    prayer: "Father, thank You that Your discipline comes from love and a desire to restore."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-33",
+                    reference: "Psalm 89:33",
+                    text: "But I will not break off My lovingkindness from him,\n    Nor deal falsely in My faithfulness.",
+                    prayer: "Lord, even when I fail, thank You that Your lovingkindness does not depart from me."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-34",
+                    reference: "Psalm 89:34",
+                    text: "My covenant I will not violate,\n    Nor will I alter the utterance of My lips.",
+                    prayer: "Father, Your word never fails. Help me trust every promise You have spoken."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-35",
+                    reference: "Psalm 89:35",
+                    text: "Once I have sworn by My holiness;\n    I will not lie to David.",
+                    prayer: "Lord, thank You that Your holiness guarantees the truthfulness of Your promises."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-36",
+                    reference: "Psalm 89:36",
+                    text: "His descendants shall endure forever\n    And his throne as the sun before Me.",
+                    prayer: "Father, establish what You have spoken and let Your purposes endure."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-37",
+                    reference: "Psalm 89:37",
+                    text: "It shall be established forever like the moon,\n    And the witness in the sky is faithful.” Selah.",
+                    prayer: "Lord, thank You for Your faithfulness that remains constant through every generation."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-38",
+                    reference: "Psalm 89:38",
+                    text: "But You have cast off and rejected,\n    You have been full of wrath against Your anointed.",
+                    prayer: "Father, when circumstances seem to contradict Your promises, help me continue trusting You."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-39",
+                    reference: "Psalm 89:39",
+                    text: "You have spurned the covenant of Your servant;\n    You have profaned his crown in the dust.",
+                    prayer: "Lord, when disappointment comes, keep my faith anchored in Your character."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-40",
+                    reference: "Psalm 89:40",
+                    text: "You have broken down all his walls;\n    You have brought his strongholds to ruin.",
+                    prayer: "Father, when defenses seem broken, remind me that You remain my refuge."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-41",
+                    reference: "Psalm 89:41",
+                    text: "All who pass along the way plunder him;\n    He has become a reproach to his neighbors.",
+                    prayer: "Lord, protect me when I feel vulnerable and exposed to attack."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-42",
+                    reference: "Psalm 89:42",
+                    text: "You have exalted the right hand of his adversaries;\n    You have made all his enemies rejoice.",
+                    prayer: "Father, when others seem to prosper unfairly, help me trust Your justice and timing."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-43",
+                    reference: "Psalm 89:43",
+                    text: "You also turn back the edge of his sword\n    And have not made him stand in battle.",
+                    prayer: "Lord, strengthen me when I feel defeated and help me persevere."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-44",
+                    reference: "Psalm 89:44",
+                    text: "You have made his splendor to cease\n    And cast his throne to the ground.",
+                    prayer: "Father, when my strength fails, remind me that Your power is sufficient."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-45",
+                    reference: "Psalm 89:45",
+                    text: "You have shortened the days of his youth;\n    You have covered him with shame. Selah.",
+                    prayer: "Lord, help me use my days wisely and remain faithful through every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-46",
+                    reference: "Psalm 89:46",
+                    text: "How long, O Lord?\n    Will You hide Yourself forever?\n    Will Your wrath burn like fire?",
+                    prayer: "Father, when I wonder how long difficulty will last, renew my hope in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-47",
+                    reference: "Psalm 89:47",
+                    text: "Remember what my span of life is;\n    For what vanity You have created all the sons of men!",
+                    prayer: "Lord, remind me of the brevity of life and help me live with eternal perspective."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-48",
+                    reference: "Psalm 89:48",
+                    text: "What man can live and not see death?\n    Can he deliver his soul from the power of Sheol? Selah.",
+                    prayer: "Father, thank You for the salvation that delivers from death and gives eternal hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-49",
+                    reference: "Psalm 89:49",
+                    text: "Where are Your former lovingkindnesses, O Lord,\n    Which You swore to David in Your faithfulness?",
+                    prayer: "Lord, help me remember Your past faithfulness when present circumstances seem uncertain."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-50",
+                    reference: "Psalm 89:50",
+                    text: "Remember, O Lord, the reproach of Your servants;\n    How I bear in my bosom the reproach of all the many peoples,",
+                    prayer: "Father, see every burden I carry and strengthen me when I feel discouraged."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-51",
+                    reference: "Psalm 89:51",
+                    text: "With which Your enemies have reproached, O Lord,\n    With which they have reproached the footsteps of Your anointed.",
+                    prayer: "Lord, when others mock faith or question Your promises, help me remain steadfast."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-52",
+                    reference: "Psalm 89:52",
+                    text: "Blessed be the Lord forever!\n    Amen and Amen.",
+                    prayer: "Father, blessed be Your name forever. Let praise remain on my lips regardless of my circumstances."
+                ),
+                PrayerVerse(
+                    id: "psalm-89-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your faithfulness, lovingkindness, and unchanging promises. When circumstances are confusing or difficult, help me trust Your character more than what I see. Teach me to walk faithfully, receive Your correction with humility, and remember Your goodness through every season. Let my life continually praise You, knowing that Your covenant love never fails and Your promises remain true forever.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 90,
             title: "Teach Us to Number Our Days",
             chapterReference: "Psalm 90",
             summary: "Pray for wisdom about the brevity of life.",
-            verses: []
+            // JSON resource: psalm_90_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-90-1",
+                    reference: "Psalm 90:1",
+                    text: "Lord, You have been our dwelling place in all generations.",
+                    prayer: "Lord, You have been our dwelling place through every generation. Help me find my home, safety, and rest in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-90-2",
+                    reference: "Psalm 90:2",
+                    text: "Before the mountains were born\n    Or You gave birth to the earth and the world,\n    Even from everlasting to everlasting, You are God.",
+                    prayer: "Father, before the mountains were formed, You were God. Help me trust Your eternal power and unchanging nature."
+                ),
+                PrayerVerse(
+                    id: "psalm-90-3",
+                    reference: "Psalm 90:3",
+                    text: "You turn man back into dust\n    And say, “Return, O children of men.”",
+                    prayer: "Lord, remind me that my life is in Your hands. Teach me humility as I remember that You are the Creator and Sustainer of all."
+                ),
+                PrayerVerse(
+                    id: "psalm-90-4",
+                    reference: "Psalm 90:4",
+                    text: "For a thousand years in Your sight\n    Are like yesterday when it passes by,\n    Or as a watch in the night.",
+                    prayer: "Father, time is never beyond Your control. Help me trust Your perspective when my own understanding feels limited."
+                ),
+                PrayerVerse(
+                    id: "psalm-90-5",
+                    reference: "Psalm 90:5",
+                    text: "You have swept them away like a flood, they fall asleep;\n    In the morning they are like grass which sprouts anew.",
+                    prayer: "Lord, teach me that life is brief and fragile. Help me live each day with wisdom, gratitude, and purpose."
+                ),
+                PrayerVerse(
+                    id: "psalm-90-6",
+                    reference: "Psalm 90:6",
+                    text: "In the morning it flourishes and sprouts anew;\n    Toward evening it fades and withers away.",
+                    prayer: "Father, remind me that earthly life fades quickly, but Your truth and kingdom endure forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-90-7",
+                    reference: "Psalm 90:7",
+                    text: "For we have been consumed by Your anger\n    And by Your wrath we have been dismayed.",
+                    prayer: "Lord, help me take Your holiness seriously. Lead me away from sin and into reverence, repentance, and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-90-8",
+                    reference: "Psalm 90:8",
+                    text: "You have placed our iniquities before You,\n    Our secret sins in the light of Your presence.",
+                    prayer: "Father, You see every hidden thing. Purify my heart and help me live honestly before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-90-9",
+                    reference: "Psalm 90:9",
+                    text: "For all our days have declined in Your fury;\n    We have finished our years like a sigh.",
+                    prayer: "Lord, when my days feel difficult or heavy, help me turn to You for strength, mercy, and hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-90-10",
+                    reference: "Psalm 90:10",
+                    text: "As for the days of our life, they contain seventy years,\n    Or if due to strength, eighty years,\n    Yet their pride is but labor and sorrow;\n    For soon it is gone and we fly away.",
+                    prayer: "Father, teach me to value my time wisely and live with an eternal perspective."
+                ),
+                PrayerVerse(
+                    id: "psalm-90-11",
+                    reference: "Psalm 90:11",
+                    text: "Who understands the power of Your anger\n    And Your fury, according to the fear that is due You?",
+                    prayer: "Lord, give me a proper reverence for Your power, holiness, and righteous judgment."
+                ),
+                PrayerVerse(
+                    id: "psalm-90-12",
+                    reference: "Psalm 90:12",
+                    text: "So teach us to number our days,\n    That we may present to You a heart of wisdom.",
+                    prayer: "Father, teach me to number my days so that I may gain a heart of wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-90-13",
+                    reference: "Psalm 90:13",
+                    text: "Do return, O Lord; how long will it be?\n    And be sorry for Your servants.",
+                    prayer: "Lord, turn toward me with compassion. Let Your mercy restore my heart and renew my hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-90-14",
+                    reference: "Psalm 90:14",
+                    text: "O satisfy us in the morning with Your lovingkindness,\n    That we may sing for joy and be glad all our days.",
+                    prayer: "Father, satisfy me in the morning with Your lovingkindness, so I may sing for joy and be glad all my days."
+                ),
+                PrayerVerse(
+                    id: "psalm-90-15",
+                    reference: "Psalm 90:15",
+                    text: "Make us glad according to the days You have afflicted us,\n    And the years we have seen evil.",
+                    prayer: "Lord, bring joy and restoration after seasons of difficulty, sorrow, or hardship."
+                ),
+                PrayerVerse(
+                    id: "psalm-90-16",
+                    reference: "Psalm 90:16",
+                    text: "Let Your work appear to Your servants\n    And Your majesty to their children.",
+                    prayer: "Father, let Your work be shown in my life and Your majesty be seen by future generations."
+                ),
+                PrayerVerse(
+                    id: "psalm-90-17",
+                    reference: "Psalm 90:17",
+                    text: "Let the favor of the Lord our God be upon us;\n    And confirm for us the work of our hands;\n    Yes, confirm the work of our hands.",
+                    prayer: "Lord, let Your favor rest upon me. Establish the work of my hands and let my life honor You."
+                ),
+                PrayerVerse(
+                    id: "psalm-90-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being eternal, faithful, and present through every generation. Teach me to number my days with wisdom, live with humility, and seek Your mercy each morning. Satisfy my heart with Your lovingkindness, restore joy after hardship, and establish the work of my hands for Your glory. May my life be rooted in Your presence and guided by Your eternal truth.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         )
     ]
 
