@@ -11121,14 +11121,330 @@ enum PsalmsPrayerData {
             title: "Hear My Prayer",
             chapterReference: "Psalm 102",
             summary: "Pray for comfort in affliction.",
-            verses: []
+            // JSON resource: psalm_102_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-102-1",
+                    reference: "Psalm 102:1",
+                    text: "Hear my prayer, O Lord!\n    And let my cry for help come to You.",
+                    prayer: "Lord, hear my prayer and let my cry for help come before You. Thank You that I can bring every burden into Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-2",
+                    reference: "Psalm 102:2",
+                    text: "Do not hide Your face from me in the day of my distress;\n    Incline Your ear to me;\n    In the day when I call answer me quickly.",
+                    prayer: "Father, do not hide Your face from me in times of trouble. Incline Your ear to me and answer according to Your mercy."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-3",
+                    reference: "Psalm 102:3",
+                    text: "For my days have been consumed in smoke,\n    And my bones have been scorched like a hearth.",
+                    prayer: "Lord, when my strength feels consumed and my heart is weary, sustain me with Your grace and compassion."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-4",
+                    reference: "Psalm 102:4",
+                    text: "My heart has been smitten like grass and has withered away,\n    Indeed, I forget to eat my bread.",
+                    prayer: "Father, when sorrow overwhelms me, remind me that You are my source of life, hope, and restoration."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-5",
+                    reference: "Psalm 102:5",
+                    text: "Because of the loudness of my groaning\n    My bones cling to my flesh.",
+                    prayer: "Lord, You see every tear and every struggle. Strengthen me when suffering leaves me exhausted."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-6",
+                    reference: "Psalm 102:6",
+                    text: "I resemble a pelican of the wilderness;\n    I have become like an owl of the waste places.",
+                    prayer: "Father, when I feel isolated or alone, remind me that Your presence never leaves me."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-7",
+                    reference: "Psalm 102:7",
+                    text: "I lie awake,\n    I have become like a lonely bird on a housetop.",
+                    prayer: "Lord, when sleeplessness and worry fill my mind, help me rest securely in Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-8",
+                    reference: "Psalm 102:8",
+                    text: "My enemies have reproached me all day long;\n    Those who deride me have used my name as a curse.",
+                    prayer: "Father, when criticism or opposition comes against me, keep my heart anchored in Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-9",
+                    reference: "Psalm 102:9",
+                    text: "For I have eaten ashes like bread\n    And mingled my drink with weeping",
+                    prayer: "Lord, when grief becomes my daily companion, comfort me with Your lovingkindness and peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-10",
+                    reference: "Psalm 102:10",
+                    text: "Because of Your indignation and Your wrath,\n    For You have lifted me up and cast me away.",
+                    prayer: "Father, even when I do not understand Your ways, help me trust Your wisdom and remain faithful."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-11",
+                    reference: "Psalm 102:11",
+                    text: "My days are like a lengthened shadow,\n    And I wither away like grass.",
+                    prayer: "Lord, remind me that earthly life is temporary, but Your promises endure forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-12",
+                    reference: "Psalm 102:12",
+                    text: "But You, O Lord, abide forever,\n    And Your name to all generations.",
+                    prayer: "Father, You remain forever. Help me build my hope upon Your unchanging character."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-13",
+                    reference: "Psalm 102:13",
+                    text: "You will arise and have compassion on Zion;\n    For it is time to be gracious to her,\n    For the appointed time has come.",
+                    prayer: "Lord, arise with compassion and mercy. Let Your favor and restoration come in Your perfect time."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-14",
+                    reference: "Psalm 102:14",
+                    text: "Surely Your servants find pleasure in her stones\n    And feel pity for her dust.",
+                    prayer: "Father, help me love what You love and care about the things that matter to Your heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-15",
+                    reference: "Psalm 102:15",
+                    text: "So the nations will fear the name of the Lord\n    And all the kings of the earth Your glory.",
+                    prayer: "Lord, let all people honor and revere Your name. May my life point others toward Your greatness."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-16",
+                    reference: "Psalm 102:16",
+                    text: "For the Lord has built up Zion;\n    He has appeared in His glory.",
+                    prayer: "Father, thank You for building up and restoring what is broken. Let Your glory be revealed through restoration."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-17",
+                    reference: "Psalm 102:17",
+                    text: "He has regarded the prayer of the destitute\n    And has not despised their prayer.",
+                    prayer: "Lord, hear the prayers of the needy and never despise those who call upon You."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-18",
+                    reference: "Psalm 102:18",
+                    text: "This will be written for the generation to come,\n    That a people yet to be created may praise the Lord.",
+                    prayer: "Father, let future generations know of Your faithfulness through the testimony of my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-19",
+                    reference: "Psalm 102:19",
+                    text: "For He looked down from His holy height;\n    From heaven the Lord gazed upon the earth,",
+                    prayer: "Lord, thank You for looking down with compassion and seeing every need from heaven."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-20",
+                    reference: "Psalm 102:20",
+                    text: "To hear the groaning of the prisoner,\n    To set free those who were doomed to death,",
+                    prayer: "Father, bring freedom, hope, and deliverance to those who feel trapped or oppressed."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-21",
+                    reference: "Psalm 102:21",
+                    text: "That men may tell of the name of the Lord in Zion\n    And His praise in Jerusalem,",
+                    prayer: "Lord, let Your name be declared and praised wherever Your people gather."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-22",
+                    reference: "Psalm 102:22",
+                    text: "When the peoples are gathered together,\n    And the kingdoms, to serve the Lord.",
+                    prayer: "Father, unite people in worship and help all nations recognize Your greatness."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-23",
+                    reference: "Psalm 102:23",
+                    text: "He has weakened my strength in the way;\n    He has shortened my days.",
+                    prayer: "Lord, when my strength fades, remind me that Your strength never fails."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-24",
+                    reference: "Psalm 102:24",
+                    text: "I say, “O my God, do not take me away in the midst of my days,\n    Your years are throughout all generations.",
+                    prayer: "Father, teach me to trust Your eternal perspective even when my days feel short and uncertain."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-25",
+                    reference: "Psalm 102:25",
+                    text: "Of old You founded the earth,\n    And the heavens are the work of Your hands.",
+                    prayer: "Lord, thank You for creating the earth and heavens through Your mighty power."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-26",
+                    reference: "Psalm 102:26",
+                    text: "Even they will perish, but You endure;\n    And all of them will wear out like a garment;\n    Like clothing You will change them and they will be changed.",
+                    prayer: "Father, though creation changes, You remain the same. Help me place my confidence in Your permanence."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-27",
+                    reference: "Psalm 102:27",
+                    text: "But You are the same,\n    And Your years will not come to an end.",
+                    prayer: "Lord, You are unchanging and eternal. Let my heart rest securely in Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-28",
+                    reference: "Psalm 102:28",
+                    text: "The children of Your servants will continue,\n    And their descendants will be established before You.”",
+                    prayer: "Father, thank You that Your promises endure through every generation. Keep me steadfast in hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-102-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing my prayers, sustaining me in weakness, and remaining faithful through every generation. When I feel overwhelmed, lonely, weary, or uncertain, help me remember that You are eternal, unchanging, and full of compassion. Strengthen my heart, renew my hope, and let my life testify to Your faithfulness. May I trust You completely and find peace in Your everlasting love.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 103,
             title: "Praise the Lord, O My Soul",
             chapterReference: "Psalm 103",
             summary: "Pray in gratitude for God's benefits and compassion.",
-            verses: []
+            // JSON resource: psalm_103_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-103-1",
+                    reference: "Psalm 103:1",
+                    text: "Bless the Lord, O my soul,\n    And all that is within me, bless His holy name.",
+                    prayer: "Lord, help my soul bless You with all that is within me. Let my whole life praise Your holy name."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-2",
+                    reference: "Psalm 103:2",
+                    text: "Bless the Lord, O my soul,\n    And forget none of His benefits;",
+                    prayer: "Father, keep me from forgetting Your benefits. Help me remember Your goodness, mercy, and faithfulness each day."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-3",
+                    reference: "Psalm 103:3",
+                    text: "Who pardons all your iniquities,\n    Who heals all your diseases;",
+                    prayer: "Lord, thank You for forgiving my sins and healing my brokenness. Draw me closer to Your restoring grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-4",
+                    reference: "Psalm 103:4",
+                    text: "Who redeems your life from the pit,\n    Who crowns you with lovingkindness and compassion;",
+                    prayer: "Father, thank You for redeeming my life and crowning me with lovingkindness and compassion."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-5",
+                    reference: "Psalm 103:5",
+                    text: "Who satisfies your years with good things,\n    So that your youth is renewed like the eagle.",
+                    prayer: "Lord, satisfy my life with good things and renew my strength according to Your mercy and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-6",
+                    reference: "Psalm 103:6",
+                    text: "The Lord performs righteous deeds\n    And judgments for all who are oppressed.",
+                    prayer: "Father, thank You for working righteousness and justice for those who are oppressed. Help me trust Your defense and compassion."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-7",
+                    reference: "Psalm 103:7",
+                    text: "He made known His ways to Moses,\n    His acts to the sons of Israel.",
+                    prayer: "Lord, thank You for making Your ways known. Teach me to follow Your truth with humility and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-8",
+                    reference: "Psalm 103:8",
+                    text: "The Lord is compassionate and gracious,\n    Slow to anger and abounding in lovingkindness.",
+                    prayer: "Father, thank You for being compassionate, gracious, slow to anger, and abounding in lovingkindness."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-9",
+                    reference: "Psalm 103:9",
+                    text: "He will not always strive with us,\n    Nor will He keep His anger forever.",
+                    prayer: "Lord, thank You that You do not remain angry forever. Help me receive Your mercy with gratitude and repentance."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-10",
+                    reference: "Psalm 103:10",
+                    text: "He has not dealt with us according to our sins,\n    Nor rewarded us according to our iniquities.",
+                    prayer: "Father, thank You for not dealing with me according to my sins, but according to Your great mercy."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-11",
+                    reference: "Psalm 103:11",
+                    text: "For as high as the heavens are above the earth,\n    So great is His lovingkindness toward those who fear Him.",
+                    prayer: "Lord, as high as the heavens are above the earth, so great is Your lovingkindness toward those who fear You."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-12",
+                    reference: "Psalm 103:12",
+                    text: "As far as the east is from the west,\n    So far has He removed our transgressions from us.",
+                    prayer: "Father, thank You for removing my sins far from me. Help me walk in the freedom of Your forgiveness."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-13",
+                    reference: "Psalm 103:13",
+                    text: "Just as a father has compassion on his children,\n    So the Lord has compassion on those who fear Him.",
+                    prayer: "Lord, thank You for showing compassion like a loving Father. Help me rest in Your tender care."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-14",
+                    reference: "Psalm 103:14",
+                    text: "For He Himself knows our frame;\n    He is mindful that we are but dust.",
+                    prayer: "Father, You know my frame and remember that I am dust. Thank You for treating my weakness with mercy."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-15",
+                    reference: "Psalm 103:15",
+                    text: "As for man, his days are like grass;\n    As a flower of the field, so he flourishes.",
+                    prayer: "Lord, remind me that my days are brief like grass. Help me live with wisdom, humility, and purpose."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-16",
+                    reference: "Psalm 103:16",
+                    text: "When the wind has passed over it, it is no more,\n    And its place acknowledges it no longer.",
+                    prayer: "Father, earthly life fades quickly, but Your love remains. Help me place my hope in what is eternal."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-17",
+                    reference: "Psalm 103:17",
+                    text: "But the lovingkindness of the Lord is from everlasting to everlasting on those who fear Him,\n    And His righteousness to children’s children,",
+                    prayer: "Lord, thank You that Your lovingkindness is everlasting toward those who fear You. Let Your righteousness bless future generations."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-18",
+                    reference: "Psalm 103:18",
+                    text: "To those who keep His covenant\n    And remember His precepts to do them.",
+                    prayer: "Father, help me keep Your covenant and remember Your commandments with a faithful and obedient heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-19",
+                    reference: "Psalm 103:19",
+                    text: "The Lord has established His throne in the heavens,\n    And His sovereignty rules over all.",
+                    prayer: "Lord, Your throne is established in the heavens and Your kingdom rules over all. Help me trust Your sovereign authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-20",
+                    reference: "Psalm 103:20",
+                    text: "Bless the Lord, you His angels,\n    Mighty in strength, who perform His word,\n    Obeying the voice of His word!",
+                    prayer: "Father, let my life join the angels in blessing You and obeying Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-21",
+                    reference: "Psalm 103:21",
+                    text: "Bless the Lord, all you His hosts,\n    You who serve Him, doing His will.",
+                    prayer: "Lord, let all Your servants bless You. Teach me to serve You faithfully and joyfully."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-22",
+                    reference: "Psalm 103:22",
+                    text: "Bless the Lord, all you works of His,\n    In all places of His dominion;\n    Bless the Lord, O my soul!",
+                    prayer: "Father, let all creation bless Your name. Help my soul continually praise You in every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-103-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your mercy, forgiveness, compassion, and everlasting lovingkindness. Help me remember all Your benefits and bless Your holy name with my whole heart. Teach me to live with humility, gratitude, obedience, and trust in Your sovereign rule. May my life continually praise You, and may my soul never forget Your goodness.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 104,
