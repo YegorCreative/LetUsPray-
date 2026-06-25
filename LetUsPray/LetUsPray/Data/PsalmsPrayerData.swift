@@ -11965,70 +11965,1332 @@ enum PsalmsPrayerData {
             title: "We Have Sinned",
             chapterReference: "Psalm 106",
             summary: "Pray in confession and repentance.",
-            verses: []
+            // JSON resource: psalm_106_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-106-1",
+                    reference: "Psalm 106:1",
+                    text: "Praise the Lord!\n    Oh give thanks to the Lord, for He is good;\n    For His lovingkindness is everlasting.",
+                    prayer: "Lord, I give thanks to You because You are good. Thank You that Your lovingkindness endures forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-2",
+                    reference: "Psalm 106:2",
+                    text: "Who can speak of the mighty deeds of the Lord,\n    Or can show forth all His praise?",
+                    prayer: "Father, Your mighty deeds are beyond what I can fully declare. Help my life praise You with humility and awe."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-3",
+                    reference: "Psalm 106:3",
+                    text: "How blessed are those who keep justice,\n    Who practice righteousness at all times!",
+                    prayer: "Lord, bless me with a heart that practices justice and righteousness in every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-4",
+                    reference: "Psalm 106:4",
+                    text: "Remember me, O Lord, in Your favor toward Your people;\n    Visit me with Your salvation,",
+                    prayer: "Father, remember me with Your favor and visit me with Your salvation."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-5",
+                    reference: "Psalm 106:5",
+                    text: "That I may see the prosperity of Your chosen ones,\n    That I may rejoice in the gladness of Your nation,\n    That I may glory with Your inheritance.",
+                    prayer: "Lord, let me see the goodness You show Your people and rejoice in the inheritance of those who belong to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-6",
+                    reference: "Psalm 106:6",
+                    text: "We have sinned like our fathers,\n    We have committed iniquity, we have behaved wickedly.",
+                    prayer: "Father, forgive me for the ways I have sinned, failed, or followed the wrong path. Lead me back to Your mercy."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-7",
+                    reference: "Psalm 106:7",
+                    text: "Our fathers in Egypt did not understand Your wonders;\n    They did not remember Your abundant kindnesses,\n    But rebelled by the sea, at the Red Sea.",
+                    prayer: "Lord, keep me from forgetting Your wonders or rebelling against Your goodness. Teach me to remember Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-8",
+                    reference: "Psalm 106:8",
+                    text: "Nevertheless He saved them for the sake of His name,\n    That He might make His power known.",
+                    prayer: "Father, thank You for saving according to Your name and making Your power known."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-9",
+                    reference: "Psalm 106:9",
+                    text: "Thus He rebuked the Red Sea and it dried up,\n    And He led them through the deeps, as through the wilderness.",
+                    prayer: "Lord, You made a way through the sea. Help me trust that You can lead me through impossible places."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-10",
+                    reference: "Psalm 106:10",
+                    text: "So He saved them from the hand of the one who hated them,\n    And redeemed them from the hand of the enemy.",
+                    prayer: "Father, redeem me from what is too strong for me and rescue me by Your power."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-11",
+                    reference: "Psalm 106:11",
+                    text: "The waters covered their adversaries;\n    Not one of them was left.",
+                    prayer: "Lord, thank You that no enemy or obstacle is greater than Your deliverance."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-12",
+                    reference: "Psalm 106:12",
+                    text: "Then they believed His words;\n    They sang His praise.",
+                    prayer: "Father, help me believe Your words and respond with praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-13",
+                    reference: "Psalm 106:13",
+                    text: "They quickly forgot His works;\n    They did not wait for His counsel,",
+                    prayer: "Lord, keep me from quickly forgetting Your works. Teach me to wait for Your counsel."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-14",
+                    reference: "Psalm 106:14",
+                    text: "But craved intensely in the wilderness,\n    And tempted God in the desert.",
+                    prayer: "Father, guard my heart from selfish cravings and from testing You in seasons of need."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-15",
+                    reference: "Psalm 106:15",
+                    text: "So He gave them their request,\n    But sent a wasting disease among them.",
+                    prayer: "Lord, teach me to desire Your will more than my own way. Let my soul be satisfied in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-16",
+                    reference: "Psalm 106:16",
+                    text: "When they became envious of Moses in the camp,\n    And of Aaron, the holy one of the Lord,",
+                    prayer: "Father, protect me from envy, comparison, and resentment toward those You have called."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-17",
+                    reference: "Psalm 106:17",
+                    text: "The earth opened and swallowed up Dathan,\n    And engulfed the company of Abiram.",
+                    prayer: "Lord, humble every rebellious thought in me and lead me into obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-18",
+                    reference: "Psalm 106:18",
+                    text: "And a fire blazed up in their company;\n    The flame consumed the wicked.",
+                    prayer: "Father, remove what is sinful, destructive, or dishonoring from my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-19",
+                    reference: "Psalm 106:19",
+                    text: "They made a calf in Horeb\n    And worshiped a molten image.",
+                    prayer: "Lord, keep me from creating idols or replacing You with anything made by human hands."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-20",
+                    reference: "Psalm 106:20",
+                    text: "Thus they exchanged their glory\n    For the image of an ox that eats grass.",
+                    prayer: "Father, guard me from exchanging Your glory for things that cannot save or satisfy."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-21",
+                    reference: "Psalm 106:21",
+                    text: "They forgot God their Savior,\n    Who had done great things in Egypt,",
+                    prayer: "Lord, help me never forget You, my Savior, and the great things You have done."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-22",
+                    reference: "Psalm 106:22",
+                    text: "Wonders in the land of Ham\n    And awesome things by the Red Sea.",
+                    prayer: "Father, remind me of Your wonders, power, and faithfulness when my heart grows distracted."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-23",
+                    reference: "Psalm 106:23",
+                    text: "Therefore He said that He would destroy them,\n    Had not Moses His chosen one stood in the breach before Him,\n    To turn away His wrath from destroying them.",
+                    prayer: "Lord, thank You for mercy that stands between judgment and destruction. Teach me to intercede with compassion."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-24",
+                    reference: "Psalm 106:24",
+                    text: "Then they despised the pleasant land;\n    They did not believe in His word,",
+                    prayer: "Father, keep me from despising the good things You promise. Strengthen my faith in Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-25",
+                    reference: "Psalm 106:25",
+                    text: "But grumbled in their tents;\n    They did not listen to the voice of the Lord.",
+                    prayer: "Lord, protect me from grumbling and unbelief. Help me obey Your voice with trust."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-26",
+                    reference: "Psalm 106:26",
+                    text: "Therefore He swore to them\n    That He would cast them down in the wilderness,",
+                    prayer: "Father, teach me that disobedience has consequences and help me walk in reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-27",
+                    reference: "Psalm 106:27",
+                    text: "And that He would cast their seed among the nations\n    And scatter them in the lands.",
+                    prayer: "Lord, preserve future generations by Your mercy and help my life leave a faithful legacy."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-28",
+                    reference: "Psalm 106:28",
+                    text: "They joined themselves also to Baal-peor,\n    And ate sacrifices offered to the dead.",
+                    prayer: "Father, keep me from joining myself to anything that dishonors You or leads my heart away from Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-29",
+                    reference: "Psalm 106:29",
+                    text: "Thus they provoked Him to anger with their deeds,\n    And the plague broke out among them.",
+                    prayer: "Lord, forgive the ways my actions grieve You. Lead me quickly back to repentance and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-30",
+                    reference: "Psalm 106:30",
+                    text: "Then Phinehas stood up and interposed,\n    And so the plague was stayed.",
+                    prayer: "Father, give me courage to stand for righteousness when compromise surrounds me."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-31",
+                    reference: "Psalm 106:31",
+                    text: "And it was reckoned to him for righteousness,\n    To all generations forever.",
+                    prayer: "Lord, let faithfulness and obedience be remembered in my life as a testimony to Your grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-32",
+                    reference: "Psalm 106:32",
+                    text: "They also provoked Him to wrath at the waters of Meribah,\n    So that it went hard with Moses on their account;",
+                    prayer: "Father, keep my heart from anger, impatience, and unbelief in difficult places."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-33",
+                    reference: "Psalm 106:33",
+                    text: "Because they were rebellious against His Spirit,\n    He spoke rashly with his lips.",
+                    prayer: "Lord, guard my spirit and my words so I do not speak rashly when I am frustrated."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-34",
+                    reference: "Psalm 106:34",
+                    text: "They did not destroy the peoples,\n    As the Lord commanded them,",
+                    prayer: "Father, help me obey fully and not compromise with what You have called me to remove."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-35",
+                    reference: "Psalm 106:35",
+                    text: "But they mingled with the nations\n    And learned their practices,",
+                    prayer: "Lord, protect me from blending into patterns that pull me away from Your holiness."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-36",
+                    reference: "Psalm 106:36",
+                    text: "And served their idols,\n    Which became a snare to them.",
+                    prayer: "Father, keep idols from becoming a snare in my life. Teach me to worship You alone."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-37",
+                    reference: "Psalm 106:37",
+                    text: "They even sacrificed their sons and their daughters to the demons,",
+                    prayer: "Lord, protect families and future generations from destructive choices and false worship."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-38",
+                    reference: "Psalm 106:38",
+                    text: "And shed innocent blood,\n    The blood of their sons and their daughters,\n    Whom they sacrificed to the idols of Canaan;\n    And the land was polluted with the blood.",
+                    prayer: "Father, cleanse what has been polluted by sin and restore reverence for life, truth, and holiness."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-39",
+                    reference: "Psalm 106:39",
+                    text: "Thus they became unclean in their practices,\n    And played the harlot in their deeds.",
+                    prayer: "Lord, purify my heart from unfaithfulness and bring me back into faithful devotion to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-40",
+                    reference: "Psalm 106:40",
+                    text: "Therefore the anger of the Lord was kindled against His people\n    And He abhorred His inheritance.",
+                    prayer: "Father, help me take sin seriously and understand how deeply rebellion grieves Your heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-41",
+                    reference: "Psalm 106:41",
+                    text: "Then He gave them into the hand of the nations,\n    And those who hated them ruled over them.",
+                    prayer: "Lord, when consequences come, use them to bring correction, humility, and restoration."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-42",
+                    reference: "Psalm 106:42",
+                    text: "Their enemies also oppressed them,\n    And they were subdued under their power.",
+                    prayer: "Father, deliver me from anything that oppresses, controls, or weakens my obedience to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-43",
+                    reference: "Psalm 106:43",
+                    text: "Many times He would deliver them;\n    They, however, were rebellious in their counsel,\n    And so sank down in their iniquity.",
+                    prayer: "Lord, thank You for delivering again and again. Keep me from returning to rebellion after receiving mercy."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-44",
+                    reference: "Psalm 106:44",
+                    text: "Nevertheless He looked upon their distress\n    When He heard their cry;",
+                    prayer: "Father, thank You for seeing distress and hearing the cry of those who call upon You."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-45",
+                    reference: "Psalm 106:45",
+                    text: "And He remembered His covenant for their sake,\n    And relented according to the greatness of His lovingkindness.",
+                    prayer: "Lord, remember Your covenant and show compassion according to Your abundant lovingkindness."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-46",
+                    reference: "Psalm 106:46",
+                    text: "He also made them objects of compassion\n    In the presence of all their captors.",
+                    prayer: "Father, give favor, mercy, and compassion even in difficult places."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-47",
+                    reference: "Psalm 106:47",
+                    text: "Save us, O Lord our God,\n    And gather us from among the nations,\n    To give thanks to Your holy name\n    And glory in Your praise.",
+                    prayer: "Lord, save me and gather me close to You so I may give thanks to Your holy name."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-48",
+                    reference: "Psalm 106:48",
+                    text: "Blessed be the Lord, the God of Israel,\n    From everlasting even to everlasting.\n    And let all the people say, “Amen.”\n    Praise the Lord!",
+                    prayer: "Father, blessed be Your name forever. Let all my life say, Amen, and praise You."
+                ),
+                PrayerVerse(
+                    id: "psalm-106-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your goodness, mercy, patience, and covenant faithfulness. Forgive me when I forget Your works, resist Your voice, or turn toward things that cannot satisfy. Teach me to remember Your salvation, walk in obedience, reject every idol, and trust Your mercy through every season. May my life give thanks to Your holy name and praise You forever.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 107,
             title: "Give Thanks for His Unfailing Love",
             chapterReference: "Psalm 107",
             summary: "Pray in gratitude for God's deliverance.",
-            verses: []
+            // JSON resource: psalm_107_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-107-1",
+                    reference: "Psalm 107:1",
+                    text: "Oh give thanks to the Lord, for He is good,\n    For His lovingkindness is everlasting.",
+                    prayer: "Lord, I give thanks to You because You are good. Thank You that Your lovingkindness endures forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-2",
+                    reference: "Psalm 107:2",
+                    text: "Let the redeemed of the Lord say so,\n    Whom He has redeemed from the hand of the adversary",
+                    prayer: "Father, help me speak of Your redemption and remember how You have rescued me from trouble."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-3",
+                    reference: "Psalm 107:3",
+                    text: "And gathered from the lands,\n    From the east and from the west,\n    From the north and from the south.",
+                    prayer: "Lord, thank You for gathering Your people from every place. Draw my heart close to You wherever I am."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-4",
+                    reference: "Psalm 107:4",
+                    text: "They wandered in the wilderness in a desert region;\n    They did not find a way to an inhabited city.",
+                    prayer: "Father, when I feel lost or without direction, guide me by Your wisdom and lead me toward Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-5",
+                    reference: "Psalm 107:5",
+                    text: "They were hungry and thirsty;\n    Their soul fainted within them.",
+                    prayer: "Lord, when my soul feels hungry, thirsty, or weary, satisfy me with Your goodness and strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-6",
+                    reference: "Psalm 107:6",
+                    text: "Then they cried out to the Lord in their trouble;\n    He delivered them out of their distresses.",
+                    prayer: "Father, when I cry out in trouble, thank You for hearing me and delivering me from distress."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-7",
+                    reference: "Psalm 107:7",
+                    text: "He led them also by a straight way,\n    To go to an inhabited city.",
+                    prayer: "Lord, lead me by a straight way and guide my steps toward the place You have prepared."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-8",
+                    reference: "Psalm 107:8",
+                    text: "Let them give thanks to the Lord for His lovingkindness,\n    And for His wonders to the sons of men!",
+                    prayer: "Father, help me give thanks for Your lovingkindness and for the wonderful works You do for Your people."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-9",
+                    reference: "Psalm 107:9",
+                    text: "For He has satisfied the thirsty soul,\n    And the hungry soul He has filled with what is good.",
+                    prayer: "Lord, thank You for satisfying the thirsty soul and filling the hungry soul with what is good."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-10",
+                    reference: "Psalm 107:10",
+                    text: "There were those who dwelt in darkness and in the shadow of death,\n    Prisoners in misery and chains,",
+                    prayer: "Father, when I sit in darkness or feel bound by heaviness, bring Your light, freedom, and hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-11",
+                    reference: "Psalm 107:11",
+                    text: "Because they had rebelled against the words of God\n    And spurned the counsel of the Most High.",
+                    prayer: "Lord, forgive me when I rebel against Your Word or ignore Your counsel. Lead me back to obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-12",
+                    reference: "Psalm 107:12",
+                    text: "Therefore He humbled their heart with labor;\n    They stumbled and there was none to help.",
+                    prayer: "Father, when pride or hardship brings me low, use it to humble my heart and draw me closer to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-13",
+                    reference: "Psalm 107:13",
+                    text: "Then they cried out to the Lord in their trouble;\n    He saved them out of their distresses.",
+                    prayer: "Lord, when I cry to You in trouble, deliver me from distress and restore my hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-14",
+                    reference: "Psalm 107:14",
+                    text: "He brought them out of darkness and the shadow of death\n    And broke their bands apart.",
+                    prayer: "Father, bring me out of darkness and break every chain that keeps me from walking freely with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-15",
+                    reference: "Psalm 107:15",
+                    text: "Let them give thanks to the Lord for His lovingkindness,\n    And for His wonders to the sons of men!",
+                    prayer: "Lord, help me thank You for Your lovingkindness and for Your wonderful works in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-16",
+                    reference: "Psalm 107:16",
+                    text: "For He has shattered gates of bronze\n    And cut bars of iron asunder.",
+                    prayer: "Father, break through every barrier that keeps me bound and open the way to freedom in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-17",
+                    reference: "Psalm 107:17",
+                    text: "Fools, because of their rebellious way,\n    And because of their iniquities, were afflicted.",
+                    prayer: "Lord, forgive the foolish choices that bring pain into my life. Teach me wisdom and repentance."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-18",
+                    reference: "Psalm 107:18",
+                    text: "Their soul abhorred all kinds of food,\n    And they drew near to the gates of death.",
+                    prayer: "Father, when my soul feels weak or empty, restore my desire for what is good, true, and life-giving."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-19",
+                    reference: "Psalm 107:19",
+                    text: "Then they cried out to the Lord in their trouble;\n    He saved them out of their distresses.",
+                    prayer: "Lord, when I cry out in trouble, save me from distress and lead me into healing."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-20",
+                    reference: "Psalm 107:20",
+                    text: "He sent His word and healed them,\n    And delivered them from their destructions.",
+                    prayer: "Father, send Your Word and heal me. Deliver me from what destroys and restore me by Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-21",
+                    reference: "Psalm 107:21",
+                    text: "Let them give thanks to the Lord for His lovingkindness,\n    And for His wonders to the sons of men!",
+                    prayer: "Lord, help me give thanks for Your lovingkindness and for the wonderful works You do for Your people."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-22",
+                    reference: "Psalm 107:22",
+                    text: "Let them also offer sacrifices of thanksgiving,\n    And tell of His works with joyful singing.",
+                    prayer: "Father, let my life offer sacrifices of thanksgiving and joyfully tell of all You have done."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-23",
+                    reference: "Psalm 107:23",
+                    text: "Those who go down to the sea in ships,\n    Who do business on great waters;",
+                    prayer: "Lord, when I step into deep and uncertain waters, help me trust Your presence and guidance."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-24",
+                    reference: "Psalm 107:24",
+                    text: "They have seen the works of the Lord,\n    And His wonders in the deep.",
+                    prayer: "Father, open my eyes to see Your works and wonders even in places that feel vast or overwhelming."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-25",
+                    reference: "Psalm 107:25",
+                    text: "For He spoke and raised up a stormy wind,\n    Which lifted up the waves of the sea.",
+                    prayer: "Lord, You command the storm and the waves. Help me remember that every storm is under Your authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-26",
+                    reference: "Psalm 107:26",
+                    text: "They rose up to the heavens, they went down to the depths;\n    Their soul melted away in their misery.",
+                    prayer: "Father, when life rises and falls around me, steady my heart and keep me from losing courage."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-27",
+                    reference: "Psalm 107:27",
+                    text: "They reeled and staggered like a drunken man,\n    And were at their wits’ end.",
+                    prayer: "Lord, when my wisdom reaches its limit, teach me to depend completely on You."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-28",
+                    reference: "Psalm 107:28",
+                    text: "Then they cried to the Lord in their trouble,\n    And He brought them out of their distresses.",
+                    prayer: "Father, when I cry to You in trouble, bring me out of distress and into Your peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-29",
+                    reference: "Psalm 107:29",
+                    text: "He caused the storm to be still,\n    So that the waves of the sea were hushed.",
+                    prayer: "Lord, calm the storm and quiet the waves around me and within me."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-30",
+                    reference: "Psalm 107:30",
+                    text: "Then they were glad because they were quiet,\n    So He guided them to their desired haven.",
+                    prayer: "Father, thank You for bringing me safely through storms and guiding me to peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-31",
+                    reference: "Psalm 107:31",
+                    text: "Let them give thanks to the Lord for His lovingkindness,\n    And for His wonders to the sons of men!",
+                    prayer: "Lord, help me give thanks for Your lovingkindness and for Your wonderful works to Your people."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-32",
+                    reference: "Psalm 107:32",
+                    text: "Let them extol Him also in the congregation of the people,\n    And praise Him at the seat of the elders.",
+                    prayer: "Father, let my life exalt You among others and praise You wherever You place me."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-33",
+                    reference: "Psalm 107:33",
+                    text: "He changes rivers into a wilderness\n    And springs of water into a thirsty ground;",
+                    prayer: "Lord, You can turn rivers into wilderness. Help me live with reverence and not take Your blessings for granted."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-34",
+                    reference: "Psalm 107:34",
+                    text: "A fruitful land into a salt waste,\n    Because of the wickedness of those who dwell in it.",
+                    prayer: "Father, protect me from choices that turn fruitful places into barrenness. Lead me in righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-35",
+                    reference: "Psalm 107:35",
+                    text: "He changes a wilderness into a pool of water\n    And a dry land into springs of water;",
+                    prayer: "Lord, You can turn wilderness into pools of water. Bring life, renewal, and hope into dry places."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-36",
+                    reference: "Psalm 107:36",
+                    text: "And there He makes the hungry to dwell,\n    So that they may establish an inhabited city,",
+                    prayer: "Father, settle my soul in Your provision and help me build my life where You lead."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-37",
+                    reference: "Psalm 107:37",
+                    text: "And sow fields and plant vineyards,\n    And gather a fruitful harvest.",
+                    prayer: "Lord, bless the work You give me and let what I plant bear fruit according to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-38",
+                    reference: "Psalm 107:38",
+                    text: "Also He blesses them and they multiply greatly,\n    And He does not let their cattle decrease.",
+                    prayer: "Father, thank You for multiplying blessing and sustaining what belongs to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-39",
+                    reference: "Psalm 107:39",
+                    text: "When they are diminished and bowed down\n    Through oppression, misery and sorrow,",
+                    prayer: "Lord, when hardship, sorrow, or oppression brings people low, bring comfort, justice, and restoration."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-40",
+                    reference: "Psalm 107:40",
+                    text: "He pours contempt upon princes\n    And makes them wander in a pathless waste.",
+                    prayer: "Father, humble the proud and guide those who are lost back toward truth and wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-41",
+                    reference: "Psalm 107:41",
+                    text: "But He sets the needy securely on high away from affliction,\n    And makes his families like a flock.",
+                    prayer: "Lord, lift the needy from affliction and protect families with Your faithful care."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-42",
+                    reference: "Psalm 107:42",
+                    text: "The upright see it and are glad;\n    But all unrighteousness shuts its mouth.",
+                    prayer: "Father, let the upright see Your works and rejoice. Silence evil and let righteousness prevail."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-43",
+                    reference: "Psalm 107:43",
+                    text: "Who is wise? Let him give heed to these things,\n    And consider the lovingkindnesses of the Lord.",
+                    prayer: "Lord, give me wisdom to observe Your ways and understand Your lovingkindness with a grateful heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-107-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your enduring lovingkindness, redemption, guidance, healing, and deliverance. You satisfy the weary, break chains, calm storms, restore dry places, and lift the needy with compassion. Help me remember Your works, walk in wisdom, and give thanks in every season. May my life continually declare Your goodness and trust Your faithful love.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 108,
             title: "My Heart is Steadfast",
             chapterReference: "Psalm 108",
             summary: "Pray with confidence in God's help.",
-            verses: []
+            // JSON resource: psalm_108_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-108-1",
+                    reference: "Psalm 108:1",
+                    text: "My heart is steadfast, O God;\n    I will sing, I will sing praises, even with my soul.",
+                    prayer: "Lord, make my heart steadfast in You. Help me praise You with confidence, faith, and devotion."
+                ),
+                PrayerVerse(
+                    id: "psalm-108-2",
+                    reference: "Psalm 108:2",
+                    text: "Awake, harp and lyre;\n    I will awaken the dawn!",
+                    prayer: "Father, awaken worship within me. Let my soul rise with gratitude, joy, and praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-108-3",
+                    reference: "Psalm 108:3",
+                    text: "I will give thanks to You, O Lord, among the peoples,\n    And I will sing praises to You among the nations.",
+                    prayer: "Lord, help me give thanks to You among all people and declare Your goodness wherever I go."
+                ),
+                PrayerVerse(
+                    id: "psalm-108-4",
+                    reference: "Psalm 108:4",
+                    text: "For Your lovingkindness is great above the heavens,\n    And Your truth reaches to the skies.",
+                    prayer: "Father, Your lovingkindness is great above the heavens, and Your truth reaches to the skies. Help me rest in Your unfailing love."
+                ),
+                PrayerVerse(
+                    id: "psalm-108-5",
+                    reference: "Psalm 108:5",
+                    text: "Be exalted, O God, above the heavens,\n    And Your glory above all the earth.",
+                    prayer: "Lord, be exalted above the heavens, and let Your glory cover all the earth. May my life bring honor to Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-108-6",
+                    reference: "Psalm 108:6",
+                    text: "That Your beloved may be delivered,\n    Save with Your right hand, and answer me!",
+                    prayer: "Father, save those You love and answer with Your power. Deliver me by Your right hand and strengthen my trust in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-108-7",
+                    reference: "Psalm 108:7",
+                    text: "God has spoken in His holiness:\n    “I will exult, I will portion out Shechem\n    And measure out the valley of Succoth.",
+                    prayer: "Lord, You speak with holiness and authority. Help me trust Your promises and surrender to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-108-8",
+                    reference: "Psalm 108:8",
+                    text: "Gilead is Mine, Manasseh is Mine;\n    Ephraim also is the helmet of My head;\n    Judah is My scepter.",
+                    prayer: "Father, every place and every people belong under Your rule. Help me rest in Your sovereign authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-108-9",
+                    reference: "Psalm 108:9",
+                    text: "Moab is My washbowl;\n    Over Edom I shall throw My shoe;\n    Over Philistia I will shout aloud.”",
+                    prayer: "Lord, every enemy and every obstacle is under Your power. Teach me to walk with courage and confidence in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-108-10",
+                    reference: "Psalm 108:10",
+                    text: "Who will bring me into the besieged city?\n    Who will lead me to Edom?",
+                    prayer: "Father, lead me into every challenge I face. Go before me and guide my steps with wisdom and strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-108-11",
+                    reference: "Psalm 108:11",
+                    text: "Have not You Yourself, O God, rejected us?\n    And will You not go forth with our armies, O God?",
+                    prayer: "Lord, when I feel distant or unsure, draw me back to Your presence and remind me that my help comes from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-108-12",
+                    reference: "Psalm 108:12",
+                    text: "Oh give us help against the adversary,\n    For deliverance by man is in vain.",
+                    prayer: "Father, give me help against trouble, because human strength is never enough. Teach me to rely fully on You."
+                ),
+                PrayerVerse(
+                    id: "psalm-108-13",
+                    reference: "Psalm 108:13",
+                    text: "Through God we will do valiantly,\n    And it is He who shall tread down our adversaries.",
+                    prayer: "Lord, through You I can do valiantly. Thank You that true victory comes from Your strength and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-108-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your steadfast love, truth, power, and faithfulness. Make my heart steadfast in worship and teach me to trust You in every battle. Lead me by Your strength, help me rely on You rather than human ability, and let my life exalt Your glory. May my confidence remain in You, the One who gives true victory.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 109,
             title: "God of My Praise",
             chapterReference: "Psalm 109",
             summary: "Pray for God's vindication.",
-            verses: []
+            // JSON resource: psalm_109_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-109-1",
+                    reference: "Psalm 109:1",
+                    text: "O God of my praise,\n  Do not be silent!",
+                    prayer: "Lord, do not be silent when I bring my pain, confusion, and burdens before You. Help me trust that You hear me."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-2",
+                    reference: "Psalm 109:2",
+                    text: "For they have opened the wicked and deceitful mouth against me;\n  They have spoken against me with a lying tongue.",
+                    prayer: "Father, protect me from lies, false accusations, and harmful words. Keep my heart anchored in Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-3",
+                    reference: "Psalm 109:3",
+                    text: "They have also surrounded me with words of hatred,\n  And fought against me without cause.",
+                    prayer: "Lord, when words of hatred surround me, help me respond with faith, wisdom, and restraint."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-4",
+                    reference: "Psalm 109:4",
+                    text: "In return for my love they act as my accusers;\n  But I am in prayer.",
+                    prayer: "Father, when I am opposed despite love, teach me to remain prayerful and faithful before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-5",
+                    reference: "Psalm 109:5",
+                    text: "Thus they have repaid me evil for good\n  And hatred for my love.",
+                    prayer: "Lord, when good is repaid with evil, guard my heart from bitterness and help me continue walking in righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-6",
+                    reference: "Psalm 109:6",
+                    text: "Appoint a wicked man over him,\n  And let an accuser stand at his right hand.",
+                    prayer: "Father, I leave every injustice in Your hands. Keep me from revenge and help me trust Your judgment."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-7",
+                    reference: "Psalm 109:7",
+                    text: "When he is judged, let him come forth guilty,\n  And let his prayer become sin.",
+                    prayer: "Lord, when judgment is needed, let it be according to Your righteousness, wisdom, and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-8",
+                    reference: "Psalm 109:8",
+                    text: "Let his days be few;\n  Let another take his office.",
+                    prayer: "Father, remind me that every role, season, and responsibility is held under Your authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-9",
+                    reference: "Psalm 109:9",
+                    text: "Let his children be fatherless\n  And his wife a widow.",
+                    prayer: "Lord, have mercy on families affected by sin, injustice, or brokenness. Bring healing where there has been pain."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-10",
+                    reference: "Psalm 109:10",
+                    text: "Let his children wander about and beg;\n  And let them seek sustenance far from their ruined homes.",
+                    prayer: "Father, protect children and future generations from the consequences of wrongdoing. Let Your mercy intervene."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-11",
+                    reference: "Psalm 109:11",
+                    text: "Let the creditor seize all that he has,\n  And let strangers plunder the product of his labor.",
+                    prayer: "Lord, guard homes and lives from loss, shame, and destruction. Restore what has been damaged by sin."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-12",
+                    reference: "Psalm 109:12",
+                    text: "Let there be none to extend lovingkindness to him,\n  Nor any to be gracious to his fatherless children.",
+                    prayer: "Father, raise up compassion where mercy has been absent. Teach me to show kindness where it is needed."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-13",
+                    reference: "Psalm 109:13",
+                    text: "Let his posterity be cut off;\n  In a following generation let their name be blotted out.",
+                    prayer: "Lord, break destructive patterns and replace them with repentance, healing, and righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-14",
+                    reference: "Psalm 109:14",
+                    text: "Let the iniquity of his fathers be remembered before the Lord,\n  And do not let the sin of his mother be blotted out.",
+                    prayer: "Father, heal generational wounds and lead families into forgiveness, truth, and restoration."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-15",
+                    reference: "Psalm 109:15",
+                    text: "Let them be before the Lord continually,\n  That He may cut off their memory from the earth;",
+                    prayer: "Lord, You remember all things with perfect justice. Help me trust Your wisdom without carrying judgment myself."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-16",
+                    reference: "Psalm 109:16",
+                    text: "Because he did not remember to show lovingkindness,\n  But persecuted the afflicted and needy man,\n  And the despondent in heart, to put them to death.",
+                    prayer: "Father, make me attentive to the poor, needy, and brokenhearted. Help me never add to someone’s pain."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-17",
+                    reference: "Psalm 109:17",
+                    text: "He also loved cursing, so it came to him;\n  And he did not delight in blessing, so it was far from him.",
+                    prayer: "Lord, keep me from loving curses, bitterness, or harm. Fill my heart with blessing, mercy, and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-18",
+                    reference: "Psalm 109:18",
+                    text: "But he clothed himself with cursing as with his garment,\n  And it entered into his body like water\n  And like oil into his bones.",
+                    prayer: "Father, remove anything destructive that has entered my heart, words, or habits. Clothe me with righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-19",
+                    reference: "Psalm 109:19",
+                    text: "Let it be to him as a garment with which he covers himself,\n  And for a belt with which he constantly girds himself.",
+                    prayer: "Lord, let my life be covered not with bitterness, but with humility, grace, and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-20",
+                    reference: "Psalm 109:20",
+                    text: "Let this be the reward of my accusers from the Lord,\n  And of those who speak evil against my soul.",
+                    prayer: "Father, I entrust every accusation, every hurt, and every injustice to You, the righteous Judge."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-21",
+                    reference: "Psalm 109:21",
+                    text: "But You, O God, the Lord, deal kindly with me for Your name’s sake;\n  Because Your lovingkindness is good, deliver me;",
+                    prayer: "Lord, deal kindly with me for Your name’s sake. Deliver me according to Your good and faithful love."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-22",
+                    reference: "Psalm 109:22",
+                    text: "For I am afflicted and needy,\n  And my heart is wounded within me.",
+                    prayer: "Father, when I feel poor, needy, or wounded inside, draw near and comfort my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-23",
+                    reference: "Psalm 109:23",
+                    text: "I am passing like a shadow when it lengthens;\n  I am shaken off like the locust.",
+                    prayer: "Lord, when I feel like I am fading or being shaken, steady me with Your presence and strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-24",
+                    reference: "Psalm 109:24",
+                    text: "My knees are weak from fasting,\n  And my flesh has grown lean, without fatness.",
+                    prayer: "Father, when my body or spirit feels weak, sustain me by Your mercy and renew my strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-25",
+                    reference: "Psalm 109:25",
+                    text: "I also have become a reproach to them;\n  When they see me, they wag their head.",
+                    prayer: "Lord, when I feel mocked or misunderstood, remind me that my worth and identity are secure in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-26",
+                    reference: "Psalm 109:26",
+                    text: "Help me, O Lord my God;\n  Save me according to Your lovingkindness.",
+                    prayer: "Father, help me, my God. Save me according to Your lovingkindness."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-27",
+                    reference: "Psalm 109:27",
+                    text: "And let them know that this is Your hand;\n  You, Lord, have done it.",
+                    prayer: "Lord, let Your hand be seen in my life so others may know that You are my helper and deliverer."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-28",
+                    reference: "Psalm 109:28",
+                    text: "Let them curse, but You bless;\n  When they arise, they shall be ashamed,\n  But Your servant shall be glad.",
+                    prayer: "Father, even if others curse, let Your blessing rest upon me. Keep my heart joyful and secure in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-29",
+                    reference: "Psalm 109:29",
+                    text: "Let my accusers be clothed with dishonor,\n  And let them cover themselves with their own shame as with a robe.",
+                    prayer: "Lord, cover shame, accusation, and opposition with Your justice, mercy, and protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-30",
+                    reference: "Psalm 109:30",
+                    text: "With my mouth I will give thanks abundantly to the Lord;\n  And in the midst of many I will praise Him.",
+                    prayer: "Father, help me give thanks to You abundantly and praise You openly among others."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-31",
+                    reference: "Psalm 109:31",
+                    text: "For He stands at the right hand of the needy,\n  To save him from those who judge his soul.",
+                    prayer: "Lord, thank You for standing at the right hand of the needy and saving those who are judged unfairly."
+                ),
+                PrayerVerse(
+                    id: "psalm-109-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing me when I face accusation, pain, injustice, or weakness. Guard my heart from bitterness, revenge, and fear. Teach me to pray faithfully, trust Your justice, and walk in mercy and truth. Defend the needy, heal what is broken, and let Your blessing rest where others bring harm. May my life give thanks to You and remain secure in Your lovingkindness.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 110,
             title: "Sit at My Right Hand",
             chapterReference: "Psalm 110",
             summary: "Pray in worship of the Messianic King.",
-            verses: []
+            // JSON resource: psalm_110_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-110-1",
+                    reference: "Psalm 110:1",
+                    text: "The Lord says to my Lord:\n  “Sit at My right hand\n  Until I make Your enemies a footstool for Your feet.”",
+                    prayer: "Lord, You reign with all authority and power. Help me submit every part of my life to Your rule and trust Your perfect timing."
+                ),
+                PrayerVerse(
+                    id: "psalm-110-2",
+                    reference: "Psalm 110:2",
+                    text: "The Lord will stretch forth Your strong scepter from Zion, saying,\n  “Rule in the midst of Your enemies.”",
+                    prayer: "Father, extend Your strength through my life. Give me courage to stand faithfully even in the midst of opposition."
+                ),
+                PrayerVerse(
+                    id: "psalm-110-3",
+                    reference: "Psalm 110:3",
+                    text: "Your people will volunteer freely in the day of Your power;\n  In holy array, from the womb of the dawn,\n  Your youth are to You as the dew.",
+                    prayer: "Lord, make my heart willing to serve You with joy, holiness, and wholehearted devotion."
+                ),
+                PrayerVerse(
+                    id: "psalm-110-4",
+                    reference: "Psalm 110:4",
+                    text: "The Lord has sworn and will not change His mind,\n  “You are a priest forever\n  According to the order of Melchizedek.”",
+                    prayer: "Father, thank You for Your unchanging promises. Help me rest in the perfect work of Christ, my eternal High Priest."
+                ),
+                PrayerVerse(
+                    id: "psalm-110-5",
+                    reference: "Psalm 110:5",
+                    text: "The Lord is at Your right hand;\n  He will shatter kings in the day of His wrath.",
+                    prayer: "Lord, You are mighty and victorious. Remind me that no power is greater than Your sovereign authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-110-6",
+                    reference: "Psalm 110:6",
+                    text: "He will judge among the nations,\n  He will fill them with corpses,\n  He will shatter the chief men over a broad country.",
+                    prayer: "Father, You judge with perfect righteousness. Help me live with reverence, humility, and confidence in Your justice."
+                ),
+                PrayerVerse(
+                    id: "psalm-110-7",
+                    reference: "Psalm 110:7",
+                    text: "He will drink from the brook by the wayside;\n  Therefore He will lift up His head.",
+                    prayer: "Lord, strengthen me for the journey before me. Refresh my soul along the way and help me lift my head with hope because You are with me."
+                ),
+                PrayerVerse(
+                    id: "psalm-110-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for reigning forever as King and for providing an eternal Savior and High Priest in Jesus Christ. Help me willingly follow Your leadership, trust Your perfect authority, and serve You with a faithful heart. Strengthen me in every battle, refresh me when I grow weary, and remind me that every victory belongs to You. May my life honor Your kingdom and bring glory to Your holy name.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 111,
             title: "Great Are His Works",
             chapterReference: "Psalm 111",
             summary: "Pray in praise of God's deeds.",
-            verses: []
+            // JSON resource: psalm_111_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-111-1",
+                    reference: "Psalm 111:1",
+                    text: "Praise the Lord!\n  I will give thanks to the Lord with all my heart,\n  In the company of the upright and in the assembly.",
+                    prayer: "Lord, help me give thanks to You with my whole heart. Let my praise be sincere, joyful, and faithful among Your people."
+                ),
+                PrayerVerse(
+                    id: "psalm-111-2",
+                    reference: "Psalm 111:2",
+                    text: "Great are the works of the Lord;\n  They are studied by all who delight in them.",
+                    prayer: "Father, Your works are great and worthy of study. Help me delight in what You have done and recognize Your hand in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-111-3",
+                    reference: "Psalm 111:3",
+                    text: "Splendid and majestic is His work,\n  And His righteousness endures forever.",
+                    prayer: "Lord, Your work is splendid and majestic. Thank You that Your righteousness endures forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-111-4",
+                    reference: "Psalm 111:4",
+                    text: "He has made His wonders to be remembered;\n  The Lord is gracious and compassionate.",
+                    prayer: "Father, thank You for making Your wonders remembered. You are gracious, compassionate, and faithful."
+                ),
+                PrayerVerse(
+                    id: "psalm-111-5",
+                    reference: "Psalm 111:5",
+                    text: "He has given food to those who fear Him;\n  He will remember His covenant forever.",
+                    prayer: "Lord, thank You for providing for those who fear You and for remembering Your covenant forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-111-6",
+                    reference: "Psalm 111:6",
+                    text: "He has made known to His people the power of His works,\n  In giving them the heritage of the nations.",
+                    prayer: "Father, You have shown the power of Your works. Help me trust Your authority and receive what You give with humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-111-7",
+                    reference: "Psalm 111:7",
+                    text: "The works of His hands are truth and justice;\n  All His precepts are sure.",
+                    prayer: "Lord, the works of Your hands are truth and justice. Help me trust Your commands and walk in Your ways."
+                ),
+                PrayerVerse(
+                    id: "psalm-111-8",
+                    reference: "Psalm 111:8",
+                    text: "They are upheld forever and ever;\n  They are performed in truth and uprightness.",
+                    prayer: "Father, Your precepts are upheld forever. Teach me to build my life on Your faithful and upright Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-111-9",
+                    reference: "Psalm 111:9",
+                    text: "He has sent redemption to His people;\n  He has ordained His covenant forever;\n  Holy and awesome is His name.",
+                    prayer: "Lord, thank You for sending redemption to Your people and establishing Your covenant forever. Holy and awesome is Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-111-10",
+                    reference: "Psalm 111:10",
+                    text: "The fear of the Lord is the beginning of wisdom;\n  A good understanding have all those who do His commandments;\n  His praise endures forever.",
+                    prayer: "Father, teach me that the fear of the Lord is the beginning of wisdom. Help me live with reverence, obedience, and praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-111-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your great works, faithful covenant, truth, justice, redemption, and compassion. Teach me to praise You with my whole heart, delight in Your works, and walk in reverent wisdom. May my life honor Your holy and awesome name, and may my praise endure forever.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 112,
             title: "Blessed is the One Who Fears",
             chapterReference: "Psalm 112",
             summary: "Pray for righteousness and generosity.",
-            verses: []
+            // JSON resource: psalm_112_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-112-1",
+                    reference: "Psalm 112:1",
+                    text: "Praise the Lord!\n  How blessed is the man who fears the Lord,\n  Who greatly delights in His commandments.",
+                    prayer: "Lord, teach me to fear You with reverence and joy. Help me delight in Your commandments and walk faithfully in Your ways."
+                ),
+                PrayerVerse(
+                    id: "psalm-112-2",
+                    reference: "Psalm 112:2",
+                    text: "His descendants will be mighty on earth;\n  The generation of the upright will be blessed.",
+                    prayer: "Father, let my life leave a faithful legacy. Bless what honors You and guide future generations toward righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-112-3",
+                    reference: "Psalm 112:3",
+                    text: "Wealth and riches are in his house,\n  And his righteousness endures forever.",
+                    prayer: "Lord, help me steward every blessing with humility, generosity, and gratitude. Let righteousness remain at the center of my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-112-4",
+                    reference: "Psalm 112:4",
+                    text: "Light arises in the darkness for the upright;\n  He is gracious and compassionate and righteous.",
+                    prayer: "Father, shine Your light into dark seasons. Make me gracious, compassionate, and righteous in the way I treat others."
+                ),
+                PrayerVerse(
+                    id: "psalm-112-5",
+                    reference: "Psalm 112:5",
+                    text: "It is well with the man who is gracious and lends;\n  He will maintain his cause in judgment.",
+                    prayer: "Lord, teach me to be gracious, generous, and wise. Help me handle decisions with justice and integrity."
+                ),
+                PrayerVerse(
+                    id: "psalm-112-6",
+                    reference: "Psalm 112:6",
+                    text: "For he will never be shaken;\n  The righteous will be remembered forever.",
+                    prayer: "Father, keep my heart steady and rooted in You. Let my life be remembered for faithfulness, not fear."
+                ),
+                PrayerVerse(
+                    id: "psalm-112-7",
+                    reference: "Psalm 112:7",
+                    text: "He will not fear evil tidings;\n  His heart is steadfast, trusting in the Lord.",
+                    prayer: "Lord, when bad news comes, keep my heart firm and unafraid because my trust is in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-112-8",
+                    reference: "Psalm 112:8",
+                    text: "His heart is upheld, he will not fear,\n  Until he looks with satisfaction on his adversaries.",
+                    prayer: "Father, establish my heart in faith. Help me face every challenge with confidence in Your care and justice."
+                ),
+                PrayerVerse(
+                    id: "psalm-112-9",
+                    reference: "Psalm 112:9",
+                    text: "He has given freely to the poor,\n  His righteousness endures forever;\n  His horn will be exalted in honor.",
+                    prayer: "Lord, make me generous and compassionate toward those in need. Let my life reflect righteousness that honors You."
+                ),
+                PrayerVerse(
+                    id: "psalm-112-10",
+                    reference: "Psalm 112:10",
+                    text: "The wicked will see it and be vexed,\n  He will gnash his teeth and melt away;\n  The desire of the wicked will perish.",
+                    prayer: "Father, keep me from envy, anger, or resentment. Help me desire what is righteous and lasting instead of what fades away."
+                ),
+                PrayerVerse(
+                    id: "psalm-112-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for teaching me the blessing of reverence, obedience, generosity, and trust. Help me delight in Your commandments, remain steady in difficult seasons, and live with compassion toward others. Keep my heart firm in faith, free from fear, and rooted in Your righteousness. May my life honor You and leave a legacy of faithfulness.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 113,
             title: "Who is Like the Lord?",
             chapterReference: "Psalm 113",
             summary: "Pray in worship of God's incomparable nature.",
-            verses: []
+            // JSON resource: psalm_113_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-113-1",
+                    reference: "Psalm 113:1",
+                    text: "Praise the Lord!\n  Praise, O servants of the Lord,\n  Praise the name of the Lord.",
+                    prayer: "Lord, help me praise You as Your servant. Let my heart bless Your name with joy, humility, and gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-113-2",
+                    reference: "Psalm 113:2",
+                    text: "Blessed be the name of the Lord\n  From this time forth and forever.",
+                    prayer: "Father, blessed be Your name now and forever. Teach me to honor You in every season of life."
+                ),
+                PrayerVerse(
+                    id: "psalm-113-3",
+                    reference: "Psalm 113:3",
+                    text: "From the rising of the sun to its setting\n  The name of the Lord is to be praised.",
+                    prayer: "Lord, from sunrise to sunset, let Your name be praised. Fill my days with worship and thanksgiving."
+                ),
+                PrayerVerse(
+                    id: "psalm-113-4",
+                    reference: "Psalm 113:4",
+                    text: "The Lord is high above all nations;\n  His glory is above the heavens.",
+                    prayer: "Father, You are high above all nations, and Your glory is above the heavens. Help me live in awe of Your greatness."
+                ),
+                PrayerVerse(
+                    id: "psalm-113-5",
+                    reference: "Psalm 113:5",
+                    text: "Who is like the Lord our God,\n  Who is enthroned on high,",
+                    prayer: "Lord, there is no one like You. Teach me to trust Your majesty, holiness, and sovereign rule."
+                ),
+                PrayerVerse(
+                    id: "psalm-113-6",
+                    reference: "Psalm 113:6",
+                    text: "Who humbles Himself to behold\n  The things that are in heaven and in the earth?",
+                    prayer: "Father, thank You for humbling Yourself to look upon heaven and earth with care and compassion."
+                ),
+                PrayerVerse(
+                    id: "psalm-113-7",
+                    reference: "Psalm 113:7",
+                    text: "He raises the poor from the dust\n  And lifts the needy from the ash heap,",
+                    prayer: "Lord, thank You for lifting the poor from the dust. Raise up what feels low, forgotten, or broken in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-113-8",
+                    reference: "Psalm 113:8",
+                    text: "To make them sit with princes,\n  With the princes of His people.",
+                    prayer: "Father, thank You for giving dignity, purpose, and honor to those You lift by Your grace."
+                ),
+                PrayerVerse(
+                    id: "psalm-113-9",
+                    reference: "Psalm 113:9",
+                    text: "He makes the barren woman abide in the house\n  As a joyful mother of children.\n  Praise the Lord!",
+                    prayer: "Lord, thank You for bringing joy, belonging, and fruitfulness where there has been emptiness. Fill my life with praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-113-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being high above all nations and yet near to the humble, needy, and broken. Teach me to praise Your name from morning to evening and trust Your compassionate care. Lift what is low, restore what feels empty, and fill my life with joy, dignity, and worship. May my heart bless Your name now and forever.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 114,
             title: "When Israel Came Out",
             chapterReference: "Psalm 114",
             summary: "Pray in remembrance of God's mighty deliverance.",
-            verses: []
+            // JSON resource: psalm_114_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-114-1",
+                    reference: "Psalm 114:1",
+                    text: "When Israel went forth from Egypt,\n  The house of Jacob from a people of strange language,",
+                    prayer: "Lord, thank You for leading Your people out of bondage. Lead me out of anything that keeps me from walking freely with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-114-2",
+                    reference: "Psalm 114:2",
+                    text: "Judah became His sanctuary,\n  Israel, His dominion.",
+                    prayer: "Father, make my life a place where Your presence is honored and Your rule is welcomed."
+                ),
+                PrayerVerse(
+                    id: "psalm-114-3",
+                    reference: "Psalm 114:3",
+                    text: "The sea looked and fled;\n  The Jordan turned back.",
+                    prayer: "Lord, every obstacle moves before Your power. Help me trust You when the way ahead seems impossible."
+                ),
+                PrayerVerse(
+                    id: "psalm-114-4",
+                    reference: "Psalm 114:4",
+                    text: "The mountains skipped like rams,\n  The hills, like lambs.",
+                    prayer: "Father, all creation responds to Your presence. Teach me to live with reverence, joy, and awe before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-114-5",
+                    reference: "Psalm 114:5",
+                    text: "What ails you, O sea, that you flee?\n  O Jordan, that you turn back?",
+                    prayer: "Lord, when mountains or seas stand before me, remind me that nothing can resist Your command."
+                ),
+                PrayerVerse(
+                    id: "psalm-114-6",
+                    reference: "Psalm 114:6",
+                    text: "O mountains, that you skip like rams?\n  O hills, like lambs?",
+                    prayer: "Father, awaken my heart to Your greatness. Let every stronghold tremble before Your holy presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-114-7",
+                    reference: "Psalm 114:7",
+                    text: "Tremble, O earth, before the Lord,\n  Before the God of Jacob,",
+                    prayer: "Lord, help me tremble before You with holy reverence. Let my life honor Your majesty and power."
+                ),
+                PrayerVerse(
+                    id: "psalm-114-8",
+                    reference: "Psalm 114:8",
+                    text: "Who turned the rock into a pool of water,\n  The flint into a fountain of water.",
+                    prayer: "Father, thank You for bringing water from the rock. Provide refreshment, life, and hope in every dry place."
+                ),
+                PrayerVerse(
+                    id: "psalm-114-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your mighty deliverance, holy presence, and life-giving provision. Lead me out of bondage, move every obstacle before me, and refresh the dry places of my soul. Help me live with reverence, joy, and trust as I follow Your power and presence.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 115,
             title: "Not to Us",
             chapterReference: "Psalm 115",
             summary: "Pray for God's glory alone.",
-            verses: []
+            // JSON resource: psalm_115_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-115-1",
+                    reference: "Psalm 115:1",
+                    text: "Not to us, O Lord, not to us,\n  But to Your name give glory\n  Because of Your lovingkindness, because of Your truth.",
+                    prayer: "Lord, not to me, but to Your name give glory. Let my life honor Your lovingkindness, truth, and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-2",
+                    reference: "Psalm 115:2",
+                    text: "Why should the nations say,\n  “Where, now, is their God?”",
+                    prayer: "Father, when others question Your presence or power, help me trust that You are near, active, and sovereign."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-3",
+                    reference: "Psalm 115:3",
+                    text: "But our God is in the heavens;\n  He does whatever He pleases.",
+                    prayer: "Lord, You are in the heavens and You do whatever pleases You. Help me rest in Your authority and wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-4",
+                    reference: "Psalm 115:4",
+                    text: "Their idols are silver and gold,\n  The work of man’s hands.",
+                    prayer: "Father, keep my heart from trusting in anything lifeless, empty, or made by human hands."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-5",
+                    reference: "Psalm 115:5",
+                    text: "They have mouths, but they cannot speak;\n  They have eyes, but they cannot see;",
+                    prayer: "Lord, protect me from idols that cannot speak truth or guide my life. Let Your Word be my direction."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-6",
+                    reference: "Psalm 115:6",
+                    text: "They have ears, but they cannot hear;\n  They have noses, but they cannot smell;",
+                    prayer: "Father, keep me from depending on anything that cannot hear, respond, or save. Teach me to rely on You alone."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-7",
+                    reference: "Psalm 115:7",
+                    text: "They have hands, but they cannot feel;\n  They have feet, but they cannot walk;\n  They cannot make a sound with their throat.",
+                    prayer: "Lord, expose every false source of security in my life and lead me back to living faith in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-8",
+                    reference: "Psalm 115:8",
+                    text: "Those who make them will become like them,\n  Everyone who trusts in them.",
+                    prayer: "Father, help me become more like You, not like the empty things people trust. Shape my heart through worship and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-9",
+                    reference: "Psalm 115:9",
+                    text: "O Israel, trust in the Lord;\n  He is their help and their shield.",
+                    prayer: "Lord, help me trust in You as my help and shield. Keep my confidence rooted in Your protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-10",
+                    reference: "Psalm 115:10",
+                    text: "O house of Aaron, trust in the Lord;\n  He is their help and their shield.",
+                    prayer: "Father, teach my household and community to trust in You as our help and shield."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-11",
+                    reference: "Psalm 115:11",
+                    text: "You who fear the Lord, trust in the Lord;\n  He is their help and their shield.",
+                    prayer: "Lord, let all who fear You trust in You. Strengthen my reverence, confidence, and dependence on Your care."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-12",
+                    reference: "Psalm 115:12",
+                    text: "The Lord has been mindful of us; He will bless us;\n  He will bless the house of Israel;\n  He will bless the house of Aaron.",
+                    prayer: "Father, thank You for remembering Your people. Bless and sustain those who belong to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-13",
+                    reference: "Psalm 115:13",
+                    text: "He will bless those who fear the Lord,\n  The small together with the great.",
+                    prayer: "Lord, bless those who fear You, both small and great. Let every life find value and care in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-14",
+                    reference: "Psalm 115:14",
+                    text: "May the Lord give you increase,\n  You and your children.",
+                    prayer: "Father, increase faithfulness, blessing, and spiritual fruit in my life and in the generations after me."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-15",
+                    reference: "Psalm 115:15",
+                    text: "May you be blessed of the Lord,\n  Maker of heaven and earth.",
+                    prayer: "Lord, thank You for blessing us as the Maker of heaven and earth. Help me live with gratitude and awe."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-16",
+                    reference: "Psalm 115:16",
+                    text: "The heavens are the heavens of the Lord,\n  But the earth He has given to the sons of men.",
+                    prayer: "Father, the heavens belong to You, and the earth has been entrusted to humanity. Help me steward my life faithfully before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-17",
+                    reference: "Psalm 115:17",
+                    text: "The dead do not praise the Lord,\n  Nor do any who go down into silence;",
+                    prayer: "Lord, remind me to praise You while I have breath. Let my life not waste the days You have given me."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-18",
+                    reference: "Psalm 115:18",
+                    text: "But as for us, we will bless the Lord\n  From this time forth and forever.\n  Praise the Lord!",
+                    prayer: "Father, help me bless You from this time forth and forever. Let praise remain alive in my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-115-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my help, shield, Creator, and faithful God. Keep my heart from idols, false security, and empty trust. Teach me to give glory to Your name alone, rely on Your protection, and live with gratitude while I have breath. Bless my life, my household, and future generations with faithfulness, reverence, and praise.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 116,
