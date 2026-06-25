@@ -13297,28 +13297,1416 @@ enum PsalmsPrayerData {
             title: "I Love the Lord",
             chapterReference: "Psalm 116",
             summary: "Pray in gratitude for answered prayer.",
-            verses: []
+            // JSON resource: psalm_116_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-116-1",
+                    reference: "Psalm 116:1",
+                    text: "I love the Lord, because He hears\n  My voice and my supplications.",
+                    prayer: "Lord, I love You because You hear my voice and my prayers. Thank You for listening with mercy and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-2",
+                    reference: "Psalm 116:2",
+                    text: "Because He has inclined His ear to me,\n  Therefore I shall call upon Him as long as I live.",
+                    prayer: "Father, because You incline Your ear to me, help me call upon You throughout my life with trust and gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-3",
+                    reference: "Psalm 116:3",
+                    text: "The cords of death encompassed me\n  And the terrors of Sheol came upon me;\n  I found distress and sorrow.",
+                    prayer: "Lord, when trouble, sorrow, or fear surrounds me, remind me that You are near and able to deliver."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-4",
+                    reference: "Psalm 116:4",
+                    text: "Then I called upon the name of the Lord:\n  “O Lord, I beseech You, save my life!”",
+                    prayer: "Father, I call upon Your name. Save me, restore me, and lead me back into peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-5",
+                    reference: "Psalm 116:5",
+                    text: "Gracious is the Lord, and righteous;\n  Yes, our God is compassionate.",
+                    prayer: "Lord, thank You for being gracious, righteous, and compassionate. Help me rest in Your mercy."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-6",
+                    reference: "Psalm 116:6",
+                    text: "The Lord preserves the simple;\n  I was brought low, and He saved me.",
+                    prayer: "Father, thank You for preserving the simple and helping me when I am brought low."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-7",
+                    reference: "Psalm 116:7",
+                    text: "Return to your rest, O my soul,\n  For the Lord has dealt bountifully with you.",
+                    prayer: "Lord, bring my soul back to rest, because You have dealt generously with me."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-8",
+                    reference: "Psalm 116:8",
+                    text: "For You have rescued my soul from death,\n  My eyes from tears,\n  My feet from stumbling.",
+                    prayer: "Father, thank You for rescuing my soul, drying my tears, and keeping my feet from stumbling."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-9",
+                    reference: "Psalm 116:9",
+                    text: "I shall walk before the Lord\n  In the land of the living.",
+                    prayer: "Lord, help me walk before You in the land of the living with faithfulness, gratitude, and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-10",
+                    reference: "Psalm 116:10",
+                    text: "I believed when I said,\n  “I am greatly afflicted.”",
+                    prayer: "Father, strengthen my faith even when I speak from affliction or pain."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-11",
+                    reference: "Psalm 116:11",
+                    text: "I said in my alarm,\n  “All men are liars.”",
+                    prayer: "Lord, when disappointment makes me distrustful, keep my heart anchored in Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-12",
+                    reference: "Psalm 116:12",
+                    text: "What shall I render to the Lord\n  For all His benefits toward me?",
+                    prayer: "Father, how can I repay You for all Your benefits to me? Help me respond with worship, obedience, and gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-13",
+                    reference: "Psalm 116:13",
+                    text: "I shall lift up the cup of salvation\n  And call upon the name of the Lord.",
+                    prayer: "Lord, help me lift the cup of salvation and call upon Your name with thanksgiving."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-14",
+                    reference: "Psalm 116:14",
+                    text: "I shall pay my vows to the Lord,\n  Oh may it be in the presence of all His people.",
+                    prayer: "Father, help me fulfill my vows to You faithfully and honor You among Your people."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-15",
+                    reference: "Psalm 116:15",
+                    text: "Precious in the sight of the Lord\n  Is the death of His godly ones.",
+                    prayer: "Lord, thank You that the lives of Your faithful ones are precious in Your sight."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-16",
+                    reference: "Psalm 116:16",
+                    text: "O Lord, surely I am Your servant,\n  I am Your servant, the son of Your handmaid,\n  You have loosed my bonds.",
+                    prayer: "Father, I am Your servant. Thank You for loosening my bonds and setting me free."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-17",
+                    reference: "Psalm 116:17",
+                    text: "To You I shall offer a sacrifice of thanksgiving,\n  And call upon the name of the Lord.",
+                    prayer: "Lord, help me offer thanksgiving from a sincere heart and continually call upon Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-18",
+                    reference: "Psalm 116:18",
+                    text: "I shall pay my vows to the Lord,\n  Oh may it be in the presence of all His people,",
+                    prayer: "Father, help me keep my commitments to You openly, faithfully, and with reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-19",
+                    reference: "Psalm 116:19",
+                    text: "In the courts of the Lord’s house,\n  In the midst of you, O Jerusalem.\n  Praise the Lord!",
+                    prayer: "Lord, let my life praise You in the midst of Your people and bless Your holy name."
+                ),
+                PrayerVerse(
+                    id: "psalm-116-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing my prayers, rescuing my soul, drying my tears, and keeping my feet from stumbling. Teach me to rest in Your goodness, walk before You with gratitude, and call upon Your name all my life. Help me live as Your faithful servant, honor my commitments to You, and offer thanksgiving from a sincere heart. May my life continually praise You for Your mercy, salvation, and love.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 117,
             title: "Praise the Lord, All Nations",
             chapterReference: "Psalm 117",
             summary: "Pray for universal praise of God.",
-            verses: []
+            // JSON resource: psalm_117_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-117-1",
+                    reference: "Psalm 117:1",
+                    text: "Praise the Lord, all nations;\n  Laud Him, all peoples!",
+                    prayer: "Lord, let my life praise You and point all people toward Your goodness, mercy, and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-117-2",
+                    reference: "Psalm 117:2",
+                    text: "For His lovingkindness is great toward us,\n  And the truth of the Lord is everlasting.\n  Praise the Lord!",
+                    prayer: "Father, thank You that Your lovingkindness is great and Your truth endures forever. Help me live with gratitude and praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-117-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your great lovingkindness and everlasting truth. Let my heart praise You with joy, and let my life reflect Your faithfulness to others. May every nation and every person come to know Your goodness and worship Your holy name.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 118,
             title: "His Love Endures Forever",
             chapterReference: "Psalm 118",
             summary: "Pray in thanksgiving for God's steadfast love.",
-            verses: []
+            // JSON resource: psalm_118_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-118-1",
+                    reference: "Psalm 118:1",
+                    text: "Give thanks to the Lord, for He is good;\n  For His lovingkindness is everlasting.",
+                    prayer: "Lord, I give thanks to You because You are good. Thank You that Your lovingkindness endures forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-2",
+                    reference: "Psalm 118:2",
+                    text: "Oh let Israel say,\n  “His lovingkindness is everlasting.”",
+                    prayer: "Father, let Your people declare Your faithful love. Help my life testify that Your lovingkindness endures forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-3",
+                    reference: "Psalm 118:3",
+                    text: "Oh let the house of Aaron say,\n  “His lovingkindness is everlasting.”",
+                    prayer: "Lord, let those who serve You remember and proclaim that Your mercy and covenant love never fail."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-4",
+                    reference: "Psalm 118:4",
+                    text: "Oh let those who fear the Lord say,\n  “His lovingkindness is everlasting.”",
+                    prayer: "Father, teach me to fear You with reverence and trust. Let my heart declare that Your lovingkindness endures forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-5",
+                    reference: "Psalm 118:5",
+                    text: "From my distress I called upon the Lord;\n  The Lord answered me and set me in a large place.",
+                    prayer: "Lord, when I am in distress, help me call upon You. Thank You for answering and bringing me into freedom."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-6",
+                    reference: "Psalm 118:6",
+                    text: "The Lord is for me; I will not fear;\n  What can man do to me?",
+                    prayer: "Father, You are for me, so I will not fear. Help me trust You more than anything people can do."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-7",
+                    reference: "Psalm 118:7",
+                    text: "The Lord is for me among those who help me;\n  Therefore I will look with satisfaction on those who hate me.",
+                    prayer: "Lord, thank You for being my helper. Strengthen my confidence in Your protection and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-8",
+                    reference: "Psalm 118:8",
+                    text: "It is better to take refuge in the Lord\n  Than to trust in man.",
+                    prayer: "Father, teach me to take refuge in You rather than placing my trust in people."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-9",
+                    reference: "Psalm 118:9",
+                    text: "It is better to take refuge in the Lord\n  Than to trust in princes.",
+                    prayer: "Lord, help me trust You above leaders, systems, influence, or human strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-10",
+                    reference: "Psalm 118:10",
+                    text: "All nations surrounded me;\n  In the name of the Lord I will surely cut them off.",
+                    prayer: "Father, when opposition surrounds me, help me stand in the power and protection of Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-11",
+                    reference: "Psalm 118:11",
+                    text: "They surrounded me, yes, they surrounded me;\n  In the name of the Lord I will surely cut them off.",
+                    prayer: "Lord, when pressure comes from every side, remind me that Your name is my defense and strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-12",
+                    reference: "Psalm 118:12",
+                    text: "They surrounded me like bees;\n  They were extinguished as a fire of thorns;\n  In the name of the Lord I will surely cut them off.",
+                    prayer: "Father, when trouble feels overwhelming, help me trust that it will not overcome Your power."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-13",
+                    reference: "Psalm 118:13",
+                    text: "You pushed me violently so that I was falling,\n  But the Lord helped me.",
+                    prayer: "Lord, when I am pushed hard and feel like falling, thank You for being my help."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-14",
+                    reference: "Psalm 118:14",
+                    text: "The Lord is my strength and song,\n  And He has become my salvation.",
+                    prayer: "Father, You are my strength and song, and You have become my salvation. Fill my heart with praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-15",
+                    reference: "Psalm 118:15",
+                    text: "The sound of joyful shouting and salvation is in the tents of the righteous;\n  The right hand of the Lord does valiantly.",
+                    prayer: "Lord, let songs of joy and victory be heard in my life because Your right hand acts with power."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-16",
+                    reference: "Psalm 118:16",
+                    text: "The right hand of the Lord is exalted;\n  The right hand of the Lord does valiantly.",
+                    prayer: "Father, Your right hand is exalted and does valiantly. Help me trust Your mighty works."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-17",
+                    reference: "Psalm 118:17",
+                    text: "I will not die, but live,\n  And tell of the works of the Lord.",
+                    prayer: "Lord, help me live and not give in to despair, so I may tell of Your works and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-18",
+                    reference: "Psalm 118:18",
+                    text: "The Lord has disciplined me severely,\n  But He has not given me over to death.",
+                    prayer: "Father, when You discipline me, help me receive correction with humility and trust Your restoring purpose."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-19",
+                    reference: "Psalm 118:19",
+                    text: "Open to me the gates of righteousness;\n  I shall enter through them, I shall give thanks to the Lord.",
+                    prayer: "Lord, open the gates of righteousness so I may enter with thanksgiving and praise Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-20",
+                    reference: "Psalm 118:20",
+                    text: "This is the gate of the Lord;\n  The righteous will enter through it.",
+                    prayer: "Father, help me walk through the gate of righteousness with a heart that belongs to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-21",
+                    reference: "Psalm 118:21",
+                    text: "I shall give thanks to You, for You have answered me,\n  And You have become my salvation.",
+                    prayer: "Lord, I thank You for answering me and becoming my salvation."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-22",
+                    reference: "Psalm 118:22",
+                    text: "The stone which the builders rejected\n  Has become the chief corner stone.",
+                    prayer: "Father, thank You that the stone rejected by people became the chief cornerstone. Help me build my life on Christ."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-23",
+                    reference: "Psalm 118:23",
+                    text: "This is the Lord’s doing;\n  It is marvelous in our eyes.",
+                    prayer: "Lord, this is Your doing, and it is marvelous in my eyes. Help me recognize Your hand with wonder and faith."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-24",
+                    reference: "Psalm 118:24",
+                    text: "This is the day which the Lord has made;\n  Let us rejoice and be glad in it.",
+                    prayer: "Father, this is the day You have made. Help me rejoice and be glad in it."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-25",
+                    reference: "Psalm 118:25",
+                    text: "O Lord, do save, we beseech You;\n  O Lord, we beseech You, do send prosperity!",
+                    prayer: "Lord, save now and bring success according to Your will. Lead me in Your blessing and purpose."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-26",
+                    reference: "Psalm 118:26",
+                    text: "Blessed is the one who comes in the name of the Lord;\n  We have blessed you from the house of the Lord.",
+                    prayer: "Father, blessed is the One who comes in Your name. Help me welcome Your presence with worship and reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-27",
+                    reference: "Psalm 118:27",
+                    text: "The Lord is God, and He has given us light;\n  Bind the festival sacrifice with cords to the horns of the altar.",
+                    prayer: "Lord, You are God and You have given us light. Lead me in joyful worship and surrendered devotion."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-28",
+                    reference: "Psalm 118:28",
+                    text: "You are my God, and I give thanks to You;\n  You are my God, I extol You.",
+                    prayer: "Father, You are my God, and I give thanks to You. I exalt You with all my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-29",
+                    reference: "Psalm 118:29",
+                    text: "Give thanks to the Lord, for He is good;\n  For His lovingkindness is everlasting.",
+                    prayer: "Lord, I give thanks to You because You are good, and Your lovingkindness endures forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-118-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your goodness, salvation, strength, and enduring lovingkindness. When I am distressed, surrounded, corrected, or afraid, help me take refuge in You and trust Your name. Teach me to rejoice in the day You have made, build my life on Christ the cornerstone, and enter Your presence with thanksgiving. May my life continually declare that You are good and that Your lovingkindness endures forever.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 119,
             title: "Your Word is a Lamp",
             chapterReference: "Psalm 119",
             summary: "Pray for love of God's Word and obedience.",
-            verses: []
+            // JSON resource: psalm_119_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-119-1",
+                    reference: "Psalm 119:1",
+                    text: "Aleph.\n  How blessed are those whose way is blameless,\n  Who walk in the law of the Lord.",
+                    prayer: "Lord, help me walk blamelessly by following Your law with a sincere and faithful heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-2",
+                    reference: "Psalm 119:2",
+                    text: "How blessed are those who observe His testimonies,\n  Who seek Him with all their heart.",
+                    prayer: "Father, teach me to keep Your testimonies and seek You with my whole heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-3",
+                    reference: "Psalm 119:3",
+                    text: "They also do no unrighteousness;\n  They walk in His ways.",
+                    prayer: "Lord, keep me from practicing unrighteousness and guide me to walk steadily in Your ways."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-4",
+                    reference: "Psalm 119:4",
+                    text: "You have ordained Your precepts,\n  That we should keep them diligently.",
+                    prayer: "Father, help me obey Your precepts diligently and take Your Word seriously each day."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-5",
+                    reference: "Psalm 119:5",
+                    text: "Oh that my ways may be established\n  To keep Your statutes!",
+                    prayer: "Lord, make my ways firm so I may keep Your statutes with faithfulness and consistency."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-6",
+                    reference: "Psalm 119:6",
+                    text: "Then I shall not be ashamed\n  When I look upon all Your commandments.",
+                    prayer: "Father, keep me from shame as I look carefully to all Your commandments."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-7",
+                    reference: "Psalm 119:7",
+                    text: "I shall give thanks to You with uprightness of heart,\n  When I learn Your righteous judgments.",
+                    prayer: "Lord, help me praise You with an upright heart as I learn Your righteous judgments."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-8",
+                    reference: "Psalm 119:8",
+                    text: "I shall keep Your statutes;\n  Do not forsake me utterly!\n    Beth.",
+                    prayer: "Father, help me keep Your statutes and never feel far from Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-9",
+                    reference: "Psalm 119:9",
+                    text: "How can a young man keep his way pure?\n  By keeping it according to Your word.",
+                    prayer: "Lord, teach me to keep my way pure by guarding my life according to Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-10",
+                    reference: "Psalm 119:10",
+                    text: "With all my heart I have sought You;\n  Do not let me wander from Your commandments.",
+                    prayer: "Father, I seek You with all my heart. Do not let me wander from Your commandments."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-11",
+                    reference: "Psalm 119:11",
+                    text: "Your word I have treasured in my heart,\n  That I may not sin against You.",
+                    prayer: "Lord, help me treasure Your Word in my heart so that I may not sin against You."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-12",
+                    reference: "Psalm 119:12",
+                    text: "Blessed are You, O Lord;\n  Teach me Your statutes.",
+                    prayer: "Father, blessed are You. Teach me Your statutes and shape my life by Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-13",
+                    reference: "Psalm 119:13",
+                    text: "With my lips I have told of\n  All the ordinances of Your mouth.",
+                    prayer: "Lord, help my words declare the judgments of Your mouth with reverence and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-14",
+                    reference: "Psalm 119:14",
+                    text: "I have rejoiced in the way of Your testimonies,\n  As much as in all riches.",
+                    prayer: "Father, give me joy in the way of Your testimonies more than in earthly riches."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-15",
+                    reference: "Psalm 119:15",
+                    text: "I will meditate on Your precepts\n  And regard Your ways.",
+                    prayer: "Lord, help me meditate on Your precepts and carefully consider Your ways."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-16",
+                    reference: "Psalm 119:16",
+                    text: "I shall delight in Your statutes;\n  I shall not forget Your word.\n    Gimel.",
+                    prayer: "Father, let me delight in Your statutes and never forget Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-17",
+                    reference: "Psalm 119:17",
+                    text: "Deal bountifully with Your servant,\n  That I may live and keep Your word.",
+                    prayer: "Lord, deal graciously with me so I may live and keep Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-18",
+                    reference: "Psalm 119:18",
+                    text: "Open my eyes, that I may behold\n  Wonderful things from Your law.",
+                    prayer: "Father, open my eyes so I may behold wonderful things from Your law."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-19",
+                    reference: "Psalm 119:19",
+                    text: "I am a stranger in the earth;\n  Do not hide Your commandments from me.",
+                    prayer: "Lord, I am a sojourner on the earth. Do not hide Your commandments from me."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-20",
+                    reference: "Psalm 119:20",
+                    text: "My soul is crushed with longing\n  After Your ordinances at all times.",
+                    prayer: "Father, let my soul long for Your judgments and desire Your truth continually."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-21",
+                    reference: "Psalm 119:21",
+                    text: "You rebuke the arrogant, the cursed,\n  Who wander from Your commandments.",
+                    prayer: "Lord, protect me from pride and wandering. Keep me close to Your commandments."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-22",
+                    reference: "Psalm 119:22",
+                    text: "Take away reproach and contempt from me,\n  For I observe Your testimonies.",
+                    prayer: "Father, remove shame and reproach from me as I keep Your testimonies."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-23",
+                    reference: "Psalm 119:23",
+                    text: "Even though princes sit and talk against me,\n  Your servant meditates on Your statutes.",
+                    prayer: "Lord, even when others speak against me, help me meditate on Your statutes."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-24",
+                    reference: "Psalm 119:24",
+                    text: "Your testimonies also are my delight;\n  They are my counselors.\n    Daleth.",
+                    prayer: "Father, let Your testimonies be my delight and my counselors in every decision."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-25",
+                    reference: "Psalm 119:25",
+                    text: "My soul cleaves to the dust;\n  Revive me according to Your word.",
+                    prayer: "Lord, when my soul feels low, revive me according to Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-26",
+                    reference: "Psalm 119:26",
+                    text: "I have told of my ways, and You have answered me;\n  Teach me Your statutes.",
+                    prayer: "Father, I have told You my ways. Answer me and teach me Your statutes."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-27",
+                    reference: "Psalm 119:27",
+                    text: "Make me understand the way of Your precepts,\n  So I will meditate on Your wonders.",
+                    prayer: "Lord, make me understand the way of Your precepts so I may meditate on Your wonders."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-28",
+                    reference: "Psalm 119:28",
+                    text: "My soul weeps because of grief;\n  Strengthen me according to Your word.",
+                    prayer: "Father, when my soul weeps from grief, strengthen me according to Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-29",
+                    reference: "Psalm 119:29",
+                    text: "Remove the false way from me,\n  And graciously grant me Your law.",
+                    prayer: "Lord, remove the false way from me and graciously grant me Your law."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-30",
+                    reference: "Psalm 119:30",
+                    text: "I have chosen the faithful way;\n  I have placed Your ordinances before me.",
+                    prayer: "Father, help me choose the faithful way and set Your judgments before me."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-31",
+                    reference: "Psalm 119:31",
+                    text: "I cling to Your testimonies;\n  O Lord, do not put me to shame!",
+                    prayer: "Lord, I cling to Your testimonies. Do not let me be put to shame."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-32",
+                    reference: "Psalm 119:32",
+                    text: "I shall run the way of Your commandments,\n  For You will enlarge my heart.\n    He.",
+                    prayer: "Father, enlarge my heart so I may run in the way of Your commandments with joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-33",
+                    reference: "Psalm 119:33",
+                    text: "Teach me, O Lord, the way of Your statutes,\n  And I shall observe it to the end.",
+                    prayer: "Lord, teach me the way of Your statutes, and help me keep it to the end."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-34",
+                    reference: "Psalm 119:34",
+                    text: "Give me understanding, that I may observe Your law\n  And keep it with all my heart.",
+                    prayer: "Father, give me understanding so I may observe Your law and keep it with all my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-35",
+                    reference: "Psalm 119:35",
+                    text: "Make me walk in the path of Your commandments,\n  For I delight in it.",
+                    prayer: "Lord, make me walk in the path of Your commandments, for I delight in it."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-36",
+                    reference: "Psalm 119:36",
+                    text: "Incline my heart to Your testimonies\n  And not to dishonest gain.",
+                    prayer: "Father, incline my heart toward Your testimonies and not toward selfish gain."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-37",
+                    reference: "Psalm 119:37",
+                    text: "Turn away my eyes from looking at vanity,\n  And revive me in Your ways.",
+                    prayer: "Lord, turn my eyes away from worthless things and revive me in Your ways."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-38",
+                    reference: "Psalm 119:38",
+                    text: "Establish Your word to Your servant,\n  As that which produces reverence for You.",
+                    prayer: "Father, establish Your Word in me and deepen my reverence for You."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-39",
+                    reference: "Psalm 119:39",
+                    text: "Turn away my reproach which I dread,\n  For Your ordinances are good.",
+                    prayer: "Lord, turn away the reproach I fear, for Your judgments are good."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-40",
+                    reference: "Psalm 119:40",
+                    text: "Behold, I long for Your precepts;\n  Revive me through Your righteousness.\n    Vav.",
+                    prayer: "Father, I long for Your precepts. Revive me through Your righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-41",
+                    reference: "Psalm 119:41",
+                    text: "May Your lovingkindnesses also come to me, O Lord,\n  Your salvation according to Your word;",
+                    prayer: "Lord, let Your lovingkindness come to me, and let Your salvation come according to Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-42",
+                    reference: "Psalm 119:42",
+                    text: "So I will have an answer for him who reproaches me,\n  For I trust in Your word.",
+                    prayer: "Father, help me answer those who challenge me, because I trust in Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-43",
+                    reference: "Psalm 119:43",
+                    text: "And do not take the word of truth utterly out of my mouth,\n  For I wait for Your ordinances.",
+                    prayer: "Lord, do not take the word of truth from my mouth, for I wait for Your judgments."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-44",
+                    reference: "Psalm 119:44",
+                    text: "So I will keep Your law continually,\n  Forever and ever.",
+                    prayer: "Father, help me keep Your law continually, forever and ever."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-45",
+                    reference: "Psalm 119:45",
+                    text: "And I will walk at liberty,\n  For I seek Your precepts.",
+                    prayer: "Lord, let me walk in freedom because I seek Your precepts."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-46",
+                    reference: "Psalm 119:46",
+                    text: "I will also speak of Your testimonies before kings\n  And shall not be ashamed.",
+                    prayer: "Father, give me courage to speak of Your testimonies before others without shame."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-47",
+                    reference: "Psalm 119:47",
+                    text: "I shall delight in Your commandments,\n  Which I love.",
+                    prayer: "Lord, let me delight in Your commandments, which I love."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-48",
+                    reference: "Psalm 119:48",
+                    text: "And I shall lift up my hands to Your commandments,\n  Which I love;\n  And I will meditate on Your statutes.\n    Zayin.",
+                    prayer: "Father, help me lift my heart toward Your commandments and meditate on Your statutes."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-49",
+                    reference: "Psalm 119:49",
+                    text: "Remember the word to Your servant,\n  In which You have made me hope.",
+                    prayer: "Lord, remember Your Word to me, the promise that gives me hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-50",
+                    reference: "Psalm 119:50",
+                    text: "This is my comfort in my affliction,\n  That Your word has revived me.",
+                    prayer: "Father, let Your Word comfort me in affliction and revive my soul."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-51",
+                    reference: "Psalm 119:51",
+                    text: "The arrogant utterly deride me,\n  Yet I do not turn aside from Your law.",
+                    prayer: "Lord, when pride or mockery surrounds me, keep me from turning away from Your law."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-52",
+                    reference: "Psalm 119:52",
+                    text: "I have remembered Your ordinances from of old, O Lord,\n  And comfort myself.",
+                    prayer: "Father, I remember Your judgments from long ago and find comfort in Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-53",
+                    reference: "Psalm 119:53",
+                    text: "Burning indignation has seized me because of the wicked,\n  Who forsake Your law.",
+                    prayer: "Lord, when I see wickedness, give me holy grief and keep my heart devoted to Your law."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-54",
+                    reference: "Psalm 119:54",
+                    text: "Your statutes are my songs\n  In the house of my pilgrimage.",
+                    prayer: "Father, let Your statutes become songs in every place You lead me."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-55",
+                    reference: "Psalm 119:55",
+                    text: "O Lord, I remember Your name in the night,\n  And keep Your law.",
+                    prayer: "Lord, help me remember Your name in the night and keep Your law."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-56",
+                    reference: "Psalm 119:56",
+                    text: "This has become mine,\n  That I observe Your precepts.\n    Heth.",
+                    prayer: "Father, let obedience become the pattern of my life because I keep Your precepts."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-57",
+                    reference: "Psalm 119:57",
+                    text: "The Lord is my portion;\n  I have promised to keep Your words.",
+                    prayer: "Lord, You are my portion. Help me commit fully to keeping Your words."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-58",
+                    reference: "Psalm 119:58",
+                    text: "I sought Your favor with all my heart;\n  Be gracious to me according to Your word.",
+                    prayer: "Father, I seek Your favor with all my heart. Be gracious to me according to Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-59",
+                    reference: "Psalm 119:59",
+                    text: "I considered my ways\n  And turned my feet to Your testimonies.",
+                    prayer: "Lord, help me consider my ways and turn my feet back toward Your testimonies."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-60",
+                    reference: "Psalm 119:60",
+                    text: "I hastened and did not delay\n  To keep Your commandments.",
+                    prayer: "Father, help me hurry toward obedience and not delay in keeping Your commandments."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-61",
+                    reference: "Psalm 119:61",
+                    text: "The cords of the wicked have encircled me,\n  But I have not forgotten Your law.",
+                    prayer: "Lord, even when trouble surrounds me, keep me from forgetting Your law."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-62",
+                    reference: "Psalm 119:62",
+                    text: "At midnight I shall rise to give thanks to You\n  Because of Your righteous ordinances.",
+                    prayer: "Father, teach me to rise with gratitude and praise You for Your righteous judgments."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-63",
+                    reference: "Psalm 119:63",
+                    text: "I am a companion of all those who fear You,\n  And of those who keep Your precepts.",
+                    prayer: "Lord, surround me with people who fear You and keep Your precepts faithfully."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-64",
+                    reference: "Psalm 119:64",
+                    text: "The earth is full of Your lovingkindness, O Lord;\n  Teach me Your statutes.\n    Teth.",
+                    prayer: "Father, the earth is full of Your lovingkindness. Teach me Your statutes and help me see Your goodness everywhere."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-65",
+                    reference: "Psalm 119:65",
+                    text: "You have dealt well with Your servant,\n  O Lord, according to Your word.",
+                    prayer: "Lord, thank You for dealing well with me according to Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-66",
+                    reference: "Psalm 119:66",
+                    text: "Teach me good discernment and knowledge,\n  For I believe in Your commandments.",
+                    prayer: "Father, teach me good discernment and knowledge, for I believe in Your commandments."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-67",
+                    reference: "Psalm 119:67",
+                    text: "Before I was afflicted I went astray,\n  But now I keep Your word.",
+                    prayer: "Lord, before affliction I went astray, but now help me keep Your Word with humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-68",
+                    reference: "Psalm 119:68",
+                    text: "You are good and do good;\n  Teach me Your statutes.",
+                    prayer: "Father, You are good and You do good. Teach me Your statutes."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-69",
+                    reference: "Psalm 119:69",
+                    text: "The arrogant have forged a lie against me;\n  With all my heart I will observe Your precepts.",
+                    prayer: "Lord, when lies or pride rise against me, help me keep Your precepts with all my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-70",
+                    reference: "Psalm 119:70",
+                    text: "Their heart is covered with fat,\n  But I delight in Your law.",
+                    prayer: "Father, keep my heart tender toward You and let me delight in Your law."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-71",
+                    reference: "Psalm 119:71",
+                    text: "It is good for me that I was afflicted,\n  That I may learn Your statutes.",
+                    prayer: "Lord, thank You for using affliction to teach me Your statutes and draw me closer to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-72",
+                    reference: "Psalm 119:72",
+                    text: "The law of Your mouth is better to me\n  Than thousands of gold and silver pieces.\n    Yodh.",
+                    prayer: "Father, let the law of Your mouth be better to me than thousands of pieces of gold and silver."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-73",
+                    reference: "Psalm 119:73",
+                    text: "Your hands made me and fashioned me;\n  Give me understanding, that I may learn Your commandments.",
+                    prayer: "Lord, You made me and fashioned me. Give me understanding so I may learn Your commandments."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-74",
+                    reference: "Psalm 119:74",
+                    text: "May those who fear You see me and be glad,\n  Because I wait for Your word.",
+                    prayer: "Father, let those who fear You rejoice when they see me because I wait for Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-75",
+                    reference: "Psalm 119:75",
+                    text: "I know, O Lord, that Your judgments are righteous,\n  And that in faithfulness You have afflicted me.",
+                    prayer: "Lord, I know Your judgments are righteous, and even in affliction, You are faithful."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-76",
+                    reference: "Psalm 119:76",
+                    text: "O may Your lovingkindness comfort me,\n  According to Your word to Your servant.",
+                    prayer: "Father, let Your lovingkindness comfort me according to the promise You have spoken."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-77",
+                    reference: "Psalm 119:77",
+                    text: "May Your compassion come to me that I may live,\n  For Your law is my delight.",
+                    prayer: "Lord, let Your compassion come to me so I may live, for Your law is my delight."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-78",
+                    reference: "Psalm 119:78",
+                    text: "May the arrogant be ashamed, for they subvert me with a lie;\n  But I shall meditate on Your precepts.",
+                    prayer: "Father, protect me from pride and falsehood, and help me meditate on Your precepts."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-79",
+                    reference: "Psalm 119:79",
+                    text: "May those who fear You turn to me,\n  Even those who know Your testimonies.",
+                    prayer: "Lord, draw those who fear You near to me, so we may know and honor Your testimonies together."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-80",
+                    reference: "Psalm 119:80",
+                    text: "May my heart be blameless in Your statutes,\n  So that I will not be ashamed.\n    Kaph.",
+                    prayer: "Father, let my heart be blameless in Your statutes so I may not be put to shame."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-81",
+                    reference: "Psalm 119:81",
+                    text: "My soul languishes for Your salvation;\n  I wait for Your word.",
+                    prayer: "Lord, when my soul longs for Your salvation, help me wait with hope in Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-82",
+                    reference: "Psalm 119:82",
+                    text: "My eyes fail with longing for Your word,\n  While I say, “When will You comfort me?”",
+                    prayer: "Father, when my eyes grow weary waiting for Your promise, comfort me with Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-83",
+                    reference: "Psalm 119:83",
+                    text: "Though I have become like a wineskin in the smoke,\n  I do not forget Your statutes.",
+                    prayer: "Lord, even when I feel worn, forgotten, or dried out, help me not forget Your statutes."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-84",
+                    reference: "Psalm 119:84",
+                    text: "How many are the days of Your servant?\n  When will You execute judgment on those who persecute me?",
+                    prayer: "Father, when I wonder how long hardship will last, help me trust Your timing and justice."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-85",
+                    reference: "Psalm 119:85",
+                    text: "The arrogant have dug pits for me,\n  Men who are not in accord with Your law.",
+                    prayer: "Lord, protect me from traps laid by prideful people and keep me faithful to Your law."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-86",
+                    reference: "Psalm 119:86",
+                    text: "All Your commandments are faithful;\n  They have persecuted me with a lie; help me!",
+                    prayer: "Father, all Your commandments are faithful. Help me when falsehood or opposition rises against me."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-87",
+                    reference: "Psalm 119:87",
+                    text: "They almost destroyed me on earth,\n  But as for me, I did not forsake Your precepts.",
+                    prayer: "Lord, even when pressure feels severe, help me not forsake Your precepts."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-88",
+                    reference: "Psalm 119:88",
+                    text: "Revive me according to Your lovingkindness,\n  So that I may keep the testimony of Your mouth.\n    Lamedh.",
+                    prayer: "Father, revive me according to Your lovingkindness so I may keep the testimony of Your mouth."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-89",
+                    reference: "Psalm 119:89",
+                    text: "Forever, O Lord,\n  Your word is settled in heaven.",
+                    prayer: "Lord, Your Word is settled forever in heaven. Help me build my life on what cannot change."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-90",
+                    reference: "Psalm 119:90",
+                    text: "Your faithfulness continues throughout all generations;\n  You established the earth, and it stands.",
+                    prayer: "Father, Your faithfulness continues through every generation. Help me trust Your steady care."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-91",
+                    reference: "Psalm 119:91",
+                    text: "They stand this day according to Your ordinances,\n  For all things are Your servants.",
+                    prayer: "Lord, all things stand according to Your ordinances. Help me remember that everything serves Your purpose."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-92",
+                    reference: "Psalm 119:92",
+                    text: "If Your law had not been my delight,\n  Then I would have perished in my affliction.",
+                    prayer: "Father, if Your law had not been my delight, I would have perished in affliction. Keep my joy rooted in Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-93",
+                    reference: "Psalm 119:93",
+                    text: "I will never forget Your precepts,\n  For by them You have revived me.",
+                    prayer: "Lord, help me never forget Your precepts, because through them You revive my soul."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-94",
+                    reference: "Psalm 119:94",
+                    text: "I am Yours, save me;\n  For I have sought Your precepts.",
+                    prayer: "Father, I am Yours. Save me, for I seek Your precepts."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-95",
+                    reference: "Psalm 119:95",
+                    text: "The wicked wait for me to destroy me;\n  I shall diligently consider Your testimonies.",
+                    prayer: "Lord, when danger or opposition waits for me, keep my mind fixed on Your testimonies."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-96",
+                    reference: "Psalm 119:96",
+                    text: "I have seen a limit to all perfection;\n  Your commandment is exceedingly broad.\n    Mem.",
+                    prayer: "Father, everything earthly has limits, but Your commandment is exceedingly broad. Help me trust Your perfect Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-97",
+                    reference: "Psalm 119:97",
+                    text: "O how I love Your law!\n  It is my meditation all the day.",
+                    prayer: "Lord, teach me to love Your law and meditate on it throughout the day."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-98",
+                    reference: "Psalm 119:98",
+                    text: "Your commandments make me wiser than my enemies,\n  For they are ever mine.",
+                    prayer: "Father, make me wise through Your commandments and help me stand firm against the enemy."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-99",
+                    reference: "Psalm 119:99",
+                    text: "I have more insight than all my teachers,\n  For Your testimonies are my meditation.",
+                    prayer: "Lord, give me understanding as I meditate on Your testimonies."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-100",
+                    reference: "Psalm 119:100",
+                    text: "I understand more than the aged,\n  Because I have observed Your precepts.",
+                    prayer: "Father, give me wisdom beyond age or experience as I keep Your precepts."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-101",
+                    reference: "Psalm 119:101",
+                    text: "I have restrained my feet from every evil way,\n  That I may keep Your word.",
+                    prayer: "Lord, keep my feet from every evil way so I may keep Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-102",
+                    reference: "Psalm 119:102",
+                    text: "I have not turned aside from Your ordinances,\n  For You Yourself have taught me.",
+                    prayer: "Father, help me not turn aside from Your judgments because You Yourself teach me."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-103",
+                    reference: "Psalm 119:103",
+                    text: "How sweet are Your words to my taste!\n  Yes, sweeter than honey to my mouth!",
+                    prayer: "Lord, let Your words be sweet to my soul and more satisfying than anything else."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-104",
+                    reference: "Psalm 119:104",
+                    text: "From Your precepts I get understanding;\n  Therefore I hate every false way.\n    Nun.",
+                    prayer: "Father, through Your precepts give me understanding and teach me to hate every false way."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-105",
+                    reference: "Psalm 119:105",
+                    text: "Your word is a lamp to my feet\n  And a light to my path.",
+                    prayer: "Lord, let Your Word be a lamp to my feet and a light to my path."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-106",
+                    reference: "Psalm 119:106",
+                    text: "I have sworn and I will confirm it,\n  That I will keep Your righteous ordinances.",
+                    prayer: "Father, help me commit myself to keeping Your righteous judgments."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-107",
+                    reference: "Psalm 119:107",
+                    text: "I am exceedingly afflicted;\n  Revive me, O Lord, according to Your word.",
+                    prayer: "Lord, when I am deeply afflicted, revive me according to Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-108",
+                    reference: "Psalm 119:108",
+                    text: "O accept the freewill offerings of my mouth, O Lord,\n  And teach me Your ordinances.",
+                    prayer: "Father, accept the willing praise of my mouth and teach me Your judgments."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-109",
+                    reference: "Psalm 119:109",
+                    text: "My life is continually in my hand,\n  Yet I do not forget Your law.",
+                    prayer: "Lord, even when my life feels fragile or uncertain, help me not forget Your law."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-110",
+                    reference: "Psalm 119:110",
+                    text: "The wicked have laid a snare for me,\n  Yet I have not gone astray from Your precepts.",
+                    prayer: "Father, protect me from hidden traps and keep me from wandering away from Your precepts."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-111",
+                    reference: "Psalm 119:111",
+                    text: "I have inherited Your testimonies forever,\n  For they are the joy of my heart.",
+                    prayer: "Lord, Your testimonies are my inheritance forever. Let them be the joy of my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-112",
+                    reference: "Psalm 119:112",
+                    text: "I have inclined my heart to perform Your statutes\n  Forever, even to the end.\n    Samekh.",
+                    prayer: "Father, incline my heart to perform Your statutes forever, even to the end."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-113",
+                    reference: "Psalm 119:113",
+                    text: "I hate those who are double-minded,\n  But I love Your law.",
+                    prayer: "Lord, keep me from divided thoughts and help me love Your law with a whole heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-114",
+                    reference: "Psalm 119:114",
+                    text: "You are my hiding place and my shield;\n  I wait for Your word.",
+                    prayer: "Father, You are my hiding place and my shield. Help me wait for Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-115",
+                    reference: "Psalm 119:115",
+                    text: "Depart from me, evildoers,\n  That I may observe the commandments of my God.",
+                    prayer: "Lord, keep evil influences away from me so I may obey Your commandments."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-116",
+                    reference: "Psalm 119:116",
+                    text: "Sustain me according to Your word, that I may live;\n  And do not let me be ashamed of my hope.",
+                    prayer: "Father, sustain me according to Your Word so I may live, and do not let my hope be ashamed."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-117",
+                    reference: "Psalm 119:117",
+                    text: "Uphold me that I may be safe,\n  That I may have regard for Your statutes continually.",
+                    prayer: "Lord, uphold me so I may be safe and continually look to Your statutes."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-118",
+                    reference: "Psalm 119:118",
+                    text: "You have rejected all those who wander from Your statutes,\n  For their deceitfulness is useless.",
+                    prayer: "Father, help me reject deception and stay close to Your truth, knowing You reject those who wander from Your statutes."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-119",
+                    reference: "Psalm 119:119",
+                    text: "You have removed all the wicked of the earth like dross;\n  Therefore I love Your testimonies.",
+                    prayer: "Lord, remove the impurities from my heart and help me treasure Your testimonies above everything else."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-120",
+                    reference: "Psalm 119:120",
+                    text: "My flesh trembles for fear of You,\n  And I am afraid of Your judgments.\n    Ayin.",
+                    prayer: "Father, fill me with holy reverence before You and teach me to stand in awe of Your righteous judgments."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-121",
+                    reference: "Psalm 119:121",
+                    text: "I have done justice and righteousness;\n  Do not leave me to my oppressors.",
+                    prayer: "Lord, help me live with justice and righteousness. Do not let me be overcome by those who seek to do wrong."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-122",
+                    reference: "Psalm 119:122",
+                    text: "Be surety for Your servant for good;\n  Do not let the arrogant oppress me.",
+                    prayer: "Father, be my guarantor for good and protect me from the pride and oppression of others."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-123",
+                    reference: "Psalm 119:123",
+                    text: "My eyes fail with longing for Your salvation\n  And for Your righteous word.",
+                    prayer: "Lord, when I grow weary waiting for Your salvation, strengthen my faith and renew my hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-124",
+                    reference: "Psalm 119:124",
+                    text: "Deal with Your servant according to Your lovingkindness\n  And teach me Your statutes.",
+                    prayer: "Father, deal with me according to Your lovingkindness and teach me Your statutes."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-125",
+                    reference: "Psalm 119:125",
+                    text: "I am Your servant; give me understanding,\n  That I may know Your testimonies.",
+                    prayer: "Lord, I am Your servant. Give me understanding so I may know Your testimonies."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-126",
+                    reference: "Psalm 119:126",
+                    text: "It is time for the Lord to act,\n  For they have broken Your law.",
+                    prayer: "Father, when truth is ignored, help me remain faithful and trust You to accomplish Your purposes."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-127",
+                    reference: "Psalm 119:127",
+                    text: "Therefore I love Your commandments\n  Above gold, yes, above fine gold.",
+                    prayer: "Lord, help me love Your commandments more than gold, even the finest gold."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-128",
+                    reference: "Psalm 119:128",
+                    text: "Therefore I esteem right all Your precepts concerning everything,\n  I hate every false way.\n    Pe.",
+                    prayer: "Father, let me regard all Your precepts as right and turn away from every false way."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-129",
+                    reference: "Psalm 119:129",
+                    text: "Your testimonies are wonderful;\n  Therefore my soul observes them.",
+                    prayer: "Lord, Your testimonies are wonderful. Help my soul keep them with joy and reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-130",
+                    reference: "Psalm 119:130",
+                    text: "The unfolding of Your words gives light;\n  It gives understanding to the simple.",
+                    prayer: "Father, let the unfolding of Your Word give me light and understanding each day."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-131",
+                    reference: "Psalm 119:131",
+                    text: "I opened my mouth wide and panted,\n  For I longed for Your commandments.",
+                    prayer: "Lord, deepen my hunger for Your commandments and satisfy my soul with Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-132",
+                    reference: "Psalm 119:132",
+                    text: "Turn to me and be gracious to me,\n  After Your manner with those who love Your name.",
+                    prayer: "Father, look upon me with mercy and show favor according to Your faithful love."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-133",
+                    reference: "Psalm 119:133",
+                    text: "Establish my footsteps in Your word,\n  And do not let any iniquity have dominion over me.",
+                    prayer: "Lord, establish my footsteps according to Your Word and keep sin from ruling over me."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-134",
+                    reference: "Psalm 119:134",
+                    text: "Redeem me from the oppression of man,\n  That I may keep Your precepts.",
+                    prayer: "Father, redeem me from oppression so I may freely obey Your precepts."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-135",
+                    reference: "Psalm 119:135",
+                    text: "Make Your face shine upon Your servant,\n  And teach me Your statutes.",
+                    prayer: "Lord, let Your face shine upon me and teach me Your statutes."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-136",
+                    reference: "Psalm 119:136",
+                    text: "My eyes shed streams of water,\n  Because they do not keep Your law.\n    Tsadhe.",
+                    prayer: "Father, give me a heart that grieves when people reject Your truth and turn from Your ways."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-137",
+                    reference: "Psalm 119:137",
+                    text: "Righteous are You, O Lord,\n  And upright are Your judgments.",
+                    prayer: "Lord, You are righteous, and all Your judgments are true. Help me trust Your perfect justice."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-138",
+                    reference: "Psalm 119:138",
+                    text: "You have commanded Your testimonies in righteousness\n  And exceeding faithfulness.",
+                    prayer: "Father, Your testimonies are righteous and completely trustworthy. Teach me to build my life upon them."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-139",
+                    reference: "Psalm 119:139",
+                    text: "My zeal has consumed me,\n  Because my adversaries have forgotten Your words.",
+                    prayer: "Lord, let my zeal for Your truth grow stronger than my concern for myself."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-140",
+                    reference: "Psalm 119:140",
+                    text: "Your word is very pure,\n  Therefore Your servant loves it.",
+                    prayer: "Father, Your Word has been tested and proven true. Help me love it with all my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-141",
+                    reference: "Psalm 119:141",
+                    text: "I am small and despised,\n  Yet I do not forget Your precepts.",
+                    prayer: "Lord, even when I feel small or overlooked, help me never forget Your precepts."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-142",
+                    reference: "Psalm 119:142",
+                    text: "Your righteousness is an everlasting righteousness,\n  And Your law is truth.",
+                    prayer: "Father, Your righteousness is everlasting and Your law is truth. Keep me grounded in what never changes."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-143",
+                    reference: "Psalm 119:143",
+                    text: "Trouble and anguish have come upon me,\n  Yet Your commandments are my delight.",
+                    prayer: "Lord, when trouble and distress come upon me, let Your commandments become my delight."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-144",
+                    reference: "Psalm 119:144",
+                    text: "Your testimonies are righteous forever;\n  Give me understanding that I may live.\n    Qoph.",
+                    prayer: "Father, Your testimonies are righteous forever. Give me understanding so I may truly live."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-145",
+                    reference: "Psalm 119:145",
+                    text: "I cried with all my heart; answer me, O Lord!\n  I will observe Your statutes.",
+                    prayer: "Lord, I cry to You with all my heart. Hear me and help me keep Your statutes."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-146",
+                    reference: "Psalm 119:146",
+                    text: "I cried to You; save me\n  And I shall keep Your testimonies.",
+                    prayer: "Father, I call upon You. Save me and help me faithfully keep Your testimonies."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-147",
+                    reference: "Psalm 119:147",
+                    text: "I rise before dawn and cry for help;\n  I wait for Your words.",
+                    prayer: "Lord, from the early morning I place my hope in Your Word. Let my first thoughts belong to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-148",
+                    reference: "Psalm 119:148",
+                    text: "My eyes anticipate the night watches,\n  That I may meditate on Your word.",
+                    prayer: "Father, keep my mind awake to meditate on Your promises throughout every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-149",
+                    reference: "Psalm 119:149",
+                    text: "Hear my voice according to Your lovingkindness;\n  Revive me, O Lord, according to Your ordinances.",
+                    prayer: "Lord, hear my voice according to Your lovingkindness and revive me according to Your justice."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-150",
+                    reference: "Psalm 119:150",
+                    text: "Those who follow after wickedness draw near;\n  They are far from Your law.",
+                    prayer: "Father, when evil draws near, remind me that You are always nearer still."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-151",
+                    reference: "Psalm 119:151",
+                    text: "You are near, O Lord,\n  And all Your commandments are truth.",
+                    prayer: "Lord, You are near, and all Your commandments are truth. Help me remain close to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-152",
+                    reference: "Psalm 119:152",
+                    text: "Of old I have known from Your testimonies\n  That You have founded them forever.\n    Resh.",
+                    prayer: "Father, thank You that Your testimonies are established forever and never fail."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-153",
+                    reference: "Psalm 119:153",
+                    text: "Look upon my affliction and rescue me,\n  For I do not forget Your law.",
+                    prayer: "Lord, see my affliction and deliver me, for I have not forgotten Your law."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-154",
+                    reference: "Psalm 119:154",
+                    text: "Plead my cause and redeem me;\n  Revive me according to Your word.",
+                    prayer: "Father, defend my cause, redeem me, and revive me according to Your promise."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-155",
+                    reference: "Psalm 119:155",
+                    text: "Salvation is far from the wicked,\n  For they do not seek Your statutes.",
+                    prayer: "Lord, keep me from wandering away from salvation by helping me seek Your statutes daily."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-156",
+                    reference: "Psalm 119:156",
+                    text: "Great are Your mercies, O Lord;\n  Revive me according to Your ordinances.",
+                    prayer: "Father, Your compassion is great. Revive me according to Your righteous judgments."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-157",
+                    reference: "Psalm 119:157",
+                    text: "Many are my persecutors and my adversaries,\n  Yet I do not turn aside from Your testimonies.",
+                    prayer: "Lord, though many oppose me, help me remain faithful to Your testimonies."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-158",
+                    reference: "Psalm 119:158",
+                    text: "I behold the treacherous and loathe them,\n  Because they do not keep Your word.",
+                    prayer: "Father, give me a heart that grieves over unfaithfulness and remains devoted to Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-159",
+                    reference: "Psalm 119:159",
+                    text: "Consider how I love Your precepts;\n  Revive me, O Lord, according to Your lovingkindness.",
+                    prayer: "Lord, see how I love Your precepts. Revive me according to Your lovingkindness."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-160",
+                    reference: "Psalm 119:160",
+                    text: "The sum of Your word is truth,\n  And every one of Your righteous ordinances is everlasting.\n    Shin.",
+                    prayer: "Father, every word of Yours is truth, and every righteous judgment endures forever. Help me trust Your Word completely."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-161",
+                    reference: "Psalm 119:161",
+                    text: "Princes persecute me without cause,\n  But my heart stands in awe of Your words.",
+                    prayer: "Lord, when I am treated unfairly, keep my heart standing in reverence before Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-162",
+                    reference: "Psalm 119:162",
+                    text: "I rejoice at Your word,\n  As one who finds great spoil.",
+                    prayer: "Father, let my joy in Your promises be greater than the joy of finding great treasure."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-163",
+                    reference: "Psalm 119:163",
+                    text: "I hate and despise falsehood,\n  But I love Your law.",
+                    prayer: "Lord, help me hate every lie and love Your truth without compromise."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-164",
+                    reference: "Psalm 119:164",
+                    text: "Seven times a day I praise You,\n  Because of Your righteous ordinances.",
+                    prayer: "Father, let praise continually rise from my heart because of Your righteous judgments."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-165",
+                    reference: "Psalm 119:165",
+                    text: "Those who love Your law have great peace,\n  And nothing causes them to stumble.",
+                    prayer: "Lord, give great peace to those who love Your law. Keep me from stumbling."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-166",
+                    reference: "Psalm 119:166",
+                    text: "I hope for Your salvation, O Lord,\n  And do Your commandments.",
+                    prayer: "Father, I wait for Your salvation. Help me faithfully obey Your commandments while I wait."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-167",
+                    reference: "Psalm 119:167",
+                    text: "My soul keeps Your testimonies,\n  And I love them exceedingly.",
+                    prayer: "Lord, my soul loves Your testimonies. Help me treasure them above all else."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-168",
+                    reference: "Psalm 119:168",
+                    text: "I keep Your precepts and Your testimonies,\n  For all my ways are before You.\n    Tav.",
+                    prayer: "Father, help me keep Your precepts faithfully, knowing all my ways are before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-169",
+                    reference: "Psalm 119:169",
+                    text: "Let my cry come before You, O Lord;\n  Give me understanding according to Your word.",
+                    prayer: "Lord, let my cry come before You. Give me understanding according to Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-170",
+                    reference: "Psalm 119:170",
+                    text: "Let my supplication come before You;\n  Deliver me according to Your word.",
+                    prayer: "Father, let my prayer come before You and deliver me according to Your promise."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-171",
+                    reference: "Psalm 119:171",
+                    text: "Let my lips utter praise,\n  For You teach me Your statutes.",
+                    prayer: "Lord, let praise continually flow from my lips as You teach me Your statutes."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-172",
+                    reference: "Psalm 119:172",
+                    text: "Let my tongue sing of Your word,\n  For all Your commandments are righteousness.",
+                    prayer: "Father, let my tongue sing of Your Word because all Your commandments are righteous."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-173",
+                    reference: "Psalm 119:173",
+                    text: "Let Your hand be ready to help me,\n  For I have chosen Your precepts.",
+                    prayer: "Lord, let Your hand help me because I have chosen Your precepts."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-174",
+                    reference: "Psalm 119:174",
+                    text: "I long for Your salvation, O Lord,\n  And Your law is my delight.",
+                    prayer: "Father, I long for Your salvation, and Your law is my delight. Keep my hope alive in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-175",
+                    reference: "Psalm 119:175",
+                    text: "Let my soul live that it may praise You,\n  And let Your ordinances help me.",
+                    prayer: "Lord, let my soul live so it may praise You, and let Your judgments sustain me."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-176",
+                    reference: "Psalm 119:176",
+                    text: "I have gone astray like a lost sheep; seek Your servant,\n  For I do not forget Your commandments.",
+                    prayer: "Father, when I wander like a lost sheep, seek me and bring me back, for I do not want to forget Your commandments."
+                ),
+                PrayerVerse(
+                    id: "psalm-119-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for the priceless gift of Your Word, Your commandments, and Your faithful promises. Teach me to seek You with my whole heart, delight in Your truth, and walk faithfully in obedience every day. Open my eyes to understand Your ways, strengthen me in times of waiting and affliction, and keep my feet from wandering. Let Your Word be the light that guides my path, the peace that guards my heart, and the wisdom that shapes my life. When I grow weak, revive me according to Your lovingkindness, and when I stray, lovingly bring me back to Yourself. May my life continually praise You as I trust in Your everlasting truth and faithfulness.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 120,
