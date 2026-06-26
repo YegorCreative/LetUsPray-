@@ -9453,7 +9453,141 @@ enum PsalmsPrayerData {
             title: "Praise the Name of the Lord",
             chapterReference: "Psalm 135",
             summary: "Pray in praise of God's greatness.",
-            verses: []
+            // JSON resource: psalm_135_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-135-1",
+                    reference: "Psalm 135:1",
+                    text: "Praise the Lord!\n  Praise the name of the Lord;\n  Praise Him, O servants of the Lord,",
+                    prayer: "Lord, help me praise Your name with joy, reverence, and gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-2",
+                    reference: "Psalm 135:2",
+                    text: "You who stand in the house of the Lord,\n  In the courts of the house of our God!",
+                    prayer: "Father, teach me to stand faithfully in Your presence and serve You with a willing heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-3",
+                    reference: "Psalm 135:3",
+                    text: "Praise the Lord, for the Lord is good;\n  Sing praises to His name, for it is lovely.",
+                    prayer: "Lord, You are good, and Your name is beautiful. Let my life sing praise to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-4",
+                    reference: "Psalm 135:4",
+                    text: "For the Lord has chosen Jacob for Himself,\n  Israel for His own possession.",
+                    prayer: "Father, thank You for choosing Your people and calling us to belong to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-5",
+                    reference: "Psalm 135:5",
+                    text: "For I know that the Lord is great\n  And that our Lord is above all gods.",
+                    prayer: "Lord, You are great and above all powers. Help me trust Your greatness in every situation."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-6",
+                    reference: "Psalm 135:6",
+                    text: "Whatever the Lord pleases, He does,\n  In heaven and in earth, in the seas and in all deeps.",
+                    prayer: "Father, You do whatever pleases You in heaven, earth, sea, and all depths. Help me rest in Your sovereignty."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-7",
+                    reference: "Psalm 135:7",
+                    text: "He causes the vapors to ascend from the ends of the earth;\n  Who makes lightnings for the rain,\n  Who brings forth the wind from His treasuries.",
+                    prayer: "Lord, You rule over clouds, lightning, rain, and wind. Remind me that creation obeys Your command."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-8",
+                    reference: "Psalm 135:8",
+                    text: "He smote the firstborn of Egypt,\n  Both of man and beast.",
+                    prayer: "Father, You are mighty in judgment and deliverance. Help me live with reverence before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-9",
+                    reference: "Psalm 135:9",
+                    text: "He sent signs and wonders into your midst, O Egypt,\n  Upon Pharaoh and all his servants.",
+                    prayer: "Lord, Your signs and wonders reveal Your power. Help me remember Your mighty works."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-10",
+                    reference: "Psalm 135:10",
+                    text: "He smote many nations\n  And slew mighty kings,",
+                    prayer: "Father, You are sovereign over nations and rulers. Help me trust Your authority above all human power."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-11",
+                    reference: "Psalm 135:11",
+                    text: "Sihon, king of the Amorites,\n  And Og, king of Bashan,\n  And all the kingdoms of Canaan;",
+                    prayer: "Lord, no kingdom or strength can stand above You. Keep my confidence rooted in Your rule."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-12",
+                    reference: "Psalm 135:12",
+                    text: "And He gave their land as a heritage,\n  A heritage to Israel His people.",
+                    prayer: "Father, thank You for giving inheritance and blessing according to Your promise."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-13",
+                    reference: "Psalm 135:13",
+                    text: "Your name, O Lord, is everlasting,\n  Your remembrance, O Lord, throughout all generations.",
+                    prayer: "Lord, Your name endures forever. Let my life honor Your faithfulness through every generation."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-14",
+                    reference: "Psalm 135:14",
+                    text: "For the Lord will judge His people\n  And will have compassion on His servants.",
+                    prayer: "Father, thank You for judging Your people with righteousness and showing compassion to Your servants."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-15",
+                    reference: "Psalm 135:15",
+                    text: "The idols of the nations are but silver and gold,\n  The work of man’s hands.",
+                    prayer: "Lord, keep me from trusting idols, possessions, or anything made by human hands."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-16",
+                    reference: "Psalm 135:16",
+                    text: "They have mouths, but they do not speak;\n  They have eyes, but they do not see;",
+                    prayer: "Father, protect me from empty things that cannot speak truth, guide my steps, or save my soul."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-17",
+                    reference: "Psalm 135:17",
+                    text: "They have ears, but they do not hear,\n  Nor is there any breath at all in their mouths.",
+                    prayer: "Lord, keep my heart from depending on what cannot hear, breathe, or give life."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-18",
+                    reference: "Psalm 135:18",
+                    text: "Those who make them will be like them,\n  Yes, everyone who trusts in them.",
+                    prayer: "Father, shape me through worship of You, not through trust in lifeless things."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-19",
+                    reference: "Psalm 135:19",
+                    text: "O house of Israel, bless the Lord;\n  O house of Aaron, bless the Lord;",
+                    prayer: "Lord, help Your people bless You with faithful hearts and grateful praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-20",
+                    reference: "Psalm 135:20",
+                    text: "O house of Levi, bless the Lord;\n  You who revere the Lord, bless the Lord.",
+                    prayer: "Father, let all who fear You bless Your name with reverence, trust, and joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-21",
+                    reference: "Psalm 135:21",
+                    text: "Blessed be the Lord from Zion,\n  Who dwells in Jerusalem.\n  Praise the Lord!",
+                    prayer: "Lord, blessed be Your name from Your dwelling place. Let my life praise You now and always."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your goodness, greatness, sovereignty, and enduring name. Teach me to praise You with joy, trust Your rule over all creation, and reject every false source of security. Shape my heart through worship, remind me of Your mighty works, and help my life bless Your name through every generation.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         )
     ]
 
@@ -9464,70 +9598,1046 @@ enum PsalmsPrayerData {
             title: "His Love Endures Forever",
             chapterReference: "Psalm 136",
             summary: "Pray in thanksgiving for God's enduring love.",
-            verses: []
+            // JSON resource: psalm_136_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-136-1",
+                    reference: "Psalm 136:1",
+                    text: "Give thanks to the Lord, for He is good,
+  For His lovingkindness is everlasting.",
+                    prayer: "Lord, I give thanks to You because You are good, and Your lovingkindness endures forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-2",
+                    reference: "Psalm 136:2",
+                    text: "Give thanks to the God of gods,
+  For His lovingkindness is everlasting.",
+                    prayer: "Father, You are God above all. Help me worship You with reverence, gratitude, and trust."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-3",
+                    reference: "Psalm 136:3",
+                    text: "Give thanks to the Lord of lords,
+  For His lovingkindness is everlasting.",
+                    prayer: "Lord, You are Lord over all powers and authorities. Thank You that Your lovingkindness endures forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-4",
+                    reference: "Psalm 136:4",
+                    text: "To Him who alone does great wonders,
+  For His lovingkindness is everlasting;",
+                    prayer: "Father, You alone do great wonders. Open my eyes to recognize Your works and praise Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-5",
+                    reference: "Psalm 136:5",
+                    text: "To Him who made the heavens with skill,
+  For His lovingkindness is everlasting;",
+                    prayer: "Lord, You made the heavens with wisdom. Help me trust Your wisdom in every part of my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-6",
+                    reference: "Psalm 136:6",
+                    text: "To Him who spread out the earth above the waters,
+  For His lovingkindness is everlasting;",
+                    prayer: "Father, You spread out the earth above the waters. Remind me that creation rests under Your command."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-7",
+                    reference: "Psalm 136:7",
+                    text: "To Him who made the great lights,
+  For His lovingkindness is everlasting:",
+                    prayer: "Lord, You made the great lights. Let Your light guide my heart and remind me of Your faithful care."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-8",
+                    reference: "Psalm 136:8",
+                    text: "The sun to rule by day,
+  For His lovingkindness is everlasting,",
+                    prayer: "Father, thank You for the sun that rules the day. Help me see Your provision in every morning."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-9",
+                    reference: "Psalm 136:9",
+                    text: "The moon and stars to rule by night,
+  For His lovingkindness is everlasting.",
+                    prayer: "Lord, thank You for the moon and stars that rule the night. Remind me that Your care continues even in darkness."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-10",
+                    reference: "Psalm 136:10",
+                    text: "To Him who smote the Egyptians in their firstborn,
+  For His lovingkindness is everlasting,",
+                    prayer: "Father, You delivered Your people with power. Thank You for rescuing me from what I could not overcome."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-11",
+                    reference: "Psalm 136:11",
+                    text: "And brought Israel out from their midst,
+  For His lovingkindness is everlasting,",
+                    prayer: "Lord, thank You for bringing Your people out of bondage. Lead me into freedom and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-12",
+                    reference: "Psalm 136:12",
+                    text: "With a strong hand and an outstretched arm,
+  For His lovingkindness is everlasting.",
+                    prayer: "Father, Your strong hand and outstretched arm save Your people. Help me trust Your power to deliver."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-13",
+                    reference: "Psalm 136:13",
+                    text: "To Him who divided the Red Sea asunder,
+  For His lovingkindness is everlasting,",
+                    prayer: "Lord, You made a way through the sea. Help me trust You when the path ahead seems impossible."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-14",
+                    reference: "Psalm 136:14",
+                    text: "And made Israel pass through the midst of it,
+  For His lovingkindness is everlasting;",
+                    prayer: "Father, thank You for leading Your people safely through. Guide me with wisdom and protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-15",
+                    reference: "Psalm 136:15",
+                    text: "But He overthrew Pharaoh and his army in the Red Sea,
+  For His lovingkindness is everlasting.",
+                    prayer: "Lord, You overthrow what opposes Your purposes. Help me trust Your justice and victory."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-16",
+                    reference: "Psalm 136:16",
+                    text: "To Him who led His people through the wilderness,
+  For His lovingkindness is everlasting;",
+                    prayer: "Father, You led Your people through the wilderness. Lead me faithfully through uncertain seasons."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-17",
+                    reference: "Psalm 136:17",
+                    text: "To Him who smote great kings,
+  For His lovingkindness is everlasting,",
+                    prayer: "Lord, You struck down mighty kings. Remind me that no earthly power is greater than You."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-18",
+                    reference: "Psalm 136:18",
+                    text: "And slew mighty kings,
+  For His lovingkindness is everlasting:",
+                    prayer: "Father, You dealt with powerful rulers according to Your righteousness. Help me trust Your authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-19",
+                    reference: "Psalm 136:19",
+                    text: "Sihon, king of the Amorites,
+  For His lovingkindness is everlasting,",
+                    prayer: "Lord, every enemy stands beneath Your power. Help me rest in Your protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-20",
+                    reference: "Psalm 136:20",
+                    text: "And Og, king of Bashan,
+  For His lovingkindness is everlasting,",
+                    prayer: "Father, no force can stop Your purpose. Strengthen my confidence in Your faithful rule."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-21",
+                    reference: "Psalm 136:21",
+                    text: "And gave their land as a heritage,
+  For His lovingkindness is everlasting,",
+                    prayer: "Lord, thank You for giving inheritance to Your people. Help me receive Your blessings with humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-22",
+                    reference: "Psalm 136:22",
+                    text: "Even a heritage to Israel His servant,
+  For His lovingkindness is everlasting.",
+                    prayer: "Father, thank You for providing what You promised. Teach me to steward every blessing faithfully."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-23",
+                    reference: "Psalm 136:23",
+                    text: "Who remembered us in our low estate,
+  For His lovingkindness is everlasting,",
+                    prayer: "Lord, thank You for remembering me when I am low. Lift my heart with Your mercy and compassion."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-24",
+                    reference: "Psalm 136:24",
+                    text: "And has rescued us from our adversaries,
+  For His lovingkindness is everlasting;",
+                    prayer: "Father, thank You for rescuing me from what opposes my soul. Keep me close to Your deliverance."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-25",
+                    reference: "Psalm 136:25",
+                    text: "Who gives food to all flesh,
+  For His lovingkindness is everlasting.",
+                    prayer: "Lord, thank You for giving food to all living things. Help me receive daily provision with gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-26",
+                    reference: "Psalm 136:26",
+                    text: "Give thanks to the God of heaven,
+  For His lovingkindness is everlasting.",
+                    prayer: "Father, I give thanks to You, the God of heaven, because Your lovingkindness endures forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You that Your lovingkindness endures forever. You are good, sovereign, wise, powerful, and faithful through every generation. Help me remember Your wonders, trust Your deliverance, receive Your provision with gratitude, and walk humbly in the blessings You give. May my life continually give thanks to You, the God of heaven, whose mercy never fails.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 137,
             title: "By the Rivers of Babylon",
             chapterReference: "Psalm 137",
             summary: "Pray with longing for home and restoration.",
-            verses: []
+            // JSON resource: psalm_137_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-137-1",
+                    reference: "Psalm 137:1",
+                    text: "By the rivers of Babylon,\n  There we sat down and wept,\n  When we remembered Zion.",
+                    prayer: "Lord, when I sit in sorrow and remember what has been lost, help me bring my grief honestly before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-2",
+                    reference: "Psalm 137:2",
+                    text: "Upon the willows in the midst of it\n  We hung our harps.",
+                    prayer: "Father, when joy feels distant and worship feels difficult, stay near to me with mercy and patience."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-3",
+                    reference: "Psalm 137:3",
+                    text: "For there our captors demanded of us songs,\n  And our tormentors mirth, saying,\n  “Sing us one of the songs of Zion.”",
+                    prayer: "Lord, when others demand strength from me in a painful season, help me trust You with what I cannot express."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-4",
+                    reference: "Psalm 137:4",
+                    text: "How can we sing the Lord’s song\n  In a foreign land?",
+                    prayer: "Father, teach me how to worship You even when I feel far from peace, home, or comfort."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-5",
+                    reference: "Psalm 137:5",
+                    text: "If I forget you, O Jerusalem,\n  May my right hand forget her skill.",
+                    prayer: "Lord, help me remember what is sacred and never forget the places, people, and promises that belong to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-6",
+                    reference: "Psalm 137:6",
+                    text: "May my tongue cling to the roof of my mouth\n  If I do not remember you,\n  If I do not exalt Jerusalem\n  Above my chief joy.",
+                    prayer: "Father, keep my heart faithful to what honors You, even when sorrow or distance tries to weaken my devotion."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-7",
+                    reference: "Psalm 137:7",
+                    text: "Remember, O Lord, against the sons of Edom\n  The day of Jerusalem,\n  Who said, “Raze it, raze it\n  To its very foundation.”",
+                    prayer: "Lord, You remember every injustice. Help me trust Your righteous judgment instead of carrying bitterness."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-8",
+                    reference: "Psalm 137:8",
+                    text: "O daughter of Babylon, you devastated one,\n  How blessed will be the one who repays you\n  With the recompense with which you have repaid us.",
+                    prayer: "Father, when I see destruction or cruelty, help me place judgment in Your hands and hold tightly to Your mercy."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-9",
+                    reference: "Psalm 137:9",
+                    text: "How blessed will be the one who seizes and dashes your little ones\n  Against the rock.",
+                    prayer: "Lord, guard my heart from hatred and revenge. Bring justice according to Your wisdom, and heal what violence has broken."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for meeting me in sorrow, exile, loss, and unanswered pain. Help me remember what is holy, worship You even when joy feels distant, and trust Your justice without letting bitterness rule my heart. Heal what has been broken, restore what has been lost, and keep my soul faithful to You through every painful season.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 138,
             title: "I Will Praise You",
             chapterReference: "Psalm 138",
             summary: "Pray with wholehearted thanksgiving.",
-            verses: []
+            // JSON resource: psalm_138_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-138-1",
+                    reference: "Psalm 138:1",
+                    text: "I will give You thanks with all my heart;\n  I will sing praises to You before the gods.",
+                    prayer: "Lord, help me give thanks to You with all my heart and praise You with sincere devotion."
+                ),
+                PrayerVerse(
+                    id: "psalm-138-2",
+                    reference: "Psalm 138:2",
+                    text: "I will bow down toward Your holy temple\n  And give thanks to Your name for Your lovingkindness and Your truth;\n  For You have magnified Your word according to all Your name.",
+                    prayer: "Father, teach me to worship You with reverence and thank You for Your lovingkindness and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-138-3",
+                    reference: "Psalm 138:3",
+                    text: "On the day I called, You answered me;\n  You made me bold with strength in my soul.",
+                    prayer: "Lord, when I call, thank You for answering me and strengthening my soul with courage."
+                ),
+                PrayerVerse(
+                    id: "psalm-138-4",
+                    reference: "Psalm 138:4",
+                    text: "All the kings of the earth will give thanks to You, O Lord,\n  When they have heard the words of Your mouth.",
+                    prayer: "Father, let all people recognize Your words, Your greatness, and Your faithful rule."
+                ),
+                PrayerVerse(
+                    id: "psalm-138-5",
+                    reference: "Psalm 138:5",
+                    text: "And they will sing of the ways of the Lord,\n  For great is the glory of the Lord.",
+                    prayer: "Lord, help me sing of Your ways and remember that Your glory is great."
+                ),
+                PrayerVerse(
+                    id: "psalm-138-6",
+                    reference: "Psalm 138:6",
+                    text: "For though the Lord is exalted,\n  Yet He regards the lowly,\n  But the haughty He knows from afar.",
+                    prayer: "Father, thank You that although You are exalted, You regard the lowly. Keep me humble before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-138-7",
+                    reference: "Psalm 138:7",
+                    text: "Though I walk in the midst of trouble, You will revive me;\n  You will stretch forth Your hand against the wrath of my enemies,\n  And Your right hand will save me.",
+                    prayer: "Lord, though I walk in trouble, revive me and stretch out Your hand to save and protect me."
+                ),
+                PrayerVerse(
+                    id: "psalm-138-8",
+                    reference: "Psalm 138:8",
+                    text: "The Lord will accomplish what concerns me;\n  Your lovingkindness, O Lord, is everlasting;\n  Do not forsake the works of Your hands.",
+                    prayer: "Father, fulfill Your purpose for me. Thank You that Your lovingkindness endures forever and that You will not abandon the work of Your hands."
+                ),
+                PrayerVerse(
+                    id: "psalm-138-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your lovingkindness, truth, strength, and faithful purpose. Help me give thanks with all my heart, worship You with reverence, and trust You when I walk through trouble. Revive me, protect me, and complete the work You have begun in my life. May my confidence rest in Your enduring love.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 139,
             title: "You Have Searched Me",
             chapterReference: "Psalm 139",
             summary: "Pray in awe of God's intimate knowledge.",
-            verses: []
+            // JSON resource: psalm_139_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-139-1",
+                    reference: "Psalm 139:1",
+                    text: "O Lord, You have searched me and known me.",
+                    prayer: "Lord, You have searched me and known me. Help me live honestly before You, resting in the comfort that I am fully known."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-2",
+                    reference: "Psalm 139:2",
+                    text: "You know when I sit down and when I rise up;\n  You understand my thought from afar.",
+                    prayer: "Father, You know when I sit and when I rise. Thank You for understanding my thoughts from afar."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-3",
+                    reference: "Psalm 139:3",
+                    text: "You scrutinize my path and my lying down,\n  And are intimately acquainted with all my ways.",
+                    prayer: "Lord, You observe my path and my rest. Guide every step and shape every part of my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-4",
+                    reference: "Psalm 139:4",
+                    text: "Even before there is a word on my tongue,\n  Behold, O Lord, You know it all.",
+                    prayer: "Father, before a word is on my tongue, You know it completely. Help my speech honor You."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-5",
+                    reference: "Psalm 139:5",
+                    text: "You have enclosed me behind and before,\n  And laid Your hand upon me.",
+                    prayer: "Lord, You surround me behind and before. Keep me secure under Your loving hand."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-6",
+                    reference: "Psalm 139:6",
+                    text: "Such knowledge is too wonderful for me;\n  It is too high, I cannot attain to it.",
+                    prayer: "Father, Your knowledge is too wonderful for me. Teach me to worship You with awe and humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-7",
+                    reference: "Psalm 139:7",
+                    text: "Where can I go from Your Spirit?\n  Or where can I flee from Your presence?",
+                    prayer: "Lord, there is nowhere I can go from Your Spirit. Thank You that Your presence is always near."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-8",
+                    reference: "Psalm 139:8",
+                    text: "If I ascend to heaven, You are there;\n  If I make my bed in Sheol, behold, You are there.",
+                    prayer: "Father, whether in the heights or the depths, You are there. Help me trust Your nearness in every place."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-9",
+                    reference: "Psalm 139:9",
+                    text: "If I take the wings of the dawn,\n  If I dwell in the remotest part of the sea,",
+                    prayer: "Lord, even if I rise to the farthest places, Your presence still reaches me."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-10",
+                    reference: "Psalm 139:10",
+                    text: "Even there Your hand will lead me,\n  And Your right hand will lay hold of me.",
+                    prayer: "Father, let Your hand lead me and Your right hand hold me wherever I go."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-11",
+                    reference: "Psalm 139:11",
+                    text: "If I say, “Surely the darkness will overwhelm me,\n  And the light around me will be night,”",
+                    prayer: "Lord, when darkness feels close, remind me that it cannot hide me from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-12",
+                    reference: "Psalm 139:12",
+                    text: "Even the darkness is not dark to You,\n  And the night is as bright as the day.\n  Darkness and light are alike to You.",
+                    prayer: "Father, even darkness is not dark to You. Let Your light guide me through every hidden or difficult place."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-13",
+                    reference: "Psalm 139:13",
+                    text: "For You formed my inward parts;\n  You wove me in my mother’s womb.",
+                    prayer: "Lord, thank You for forming my inward parts and creating me with care."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-14",
+                    reference: "Psalm 139:14",
+                    text: "I will give thanks to You, for I am fearfully and wonderfully made;\n  Wonderful are Your works,\n  And my soul knows it very well.",
+                    prayer: "Father, I praise You because I am fearfully and wonderfully made. Help me honor the life You have given me."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-15",
+                    reference: "Psalm 139:15",
+                    text: "My frame was not hidden from You,\n  When I was made in secret,\n  And skillfully wrought in the depths of the earth;",
+                    prayer: "Lord, nothing about me was hidden from You as You formed me. Thank You for Your intentional care."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-16",
+                    reference: "Psalm 139:16",
+                    text: "Your eyes have seen my unformed substance;\n  And in Your book were all written\n  The days that were ordained for me,\n  When as yet there was not one of them.",
+                    prayer: "Father, You saw my days before they came to be. Help me trust Your purpose and timing for my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-17",
+                    reference: "Psalm 139:17",
+                    text: "How precious also are Your thoughts to me, O God!\n  How vast is the sum of them!",
+                    prayer: "Lord, Your thoughts toward me are precious. Teach me to value Your wisdom and love."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-18",
+                    reference: "Psalm 139:18",
+                    text: "If I should count them, they would outnumber the sand.\n  When I awake, I am still with You.",
+                    prayer: "Father, Your thoughts are more than I can count. Help me wake each day aware that I am still with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-19",
+                    reference: "Psalm 139:19",
+                    text: "O that You would slay the wicked, O God;\n  Depart from me, therefore, men of bloodshed.",
+                    prayer: "Lord, remove wickedness from my heart and protect me from what opposes Your holiness."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-20",
+                    reference: "Psalm 139:20",
+                    text: "For they speak against You wickedly,\n  And Your enemies take Your name in vain.",
+                    prayer: "Father, keep me from dishonoring Your name. Help me speak and live with reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-21",
+                    reference: "Psalm 139:21",
+                    text: "Do I not hate those who hate You, O Lord?\n  And do I not loathe those who rise up against You?",
+                    prayer: "Lord, teach me to love what You love and reject what dishonors You."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-22",
+                    reference: "Psalm 139:22",
+                    text: "I hate them with the utmost hatred;\n  They have become my enemies.",
+                    prayer: "Father, purify my zeal so that my heart remains faithful, humble, and aligned with Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-23",
+                    reference: "Psalm 139:23",
+                    text: "Search me, O God, and know my heart;\n  Try me and know my anxious thoughts;",
+                    prayer: "Lord, search me and know my heart. Test me and reveal every anxious thought."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-24",
+                    reference: "Psalm 139:24",
+                    text: "And see if there be any hurtful way in me,\n  And lead me in the everlasting way.",
+                    prayer: "Father, see if there is any hurtful way in me, and lead me in the everlasting way."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for knowing me completely, surrounding me faithfully, and creating me with purpose. Search my heart, expose what needs healing, and lead me in the everlasting way. Help me trust Your presence in every place, honor the life You have given me, and rest in the truth that I am fully known and deeply held by You.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 140,
             title: "Rescue Me from Evil",
             chapterReference: "Psalm 140",
             summary: "Pray for protection from the wicked.",
-            verses: []
+            // JSON resource: psalm_140_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-140-1",
+                    reference: "Psalm 140:1",
+                    text: "Rescue me, O Lord, from evil men;\n  Preserve me from violent men",
+                    prayer: "Lord, deliver me from evil and protect me from those who intend harm."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-2",
+                    reference: "Psalm 140:2",
+                    text: "Who devise evil things in their hearts;\n  They continually stir up wars.",
+                    prayer: "Father, guard my heart from people or influences that stir up conflict and plan trouble."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-3",
+                    reference: "Psalm 140:3",
+                    text: "They sharpen their tongues as a serpent;\n  Poison of a viper is under their lips. Selah.",
+                    prayer: "Lord, protect me from harmful words, deception, and speech that wounds or poisons."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-4",
+                    reference: "Psalm 140:4",
+                    text: "Keep me, O Lord, from the hands of the wicked;\n  Preserve me from violent men\n  Who have purposed to trip up my feet.",
+                    prayer: "Father, keep me from the hands of the wicked and preserve me from those who try to make me stumble."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-5",
+                    reference: "Psalm 140:5",
+                    text: "The proud have hidden a trap for me, and cords;\n  They have spread a net by the wayside;\n  They have set snares for me. Selah.",
+                    prayer: "Lord, reveal every hidden trap and protect my steps from snares set in secret."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-6",
+                    reference: "Psalm 140:6",
+                    text: "I said to the Lord, “You are my God;\n  Give ear, O Lord, to the voice of my supplications.",
+                    prayer: "Father, You are my God. Hear my prayer and draw near when I call to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-7",
+                    reference: "Psalm 140:7",
+                    text: "O God the Lord, the strength of my salvation,\n  You have covered my head in the day of battle.",
+                    prayer: "Lord, You are the strength of my salvation. Cover my head and protect me in every battle."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-8",
+                    reference: "Psalm 140:8",
+                    text: "Do not grant, O Lord, the desires of the wicked;\n  Do not promote his evil device, that they not be exalted. Selah.",
+                    prayer: "Father, do not let evil desires succeed. Stop every harmful plan that rises against Your purpose."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-9",
+                    reference: "Psalm 140:9",
+                    text: "“As for the head of those who surround me,\n  May the mischief of their lips cover them.",
+                    prayer: "Lord, let destructive words and pride fall powerless before Your truth and justice."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-10",
+                    reference: "Psalm 140:10",
+                    text: "May burning coals fall upon them;\n  May they be cast into the fire,\n  Into deep pits from which they cannot rise.",
+                    prayer: "Father, bring down what is evil and keep it from gaining strength or influence."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-11",
+                    reference: "Psalm 140:11",
+                    text: "May a slanderer not be established in the earth;\n  May evil hunt the violent man speedily.”",
+                    prayer: "Lord, protect me from slander, violence, and instability. Establish my life in truth and peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-12",
+                    reference: "Psalm 140:12",
+                    text: "I know that the Lord will maintain the cause of the afflicted\n  And justice for the poor.",
+                    prayer: "Father, thank You for maintaining the cause of the afflicted and giving justice to the needy."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-13",
+                    reference: "Psalm 140:13",
+                    text: "Surely the righteous will give thanks to Your name;\n  The upright will dwell in Your presence.",
+                    prayer: "Lord, let the righteous give thanks to Your name and dwell securely in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my deliverer, protector, and strength in every battle. Guard me from evil, harmful words, hidden traps, and every plan that opposes Your purpose. Teach me to trust Your justice, rest in Your protection, and remain faithful in truth and peace. May my life give thanks to Your name and dwell securely in Your presence.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 141,
             title: "Set a Guard",
             chapterReference: "Psalm 141",
             summary: "Pray for control over words and actions.",
-            verses: []
+            // JSON resource: psalm_141_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-141-1",
+                    reference: "Psalm 141:1",
+                    text: "O Lord, I call upon You; hasten to me!\n  Give ear to my voice when I call to You!",
+                    prayer: "Lord, I call upon You. Come quickly to help me and hear my voice when I cry to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-2",
+                    reference: "Psalm 141:2",
+                    text: "May my prayer be counted as incense before You;\n  The lifting up of my hands as the evening offering.",
+                    prayer: "Father, let my prayer rise before You like incense and let my lifted hands be pleasing in Your sight."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-3",
+                    reference: "Psalm 141:3",
+                    text: "Set a guard, O Lord, over my mouth;\n  Keep watch over the door of my lips.",
+                    prayer: "Lord, set a guard over my mouth and watch over the door of my lips."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-4",
+                    reference: "Psalm 141:4",
+                    text: "Do not incline my heart to any evil thing,\n  To practice deeds of wickedness\n  With men who do iniquity;\n  And do not let me eat of their delicacies.",
+                    prayer: "Father, keep my heart from turning toward evil or joining in what dishonors You."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-5",
+                    reference: "Psalm 141:5",
+                    text: "Let the righteous smite me in kindness and reprove me;\n  It is oil upon the head;\n  Do not let my head refuse it,\n  For still my prayer is against their wicked deeds.",
+                    prayer: "Lord, let correction from the righteous be received with humility. Help me welcome what leads me closer to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-6",
+                    reference: "Psalm 141:6",
+                    text: "Their judges are thrown down by the sides of the rock,\n  And they hear my words, for they are pleasant.",
+                    prayer: "Father, when judgment and correction come, help truth be heard and righteousness prevail."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-7",
+                    reference: "Psalm 141:7",
+                    text: "As when one plows and breaks open the earth,\n  Our bones have been scattered at the mouth of Sheol.",
+                    prayer: "Lord, when life feels scattered, broken, or exposed, gather my heart and keep my hope in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-8",
+                    reference: "Psalm 141:8",
+                    text: "For my eyes are toward You, O God, the Lord;\n  In You I take refuge; do not leave me defenseless.",
+                    prayer: "Father, my eyes are toward You. In You I take refuge, so do not leave my soul defenseless."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-9",
+                    reference: "Psalm 141:9",
+                    text: "Keep me from the jaws of the trap which they have set for me,\n  And from the snares of those who do iniquity.",
+                    prayer: "Lord, keep me from hidden traps and protect me from snares set along my path."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-10",
+                    reference: "Psalm 141:10",
+                    text: "Let the wicked fall into their own nets,\n  While I pass by safely.",
+                    prayer: "Father, deliver me from evil and guide me safely in Your wisdom and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing my prayers and receiving me when I call upon You. Guard my mouth, purify my heart, and keep me from anything that dishonors You. Help me receive correction with humility, keep my eyes fixed on You, and walk safely in Your protection. May my life rise before You as worship and remain faithful in Your care.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 142,
             title: "I Cry Aloud",
             chapterReference: "Psalm 142",
             summary: "Pray for refuge when overwhelmed.",
-            verses: []
+            // JSON resource: psalm_142_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-142-1",
+                    reference: "Psalm 142:1",
+                    text: "I cry aloud with my voice to the Lord;\n  I make supplication with my voice to the Lord.",
+                    prayer: "Lord, I cry aloud to You and bring my need before Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-142-2",
+                    reference: "Psalm 142:2",
+                    text: "I pour out my complaint before Him;\n  I declare my trouble before Him.",
+                    prayer: "Father, help me pour out my complaint honestly before You and trust You with every trouble."
+                ),
+                PrayerVerse(
+                    id: "psalm-142-3",
+                    reference: "Psalm 142:3",
+                    text: "When my spirit was overwhelmed within me,\n  You knew my path.\n  In the way where I walk\n  They have hidden a trap for me.",
+                    prayer: "Lord, when my spirit feels overwhelmed, remind me that You know my path and see every hidden danger."
+                ),
+                PrayerVerse(
+                    id: "psalm-142-4",
+                    reference: "Psalm 142:4",
+                    text: "Look to the right and see;\n  For there is no one who regards me;\n  There is no escape for me;\n  No one cares for my soul.",
+                    prayer: "Father, when I feel alone or unseen, remind me that You are my refuge and You care for my soul."
+                ),
+                PrayerVerse(
+                    id: "psalm-142-5",
+                    reference: "Psalm 142:5",
+                    text: "I cried out to You, O Lord;\n  I said, “You are my refuge,\n  My portion in the land of the living.",
+                    prayer: "Lord, I cry to You because You are my refuge and my portion in the land of the living."
+                ),
+                PrayerVerse(
+                    id: "psalm-142-6",
+                    reference: "Psalm 142:6",
+                    text: "Give heed to my cry,\n  For I am brought very low;\n  Deliver me from my persecutors,\n  For they are too strong for me.",
+                    prayer: "Father, listen to my cry when I feel brought low. Deliver me from what is too strong for me."
+                ),
+                PrayerVerse(
+                    id: "psalm-142-7",
+                    reference: "Psalm 142:7",
+                    text: "Bring my soul out of prison,\n  So that I may give thanks to Your name;\n  The righteous will surround me,\n  For You will deal bountifully with me.”",
+                    prayer: "Lord, bring my soul out of prison so I may give thanks to Your name and testify to Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-142-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing me when I feel overwhelmed, alone, or trapped. Help me pour out my heart honestly before You and trust that You know my path. Be my refuge, my portion, and my deliverer. Bring my soul into freedom, surround me with Your goodness, and let my life give thanks to Your name.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 143,
             title: "Do Not Bring to Judgment",
             chapterReference: "Psalm 143",
             summary: "Pray for mercy and guidance.",
-            verses: []
+            // JSON resource: psalm_143_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-143-1",
+                    reference: "Psalm 143:1",
+                    text: "Hear my prayer, O Lord,\n  Give ear to my supplications!\n  Answer me in Your faithfulness, in Your righteousness!",
+                    prayer: "Lord, hear my prayer and listen to my pleas. Answer me according to Your faithfulness and righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-2",
+                    reference: "Psalm 143:2",
+                    text: "And do not enter into judgment with Your servant,\n  For in Your sight no man living is righteous.",
+                    prayer: "Father, I come before You in humility. Thank You for mercy when I cannot stand by my own righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-3",
+                    reference: "Psalm 143:3",
+                    text: "For the enemy has persecuted my soul;\n  He has crushed my life to the ground;\n  He has made me dwell in dark places, like those who have long been dead.",
+                    prayer: "Lord, when pressure, fear, or darkness surrounds me, protect my soul and keep me close to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-4",
+                    reference: "Psalm 143:4",
+                    text: "Therefore my spirit is overwhelmed within me;\n  My heart is appalled within me.",
+                    prayer: "Father, when my spirit feels overwhelmed and my heart feels troubled, revive me with Your presence and peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-5",
+                    reference: "Psalm 143:5",
+                    text: "I remember the days of old;\n  I meditate on all Your doings;\n  I muse on the work of Your hands.",
+                    prayer: "Lord, help me remember Your works, meditate on what You have done, and trust Your faithful hand."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-6",
+                    reference: "Psalm 143:6",
+                    text: "I stretch out my hands to You;\n  My soul longs for You, as a parched land. Selah.",
+                    prayer: "Father, I stretch out my hands to You. Satisfy my soul like water in dry and weary land."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-7",
+                    reference: "Psalm 143:7",
+                    text: "Answer me quickly, O Lord, my spirit fails;\n  Do not hide Your face from me,\n  Or I will become like those who go down to the pit.",
+                    prayer: "Lord, answer me quickly when my spirit fails. Do not hide Your face from me, but draw near with mercy."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-8",
+                    reference: "Psalm 143:8",
+                    text: "Let me hear Your lovingkindness in the morning;\n  For I trust in You;\n  Teach me the way in which I should walk;\n  For to You I lift up my soul.",
+                    prayer: "Father, let me hear Your lovingkindness in the morning, for I trust in You. Teach me the way I should walk."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-9",
+                    reference: "Psalm 143:9",
+                    text: "Deliver me, O Lord, from my enemies;\n  I take refuge in You.",
+                    prayer: "Lord, deliver me from what threatens my peace and faith. I take refuge in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-10",
+                    reference: "Psalm 143:10",
+                    text: "Teach me to do Your will,\n  For You are my God;\n  Let Your good Spirit lead me on level ground.",
+                    prayer: "Father, teach me to do Your will, for You are my God. Let Your good Spirit lead me on level ground."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-11",
+                    reference: "Psalm 143:11",
+                    text: "For the sake of Your name, O Lord, revive me.\n  In Your righteousness bring my soul out of trouble.",
+                    prayer: "Lord, revive me for Your name\'s sake and bring my soul out of trouble according to Your righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-12",
+                    reference: "Psalm 143:12",
+                    text: "And in Your lovingkindness, cut off my enemies\n  And destroy all those who afflict my soul,\n  For I am Your servant.",
+                    prayer: "Father, in Your lovingkindness, protect me from what opposes Your purpose and help me remain Your faithful servant."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing my prayers, guiding my steps, and reviving my soul. Teach me to remember Your works, trust Your lovingkindness each morning, and walk in Your will with humility. Let Your good Spirit lead me on level ground, protect me in trouble, and keep my heart faithful to You.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 144,
             title: "Praise to the Rock",
             chapterReference: "Psalm 144",
             summary: "Pray for God's strength in battle.",
-            verses: []
+            // JSON resource: psalm_144_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-144-1",
+                    reference: "Psalm 144:1",
+                    text: "Blessed be the Lord, my rock,\n  Who trains my hands for war,\n  And my fingers for battle;",
+                    prayer: "Lord, blessed be Your name, my rock. Train my hands for faithful work and strengthen me for every battle I face."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-2",
+                    reference: "Psalm 144:2",
+                    text: "My lovingkindness and my fortress,\n  My stronghold and my deliverer,\n  My shield and He in whom I take refuge,\n  Who subdues my people under me.",
+                    prayer: "Father, You are my lovingkindness, fortress, stronghold, deliverer, shield, and refuge. Help me trust Your protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-3",
+                    reference: "Psalm 144:3",
+                    text: "O Lord, what is man, that You take knowledge of him?\n  Or the son of man, that You think of him?",
+                    prayer: "Lord, who am I that You care for me? Thank You for knowing me, loving me, and paying attention to my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-4",
+                    reference: "Psalm 144:4",
+                    text: "Man is like a mere breath;\n  His days are like a passing shadow.",
+                    prayer: "Father, remind me that life is brief like a passing shadow. Teach me to live with wisdom, purpose, and humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-5",
+                    reference: "Psalm 144:5",
+                    text: "Bow Your heavens, O Lord, and come down;\n  Touch the mountains, that they may smoke.",
+                    prayer: "Lord, come near with Your power and presence. Touch what feels immovable and show Your greatness."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-6",
+                    reference: "Psalm 144:6",
+                    text: "Flash forth lightning and scatter them;\n  Send out Your arrows and confuse them.",
+                    prayer: "Father, scatter darkness and confusion. Let Your truth and strength overcome what rises against me."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-7",
+                    reference: "Psalm 144:7",
+                    text: "Stretch forth Your hand from on high;\n  Rescue me and deliver me out of great waters,\n  Out of the hand of aliens",
+                    prayer: "Lord, stretch out Your hand from above and rescue me from overwhelming waters and every danger too strong for me."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-8",
+                    reference: "Psalm 144:8",
+                    text: "Whose mouths speak deceit,\n  And whose right hand is a right hand of falsehood.",
+                    prayer: "Father, protect me from lies, false promises, and anything that speaks deceitfully."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-9",
+                    reference: "Psalm 144:9",
+                    text: "I will sing a new song to You, O God;\n  Upon a harp of ten strings I will sing praises to You,",
+                    prayer: "Lord, give me a new song of praise. Let my heart worship You with fresh gratitude and joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-10",
+                    reference: "Psalm 144:10",
+                    text: "Who gives salvation to kings,\n  Who rescues David His servant from the evil sword.",
+                    prayer: "Father, thank You for giving deliverance and rescuing Your servants. Help me rely on Your saving power."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-11",
+                    reference: "Psalm 144:11",
+                    text: "Rescue me and deliver me out of the hand of aliens,\n  Whose mouth speaks deceit\n  And whose right hand is a right hand of falsehood.",
+                    prayer: "Lord, rescue me from deception and from those whose words and actions are false."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-12",
+                    reference: "Psalm 144:12",
+                    text: "Let our sons in their youth be as grown-up plants,\n  And our daughters as corner pillars fashioned as for a palace;",
+                    prayer: "Father, bless the next generation with strength, growth, dignity, and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-13",
+                    reference: "Psalm 144:13",
+                    text: "Let our garners be full, furnishing every kind of produce,\n  And our flocks bring forth thousands and ten thousands in our fields;",
+                    prayer: "Lord, provide what is needed and bless the work, resources, and responsibilities You entrust to us."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-14",
+                    reference: "Psalm 144:14",
+                    text: "Let our cattle bear\n  Without mishap and without loss,\n  Let there be no outcry in our streets!",
+                    prayer: "Father, let there be peace, protection, and stability in the places where You have planted us."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-15",
+                    reference: "Psalm 144:15",
+                    text: "How blessed are the people who are so situated;\n  How blessed are the people whose God is the Lord!",
+                    prayer: "Lord, blessed are the people whose God is You. Help me live joyfully and faithfully as one who belongs to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my rock, fortress, deliverer, shield, and refuge. Train me for faithful work, protect me from deception, and rescue me when trouble feels overwhelming. Teach me to live with wisdom, humility, and praise, remembering that every blessing comes from You. Bless the next generation, establish peace, and keep my heart joyful because You are my God.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 145,
             title: "Great is the Lord",
             chapterReference: "Psalm 145",
             summary: "Pray in exaltation of God's greatness.",
-            verses: []
+            // JSON resource: psalm_145_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-145-1",
+                    reference: "Psalm 145:1",
+                    text: "I will extol You, my God, O King,\n  And I will bless Your name forever and ever.",
+                    prayer: "Lord, I exalt You as my God and King. Help me bless Your name forever with a faithful and grateful heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-2",
+                    reference: "Psalm 145:2",
+                    text: "Every day I will bless You,\n  And I will praise Your name forever and ever.",
+                    prayer: "Father, teach me to bless You every day and praise Your name continually."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-3",
+                    reference: "Psalm 145:3",
+                    text: "Great is the Lord, and highly to be praised,\n  And His greatness is unsearchable.",
+                    prayer: "Lord, You are great and greatly to be praised. Help me stand in awe of Your greatness beyond understanding."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-4",
+                    reference: "Psalm 145:4",
+                    text: "One generation shall praise Your works to another,\n  And shall declare Your mighty acts.",
+                    prayer: "Father, let one generation praise Your works to another. Use my life to declare Your mighty acts."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-5",
+                    reference: "Psalm 145:5",
+                    text: "On the glorious splendor of Your majesty\n  And on Your wonderful works, I will meditate.",
+                    prayer: "Lord, help me meditate on the glorious splendor of Your majesty and the wonder of Your works."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-6",
+                    reference: "Psalm 145:6",
+                    text: "Men shall speak of the power of Your awesome acts,\n  And I will tell of Your greatness.",
+                    prayer: "Father, let people speak of Your awesome power, and help me declare Your greatness with joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-7",
+                    reference: "Psalm 145:7",
+                    text: "They shall eagerly utter the memory of Your abundant goodness\n  And will shout joyfully of Your righteousness.",
+                    prayer: "Lord, let my life overflow with grateful remembrance of Your abundant goodness and sing of Your righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-8",
+                    reference: "Psalm 145:8",
+                    text: "The Lord is gracious and merciful;\n  Slow to anger and great in lovingkindness.",
+                    prayer: "Father, thank You for being gracious, compassionate, slow to anger, and great in lovingkindness."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-9",
+                    reference: "Psalm 145:9",
+                    text: "The Lord is good to all,\n  And His mercies are over all His works.",
+                    prayer: "Lord, thank You for being good to all and for showing mercy over all Your works."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-10",
+                    reference: "Psalm 145:10",
+                    text: "All Your works shall give thanks to You, O Lord,\n  And Your godly ones shall bless You.",
+                    prayer: "Father, let all Your works give thanks to You, and let my life bless You with faithful worship."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-11",
+                    reference: "Psalm 145:11",
+                    text: "They shall speak of the glory of Your kingdom\n  And talk of Your power;",
+                    prayer: "Lord, help me speak of the glory of Your kingdom and the power of Your rule."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-12",
+                    reference: "Psalm 145:12",
+                    text: "To make known to the sons of men Your mighty acts\n  And the glory of the majesty of Your kingdom.",
+                    prayer: "Father, let my life make known Your mighty acts and the glorious majesty of Your kingdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-13",
+                    reference: "Psalm 145:13",
+                    text: "Your kingdom is an everlasting kingdom,\n  And Your dominion endures throughout all generations.",
+                    prayer: "Lord, Your kingdom is everlasting, and Your dominion endures through every generation. Help me trust Your rule."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-14",
+                    reference: "Psalm 145:14",
+                    text: "The Lord sustains all who fall\n  And raises up all who are bowed down.",
+                    prayer: "Father, thank You for sustaining all who fall and raising up those who are bowed down."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-15",
+                    reference: "Psalm 145:15",
+                    text: "The eyes of all look to You,\n  And You give them their food in due time.",
+                    prayer: "Lord, all eyes look to You for provision. Help me depend on Your hand in every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-16",
+                    reference: "Psalm 145:16",
+                    text: "You open Your hand\n  And satisfy the desire of every living thing.",
+                    prayer: "Father, thank You for opening Your hand and satisfying the desire of every living thing according to Your wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-17",
+                    reference: "Psalm 145:17",
+                    text: "The Lord is righteous in all His ways\n  And kind in all His deeds.",
+                    prayer: "Lord, You are righteous in all Your ways and kind in all Your works. Help me trust Your character."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-18",
+                    reference: "Psalm 145:18",
+                    text: "The Lord is near to all who call upon Him,\n  To all who call upon Him in truth.",
+                    prayer: "Father, thank You for being near to all who call upon You in truth. Teach me to seek You sincerely."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-19",
+                    reference: "Psalm 145:19",
+                    text: "He will fulfill the desire of those who fear Him;\n  He will also hear their cry and will save them.",
+                    prayer: "Lord, fulfill the desire of those who fear You according to Your will. Hear my cry and save me."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-20",
+                    reference: "Psalm 145:20",
+                    text: "The Lord keeps all who love Him,\n  But all the wicked He will destroy.",
+                    prayer: "Father, preserve all who love You and keep me close to Your protection and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-21",
+                    reference: "Psalm 145:21",
+                    text: "My mouth will speak the praise of the Lord,\n  And all flesh will bless His holy name forever and ever.",
+                    prayer: "Lord, let my mouth speak Your praise, and let all flesh bless Your holy name forever and ever."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your greatness, goodness, compassion, mercy, and everlasting kingdom. Teach me to praise You every day, declare Your mighty works, and trust Your faithful care. Sustain me when I fall, lift me when I am bowed down, and keep my heart near to You in truth. May my life bless Your holy name forever and ever.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 146,
@@ -18971,7 +20081,141 @@ enum PsalmsPrayerData {
             title: "Praise the Name of the Lord",
             chapterReference: "Psalm 135",
             summary: "Pray in praise of God's greatness.",
-            verses: []
+            // JSON resource: psalm_135_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-135-1",
+                    reference: "Psalm 135:1",
+                    text: "Praise the Lord!\n  Praise the name of the Lord;\n  Praise Him, O servants of the Lord,",
+                    prayer: "Lord, help me praise Your name with joy, reverence, and gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-2",
+                    reference: "Psalm 135:2",
+                    text: "You who stand in the house of the Lord,\n  In the courts of the house of our God!",
+                    prayer: "Father, teach me to stand faithfully in Your presence and serve You with a willing heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-3",
+                    reference: "Psalm 135:3",
+                    text: "Praise the Lord, for the Lord is good;\n  Sing praises to His name, for it is lovely.",
+                    prayer: "Lord, You are good, and Your name is beautiful. Let my life sing praise to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-4",
+                    reference: "Psalm 135:4",
+                    text: "For the Lord has chosen Jacob for Himself,\n  Israel for His own possession.",
+                    prayer: "Father, thank You for choosing Your people and calling us to belong to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-5",
+                    reference: "Psalm 135:5",
+                    text: "For I know that the Lord is great\n  And that our Lord is above all gods.",
+                    prayer: "Lord, You are great and above all powers. Help me trust Your greatness in every situation."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-6",
+                    reference: "Psalm 135:6",
+                    text: "Whatever the Lord pleases, He does,\n  In heaven and in earth, in the seas and in all deeps.",
+                    prayer: "Father, You do whatever pleases You in heaven, earth, sea, and all depths. Help me rest in Your sovereignty."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-7",
+                    reference: "Psalm 135:7",
+                    text: "He causes the vapors to ascend from the ends of the earth;\n  Who makes lightnings for the rain,\n  Who brings forth the wind from His treasuries.",
+                    prayer: "Lord, You rule over clouds, lightning, rain, and wind. Remind me that creation obeys Your command."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-8",
+                    reference: "Psalm 135:8",
+                    text: "He smote the firstborn of Egypt,\n  Both of man and beast.",
+                    prayer: "Father, You are mighty in judgment and deliverance. Help me live with reverence before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-9",
+                    reference: "Psalm 135:9",
+                    text: "He sent signs and wonders into your midst, O Egypt,\n  Upon Pharaoh and all his servants.",
+                    prayer: "Lord, Your signs and wonders reveal Your power. Help me remember Your mighty works."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-10",
+                    reference: "Psalm 135:10",
+                    text: "He smote many nations\n  And slew mighty kings,",
+                    prayer: "Father, You are sovereign over nations and rulers. Help me trust Your authority above all human power."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-11",
+                    reference: "Psalm 135:11",
+                    text: "Sihon, king of the Amorites,\n  And Og, king of Bashan,\n  And all the kingdoms of Canaan;",
+                    prayer: "Lord, no kingdom or strength can stand above You. Keep my confidence rooted in Your rule."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-12",
+                    reference: "Psalm 135:12",
+                    text: "And He gave their land as a heritage,\n  A heritage to Israel His people.",
+                    prayer: "Father, thank You for giving inheritance and blessing according to Your promise."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-13",
+                    reference: "Psalm 135:13",
+                    text: "Your name, O Lord, is everlasting,\n  Your remembrance, O Lord, throughout all generations.",
+                    prayer: "Lord, Your name endures forever. Let my life honor Your faithfulness through every generation."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-14",
+                    reference: "Psalm 135:14",
+                    text: "For the Lord will judge His people\n  And will have compassion on His servants.",
+                    prayer: "Father, thank You for judging Your people with righteousness and showing compassion to Your servants."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-15",
+                    reference: "Psalm 135:15",
+                    text: "The idols of the nations are but silver and gold,\n  The work of man’s hands.",
+                    prayer: "Lord, keep me from trusting idols, possessions, or anything made by human hands."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-16",
+                    reference: "Psalm 135:16",
+                    text: "They have mouths, but they do not speak;\n  They have eyes, but they do not see;",
+                    prayer: "Father, protect me from empty things that cannot speak truth, guide my steps, or save my soul."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-17",
+                    reference: "Psalm 135:17",
+                    text: "They have ears, but they do not hear,\n  Nor is there any breath at all in their mouths.",
+                    prayer: "Lord, keep my heart from depending on what cannot hear, breathe, or give life."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-18",
+                    reference: "Psalm 135:18",
+                    text: "Those who make them will be like them,\n  Yes, everyone who trusts in them.",
+                    prayer: "Father, shape me through worship of You, not through trust in lifeless things."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-19",
+                    reference: "Psalm 135:19",
+                    text: "O house of Israel, bless the Lord;\n  O house of Aaron, bless the Lord;",
+                    prayer: "Lord, help Your people bless You with faithful hearts and grateful praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-20",
+                    reference: "Psalm 135:20",
+                    text: "O house of Levi, bless the Lord;\n  You who revere the Lord, bless the Lord.",
+                    prayer: "Father, let all who fear You bless Your name with reverence, trust, and joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-21",
+                    reference: "Psalm 135:21",
+                    text: "Blessed be the Lord from Zion,\n  Who dwells in Jerusalem.\n  Praise the Lord!",
+                    prayer: "Lord, blessed be Your name from Your dwelling place. Let my life praise You now and always."
+                ),
+                PrayerVerse(
+                    id: "psalm-135-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your goodness, greatness, sovereignty, and enduring name. Teach me to praise You with joy, trust Your rule over all creation, and reject every false source of security. Shape my heart through worship, remind me of Your mighty works, and help my life bless Your name through every generation.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         )
     ]
 
@@ -18982,70 +20226,1046 @@ enum PsalmsPrayerData {
             title: "His Love Endures Forever",
             chapterReference: "Psalm 136",
             summary: "Pray in thanksgiving for God's enduring love.",
-            verses: []
+            // JSON resource: psalm_136_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-136-1",
+                    reference: "Psalm 136:1",
+                    text: "Give thanks to the Lord, for He is good,
+  For His lovingkindness is everlasting.",
+                    prayer: "Lord, I give thanks to You because You are good, and Your lovingkindness endures forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-2",
+                    reference: "Psalm 136:2",
+                    text: "Give thanks to the God of gods,
+  For His lovingkindness is everlasting.",
+                    prayer: "Father, You are God above all. Help me worship You with reverence, gratitude, and trust."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-3",
+                    reference: "Psalm 136:3",
+                    text: "Give thanks to the Lord of lords,
+  For His lovingkindness is everlasting.",
+                    prayer: "Lord, You are Lord over all powers and authorities. Thank You that Your lovingkindness endures forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-4",
+                    reference: "Psalm 136:4",
+                    text: "To Him who alone does great wonders,
+  For His lovingkindness is everlasting;",
+                    prayer: "Father, You alone do great wonders. Open my eyes to recognize Your works and praise Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-5",
+                    reference: "Psalm 136:5",
+                    text: "To Him who made the heavens with skill,
+  For His lovingkindness is everlasting;",
+                    prayer: "Lord, You made the heavens with wisdom. Help me trust Your wisdom in every part of my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-6",
+                    reference: "Psalm 136:6",
+                    text: "To Him who spread out the earth above the waters,
+  For His lovingkindness is everlasting;",
+                    prayer: "Father, You spread out the earth above the waters. Remind me that creation rests under Your command."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-7",
+                    reference: "Psalm 136:7",
+                    text: "To Him who made the great lights,
+  For His lovingkindness is everlasting:",
+                    prayer: "Lord, You made the great lights. Let Your light guide my heart and remind me of Your faithful care."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-8",
+                    reference: "Psalm 136:8",
+                    text: "The sun to rule by day,
+  For His lovingkindness is everlasting,",
+                    prayer: "Father, thank You for the sun that rules the day. Help me see Your provision in every morning."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-9",
+                    reference: "Psalm 136:9",
+                    text: "The moon and stars to rule by night,
+  For His lovingkindness is everlasting.",
+                    prayer: "Lord, thank You for the moon and stars that rule the night. Remind me that Your care continues even in darkness."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-10",
+                    reference: "Psalm 136:10",
+                    text: "To Him who smote the Egyptians in their firstborn,
+  For His lovingkindness is everlasting,",
+                    prayer: "Father, You delivered Your people with power. Thank You for rescuing me from what I could not overcome."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-11",
+                    reference: "Psalm 136:11",
+                    text: "And brought Israel out from their midst,
+  For His lovingkindness is everlasting,",
+                    prayer: "Lord, thank You for bringing Your people out of bondage. Lead me into freedom and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-12",
+                    reference: "Psalm 136:12",
+                    text: "With a strong hand and an outstretched arm,
+  For His lovingkindness is everlasting.",
+                    prayer: "Father, Your strong hand and outstretched arm save Your people. Help me trust Your power to deliver."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-13",
+                    reference: "Psalm 136:13",
+                    text: "To Him who divided the Red Sea asunder,
+  For His lovingkindness is everlasting,",
+                    prayer: "Lord, You made a way through the sea. Help me trust You when the path ahead seems impossible."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-14",
+                    reference: "Psalm 136:14",
+                    text: "And made Israel pass through the midst of it,
+  For His lovingkindness is everlasting;",
+                    prayer: "Father, thank You for leading Your people safely through. Guide me with wisdom and protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-15",
+                    reference: "Psalm 136:15",
+                    text: "But He overthrew Pharaoh and his army in the Red Sea,
+  For His lovingkindness is everlasting.",
+                    prayer: "Lord, You overthrow what opposes Your purposes. Help me trust Your justice and victory."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-16",
+                    reference: "Psalm 136:16",
+                    text: "To Him who led His people through the wilderness,
+  For His lovingkindness is everlasting;",
+                    prayer: "Father, You led Your people through the wilderness. Lead me faithfully through uncertain seasons."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-17",
+                    reference: "Psalm 136:17",
+                    text: "To Him who smote great kings,
+  For His lovingkindness is everlasting,",
+                    prayer: "Lord, You struck down mighty kings. Remind me that no earthly power is greater than You."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-18",
+                    reference: "Psalm 136:18",
+                    text: "And slew mighty kings,
+  For His lovingkindness is everlasting:",
+                    prayer: "Father, You dealt with powerful rulers according to Your righteousness. Help me trust Your authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-19",
+                    reference: "Psalm 136:19",
+                    text: "Sihon, king of the Amorites,
+  For His lovingkindness is everlasting,",
+                    prayer: "Lord, every enemy stands beneath Your power. Help me rest in Your protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-20",
+                    reference: "Psalm 136:20",
+                    text: "And Og, king of Bashan,
+  For His lovingkindness is everlasting,",
+                    prayer: "Father, no force can stop Your purpose. Strengthen my confidence in Your faithful rule."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-21",
+                    reference: "Psalm 136:21",
+                    text: "And gave their land as a heritage,
+  For His lovingkindness is everlasting,",
+                    prayer: "Lord, thank You for giving inheritance to Your people. Help me receive Your blessings with humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-22",
+                    reference: "Psalm 136:22",
+                    text: "Even a heritage to Israel His servant,
+  For His lovingkindness is everlasting.",
+                    prayer: "Father, thank You for providing what You promised. Teach me to steward every blessing faithfully."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-23",
+                    reference: "Psalm 136:23",
+                    text: "Who remembered us in our low estate,
+  For His lovingkindness is everlasting,",
+                    prayer: "Lord, thank You for remembering me when I am low. Lift my heart with Your mercy and compassion."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-24",
+                    reference: "Psalm 136:24",
+                    text: "And has rescued us from our adversaries,
+  For His lovingkindness is everlasting;",
+                    prayer: "Father, thank You for rescuing me from what opposes my soul. Keep me close to Your deliverance."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-25",
+                    reference: "Psalm 136:25",
+                    text: "Who gives food to all flesh,
+  For His lovingkindness is everlasting.",
+                    prayer: "Lord, thank You for giving food to all living things. Help me receive daily provision with gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-26",
+                    reference: "Psalm 136:26",
+                    text: "Give thanks to the God of heaven,
+  For His lovingkindness is everlasting.",
+                    prayer: "Father, I give thanks to You, the God of heaven, because Your lovingkindness endures forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-136-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You that Your lovingkindness endures forever. You are good, sovereign, wise, powerful, and faithful through every generation. Help me remember Your wonders, trust Your deliverance, receive Your provision with gratitude, and walk humbly in the blessings You give. May my life continually give thanks to You, the God of heaven, whose mercy never fails.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 137,
             title: "By the Rivers of Babylon",
             chapterReference: "Psalm 137",
             summary: "Pray with longing for home and restoration.",
-            verses: []
+            // JSON resource: psalm_137_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-137-1",
+                    reference: "Psalm 137:1",
+                    text: "By the rivers of Babylon,\n  There we sat down and wept,\n  When we remembered Zion.",
+                    prayer: "Lord, when I sit in sorrow and remember what has been lost, help me bring my grief honestly before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-2",
+                    reference: "Psalm 137:2",
+                    text: "Upon the willows in the midst of it\n  We hung our harps.",
+                    prayer: "Father, when joy feels distant and worship feels difficult, stay near to me with mercy and patience."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-3",
+                    reference: "Psalm 137:3",
+                    text: "For there our captors demanded of us songs,\n  And our tormentors mirth, saying,\n  “Sing us one of the songs of Zion.”",
+                    prayer: "Lord, when others demand strength from me in a painful season, help me trust You with what I cannot express."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-4",
+                    reference: "Psalm 137:4",
+                    text: "How can we sing the Lord’s song\n  In a foreign land?",
+                    prayer: "Father, teach me how to worship You even when I feel far from peace, home, or comfort."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-5",
+                    reference: "Psalm 137:5",
+                    text: "If I forget you, O Jerusalem,\n  May my right hand forget her skill.",
+                    prayer: "Lord, help me remember what is sacred and never forget the places, people, and promises that belong to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-6",
+                    reference: "Psalm 137:6",
+                    text: "May my tongue cling to the roof of my mouth\n  If I do not remember you,\n  If I do not exalt Jerusalem\n  Above my chief joy.",
+                    prayer: "Father, keep my heart faithful to what honors You, even when sorrow or distance tries to weaken my devotion."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-7",
+                    reference: "Psalm 137:7",
+                    text: "Remember, O Lord, against the sons of Edom\n  The day of Jerusalem,\n  Who said, “Raze it, raze it\n  To its very foundation.”",
+                    prayer: "Lord, You remember every injustice. Help me trust Your righteous judgment instead of carrying bitterness."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-8",
+                    reference: "Psalm 137:8",
+                    text: "O daughter of Babylon, you devastated one,\n  How blessed will be the one who repays you\n  With the recompense with which you have repaid us.",
+                    prayer: "Father, when I see destruction or cruelty, help me place judgment in Your hands and hold tightly to Your mercy."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-9",
+                    reference: "Psalm 137:9",
+                    text: "How blessed will be the one who seizes and dashes your little ones\n  Against the rock.",
+                    prayer: "Lord, guard my heart from hatred and revenge. Bring justice according to Your wisdom, and heal what violence has broken."
+                ),
+                PrayerVerse(
+                    id: "psalm-137-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for meeting me in sorrow, exile, loss, and unanswered pain. Help me remember what is holy, worship You even when joy feels distant, and trust Your justice without letting bitterness rule my heart. Heal what has been broken, restore what has been lost, and keep my soul faithful to You through every painful season.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 138,
             title: "I Will Praise You",
             chapterReference: "Psalm 138",
             summary: "Pray with wholehearted thanksgiving.",
-            verses: []
+            // JSON resource: psalm_138_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-138-1",
+                    reference: "Psalm 138:1",
+                    text: "I will give You thanks with all my heart;\n  I will sing praises to You before the gods.",
+                    prayer: "Lord, help me give thanks to You with all my heart and praise You with sincere devotion."
+                ),
+                PrayerVerse(
+                    id: "psalm-138-2",
+                    reference: "Psalm 138:2",
+                    text: "I will bow down toward Your holy temple\n  And give thanks to Your name for Your lovingkindness and Your truth;\n  For You have magnified Your word according to all Your name.",
+                    prayer: "Father, teach me to worship You with reverence and thank You for Your lovingkindness and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-138-3",
+                    reference: "Psalm 138:3",
+                    text: "On the day I called, You answered me;\n  You made me bold with strength in my soul.",
+                    prayer: "Lord, when I call, thank You for answering me and strengthening my soul with courage."
+                ),
+                PrayerVerse(
+                    id: "psalm-138-4",
+                    reference: "Psalm 138:4",
+                    text: "All the kings of the earth will give thanks to You, O Lord,\n  When they have heard the words of Your mouth.",
+                    prayer: "Father, let all people recognize Your words, Your greatness, and Your faithful rule."
+                ),
+                PrayerVerse(
+                    id: "psalm-138-5",
+                    reference: "Psalm 138:5",
+                    text: "And they will sing of the ways of the Lord,\n  For great is the glory of the Lord.",
+                    prayer: "Lord, help me sing of Your ways and remember that Your glory is great."
+                ),
+                PrayerVerse(
+                    id: "psalm-138-6",
+                    reference: "Psalm 138:6",
+                    text: "For though the Lord is exalted,\n  Yet He regards the lowly,\n  But the haughty He knows from afar.",
+                    prayer: "Father, thank You that although You are exalted, You regard the lowly. Keep me humble before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-138-7",
+                    reference: "Psalm 138:7",
+                    text: "Though I walk in the midst of trouble, You will revive me;\n  You will stretch forth Your hand against the wrath of my enemies,\n  And Your right hand will save me.",
+                    prayer: "Lord, though I walk in trouble, revive me and stretch out Your hand to save and protect me."
+                ),
+                PrayerVerse(
+                    id: "psalm-138-8",
+                    reference: "Psalm 138:8",
+                    text: "The Lord will accomplish what concerns me;\n  Your lovingkindness, O Lord, is everlasting;\n  Do not forsake the works of Your hands.",
+                    prayer: "Father, fulfill Your purpose for me. Thank You that Your lovingkindness endures forever and that You will not abandon the work of Your hands."
+                ),
+                PrayerVerse(
+                    id: "psalm-138-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your lovingkindness, truth, strength, and faithful purpose. Help me give thanks with all my heart, worship You with reverence, and trust You when I walk through trouble. Revive me, protect me, and complete the work You have begun in my life. May my confidence rest in Your enduring love.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 139,
             title: "You Have Searched Me",
             chapterReference: "Psalm 139",
             summary: "Pray in awe of God's intimate knowledge.",
-            verses: []
+            // JSON resource: psalm_139_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-139-1",
+                    reference: "Psalm 139:1",
+                    text: "O Lord, You have searched me and known me.",
+                    prayer: "Lord, You have searched me and known me. Help me live honestly before You, resting in the comfort that I am fully known."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-2",
+                    reference: "Psalm 139:2",
+                    text: "You know when I sit down and when I rise up;\n  You understand my thought from afar.",
+                    prayer: "Father, You know when I sit and when I rise. Thank You for understanding my thoughts from afar."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-3",
+                    reference: "Psalm 139:3",
+                    text: "You scrutinize my path and my lying down,\n  And are intimately acquainted with all my ways.",
+                    prayer: "Lord, You observe my path and my rest. Guide every step and shape every part of my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-4",
+                    reference: "Psalm 139:4",
+                    text: "Even before there is a word on my tongue,\n  Behold, O Lord, You know it all.",
+                    prayer: "Father, before a word is on my tongue, You know it completely. Help my speech honor You."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-5",
+                    reference: "Psalm 139:5",
+                    text: "You have enclosed me behind and before,\n  And laid Your hand upon me.",
+                    prayer: "Lord, You surround me behind and before. Keep me secure under Your loving hand."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-6",
+                    reference: "Psalm 139:6",
+                    text: "Such knowledge is too wonderful for me;\n  It is too high, I cannot attain to it.",
+                    prayer: "Father, Your knowledge is too wonderful for me. Teach me to worship You with awe and humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-7",
+                    reference: "Psalm 139:7",
+                    text: "Where can I go from Your Spirit?\n  Or where can I flee from Your presence?",
+                    prayer: "Lord, there is nowhere I can go from Your Spirit. Thank You that Your presence is always near."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-8",
+                    reference: "Psalm 139:8",
+                    text: "If I ascend to heaven, You are there;\n  If I make my bed in Sheol, behold, You are there.",
+                    prayer: "Father, whether in the heights or the depths, You are there. Help me trust Your nearness in every place."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-9",
+                    reference: "Psalm 139:9",
+                    text: "If I take the wings of the dawn,\n  If I dwell in the remotest part of the sea,",
+                    prayer: "Lord, even if I rise to the farthest places, Your presence still reaches me."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-10",
+                    reference: "Psalm 139:10",
+                    text: "Even there Your hand will lead me,\n  And Your right hand will lay hold of me.",
+                    prayer: "Father, let Your hand lead me and Your right hand hold me wherever I go."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-11",
+                    reference: "Psalm 139:11",
+                    text: "If I say, “Surely the darkness will overwhelm me,\n  And the light around me will be night,”",
+                    prayer: "Lord, when darkness feels close, remind me that it cannot hide me from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-12",
+                    reference: "Psalm 139:12",
+                    text: "Even the darkness is not dark to You,\n  And the night is as bright as the day.\n  Darkness and light are alike to You.",
+                    prayer: "Father, even darkness is not dark to You. Let Your light guide me through every hidden or difficult place."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-13",
+                    reference: "Psalm 139:13",
+                    text: "For You formed my inward parts;\n  You wove me in my mother’s womb.",
+                    prayer: "Lord, thank You for forming my inward parts and creating me with care."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-14",
+                    reference: "Psalm 139:14",
+                    text: "I will give thanks to You, for I am fearfully and wonderfully made;\n  Wonderful are Your works,\n  And my soul knows it very well.",
+                    prayer: "Father, I praise You because I am fearfully and wonderfully made. Help me honor the life You have given me."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-15",
+                    reference: "Psalm 139:15",
+                    text: "My frame was not hidden from You,\n  When I was made in secret,\n  And skillfully wrought in the depths of the earth;",
+                    prayer: "Lord, nothing about me was hidden from You as You formed me. Thank You for Your intentional care."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-16",
+                    reference: "Psalm 139:16",
+                    text: "Your eyes have seen my unformed substance;\n  And in Your book were all written\n  The days that were ordained for me,\n  When as yet there was not one of them.",
+                    prayer: "Father, You saw my days before they came to be. Help me trust Your purpose and timing for my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-17",
+                    reference: "Psalm 139:17",
+                    text: "How precious also are Your thoughts to me, O God!\n  How vast is the sum of them!",
+                    prayer: "Lord, Your thoughts toward me are precious. Teach me to value Your wisdom and love."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-18",
+                    reference: "Psalm 139:18",
+                    text: "If I should count them, they would outnumber the sand.\n  When I awake, I am still with You.",
+                    prayer: "Father, Your thoughts are more than I can count. Help me wake each day aware that I am still with You."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-19",
+                    reference: "Psalm 139:19",
+                    text: "O that You would slay the wicked, O God;\n  Depart from me, therefore, men of bloodshed.",
+                    prayer: "Lord, remove wickedness from my heart and protect me from what opposes Your holiness."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-20",
+                    reference: "Psalm 139:20",
+                    text: "For they speak against You wickedly,\n  And Your enemies take Your name in vain.",
+                    prayer: "Father, keep me from dishonoring Your name. Help me speak and live with reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-21",
+                    reference: "Psalm 139:21",
+                    text: "Do I not hate those who hate You, O Lord?\n  And do I not loathe those who rise up against You?",
+                    prayer: "Lord, teach me to love what You love and reject what dishonors You."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-22",
+                    reference: "Psalm 139:22",
+                    text: "I hate them with the utmost hatred;\n  They have become my enemies.",
+                    prayer: "Father, purify my zeal so that my heart remains faithful, humble, and aligned with Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-23",
+                    reference: "Psalm 139:23",
+                    text: "Search me, O God, and know my heart;\n  Try me and know my anxious thoughts;",
+                    prayer: "Lord, search me and know my heart. Test me and reveal every anxious thought."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-24",
+                    reference: "Psalm 139:24",
+                    text: "And see if there be any hurtful way in me,\n  And lead me in the everlasting way.",
+                    prayer: "Father, see if there is any hurtful way in me, and lead me in the everlasting way."
+                ),
+                PrayerVerse(
+                    id: "psalm-139-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for knowing me completely, surrounding me faithfully, and creating me with purpose. Search my heart, expose what needs healing, and lead me in the everlasting way. Help me trust Your presence in every place, honor the life You have given me, and rest in the truth that I am fully known and deeply held by You.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 140,
             title: "Rescue Me from Evil",
             chapterReference: "Psalm 140",
             summary: "Pray for protection from the wicked.",
-            verses: []
+            // JSON resource: psalm_140_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-140-1",
+                    reference: "Psalm 140:1",
+                    text: "Rescue me, O Lord, from evil men;\n  Preserve me from violent men",
+                    prayer: "Lord, deliver me from evil and protect me from those who intend harm."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-2",
+                    reference: "Psalm 140:2",
+                    text: "Who devise evil things in their hearts;\n  They continually stir up wars.",
+                    prayer: "Father, guard my heart from people or influences that stir up conflict and plan trouble."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-3",
+                    reference: "Psalm 140:3",
+                    text: "They sharpen their tongues as a serpent;\n  Poison of a viper is under their lips. Selah.",
+                    prayer: "Lord, protect me from harmful words, deception, and speech that wounds or poisons."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-4",
+                    reference: "Psalm 140:4",
+                    text: "Keep me, O Lord, from the hands of the wicked;\n  Preserve me from violent men\n  Who have purposed to trip up my feet.",
+                    prayer: "Father, keep me from the hands of the wicked and preserve me from those who try to make me stumble."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-5",
+                    reference: "Psalm 140:5",
+                    text: "The proud have hidden a trap for me, and cords;\n  They have spread a net by the wayside;\n  They have set snares for me. Selah.",
+                    prayer: "Lord, reveal every hidden trap and protect my steps from snares set in secret."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-6",
+                    reference: "Psalm 140:6",
+                    text: "I said to the Lord, “You are my God;\n  Give ear, O Lord, to the voice of my supplications.",
+                    prayer: "Father, You are my God. Hear my prayer and draw near when I call to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-7",
+                    reference: "Psalm 140:7",
+                    text: "O God the Lord, the strength of my salvation,\n  You have covered my head in the day of battle.",
+                    prayer: "Lord, You are the strength of my salvation. Cover my head and protect me in every battle."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-8",
+                    reference: "Psalm 140:8",
+                    text: "Do not grant, O Lord, the desires of the wicked;\n  Do not promote his evil device, that they not be exalted. Selah.",
+                    prayer: "Father, do not let evil desires succeed. Stop every harmful plan that rises against Your purpose."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-9",
+                    reference: "Psalm 140:9",
+                    text: "“As for the head of those who surround me,\n  May the mischief of their lips cover them.",
+                    prayer: "Lord, let destructive words and pride fall powerless before Your truth and justice."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-10",
+                    reference: "Psalm 140:10",
+                    text: "May burning coals fall upon them;\n  May they be cast into the fire,\n  Into deep pits from which they cannot rise.",
+                    prayer: "Father, bring down what is evil and keep it from gaining strength or influence."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-11",
+                    reference: "Psalm 140:11",
+                    text: "May a slanderer not be established in the earth;\n  May evil hunt the violent man speedily.”",
+                    prayer: "Lord, protect me from slander, violence, and instability. Establish my life in truth and peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-12",
+                    reference: "Psalm 140:12",
+                    text: "I know that the Lord will maintain the cause of the afflicted\n  And justice for the poor.",
+                    prayer: "Father, thank You for maintaining the cause of the afflicted and giving justice to the needy."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-13",
+                    reference: "Psalm 140:13",
+                    text: "Surely the righteous will give thanks to Your name;\n  The upright will dwell in Your presence.",
+                    prayer: "Lord, let the righteous give thanks to Your name and dwell securely in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-140-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my deliverer, protector, and strength in every battle. Guard me from evil, harmful words, hidden traps, and every plan that opposes Your purpose. Teach me to trust Your justice, rest in Your protection, and remain faithful in truth and peace. May my life give thanks to Your name and dwell securely in Your presence.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 141,
             title: "Set a Guard",
             chapterReference: "Psalm 141",
             summary: "Pray for control over words and actions.",
-            verses: []
+            // JSON resource: psalm_141_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-141-1",
+                    reference: "Psalm 141:1",
+                    text: "O Lord, I call upon You; hasten to me!\n  Give ear to my voice when I call to You!",
+                    prayer: "Lord, I call upon You. Come quickly to help me and hear my voice when I cry to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-2",
+                    reference: "Psalm 141:2",
+                    text: "May my prayer be counted as incense before You;\n  The lifting up of my hands as the evening offering.",
+                    prayer: "Father, let my prayer rise before You like incense and let my lifted hands be pleasing in Your sight."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-3",
+                    reference: "Psalm 141:3",
+                    text: "Set a guard, O Lord, over my mouth;\n  Keep watch over the door of my lips.",
+                    prayer: "Lord, set a guard over my mouth and watch over the door of my lips."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-4",
+                    reference: "Psalm 141:4",
+                    text: "Do not incline my heart to any evil thing,\n  To practice deeds of wickedness\n  With men who do iniquity;\n  And do not let me eat of their delicacies.",
+                    prayer: "Father, keep my heart from turning toward evil or joining in what dishonors You."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-5",
+                    reference: "Psalm 141:5",
+                    text: "Let the righteous smite me in kindness and reprove me;\n  It is oil upon the head;\n  Do not let my head refuse it,\n  For still my prayer is against their wicked deeds.",
+                    prayer: "Lord, let correction from the righteous be received with humility. Help me welcome what leads me closer to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-6",
+                    reference: "Psalm 141:6",
+                    text: "Their judges are thrown down by the sides of the rock,\n  And they hear my words, for they are pleasant.",
+                    prayer: "Father, when judgment and correction come, help truth be heard and righteousness prevail."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-7",
+                    reference: "Psalm 141:7",
+                    text: "As when one plows and breaks open the earth,\n  Our bones have been scattered at the mouth of Sheol.",
+                    prayer: "Lord, when life feels scattered, broken, or exposed, gather my heart and keep my hope in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-8",
+                    reference: "Psalm 141:8",
+                    text: "For my eyes are toward You, O God, the Lord;\n  In You I take refuge; do not leave me defenseless.",
+                    prayer: "Father, my eyes are toward You. In You I take refuge, so do not leave my soul defenseless."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-9",
+                    reference: "Psalm 141:9",
+                    text: "Keep me from the jaws of the trap which they have set for me,\n  And from the snares of those who do iniquity.",
+                    prayer: "Lord, keep me from hidden traps and protect me from snares set along my path."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-10",
+                    reference: "Psalm 141:10",
+                    text: "Let the wicked fall into their own nets,\n  While I pass by safely.",
+                    prayer: "Father, deliver me from evil and guide me safely in Your wisdom and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-141-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing my prayers and receiving me when I call upon You. Guard my mouth, purify my heart, and keep me from anything that dishonors You. Help me receive correction with humility, keep my eyes fixed on You, and walk safely in Your protection. May my life rise before You as worship and remain faithful in Your care.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 142,
             title: "I Cry Aloud",
             chapterReference: "Psalm 142",
             summary: "Pray for refuge when overwhelmed.",
-            verses: []
+            // JSON resource: psalm_142_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-142-1",
+                    reference: "Psalm 142:1",
+                    text: "I cry aloud with my voice to the Lord;\n  I make supplication with my voice to the Lord.",
+                    prayer: "Lord, I cry aloud to You and bring my need before Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-142-2",
+                    reference: "Psalm 142:2",
+                    text: "I pour out my complaint before Him;\n  I declare my trouble before Him.",
+                    prayer: "Father, help me pour out my complaint honestly before You and trust You with every trouble."
+                ),
+                PrayerVerse(
+                    id: "psalm-142-3",
+                    reference: "Psalm 142:3",
+                    text: "When my spirit was overwhelmed within me,\n  You knew my path.\n  In the way where I walk\n  They have hidden a trap for me.",
+                    prayer: "Lord, when my spirit feels overwhelmed, remind me that You know my path and see every hidden danger."
+                ),
+                PrayerVerse(
+                    id: "psalm-142-4",
+                    reference: "Psalm 142:4",
+                    text: "Look to the right and see;\n  For there is no one who regards me;\n  There is no escape for me;\n  No one cares for my soul.",
+                    prayer: "Father, when I feel alone or unseen, remind me that You are my refuge and You care for my soul."
+                ),
+                PrayerVerse(
+                    id: "psalm-142-5",
+                    reference: "Psalm 142:5",
+                    text: "I cried out to You, O Lord;\n  I said, “You are my refuge,\n  My portion in the land of the living.",
+                    prayer: "Lord, I cry to You because You are my refuge and my portion in the land of the living."
+                ),
+                PrayerVerse(
+                    id: "psalm-142-6",
+                    reference: "Psalm 142:6",
+                    text: "Give heed to my cry,\n  For I am brought very low;\n  Deliver me from my persecutors,\n  For they are too strong for me.",
+                    prayer: "Father, listen to my cry when I feel brought low. Deliver me from what is too strong for me."
+                ),
+                PrayerVerse(
+                    id: "psalm-142-7",
+                    reference: "Psalm 142:7",
+                    text: "Bring my soul out of prison,\n  So that I may give thanks to Your name;\n  The righteous will surround me,\n  For You will deal bountifully with me.”",
+                    prayer: "Lord, bring my soul out of prison so I may give thanks to Your name and testify to Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-142-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing me when I feel overwhelmed, alone, or trapped. Help me pour out my heart honestly before You and trust that You know my path. Be my refuge, my portion, and my deliverer. Bring my soul into freedom, surround me with Your goodness, and let my life give thanks to Your name.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 143,
             title: "Do Not Bring to Judgment",
             chapterReference: "Psalm 143",
             summary: "Pray for mercy and guidance.",
-            verses: []
+            // JSON resource: psalm_143_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-143-1",
+                    reference: "Psalm 143:1",
+                    text: "Hear my prayer, O Lord,\n  Give ear to my supplications!\n  Answer me in Your faithfulness, in Your righteousness!",
+                    prayer: "Lord, hear my prayer and listen to my pleas. Answer me according to Your faithfulness and righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-2",
+                    reference: "Psalm 143:2",
+                    text: "And do not enter into judgment with Your servant,\n  For in Your sight no man living is righteous.",
+                    prayer: "Father, I come before You in humility. Thank You for mercy when I cannot stand by my own righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-3",
+                    reference: "Psalm 143:3",
+                    text: "For the enemy has persecuted my soul;\n  He has crushed my life to the ground;\n  He has made me dwell in dark places, like those who have long been dead.",
+                    prayer: "Lord, when pressure, fear, or darkness surrounds me, protect my soul and keep me close to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-4",
+                    reference: "Psalm 143:4",
+                    text: "Therefore my spirit is overwhelmed within me;\n  My heart is appalled within me.",
+                    prayer: "Father, when my spirit feels overwhelmed and my heart feels troubled, revive me with Your presence and peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-5",
+                    reference: "Psalm 143:5",
+                    text: "I remember the days of old;\n  I meditate on all Your doings;\n  I muse on the work of Your hands.",
+                    prayer: "Lord, help me remember Your works, meditate on what You have done, and trust Your faithful hand."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-6",
+                    reference: "Psalm 143:6",
+                    text: "I stretch out my hands to You;\n  My soul longs for You, as a parched land. Selah.",
+                    prayer: "Father, I stretch out my hands to You. Satisfy my soul like water in dry and weary land."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-7",
+                    reference: "Psalm 143:7",
+                    text: "Answer me quickly, O Lord, my spirit fails;\n  Do not hide Your face from me,\n  Or I will become like those who go down to the pit.",
+                    prayer: "Lord, answer me quickly when my spirit fails. Do not hide Your face from me, but draw near with mercy."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-8",
+                    reference: "Psalm 143:8",
+                    text: "Let me hear Your lovingkindness in the morning;\n  For I trust in You;\n  Teach me the way in which I should walk;\n  For to You I lift up my soul.",
+                    prayer: "Father, let me hear Your lovingkindness in the morning, for I trust in You. Teach me the way I should walk."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-9",
+                    reference: "Psalm 143:9",
+                    text: "Deliver me, O Lord, from my enemies;\n  I take refuge in You.",
+                    prayer: "Lord, deliver me from what threatens my peace and faith. I take refuge in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-10",
+                    reference: "Psalm 143:10",
+                    text: "Teach me to do Your will,\n  For You are my God;\n  Let Your good Spirit lead me on level ground.",
+                    prayer: "Father, teach me to do Your will, for You are my God. Let Your good Spirit lead me on level ground."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-11",
+                    reference: "Psalm 143:11",
+                    text: "For the sake of Your name, O Lord, revive me.\n  In Your righteousness bring my soul out of trouble.",
+                    prayer: "Lord, revive me for Your name\'s sake and bring my soul out of trouble according to Your righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-12",
+                    reference: "Psalm 143:12",
+                    text: "And in Your lovingkindness, cut off my enemies\n  And destroy all those who afflict my soul,\n  For I am Your servant.",
+                    prayer: "Father, in Your lovingkindness, protect me from what opposes Your purpose and help me remain Your faithful servant."
+                ),
+                PrayerVerse(
+                    id: "psalm-143-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing my prayers, guiding my steps, and reviving my soul. Teach me to remember Your works, trust Your lovingkindness each morning, and walk in Your will with humility. Let Your good Spirit lead me on level ground, protect me in trouble, and keep my heart faithful to You.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 144,
             title: "Praise to the Rock",
             chapterReference: "Psalm 144",
             summary: "Pray for God's strength in battle.",
-            verses: []
+            // JSON resource: psalm_144_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-144-1",
+                    reference: "Psalm 144:1",
+                    text: "Blessed be the Lord, my rock,\n  Who trains my hands for war,\n  And my fingers for battle;",
+                    prayer: "Lord, blessed be Your name, my rock. Train my hands for faithful work and strengthen me for every battle I face."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-2",
+                    reference: "Psalm 144:2",
+                    text: "My lovingkindness and my fortress,\n  My stronghold and my deliverer,\n  My shield and He in whom I take refuge,\n  Who subdues my people under me.",
+                    prayer: "Father, You are my lovingkindness, fortress, stronghold, deliverer, shield, and refuge. Help me trust Your protection."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-3",
+                    reference: "Psalm 144:3",
+                    text: "O Lord, what is man, that You take knowledge of him?\n  Or the son of man, that You think of him?",
+                    prayer: "Lord, who am I that You care for me? Thank You for knowing me, loving me, and paying attention to my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-4",
+                    reference: "Psalm 144:4",
+                    text: "Man is like a mere breath;\n  His days are like a passing shadow.",
+                    prayer: "Father, remind me that life is brief like a passing shadow. Teach me to live with wisdom, purpose, and humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-5",
+                    reference: "Psalm 144:5",
+                    text: "Bow Your heavens, O Lord, and come down;\n  Touch the mountains, that they may smoke.",
+                    prayer: "Lord, come near with Your power and presence. Touch what feels immovable and show Your greatness."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-6",
+                    reference: "Psalm 144:6",
+                    text: "Flash forth lightning and scatter them;\n  Send out Your arrows and confuse them.",
+                    prayer: "Father, scatter darkness and confusion. Let Your truth and strength overcome what rises against me."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-7",
+                    reference: "Psalm 144:7",
+                    text: "Stretch forth Your hand from on high;\n  Rescue me and deliver me out of great waters,\n  Out of the hand of aliens",
+                    prayer: "Lord, stretch out Your hand from above and rescue me from overwhelming waters and every danger too strong for me."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-8",
+                    reference: "Psalm 144:8",
+                    text: "Whose mouths speak deceit,\n  And whose right hand is a right hand of falsehood.",
+                    prayer: "Father, protect me from lies, false promises, and anything that speaks deceitfully."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-9",
+                    reference: "Psalm 144:9",
+                    text: "I will sing a new song to You, O God;\n  Upon a harp of ten strings I will sing praises to You,",
+                    prayer: "Lord, give me a new song of praise. Let my heart worship You with fresh gratitude and joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-10",
+                    reference: "Psalm 144:10",
+                    text: "Who gives salvation to kings,\n  Who rescues David His servant from the evil sword.",
+                    prayer: "Father, thank You for giving deliverance and rescuing Your servants. Help me rely on Your saving power."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-11",
+                    reference: "Psalm 144:11",
+                    text: "Rescue me and deliver me out of the hand of aliens,\n  Whose mouth speaks deceit\n  And whose right hand is a right hand of falsehood.",
+                    prayer: "Lord, rescue me from deception and from those whose words and actions are false."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-12",
+                    reference: "Psalm 144:12",
+                    text: "Let our sons in their youth be as grown-up plants,\n  And our daughters as corner pillars fashioned as for a palace;",
+                    prayer: "Father, bless the next generation with strength, growth, dignity, and faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-13",
+                    reference: "Psalm 144:13",
+                    text: "Let our garners be full, furnishing every kind of produce,\n  And our flocks bring forth thousands and ten thousands in our fields;",
+                    prayer: "Lord, provide what is needed and bless the work, resources, and responsibilities You entrust to us."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-14",
+                    reference: "Psalm 144:14",
+                    text: "Let our cattle bear\n  Without mishap and without loss,\n  Let there be no outcry in our streets!",
+                    prayer: "Father, let there be peace, protection, and stability in the places where You have planted us."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-15",
+                    reference: "Psalm 144:15",
+                    text: "How blessed are the people who are so situated;\n  How blessed are the people whose God is the Lord!",
+                    prayer: "Lord, blessed are the people whose God is You. Help me live joyfully and faithfully as one who belongs to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-144-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my rock, fortress, deliverer, shield, and refuge. Train me for faithful work, protect me from deception, and rescue me when trouble feels overwhelming. Teach me to live with wisdom, humility, and praise, remembering that every blessing comes from You. Bless the next generation, establish peace, and keep my heart joyful because You are my God.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 145,
             title: "Great is the Lord",
             chapterReference: "Psalm 145",
             summary: "Pray in exaltation of God's greatness.",
-            verses: []
+            // JSON resource: psalm_145_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-145-1",
+                    reference: "Psalm 145:1",
+                    text: "I will extol You, my God, O King,\n  And I will bless Your name forever and ever.",
+                    prayer: "Lord, I exalt You as my God and King. Help me bless Your name forever with a faithful and grateful heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-2",
+                    reference: "Psalm 145:2",
+                    text: "Every day I will bless You,\n  And I will praise Your name forever and ever.",
+                    prayer: "Father, teach me to bless You every day and praise Your name continually."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-3",
+                    reference: "Psalm 145:3",
+                    text: "Great is the Lord, and highly to be praised,\n  And His greatness is unsearchable.",
+                    prayer: "Lord, You are great and greatly to be praised. Help me stand in awe of Your greatness beyond understanding."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-4",
+                    reference: "Psalm 145:4",
+                    text: "One generation shall praise Your works to another,\n  And shall declare Your mighty acts.",
+                    prayer: "Father, let one generation praise Your works to another. Use my life to declare Your mighty acts."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-5",
+                    reference: "Psalm 145:5",
+                    text: "On the glorious splendor of Your majesty\n  And on Your wonderful works, I will meditate.",
+                    prayer: "Lord, help me meditate on the glorious splendor of Your majesty and the wonder of Your works."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-6",
+                    reference: "Psalm 145:6",
+                    text: "Men shall speak of the power of Your awesome acts,\n  And I will tell of Your greatness.",
+                    prayer: "Father, let people speak of Your awesome power, and help me declare Your greatness with joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-7",
+                    reference: "Psalm 145:7",
+                    text: "They shall eagerly utter the memory of Your abundant goodness\n  And will shout joyfully of Your righteousness.",
+                    prayer: "Lord, let my life overflow with grateful remembrance of Your abundant goodness and sing of Your righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-8",
+                    reference: "Psalm 145:8",
+                    text: "The Lord is gracious and merciful;\n  Slow to anger and great in lovingkindness.",
+                    prayer: "Father, thank You for being gracious, compassionate, slow to anger, and great in lovingkindness."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-9",
+                    reference: "Psalm 145:9",
+                    text: "The Lord is good to all,\n  And His mercies are over all His works.",
+                    prayer: "Lord, thank You for being good to all and for showing mercy over all Your works."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-10",
+                    reference: "Psalm 145:10",
+                    text: "All Your works shall give thanks to You, O Lord,\n  And Your godly ones shall bless You.",
+                    prayer: "Father, let all Your works give thanks to You, and let my life bless You with faithful worship."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-11",
+                    reference: "Psalm 145:11",
+                    text: "They shall speak of the glory of Your kingdom\n  And talk of Your power;",
+                    prayer: "Lord, help me speak of the glory of Your kingdom and the power of Your rule."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-12",
+                    reference: "Psalm 145:12",
+                    text: "To make known to the sons of men Your mighty acts\n  And the glory of the majesty of Your kingdom.",
+                    prayer: "Father, let my life make known Your mighty acts and the glorious majesty of Your kingdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-13",
+                    reference: "Psalm 145:13",
+                    text: "Your kingdom is an everlasting kingdom,\n  And Your dominion endures throughout all generations.",
+                    prayer: "Lord, Your kingdom is everlasting, and Your dominion endures through every generation. Help me trust Your rule."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-14",
+                    reference: "Psalm 145:14",
+                    text: "The Lord sustains all who fall\n  And raises up all who are bowed down.",
+                    prayer: "Father, thank You for sustaining all who fall and raising up those who are bowed down."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-15",
+                    reference: "Psalm 145:15",
+                    text: "The eyes of all look to You,\n  And You give them their food in due time.",
+                    prayer: "Lord, all eyes look to You for provision. Help me depend on Your hand in every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-16",
+                    reference: "Psalm 145:16",
+                    text: "You open Your hand\n  And satisfy the desire of every living thing.",
+                    prayer: "Father, thank You for opening Your hand and satisfying the desire of every living thing according to Your wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-17",
+                    reference: "Psalm 145:17",
+                    text: "The Lord is righteous in all His ways\n  And kind in all His deeds.",
+                    prayer: "Lord, You are righteous in all Your ways and kind in all Your works. Help me trust Your character."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-18",
+                    reference: "Psalm 145:18",
+                    text: "The Lord is near to all who call upon Him,\n  To all who call upon Him in truth.",
+                    prayer: "Father, thank You for being near to all who call upon You in truth. Teach me to seek You sincerely."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-19",
+                    reference: "Psalm 145:19",
+                    text: "He will fulfill the desire of those who fear Him;\n  He will also hear their cry and will save them.",
+                    prayer: "Lord, fulfill the desire of those who fear You according to Your will. Hear my cry and save me."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-20",
+                    reference: "Psalm 145:20",
+                    text: "The Lord keeps all who love Him,\n  But all the wicked He will destroy.",
+                    prayer: "Father, preserve all who love You and keep me close to Your protection and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-21",
+                    reference: "Psalm 145:21",
+                    text: "My mouth will speak the praise of the Lord,\n  And all flesh will bless His holy name forever and ever.",
+                    prayer: "Lord, let my mouth speak Your praise, and let all flesh bless Your holy name forever and ever."
+                ),
+                PrayerVerse(
+                    id: "psalm-145-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your greatness, goodness, compassion, mercy, and everlasting kingdom. Teach me to praise You every day, declare Your mighty works, and trust Your faithful care. Sustain me when I fall, lift me when I am bowed down, and keep my heart near to You in truth. May my life bless Your holy name forever and ever.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 146,
