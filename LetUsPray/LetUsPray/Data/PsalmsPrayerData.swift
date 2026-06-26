@@ -8958,63 +8958,495 @@ enum PsalmsPrayerData {
             title: "Restore Our Fortunes",
             chapterReference: "Psalm 126",
             summary: "Pray for restoration and joy.",
-            verses: []
+            // JSON resource: psalm_126_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-126-1",
+                    reference: "Psalm 126:1",
+                    text: "When the Lord brought back the captive ones of Zion,\n  We were like those who dream.",
+                    prayer: "Lord, thank You for restoring what once felt impossible. Help me recognize Your hand when joy returns after sorrow."
+                ),
+                PrayerVerse(
+                    id: "psalm-126-2",
+                    reference: "Psalm 126:2",
+                    text: "Then our mouth was filled with laughter\n  And our tongue with joyful shouting;\n  Then they said among the nations,\n  \"The Lord has done great things for them.\"",
+                    prayer: "Father, fill my mouth with laughter and my tongue with joyful praise. Let my life testify that You have done great things."
+                ),
+                PrayerVerse(
+                    id: "psalm-126-3",
+                    reference: "Psalm 126:3",
+                    text: "The Lord has done great things for us;\n  We are glad.",
+                    prayer: "Lord, You have done great things for me, and I am glad. Keep my heart grateful for Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-126-4",
+                    reference: "Psalm 126:4",
+                    text: "Restore our captivity, O Lord,\n  As the streams in the South.",
+                    prayer: "Father, restore what is dry, weary, or empty in my life like streams in the desert."
+                ),
+                PrayerVerse(
+                    id: "psalm-126-5",
+                    reference: "Psalm 126:5",
+                    text: "Those who sow in tears shall reap with joyful shouting.",
+                    prayer: "Lord, when I sow with tears, help me trust that You can bring a harvest of joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-126-6",
+                    reference: "Psalm 126:6",
+                    text: "He who goes to and fro weeping, carrying his bag of seed,\n  Shall indeed come again with a shout of joy, bringing his sheaves with him.",
+                    prayer: "Father, strengthen me to keep walking faithfully even while carrying sorrow, knowing You can turn weeping into rejoicing."
+                ),
+                PrayerVerse(
+                    id: "psalm-126-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being the God who restores, renews, and turns sorrow into joy. When I walk through dry seasons or sow with tears, help me trust Your faithfulness and keep moving forward in hope. Restore what feels empty, fill my heart with praise, and let my life testify that You have done great things.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 127,
             title: "Unless the Lord Builds",
             chapterReference: "Psalm 127",
             summary: "Pray for dependence on God in all endeavors.",
-            verses: []
+            // JSON resource: psalm_127_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-127-1",
+                    reference: "Psalm 127:1",
+                    text: "Unless the Lord builds the house,\n  They labor in vain who build it;\n  Unless the Lord guards the city,\n  The watchman keeps awake in vain.",
+                    prayer: "Lord, help me build only what You are building. Teach me to depend on You instead of relying on my own effort."
+                ),
+                PrayerVerse(
+                    id: "psalm-127-2",
+                    reference: "Psalm 127:2",
+                    text: "It is vain for you to rise up early,\n  To retire late,\n  To eat the bread of painful labors;\n  For He gives to His beloved even in his sleep.",
+                    prayer: "Father, keep me from anxious striving. Help me work faithfully, rest peacefully, and trust Your provision."
+                ),
+                PrayerVerse(
+                    id: "psalm-127-3",
+                    reference: "Psalm 127:3",
+                    text: "Behold, children are a gift of the Lord,\n  The fruit of the womb is a reward.",
+                    prayer: "Lord, thank You for children, family, and every life entrusted as a gift from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-127-4",
+                    reference: "Psalm 127:4",
+                    text: "Like arrows in the hand of a warrior,\n  So are the children of one's youth.",
+                    prayer: "Father, help me value the next generation and steward influence, guidance, and responsibility with wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-127-5",
+                    reference: "Psalm 127:5",
+                    text: "How blessed is the man whose quiver is full of them;\n  They will not be ashamed\n  When they speak with their enemies in the gate.",
+                    prayer: "Lord, bless the household that trusts in You. Fill my life with strength, protection, and faithful legacy."
+                ),
+                PrayerVerse(
+                    id: "psalm-127-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for reminding me that every lasting work depends on You. Help me build with wisdom, labor with trust, and rest without fear. Teach me to value family, legacy, and every gift You entrust to me. May my home, work, and future be established by Your hand.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 128,
             title: "Blessed Are All Who Fear",
             chapterReference: "Psalm 128",
             summary: "Pray for blessing in family and work.",
-            verses: []
+            // JSON resource: psalm_128_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-128-1",
+                    reference: "Psalm 128:1",
+                    text: "How blessed is everyone who fears the Lord,\n  Who walks in His ways.",
+                    prayer: "Lord, bless me with a heart that fears You and walks faithfully in Your ways."
+                ),
+                PrayerVerse(
+                    id: "psalm-128-2",
+                    reference: "Psalm 128:2",
+                    text: "When you shall eat of the fruit of your hands,\n  You will be happy and it will be well with you.",
+                    prayer: "Father, bless the work of my hands and teach me to receive Your provision with gratitude and humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-128-3",
+                    reference: "Psalm 128:3",
+                    text: "Your wife shall be like a fruitful vine\n  Within your house,\n  Your children like olive plants\n  Around your table.",
+                    prayer: "Lord, let my home be filled with life, faithfulness, love, and fruitfulness according to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-128-4",
+                    reference: "Psalm 128:4",
+                    text: "Behold, for thus shall the man be blessed\n  Who fears the Lord.",
+                    prayer: "Father, thank You for the blessing that comes from revering You and walking in obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-128-5",
+                    reference: "Psalm 128:5",
+                    text: "The Lord bless you from Zion,\n  And may you see the prosperity of Jerusalem all the days of your life.",
+                    prayer: "Lord, bless me from Your presence and let me see Your goodness throughout my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-128-6",
+                    reference: "Psalm 128:6",
+                    text: "Indeed, may you see your children’s children.\n  Peace be upon Israel!",
+                    prayer: "Father, let peace, faith, and blessing continue through future generations."
+                ),
+                PrayerVerse(
+                    id: "psalm-128-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for the blessing of walking in Your ways. Teach me to fear You with reverence, work with gratitude, and build a life rooted in faithfulness. Bless my home, guide future generations, and fill my life with Your peace and goodness.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 129,
             title: "Often They Have Afflicted Me",
             chapterReference: "Psalm 129",
             summary: "Pray for endurance through persecution.",
-            verses: []
+            // JSON resource: psalm_129_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-129-1",
+                    reference: "Psalm 129:1",
+                    text: "“Many times they have persecuted me from my youth up,”\n  Let Israel now say,",
+                    prayer: "Lord, when I remember seasons of affliction, help me also remember that You have carried me through."
+                ),
+                PrayerVerse(
+                    id: "psalm-129-2",
+                    reference: "Psalm 129:2",
+                    text: "“Many times they have persecuted me from my youth up;\n  Yet they have not prevailed against me.",
+                    prayer: "Father, even when trouble has come against me many times, thank You that it has not overcome me."
+                ),
+                PrayerVerse(
+                    id: "psalm-129-3",
+                    reference: "Psalm 129:3",
+                    text: "The plowers plowed upon my back;\n  They lengthened their furrows.”",
+                    prayer: "Lord, You see every wound, burden, and painful season. Bring healing where life has left marks."
+                ),
+                PrayerVerse(
+                    id: "psalm-129-4",
+                    reference: "Psalm 129:4",
+                    text: "The Lord is righteous;\n  He has cut in two the cords of the wicked.",
+                    prayer: "Father, You are righteous and faithful. Cut me free from every cord of oppression, fear, or bondage."
+                ),
+                PrayerVerse(
+                    id: "psalm-129-5",
+                    reference: "Psalm 129:5",
+                    text: "May all who hate Zion\n  Be put to shame and turned backward;",
+                    prayer: "Lord, turn back everything that opposes Your purpose and peace in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-129-6",
+                    reference: "Psalm 129:6",
+                    text: "Let them be like grass upon the housetops,\n  Which withers before it grows up;",
+                    prayer: "Father, let what is rooted in evil wither quickly and lose its power before it grows."
+                ),
+                PrayerVerse(
+                    id: "psalm-129-7",
+                    reference: "Psalm 129:7",
+                    text: "With which the reaper does not fill his hand,\n  Or the binder of sheaves his bosom;",
+                    prayer: "Lord, protect me from empty, fruitless paths. Let my life bear lasting fruit in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-129-8",
+                    reference: "Psalm 129:8",
+                    text: "Nor do those who pass by say,\n  “The blessing of the Lord be upon you;\n  We bless you in the name of the Lord.”",
+                    prayer: "Father, let my life be marked by Your blessing, truth, and peace rather than by anything that dishonors You."
+                ),
+                PrayerVerse(
+                    id: "psalm-129-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for preserving me through affliction and for being righteous in every season. Heal what has been wounded, cut me free from oppression, and protect me from paths that lead away from You. Let my life bear lasting fruit, remain rooted in Your peace, and reflect the blessing of belonging to You.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 130,
             title: "Out of the Depths",
             chapterReference: "Psalm 130",
             summary: "Pray for forgiveness and hope.",
-            verses: []
+            // JSON resource: psalm_130_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-130-1",
+                    reference: "Psalm 130:1",
+                    text: "Out of the depths I have cried to You, O Lord.",
+                    prayer: "Lord, from the depths I cry out to You. Hear me with mercy and draw near to my need."
+                ),
+                PrayerVerse(
+                    id: "psalm-130-2",
+                    reference: "Psalm 130:2",
+                    text: "Lord, hear my voice!\n  Let Your ears be attentive\n  To the voice of my supplications.",
+                    prayer: "Father, let Your ears be attentive to my prayer and the voice of my pleading."
+                ),
+                PrayerVerse(
+                    id: "psalm-130-3",
+                    reference: "Psalm 130:3",
+                    text: "If You, Lord, should mark iniquities,\n  O Lord, who could stand?",
+                    prayer: "Lord, if You kept record of sins, no one could stand. Thank You for Your mercy."
+                ),
+                PrayerVerse(
+                    id: "psalm-130-4",
+                    reference: "Psalm 130:4",
+                    text: "But there is forgiveness with You,\n  That You may be feared.",
+                    prayer: "Father, thank You that forgiveness is found with You, so that I may worship You with reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-130-5",
+                    reference: "Psalm 130:5",
+                    text: "I wait for the Lord, my soul does wait,\n  And in His word do I hope.",
+                    prayer: "Lord, help me wait for You with hope, patience, and trust in Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-130-6",
+                    reference: "Psalm 130:6",
+                    text: "My soul waits for the Lord\n  More than the watchmen for the morning;\n  Indeed, more than the watchmen for the morning.",
+                    prayer: "Father, let my soul wait for You more than watchmen wait for the morning."
+                ),
+                PrayerVerse(
+                    id: "psalm-130-7",
+                    reference: "Psalm 130:7",
+                    text: "O Israel, hope in the Lord;\n  For with the Lord there is lovingkindness,\n  And with Him is abundant redemption.",
+                    prayer: "Lord, help me place my hope in Your lovingkindness and abundant redemption."
+                ),
+                PrayerVerse(
+                    id: "psalm-130-8",
+                    reference: "Psalm 130:8",
+                    text: "And He will redeem Israel\n  From all his iniquities.",
+                    prayer: "Father, thank You for redeeming Your people from sin. Lead me in forgiveness, freedom, and faithful hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-130-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing me from the depths and meeting me with mercy, forgiveness, and redemption. Teach me to wait for You with hope, trust Your Word, and rest in Your lovingkindness. May my soul look to You with patience and faith, knowing that abundant redemption is found in You.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 131,
             title: "My Heart is Not Proud",
             chapterReference: "Psalm 131",
             summary: "Pray for humility and quiet trust.",
-            verses: []
+            // JSON resource: psalm_131_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-131-1",
+                    reference: "Psalm 131:1",
+                    text: "O Lord, my heart is not proud, nor my eyes haughty;\n  Nor do I involve myself in great matters,\n  Or in things too difficult for me.",
+                    prayer: "Lord, keep my heart humble and my eyes from pride. Help me walk simply and faithfully before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-131-2",
+                    reference: "Psalm 131:2",
+                    text: "Surely I have composed and quieted my soul;\n  Like a weaned child rests against his mother,\n  My soul is like a weaned child within me.",
+                    prayer: "Father, quiet my soul in Your presence. Teach me to rest in You with peace, trust, and contentment."
+                ),
+                PrayerVerse(
+                    id: "psalm-131-3",
+                    reference: "Psalm 131:3",
+                    text: "O Israel, hope in the Lord\n  From this time forth and forever.",
+                    prayer: "Lord, help me place my hope in You now and forever. Let my heart remain steady in Your faithful care."
+                ),
+                PrayerVerse(
+                    id: "psalm-131-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for teaching me humility, quiet trust, and contentment in Your presence. Keep my heart from pride, calm every restless thought, and help me rest securely in Your care. May my hope remain in You now and forever.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 132,
             title: "Remember David",
             chapterReference: "Psalm 132",
             summary: "Pray for God's presence and promises.",
-            verses: []
+            // JSON resource: psalm_132_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-132-1",
+                    reference: "Psalm 132:1",
+                    text: "Remember, O Lord, on David’s behalf,\n  All his affliction;",
+                    prayer: "Lord, remember every sincere desire to honor You. Help my devotion be faithful, humble, and pleasing in Your sight."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-2",
+                    reference: "Psalm 132:2",
+                    text: "How he swore to the Lord\n  And vowed to the Mighty One of Jacob,",
+                    prayer: "Father, teach me to make commitments to You with reverence and integrity."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-3",
+                    reference: "Psalm 132:3",
+                    text: "“Surely I will not enter my house,\n  Nor lie on my bed;",
+                    prayer: "Lord, keep me from seeking only my own comfort when You are calling me to worship, obedience, and purpose."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-4",
+                    reference: "Psalm 132:4",
+                    text: "I will not give sleep to my eyes\n  Or slumber to my eyelids,",
+                    prayer: "Father, awaken spiritual urgency in me so I do not delay what honors Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-5",
+                    reference: "Psalm 132:5",
+                    text: "Until I find a place for the Lord,\n  A dwelling place for the Mighty One of Jacob.”",
+                    prayer: "Lord, help me make room for Your presence in my life, my home, and my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-6",
+                    reference: "Psalm 132:6",
+                    text: "Behold, we heard of it in Ephrathah,\n  We found it in the field of Jaar.",
+                    prayer: "Father, help me seek Your presence with diligence and joy wherever You lead me."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-7",
+                    reference: "Psalm 132:7",
+                    text: "Let us go into His dwelling place;\n  Let us worship at His footstool.",
+                    prayer: "Lord, draw me near to worship at Your footstool with humility, awe, and gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-8",
+                    reference: "Psalm 132:8",
+                    text: "Arise, O Lord, to Your resting place,\n  You and the ark of Your strength.",
+                    prayer: "Father, arise in my life with Your strength and presence. Let my heart welcome You with reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-9",
+                    reference: "Psalm 132:9",
+                    text: "Let Your priests be clothed with righteousness,\n  And let Your godly ones sing for joy.",
+                    prayer: "Lord, clothe Your people with righteousness and fill those who love You with joyful praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-10",
+                    reference: "Psalm 132:10",
+                    text: "For the sake of David Your servant,\n  Do not turn away the face of Your anointed.",
+                    prayer: "Father, for the sake of Your promises, show mercy and keep me close to Your purpose."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-11",
+                    reference: "Psalm 132:11",
+                    text: "The Lord has sworn to David\n  A truth from which He will not turn back:\n  “Of the fruit of your body I will set upon your throne.",
+                    prayer: "Lord, thank You for keeping Your promises with perfect faithfulness. Help me trust Your covenant love."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-12",
+                    reference: "Psalm 132:12",
+                    text: "If your sons will keep My covenant\n  And My testimony which I will teach them,\n  Their sons also shall sit upon your throne forever.”",
+                    prayer: "Father, help me walk in obedience and keep Your testimonies with a faithful heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-13",
+                    reference: "Psalm 132:13",
+                    text: "For the Lord has chosen Zion;\n  He has desired it for His habitation.",
+                    prayer: "Lord, thank You for choosing to dwell among Your people. Make my heart a place where Your presence is honored."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-14",
+                    reference: "Psalm 132:14",
+                    text: "“This is My resting place forever;\n  Here I will dwell, for I have desired it.",
+                    prayer: "Father, let my life be a resting place for Your presence and a place where You are welcomed."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-15",
+                    reference: "Psalm 132:15",
+                    text: "I will abundantly bless her provision;\n  I will satisfy her needy with bread.",
+                    prayer: "Lord, bless what You provide and satisfy the needy with Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-16",
+                    reference: "Psalm 132:16",
+                    text: "Her priests also I will clothe with salvation,\n  And her godly ones will sing aloud for joy.",
+                    prayer: "Father, clothe Your people with salvation and fill our hearts with joyful praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-17",
+                    reference: "Psalm 132:17",
+                    text: "There I will cause the horn of David to spring forth;\n  I have prepared a lamp for Mine anointed.",
+                    prayer: "Lord, raise up strength, hope, and light according to Your promise and purpose."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-18",
+                    reference: "Psalm 132:18",
+                    text: "His enemies I will clothe with shame,\n  But upon himself his crown shall shine.”",
+                    prayer: "Father, let what opposes Your will be covered with shame, and let Your kingdom, truth, and glory shine."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your presence, promises, provision, and faithfulness. Help me seek You with diligence, honor You above comfort, and make room for Your presence in every part of my life. Clothe me with righteousness, fill my heart with joyful praise, and keep me faithful to Your covenant truth. May my life welcome Your presence and reflect Your glory.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 133,
             title: "How Good and Pleasant",
             chapterReference: "Psalm 133",
             summary: "Pray for unity among believers.",
-            verses: []
+            // JSON resource: psalm_133_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-133-1",
+                    reference: "Psalm 133:1",
+                    text: "Behold, how good and how pleasant it is\n  For brothers to dwell together in unity!",
+                    prayer: "Lord, thank You for the blessing of unity. Help me live in peace, love, and harmony with others."
+                ),
+                PrayerVerse(
+                    id: "psalm-133-2",
+                    reference: "Psalm 133:2",
+                    text: "It is like the precious oil upon the head,\n  Coming down upon the beard,\n  Even Aaron’s beard,\n  Coming down upon the edge of his robes.",
+                    prayer: "Father, let Your presence flow through my life like precious oil, bringing healing, joy, and spiritual refreshment."
+                ),
+                PrayerVerse(
+                    id: "psalm-133-3",
+                    reference: "Psalm 133:3",
+                    text: "It is like the dew of Hermon\n  Coming down upon the mountains of Zion;\n  For there the Lord commanded the blessing—life forever.",
+                    prayer: "Lord, let Your blessing fall like refreshing dew upon my heart, renewing my faith and strengthening my soul."
+                ),
+                PrayerVerse(
+                    id: "psalm-133-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for the gift of unity among Your people. Teach me to pursue peace, encourage others, and reflect Your love in every relationship. Refresh my heart with Your presence, renew my spirit with Your grace, and let my life become a source of blessing to those around me. May I always value the unity that brings glory to Your name.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 134,
             title: "Praise the Lord at Night",
             chapterReference: "Psalm 134",
             summary: "Pray with nighttime worship and blessing.",
-            verses: []
+            // JSON resource: psalm_134_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-134-1",
+                    reference: "Psalm 134:1",
+                    text: "Behold, bless the Lord, all servants of the Lord,\n  Who serve by night in the house of the Lord!",
+                    prayer: "Lord, help me bless You faithfully in every season, whether in public worship or quiet service."
+                ),
+                PrayerVerse(
+                    id: "psalm-134-2",
+                    reference: "Psalm 134:2",
+                    text: "Lift up your hands to the sanctuary\n  And bless the Lord.",
+                    prayer: "Father, teach me to lift my hands and heart toward You with reverence, gratitude, and praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-134-3",
+                    reference: "Psalm 134:3",
+                    text: "May the Lord bless you from Zion,\n  He who made heaven and earth.",
+                    prayer: "Lord, Maker of heaven and earth, bless me from Your presence and keep my life rooted in Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-134-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for calling me to bless Your name with worship, service, and gratitude. Teach me to honor You in quiet places and public moments alike. Let my heart remain lifted toward You, and bless my life with Your presence, peace, and faithful care.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 135,
@@ -18044,63 +18476,495 @@ enum PsalmsPrayerData {
             title: "Restore Our Fortunes",
             chapterReference: "Psalm 126",
             summary: "Pray for restoration and joy.",
-            verses: []
+            // JSON resource: psalm_126_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-126-1",
+                    reference: "Psalm 126:1",
+                    text: "When the Lord brought back the captive ones of Zion,\n  We were like those who dream.",
+                    prayer: "Lord, thank You for restoring what once felt impossible. Help me recognize Your hand when joy returns after sorrow."
+                ),
+                PrayerVerse(
+                    id: "psalm-126-2",
+                    reference: "Psalm 126:2",
+                    text: "Then our mouth was filled with laughter\n  And our tongue with joyful shouting;\n  Then they said among the nations,\n  \"The Lord has done great things for them.\"",
+                    prayer: "Father, fill my mouth with laughter and my tongue with joyful praise. Let my life testify that You have done great things."
+                ),
+                PrayerVerse(
+                    id: "psalm-126-3",
+                    reference: "Psalm 126:3",
+                    text: "The Lord has done great things for us;\n  We are glad.",
+                    prayer: "Lord, You have done great things for me, and I am glad. Keep my heart grateful for Your faithfulness."
+                ),
+                PrayerVerse(
+                    id: "psalm-126-4",
+                    reference: "Psalm 126:4",
+                    text: "Restore our captivity, O Lord,\n  As the streams in the South.",
+                    prayer: "Father, restore what is dry, weary, or empty in my life like streams in the desert."
+                ),
+                PrayerVerse(
+                    id: "psalm-126-5",
+                    reference: "Psalm 126:5",
+                    text: "Those who sow in tears shall reap with joyful shouting.",
+                    prayer: "Lord, when I sow with tears, help me trust that You can bring a harvest of joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-126-6",
+                    reference: "Psalm 126:6",
+                    text: "He who goes to and fro weeping, carrying his bag of seed,\n  Shall indeed come again with a shout of joy, bringing his sheaves with him.",
+                    prayer: "Father, strengthen me to keep walking faithfully even while carrying sorrow, knowing You can turn weeping into rejoicing."
+                ),
+                PrayerVerse(
+                    id: "psalm-126-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being the God who restores, renews, and turns sorrow into joy. When I walk through dry seasons or sow with tears, help me trust Your faithfulness and keep moving forward in hope. Restore what feels empty, fill my heart with praise, and let my life testify that You have done great things.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 127,
             title: "Unless the Lord Builds",
             chapterReference: "Psalm 127",
             summary: "Pray for dependence on God in all endeavors.",
-            verses: []
+            // JSON resource: psalm_127_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-127-1",
+                    reference: "Psalm 127:1",
+                    text: "Unless the Lord builds the house,\n  They labor in vain who build it;\n  Unless the Lord guards the city,\n  The watchman keeps awake in vain.",
+                    prayer: "Lord, help me build only what You are building. Teach me to depend on You instead of relying on my own effort."
+                ),
+                PrayerVerse(
+                    id: "psalm-127-2",
+                    reference: "Psalm 127:2",
+                    text: "It is vain for you to rise up early,\n  To retire late,\n  To eat the bread of painful labors;\n  For He gives to His beloved even in his sleep.",
+                    prayer: "Father, keep me from anxious striving. Help me work faithfully, rest peacefully, and trust Your provision."
+                ),
+                PrayerVerse(
+                    id: "psalm-127-3",
+                    reference: "Psalm 127:3",
+                    text: "Behold, children are a gift of the Lord,\n  The fruit of the womb is a reward.",
+                    prayer: "Lord, thank You for children, family, and every life entrusted as a gift from You."
+                ),
+                PrayerVerse(
+                    id: "psalm-127-4",
+                    reference: "Psalm 127:4",
+                    text: "Like arrows in the hand of a warrior,\n  So are the children of one's youth.",
+                    prayer: "Father, help me value the next generation and steward influence, guidance, and responsibility with wisdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-127-5",
+                    reference: "Psalm 127:5",
+                    text: "How blessed is the man whose quiver is full of them;\n  They will not be ashamed\n  When they speak with their enemies in the gate.",
+                    prayer: "Lord, bless the household that trusts in You. Fill my life with strength, protection, and faithful legacy."
+                ),
+                PrayerVerse(
+                    id: "psalm-127-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for reminding me that every lasting work depends on You. Help me build with wisdom, labor with trust, and rest without fear. Teach me to value family, legacy, and every gift You entrust to me. May my home, work, and future be established by Your hand.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 128,
             title: "Blessed Are All Who Fear",
             chapterReference: "Psalm 128",
             summary: "Pray for blessing in family and work.",
-            verses: []
+            // JSON resource: psalm_128_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-128-1",
+                    reference: "Psalm 128:1",
+                    text: "How blessed is everyone who fears the Lord,\n  Who walks in His ways.",
+                    prayer: "Lord, bless me with a heart that fears You and walks faithfully in Your ways."
+                ),
+                PrayerVerse(
+                    id: "psalm-128-2",
+                    reference: "Psalm 128:2",
+                    text: "When you shall eat of the fruit of your hands,\n  You will be happy and it will be well with you.",
+                    prayer: "Father, bless the work of my hands and teach me to receive Your provision with gratitude and humility."
+                ),
+                PrayerVerse(
+                    id: "psalm-128-3",
+                    reference: "Psalm 128:3",
+                    text: "Your wife shall be like a fruitful vine\n  Within your house,\n  Your children like olive plants\n  Around your table.",
+                    prayer: "Lord, let my home be filled with life, faithfulness, love, and fruitfulness according to Your will."
+                ),
+                PrayerVerse(
+                    id: "psalm-128-4",
+                    reference: "Psalm 128:4",
+                    text: "Behold, for thus shall the man be blessed\n  Who fears the Lord.",
+                    prayer: "Father, thank You for the blessing that comes from revering You and walking in obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-128-5",
+                    reference: "Psalm 128:5",
+                    text: "The Lord bless you from Zion,\n  And may you see the prosperity of Jerusalem all the days of your life.",
+                    prayer: "Lord, bless me from Your presence and let me see Your goodness throughout my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-128-6",
+                    reference: "Psalm 128:6",
+                    text: "Indeed, may you see your children’s children.\n  Peace be upon Israel!",
+                    prayer: "Father, let peace, faith, and blessing continue through future generations."
+                ),
+                PrayerVerse(
+                    id: "psalm-128-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for the blessing of walking in Your ways. Teach me to fear You with reverence, work with gratitude, and build a life rooted in faithfulness. Bless my home, guide future generations, and fill my life with Your peace and goodness.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 129,
             title: "Often They Have Afflicted Me",
             chapterReference: "Psalm 129",
             summary: "Pray for endurance through persecution.",
-            verses: []
+            // JSON resource: psalm_129_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-129-1",
+                    reference: "Psalm 129:1",
+                    text: "“Many times they have persecuted me from my youth up,”\n  Let Israel now say,",
+                    prayer: "Lord, when I remember seasons of affliction, help me also remember that You have carried me through."
+                ),
+                PrayerVerse(
+                    id: "psalm-129-2",
+                    reference: "Psalm 129:2",
+                    text: "“Many times they have persecuted me from my youth up;\n  Yet they have not prevailed against me.",
+                    prayer: "Father, even when trouble has come against me many times, thank You that it has not overcome me."
+                ),
+                PrayerVerse(
+                    id: "psalm-129-3",
+                    reference: "Psalm 129:3",
+                    text: "The plowers plowed upon my back;\n  They lengthened their furrows.”",
+                    prayer: "Lord, You see every wound, burden, and painful season. Bring healing where life has left marks."
+                ),
+                PrayerVerse(
+                    id: "psalm-129-4",
+                    reference: "Psalm 129:4",
+                    text: "The Lord is righteous;\n  He has cut in two the cords of the wicked.",
+                    prayer: "Father, You are righteous and faithful. Cut me free from every cord of oppression, fear, or bondage."
+                ),
+                PrayerVerse(
+                    id: "psalm-129-5",
+                    reference: "Psalm 129:5",
+                    text: "May all who hate Zion\n  Be put to shame and turned backward;",
+                    prayer: "Lord, turn back everything that opposes Your purpose and peace in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-129-6",
+                    reference: "Psalm 129:6",
+                    text: "Let them be like grass upon the housetops,\n  Which withers before it grows up;",
+                    prayer: "Father, let what is rooted in evil wither quickly and lose its power before it grows."
+                ),
+                PrayerVerse(
+                    id: "psalm-129-7",
+                    reference: "Psalm 129:7",
+                    text: "With which the reaper does not fill his hand,\n  Or the binder of sheaves his bosom;",
+                    prayer: "Lord, protect me from empty, fruitless paths. Let my life bear lasting fruit in You."
+                ),
+                PrayerVerse(
+                    id: "psalm-129-8",
+                    reference: "Psalm 129:8",
+                    text: "Nor do those who pass by say,\n  “The blessing of the Lord be upon you;\n  We bless you in the name of the Lord.”",
+                    prayer: "Father, let my life be marked by Your blessing, truth, and peace rather than by anything that dishonors You."
+                ),
+                PrayerVerse(
+                    id: "psalm-129-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for preserving me through affliction and for being righteous in every season. Heal what has been wounded, cut me free from oppression, and protect me from paths that lead away from You. Let my life bear lasting fruit, remain rooted in Your peace, and reflect the blessing of belonging to You.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 130,
             title: "Out of the Depths",
             chapterReference: "Psalm 130",
             summary: "Pray for forgiveness and hope.",
-            verses: []
+            // JSON resource: psalm_130_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-130-1",
+                    reference: "Psalm 130:1",
+                    text: "Out of the depths I have cried to You, O Lord.",
+                    prayer: "Lord, from the depths I cry out to You. Hear me with mercy and draw near to my need."
+                ),
+                PrayerVerse(
+                    id: "psalm-130-2",
+                    reference: "Psalm 130:2",
+                    text: "Lord, hear my voice!\n  Let Your ears be attentive\n  To the voice of my supplications.",
+                    prayer: "Father, let Your ears be attentive to my prayer and the voice of my pleading."
+                ),
+                PrayerVerse(
+                    id: "psalm-130-3",
+                    reference: "Psalm 130:3",
+                    text: "If You, Lord, should mark iniquities,\n  O Lord, who could stand?",
+                    prayer: "Lord, if You kept record of sins, no one could stand. Thank You for Your mercy."
+                ),
+                PrayerVerse(
+                    id: "psalm-130-4",
+                    reference: "Psalm 130:4",
+                    text: "But there is forgiveness with You,\n  That You may be feared.",
+                    prayer: "Father, thank You that forgiveness is found with You, so that I may worship You with reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-130-5",
+                    reference: "Psalm 130:5",
+                    text: "I wait for the Lord, my soul does wait,\n  And in His word do I hope.",
+                    prayer: "Lord, help me wait for You with hope, patience, and trust in Your Word."
+                ),
+                PrayerVerse(
+                    id: "psalm-130-6",
+                    reference: "Psalm 130:6",
+                    text: "My soul waits for the Lord\n  More than the watchmen for the morning;\n  Indeed, more than the watchmen for the morning.",
+                    prayer: "Father, let my soul wait for You more than watchmen wait for the morning."
+                ),
+                PrayerVerse(
+                    id: "psalm-130-7",
+                    reference: "Psalm 130:7",
+                    text: "O Israel, hope in the Lord;\n  For with the Lord there is lovingkindness,\n  And with Him is abundant redemption.",
+                    prayer: "Lord, help me place my hope in Your lovingkindness and abundant redemption."
+                ),
+                PrayerVerse(
+                    id: "psalm-130-8",
+                    reference: "Psalm 130:8",
+                    text: "And He will redeem Israel\n  From all his iniquities.",
+                    prayer: "Father, thank You for redeeming Your people from sin. Lead me in forgiveness, freedom, and faithful hope."
+                ),
+                PrayerVerse(
+                    id: "psalm-130-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for hearing me from the depths and meeting me with mercy, forgiveness, and redemption. Teach me to wait for You with hope, trust Your Word, and rest in Your lovingkindness. May my soul look to You with patience and faith, knowing that abundant redemption is found in You.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 131,
             title: "My Heart is Not Proud",
             chapterReference: "Psalm 131",
             summary: "Pray for humility and quiet trust.",
-            verses: []
+            // JSON resource: psalm_131_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-131-1",
+                    reference: "Psalm 131:1",
+                    text: "O Lord, my heart is not proud, nor my eyes haughty;\n  Nor do I involve myself in great matters,\n  Or in things too difficult for me.",
+                    prayer: "Lord, keep my heart humble and my eyes from pride. Help me walk simply and faithfully before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-131-2",
+                    reference: "Psalm 131:2",
+                    text: "Surely I have composed and quieted my soul;\n  Like a weaned child rests against his mother,\n  My soul is like a weaned child within me.",
+                    prayer: "Father, quiet my soul in Your presence. Teach me to rest in You with peace, trust, and contentment."
+                ),
+                PrayerVerse(
+                    id: "psalm-131-3",
+                    reference: "Psalm 131:3",
+                    text: "O Israel, hope in the Lord\n  From this time forth and forever.",
+                    prayer: "Lord, help me place my hope in You now and forever. Let my heart remain steady in Your faithful care."
+                ),
+                PrayerVerse(
+                    id: "psalm-131-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for teaching me humility, quiet trust, and contentment in Your presence. Keep my heart from pride, calm every restless thought, and help me rest securely in Your care. May my hope remain in You now and forever.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 132,
             title: "Remember David",
             chapterReference: "Psalm 132",
             summary: "Pray for God's presence and promises.",
-            verses: []
+            // JSON resource: psalm_132_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-132-1",
+                    reference: "Psalm 132:1",
+                    text: "Remember, O Lord, on David’s behalf,\n  All his affliction;",
+                    prayer: "Lord, remember every sincere desire to honor You. Help my devotion be faithful, humble, and pleasing in Your sight."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-2",
+                    reference: "Psalm 132:2",
+                    text: "How he swore to the Lord\n  And vowed to the Mighty One of Jacob,",
+                    prayer: "Father, teach me to make commitments to You with reverence and integrity."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-3",
+                    reference: "Psalm 132:3",
+                    text: "“Surely I will not enter my house,\n  Nor lie on my bed;",
+                    prayer: "Lord, keep me from seeking only my own comfort when You are calling me to worship, obedience, and purpose."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-4",
+                    reference: "Psalm 132:4",
+                    text: "I will not give sleep to my eyes\n  Or slumber to my eyelids,",
+                    prayer: "Father, awaken spiritual urgency in me so I do not delay what honors Your name."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-5",
+                    reference: "Psalm 132:5",
+                    text: "Until I find a place for the Lord,\n  A dwelling place for the Mighty One of Jacob.”",
+                    prayer: "Lord, help me make room for Your presence in my life, my home, and my heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-6",
+                    reference: "Psalm 132:6",
+                    text: "Behold, we heard of it in Ephrathah,\n  We found it in the field of Jaar.",
+                    prayer: "Father, help me seek Your presence with diligence and joy wherever You lead me."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-7",
+                    reference: "Psalm 132:7",
+                    text: "Let us go into His dwelling place;\n  Let us worship at His footstool.",
+                    prayer: "Lord, draw me near to worship at Your footstool with humility, awe, and gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-8",
+                    reference: "Psalm 132:8",
+                    text: "Arise, O Lord, to Your resting place,\n  You and the ark of Your strength.",
+                    prayer: "Father, arise in my life with Your strength and presence. Let my heart welcome You with reverence."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-9",
+                    reference: "Psalm 132:9",
+                    text: "Let Your priests be clothed with righteousness,\n  And let Your godly ones sing for joy.",
+                    prayer: "Lord, clothe Your people with righteousness and fill those who love You with joyful praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-10",
+                    reference: "Psalm 132:10",
+                    text: "For the sake of David Your servant,\n  Do not turn away the face of Your anointed.",
+                    prayer: "Father, for the sake of Your promises, show mercy and keep me close to Your purpose."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-11",
+                    reference: "Psalm 132:11",
+                    text: "The Lord has sworn to David\n  A truth from which He will not turn back:\n  “Of the fruit of your body I will set upon your throne.",
+                    prayer: "Lord, thank You for keeping Your promises with perfect faithfulness. Help me trust Your covenant love."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-12",
+                    reference: "Psalm 132:12",
+                    text: "If your sons will keep My covenant\n  And My testimony which I will teach them,\n  Their sons also shall sit upon your throne forever.”",
+                    prayer: "Father, help me walk in obedience and keep Your testimonies with a faithful heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-13",
+                    reference: "Psalm 132:13",
+                    text: "For the Lord has chosen Zion;\n  He has desired it for His habitation.",
+                    prayer: "Lord, thank You for choosing to dwell among Your people. Make my heart a place where Your presence is honored."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-14",
+                    reference: "Psalm 132:14",
+                    text: "“This is My resting place forever;\n  Here I will dwell, for I have desired it.",
+                    prayer: "Father, let my life be a resting place for Your presence and a place where You are welcomed."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-15",
+                    reference: "Psalm 132:15",
+                    text: "I will abundantly bless her provision;\n  I will satisfy her needy with bread.",
+                    prayer: "Lord, bless what You provide and satisfy the needy with Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-16",
+                    reference: "Psalm 132:16",
+                    text: "Her priests also I will clothe with salvation,\n  And her godly ones will sing aloud for joy.",
+                    prayer: "Father, clothe Your people with salvation and fill our hearts with joyful praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-17",
+                    reference: "Psalm 132:17",
+                    text: "There I will cause the horn of David to spring forth;\n  I have prepared a lamp for Mine anointed.",
+                    prayer: "Lord, raise up strength, hope, and light according to Your promise and purpose."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-18",
+                    reference: "Psalm 132:18",
+                    text: "His enemies I will clothe with shame,\n  But upon himself his crown shall shine.”",
+                    prayer: "Father, let what opposes Your will be covered with shame, and let Your kingdom, truth, and glory shine."
+                ),
+                PrayerVerse(
+                    id: "psalm-132-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your presence, promises, provision, and faithfulness. Help me seek You with diligence, honor You above comfort, and make room for Your presence in every part of my life. Clothe me with righteousness, fill my heart with joyful praise, and keep me faithful to Your covenant truth. May my life welcome Your presence and reflect Your glory.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 133,
             title: "How Good and Pleasant",
             chapterReference: "Psalm 133",
             summary: "Pray for unity among believers.",
-            verses: []
+            // JSON resource: psalm_133_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-133-1",
+                    reference: "Psalm 133:1",
+                    text: "Behold, how good and how pleasant it is\n  For brothers to dwell together in unity!",
+                    prayer: "Lord, thank You for the blessing of unity. Help me live in peace, love, and harmony with others."
+                ),
+                PrayerVerse(
+                    id: "psalm-133-2",
+                    reference: "Psalm 133:2",
+                    text: "It is like the precious oil upon the head,\n  Coming down upon the beard,\n  Even Aaron’s beard,\n  Coming down upon the edge of his robes.",
+                    prayer: "Father, let Your presence flow through my life like precious oil, bringing healing, joy, and spiritual refreshment."
+                ),
+                PrayerVerse(
+                    id: "psalm-133-3",
+                    reference: "Psalm 133:3",
+                    text: "It is like the dew of Hermon\n  Coming down upon the mountains of Zion;\n  For there the Lord commanded the blessing—life forever.",
+                    prayer: "Lord, let Your blessing fall like refreshing dew upon my heart, renewing my faith and strengthening my soul."
+                ),
+                PrayerVerse(
+                    id: "psalm-133-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for the gift of unity among Your people. Teach me to pursue peace, encourage others, and reflect Your love in every relationship. Refresh my heart with Your presence, renew my spirit with Your grace, and let my life become a source of blessing to those around me. May I always value the unity that brings glory to Your name.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 134,
             title: "Praise the Lord at Night",
             chapterReference: "Psalm 134",
             summary: "Pray with nighttime worship and blessing.",
-            verses: []
+            // JSON resource: psalm_134_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-134-1",
+                    reference: "Psalm 134:1",
+                    text: "Behold, bless the Lord, all servants of the Lord,\n  Who serve by night in the house of the Lord!",
+                    prayer: "Lord, help me bless You faithfully in every season, whether in public worship or quiet service."
+                ),
+                PrayerVerse(
+                    id: "psalm-134-2",
+                    reference: "Psalm 134:2",
+                    text: "Lift up your hands to the sanctuary\n  And bless the Lord.",
+                    prayer: "Father, teach me to lift my hands and heart toward You with reverence, gratitude, and praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-134-3",
+                    reference: "Psalm 134:3",
+                    text: "May the Lord bless you from Zion,\n  He who made heaven and earth.",
+                    prayer: "Lord, Maker of heaven and earth, bless me from Your presence and keep my life rooted in Your goodness."
+                ),
+                PrayerVerse(
+                    id: "psalm-134-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for calling me to bless Your name with worship, service, and gratitude. Teach me to honor You in quiet places and public moments alike. Let my heart remain lifted toward You, and bless my life with Your presence, peace, and faithful care.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 135,
