@@ -8913,7 +8913,45 @@ enum PsalmsPrayerData {
             title: "Those Who Trust",
             chapterReference: "Psalm 125",
             summary: "Pray for steadfast trust in God.",
-            verses: []
+            // JSON resource: psalm_125_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-125-1",
+                    reference: "Psalm 125:1",
+                    text: "Those who trust in the Lord\n  Are as Mount Zion, which cannot be moved but abides forever.",
+                    prayer: "Lord, help me trust in You with an unwavering heart. Make me steadfast and secure like Mount Zion, never shaken by fear."
+                ),
+                PrayerVerse(
+                    id: "psalm-125-2",
+                    reference: "Psalm 125:2",
+                    text: "As the mountains surround Jerusalem,\n  So the Lord surrounds His people\n  From this time forth and forever.",
+                    prayer: "Father, just as the mountains surround Jerusalem, surround me with Your protection, presence, and peace forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-125-3",
+                    reference: "Psalm 125:3",
+                    text: "For the scepter of wickedness shall not rest upon the land of the righteous,\n  So that the righteous will not put forth their hands to do wrong.",
+                    prayer: "Lord, do not let wickedness rule over those who seek to follow You. Strengthen me to remain faithful and righteous."
+                ),
+                PrayerVerse(
+                    id: "psalm-125-4",
+                    reference: "Psalm 125:4",
+                    text: "Do good, O Lord, to those who are good\n  And to those who are upright in their hearts.",
+                    prayer: "Father, do good to those who seek You with sincere hearts. Shape my life to reflect Your goodness and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-125-5",
+                    reference: "Psalm 125:5",
+                    text: "But as for those who turn aside to their crooked ways,\n  The Lord will lead them away with the doers of iniquity.\n  Peace be upon Israel.",
+                    prayer: "Lord, keep me from turning aside into crooked paths. Lead me in the way of righteousness and lasting peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-125-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my unshakable foundation and faithful protector. Help me trust You completely, remain steadfast in every season, and walk in righteousness with an upright heart. Surround me with Your presence, guard me from every crooked path, and fill my life with the peace that comes from following You. May I always rest securely in Your faithful care.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 126,
@@ -17961,7 +17999,45 @@ enum PsalmsPrayerData {
             title: "Those Who Trust",
             chapterReference: "Psalm 125",
             summary: "Pray for steadfast trust in God.",
-            verses: []
+            // JSON resource: psalm_125_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-125-1",
+                    reference: "Psalm 125:1",
+                    text: "Those who trust in the Lord\n  Are as Mount Zion, which cannot be moved but abides forever.",
+                    prayer: "Lord, help me trust in You with an unwavering heart. Make me steadfast and secure like Mount Zion, never shaken by fear."
+                ),
+                PrayerVerse(
+                    id: "psalm-125-2",
+                    reference: "Psalm 125:2",
+                    text: "As the mountains surround Jerusalem,\n  So the Lord surrounds His people\n  From this time forth and forever.",
+                    prayer: "Father, just as the mountains surround Jerusalem, surround me with Your protection, presence, and peace forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-125-3",
+                    reference: "Psalm 125:3",
+                    text: "For the scepter of wickedness shall not rest upon the land of the righteous,\n  So that the righteous will not put forth their hands to do wrong.",
+                    prayer: "Lord, do not let wickedness rule over those who seek to follow You. Strengthen me to remain faithful and righteous."
+                ),
+                PrayerVerse(
+                    id: "psalm-125-4",
+                    reference: "Psalm 125:4",
+                    text: "Do good, O Lord, to those who are good\n  And to those who are upright in their hearts.",
+                    prayer: "Father, do good to those who seek You with sincere hearts. Shape my life to reflect Your goodness and truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-125-5",
+                    reference: "Psalm 125:5",
+                    text: "But as for those who turn aside to their crooked ways,\n  The Lord will lead them away with the doers of iniquity.\n  Peace be upon Israel.",
+                    prayer: "Lord, keep me from turning aside into crooked paths. Lead me in the way of righteousness and lasting peace."
+                ),
+                PrayerVerse(
+                    id: "psalm-125-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my unshakable foundation and faithful protector. Help me trust You completely, remain steadfast in every season, and walk in righteousness with an upright heart. Surround me with Your presence, guard me from every crooked path, and fill my life with the peace that comes from following You. May I always rest securely in Your faithful care.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 126,
