@@ -10644,35 +10644,429 @@ enum PsalmsPrayerData {
             title: "Praise the Lord, My Soul",
             chapterReference: "Psalm 146",
             summary: "Pray with trust in God's help.",
-            verses: []
+            // JSON resource: psalm_146_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-146-1",
+                    reference: "Psalm 146:1",
+                    text: "Praise the Lord!\n  Praise the Lord, O my soul!",
+                    prayer: "Lord, let my soul praise You with sincerity, joy, and gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-2",
+                    reference: "Psalm 146:2",
+                    text: "I will praise the Lord while I live;\n  I will sing praises to my God while I have my being.",
+                    prayer: "Father, help me praise You as long as I live and sing to You throughout every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-3",
+                    reference: "Psalm 146:3",
+                    text: "Do not trust in princes,\n  In mortal man, in whom there is no salvation.",
+                    prayer: "Lord, keep me from placing ultimate trust in people, power, or human strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-4",
+                    reference: "Psalm 146:4",
+                    text: "His spirit departs, he returns to the earth;\n  In that very day his thoughts perish.",
+                    prayer: "Father, remind me that human life is temporary, but Your faithfulness endures forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-5",
+                    reference: "Psalm 146:5",
+                    text: "How blessed is he whose help is the God of Jacob,\n  Whose hope is in the Lord his God,",
+                    prayer: "Lord, bless me with hope that rests in You, my help and my God."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-6",
+                    reference: "Psalm 146:6",
+                    text: "Who made heaven and earth,\n  The sea and all that is in them;\n  Who keeps faith forever;",
+                    prayer: "Father, You made heaven, earth, sea, and all that is in them. Help me trust Your faithful truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-7",
+                    reference: "Psalm 146:7",
+                    text: "Who executes justice for the oppressed;\n  Who gives food to the hungry.\n  The Lord sets the prisoners free.",
+                    prayer: "Lord, thank You for executing justice, feeding the hungry, and setting prisoners free."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-8",
+                    reference: "Psalm 146:8",
+                    text: "The Lord opens the eyes of the blind;\n  The Lord raises up those who are bowed down;\n  The Lord loves the righteous;",
+                    prayer: "Father, open blind eyes, lift up those who are bowed down, and help me walk in Your righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-9",
+                    reference: "Psalm 146:9",
+                    text: "The Lord protects the strangers;\n  He supports the fatherless and the widow,\n  But He thwarts the way of the wicked.",
+                    prayer: "Lord, protect the stranger, support the fatherless and widow, and teach me to reflect Your compassion."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-10",
+                    reference: "Psalm 146:10",
+                    text: "The Lord will reign forever,\n  Your God, O Zion, to all generations.\n  Praise the Lord!",
+                    prayer: "Father, You reign forever through every generation. Let my life praise Your eternal kingdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my help, hope, Creator, King, and faithful defender. Teach me not to place ultimate trust in human strength, but to rest in Your eternal faithfulness. Open my eyes, lift my heart, feed what is hungry in me, and help me reflect Your compassion toward others. May my soul praise You as long as I live.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 147,
             title: "He Heals the Brokenhearted",
             chapterReference: "Psalm 147",
             summary: "Pray in praise of God's care and power.",
-            verses: []
+            // JSON resource: psalm_147_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-147-1",
+                    reference: "Psalm 147:1",
+                    text: "Praise the Lord!\n  For it is good to sing praises to our God;\n  For it is pleasant and praise is becoming.",
+                    prayer: "Lord, it is good to sing praises to You. Let my worship be pleasant, joyful, and sincere."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-2",
+                    reference: "Psalm 147:2",
+                    text: "The Lord builds up Jerusalem;\n  He gathers the outcasts of Israel.",
+                    prayer: "Father, thank You for building up what is broken and gathering those who feel scattered or far away."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-3",
+                    reference: "Psalm 147:3",
+                    text: "He heals the brokenhearted\n  And binds up their wounds.",
+                    prayer: "Lord, heal the brokenhearted and bind up every wound with Your mercy and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-4",
+                    reference: "Psalm 147:4",
+                    text: "He counts the number of the stars;\n  He gives names to all of them.",
+                    prayer: "Father, You count the stars and call them all by name. Remind me that You also know and care for me personally."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-5",
+                    reference: "Psalm 147:5",
+                    text: "Great is our Lord and abundant in strength;\n  His understanding is infinite.",
+                    prayer: "Lord, You are great and abundant in strength. Help me trust Your wisdom beyond measure."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-6",
+                    reference: "Psalm 147:6",
+                    text: "The Lord supports the afflicted;\n  He brings down the wicked to the ground.",
+                    prayer: "Father, lift up the humble and protect me from pride, arrogance, and wickedness."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-7",
+                    reference: "Psalm 147:7",
+                    text: "Sing to the Lord with thanksgiving;\n  Sing praises to our God on the lyre,",
+                    prayer: "Lord, help me sing to You with thanksgiving and praise You with a grateful heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-8",
+                    reference: "Psalm 147:8",
+                    text: "Who covers the heavens with clouds,\n  Who provides rain for the earth,\n  Who makes grass to grow on the mountains.",
+                    prayer: "Father, thank You for covering the heavens with clouds, providing rain, and causing life to grow from the earth."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-9",
+                    reference: "Psalm 147:9",
+                    text: "He gives to the beast its food,\n  And to the young ravens which cry.",
+                    prayer: "Lord, thank You for providing for every creature. Teach me to trust Your care for my daily needs."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-10",
+                    reference: "Psalm 147:10",
+                    text: "He does not delight in the strength of the horse;\n  He does not take pleasure in the legs of a man.",
+                    prayer: "Father, remind me that You do not delight in human strength alone, but in hearts that depend on You."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-11",
+                    reference: "Psalm 147:11",
+                    text: "The Lord favors those who fear Him,\n  Those who wait for His lovingkindness.",
+                    prayer: "Lord, help me fear You with reverence and hope in Your lovingkindness."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-12",
+                    reference: "Psalm 147:12",
+                    text: "Praise the Lord, O Jerusalem!\n  Praise your God, O Zion!",
+                    prayer: "Father, help me praise You with my whole life and honor Your name with gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-13",
+                    reference: "Psalm 147:13",
+                    text: "For He has strengthened the bars of your gates;\n  He has blessed your sons within you.",
+                    prayer: "Lord, strengthen what protects my life and bless those entrusted to my care."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-14",
+                    reference: "Psalm 147:14",
+                    text: "He makes peace in your borders;\n  He satisfies you with the finest of the wheat.",
+                    prayer: "Father, bring peace within my borders and satisfy me with Your good provision."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-15",
+                    reference: "Psalm 147:15",
+                    text: "He sends forth His command to the earth;\n  His word runs very swiftly.",
+                    prayer: "Lord, send Your command and let Your Word run swiftly in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-16",
+                    reference: "Psalm 147:16",
+                    text: "He gives snow like wool;\n  He scatters the frost like ashes.",
+                    prayer: "Father, thank You for the beauty of creation and the ways it reveals Your power and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-17",
+                    reference: "Psalm 147:17",
+                    text: "He casts forth His ice as fragments;\n  Who can stand before His cold?",
+                    prayer: "Lord, even the cold and storm obey Your command. Help me trust Your authority over every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-18",
+                    reference: "Psalm 147:18",
+                    text: "He sends forth His word and melts them;\n  He causes His wind to blow and the waters to flow.",
+                    prayer: "Father, send Your Word and melt what is frozen or hardened in me. Let Your Spirit bring renewal."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-19",
+                    reference: "Psalm 147:19",
+                    text: "He declares His words to Jacob,\n  His statutes and His ordinances to Israel.",
+                    prayer: "Lord, thank You for revealing Your Word and teaching Your people Your ways."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-20",
+                    reference: "Psalm 147:20",
+                    text: "He has not dealt thus with any nation;\n  And as for His ordinances, they have not known them.\n  Praise the Lord!",
+                    prayer: "Father, thank You for the gift of knowing Your truth. Help me receive it with gratitude, obedience, and praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your healing, wisdom, provision, protection, and faithful Word. Build up what is broken, gather what feels scattered, and heal every wound in my heart. Teach me to praise You with gratitude, trust Your care in every season, and hope in Your lovingkindness. May my life honor Your truth and continually give You praise.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 148,
             title: "Praise from Heaven and Earth",
             chapterReference: "Psalm 148",
             summary: "Pray in cosmic worship of the Creator.",
-            verses: []
+            // JSON resource: psalm_148_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-148-1",
+                    reference: "Psalm 148:1",
+                    text: "Praise the Lord!\n  Praise the Lord from the heavens;\n  Praise Him in the heights!",
+                    prayer: "Lord, let my heart praise You from the highest places and honor Your name with awe and joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-2",
+                    reference: "Psalm 148:2",
+                    text: "Praise Him, all His angels;\n  Praise Him, all His hosts!",
+                    prayer: "Father, let all Your angels and heavenly hosts praise You. Help my life join creation in worship."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-3",
+                    reference: "Psalm 148:3",
+                    text: "Praise Him, sun and moon;\n  Praise Him, all stars of light!",
+                    prayer: "Lord, let the sun, moon, and shining stars remind me of Your glory and lead my heart to praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-4",
+                    reference: "Psalm 148:4",
+                    text: "Praise Him, highest heavens,\n  And the waters that are above the heavens!",
+                    prayer: "Father, let the highest heavens declare Your greatness. Teach me to see Your majesty everywhere."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-5",
+                    reference: "Psalm 148:5",
+                    text: "Let them praise the name of the Lord,\n  For He commanded and they were created.",
+                    prayer: "Lord, all creation exists because You commanded it. Help me trust Your power and authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-6",
+                    reference: "Psalm 148:6",
+                    text: "He has also established them forever and ever;\n  He has made a decree which will not pass away.",
+                    prayer: "Father, You established creation by Your faithful decree. Keep my life steady in Your unchanging truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-7",
+                    reference: "Psalm 148:7",
+                    text: "Praise the Lord from the earth,\n  Sea monsters and all deeps;",
+                    prayer: "Lord, let the earth and every creature praise You. Help me recognize Your glory in all You have made."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-8",
+                    reference: "Psalm 148:8",
+                    text: "Fire and hail, snow and clouds;\n  Stormy wind, fulfilling His word;",
+                    prayer: "Father, even fire, hail, snow, clouds, and wind obey Your Word. Teach me to trust Your rule over every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-9",
+                    reference: "Psalm 148:9",
+                    text: "Mountains and all hills;\n  Fruit trees and all cedars;",
+                    prayer: "Lord, let mountains, hills, trees, and creation\'s beauty point my heart back to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-10",
+                    reference: "Psalm 148:10",
+                    text: "Beasts and all cattle;\n  Creeping things and winged fowl;",
+                    prayer: "Father, every animal and living creature belongs to You. Help me honor You as Creator of all life."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-11",
+                    reference: "Psalm 148:11",
+                    text: "Kings of the earth and all peoples;\n  Princes and all judges of the earth;",
+                    prayer: "Lord, let rulers, nations, and all people recognize Your greatness and bow before Your authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-12",
+                    reference: "Psalm 148:12",
+                    text: "Both young men and virgins;\n  Old men and children.",
+                    prayer: "Father, let every generation, young and old, praise Your holy name together."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-13",
+                    reference: "Psalm 148:13",
+                    text: "Let them praise the name of the Lord,\n  For His name alone is exalted;\n  His glory is above earth and heaven.",
+                    prayer: "Lord, Your name alone is exalted, and Your glory is above earth and heaven. Help my life honor You."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-14",
+                    reference: "Psalm 148:14",
+                    text: "And He has lifted up a horn for His people,\n  Praise for all His godly ones;\n  Even for the sons of Israel, a people near to Him.\n  Praise the Lord!",
+                    prayer: "Father, thank You for strengthening Your people and drawing us near to praise You with joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You that all creation declares Your glory and praises Your holy name. Teach me to join heaven, earth, every generation, and every living thing in worshiping You. Help me see Your majesty in creation, trust Your authority in every season, and live near to You with gratitude and praise. May my life exalt Your name above all else.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 149,
             title: "Sing a New Song",
             chapterReference: "Psalm 149",
             summary: "Pray with joyful praise and celebration.",
-            verses: []
+            // JSON resource: psalm_149_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-149-1",
+                    reference: "Psalm 149:1",
+                    text: "Praise the Lord!\n  Sing to the Lord a new song,\n  And His praise in the congregation of the godly ones.",
+                    prayer: "Lord, help me sing a new song to You and praise You with joy among Your people."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-2",
+                    reference: "Psalm 149:2",
+                    text: "Let Israel be glad in his Maker;\n  Let the sons of Zion rejoice in their King.",
+                    prayer: "Father, let my heart rejoice in You as my Maker and King."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-3",
+                    reference: "Psalm 149:3",
+                    text: "Let them praise His name with dancing;\n  Let them sing praises to Him with timbrel and lyre.",
+                    prayer: "Lord, teach me to praise Your name with gladness, worship, and celebration."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-4",
+                    reference: "Psalm 149:4",
+                    text: "For the Lord takes pleasure in His people;\n  He will beautify the afflicted ones with salvation.",
+                    prayer: "Father, thank You for taking pleasure in Your people and adorning the humble with salvation."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-5",
+                    reference: "Psalm 149:5",
+                    text: "Let the godly ones exult in glory;\n  Let them sing for joy on their beds.",
+                    prayer: "Lord, let those who belong to You rejoice in glory and sing for joy in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-6",
+                    reference: "Psalm 149:6",
+                    text: "Let the high praises of God be in their mouth,\n  And a two-edged sword in their hand,",
+                    prayer: "Father, let praise remain in my mouth and courage remain in my heart as I stand for Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-7",
+                    reference: "Psalm 149:7",
+                    text: "To execute vengeance on the nations\n  And punishment on the peoples,",
+                    prayer: "Lord, bring justice according to Your righteousness and let Your kingdom prevail over every nation."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-8",
+                    reference: "Psalm 149:8",
+                    text: "To bind their kings with chains\n  And their nobles with fetters of iron,",
+                    prayer: "Father, remind me that every power and authority is accountable to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-9",
+                    reference: "Psalm 149:9",
+                    text: "To execute on them the judgment written;\n  This is an honor for all His godly ones.\n  Praise the Lord!",
+                    prayer: "Lord, let Your written judgment and holy justice be fulfilled according to Your will. Help my life honor You with praise and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for the joy of worship, the beauty of salvation, and the honor of belonging to You. Teach me to praise You with a new song, rejoice in Your kingship, and walk humbly in Your truth. Let praise remain on my lips, courage remain in my heart, and obedience shape my life. May everything in me honor Your name.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 150,
             title: "Let Everything That Has Breath",
             chapterReference: "Psalm 150",
             summary: "Pray in final, resounding praise of God.",
-            verses: []
+            // JSON resource: psalm_150_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-150-1",
+                    reference: "Psalm 150:1",
+                    text: "Praise the Lord!\n  Praise God in His sanctuary;\n  Praise Him in His mighty expanse.",
+                    prayer: "Lord, help me praise You in Your sanctuary and honor You in the fullness of Your mighty presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-150-2",
+                    reference: "Psalm 150:2",
+                    text: "Praise Him for His mighty deeds;\n  Praise Him according to His excellent greatness.",
+                    prayer: "Father, teach me to praise You for Your mighty deeds and according to Your excellent greatness."
+                ),
+                PrayerVerse(
+                    id: "psalm-150-3",
+                    reference: "Psalm 150:3",
+                    text: "Praise Him with trumpet sound;\n  Praise Him with harp and lyre.",
+                    prayer: "Lord, let my worship be joyful, bold, and full of gratitude for who You are."
+                ),
+                PrayerVerse(
+                    id: "psalm-150-4",
+                    reference: "Psalm 150:4",
+                    text: "Praise Him with timbrel and dancing;\n  Praise Him with stringed instruments and pipe.",
+                    prayer: "Father, let every part of my life join in praise with joy, movement, beauty, and devotion."
+                ),
+                PrayerVerse(
+                    id: "psalm-150-5",
+                    reference: "Psalm 150:5",
+                    text: "Praise Him with loud cymbals;\n  Praise Him with resounding cymbals.",
+                    prayer: "Lord, let my praise be loud, sincere, and alive before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-150-6",
+                    reference: "Psalm 150:6",
+                    text: "Let everything that has breath praise the Lord.\n  Praise the Lord!",
+                    prayer: "Father, let everything that has breath praise You. Let my life continually bless Your holy name."
+                ),
+                PrayerVerse(
+                    id: "psalm-150-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your mighty deeds, excellent greatness, and holy presence. Teach me to praise You with my whole life, with joy, gratitude, sincerity, and devotion. Let every breath You give me become worship, and may everything within me honor Your name forever.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         )
     ]
 }
@@ -21272,35 +21666,429 @@ enum PsalmsPrayerData {
             title: "Praise the Lord, My Soul",
             chapterReference: "Psalm 146",
             summary: "Pray with trust in God's help.",
-            verses: []
+            // JSON resource: psalm_146_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-146-1",
+                    reference: "Psalm 146:1",
+                    text: "Praise the Lord!\n  Praise the Lord, O my soul!",
+                    prayer: "Lord, let my soul praise You with sincerity, joy, and gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-2",
+                    reference: "Psalm 146:2",
+                    text: "I will praise the Lord while I live;\n  I will sing praises to my God while I have my being.",
+                    prayer: "Father, help me praise You as long as I live and sing to You throughout every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-3",
+                    reference: "Psalm 146:3",
+                    text: "Do not trust in princes,\n  In mortal man, in whom there is no salvation.",
+                    prayer: "Lord, keep me from placing ultimate trust in people, power, or human strength."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-4",
+                    reference: "Psalm 146:4",
+                    text: "His spirit departs, he returns to the earth;\n  In that very day his thoughts perish.",
+                    prayer: "Father, remind me that human life is temporary, but Your faithfulness endures forever."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-5",
+                    reference: "Psalm 146:5",
+                    text: "How blessed is he whose help is the God of Jacob,\n  Whose hope is in the Lord his God,",
+                    prayer: "Lord, bless me with hope that rests in You, my help and my God."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-6",
+                    reference: "Psalm 146:6",
+                    text: "Who made heaven and earth,\n  The sea and all that is in them;\n  Who keeps faith forever;",
+                    prayer: "Father, You made heaven, earth, sea, and all that is in them. Help me trust Your faithful truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-7",
+                    reference: "Psalm 146:7",
+                    text: "Who executes justice for the oppressed;\n  Who gives food to the hungry.\n  The Lord sets the prisoners free.",
+                    prayer: "Lord, thank You for executing justice, feeding the hungry, and setting prisoners free."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-8",
+                    reference: "Psalm 146:8",
+                    text: "The Lord opens the eyes of the blind;\n  The Lord raises up those who are bowed down;\n  The Lord loves the righteous;",
+                    prayer: "Father, open blind eyes, lift up those who are bowed down, and help me walk in Your righteousness."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-9",
+                    reference: "Psalm 146:9",
+                    text: "The Lord protects the strangers;\n  He supports the fatherless and the widow,\n  But He thwarts the way of the wicked.",
+                    prayer: "Lord, protect the stranger, support the fatherless and widow, and teach me to reflect Your compassion."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-10",
+                    reference: "Psalm 146:10",
+                    text: "The Lord will reign forever,\n  Your God, O Zion, to all generations.\n  Praise the Lord!",
+                    prayer: "Father, You reign forever through every generation. Let my life praise Your eternal kingdom."
+                ),
+                PrayerVerse(
+                    id: "psalm-146-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for being my help, hope, Creator, King, and faithful defender. Teach me not to place ultimate trust in human strength, but to rest in Your eternal faithfulness. Open my eyes, lift my heart, feed what is hungry in me, and help me reflect Your compassion toward others. May my soul praise You as long as I live.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 147,
             title: "He Heals the Brokenhearted",
             chapterReference: "Psalm 147",
             summary: "Pray in praise of God's care and power.",
-            verses: []
+            // JSON resource: psalm_147_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-147-1",
+                    reference: "Psalm 147:1",
+                    text: "Praise the Lord!\n  For it is good to sing praises to our God;\n  For it is pleasant and praise is becoming.",
+                    prayer: "Lord, it is good to sing praises to You. Let my worship be pleasant, joyful, and sincere."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-2",
+                    reference: "Psalm 147:2",
+                    text: "The Lord builds up Jerusalem;\n  He gathers the outcasts of Israel.",
+                    prayer: "Father, thank You for building up what is broken and gathering those who feel scattered or far away."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-3",
+                    reference: "Psalm 147:3",
+                    text: "He heals the brokenhearted\n  And binds up their wounds.",
+                    prayer: "Lord, heal the brokenhearted and bind up every wound with Your mercy and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-4",
+                    reference: "Psalm 147:4",
+                    text: "He counts the number of the stars;\n  He gives names to all of them.",
+                    prayer: "Father, You count the stars and call them all by name. Remind me that You also know and care for me personally."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-5",
+                    reference: "Psalm 147:5",
+                    text: "Great is our Lord and abundant in strength;\n  His understanding is infinite.",
+                    prayer: "Lord, You are great and abundant in strength. Help me trust Your wisdom beyond measure."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-6",
+                    reference: "Psalm 147:6",
+                    text: "The Lord supports the afflicted;\n  He brings down the wicked to the ground.",
+                    prayer: "Father, lift up the humble and protect me from pride, arrogance, and wickedness."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-7",
+                    reference: "Psalm 147:7",
+                    text: "Sing to the Lord with thanksgiving;\n  Sing praises to our God on the lyre,",
+                    prayer: "Lord, help me sing to You with thanksgiving and praise You with a grateful heart."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-8",
+                    reference: "Psalm 147:8",
+                    text: "Who covers the heavens with clouds,\n  Who provides rain for the earth,\n  Who makes grass to grow on the mountains.",
+                    prayer: "Father, thank You for covering the heavens with clouds, providing rain, and causing life to grow from the earth."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-9",
+                    reference: "Psalm 147:9",
+                    text: "He gives to the beast its food,\n  And to the young ravens which cry.",
+                    prayer: "Lord, thank You for providing for every creature. Teach me to trust Your care for my daily needs."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-10",
+                    reference: "Psalm 147:10",
+                    text: "He does not delight in the strength of the horse;\n  He does not take pleasure in the legs of a man.",
+                    prayer: "Father, remind me that You do not delight in human strength alone, but in hearts that depend on You."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-11",
+                    reference: "Psalm 147:11",
+                    text: "The Lord favors those who fear Him,\n  Those who wait for His lovingkindness.",
+                    prayer: "Lord, help me fear You with reverence and hope in Your lovingkindness."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-12",
+                    reference: "Psalm 147:12",
+                    text: "Praise the Lord, O Jerusalem!\n  Praise your God, O Zion!",
+                    prayer: "Father, help me praise You with my whole life and honor Your name with gratitude."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-13",
+                    reference: "Psalm 147:13",
+                    text: "For He has strengthened the bars of your gates;\n  He has blessed your sons within you.",
+                    prayer: "Lord, strengthen what protects my life and bless those entrusted to my care."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-14",
+                    reference: "Psalm 147:14",
+                    text: "He makes peace in your borders;\n  He satisfies you with the finest of the wheat.",
+                    prayer: "Father, bring peace within my borders and satisfy me with Your good provision."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-15",
+                    reference: "Psalm 147:15",
+                    text: "He sends forth His command to the earth;\n  His word runs very swiftly.",
+                    prayer: "Lord, send Your command and let Your Word run swiftly in my life."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-16",
+                    reference: "Psalm 147:16",
+                    text: "He gives snow like wool;\n  He scatters the frost like ashes.",
+                    prayer: "Father, thank You for the beauty of creation and the ways it reveals Your power and care."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-17",
+                    reference: "Psalm 147:17",
+                    text: "He casts forth His ice as fragments;\n  Who can stand before His cold?",
+                    prayer: "Lord, even the cold and storm obey Your command. Help me trust Your authority over every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-18",
+                    reference: "Psalm 147:18",
+                    text: "He sends forth His word and melts them;\n  He causes His wind to blow and the waters to flow.",
+                    prayer: "Father, send Your Word and melt what is frozen or hardened in me. Let Your Spirit bring renewal."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-19",
+                    reference: "Psalm 147:19",
+                    text: "He declares His words to Jacob,\n  His statutes and His ordinances to Israel.",
+                    prayer: "Lord, thank You for revealing Your Word and teaching Your people Your ways."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-20",
+                    reference: "Psalm 147:20",
+                    text: "He has not dealt thus with any nation;\n  And as for His ordinances, they have not known them.\n  Praise the Lord!",
+                    prayer: "Father, thank You for the gift of knowing Your truth. Help me receive it with gratitude, obedience, and praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-147-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your healing, wisdom, provision, protection, and faithful Word. Build up what is broken, gather what feels scattered, and heal every wound in my heart. Teach me to praise You with gratitude, trust Your care in every season, and hope in Your lovingkindness. May my life honor Your truth and continually give You praise.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 148,
             title: "Praise from Heaven and Earth",
             chapterReference: "Psalm 148",
             summary: "Pray in cosmic worship of the Creator.",
-            verses: []
+            // JSON resource: psalm_148_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-148-1",
+                    reference: "Psalm 148:1",
+                    text: "Praise the Lord!\n  Praise the Lord from the heavens;\n  Praise Him in the heights!",
+                    prayer: "Lord, let my heart praise You from the highest places and honor Your name with awe and joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-2",
+                    reference: "Psalm 148:2",
+                    text: "Praise Him, all His angels;\n  Praise Him, all His hosts!",
+                    prayer: "Father, let all Your angels and heavenly hosts praise You. Help my life join creation in worship."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-3",
+                    reference: "Psalm 148:3",
+                    text: "Praise Him, sun and moon;\n  Praise Him, all stars of light!",
+                    prayer: "Lord, let the sun, moon, and shining stars remind me of Your glory and lead my heart to praise."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-4",
+                    reference: "Psalm 148:4",
+                    text: "Praise Him, highest heavens,\n  And the waters that are above the heavens!",
+                    prayer: "Father, let the highest heavens declare Your greatness. Teach me to see Your majesty everywhere."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-5",
+                    reference: "Psalm 148:5",
+                    text: "Let them praise the name of the Lord,\n  For He commanded and they were created.",
+                    prayer: "Lord, all creation exists because You commanded it. Help me trust Your power and authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-6",
+                    reference: "Psalm 148:6",
+                    text: "He has also established them forever and ever;\n  He has made a decree which will not pass away.",
+                    prayer: "Father, You established creation by Your faithful decree. Keep my life steady in Your unchanging truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-7",
+                    reference: "Psalm 148:7",
+                    text: "Praise the Lord from the earth,\n  Sea monsters and all deeps;",
+                    prayer: "Lord, let the earth and every creature praise You. Help me recognize Your glory in all You have made."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-8",
+                    reference: "Psalm 148:8",
+                    text: "Fire and hail, snow and clouds;\n  Stormy wind, fulfilling His word;",
+                    prayer: "Father, even fire, hail, snow, clouds, and wind obey Your Word. Teach me to trust Your rule over every season."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-9",
+                    reference: "Psalm 148:9",
+                    text: "Mountains and all hills;\n  Fruit trees and all cedars;",
+                    prayer: "Lord, let mountains, hills, trees, and creation\'s beauty point my heart back to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-10",
+                    reference: "Psalm 148:10",
+                    text: "Beasts and all cattle;\n  Creeping things and winged fowl;",
+                    prayer: "Father, every animal and living creature belongs to You. Help me honor You as Creator of all life."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-11",
+                    reference: "Psalm 148:11",
+                    text: "Kings of the earth and all peoples;\n  Princes and all judges of the earth;",
+                    prayer: "Lord, let rulers, nations, and all people recognize Your greatness and bow before Your authority."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-12",
+                    reference: "Psalm 148:12",
+                    text: "Both young men and virgins;\n  Old men and children.",
+                    prayer: "Father, let every generation, young and old, praise Your holy name together."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-13",
+                    reference: "Psalm 148:13",
+                    text: "Let them praise the name of the Lord,\n  For His name alone is exalted;\n  His glory is above earth and heaven.",
+                    prayer: "Lord, Your name alone is exalted, and Your glory is above earth and heaven. Help my life honor You."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-14",
+                    reference: "Psalm 148:14",
+                    text: "And He has lifted up a horn for His people,\n  Praise for all His godly ones;\n  Even for the sons of Israel, a people near to Him.\n  Praise the Lord!",
+                    prayer: "Father, thank You for strengthening Your people and drawing us near to praise You with joy."
+                ),
+                PrayerVerse(
+                    id: "psalm-148-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You that all creation declares Your glory and praises Your holy name. Teach me to join heaven, earth, every generation, and every living thing in worshiping You. Help me see Your majesty in creation, trust Your authority in every season, and live near to You with gratitude and praise. May my life exalt Your name above all else.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 149,
             title: "Sing a New Song",
             chapterReference: "Psalm 149",
             summary: "Pray with joyful praise and celebration.",
-            verses: []
+            // JSON resource: psalm_149_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-149-1",
+                    reference: "Psalm 149:1",
+                    text: "Praise the Lord!\n  Sing to the Lord a new song,\n  And His praise in the congregation of the godly ones.",
+                    prayer: "Lord, help me sing a new song to You and praise You with joy among Your people."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-2",
+                    reference: "Psalm 149:2",
+                    text: "Let Israel be glad in his Maker;\n  Let the sons of Zion rejoice in their King.",
+                    prayer: "Father, let my heart rejoice in You as my Maker and King."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-3",
+                    reference: "Psalm 149:3",
+                    text: "Let them praise His name with dancing;\n  Let them sing praises to Him with timbrel and lyre.",
+                    prayer: "Lord, teach me to praise Your name with gladness, worship, and celebration."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-4",
+                    reference: "Psalm 149:4",
+                    text: "For the Lord takes pleasure in His people;\n  He will beautify the afflicted ones with salvation.",
+                    prayer: "Father, thank You for taking pleasure in Your people and adorning the humble with salvation."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-5",
+                    reference: "Psalm 149:5",
+                    text: "Let the godly ones exult in glory;\n  Let them sing for joy on their beds.",
+                    prayer: "Lord, let those who belong to You rejoice in glory and sing for joy in Your presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-6",
+                    reference: "Psalm 149:6",
+                    text: "Let the high praises of God be in their mouth,\n  And a two-edged sword in their hand,",
+                    prayer: "Father, let praise remain in my mouth and courage remain in my heart as I stand for Your truth."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-7",
+                    reference: "Psalm 149:7",
+                    text: "To execute vengeance on the nations\n  And punishment on the peoples,",
+                    prayer: "Lord, bring justice according to Your righteousness and let Your kingdom prevail over every nation."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-8",
+                    reference: "Psalm 149:8",
+                    text: "To bind their kings with chains\n  And their nobles with fetters of iron,",
+                    prayer: "Father, remind me that every power and authority is accountable to You."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-9",
+                    reference: "Psalm 149:9",
+                    text: "To execute on them the judgment written;\n  This is an honor for all His godly ones.\n  Praise the Lord!",
+                    prayer: "Lord, let Your written judgment and holy justice be fulfilled according to Your will. Help my life honor You with praise and obedience."
+                ),
+                PrayerVerse(
+                    id: "psalm-149-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for the joy of worship, the beauty of salvation, and the honor of belonging to You. Teach me to praise You with a new song, rejoice in Your kingship, and walk humbly in Your truth. Let praise remain on my lips, courage remain in my heart, and obedience shape my life. May everything in me honor Your name.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         ),
         PrayerDay(
             dayNumber: 150,
             title: "Let Everything That Has Breath",
             chapterReference: "Psalm 150",
             summary: "Pray in final, resounding praise of God.",
-            verses: []
+            // JSON resource: psalm_150_verses.json
+            verses: [
+                PrayerVerse(
+                    id: "psalm-150-1",
+                    reference: "Psalm 150:1",
+                    text: "Praise the Lord!\n  Praise God in His sanctuary;\n  Praise Him in His mighty expanse.",
+                    prayer: "Lord, help me praise You in Your sanctuary and honor You in the fullness of Your mighty presence."
+                ),
+                PrayerVerse(
+                    id: "psalm-150-2",
+                    reference: "Psalm 150:2",
+                    text: "Praise Him for His mighty deeds;\n  Praise Him according to His excellent greatness.",
+                    prayer: "Father, teach me to praise You for Your mighty deeds and according to Your excellent greatness."
+                ),
+                PrayerVerse(
+                    id: "psalm-150-3",
+                    reference: "Psalm 150:3",
+                    text: "Praise Him with trumpet sound;\n  Praise Him with harp and lyre.",
+                    prayer: "Lord, let my worship be joyful, bold, and full of gratitude for who You are."
+                ),
+                PrayerVerse(
+                    id: "psalm-150-4",
+                    reference: "Psalm 150:4",
+                    text: "Praise Him with timbrel and dancing;\n  Praise Him with stringed instruments and pipe.",
+                    prayer: "Father, let every part of my life join in praise with joy, movement, beauty, and devotion."
+                ),
+                PrayerVerse(
+                    id: "psalm-150-5",
+                    reference: "Psalm 150:5",
+                    text: "Praise Him with loud cymbals;\n  Praise Him with resounding cymbals.",
+                    prayer: "Lord, let my praise be loud, sincere, and alive before You."
+                ),
+                PrayerVerse(
+                    id: "psalm-150-6",
+                    reference: "Psalm 150:6",
+                    text: "Let everything that has breath praise the Lord.\n  Praise the Lord!",
+                    prayer: "Father, let everything that has breath praise You. Let my life continually bless Your holy name."
+                ),
+                PrayerVerse(
+                    id: "psalm-150-closing",
+                    reference: "Closing",
+                    text: "Lord, thank You for Your mighty deeds, excellent greatness, and holy presence. Teach me to praise You with my whole life, with joy, gratitude, sincerity, and devotion. Let every breath You give me become worship, and may everything within me honor Your name forever.",
+                    prayer: "In Jesus' name, Amen. 🙏🏻"
+                )
+            ]
         )
     ]
 }
