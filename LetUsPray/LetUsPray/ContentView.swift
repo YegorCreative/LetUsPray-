@@ -52,6 +52,7 @@ struct ContentView: View {
                     PrayerDetailView(
                         plan: viewModel.activePlan,
                         day: day,
+                        completedDayNumbers: completedDayNumbersBinding,
                         savedVerseIDs: savedVerseIDsBinding,
                         analytics: analyticsBinding
                     )

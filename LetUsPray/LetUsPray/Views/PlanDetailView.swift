@@ -122,8 +122,8 @@ struct PlanDetailView: View {
             } else {
                 Button(action: onStartJourney) {
                     PrimaryPrayerButton(
-                        title: isActive ? "Continue Journey" : "Start Journey",
-                        systemImage: isActive ? "arrow.right.circle.fill" : "play.circle.fill"
+                        title: isActive ? "Current Journey" : "Set as Current Journey",
+                        systemImage: isActive ? "checkmark.circle.fill" : "target"
                     )
                 }
                 .buttonStyle(.plain)
@@ -143,6 +143,7 @@ struct PlanDetailView: View {
                     PrayerDetailView(
                         plan: plan,
                         day: day,
+                        completedDayNumbers: $completedDayNumbers,
                         savedVerseIDs: $savedVerseIDs,
                         analytics: $analytics
                     )

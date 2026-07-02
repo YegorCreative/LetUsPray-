@@ -8,9 +8,6 @@ struct TodayView: View {
     @Binding var analytics: PrayerAnalyticsSnapshot
     let onOpenDay: (PrayerDay) -> Void
 
-    @State private var completionPulse = false
-    private let streakService = StreakService()
-
     private var activePlan: PrayerPlan {
         viewModel.activePlan
     }
@@ -38,7 +35,6 @@ struct TodayView: View {
 
                     heroCard(for: nextDay)
                     streakCard
-                    continueJourneySection(for: nextDay)
                 } else {
                     EmptyStateView(
                         title: "Coming Soon",
@@ -101,13 +97,11 @@ struct TodayView: View {
 
                     Spacer()
 
-                    Image(systemName: completionPulse ? "checkmark.seal.fill" : activePlan.coverIcon)
+                    Image(systemName: activePlan.coverIcon)
                         .font(.system(size: 28, weight: .medium))
                         .foregroundStyle(AppColors.textPrimary)
                         .padding(14)
                         .background(activePlan.category.brandGradient, in: Circle())
-                        .scaleEffect(completionPulse ? 1.08 : 1.0)
-                        .animation(.spring(response: 0.36, dampingFraction: 0.68), value: completionPulse)
                 }
 
                 Text(day.summary)
@@ -120,24 +114,11 @@ struct TodayView: View {
                     statPill(title: "Saved", value: "\(savedVerseIDs.count) prayers")
                 }
 
-                VStack(spacing: AppSpacing.medium) {
-                    Button(action: { onOpenDay(day) }) {
-                        PrimaryPrayerButton(title: "Open Today's Prayer", systemImage: "arrow.right.circle.fill")
-                    }
-                    .buttonStyle(.plain)
-                    .contentShape(Rectangle())
-
-                    Button(action: { markDayAsPrayed(dayNumber: day.dayNumber) }) {
-                        PrimaryPrayerButton(
-                            title: completedDayNumbers.contains(day.dayNumber) ? "Marked as Prayed" : "Mark as Prayed",
-                            systemImage: completedDayNumbers.contains(day.dayNumber) ? "checkmark.circle.fill" : "checkmark.circle",
-                            isSecondary: true
-                        )
-                        .scaleEffect(completionPulse ? 1.02 : 1.0)
-                    }
-                    .buttonStyle(.plain)
-                    .contentShape(Rectangle())
+                Button(action: { onOpenDay(day) }) {
+                    PrimaryPrayerButton(title: "Open Today's Prayer", systemImage: "arrow.right.circle.fill")
                 }
+                .buttonStyle(.plain)
+                .contentShape(Rectangle())
             }
         }
         .background(
@@ -186,20 +167,6 @@ struct TodayView: View {
         )
     }
 
-    private func continueJourneySection(for day: PrayerDay) -> some View {
-        VStack(alignment: .leading, spacing: AppSpacing.medium) {
-            Text("Continue Journey")
-                .font(AppTypography.headline())
-                .foregroundStyle(AppColors.textPrimary)
-
-            Button(action: { onOpenDay(day) }) {
-                JourneyDayCard(day: day, isCompleted: completedDayNumbers.contains(day.dayNumber))
-            }
-            .buttonStyle(.plain)
-            .contentShape(Rectangle())
-        }
-    }
-
     private func statPill(title: String, value: String) -> some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(title)
@@ -219,23 +186,6 @@ struct TodayView: View {
         }
     }
 
-    private func markDayAsPrayed(dayNumber: Int) {
-        guard !completedDayNumbers.contains(dayNumber) else { return }
-
-        withAnimation(.spring(response: 0.34, dampingFraction: 0.76)) {
-            completedDayNumbers.insert(dayNumber)
-            completionPulse = true
-        }
-
-        prayerStreak = streakService.updateStreak(from: prayerStreak)
-        HapticsService.markPrayerCompleted()
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
-            withAnimation(.spring(response: 0.36, dampingFraction: 0.84)) {
-                completionPulse = false
-            }
-        }
-    }
 }
 
 #Preview {
