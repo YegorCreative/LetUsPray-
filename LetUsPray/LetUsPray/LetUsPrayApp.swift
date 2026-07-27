@@ -20,4 +20,3 @@ struct LetUsPrayApp: App {
         }
     }
 }
-≈!  

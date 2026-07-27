@@ -28,6 +28,10 @@ final class PrayerPlanViewModel: ObservableObject {
         repositoryFeaturedPlans
     }
 
+    var availableJourneyPlans: [PrayerPlan] {
+        PrayerPlansRepository.availableJourneyPlans
+    }
+
     var plan: PrayerPlan {
         activePlan
     }
@@ -42,7 +46,26 @@ final class PrayerPlanViewModel: ObservableObject {
     }
 
     func planByID(_ id: String) -> PrayerPlan? {
-        repositoryPlans.first(where: { $0.id == id })
+        repositoryPlans.first(where: { $0.id == id }) ?? PrayerPlansRepository.planByID(id)
+    }
+
+    func recommendedPlan(completedDaysByPlan: [String: Int]) -> PrayerPlan? {
+        let candidates = availableJourneyPlans.filter { $0.id != activePlan.id }
+
+        return candidates.min { first, second in
+            let firstProgress = completedDaysByPlan[first.id] ?? 0
+            let secondProgress = completedDaysByPlan[second.id] ?? 0
+
+            if (firstProgress == 0) != (secondProgress == 0) {
+                return firstProgress == 0
+            }
+
+            if firstProgress != secondProgress {
+                return firstProgress < secondProgress
+            }
+
+            return first.title.localizedCaseInsensitiveCompare(second.title) == .orderedAscending
+        }
     }
 
     func greeting(for date: Date = Date(), calendar: Calendar = .current) -> String {
@@ -113,6 +136,17 @@ struct SavedPrayerVerse: Identifiable, Hashable {
     var id: String { verse.id }
 }
 
+struct HomePrayerActivity: Hashable, Codable {
+    let scriptureReference: String
+    let journeyName: String
+    let date: Date
+}
+
+struct HomeJourneyActivity: Hashable, Codable {
+    let journeyName: String
+    let date: Date
+}
+
 enum PrayerStorageKeys {
     static let completedDayNumbers = "completedPrayerDayNumbers"
     static let savedVerseIDs = "savedPrayerVerseIDs"
@@ -125,6 +159,10 @@ enum PrayerStorageKeys {
     static let completedDaysByPlan = "completedPrayerDaysByPlan"
     static let analyticsActivePlanID = "analyticsActivePlanID"
     static let onboardingCompleted = "hasCompletedOnboarding"
+    static let latestCompletedPrayerActivity = "latestCompletedPrayerActivity"
+    static let latestSavedPrayerActivity = "latestSavedPrayerActivity"
+    static let latestStartedJourneyActivity = "latestStartedJourneyActivity"
+    static let prayerCompletionDates = "prayerCompletionDates"
 }
 
 enum PrayerStorageCodec {
@@ -171,6 +209,19 @@ enum PrayerStorageCodec {
         guard let data = try? JSONEncoder().encode(serializable),
               let string = String(data: data, encoding: .utf8) else {
             return "{}"
+        }
+        return string
+    }
+
+    static func decodeValue<Value: Decodable>(_ type: Value.Type, from rawValue: String) -> Value? {
+        guard let data = rawValue.data(using: .utf8) else { return nil }
+        return try? JSONDecoder().decode(type, from: data)
+    }
+
+    static func encodeValue<Value: Encodable>(_ value: Value) -> String {
+        guard let data = try? JSONEncoder().encode(value),
+              let string = String(data: data, encoding: .utf8) else {
+            return ""
         }
         return string
     }

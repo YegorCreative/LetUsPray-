@@ -57,6 +57,10 @@ enum PrayerPlansRepository {
         psalmsJourneyEntry
     ]
 
+    static var availableJourneyPlans: [PrayerPlan] {
+        [ProverbsPrayerData.plan] + PsalmsPrayerData.allCollections
+    }
+
     static func planByID(_ id: String) -> PrayerPlan? {
         // First check the main plans list
         if let plan = allPlans.first(where: { $0.id == id }) {
