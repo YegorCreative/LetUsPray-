@@ -12,6 +12,8 @@ struct ContentView: View {
     @AppStorage(PrayerStorageKeys.completedDayNumbers) private var completedDayNumbersRawValue = ""
     @AppStorage(PrayerStorageKeys.completedDaysByPlan) private var completedDaysByPlanRawValue = "{}"
     @AppStorage(PrayerStorageKeys.savedVerseIDs) private var savedVerseIDsRawValue = ""
+    @AppStorage(PrayerStorageKeys.savedPrayerRecords) private var savedPrayerRecordsRawValue = "[]"
+    @AppStorage(PrayerStorageKeys.savedPrayerRecordsMigrationCompleted) private var savedPrayerRecordsMigrationCompleted = false
     @AppStorage(PrayerStorageKeys.currentStreak) private var currentStreak = 0
     @AppStorage(PrayerStorageKeys.longestStreak) private var longestStreak = 0
     @AppStorage(PrayerStorageKeys.lastCompletedDate) private var lastCompletedDateTimeInterval = 0.0
@@ -115,6 +117,8 @@ struct ContentView: View {
                 SavedView(
                     viewModel: viewModel,
                     savedVerseIDs: savedVerseIDsBinding,
+                    savedPrayerRecords: savedPrayerRecords,
+                    completedDayNumbersForPlan: completedDaysBinding(for:),
                     analytics: analyticsBinding
                 )
                 .background(PrayerBackground())
@@ -139,6 +143,7 @@ struct ContentView: View {
         .onAppear {
             syncActivePlan()
             syncAnalytics()
+            migrateSavedPrayerRecordsIfNeeded()
             seedExistingHomeActivityIfNeeded()
         }
         .onChange(of: activePlanID) { oldValue, newValue in
@@ -152,6 +157,7 @@ struct ContentView: View {
             syncAnalytics()
         }
         .onChange(of: savedVerseIDsRawValue) { oldValue, newValue in
+            synchronizeSavedPrayerRecords(oldValue: oldValue, newValue: newValue)
             recordSavedPrayerIfNeeded(oldValue: oldValue, newValue: newValue)
             syncAnalytics()
         }
@@ -183,6 +189,10 @@ struct ContentView: View {
             get: { PrayerStorageCodec.decodeStringSet(savedVerseIDsRawValue) },
             set: { savedVerseIDsRawValue = PrayerStorageCodec.encodeStringSet($0) }
         )
+    }
+
+    private var savedPrayerRecords: [SavedPrayerRecord] {
+        PrayerStorageCodec.decodeValue([SavedPrayerRecord].self, from: savedPrayerRecordsRawValue) ?? []
     }
 
     private var prayerStreakBinding: Binding<PrayerStreak> {
@@ -296,6 +306,45 @@ struct ContentView: View {
                 date: Date()
             )
         )
+    }
+
+    private func migrateSavedPrayerRecordsIfNeeded() {
+        guard !savedPrayerRecordsMigrationCompleted else { return }
+
+        let legacyIDs = PrayerStorageCodec.decodeStringSet(savedVerseIDsRawValue)
+        var records = savedPrayerRecords
+        let recordedIDs = Set(records.map(\.verseID))
+        let migrationDate = Date()
+
+        records.append(contentsOf: legacyIDs.subtracting(recordedIDs).map {
+            SavedPrayerRecord(verseID: $0, savedDate: migrationDate)
+        })
+        records.removeAll { !legacyIDs.contains($0.verseID) }
+
+        let encodedRecords = PrayerStorageCodec.encodeValue(records)
+        if savedPrayerRecordsRawValue != encodedRecords {
+            savedPrayerRecordsRawValue = encodedRecords
+        }
+        savedPrayerRecordsMigrationCompleted = true
+    }
+
+    private func synchronizeSavedPrayerRecords(oldValue: String, newValue: String) {
+        let oldIDs = PrayerStorageCodec.decodeStringSet(oldValue)
+        let newIDs = PrayerStorageCodec.decodeStringSet(newValue)
+        let addedIDs = newIDs.subtracting(oldIDs)
+        let removedIDs = oldIDs.subtracting(newIDs)
+        var records = savedPrayerRecords
+        let recordedIDs = Set(records.map(\.verseID))
+        let savedDate = Date()
+
+        records.append(contentsOf: addedIDs.subtracting(recordedIDs).map {
+            SavedPrayerRecord(verseID: $0, savedDate: savedDate)
+        })
+        records.removeAll { removedIDs.contains($0.verseID) }
+        savedPrayerRecordsRawValue = PrayerStorageCodec.encodeValue(records)
+        if !savedPrayerRecordsMigrationCompleted {
+            savedPrayerRecordsMigrationCompleted = true
+        }
     }
 
     private func recordStartedJourneyIfNeeded(oldPlanID: String, newPlanID: String) {

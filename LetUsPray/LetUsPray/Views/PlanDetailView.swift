@@ -13,6 +13,9 @@ struct PlanDetailView: View {
             VStack(alignment: .leading, spacing: AppSpacing.large) {
                 coverSection
                 metadataSection
+                if !plan.isPreviewPlaceholder {
+                    progressSection
+                }
                 actionSection
                 if !plan.days.isEmpty {
                     journeyDaysSection
@@ -29,6 +32,37 @@ struct PlanDetailView: View {
 
     private var planAccent: Color {
         plan.category.brandAccent
+    }
+
+    private var planProgress: PrayerPlanProgress {
+        let activeCompletedDays = completedDayNumbers
+            .intersection(Set(plan.days.map(\.dayNumber)))
+            .count
+
+        return PrayerPlanProgress(
+            completedDays: isActive
+                ? activeCompletedDays
+                : analytics.completedDaysByPlan[plan.id] ?? 0,
+            totalDays: plan.durationDays
+        )
+    }
+
+    private var nextJourneyDay: PrayerDay? {
+        plan.days.first(where: { !completedDayNumbers.contains($0.dayNumber) })
+            ?? plan.days.last
+    }
+
+    private var displayStatus: String {
+        if plan.isPreviewPlaceholder {
+            return "Preview"
+        }
+        if planProgress.status == .completed {
+            return PrayerPlanProgress.Status.completed.rawValue
+        }
+        if isActive {
+            return "Active · \(planProgress.status.rawValue)"
+        }
+        return planProgress.status.rawValue
     }
 
     private var coverSection: some View {
@@ -80,7 +114,7 @@ struct PlanDetailView: View {
                 }
 
                 HStack(spacing: AppSpacing.medium) {
-                    metadataPill(title: "Status", value: plan.days.isEmpty ? "Preview" : "Ready")
+                    metadataPill(title: "Status", value: displayStatus)
                     metadataPill(title: "Focus", value: plan.category.displayTitle)
                 }
             }
@@ -111,6 +145,50 @@ struct PlanDetailView: View {
         }
     }
 
+    private var progressSection: some View {
+        GlassCard {
+            VStack(alignment: .leading, spacing: AppSpacing.medium) {
+                HStack {
+                    Text("Journey Progress")
+                        .font(AppTypography.headline())
+                        .foregroundStyle(AppColors.textPrimary)
+
+                    Spacer()
+
+                    Text("\(planProgress.percentage)%")
+                        .font(AppTypography.headline())
+                        .foregroundStyle(planAccent)
+                }
+
+                ProgressView(value: planProgress.fractionCompleted)
+                    .tint(planAccent)
+                    .accessibilityLabel("Journey progress")
+                    .accessibilityValue("\(planProgress.percentage) percent complete")
+
+                ViewThatFits(in: .horizontal) {
+                    HStack(spacing: AppSpacing.medium) {
+                        metadataPill(title: "Total", value: "\(planProgress.totalDays) Days")
+                        metadataPill(title: "Progress", value: "\(planProgress.completedDays) Days")
+                        metadataPill(title: "Remaining", value: "\(planProgress.remainingDays) Days")
+                    }
+
+                    VStack(spacing: AppSpacing.small) {
+                        metadataPill(title: "Total", value: "\(planProgress.totalDays) Days")
+                        metadataPill(title: "Progress", value: "\(planProgress.completedDays) Days")
+                        metadataPill(title: "Remaining", value: "\(planProgress.remainingDays) Days")
+                    }
+                }
+
+                if planProgress.status == .notStarted {
+                    Text("Your journey is ready when you are. Begin with the first prayer and move at a peaceful pace.")
+                        .font(AppTypography.footnote())
+                        .foregroundStyle(AppColors.textSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+        }
+    }
+
     private var actionSection: some View {
         VStack(spacing: AppSpacing.medium) {
             if plan.days.isEmpty {
@@ -119,15 +197,41 @@ struct PlanDetailView: View {
                     message: "This prayer journey is being prepared with the same premium guided experience. You’ll be able to begin it in a future release.",
                     systemImage: "sparkles"
                 )
-            } else {
-                Button(action: onStartJourney) {
+            } else if planProgress.status == .completed {
+                PrimaryPrayerButton(
+                    title: "Journey Completed",
+                    systemImage: "checkmark.circle.fill",
+                    isSecondary: true
+                )
+                .accessibilityLabel("Journey completed")
+            } else if isActive, let nextJourneyDay {
+                NavigationLink {
+                    PrayerDetailView(
+                        plan: plan,
+                        day: nextJourneyDay,
+                        completedDayNumbers: $completedDayNumbers,
+                        savedVerseIDs: $savedVerseIDs,
+                        analytics: $analytics
+                    )
+                } label: {
                     PrimaryPrayerButton(
-                        title: isActive ? "Current Journey" : "Set as Current Journey",
-                        systemImage: isActive ? "checkmark.circle.fill" : "target"
+                        title: "Continue Journey",
+                        systemImage: "arrow.right.circle.fill"
                     )
                 }
                 .buttonStyle(.plain)
                 .contentShape(Rectangle())
+                .accessibilityHint("Opens the next prayer in this journey.")
+            } else {
+                Button(action: onStartJourney) {
+                    PrimaryPrayerButton(
+                        title: planProgress.status == .notStarted ? "Start Journey" : "Continue Journey",
+                        systemImage: planProgress.status == .notStarted ? "play.circle.fill" : "arrow.right.circle.fill"
+                    )
+                }
+                .buttonStyle(.plain)
+                .contentShape(Rectangle())
+                .accessibilityHint("Sets this as your active prayer journey.")
             }
         }
     }

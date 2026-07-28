@@ -1,4 +1,104 @@
+import AVFoundation
+import Combine
 import SwiftUI
+import UIKit
+
+private enum PrayerSpeechState {
+    case stopped
+    case playing
+    case paused
+
+    var title: String {
+        switch self {
+        case .stopped: "Stopped"
+        case .playing: "Playing"
+        case .paused: "Paused"
+        }
+    }
+
+    var systemImage: String {
+        switch self {
+        case .stopped: "speaker.wave.2"
+        case .playing: "speaker.wave.2.fill"
+        case .paused: "pause.circle.fill"
+        }
+    }
+}
+
+private enum PrayerJournalField: Hashable {
+    case personalPrayer
+    case reflection
+}
+
+@MainActor
+private final class PrayerSpeechController: NSObject, ObservableObject, @preconcurrency AVSpeechSynthesizerDelegate {
+    static let shared = PrayerSpeechController()
+
+    @Published private(set) var state: PrayerSpeechState = .stopped
+    private let synthesizer = AVSpeechSynthesizer()
+
+    private override init() {
+        super.init()
+        synthesizer.delegate = self
+    }
+
+    func play(_ text: String) {
+        stop()
+
+        let utterance = AVSpeechUtterance(string: text)
+        utterance.voice = preferredVoice
+        utterance.rate = AVSpeechUtteranceDefaultSpeechRate * 0.82
+        utterance.pitchMultiplier = 0.98
+        utterance.preUtteranceDelay = 0.15
+        utterance.postUtteranceDelay = 0.2
+
+        state = .playing
+        synthesizer.speak(utterance)
+    }
+
+    func pause() {
+        guard synthesizer.isSpeaking, !synthesizer.isPaused else { return }
+        synthesizer.pauseSpeaking(at: .word)
+        state = .paused
+    }
+
+    func resume() {
+        guard synthesizer.isPaused else { return }
+        synthesizer.continueSpeaking()
+        state = .playing
+    }
+
+    func stop() {
+        if synthesizer.isSpeaking || synthesizer.isPaused {
+            synthesizer.stopSpeaking(at: .immediate)
+        }
+        state = .stopped
+    }
+
+    func speechSynthesizer(
+        _ synthesizer: AVSpeechSynthesizer,
+        didFinish utterance: AVSpeechUtterance
+    ) {
+        state = .stopped
+    }
+
+    func speechSynthesizer(
+        _ synthesizer: AVSpeechSynthesizer,
+        didCancel utterance: AVSpeechUtterance
+    ) {
+        state = .stopped
+    }
+
+    private var preferredVoice: AVSpeechSynthesisVoice? {
+        if let deviceLanguage = Locale.preferredLanguages.first,
+           deviceLanguage.hasPrefix("en"),
+           let deviceVoice = AVSpeechSynthesisVoice(language: deviceLanguage) {
+            return deviceVoice
+        }
+
+        return AVSpeechSynthesisVoice(language: "en-US")
+    }
+}
 
 struct PrayerDetailView: View {
     let plan: PrayerPlan
@@ -6,8 +106,13 @@ struct PrayerDetailView: View {
     @Binding var completedDayNumbers: Set<Int>
     @Binding var savedVerseIDs: Set<String>
     @Binding var analytics: PrayerAnalyticsSnapshot
+    @AppStorage(PrayerStorageKeys.prayerJournalEntries) private var prayerJournalEntriesRawValue = "{}"
 
     @State private var completionPulse = false
+    @State private var copyConfirmationVisible = false
+    @State private var journalScrollTarget: PrayerJournalField?
+    @StateObject private var speechController = PrayerSpeechController.shared
+    @FocusState private var focusedJournalField: PrayerJournalField?
     private let streakService = StreakService()
 
     private var accentColor: Color {
@@ -36,16 +141,263 @@ struct PrayerDetailView: View {
                         )
                     }
 
+                    readAloudControls
+                    personalResponseSection
                     reflectionCompletionSection
                 }
             }
             .padding(.horizontal, AppSpacing.large)
             .padding(.top, AppSpacing.medium)
             .padding(.bottom, AppSpacing.xxLarge)
+            .scrollTargetLayout()
         }
+        .scrollDismissesKeyboard(.interactively)
+        .scrollPosition(id: $journalScrollTarget, anchor: .center)
         .background(PrayerBackground())
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(.hidden, for: .navigationBar)
+        .toolbar {
+            if !day.verses.isEmpty {
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    Button(action: copyPrayer) {
+                        Image(systemName: "doc.on.doc")
+                    }
+                    .accessibilityLabel("Copy prayer")
+                    .accessibilityHint("Copies the Scripture reference, Scripture text, and guided prayer.")
+
+                    ShareLink(item: sharePrayerText) {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                    .accessibilityLabel("Share prayer")
+                    .accessibilityHint("Opens the iOS share sheet with the Scripture and guided prayer.")
+                }
+            }
+        }
+        .overlay(alignment: .top) {
+            if copyConfirmationVisible {
+                Label("Prayer copied", systemImage: "checkmark")
+                    .font(AppTypography.caption())
+                    .foregroundStyle(AppColors.textPrimary)
+                    .padding(.horizontal, AppSpacing.medium)
+                    .padding(.vertical, AppSpacing.small)
+                    .background(.regularMaterial, in: Capsule())
+                    .overlay {
+                        Capsule()
+                            .stroke(AppColors.glassStroke, lineWidth: 1)
+                    }
+                    .padding(.top, AppSpacing.small)
+                    .transition(.move(edge: .top).combined(with: .opacity))
+                    .accessibilityAddTraits(.isStaticText)
+            }
+        }
+        .onDisappear {
+            speechController.stop()
+        }
+        .onChange(of: journalEntryKey) {
+            speechController.stop()
+        }
+        .onChange(of: focusedJournalField) {
+            guard let focusedJournalField else { return }
+            withAnimation(.easeInOut(duration: 0.25)) {
+                journalScrollTarget = focusedJournalField
+            }
+        }
+    }
+
+    private var readAloudControls: some View {
+        GlassCard {
+            VStack(alignment: .leading, spacing: AppSpacing.medium) {
+                Label(speechController.state.title, systemImage: speechController.state.systemImage)
+                    .font(AppTypography.callout())
+                    .foregroundStyle(AppColors.textSecondary)
+                    .accessibilityLabel("Read Aloud status: \(speechController.state.title)")
+
+                HStack(spacing: AppSpacing.medium) {
+                    switch speechController.state {
+                    case .stopped:
+                        Button {
+                            speechController.play(readAloudText)
+                        } label: {
+                            Label("Read Aloud", systemImage: "play.fill")
+                                .font(AppTypography.callout())
+                        }
+                        .accessibilityHint("Reads the Scripture reference, Scripture text, and guided prayer.")
+
+                    case .playing:
+                        Button {
+                            speechController.pause()
+                        } label: {
+                            Label("Pause", systemImage: "pause.fill")
+                                .font(AppTypography.callout())
+                        }
+                        .accessibilityHint("Pauses the prayer reading.")
+
+                    case .paused:
+                        Button {
+                            speechController.resume()
+                        } label: {
+                            Label("Resume", systemImage: "play.fill")
+                                .font(AppTypography.callout())
+                        }
+                        .accessibilityHint("Resumes the prayer reading.")
+                    }
+
+                    if speechController.state != .stopped {
+                        Button(role: .cancel) {
+                            speechController.stop()
+                        } label: {
+                            Label("Stop", systemImage: "stop.fill")
+                                .font(AppTypography.callout())
+                        }
+                        .accessibilityHint("Stops the prayer reading.")
+                    }
+                }
+                .buttonStyle(.bordered)
+                .tint(accentColor)
+            }
+        }
+    }
+
+    private var personalResponseSection: some View {
+        VStack(alignment: .leading, spacing: AppSpacing.large) {
+            journalEditorSection(
+                title: "My Prayer",
+                placeholder: "Write your own prayer...",
+                systemImage: "hands.sparkles.fill",
+                field: .personalPrayer,
+                text: personalPrayerBinding
+            )
+
+            journalEditorSection(
+                title: "Reflection",
+                placeholder: "Reflect on today's Scripture...",
+                systemImage: "heart.text.square.fill",
+                field: .reflection,
+                text: reflectionBinding
+            )
+        }
+    }
+
+    private func journalEditorSection(
+        title: String,
+        placeholder: String,
+        systemImage: String,
+        field: PrayerJournalField,
+        text: Binding<String>
+    ) -> some View {
+        GlassCard {
+            VStack(alignment: .leading, spacing: AppSpacing.medium) {
+                Label(title, systemImage: systemImage)
+                    .font(AppTypography.headline())
+                    .foregroundStyle(AppColors.textPrimary)
+
+                ZStack(alignment: .topLeading) {
+                    if text.wrappedValue.isEmpty {
+                        Text(placeholder)
+                            .font(AppTypography.body())
+                            .foregroundStyle(AppColors.textTertiary)
+                            .padding(.horizontal, AppSpacing.small)
+                            .padding(.vertical, 10)
+                            .allowsHitTesting(false)
+                    }
+
+                    TextEditor(text: text)
+                        .font(AppTypography.body())
+                        .foregroundStyle(AppColors.textPrimary)
+                        .scrollContentBackground(.hidden)
+                        .frame(minHeight: 140)
+                        .padding(AppSpacing.small)
+                        .focused($focusedJournalField, equals: field)
+                        .accessibilityLabel(title)
+                        .accessibilityHint(placeholder)
+                }
+                .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                .overlay {
+                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                        .stroke(AppColors.glassStroke, lineWidth: 1)
+                }
+
+                Text("Saved automatically")
+                    .font(AppTypography.caption())
+                    .foregroundStyle(AppColors.textTertiary)
+            }
+        }
+        .id(field)
+    }
+
+    private var journalEntryKey: String {
+        "\(plan.id)::\(day.dayNumber)"
+    }
+
+    private var copyPrayerText: String {
+        day.verses
+            .map { verse in
+                """
+                \(verse.reference)
+
+                “\(verse.text)”
+
+                Guided Prayer
+
+                “\(verse.prayer)”
+                """
+            }
+            .joined(separator: "\n\n")
+    }
+
+    private var sharePrayerText: String {
+        """
+        \(copyPrayerText)
+
+        Shared from LetUsPray
+        """
+    }
+
+    private var readAloudText: String {
+        day.verses
+            .map { verse in
+                """
+                \(verse.reference).
+                \(verse.text)
+
+                Guided Prayer.
+                \(verse.prayer)
+                """
+            }
+            .joined(separator: "\n\n")
+    }
+
+    private var journalEntries: [String: PrayerJournalEntry] {
+        PrayerStorageCodec.decodeValue(
+            [String: PrayerJournalEntry].self,
+            from: prayerJournalEntriesRawValue
+        ) ?? [:]
+    }
+
+    private var personalPrayerBinding: Binding<String> {
+        Binding(
+            get: { journalEntries[journalEntryKey]?.prayerText ?? "" },
+            set: { newValue in
+                var entries = journalEntries
+                var entry = entries[journalEntryKey] ?? .empty
+                entry.prayerText = newValue
+                entries[journalEntryKey] = entry
+                prayerJournalEntriesRawValue = PrayerStorageCodec.encodeValue(entries)
+            }
+        )
+    }
+
+    private var reflectionBinding: Binding<String> {
+        Binding(
+            get: { journalEntries[journalEntryKey]?.reflectionText ?? "" },
+            set: { newValue in
+                var entries = journalEntries
+                var entry = entries[journalEntryKey] ?? .empty
+                entry.reflectionText = newValue
+                entries[journalEntryKey] = entry
+                prayerJournalEntriesRawValue = PrayerStorageCodec.encodeValue(entries)
+            }
+        )
     }
 
     private var reflectionCompletionSection: some View {
@@ -121,6 +473,8 @@ struct PrayerDetailView: View {
     }
 
     private func completePrayer() {
+        focusedJournalField = nil
+        speechController.stop()
         guard !isCompleted else { return }
 
         var updatedDays = completedDayNumbers
@@ -138,6 +492,20 @@ struct PrayerDetailView: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
             withAnimation(.spring(response: 0.36, dampingFraction: 0.84)) {
                 completionPulse = false
+            }
+        }
+    }
+
+    private func copyPrayer() {
+        UIPasteboard.general.string = copyPrayerText
+
+        withAnimation(.easeInOut(duration: 0.2)) {
+            copyConfirmationVisible = true
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
+            withAnimation(.easeInOut(duration: 0.2)) {
+                copyConfirmationVisible = false
             }
         }
     }

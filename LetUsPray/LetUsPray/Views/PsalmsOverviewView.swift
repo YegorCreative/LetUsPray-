@@ -96,6 +96,7 @@ struct PsalmsOverviewView: View {
                     CollectionCard(
                         collection: collection,
                         completedCount: completedCount(for: collection),
+                        isActive: activePlanID == collection.id,
                         onSelect: {
                             selectedCollection = collection
                         }
@@ -131,6 +132,7 @@ struct PsalmsOverviewView: View {
 struct CollectionCard: View {
     let collection: PrayerPlan
     let completedCount: Int
+    let isActive: Bool
     let onSelect: () -> Void
     
     private var progressPercentage: Double {
@@ -139,6 +141,16 @@ struct CollectionCard: View {
     
     private var isCompleted: Bool {
         completedCount >= collection.durationDays
+    }
+
+    private var accessibilityStatus: String {
+        if isCompleted {
+            return "Completed"
+        }
+        if isActive {
+            return "Active journey"
+        }
+        return "\(Int(progressPercentage * 100)) percent complete"
     }
     
     var body: some View {
@@ -150,11 +162,15 @@ struct CollectionCard: View {
                         .foregroundStyle(AppColors.psalmsAccent)
                     
                     Spacer()
-                    
+
                     if isCompleted {
-                        Image(systemName: "checkmark.seal.fill")
-                            .font(.system(size: 16, weight: .semibold))
+                        Text("Completed")
+                            .font(AppTypography.caption())
                             .foregroundStyle(AppColors.premiumGold)
+                    } else if isActive {
+                        Text("Active")
+                            .font(AppTypography.caption())
+                            .foregroundStyle(AppColors.psalmsAccent)
                     }
                 }
                 
@@ -214,6 +230,9 @@ struct CollectionCard: View {
         }
         .buttonStyle(.plain)
         .contentShape(Rectangle())
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(collection.title), \(accessibilityStatus)")
+        .accessibilityHint("Opens plan details.")
     }
 }
 

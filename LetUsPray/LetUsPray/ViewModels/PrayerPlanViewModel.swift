@@ -117,7 +117,7 @@ final class PrayerPlanViewModel: ObservableObject {
     }
 
     func savedVerses(for savedVerseIDs: Set<String>) -> [SavedPrayerVerse] {
-        repositoryPlans.flatMap { plan in
+        availableJourneyPlans.flatMap { plan in
             plan.days.flatMap { day in
                 day.verses.compactMap { verse in
                     guard savedVerseIDs.contains(verse.id) else { return nil }
@@ -126,12 +126,51 @@ final class PrayerPlanViewModel: ObservableObject {
             }
         }
     }
+
+    func savedPrayers(for records: [SavedPrayerRecord]) -> [SavedPrayerItem] {
+        let recordByVerseID = Dictionary(
+            records.map { ($0.verseID, $0) },
+            uniquingKeysWith: { existing, _ in existing }
+        )
+
+        return availableJourneyPlans
+            .flatMap { plan in
+                plan.days.flatMap { day in
+                    day.verses.compactMap { verse in
+                        guard let record = recordByVerseID[verse.id] else { return nil }
+                        return SavedPrayerItem(plan: plan, day: day, verse: verse, record: record)
+                    }
+                }
+            }
+            .sorted {
+                if $0.record.savedDate != $1.record.savedDate {
+                    return $0.record.savedDate > $1.record.savedDate
+                }
+                return $0.verse.id < $1.verse.id
+            }
+    }
 }
 
 struct SavedPrayerVerse: Identifiable, Hashable {
     let plan: PrayerPlan
     let day: PrayerDay
     let verse: PrayerVerse
+
+    var id: String { verse.id }
+}
+
+struct SavedPrayerRecord: Identifiable, Hashable, Codable {
+    let verseID: String
+    let savedDate: Date
+
+    var id: String { verseID }
+}
+
+struct SavedPrayerItem: Identifiable, Hashable {
+    let plan: PrayerPlan
+    let day: PrayerDay
+    let verse: PrayerVerse
+    let record: SavedPrayerRecord
 
     var id: String { verse.id }
 }
@@ -147,9 +186,18 @@ struct HomeJourneyActivity: Hashable, Codable {
     let date: Date
 }
 
+struct PrayerJournalEntry: Hashable, Codable {
+    var prayerText: String
+    var reflectionText: String
+
+    static let empty = PrayerJournalEntry(prayerText: "", reflectionText: "")
+}
+
 enum PrayerStorageKeys {
     static let completedDayNumbers = "completedPrayerDayNumbers"
     static let savedVerseIDs = "savedPrayerVerseIDs"
+    static let savedPrayerRecords = "savedPrayerRecords"
+    static let savedPrayerRecordsMigrationCompleted = "savedPrayerRecordsMigrationCompleted"
     static let currentStreak = "currentPrayerStreak"
     static let longestStreak = "longestPrayerStreak"
     static let lastCompletedDate = "lastCompletedPrayerDate"
@@ -163,6 +211,7 @@ enum PrayerStorageKeys {
     static let latestSavedPrayerActivity = "latestSavedPrayerActivity"
     static let latestStartedJourneyActivity = "latestStartedJourneyActivity"
     static let prayerCompletionDates = "prayerCompletionDates"
+    static let prayerJournalEntries = "prayerJournalEntries"
 }
 
 enum PrayerStorageCodec {
