@@ -42,6 +42,9 @@ struct ContentView: View {
                 }
             }
         }
+        .onAppear {
+            migrateSavedPrayerRecordsIfNeeded()
+        }
     }
 
     private var mainAppExperience: some View {
@@ -143,7 +146,6 @@ struct ContentView: View {
         .onAppear {
             syncActivePlan()
             syncAnalytics()
-            migrateSavedPrayerRecordsIfNeeded()
             seedExistingHomeActivityIfNeeded()
         }
         .onChange(of: activePlanID) { oldValue, newValue in
