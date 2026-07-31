@@ -110,6 +110,7 @@ struct ContentView: View {
                     viewModel: viewModel,
                     activePlanID: $activePlanID,
                     completedDayNumbers: completedDayNumbersBinding,
+                    completedDayNumbersForPlan: { completedDaysBinding(for: $0) },
                     savedVerseIDs: savedVerseIDsBinding,
                     analytics: analyticsBinding
                 )

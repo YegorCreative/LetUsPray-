@@ -213,6 +213,7 @@ enum PrayerStorageKeys {
     static let prayerCompletionDates = "prayerCompletionDates"
     static let prayerJournalEntries = "prayerJournalEntries"
     static let achievementUnlockDates = "achievementUnlockDates"
+    static let journeyProgress = "prayerJourneyProgress"
 }
 
 enum PrayerStorageCodec {

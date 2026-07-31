@@ -4,6 +4,7 @@ struct PlansView: View {
     @ObservedObject var viewModel: PrayerPlanViewModel
     @Binding var activePlanID: String
     @Binding var completedDayNumbers: Set<Int>
+    let completedDayNumbersForPlan: (String) -> Binding<Set<Int>>
     @Binding var savedVerseIDs: Set<String>
     @Binding var analytics: PrayerAnalyticsSnapshot
     
@@ -40,6 +41,7 @@ struct PlansView: View {
             viewModel: viewModel,
             activePlanID: $activePlanID,
             completedDayNumbers: $completedDayNumbers,
+            completedDayNumbersForPlan: completedDayNumbersForPlan,
             savedVerseIDs: $savedVerseIDs,
             analytics: $analytics
         )
@@ -232,6 +234,7 @@ struct PlansView: View {
             viewModel: PrayerPlanViewModel(),
             activePlanID: .constant(ProverbsPrayerData.plan.id),
             completedDayNumbers: .constant([]),
+            completedDayNumbersForPlan: { _ in .constant([]) },
             savedVerseIDs: .constant([]),
             analytics: .constant(.init(completedPrayersCount: 0, savedPrayersCount: 0, activePlanID: ProverbsPrayerData.plan.id, completedDaysByPlan: [:]))
         )

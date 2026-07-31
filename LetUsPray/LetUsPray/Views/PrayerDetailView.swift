@@ -211,6 +211,7 @@ struct PrayerDetailView: View {
             speechController.stop()
         }
         .onAppear {
+            PrayerJourneyProgressStore.markOpened(planID: plan.id, session: day.dayNumber)
             if readAloudEnabled && !day.verses.isEmpty {
                 speechController.play(
                     readAloudText,
@@ -514,6 +515,7 @@ struct PrayerDetailView: View {
         }
 
         updateAnalytics(completedDaysCount: updatedDays.count)
+        PrayerJourneyProgressStore.markCompleted(planID: plan.id, session: day.dayNumber)
         updateStoredStreak()
         HapticsService.markPrayerCompleted()
 

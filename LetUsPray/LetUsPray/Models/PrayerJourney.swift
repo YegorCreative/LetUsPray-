@@ -26,6 +26,57 @@ struct PrayerJourneyMetadata: Identifiable, Hashable {
     let planID: String?
 }
 
+struct PrayerJourneyProgressRecord: Codable, Hashable {
+    var currentSession: Int
+    var lastOpenedDate: Date?
+    var lastCompletedDate: Date?
+}
+
+enum PrayerJourneyProgressStore {
+    static func record(for planID: String) -> PrayerJourneyProgressRecord? {
+        records()[planID]
+    }
+
+    static func markOpened(planID: String, session: Int) {
+        var all = records()
+        var record = all[planID] ?? PrayerJourneyProgressRecord(currentSession: session, lastOpenedDate: nil, lastCompletedDate: nil)
+        record.currentSession = max(session, 1)
+        record.lastOpenedDate = Date()
+        all[planID] = record
+        save(all)
+    }
+
+    static func markCompleted(planID: String, session: Int) {
+        var all = records()
+        var record = all[planID] ?? PrayerJourneyProgressRecord(currentSession: session, lastOpenedDate: nil, lastCompletedDate: nil)
+        record.currentSession = max(session, 1)
+        record.lastCompletedDate = Date()
+        all[planID] = record
+        save(all)
+    }
+
+    static func restart(planID: String) {
+        var all = records()
+        all[planID] = PrayerJourneyProgressRecord(currentSession: 1, lastOpenedDate: Date(), lastCompletedDate: nil)
+        save(all)
+    }
+
+    private static func records() -> [String: PrayerJourneyProgressRecord] {
+        let rawValue = UserDefaults.standard.string(forKey: PrayerStorageKeys.journeyProgress) ?? "{}"
+        guard let data = rawValue.data(using: .utf8),
+              let decoded = try? JSONDecoder().decode([String: PrayerJourneyProgressRecord].self, from: data) else {
+            return [:]
+        }
+        return decoded
+    }
+
+    private static func save(_ records: [String: PrayerJourneyProgressRecord]) {
+        guard let data = try? JSONEncoder().encode(records),
+              let rawValue = String(data: data, encoding: .utf8) else { return }
+        UserDefaults.standard.set(rawValue, forKey: PrayerStorageKeys.journeyProgress)
+    }
+}
+
 /// Presentation metadata for a journey. Prayer text remains owned by `PrayerPlan`.
 struct PrayerJourney: Identifiable, Hashable {
     let plan: PrayerPlan

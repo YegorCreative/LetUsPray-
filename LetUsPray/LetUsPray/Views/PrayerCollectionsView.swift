@@ -4,6 +4,7 @@ struct PrayerCollectionsView: View {
     @ObservedObject var viewModel: PrayerPlanViewModel
     @Binding var activePlanID: String
     @Binding var completedDayNumbers: Set<Int>
+    let completedDayNumbersForPlan: (String) -> Binding<Set<Int>>
     @Binding var savedVerseIDs: Set<String>
     @Binding var analytics: PrayerAnalyticsSnapshot
 
@@ -13,6 +14,8 @@ struct PrayerCollectionsView: View {
         ScrollView(showsIndicators: false) {
             LazyVStack(alignment: .leading, spacing: AppSpacing.medium) {
                 intro
+                recentlyContinuedSection
+                recentlyCompletedSection
                 ForEach(collections) { collection in
                     NavigationLink {
                         PrayerCollectionDetailView(
@@ -20,6 +23,7 @@ struct PrayerCollectionsView: View {
                             viewModel: viewModel,
                             activePlanID: $activePlanID,
                             completedDayNumbers: $completedDayNumbers,
+                            completedDayNumbersForPlan: completedDayNumbersForPlan,
                             savedVerseIDs: $savedVerseIDs,
                             analytics: $analytics
                         )
@@ -44,6 +48,104 @@ struct PrayerCollectionsView: View {
             .foregroundStyle(AppColors.textSecondary)
             .padding(.bottom, AppSpacing.small)
             .accessibilityElement(children: .combine)
+    }
+
+    private var allJourneys: [PrayerJourney] {
+        collections.flatMap { PrayerJourneyCatalog.journeys(in: $0.id, plans: viewModel.allPlans) }
+    }
+
+    private var inProgressJourneys: [PrayerJourney] {
+        allJourneys.filter {
+            let progress = progress(for: $0)
+            return progress.status == .inProgress
+        }.sorted {
+            (PrayerJourneyProgressStore.record(for: $0.plan.id)?.lastOpenedDate ?? .distantPast)
+                > (PrayerJourneyProgressStore.record(for: $1.plan.id)?.lastOpenedDate ?? .distantPast)
+        }
+    }
+
+    private var completedJourneys: [PrayerJourney] {
+        allJourneys.filter { progress(for: $0).status == .completed }
+            .sorted {
+                (PrayerJourneyProgressStore.record(for: $0.plan.id)?.lastCompletedDate ?? .distantPast)
+                    > (PrayerJourneyProgressStore.record(for: $1.plan.id)?.lastCompletedDate ?? .distantPast)
+            }
+    }
+
+    private var recentlyContinuedSection: some View {
+        activitySection(title: "Continue Journey", journeys: Array(inProgressJourneys.prefix(3)))
+    }
+
+    private var recentlyCompletedSection: some View {
+        activitySection(title: "Recently Completed", journeys: Array(completedJourneys.prefix(3)))
+    }
+
+    @ViewBuilder
+    private func activitySection(title: String, journeys: [PrayerJourney]) -> some View {
+        if !journeys.isEmpty {
+            VStack(alignment: .leading, spacing: AppSpacing.small) {
+                Text(title)
+                    .font(AppTypography.headline())
+                    .foregroundStyle(AppColors.textPrimary)
+                ForEach(journeys) { journey in
+                    NavigationLink {
+                        PlanDetailView(
+                            plan: journey.plan,
+                            isActive: activePlanID == journey.plan.id,
+                            completedDayNumbers: completedDayNumbersForPlan(journey.plan.id),
+                            savedVerseIDs: $savedVerseIDs,
+                            analytics: $analytics,
+                            onStartJourney: {
+                                activePlanID = journey.plan.id
+                                viewModel.setActivePlan(id: journey.plan.id)
+                            }
+                        )
+                    } label: {
+                        activityCard(journey)
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+            .transition(.opacity.combined(with: .move(edge: .top)))
+        }
+    }
+
+    private func activityCard(_ journey: PrayerJourney) -> some View {
+        let progress = progress(for: journey)
+        return GlassCard(padding: AppSpacing.medium) {
+            HStack(spacing: AppSpacing.medium) {
+                Image(systemName: journey.heroImageName)
+                    .foregroundStyle(AppColors.planAccent(named: journey.accentColorName))
+                    .frame(width: 38, height: 38)
+                    .background(AppColors.planAccent(named: journey.accentColorName).opacity(0.16), in: Circle())
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(journey.title)
+                        .font(AppTypography.headline())
+                        .foregroundStyle(AppColors.textPrimary)
+                    Text(progress.status == .completed ? "Completed" : "Session \(nextSession(for: journey)) of \(journey.sessionCount)")
+                        .font(AppTypography.caption())
+                        .foregroundStyle(AppColors.textSecondary)
+                }
+                Spacer()
+                Text("\(progress.percentage)%")
+                    .font(AppTypography.headline())
+                    .foregroundStyle(AppColors.planAccent(named: journey.accentColorName))
+            }
+        }
+    }
+
+    private func progress(for journey: PrayerJourney) -> PrayerPlanProgress {
+        if journey.plan.id == activePlanID {
+            return journey.progress(completedSessionNumbers: completedDayNumbers)
+        }
+        return PrayerPlanProgress(
+            completedDays: analytics.completedDaysByPlan[journey.plan.id] ?? 0,
+            totalDays: journey.sessionCount
+        )
+    }
+
+    private func nextSession(for journey: PrayerJourney) -> Int {
+        PrayerJourneyProgressStore.record(for: journey.plan.id)?.currentSession ?? (progress(for: journey).completedDays + 1)
     }
 
     private func collectionCard(_ collection: JourneyCollection) -> some View {
@@ -73,6 +175,13 @@ struct PrayerCollectionsView: View {
                     Text("\(journeys.count) journey\(journeys.count == 1 ? "" : "s")")
                         .font(AppTypography.caption())
                         .foregroundStyle(accent)
+                    let completed = journeys.filter { progress(for: $0).status == .completed }.count
+                    let inProgress = journeys.filter { progress(for: $0).status == .inProgress }.count
+                    if completed > 0 || inProgress > 0 {
+                        Text("\(inProgress) in progress · \(completed) completed")
+                            .font(AppTypography.caption())
+                            .foregroundStyle(AppColors.textTertiary)
+                    }
                 }
 
                 Spacer(minLength: AppSpacing.small)
@@ -101,6 +210,7 @@ struct PrayerCollectionDetailView: View {
     @ObservedObject var viewModel: PrayerPlanViewModel
     @Binding var activePlanID: String
     @Binding var completedDayNumbers: Set<Int>
+    let completedDayNumbersForPlan: (String) -> Binding<Set<Int>>
     @Binding var savedVerseIDs: Set<String>
     @Binding var analytics: PrayerAnalyticsSnapshot
 
@@ -190,7 +300,7 @@ struct PrayerCollectionDetailView: View {
             PlanDetailView(
                 plan: journey.plan,
                 isActive: activePlanID == journey.plan.id,
-                completedDayNumbers: $completedDayNumbers,
+                completedDayNumbers: completedDayNumbersForPlan(journey.plan.id),
                 savedVerseIDs: $savedVerseIDs,
                 analytics: $analytics,
                 onStartJourney: {

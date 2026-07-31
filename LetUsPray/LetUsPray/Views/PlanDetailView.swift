@@ -10,6 +10,7 @@ struct PlanDetailView: View {
     let onViewCollection: () -> Void
     @State private var isMarkedFavorite = false
     @State private var isSavedForLater = false
+    @State private var journeyProgressRecord: PrayerJourneyProgressRecord?
 
     private var journey: PrayerJourney {
         PrayerJourneyCatalog.journey(for: plan)
@@ -39,6 +40,9 @@ struct PlanDetailView: View {
                 coverSection
                 metadataSection
                 progressSection
+                if planProgress.status == .completed {
+                    completionBanner
+                }
                 actionSection
                 secondaryActionsSection
                 if !plan.days.isEmpty {
@@ -53,6 +57,9 @@ struct PlanDetailView: View {
         .navigationTitle(plan.title)
         .navigationBarTitleDisplayMode(.large)
         .toolbarBackground(.hidden, for: .navigationBar)
+        .onAppear {
+            journeyProgressRecord = PrayerJourneyProgressStore.record(for: plan.id)
+        }
     }
 
     private var planAccent: Color {
@@ -75,6 +82,10 @@ struct PlanDetailView: View {
     private var nextJourneyDay: PrayerDay? {
         plan.days.first(where: { !completedDayNumbers.contains($0.dayNumber) })
             ?? plan.days.last
+    }
+
+    private var currentSession: Int {
+        nextJourneyDay?.dayNumber ?? journeyProgressRecord?.currentSession ?? 1
     }
 
     private var displayStatus: String {
@@ -220,6 +231,14 @@ struct PlanDetailView: View {
                         Text("\(planProgress.completedDays) of \(planProgress.totalDays) sessions complete")
                             .font(AppTypography.caption())
                             .foregroundStyle(AppColors.textTertiary)
+                        Text("Current session: \(currentSession)")
+                            .font(AppTypography.caption())
+                            .foregroundStyle(AppColors.textTertiary)
+                        if let completedDate = journeyProgressRecord?.lastCompletedDate {
+                            Text("Completed \(completedDate.formatted(date: .abbreviated, time: .omitted))")
+                                .font(AppTypography.caption())
+                                .foregroundStyle(AppColors.textTertiary)
+                        }
                     }
                 }
                 Spacer(minLength: 0)
@@ -254,6 +273,15 @@ struct PlanDetailView: View {
         }
     }
 
+    private var completionBanner: some View {
+        GlassCard {
+            Label("Journey complete", systemImage: "checkmark.seal.fill")
+                .font(AppTypography.headline())
+                .foregroundStyle(planAccent)
+                .accessibilityElement(children: .combine)
+        }
+    }
+
     private var actionSection: some View {
         VStack(spacing: AppSpacing.medium) {
             if plan.days.isEmpty {
@@ -265,6 +293,8 @@ struct PlanDetailView: View {
             } else if planProgress.status == .completed {
                 Button {
                     completedDayNumbers = []
+                    PrayerJourneyProgressStore.restart(planID: plan.id)
+                    journeyProgressRecord = PrayerJourneyProgressStore.record(for: plan.id)
                     onStartJourney()
                 } label: {
                     PrimaryPrayerButton(
