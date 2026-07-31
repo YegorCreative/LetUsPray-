@@ -49,6 +49,42 @@ enum PrayerJourneyAssetStatus: String, CaseIterable, Codable, Hashable {
     case archived = "Archived"
 }
 
+enum PrayerJourneyQAStatus: String, CaseIterable, Codable, Hashable {
+    case notStarted = "Not Started"
+    case inProgress = "In Progress"
+    case readyForReview = "Ready for Review"
+    case approved = "Approved"
+    case failed = "Failed"
+    case blocked = "Blocked"
+}
+
+enum PrayerJourneyQACategory: String, CaseIterable, Codable, Hashable {
+    case metadata = "Metadata Validation"
+    case scripture = "Scripture Validation"
+    case prayer = "Prayer Validation"
+    case navigation = "Navigation Validation"
+    case accessibility = "Accessibility Validation"
+    case localization = "Localization Validation"
+    case assets = "Asset Validation"
+    case performance = "Performance Validation"
+    case visual = "Visual Validation"
+}
+
+struct PrayerJourneyQAMetadata: Hashable, Codable {
+    let status: PrayerJourneyQAStatus
+    let owner: String
+    let startedDate: String?
+    let completedDate: String?
+    let approvalDate: String?
+    let releaseBlocker: Bool
+    let criticalIssues: Int
+    let majorIssues: Int
+    let minorIssues: Int
+    let knownIssues: String?
+    let notes: String?
+    let completedCategories: Set<PrayerJourneyQACategory>
+}
+
 struct PrayerJourneyAssetMetadata: Identifiable, Hashable, Codable {
     let id: String
     let kind: String
@@ -134,6 +170,7 @@ struct PrayerJourneyMetadata: Identifiable, Hashable {
     let supportedLanguages: [String]
     let localizations: [PrayerJourneyLocalizationMetadata]
     let assets: [PrayerJourneyAssetMetadata]
+    let qa: PrayerJourneyQAMetadata
 }
 
 struct PrayerJourneyProgressRecord: Codable, Hashable {
@@ -323,9 +360,10 @@ enum PrayerJourneyCatalog {
         let missingWorkflowMetadata: [String]
         let localizationIssues: [String]
         let assetIssues: [String]
+        let qaIssues: [String]
 
         var isValid: Bool {
-            duplicateIDs.isEmpty && duplicateTitles.isEmpty && missingCollections.isEmpty && invalidSortOrders.isEmpty && incompleteMetadata.isEmpty && missingArtwork.isEmpty && missingRequirements.isEmpty && invalidWorkflowTransitions.isEmpty && missingWorkflowMetadata.isEmpty && localizationIssues.isEmpty && assetIssues.isEmpty
+            duplicateIDs.isEmpty && duplicateTitles.isEmpty && missingCollections.isEmpty && invalidSortOrders.isEmpty && incompleteMetadata.isEmpty && missingArtwork.isEmpty && missingRequirements.isEmpty && invalidWorkflowTransitions.isEmpty && missingWorkflowMetadata.isEmpty && localizationIssues.isEmpty && assetIssues.isEmpty && qaIssues.isEmpty
         }
     }
 
@@ -381,7 +419,13 @@ enum PrayerJourneyCatalog {
             }
             return assets.isEmpty || duplicateIDs || !validAssets || missingVariants || missingLocalized
         }.map(\.id).sorted()
-        return ValidationReport(duplicateIDs: ids, duplicateTitles: titles, missingCollections: missingCollections, invalidSortOrders: invalidSortOrders, incompleteMetadata: incompleteMetadata, missingArtwork: missingArtwork, missingRequirements: missingRequirements, invalidWorkflowTransitions: invalidWorkflowTransitions, missingWorkflowMetadata: missingWorkflowMetadata, localizationIssues: localizationIssues, assetIssues: assetIssues)
+        let qaIssues = metadata.filter { item in
+            let qa = item.qa
+            let released = item.workflowStage == .released || item.contentState == .available
+            let incompleteCategories = qa.completedCategories.count != PrayerJourneyQACategory.allCases.count
+            return qa.owner.isEmpty || qa.releaseBlocker || qa.criticalIssues > 0 || (released && (qa.status != .approved || qa.approvalDate == nil || incompleteCategories)) || (qa.status == .failed && released)
+        }.map(\.id).sorted()
+        return ValidationReport(duplicateIDs: ids, duplicateTitles: titles, missingCollections: missingCollections, invalidSortOrders: invalidSortOrders, incompleteMetadata: incompleteMetadata, missingArtwork: missingArtwork, missingRequirements: missingRequirements, invalidWorkflowTransitions: invalidWorkflowTransitions, missingWorkflowMetadata: missingWorkflowMetadata, localizationIssues: localizationIssues, assetIssues: assetIssues, qaIssues: qaIssues)
     }
 
     static func journey(for plan: PrayerPlan) -> PrayerJourney {
@@ -494,6 +538,7 @@ enum PrayerJourneyCatalog {
             , sourceLanguage: "en", supportedLanguages: ["en"]
             , localizations: [PrayerJourneyLocalizationMetadata(id: "en", languageCode: "en", localizedTitle: title, localizedSubtitle: subtitle, localizedDescription: subtitle, localizedHeroImageName: hero, localizedCollectionTitle: collection.title, status: .published, completionPercentage: 100, translator: "Source", reviewer: "Unassigned", lastUpdated: "2026-07-31", publishedVersion: planID == nil ? nil : "1.0")]
             , assets: [PrayerJourneyAssetMetadata(id: "\(id)-hero", kind: "Hero", reference: hero, darkModeReference: hero, lightModeReference: hero, localizedReferences: ["en": hero], version: 1, author: "LetUsPray Editorial", status: planID == nil ? .placeholder : .published, updatedDate: "2026-07-31")]
+            , qa: PrayerJourneyQAMetadata(status: planID == nil ? .notStarted : .approved, owner: "Unassigned", startedDate: planID == nil ? nil : "2026-07-31", completedDate: planID == nil ? nil : "2026-07-31", approvalDate: planID == nil ? nil : "2026-07-31", releaseBlocker: false, criticalIssues: 0, majorIssues: 0, minorIssues: 0, knownIssues: nil, notes: nil, completedCategories: planID == nil ? [] : Set(PrayerJourneyQACategory.allCases))
         )
     }
 
@@ -518,6 +563,7 @@ enum PrayerJourneyCatalog {
             , sourceLanguage: "en", supportedLanguages: ["en"]
             , localizations: [PrayerJourneyLocalizationMetadata(id: "en", languageCode: "en", localizedTitle: plan.title, localizedSubtitle: plan.subtitle, localizedDescription: plan.description, localizedHeroImageName: plan.coverIcon, localizedCollectionTitle: collectionID(for: plan).title, status: .published, completionPercentage: 100, translator: "Source", reviewer: "Unassigned", lastUpdated: "2026-07-31", publishedVersion: "1.0")]
             , assets: [PrayerJourneyAssetMetadata(id: "\(plan.id)-hero", kind: "Hero", reference: plan.coverIcon, darkModeReference: plan.coverIcon, lightModeReference: plan.coverIcon, localizedReferences: ["en": plan.coverIcon], version: 1, author: "LetUsPray Editorial", status: .published, updatedDate: "2026-07-31")]
+            , qa: PrayerJourneyQAMetadata(status: .approved, owner: "Unassigned", startedDate: "2026-07-31", completedDate: "2026-07-31", approvalDate: "2026-07-31", releaseBlocker: false, criticalIssues: 0, majorIssues: 0, minorIssues: 0, knownIssues: nil, notes: nil, completedCategories: Set(PrayerJourneyQACategory.allCases))
         )
     }
 

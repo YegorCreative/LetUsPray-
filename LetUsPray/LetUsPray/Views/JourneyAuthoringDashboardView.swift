@@ -55,6 +55,16 @@ struct JourneyAuthoringDashboardView: View {
                     .foregroundStyle(report.assetIssues.isEmpty ? .green : .orange)
             }
 
+            Section("QA Health") {
+                healthRow("Approved", value: "\(qaCount(.approved))", systemImage: "checkmark.seal.fill")
+                healthRow("Ready for review", value: "\(qaCount(.readyForReview))", systemImage: "eye.fill")
+                healthRow("Failed", value: "\(qaCount(.failed))", systemImage: "xmark.octagon.fill")
+                healthRow("Blocked", value: "\(qaCount(.blocked))", systemImage: "exclamationmark.octagon.fill")
+                healthRow("Release readiness", value: "\(qaReadiness)%", systemImage: "shippingbox.fill")
+                Label(report.qaIssues.isEmpty ? "QA validation passed" : "QA needs attention", systemImage: report.qaIssues.isEmpty ? "checkmark.circle" : "exclamationmark.triangle")
+                    .foregroundStyle(report.qaIssues.isEmpty ? .green : .orange)
+            }
+
             Section("Collections") {
                 ForEach(PrayerJourneyCatalog.collections) { collection in
                     let journeys = metadata.filter { $0.collection == collection.id }
@@ -118,6 +128,20 @@ struct JourneyAuthoringDashboardView: View {
         return assets.reduce(0) { total, asset in
             total + (asset.status == .published || asset.status == .approved ? 100 : asset.status == .missing ? 0 : 50)
         } / assets.count
+    }
+
+    private func qaCount(_ status: PrayerJourneyQAStatus) -> Int {
+        metadata.filter { $0.qa.status == status }.count
+    }
+
+    private var qaReadiness: Int {
+        guard !metadata.isEmpty else { return 0 }
+        return metadata.reduce(0) { total, item in
+            let qa = item.qa
+            let categoryScore = qa.completedCategories.count * 100 / PrayerJourneyQACategory.allCases.count
+            let statusScore = qa.status == .approved ? 100 : qa.status == .readyForReview ? 75 : qa.status == .inProgress ? 50 : 0
+            return total + min(categoryScore, statusScore)
+        } / metadata.count
     }
 }
 
