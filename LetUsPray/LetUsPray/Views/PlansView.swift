@@ -36,24 +36,13 @@ struct PlansView: View {
     }
 
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(alignment: .leading, spacing: AppSpacing.large) {
-                featuredSection
-                browseSection
-            }
-            .padding(.horizontal, AppSpacing.large)
-            .padding(.top, AppSpacing.medium)
-            .padding(.bottom, AppSpacing.xxLarge)
-        }
-        .toolbarBackground(.hidden, for: .navigationBar)
-        .navigationDestination(isPresented: $showPsalmsOverview) {
-            PsalmsOverviewView(
-                activePlanID: $activePlanID,
-                completedDayNumbers: $completedDayNumbers,
-                savedVerseIDs: $savedVerseIDs,
-                analytics: $analytics
-            )
-        }
+        PrayerCollectionsView(
+            viewModel: viewModel,
+            activePlanID: $activePlanID,
+            completedDayNumbers: $completedDayNumbers,
+            savedVerseIDs: $savedVerseIDs,
+            analytics: $analytics
+        )
     }
 
     private var featuredSection: some View {
