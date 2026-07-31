@@ -39,7 +39,7 @@ struct ContentView: View {
             if hasCompletedOnboarding {
                 mainAppExperience
             } else {
-                OnboardingView {
+                OnboardingView { _ in
                     hasCompletedOnboarding = true
                     syncActivePlan()
                     syncAnalytics()

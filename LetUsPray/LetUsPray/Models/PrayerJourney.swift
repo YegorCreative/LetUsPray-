@@ -146,6 +146,21 @@ enum PrayerCollectionID: String, Codable, CaseIterable, Hashable, Identifiable {
         case .personal: "Personal"
         }
     }
+
+    var iconName: String {
+        switch self {
+        case .scripture: "book.closed.fill"
+        case .family: "figure.2.and.child.holdinghands"
+        case .church: "building.columns.fill"
+        case .missions: "globe.americas.fill"
+        case .healing: "heart.text.square.fill"
+        case .christianLiving: "leaf.fill"
+        case .life: "sun.max.fill"
+        case .seasonal: "calendar"
+        case .devotionals: "sparkles"
+        case .personal: "person.crop.circle.fill"
+        }
+    }
 }
 
 enum PrayerJourneyCatalog {

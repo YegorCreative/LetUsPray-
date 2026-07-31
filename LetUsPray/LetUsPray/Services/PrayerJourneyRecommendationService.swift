@@ -26,6 +26,7 @@ enum PrayerJourneyRecommendationService {
         journeys: [PrayerJourney],
         completedDaysByPlan: [String: Int],
         activePlanID: String,
+        preferredCollections: Set<PrayerCollectionID> = [],
         now: Date = Date(),
         calendar: Calendar = .current
     ) -> PrayerJourneyRecommendationSections {
@@ -57,10 +58,13 @@ enum PrayerJourneyRecommendationService {
 
         let recommendedCandidates: [PrayerJourney]
         if isNewUser {
-            recommendedCandidates = unfinished.filter { $0.isFeatured }
+            let preferred = unfinished.filter { preferredCollections.contains($0.collection) }
+            recommendedCandidates = preferred.isEmpty ? unfinished.filter { $0.isFeatured } : preferred
         } else {
             let recentCollection = collectionOfMostRecentCompletion(from: completedRecently)
-            recommendedCandidates = unfinished.filter { $0.isRecommended || $0.collection == recentCollection }
+            recommendedCandidates = unfinished.filter {
+                preferredCollections.contains($0.collection) || $0.isRecommended || $0.collection == recentCollection
+            }
         }
         let recommended = recommendedCandidates
             .filter { !continueJourney.contains($0) }

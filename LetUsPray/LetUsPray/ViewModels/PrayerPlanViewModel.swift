@@ -216,6 +216,7 @@ enum PrayerStorageKeys {
     static let journeyProgress = "prayerJourneyProgress"
     static let savedJourneyIDs = "savedPrayerJourneyIDs"
     static let favoriteJourneyIDs = "favoritePrayerJourneyIDs"
+    static let onboardingInterests = "onboardingPrayerInterests"
 }
 
 enum PrayerStorageCodec {
