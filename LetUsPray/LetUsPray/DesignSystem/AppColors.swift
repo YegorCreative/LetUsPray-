@@ -1,61 +1,73 @@
 import SwiftUI
+import UIKit
 
+/// Semantic colors for the product. Every color adapts to the system appearance.
 enum AppColors {
-    static let voltLime = Color(red: 0.72, green: 1.00, blue: 0.00)
-    static let activityPink = Color(red: 1.00, green: 0.18, blue: 0.33)
-    static let electricCyan = Color(red: 0.00, green: 0.85, blue: 1.00)
-    static let premiumGold = Color(red: 0.83, green: 0.69, blue: 0.22)
-    static let deepGraphite = Color(red: 0.07, green: 0.07, blue: 0.09)
-    static let cardDarkSurface = Color(red: 0.11, green: 0.11, blue: 0.12)
+    static let background = adaptive(light: UIColor(red: 0.97, green: 0.97, blue: 0.96, alpha: 1), dark: UIColor(red: 0.07, green: 0.08, blue: 0.10, alpha: 1))
+    static let secondaryBackground = adaptive(light: UIColor(red: 0.93, green: 0.94, blue: 0.93, alpha: 1), dark: UIColor(red: 0.11, green: 0.13, blue: 0.16, alpha: 1))
+    static let surface = adaptive(light: .white, dark: UIColor(red: 0.13, green: 0.15, blue: 0.18, alpha: 1))
+    static let elevatedSurface = adaptive(light: .white, dark: UIColor(red: 0.17, green: 0.19, blue: 0.23, alpha: 1))
+    static let primaryText = adaptive(light: UIColor(red: 0.09, green: 0.10, blue: 0.12, alpha: 1), dark: UIColor(red: 0.96, green: 0.97, blue: 0.98, alpha: 1))
+    static let secondaryText = adaptive(light: UIColor(red: 0.32, green: 0.36, blue: 0.42, alpha: 1), dark: UIColor(red: 0.76, green: 0.79, blue: 0.84, alpha: 1))
+    static let tertiaryText = adaptive(light: UIColor(red: 0.40, green: 0.44, blue: 0.50, alpha: 1), dark: UIColor(red: 0.61, green: 0.65, blue: 0.71, alpha: 1))
+    static let textPrimary = primaryText
+    static let textSecondary = secondaryText
+    static let textTertiary = tertiaryText
+    static let accent = adaptive(light: UIColor(red: 0.12, green: 0.32, blue: 0.78, alpha: 1), dark: UIColor(red: 0.50, green: 0.68, blue: 1.00, alpha: 1))
+    static let success = adaptive(light: UIColor(red: 0.09, green: 0.45, blue: 0.27, alpha: 1), dark: UIColor(red: 0.35, green: 0.82, blue: 0.52, alpha: 1))
+    static let warning = adaptive(light: UIColor(red: 0.58, green: 0.34, blue: 0.02, alpha: 1), dark: UIColor(red: 1.00, green: 0.72, blue: 0.27, alpha: 1))
+    static let error = adaptive(light: UIColor(red: 0.72, green: 0.12, blue: 0.13, alpha: 1), dark: UIColor(red: 1.00, green: 0.42, blue: 0.43, alpha: 1))
+    static let separator = adaptive(light: UIColor.black.withAlphaComponent(0.12), dark: UIColor.white.withAlphaComponent(0.16))
 
-    // Compatibility aliases retained for existing call sites. These now map to the bold Activity-inspired identity.
+    // Named accents remain available to existing screens and now use an accessible palette.
+    static let voltLime = accent
+    static let activityPink = adaptive(light: UIColor(red: 0.76, green: 0.18, blue: 0.32, alpha: 1), dark: UIColor(red: 1.00, green: 0.43, blue: 0.56, alpha: 1))
+    static let electricCyan = adaptive(light: UIColor(red: 0.02, green: 0.42, blue: 0.62, alpha: 1), dark: UIColor(red: 0.35, green: 0.78, blue: 0.96, alpha: 1))
+    static let premiumGold = adaptive(light: UIColor(red: 0.57, green: 0.36, blue: 0.02, alpha: 1), dark: UIColor(red: 1.00, green: 0.78, blue: 0.32, alpha: 1))
+    static let deepGraphite = background
+    static let cardDarkSurface = surface
+
+    // Compatibility aliases retained for existing call sites.
     static let prayerBlue = electricCyan
-    static let faithTurquoise = voltLime
+    static let faithTurquoise = accent
     static let deepMaroon = activityPink
-    static let warmCream = cardDarkSurface
-    static let softIvory = Color.white
+    static let warmCream = surface
+    static let softIvory = primaryText
     static let goldAccent = premiumGold
-
-    static let midnight = deepGraphite
-    static let twilight = cardDarkSurface
-    static let dawn = electricCyan.opacity(0.78)
-    static let pearl = cardDarkSurface
-    static let mist = Color.white.opacity(0.82)
-    static let accent = voltLime
+    static let midnight = background
+    static let twilight = secondaryBackground
+    static let dawn = electricCyan
+    static let pearl = surface
+    static let mist = secondaryText
     static let accentStrong = activityPink
     static let secondaryAccent = electricCyan
     static let psalmsAccent = electricCyan
     static let gospelAccent = premiumGold
     static let gratitudeAccent = activityPink
     static let familyAccent = electricCyan
-    static let encouragementAccent = voltLime
+    static let encouragementAccent = accent
     static let prayerGold = premiumGold
-    static let success = voltLime
-    static let textPrimary = Color.white.opacity(0.96)
-    static let textSecondary = Color.white.opacity(0.70)
-    static let textTertiary = Color.white.opacity(0.48)
-    static let brightTextOnAccent = Color(red: 0.03, green: 0.03, blue: 0.04)
-    static let glassFill = cardDarkSurface.opacity(0.58)
-    static let glassStroke = Color.white.opacity(0.13)
+    static let brightTextOnAccent = adaptive(light: .white, dark: UIColor(red: 0.04, green: 0.07, blue: 0.12, alpha: 1))
+    static let glassFill = elevatedSurface.opacity(0.92)
+    static let glassStroke = separator
     static let glassHighlight = Color.white.opacity(0.10)
-    static let shadow = Color.black.opacity(0.36)
+    static let shadow = Color.black.opacity(0.16)
 
     static func planAccent(named name: String) -> Color {
         switch name {
-        case "wisdom":
-            return voltLime
-        case "psalms":
-            return electricCyan
-        case "gospel":
-            return premiumGold
-        case "gratitude":
-            return activityPink
-        case "family":
-            return electricCyan
-        case "encouragement":
-            return voltLime
-        default:
-            return voltLime
+        case "wisdom": return accent
+        case "psalms": return electricCyan
+        case "gospel": return premiumGold
+        case "gratitude": return activityPink
+        case "family": return electricCyan
+        case "encouragement": return accent
+        default: return accent
         }
+    }
+
+    private static func adaptive(light: UIColor, dark: UIColor) -> Color {
+        Color(uiColor: UIColor { traits in
+            traits.userInterfaceStyle == .dark ? dark : light
+        })
     }
 }
