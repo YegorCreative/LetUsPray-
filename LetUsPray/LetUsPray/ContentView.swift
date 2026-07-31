@@ -27,6 +27,7 @@ struct ContentView: View {
     @AppStorage(PrayerStorageKeys.latestSavedPrayerActivity) private var latestSavedPrayerActivityRawValue = ""
     @AppStorage(PrayerStorageKeys.latestStartedJourneyActivity) private var latestStartedJourneyActivityRawValue = ""
     @AppStorage(PrayerStorageKeys.prayerCompletionDates) private var prayerCompletionDatesRawValue = "[]"
+    @AppStorage(PrayerStorageKeys.achievementUnlockDates) private var achievementUnlockDatesRawValue = "{}"
     @State private var selectedTodayDay: PrayerDay?
     @State private var selectedHomePlan: PrayerPlan?
     @State private var selectedTab = 0
@@ -163,6 +164,7 @@ struct ContentView: View {
             syncActivePlan()
             syncAnalytics()
             seedExistingHomeActivityIfNeeded()
+            evaluateAchievements()
         }
         .onChange(of: activePlanID) { oldValue, newValue in
             recordStartedJourneyIfNeeded(oldPlanID: oldValue, newPlanID: newValue)
@@ -173,15 +175,21 @@ struct ContentView: View {
             recordCompletedPrayerIfNeeded(oldValue: oldValue, newValue: newValue)
             syncLegacyCompletedDays()
             syncAnalytics()
+            evaluateAchievements()
         }
         .onChange(of: savedVerseIDsRawValue) { oldValue, newValue in
             synchronizeSavedPrayerRecords(oldValue: oldValue, newValue: newValue)
             recordSavedPrayerIfNeeded(oldValue: oldValue, newValue: newValue)
             syncAnalytics()
+            evaluateAchievements()
+        }
+        .onChange(of: longestStreak) {
+            evaluateAchievements()
         }
         .onChange(of: scenePhase) { _, newPhase in
             if newPhase == .active {
                 refreshStreak()
+                evaluateAchievements()
             }
         }
     }
@@ -288,6 +296,36 @@ struct ContentView: View {
 
         if refreshed != existing {
             prayerStreakBinding.wrappedValue = refreshed
+        }
+    }
+
+    private func evaluateAchievements() {
+        let completedDaysByPlan = PrayerStorageCodec.decodeCompletedDaysByPlan(completedDaysByPlanRawValue)
+        let completedJourneyCount = viewModel.availableJourneyPlans.reduce(into: 0) { count, plan in
+            let requiredDays = Set(plan.days.map(\.dayNumber))
+            let completedDays = completedDaysByPlan[plan.id] ?? []
+
+            if !requiredDays.isEmpty && requiredDays.isSubset(of: completedDays) {
+                count += 1
+            }
+        }
+        let progress = AchievementProgress(
+            completedPrayerCount: completedDaysByPlan.values.reduce(0) { $0 + $1.count },
+            longestStreak: longestStreak,
+            completedJourneyCount: completedJourneyCount,
+            savedPrayerCount: PrayerStorageCodec.decodeStringSet(savedVerseIDsRawValue).count
+        )
+        let existing = PrayerStorageCodec.decodeValue(
+            [String: Date].self,
+            from: achievementUnlockDatesRawValue
+        ) ?? [:]
+        let updated = AchievementService().updatedUnlockDates(
+            from: existing,
+            progress: progress
+        )
+
+        if updated != existing {
+            achievementUnlockDatesRawValue = PrayerStorageCodec.encodeValue(updated)
         }
     }
 

@@ -53,6 +53,7 @@ struct TodayView: View {
 
                 recommendedJourneySection
                 recentActivitySection
+                achievementsEntry
                 quickActionsSection
                 prayerCalendarSection
                 prayerThemesSection
@@ -282,6 +283,41 @@ struct TodayView: View {
                 quickAction(title: "Saved", systemImage: "bookmark.fill", action: onOpenSaved)
             }
         }
+    }
+
+    private var achievementsEntry: some View {
+        NavigationLink {
+            AchievementsView()
+        } label: {
+            GlassCard {
+                HStack(spacing: AppSpacing.medium) {
+                    Image(systemName: "sparkles")
+                        .font(.system(size: 20, weight: .semibold))
+                        .foregroundStyle(AppColors.premiumGold)
+                        .frame(width: 44, height: 44)
+                        .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Achievements")
+                            .font(AppTypography.headline())
+                            .foregroundStyle(AppColors.textPrimary)
+
+                        Text("Reflect on meaningful steps in your prayer journey")
+                            .font(AppTypography.footnote())
+                            .foregroundStyle(AppColors.textSecondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+
+                    Spacer(minLength: 0)
+
+                    Image(systemName: "chevron.right")
+                        .foregroundStyle(AppColors.textTertiary)
+                        .accessibilityHidden(true)
+                }
+            }
+        }
+        .buttonStyle(.plain)
+        .accessibilityHint("Opens your prayer achievements.")
     }
 
     private var prayerCalendarSection: some View {
