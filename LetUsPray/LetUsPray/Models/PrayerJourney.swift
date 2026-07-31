@@ -31,6 +31,30 @@ enum PrayerJourneyWorkflowStage: String, CaseIterable, Codable, Hashable {
     var order: Int { Self.allCases.firstIndex(of: self) ?? 0 }
 }
 
+enum PrayerJourneyTranslationStatus: String, CaseIterable, Codable, Hashable {
+    case notStarted = "Not Started"
+    case inTranslation = "In Translation"
+    case underReview = "Under Review"
+    case readyForQA = "Ready for QA"
+    case published = "Published"
+}
+
+struct PrayerJourneyLocalizationMetadata: Identifiable, Hashable, Codable {
+    let id: String
+    let languageCode: String
+    let localizedTitle: String
+    let localizedSubtitle: String
+    let localizedDescription: String
+    let localizedHeroImageName: String?
+    let localizedCollectionTitle: String?
+    let status: PrayerJourneyTranslationStatus
+    let completionPercentage: Int
+    let translator: String
+    let reviewer: String
+    let lastUpdated: String
+    let publishedVersion: String?
+}
+
 enum PrayerJourneyDifficulty: String, Codable, CaseIterable, Hashable {
     case gentle = "Gentle"
     case steady = "Steady"
@@ -83,6 +107,9 @@ struct PrayerJourneyMetadata: Identifiable, Hashable {
     let releaseNotes: String?
     let blockingIssuesCount: Int
     let reviewComments: String?
+    let sourceLanguage: String
+    let supportedLanguages: [String]
+    let localizations: [PrayerJourneyLocalizationMetadata]
 }
 
 struct PrayerJourneyProgressRecord: Codable, Hashable {
@@ -270,9 +297,10 @@ enum PrayerJourneyCatalog {
         let missingRequirements: [String]
         let invalidWorkflowTransitions: [String]
         let missingWorkflowMetadata: [String]
+        let localizationIssues: [String]
 
         var isValid: Bool {
-            duplicateIDs.isEmpty && duplicateTitles.isEmpty && missingCollections.isEmpty && invalidSortOrders.isEmpty && incompleteMetadata.isEmpty && missingArtwork.isEmpty && missingRequirements.isEmpty && invalidWorkflowTransitions.isEmpty && missingWorkflowMetadata.isEmpty
+            duplicateIDs.isEmpty && duplicateTitles.isEmpty && missingCollections.isEmpty && invalidSortOrders.isEmpty && incompleteMetadata.isEmpty && missingArtwork.isEmpty && missingRequirements.isEmpty && invalidWorkflowTransitions.isEmpty && missingWorkflowMetadata.isEmpty && localizationIssues.isEmpty
         }
     }
 
@@ -301,7 +329,19 @@ enum PrayerJourneyCatalog {
                 return false
             }
         }.map(\.id).sorted()
-        return ValidationReport(duplicateIDs: ids, duplicateTitles: titles, missingCollections: missingCollections, invalidSortOrders: invalidSortOrders, incompleteMetadata: incompleteMetadata, missingArtwork: missingArtwork, missingRequirements: missingRequirements, invalidWorkflowTransitions: invalidWorkflowTransitions, missingWorkflowMetadata: missingWorkflowMetadata)
+        let localizationIssues = metadata.filter { item in
+            let codes = item.localizations.map(\.languageCode)
+            let duplicateCodes = Set(codes).count != codes.count
+            let validCodes = codes.allSatisfy { code in
+                code.range(of: "^[a-z]{2,3}(-[A-Z]{2})?$", options: .regularExpression) != nil
+            }
+            let sourceMissing = !codes.contains(item.sourceLanguage)
+            let publishedIncomplete = item.localizations.contains {
+                $0.status == .published && ($0.completionPercentage < 100 || $0.localizedTitle.isEmpty || $0.localizedSubtitle.isEmpty || $0.localizedDescription.isEmpty || $0.publishedVersion == nil)
+            }
+            return duplicateCodes || !validCodes || sourceMissing || publishedIncomplete || item.supportedLanguages.isEmpty
+        }.map(\.id).sorted()
+        return ValidationReport(duplicateIDs: ids, duplicateTitles: titles, missingCollections: missingCollections, invalidSortOrders: invalidSortOrders, incompleteMetadata: incompleteMetadata, missingArtwork: missingArtwork, missingRequirements: missingRequirements, invalidWorkflowTransitions: invalidWorkflowTransitions, missingWorkflowMetadata: missingWorkflowMetadata, localizationIssues: localizationIssues)
     }
 
     static func journey(for plan: PrayerPlan) -> PrayerJourney {
@@ -411,6 +451,8 @@ enum PrayerJourneyCatalog {
             , previousWorkflowStage: nil, assignedAuthor: "Unassigned", assignedReviewer: "Unassigned", assignedEditor: "Unassigned"
             , stageCompletionDate: planID == nil ? nil : "2026-07-31", qaApprovalDate: planID == nil ? nil : "2026-07-31"
             , releaseVersion: planID == nil ? nil : "1.0", releaseNotes: nil, blockingIssuesCount: 0, reviewComments: nil
+            , sourceLanguage: "en", supportedLanguages: ["en"]
+            , localizations: [PrayerJourneyLocalizationMetadata(id: "en", languageCode: "en", localizedTitle: title, localizedSubtitle: subtitle, localizedDescription: subtitle, localizedHeroImageName: hero, localizedCollectionTitle: collection.title, status: .published, completionPercentage: 100, translator: "Source", reviewer: "Unassigned", lastUpdated: "2026-07-31", publishedVersion: planID == nil ? nil : "1.0")]
         )
     }
 
@@ -432,6 +474,8 @@ enum PrayerJourneyCatalog {
             , workflowStage: .released, previousWorkflowStage: nil, assignedAuthor: "Unassigned", assignedReviewer: "Unassigned", assignedEditor: "Unassigned"
             , stageCompletionDate: "2026-07-31", qaApprovalDate: "2026-07-31", releaseVersion: "1.0", releaseNotes: nil
             , blockingIssuesCount: 0, reviewComments: nil
+            , sourceLanguage: "en", supportedLanguages: ["en"]
+            , localizations: [PrayerJourneyLocalizationMetadata(id: "en", languageCode: "en", localizedTitle: plan.title, localizedSubtitle: plan.subtitle, localizedDescription: plan.description, localizedHeroImageName: plan.coverIcon, localizedCollectionTitle: collectionID(for: plan).title, status: .published, completionPercentage: 100, translator: "Source", reviewer: "Unassigned", lastUpdated: "2026-07-31", publishedVersion: "1.0")]
         )
     }
 
