@@ -1,5 +1,13 @@
 import Foundation
 
+enum PrayerJourneyContentState: String, CaseIterable, Codable, Hashable {
+    case available = "Available"
+    case comingSoon = "Coming Soon"
+    case inDevelopment = "In Development"
+    case seasonal = "Seasonal"
+    case locked = "Locked"
+}
+
 enum PrayerJourneyDifficulty: String, Codable, CaseIterable, Hashable {
     case gentle = "Gentle"
     case steady = "Steady"
@@ -24,6 +32,14 @@ struct PrayerJourneyMetadata: Identifiable, Hashable {
     let isPremiumReady: Bool
     let sortOrder: Int
     let planID: String?
+    let contentState: PrayerJourneyContentState
+    let version: Int
+    let contentCompletionPercentage: Int
+    let lastUpdated: String
+    let author: String
+    let estimatedRelease: String?
+    let featuredPriority: Int
+    let launchPriority: Int
 }
 
 struct PrayerJourneyProgressRecord: Codable, Hashable {
@@ -100,6 +116,8 @@ struct PrayerJourney: Identifiable, Hashable {
     var accentColorName: String { metadata.accentColorName }
     var sessionCount: Int { plan.days.isEmpty ? metadata.estimatedDurationDays : plan.days.count }
     var estimatedDurationDays: Int { metadata.estimatedDurationDays }
+    var contentState: PrayerJourneyContentState { metadata.contentState }
+    var isLaunchReady: Bool { contentState == .available || contentState == .seasonal }
 
     /// Progress is derived from the user's existing completion store, never duplicated in catalog data.
     func progress(completedSessionNumbers: Set<Int>) -> PrayerPlanProgress {
@@ -199,6 +217,30 @@ enum PrayerJourneyCatalog {
             .sorted { $0.sortOrder == $1.sortOrder ? $0.title < $1.title : $0.sortOrder < $1.sortOrder }
     }
 
+    struct ValidationReport: Hashable {
+        let duplicateIDs: [String]
+        let duplicateTitles: [String]
+        let missingCollections: [String]
+        let invalidSortOrders: [String]
+        let incompleteMetadata: [String]
+
+        var isValid: Bool {
+            duplicateIDs.isEmpty && duplicateTitles.isEmpty && missingCollections.isEmpty && invalidSortOrders.isEmpty && incompleteMetadata.isEmpty
+        }
+    }
+
+    static var validationReport: ValidationReport {
+        let ids = Dictionary(grouping: metadata, by: \.id).filter { $0.value.count > 1 }.map(\.key).sorted()
+        let titles = Dictionary(grouping: metadata, by: { $0.title.lowercased() }).filter { $0.value.count > 1 }.map { $0.value[0].title }.sorted()
+        let collectionValues = Set(PrayerCollectionID.allCases)
+        let missingCollections = metadata.filter { !collectionValues.contains($0.collection) }.map(\.id).sorted()
+        let invalidSortOrders = metadata.filter { $0.sortOrder < 0 }.map(\.id).sorted()
+        let incompleteMetadata = metadata.filter {
+            $0.id.isEmpty || $0.title.isEmpty || $0.category.isEmpty || $0.heroImageName.isEmpty || $0.accentColorName.isEmpty || $0.version < 1
+        }.map(\.id).sorted()
+        return ValidationReport(duplicateIDs: ids, duplicateTitles: titles, missingCollections: missingCollections, invalidSortOrders: invalidSortOrders, incompleteMetadata: incompleteMetadata)
+    }
+
     static func journey(for plan: PrayerPlan) -> PrayerJourney {
         let entry = metadata.first(where: { $0.planID == plan.id })
             ?? metadataEntry(for: plan)
@@ -291,6 +333,11 @@ enum PrayerJourneyCatalog {
             difficulty: difficulty, heroImageName: hero, accentColorName: accent,
             isFeatured: featured, isRecommended: recommended, isSeasonal: seasonal,
             isPremiumReady: true, sortOrder: 0, planID: planID
+            , contentState: seasonal ? .seasonal : (planID == nil ? .comingSoon : .available)
+            , version: 1, contentCompletionPercentage: planID == nil ? 0 : 100
+            , lastUpdated: "2026-07-31", author: "LetUsPray Editorial"
+            , estimatedRelease: planID == nil ? "Planned" : nil
+            , featuredPriority: featured ? 1 : 0, launchPriority: planID == nil ? 0 : 1
         )
     }
 
@@ -302,6 +349,9 @@ enum PrayerJourneyCatalog {
             difficulty: .gentle, heroImageName: plan.coverIcon, accentColorName: plan.accentColorName,
             isFeatured: plan.category == .psalms, isRecommended: false, isSeasonal: false,
             isPremiumReady: true, sortOrder: 0, planID: plan.id
+            , contentState: .available, version: 1, contentCompletionPercentage: 100
+            , lastUpdated: "2026-07-31", author: "LetUsPray Editorial", estimatedRelease: nil
+            , featuredPriority: plan.category == .psalms ? 1 : 0, launchPriority: 1
         )
     }
 

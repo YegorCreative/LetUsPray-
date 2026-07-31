@@ -108,6 +108,9 @@ struct PlanDetailView: View {
     }
 
     private var displayStatus: String {
+        if !journey.isLaunchReady {
+            return journey.contentState.rawValue
+        }
         if plan.isPreviewPlaceholder {
             return "Preview"
         }
@@ -210,11 +213,15 @@ struct PlanDetailView: View {
                 }
 
                 HStack(spacing: AppSpacing.small) {
+                    badge(journey.contentState.rawValue, color: journey.isLaunchReady ? planAccent : .orange)
                     badge(journey.difficulty.rawValue, color: planAccent)
                     if journey.isFeatured { badge("Featured", color: planAccent) }
                     if journey.isRecommended { badge("Recommended", color: .green) }
                     if journey.isSeasonal { badge("Seasonal", color: .orange) }
                 }
+                Text("Content v\(journey.metadata.version) · \(journey.metadata.contentCompletionPercentage)% ready · Updated \(journey.metadata.lastUpdated)")
+                    .font(AppTypography.caption())
+                    .foregroundStyle(AppColors.textTertiary)
             }
         }
     }

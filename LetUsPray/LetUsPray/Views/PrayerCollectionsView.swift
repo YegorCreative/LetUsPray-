@@ -385,6 +385,10 @@ struct PrayerCollectionsView: View {
                     Text("\(journeys.count) journey\(journeys.count == 1 ? "" : "s")")
                         .font(AppTypography.caption())
                         .foregroundStyle(accent)
+                    let launchReady = journeys.filter(\.isLaunchReady).count
+                    Text("\(launchReady) available · \(journeys.count - launchReady) upcoming")
+                        .font(AppTypography.caption())
+                        .foregroundStyle(AppColors.textTertiary)
                     let completed = journeys.filter { progress(for: $0).status == .completed }.count
                     let inProgress = journeys.filter { progress(for: $0).status == .inProgress }.count
                     if completed > 0 || inProgress > 0 {
@@ -529,8 +533,17 @@ struct PrayerCollectionDetailView: View {
             Text("\(journeys.count) journey\(journeys.count == 1 ? "" : "s")")
                 .font(AppTypography.caption())
                 .foregroundStyle(AppColors.textTertiary)
+            let availableCount = journeys.filter(\.isLaunchReady).count
+            Text("\(availableCount) available · \(journeys.count - availableCount) upcoming · \(collectionCompletionPercentage)% content ready")
+                .font(AppTypography.caption())
+                .foregroundStyle(AppColors.electricCyan)
         }
         .accessibilityElement(children: .combine)
+    }
+
+    private var collectionCompletionPercentage: Int {
+        guard !journeys.isEmpty else { return 0 }
+        return journeys.reduce(0) { $0 + $1.metadata.contentCompletionPercentage } / journeys.count
     }
 
     private func featuredSection(_ journey: PrayerJourney) -> some View {
