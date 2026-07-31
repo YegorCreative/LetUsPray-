@@ -39,6 +39,29 @@ enum PrayerJourneyTranslationStatus: String, CaseIterable, Codable, Hashable {
     case published = "Published"
 }
 
+enum PrayerJourneyAssetStatus: String, CaseIterable, Codable, Hashable {
+    case missing = "Missing"
+    case placeholder = "Placeholder"
+    case inDesign = "In Design"
+    case underReview = "Under Review"
+    case approved = "Approved"
+    case published = "Published"
+    case archived = "Archived"
+}
+
+struct PrayerJourneyAssetMetadata: Identifiable, Hashable, Codable {
+    let id: String
+    let kind: String
+    let reference: String?
+    let darkModeReference: String?
+    let lightModeReference: String?
+    let localizedReferences: [String: String]
+    let version: Int
+    let author: String
+    let status: PrayerJourneyAssetStatus
+    let updatedDate: String
+}
+
 struct PrayerJourneyLocalizationMetadata: Identifiable, Hashable, Codable {
     let id: String
     let languageCode: String
@@ -110,6 +133,7 @@ struct PrayerJourneyMetadata: Identifiable, Hashable {
     let sourceLanguage: String
     let supportedLanguages: [String]
     let localizations: [PrayerJourneyLocalizationMetadata]
+    let assets: [PrayerJourneyAssetMetadata]
 }
 
 struct PrayerJourneyProgressRecord: Codable, Hashable {
@@ -298,9 +322,10 @@ enum PrayerJourneyCatalog {
         let invalidWorkflowTransitions: [String]
         let missingWorkflowMetadata: [String]
         let localizationIssues: [String]
+        let assetIssues: [String]
 
         var isValid: Bool {
-            duplicateIDs.isEmpty && duplicateTitles.isEmpty && missingCollections.isEmpty && invalidSortOrders.isEmpty && incompleteMetadata.isEmpty && missingArtwork.isEmpty && missingRequirements.isEmpty && invalidWorkflowTransitions.isEmpty && missingWorkflowMetadata.isEmpty && localizationIssues.isEmpty
+            duplicateIDs.isEmpty && duplicateTitles.isEmpty && missingCollections.isEmpty && invalidSortOrders.isEmpty && incompleteMetadata.isEmpty && missingArtwork.isEmpty && missingRequirements.isEmpty && invalidWorkflowTransitions.isEmpty && missingWorkflowMetadata.isEmpty && localizationIssues.isEmpty && assetIssues.isEmpty
         }
     }
 
@@ -341,7 +366,22 @@ enum PrayerJourneyCatalog {
             }
             return duplicateCodes || !validCodes || sourceMissing || publishedIncomplete || item.supportedLanguages.isEmpty
         }.map(\.id).sorted()
-        return ValidationReport(duplicateIDs: ids, duplicateTitles: titles, missingCollections: missingCollections, invalidSortOrders: invalidSortOrders, incompleteMetadata: incompleteMetadata, missingArtwork: missingArtwork, missingRequirements: missingRequirements, invalidWorkflowTransitions: invalidWorkflowTransitions, missingWorkflowMetadata: missingWorkflowMetadata, localizationIssues: localizationIssues)
+        let assetIssues = metadata.filter { item in
+            let assets = item.assets
+            let ids = assets.map(\.id)
+            let duplicateIDs = Set(ids).count != ids.count
+            let validAssets = assets.allSatisfy { asset in
+                !asset.id.isEmpty && (asset.reference != nil || asset.status == .missing || asset.status == .placeholder) && asset.version > 0
+            }
+            let missingVariants = assets.contains { asset in
+                asset.status == .published && (asset.darkModeReference == nil || asset.lightModeReference == nil)
+            }
+            let missingLocalized = item.localizations.contains { localization in
+                localization.status == .published && assets.contains { $0.localizedReferences[localization.languageCode] == nil }
+            }
+            return assets.isEmpty || duplicateIDs || !validAssets || missingVariants || missingLocalized
+        }.map(\.id).sorted()
+        return ValidationReport(duplicateIDs: ids, duplicateTitles: titles, missingCollections: missingCollections, invalidSortOrders: invalidSortOrders, incompleteMetadata: incompleteMetadata, missingArtwork: missingArtwork, missingRequirements: missingRequirements, invalidWorkflowTransitions: invalidWorkflowTransitions, missingWorkflowMetadata: missingWorkflowMetadata, localizationIssues: localizationIssues, assetIssues: assetIssues)
     }
 
     static func journey(for plan: PrayerPlan) -> PrayerJourney {
@@ -453,6 +493,7 @@ enum PrayerJourneyCatalog {
             , releaseVersion: planID == nil ? nil : "1.0", releaseNotes: nil, blockingIssuesCount: 0, reviewComments: nil
             , sourceLanguage: "en", supportedLanguages: ["en"]
             , localizations: [PrayerJourneyLocalizationMetadata(id: "en", languageCode: "en", localizedTitle: title, localizedSubtitle: subtitle, localizedDescription: subtitle, localizedHeroImageName: hero, localizedCollectionTitle: collection.title, status: .published, completionPercentage: 100, translator: "Source", reviewer: "Unassigned", lastUpdated: "2026-07-31", publishedVersion: planID == nil ? nil : "1.0")]
+            , assets: [PrayerJourneyAssetMetadata(id: "\(id)-hero", kind: "Hero", reference: hero, darkModeReference: hero, lightModeReference: hero, localizedReferences: ["en": hero], version: 1, author: "LetUsPray Editorial", status: planID == nil ? .placeholder : .published, updatedDate: "2026-07-31")]
         )
     }
 
@@ -476,6 +517,7 @@ enum PrayerJourneyCatalog {
             , blockingIssuesCount: 0, reviewComments: nil
             , sourceLanguage: "en", supportedLanguages: ["en"]
             , localizations: [PrayerJourneyLocalizationMetadata(id: "en", languageCode: "en", localizedTitle: plan.title, localizedSubtitle: plan.subtitle, localizedDescription: plan.description, localizedHeroImageName: plan.coverIcon, localizedCollectionTitle: collectionID(for: plan).title, status: .published, completionPercentage: 100, translator: "Source", reviewer: "Unassigned", lastUpdated: "2026-07-31", publishedVersion: "1.0")]
+            , assets: [PrayerJourneyAssetMetadata(id: "\(plan.id)-hero", kind: "Hero", reference: plan.coverIcon, darkModeReference: plan.coverIcon, lightModeReference: plan.coverIcon, localizedReferences: ["en": plan.coverIcon], version: 1, author: "LetUsPray Editorial", status: .published, updatedDate: "2026-07-31")]
         )
     }
 

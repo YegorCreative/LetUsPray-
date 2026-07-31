@@ -46,6 +46,15 @@ struct JourneyAuthoringDashboardView: View {
                     .foregroundStyle(report.localizationIssues.isEmpty ? .green : .orange)
             }
 
+            Section("Asset Health") {
+                healthRow("Asset completion", value: "\(assetCompletion)%", systemImage: "photo.stack.fill")
+                healthRow("Published assets", value: "\(assetCount(.published))", systemImage: "checkmark.circle.fill")
+                healthRow("Under review", value: "\(assetCount(.underReview))", systemImage: "eye.fill")
+                healthRow("Missing or placeholder", value: "\(metadata.filter { $0.assets.contains { $0.status == .missing || $0.status == .placeholder } }.count)", systemImage: "exclamationmark.triangle.fill")
+                Label(report.assetIssues.isEmpty ? "Asset validation passed" : "Assets need attention", systemImage: report.assetIssues.isEmpty ? "checkmark.circle" : "exclamationmark.triangle")
+                    .foregroundStyle(report.assetIssues.isEmpty ? .green : .orange)
+            }
+
             Section("Collections") {
                 ForEach(PrayerJourneyCatalog.collections) { collection in
                     let journeys = metadata.filter { $0.collection == collection.id }
@@ -97,6 +106,18 @@ struct JourneyAuthoringDashboardView: View {
         let values = metadata.flatMap(\.localizations).map(\.completionPercentage)
         guard !values.isEmpty else { return 0 }
         return values.reduce(0, +) / values.count
+    }
+
+    private func assetCount(_ status: PrayerJourneyAssetStatus) -> Int {
+        metadata.flatMap(\.assets).filter { $0.status == status }.count
+    }
+
+    private var assetCompletion: Int {
+        let assets = metadata.flatMap(\.assets)
+        guard !assets.isEmpty else { return 0 }
+        return assets.reduce(0) { total, asset in
+            total + (asset.status == .published || asset.status == .approved ? 100 : asset.status == .missing ? 0 : 50)
+        } / assets.count
     }
 }
 
