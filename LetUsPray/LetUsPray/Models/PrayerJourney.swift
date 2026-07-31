@@ -14,6 +14,23 @@ enum PrayerJourneyReviewStatus: String, CaseIterable, Codable, Hashable {
     case approved = "Approved"
 }
 
+enum PrayerJourneyWorkflowStage: String, CaseIterable, Codable, Hashable {
+    case idea = "Idea"
+    case planning = "Planning"
+    case writing = "Writing"
+    case scriptureReview = "Scripture Review"
+    case theologyReview = "Theology Review"
+    case editorialReview = "Editorial Review"
+    case artwork = "Artwork"
+    case readyForQA = "Ready for QA"
+    case qaApproved = "QA Approved"
+    case readyForRelease = "Ready for Release"
+    case released = "Released"
+    case archived = "Archived"
+
+    var order: Int { Self.allCases.firstIndex(of: self) ?? 0 }
+}
+
 enum PrayerJourneyDifficulty: String, Codable, CaseIterable, Hashable {
     case gentle = "Gentle"
     case steady = "Steady"
@@ -55,6 +72,17 @@ struct PrayerJourneyMetadata: Identifiable, Hashable {
     let requiredSessionCount: Int
     let requiredPrayerCount: Int
     let requiredScriptureCount: Int
+    let workflowStage: PrayerJourneyWorkflowStage
+    let previousWorkflowStage: PrayerJourneyWorkflowStage?
+    let assignedAuthor: String
+    let assignedReviewer: String
+    let assignedEditor: String
+    let stageCompletionDate: String?
+    let qaApprovalDate: String?
+    let releaseVersion: String?
+    let releaseNotes: String?
+    let blockingIssuesCount: Int
+    let reviewComments: String?
 }
 
 struct PrayerJourneyProgressRecord: Codable, Hashable {
@@ -240,9 +268,11 @@ enum PrayerJourneyCatalog {
         let incompleteMetadata: [String]
         let missingArtwork: [String]
         let missingRequirements: [String]
+        let invalidWorkflowTransitions: [String]
+        let missingWorkflowMetadata: [String]
 
         var isValid: Bool {
-            duplicateIDs.isEmpty && duplicateTitles.isEmpty && missingCollections.isEmpty && invalidSortOrders.isEmpty && incompleteMetadata.isEmpty && missingArtwork.isEmpty && missingRequirements.isEmpty
+            duplicateIDs.isEmpty && duplicateTitles.isEmpty && missingCollections.isEmpty && invalidSortOrders.isEmpty && incompleteMetadata.isEmpty && missingArtwork.isEmpty && missingRequirements.isEmpty && invalidWorkflowTransitions.isEmpty && missingWorkflowMetadata.isEmpty
         }
     }
 
@@ -259,7 +289,19 @@ enum PrayerJourneyCatalog {
         let missingRequirements = metadata.filter {
             $0.requiredSessionCount < 0 || $0.requiredPrayerCount < 0 || $0.requiredScriptureCount < 0
         }.map(\.id).sorted()
-        return ValidationReport(duplicateIDs: ids, duplicateTitles: titles, missingCollections: missingCollections, invalidSortOrders: invalidSortOrders, incompleteMetadata: incompleteMetadata, missingArtwork: missingArtwork, missingRequirements: missingRequirements)
+        let invalidWorkflowTransitions = metadata.filter {
+            guard let previous = $0.previousWorkflowStage else { return false }
+            return $0.workflowStage.order < previous.order && $0.workflowStage != .archived
+        }.map(\.id).sorted()
+        let missingWorkflowMetadata = metadata.filter {
+            switch $0.workflowStage {
+            case .readyForQA, .qaApproved, .readyForRelease, .released:
+                return $0.assignedAuthor.isEmpty || $0.assignedReviewer.isEmpty || $0.releaseVersion == nil
+            default:
+                return false
+            }
+        }.map(\.id).sorted()
+        return ValidationReport(duplicateIDs: ids, duplicateTitles: titles, missingCollections: missingCollections, invalidSortOrders: invalidSortOrders, incompleteMetadata: incompleteMetadata, missingArtwork: missingArtwork, missingRequirements: missingRequirements, invalidWorkflowTransitions: invalidWorkflowTransitions, missingWorkflowMetadata: missingWorkflowMetadata)
     }
 
     static func journey(for plan: PrayerPlan) -> PrayerJourney {
@@ -365,6 +407,10 @@ enum PrayerJourneyCatalog {
             , estimatedCompletion: planID == nil ? "Planned" : nil
             , requiredSessionCount: max(duration, 0), requiredPrayerCount: max(duration, 0)
             , requiredScriptureCount: max(duration, 0)
+            , workflowStage: planID == nil ? .planning : (seasonal ? .readyForQA : .released)
+            , previousWorkflowStage: nil, assignedAuthor: "Unassigned", assignedReviewer: "Unassigned", assignedEditor: "Unassigned"
+            , stageCompletionDate: planID == nil ? nil : "2026-07-31", qaApprovalDate: planID == nil ? nil : "2026-07-31"
+            , releaseVersion: planID == nil ? nil : "1.0", releaseNotes: nil, blockingIssuesCount: 0, reviewComments: nil
         )
     }
 
@@ -383,6 +429,9 @@ enum PrayerJourneyCatalog {
             , createdDate: "2026-07-31", updatedDate: "2026-07-31", publishDate: "2026-07-31"
             , estimatedCompletion: nil, requiredSessionCount: plan.durationDays
             , requiredPrayerCount: plan.days.count, requiredScriptureCount: plan.days.count
+            , workflowStage: .released, previousWorkflowStage: nil, assignedAuthor: "Unassigned", assignedReviewer: "Unassigned", assignedEditor: "Unassigned"
+            , stageCompletionDate: "2026-07-31", qaApprovalDate: "2026-07-31", releaseVersion: "1.0", releaseNotes: nil
+            , blockingIssuesCount: 0, reviewComments: nil
         )
     }
 

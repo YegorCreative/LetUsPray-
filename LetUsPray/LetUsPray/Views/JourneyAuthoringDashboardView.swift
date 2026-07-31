@@ -29,6 +29,14 @@ struct JourneyAuthoringDashboardView: View {
                     .foregroundStyle(report.isValid ? .green : .orange)
             }
 
+            Section("Content Pipeline") {
+                healthRow("Ready for QA", value: "\(count(.readyForQA))", systemImage: "checklist")
+                healthRow("Ready for Release", value: "\(count(.readyForRelease))", systemImage: "shippingbox.fill")
+                healthRow("Released", value: "\(count(.released))", systemImage: "checkmark.seal.fill")
+                healthRow("Blocked", value: "\(metadata.filter { $0.blockingIssuesCount > 0 }.count)", systemImage: "exclamationmark.octagon.fill")
+                healthRow("Pipeline progress", value: "\(pipelineProgress)%", systemImage: "chart.line.uptrend.xyaxis")
+            }
+
             Section("Collections") {
                 ForEach(PrayerJourneyCatalog.collections) { collection in
                     let journeys = metadata.filter { $0.collection == collection.id }
@@ -54,6 +62,18 @@ struct JourneyAuthoringDashboardView: View {
             Text(value).foregroundStyle(.secondary)
         }
         .accessibilityElement(children: .combine)
+    }
+
+    private func count(_ stage: PrayerJourneyWorkflowStage) -> Int {
+        metadata.filter { $0.workflowStage == stage }.count
+    }
+
+    private var pipelineProgress: Int {
+        guard !metadata.isEmpty else { return 0 }
+        let maximum = PrayerJourneyWorkflowStage.released.order
+        return metadata.reduce(0) { total, item in
+            total + min(item.workflowStage.order, maximum) * 100 / max(maximum, 1)
+        } / metadata.count
     }
 }
 
