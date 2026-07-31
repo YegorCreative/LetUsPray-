@@ -9,10 +9,8 @@ struct SavedView: View {
     @State private var selectedSavedPrayer: SavedPrayerItem?
 
     var body: some View {
-        let savedItems = viewModel.savedPrayers(for: savedPrayerRecords)
-
         ScrollView(showsIndicators: false) {
-            VStack(alignment: .leading, spacing: AppSpacing.large) {
+            LazyVStack(alignment: .leading, spacing: AppSpacing.large) {
                 Text("Saved")
                     .font(AppTypography.largeTitle())
                     .foregroundStyle(AppColors.textPrimary)
@@ -88,6 +86,7 @@ struct SavedView: View {
                             }
                             .buttonStyle(.plain)
                             .contentShape(Rectangle())
+                            .accessibilityElement(children: .combine)
                             .accessibilityHint("Opens this prayer.")
 
                             Button {
@@ -95,21 +94,23 @@ struct SavedView: View {
                             } label: {
                                 Image(systemName: "bookmark.fill")
                                     .foregroundStyle(AppColors.premiumGold)
-                                    .padding(10)
+                                    .frame(minWidth: 44, minHeight: 44)
                                     .background(.thinMaterial, in: Circle())
                             }
                             .buttonStyle(.plain)
                             .contentShape(Rectangle())
                             .padding(AppSpacing.medium)
-                            .accessibilityLabel("Remove saved prayer")
+                            .accessibilityLabel("Remove \(item.verse.reference) from Saved")
                             .accessibilityHint("Removes this prayer from Saved.")
                         }
+                        .transition(.opacity.combined(with: .scale(scale: 0.98)))
                     }
                 }
             }
             .padding(.horizontal, AppSpacing.large)
             .padding(.bottom, AppSpacing.xxLarge)
         }
+        .animation(.spring(response: 0.34, dampingFraction: 0.84), value: savedItems.map(\.id))
         .toolbarBackground(.hidden, for: .navigationBar)
         .navigationDestination(item: $selectedSavedPrayer) { item in
             PrayerDetailView(
@@ -130,10 +131,13 @@ struct SavedView: View {
         )
     }
 
+    private var savedItems: [SavedPrayerItem] {
+        viewModel.savedPrayers(for: savedPrayerRecords)
+            .filter { savedVerseIDs.contains($0.id) }
+    }
+
     private func removeSavedPrayer(id: String) {
-        withAnimation(.spring(response: 0.34, dampingFraction: 0.84)) {
-            _ = savedVerseIDs.remove(id)
-        }
+        _ = savedVerseIDs.remove(id)
 
         HapticsService.unsavePrayer()
         analytics = PrayerAnalyticsSnapshot(
