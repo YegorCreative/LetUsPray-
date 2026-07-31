@@ -6,27 +6,49 @@ enum PrayerJourneyDifficulty: String, Codable, CaseIterable, Hashable {
     case deep = "Deep"
 }
 
-/// Presentation and catalog metadata for a journey. Prayer text remains owned by `PrayerPlan`.
-struct PrayerJourney: Identifiable, Hashable {
-    let plan: PrayerPlan
-    let heroImageName: String
+struct PrayerJourneyMetadata: Identifiable, Hashable {
+    let id: String
+    let title: String
+    let subtitle: String
+    let description: String
+    let collection: PrayerCollectionID
+    let category: String
+    let estimatedDurationDays: Int
     let estimatedPrayerMinutes: Int
     let difficulty: PrayerJourneyDifficulty
+    let heroImageName: String
+    let accentColorName: String
     let isFeatured: Bool
     let isRecommended: Bool
     let isSeasonal: Bool
     let isPremiumReady: Bool
     let sortOrder: Int
+    let planID: String?
+}
 
-    var id: String { plan.id }
-    var title: String { plan.title }
-    var subtitle: String { plan.subtitle }
-    var description: String { plan.description }
+/// Presentation metadata for a journey. Prayer text remains owned by `PrayerPlan`.
+struct PrayerJourney: Identifiable, Hashable {
+    let plan: PrayerPlan
+    let metadata: PrayerJourneyMetadata
+
+    var id: String { metadata.id }
+    var title: String { metadata.title }
+    var subtitle: String { metadata.subtitle }
+    var description: String { metadata.description }
     var category: PrayerPlanCategory { plan.category }
-    var collection: PrayerCollectionID { PrayerJourneyCatalog.collectionID(for: plan) }
-    var accentColorName: String { plan.accentColorName }
-    var sessionCount: Int { plan.days.count > 0 ? plan.days.count : plan.durationDays }
-    var estimatedDurationDays: Int { plan.durationDays }
+    var categoryName: String { metadata.category }
+    var collection: PrayerCollectionID { metadata.collection }
+    var heroImageName: String { metadata.heroImageName }
+    var estimatedPrayerMinutes: Int { metadata.estimatedPrayerMinutes }
+    var difficulty: PrayerJourneyDifficulty { metadata.difficulty }
+    var isFeatured: Bool { metadata.isFeatured }
+    var isRecommended: Bool { metadata.isRecommended }
+    var isSeasonal: Bool { metadata.isSeasonal }
+    var isPremiumReady: Bool { metadata.isPremiumReady }
+    var sortOrder: Int { metadata.sortOrder }
+    var accentColorName: String { metadata.accentColorName }
+    var sessionCount: Int { plan.days.isEmpty ? metadata.estimatedDurationDays : plan.days.count }
+    var estimatedDurationDays: Int { metadata.estimatedDurationDays }
 
     /// Progress is derived from the user's existing completion store, never duplicated in catalog data.
     func progress(completedSessionNumbers: Set<Int>) -> PrayerPlanProgress {
@@ -99,24 +121,139 @@ enum PrayerJourneyCatalog {
     }
 
     static func journeys(in collection: PrayerCollectionID, plans: [PrayerPlan]) -> [PrayerJourney] {
-        plans
-            .filter { collectionID(for: $0) == collection }
-            .map { journey(for: $0) }
+        let plansByID = Dictionary(uniqueKeysWithValues: plans.map { ($0.id, $0) })
+        return metadata
+            .filter { $0.collection == collection }
+            .map { entry in
+                PrayerJourney(
+                    plan: plansByID[entry.planID ?? ""] ?? placeholderPlan(for: entry),
+                    metadata: entry
+                )
+            }
             .sorted { $0.sortOrder == $1.sortOrder ? $0.title < $1.title : $0.sortOrder < $1.sortOrder }
     }
 
     static func journey(for plan: PrayerPlan) -> PrayerJourney {
-        let isProverbs = plan.id == ProverbsPrayerData.plan.id
-        return PrayerJourney(
-            plan: plan,
-            heroImageName: plan.coverIcon,
-            estimatedPrayerMinutes: max(5, min(15, plan.durationDays / 2)),
-            difficulty: isProverbs ? .steady : .gentle,
-            isFeatured: isProverbs || plan.category == .psalms,
-            isRecommended: isProverbs,
-            isSeasonal: false,
-            isPremiumReady: true,
-            sortOrder: isProverbs ? 0 : 1
+        let entry = metadata.first(where: { $0.planID == plan.id })
+            ?? metadataEntry(for: plan)
+        return PrayerJourney(plan: plan, metadata: entry)
+    }
+
+    static let metadata: [PrayerJourneyMetadata] = [
+        entry("proverbs", "Proverbs", "A daily rhythm of wisdom", .scripture, "Scripture", 31, 8, .steady, "book.closed.fill", "wisdom", true, true, false, "proverbs-journey"),
+        entry("psalms", "Psalms", "A journey through songs of the soul", .scripture, "Scripture", 150, 10, .gentle, "music.note.list", "psalms", true, false, false, "psalms-journey-overview"),
+        entry("song-of-songs", "Song of Songs", "Pray through love, beauty, and devotion", .scripture, "Scripture", 14, 8, .deep, "heart.fill", "gospel", false, false, false),
+        entry("prayers-of-jesus", "Prayers of Jesus", "Learn from the prayers of Christ", .scripture, "Scripture", 21, 8, .deep, "cross.fill", "gospel", false, false, false),
+        entry("lords-prayer", "Lord's Prayer", "A simple pattern for a faithful life", .scripture, "Scripture", 7, 6, .gentle, "hands.sparkles.fill", "gratitude", false, true, false),
+        entry("biblical-prayers", "Biblical Prayers", "Pray with the people of Scripture", .scripture, "Scripture", 30, 9, .steady, "scroll.fill", "wisdom", false, false, false),
+        entry("prayer-through-the-gospels", "Prayer Through the Gospels", "Meet Jesus in the Gospel story", .scripture, "Scripture", 40, 10, .steady, "sparkles.tv", "gospel", true, false, false, "gospel-of-john"),
+
+        entry("pray-for-your-family", "Pray for Your Family", "Hold your family in steady prayer", .family, "Family & Relationships", 14, 7, .gentle, "figure.2.and.child.holdinghands", "family", false, false, false),
+        entry("pray-for-your-marriage", "Pray for Your Marriage", "Pray for a covenant of patience and love", .family, "Family & Relationships", 21, 8, .steady, "heart.fill", "family", false, false, false),
+        entry("pray-for-your-children", "Pray for Your Children", "Entrust each season of parenting to God", .family, "Family & Relationships", 14, 7, .gentle, "figure.2.and.child.holdinghands", "family", false, false, false),
+        entry("pray-for-your-parents", "Pray for Your Parents", "Give thanks and care through prayer", .family, "Family & Relationships", 14, 7, .gentle, "figure.2.fill", "family", false, false, false),
+        entry("pray-for-friendships", "Pray for Friendships", "Nurture friendship with grace and gratitude", .family, "Family & Relationships", 10, 7, .gentle, "person.2.fill", "family", false, false, false),
+
+        entry("pray-for-your-pastor", "Pray for Your Pastor", "Support faithful leaders in prayer", .church, "Church", 14, 7, .gentle, "building.columns.fill", "gospel", false, false, false),
+        entry("pray-for-church-leaders", "Pray for Church Leaders", "Pray for wisdom, humility, and courage", .church, "Church", 14, 7, .steady, "person.3.fill", "gospel", false, false, false),
+        entry("pray-for-your-church", "Pray for Your Church", "Pray for a healthy and welcoming church", .church, "Church", 21, 8, .steady, "building.2.fill", "gospel", false, false, false),
+        entry("pray-for-unity", "Pray for Unity", "Seek peace across the body of Christ", .church, "Church", 14, 7, .steady, "arrow.triangle.branch", "gospel", false, false, false),
+
+        entry("pray-for-missions", "Pray for Missions", "Join God's work around the world", .missions, "Missions", 21, 8, .steady, "globe.americas.fill", "encouragement", false, false, false),
+        entry("pray-for-missionaries", "Pray for Missionaries", "Support those serving far from home", .missions, "Missions", 14, 7, .gentle, "airplane", "encouragement", false, false, false),
+        entry("pray-for-evangelism", "Pray for Evangelism", "Pray for courage to share good news", .missions, "Missions", 14, 8, .steady, "megaphone.fill", "encouragement", false, false, false),
+        entry("pray-for-the-nations", "Pray for the Nations", "Lift the world and its people to God", .missions, "Missions", 30, 8, .steady, "globe", "encouragement", false, false, false),
+        entry("pray-for-your-community", "Pray for Your Community", "Seek the good of the place you call home", .missions, "Missions", 14, 7, .gentle, "house.2.fill", "encouragement", false, true, false),
+
+        entry("healing", "Healing", "Make room for comfort and restoration", .healing, "Healing", 21, 8, .gentle, "heart.text.square.fill", "encouragement", true, false, false),
+        entry("depression", "Depression", "A gentle place for honest prayer", .healing, "Healing", 14, 7, .gentle, "cloud.rain.fill", "encouragement", false, false, false),
+        entry("anxiety-and-peace", "Anxiety & Peace", "Scripture prayers for rest and trust", .healing, "Healing", 14, 7, .gentle, "leaf.fill", "encouragement", true, true, false, "anxiety-and-peace"),
+        entry("emotional-healing", "Emotional Healing", "Bring wounded places into God's care", .healing, "Healing", 21, 8, .gentle, "heart.circle.fill", "encouragement", false, false, false),
+        entry("forgiveness", "Forgiveness", "Practice release, mercy, and freedom", .healing, "Healing", 14, 7, .steady, "arrow.uturn.left.circle.fill", "encouragement", false, false, false),
+        entry("freedom", "Freedom", "Pray toward wholeness and new life", .healing, "Healing", 21, 8, .steady, "lock.open.fill", "encouragement", false, false, false),
+
+        entry("wisdom", "Wisdom", "Ask for wisdom in every decision", .christianLiving, "Christian Living", 14, 7, .steady, "lightbulb.fill", "wisdom", false, true, false),
+        entry("courage", "Courage", "Stand faithfully in difficult moments", .christianLiving, "Christian Living", 14, 7, .steady, "shield.fill", "wisdom", false, false, false),
+        entry("faith-during-hard-times", "Faith During Hard Times", "Keep trusting through uncertainty", .christianLiving, "Christian Living", 21, 8, .deep, "mountain.2.fill", "wisdom", false, false, false),
+        entry("purity", "Purity", "Pray for an undivided heart", .christianLiving, "Christian Living", 14, 7, .steady, "sparkle", "wisdom", false, false, false),
+        entry("gratitude", "Gratitude", "Notice grace in the everyday", .christianLiving, "Christian Living", 21, 7, .gentle, "hands.sparkles.fill", "gratitude", true, true, false),
+        entry("joy", "Joy", "Receive the quiet joy of God's presence", .christianLiving, "Christian Living", 14, 7, .gentle, "sun.max.fill", "gratitude", false, false, false),
+        entry("happiness", "Happiness", "Pray with hope for a lighter heart", .christianLiving, "Christian Living", 14, 7, .gentle, "face.smiling.fill", "gratitude", false, false, false),
+        entry("peace", "Peace", "Practice stillness and trust", .christianLiving, "Christian Living", 14, 7, .gentle, "water.waves", "encouragement", false, false, false),
+        entry("hope", "Hope", "Look toward God's promises", .christianLiving, "Christian Living", 14, 7, .gentle, "sunrise.fill", "encouragement", false, false, false),
+        entry("strength", "Strength", "Find strength for the next step", .christianLiving, "Christian Living", 14, 7, .steady, "bolt.fill", "encouragement", false, false, false),
+        entry("patience", "Patience", "Make space for God's timing", .christianLiving, "Christian Living", 14, 7, .steady, "hourglass", "wisdom", false, false, false),
+        entry("humility", "Humility", "Walk gently and faithfully", .christianLiving, "Christian Living", 14, 7, .steady, "arrow.down.to.line", "wisdom", false, false, false),
+
+        entry("students", "Students", "Pray through learning and growth", .life, "Life", 14, 7, .gentle, "graduationcap.fill", "encouragement", false, false, false),
+        entry("work-and-career", "Work & Career", "Bring your work and calling to God", .life, "Life", 14, 7, .steady, "briefcase.fill", "wisdom", false, false, false),
+        entry("government-leaders", "Government Leaders", "Pray for justice and wise leadership", .life, "Life", 14, 7, .steady, "building.columns.fill", "gospel", false, false, false),
+        entry("medical-workers", "Medical Workers", "Support caregivers with prayer", .life, "Life", 14, 7, .gentle, "cross.case.fill", "encouragement", false, false, false),
+        entry("teachers", "Teachers", "Pray for those shaping the next generation", .life, "Life", 14, 7, .gentle, "book.fill", "wisdom", false, false, false),
+        entry("military", "Military", "Pray for service members and their families", .life, "Life", 14, 7, .steady, "shield.lefthalf.filled", "encouragement", false, false, false),
+        entry("first-responders", "First Responders", "Pray for courage and protection", .life, "Life", 14, 7, .steady, "staroflife.fill", "encouragement", false, false, false),
+
+        entry("advent", "Advent", "Prepare your heart for Christ's coming", .seasonal, "Seasonal", 25, 8, .gentle, "sparkles", "gospel", false, false, true),
+        entry("lent", "Lent", "Make room for reflection and renewal", .seasonal, "Seasonal", 40, 8, .deep, "cross.fill", "gospel", false, false, true),
+        entry("easter", "Easter", "Pray into resurrection hope", .seasonal, "Seasonal", 14, 8, .gentle, "sunrise.fill", "gospel", true, false, true),
+        entry("christmas", "Christmas", "Receive the wonder of Emmanuel", .seasonal, "Seasonal", 14, 8, .gentle, "gift.fill", "gospel", false, false, true),
+
+        entry("30-days-in-proverbs", "30 Days in Proverbs", "A month of practical wisdom", .devotionals, "Devotionals", 30, 8, .steady, "book.closed.fill", "wisdom", true, true, false, ProverbsPrayerData.plan.id),
+        entry("31-days-in-psalms", "31 Days in Psalms", "A month of honest worship and prayer", .devotionals, "Devotionals", 31, 8, .gentle, "music.note.list", "psalms", true, false, false, "psalms-journey-overview"),
+        entry("21-days-of-gratitude", "21 Days of Gratitude", "A focused practice of thanksgiving", .devotionals, "Devotionals", 21, 7, .gentle, "hands.sparkles.fill", "gratitude", false, false, false, "gratitude-challenge"),
+        entry("names-of-god", "Names of God", "Pray through the names that reveal God's character", .devotionals, "Devotionals", 30, 8, .deep, "text.book.closed.fill", "gospel", false, false, false),
+        entry("wisdom-for-men", "Wisdom for Men", "A grounded journey in faithful living", .devotionals, "Devotionals", 21, 8, .steady, "person.fill", "wisdom", false, false, false),
+        entry("wisdom-for-women", "Wisdom for Women", "A grounded journey in faithful living", .devotionals, "Devotionals", 21, 8, .steady, "person.fill", "wisdom", false, false, false),
+
+        entry("prayer-journal", "Prayer Journal", "Keep your own prayers close", .personal, "Personal", 0, 5, .gentle, "book.pages.fill", "encouragement", false, false, false),
+        entry("personal-notes", "Personal Notes", "Make space for reflection", .personal, "Personal", 0, 5, .gentle, "note.text", "encouragement", false, false, false),
+        entry("prayer-calendar", "Prayer Calendar", "Build a rhythm that fits your days", .personal, "Personal", 0, 5, .gentle, "calendar", "encouragement", false, false, false),
+        entry("answered-prayers", "Answered Prayers", "Remember where you've seen God's faithfulness", .personal, "Personal", 0, 5, .gentle, "checkmark.seal.fill", "gratitude", false, false, false),
+        entry("shared-prayers", "Shared Prayers", "Hold shared hopes and needs together", .personal, "Personal", 0, 5, .gentle, "person.2.wave.2.fill", "encouragement", false, false, false)
+    ]
+
+    private static func entry(
+        _ id: String, _ title: String, _ subtitle: String, _ collection: PrayerCollectionID,
+        _ category: String, _ duration: Int, _ minutes: Int, _ difficulty: PrayerJourneyDifficulty,
+        _ hero: String, _ accent: String, _ featured: Bool, _ recommended: Bool, _ seasonal: Bool,
+        _ planID: String? = nil
+    ) -> PrayerJourneyMetadata {
+        PrayerJourneyMetadata(
+            id: id, title: title, subtitle: subtitle,
+            description: subtitle, collection: collection, category: category,
+            estimatedDurationDays: duration, estimatedPrayerMinutes: minutes,
+            difficulty: difficulty, heroImageName: hero, accentColorName: accent,
+            isFeatured: featured, isRecommended: recommended, isSeasonal: seasonal,
+            isPremiumReady: true, sortOrder: 0, planID: planID
         )
+    }
+
+    private static func metadataEntry(for plan: PrayerPlan) -> PrayerJourneyMetadata {
+        PrayerJourneyMetadata(
+            id: plan.id, title: plan.title, subtitle: plan.subtitle, description: plan.description,
+            collection: collectionID(for: plan), category: plan.category.displayTitle,
+            estimatedDurationDays: plan.durationDays, estimatedPrayerMinutes: max(5, min(15, plan.durationDays / 2)),
+            difficulty: .gentle, heroImageName: plan.coverIcon, accentColorName: plan.accentColorName,
+            isFeatured: plan.category == .psalms, isRecommended: false, isSeasonal: false,
+            isPremiumReady: true, sortOrder: 0, planID: plan.id
+        )
+    }
+
+    private static func placeholderPlan(for metadata: PrayerJourneyMetadata) -> PrayerPlan {
+        PrayerPlan(
+            id: metadata.id, title: metadata.title, subtitle: metadata.subtitle,
+            description: metadata.description, category: placeholderCategory(for: metadata.collection),
+            durationDays: metadata.estimatedDurationDays, accentColorName: metadata.accentColorName,
+            coverIcon: metadata.heroImageName, days: []
+        )
+    }
+
+    private static func placeholderCategory(for collection: PrayerCollectionID) -> PrayerPlanCategory {
+        switch collection {
+        case .scripture: .wisdom
+        case .family: .family
+        case .devotionals: .gratitude
+        default: .encouragement
+        }
     }
 }
