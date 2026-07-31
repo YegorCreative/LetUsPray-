@@ -58,6 +58,44 @@ enum PrayerJourneyQAStatus: String, CaseIterable, Codable, Hashable {
     case blocked = "Blocked"
 }
 
+enum PrayerJourneyReleaseChannel: String, CaseIterable, Codable, Hashable {
+    case development = "Development"
+    case beta = "Beta"
+    case releaseCandidate = "RC"
+    case production = "Production"
+}
+
+enum PrayerJourneyReleaseStatus: String, CaseIterable, Codable, Hashable {
+    case planned = "Planned"
+    case scheduled = "Scheduled"
+    case releaseCandidate = "In Release Candidate"
+    case released = "Released"
+    case hotfix = "Hotfix"
+    case deprecated = "Deprecated"
+    case archived = "Archived"
+}
+
+enum PrayerJourneyMilestone: String, CaseIterable, Codable, Hashable {
+    case version1 = "Version 1.0"
+    case version11 = "Version 1.1"
+    case version2 = "Version 2.0"
+    case future = "Future"
+}
+
+struct PrayerJourneyReleaseMetadata: Hashable, Codable {
+    let releaseID: String
+    let version: String
+    let name: String
+    let channel: PrayerJourneyReleaseChannel
+    let milestone: PrayerJourneyMilestone
+    let targetDate: String?
+    let actualDate: String?
+    let owner: String
+    let releaseNotes: String?
+    let rollbackVersion: String?
+    let status: PrayerJourneyReleaseStatus
+}
+
 enum PrayerJourneyQACategory: String, CaseIterable, Codable, Hashable {
     case metadata = "Metadata Validation"
     case scripture = "Scripture Validation"
@@ -171,6 +209,7 @@ struct PrayerJourneyMetadata: Identifiable, Hashable {
     let localizations: [PrayerJourneyLocalizationMetadata]
     let assets: [PrayerJourneyAssetMetadata]
     let qa: PrayerJourneyQAMetadata
+    let release: PrayerJourneyReleaseMetadata?
 }
 
 struct PrayerJourneyProgressRecord: Codable, Hashable {
@@ -361,9 +400,10 @@ enum PrayerJourneyCatalog {
         let localizationIssues: [String]
         let assetIssues: [String]
         let qaIssues: [String]
+        let releaseIssues: [String]
 
         var isValid: Bool {
-            duplicateIDs.isEmpty && duplicateTitles.isEmpty && missingCollections.isEmpty && invalidSortOrders.isEmpty && incompleteMetadata.isEmpty && missingArtwork.isEmpty && missingRequirements.isEmpty && invalidWorkflowTransitions.isEmpty && missingWorkflowMetadata.isEmpty && localizationIssues.isEmpty && assetIssues.isEmpty && qaIssues.isEmpty
+            duplicateIDs.isEmpty && duplicateTitles.isEmpty && missingCollections.isEmpty && invalidSortOrders.isEmpty && incompleteMetadata.isEmpty && missingArtwork.isEmpty && missingRequirements.isEmpty && invalidWorkflowTransitions.isEmpty && missingWorkflowMetadata.isEmpty && localizationIssues.isEmpty && assetIssues.isEmpty && qaIssues.isEmpty && releaseIssues.isEmpty
         }
     }
 
@@ -425,7 +465,17 @@ enum PrayerJourneyCatalog {
             let incompleteCategories = qa.completedCategories.count != PrayerJourneyQACategory.allCases.count
             return qa.owner.isEmpty || qa.releaseBlocker || qa.criticalIssues > 0 || (released && (qa.status != .approved || qa.approvalDate == nil || incompleteCategories)) || (qa.status == .failed && released)
         }.map(\.id).sorted()
-        return ValidationReport(duplicateIDs: ids, duplicateTitles: titles, missingCollections: missingCollections, invalidSortOrders: invalidSortOrders, incompleteMetadata: incompleteMetadata, missingArtwork: missingArtwork, missingRequirements: missingRequirements, invalidWorkflowTransitions: invalidWorkflowTransitions, missingWorkflowMetadata: missingWorkflowMetadata, localizationIssues: localizationIssues, assetIssues: assetIssues, qaIssues: qaIssues)
+        let releaseIDs = metadata.compactMap { $0.release?.releaseID }
+        let duplicateReleaseIDs = Set(releaseIDs).count != releaseIDs.count
+        let releaseIssues = metadata.filter { item in
+            guard let release = item.release else { return false }
+            let isReleased = release.status == .released || release.status == .hotfix
+            let assetsApproved = item.assets.allSatisfy { $0.status == .approved || $0.status == .published }
+            let localizationReady = item.localizations.allSatisfy { $0.status == .published && $0.completionPercentage >= 100 }
+            let workflowReady = item.workflowStage == .released || item.workflowStage == .readyForRelease
+            return release.releaseID.isEmpty || release.version.isEmpty || release.owner.isEmpty || (isReleased && (item.qa.status != .approved || item.qa.approvalDate == nil || !assetsApproved || !localizationReady || !workflowReady))
+        }.map(\.id).sorted() + (duplicateReleaseIDs ? ["duplicate-release-id"] : [])
+        return ValidationReport(duplicateIDs: ids, duplicateTitles: titles, missingCollections: missingCollections, invalidSortOrders: invalidSortOrders, incompleteMetadata: incompleteMetadata, missingArtwork: missingArtwork, missingRequirements: missingRequirements, invalidWorkflowTransitions: invalidWorkflowTransitions, missingWorkflowMetadata: missingWorkflowMetadata, localizationIssues: localizationIssues, assetIssues: assetIssues, qaIssues: qaIssues, releaseIssues: releaseIssues)
     }
 
     static func journey(for plan: PrayerPlan) -> PrayerJourney {
@@ -539,6 +589,7 @@ enum PrayerJourneyCatalog {
             , localizations: [PrayerJourneyLocalizationMetadata(id: "en", languageCode: "en", localizedTitle: title, localizedSubtitle: subtitle, localizedDescription: subtitle, localizedHeroImageName: hero, localizedCollectionTitle: collection.title, status: .published, completionPercentage: 100, translator: "Source", reviewer: "Unassigned", lastUpdated: "2026-07-31", publishedVersion: planID == nil ? nil : "1.0")]
             , assets: [PrayerJourneyAssetMetadata(id: "\(id)-hero", kind: "Hero", reference: hero, darkModeReference: hero, lightModeReference: hero, localizedReferences: ["en": hero], version: 1, author: "LetUsPray Editorial", status: planID == nil ? .placeholder : .published, updatedDate: "2026-07-31")]
             , qa: PrayerJourneyQAMetadata(status: planID == nil ? .notStarted : .approved, owner: "Unassigned", startedDate: planID == nil ? nil : "2026-07-31", completedDate: planID == nil ? nil : "2026-07-31", approvalDate: planID == nil ? nil : "2026-07-31", releaseBlocker: false, criticalIssues: 0, majorIssues: 0, minorIssues: 0, knownIssues: nil, notes: nil, completedCategories: planID == nil ? [] : Set(PrayerJourneyQACategory.allCases))
+            , release: planID == nil ? nil : PrayerJourneyReleaseMetadata(releaseID: "release-\(id)-1.0", version: "1.0", name: "LetUsPray Version 1.0", channel: .production, milestone: .version1, targetDate: "2026-07-31", actualDate: "2026-07-31", owner: "Unassigned", releaseNotes: nil, rollbackVersion: nil, status: .released)
         )
     }
 
@@ -564,6 +615,7 @@ enum PrayerJourneyCatalog {
             , localizations: [PrayerJourneyLocalizationMetadata(id: "en", languageCode: "en", localizedTitle: plan.title, localizedSubtitle: plan.subtitle, localizedDescription: plan.description, localizedHeroImageName: plan.coverIcon, localizedCollectionTitle: collectionID(for: plan).title, status: .published, completionPercentage: 100, translator: "Source", reviewer: "Unassigned", lastUpdated: "2026-07-31", publishedVersion: "1.0")]
             , assets: [PrayerJourneyAssetMetadata(id: "\(plan.id)-hero", kind: "Hero", reference: plan.coverIcon, darkModeReference: plan.coverIcon, lightModeReference: plan.coverIcon, localizedReferences: ["en": plan.coverIcon], version: 1, author: "LetUsPray Editorial", status: .published, updatedDate: "2026-07-31")]
             , qa: PrayerJourneyQAMetadata(status: .approved, owner: "Unassigned", startedDate: "2026-07-31", completedDate: "2026-07-31", approvalDate: "2026-07-31", releaseBlocker: false, criticalIssues: 0, majorIssues: 0, minorIssues: 0, knownIssues: nil, notes: nil, completedCategories: Set(PrayerJourneyQACategory.allCases))
+            , release: PrayerJourneyReleaseMetadata(releaseID: "release-\(plan.id)-1.0", version: "1.0", name: "LetUsPray Version 1.0", channel: .production, milestone: .version1, targetDate: "2026-07-31", actualDate: "2026-07-31", owner: "Unassigned", releaseNotes: nil, rollbackVersion: nil, status: .released)
         )
     }
 

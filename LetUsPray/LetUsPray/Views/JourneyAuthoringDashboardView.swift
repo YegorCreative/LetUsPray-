@@ -65,6 +65,15 @@ struct JourneyAuthoringDashboardView: View {
                     .foregroundStyle(report.qaIssues.isEmpty ? .green : .orange)
             }
 
+            Section("Release Health") {
+                healthRow("Production releases", value: "\(releaseCount(.production))", systemImage: "shippingbox.fill")
+                healthRow("Upcoming releases", value: "\(metadata.filter { $0.release?.status == .planned || $0.release?.status == .scheduled }.count)", systemImage: "calendar.badge.clock")
+                healthRow("Release candidates", value: "\(metadata.filter { $0.release?.status == .releaseCandidate }.count)", systemImage: "checklist")
+                healthRow("Release readiness", value: "\(releaseReadiness)%", systemImage: "chart.bar.fill")
+                Label(report.releaseIssues.isEmpty ? "Release validation passed" : "Release needs attention", systemImage: report.releaseIssues.isEmpty ? "checkmark.circle" : "exclamationmark.triangle")
+                    .foregroundStyle(report.releaseIssues.isEmpty ? .green : .orange)
+            }
+
             Section("Collections") {
                 ForEach(PrayerJourneyCatalog.collections) { collection in
                     let journeys = metadata.filter { $0.collection == collection.id }
@@ -141,6 +150,25 @@ struct JourneyAuthoringDashboardView: View {
             let categoryScore = qa.completedCategories.count * 100 / PrayerJourneyQACategory.allCases.count
             let statusScore = qa.status == .approved ? 100 : qa.status == .readyForReview ? 75 : qa.status == .inProgress ? 50 : 0
             return total + min(categoryScore, statusScore)
+        } / metadata.count
+    }
+
+    private func releaseCount(_ channel: PrayerJourneyReleaseChannel) -> Int {
+        metadata.filter { $0.release?.channel == channel && $0.release?.status == .released }.count
+    }
+
+    private var releaseReadiness: Int {
+        guard !metadata.isEmpty else { return 0 }
+        return metadata.reduce(0) { total, item in
+            let value: Int
+            if item.release?.status == .released && item.qa.status == .approved && item.release?.channel == .production {
+                value = 100
+            } else if item.release != nil {
+                value = 50
+            } else {
+                value = 0
+            }
+            return total + value
         } / metadata.count
     }
 }
