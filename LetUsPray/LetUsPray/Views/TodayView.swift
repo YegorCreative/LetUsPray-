@@ -15,6 +15,8 @@ struct TodayView: View {
     let onOpenPlan: (PrayerPlan) -> Void
     let onOpenPlans: () -> Void
     let onOpenSaved: () -> Void
+    @AppStorage(PrayerStorageKeys.savedJourneyIDs) private var savedJourneyIDsRawValue = ""
+    @AppStorage(PrayerStorageKeys.favoriteJourneyIDs) private var favoriteJourneyIDsRawValue = ""
 
     private var activePlan: PrayerPlan {
         viewModel.activePlan
@@ -22,6 +24,14 @@ struct TodayView: View {
 
     private var planAccent: Color {
         activePlan.category.brandAccent
+    }
+
+    private var savedJourneyIDs: Set<String> {
+        PrayerStorageCodec.decodeStringSet(savedJourneyIDsRawValue)
+    }
+
+    private var favoriteJourneyIDs: Set<String> {
+        PrayerStorageCodec.decodeStringSet(favoriteJourneyIDsRawValue)
     }
 
     var body: some View {
@@ -51,7 +61,9 @@ struct TodayView: View {
                     )
                 }
 
-                recommendedJourneySection
+                dashboardProgressSection
+                personalizedRecommendations
+                librarySection
                 recentActivitySection
                 achievementsEntry
                 quickActionsSection
@@ -84,12 +96,136 @@ struct TodayView: View {
                 .foregroundStyle(AppColors.textPrimary)
                 .fixedSize(horizontal: false, vertical: true)
 
+            Text(Date.now.formatted(date: .complete, time: .omitted))
+                .font(AppTypography.footnote())
+                .foregroundStyle(AppColors.textTertiary)
+
+            Text(dailyEncouragement)
+                .font(AppTypography.callout())
+                .foregroundStyle(AppColors.textSecondary)
+                .fixedSize(horizontal: false, vertical: true)
+
             Text(activePlan.subtitle)
                 .font(AppTypography.callout())
                 .foregroundStyle(AppColors.textSecondary)
                 .fixedSize(horizontal: false, vertical: true)
         }
         .padding(.top, AppSpacing.small)
+    }
+
+    private var dailyEncouragement: String {
+        prayerStreak.currentStreak > 0
+            ? "You're on a \(prayerStreak.currentStreak)-day prayer journey."
+            : "Today is a gentle place to begin your prayer journey."
+    }
+
+    private var dashboardProgressSection: some View {
+        let journeyPlans = viewModel.availableJourneyPlans.filter { !$0.days.isEmpty }
+        let completed = journeyPlans.filter {
+            let progress = PrayerPlanProgress(completedDays: analytics.completedDaysByPlan[$0.id] ?? 0, totalDays: $0.days.count)
+            return progress.status == .completed
+        }.count
+        let started = journeyPlans.filter { (analytics.completedDaysByPlan[$0.id] ?? 0) > 0 }.count
+        let percent = journeyPlans.isEmpty ? 0 : Int((Double(completed) / Double(journeyPlans.count) * 100).rounded())
+
+        return GlassCard {
+            VStack(alignment: .leading, spacing: AppSpacing.medium) {
+                HStack {
+                    Text("Your Journey Progress")
+                        .font(AppTypography.headline())
+                        .foregroundStyle(AppColors.textPrimary)
+                    Spacer()
+                    Text("\(percent)%")
+                        .font(AppTypography.headline())
+                        .foregroundStyle(AppColors.premiumGold)
+                }
+                ProgressView(value: Double(percent), total: 100)
+                    .tint(AppColors.premiumGold)
+                HStack(spacing: AppSpacing.medium) {
+                    statPill(title: "Started", value: "\(started)")
+                    statPill(title: "Completed", value: "\(completed)")
+                    statPill(title: "Streak", value: "\(prayerStreak.currentStreak) days")
+                }
+            }
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Journey progress, \(percent) percent complete, \(started) started, \(completed) completed, \(prayerStreak.currentStreak) day streak")
+    }
+
+    private var allJourneys: [PrayerJourney] {
+        PrayerJourneyCatalog.collections.flatMap {
+            PrayerJourneyCatalog.journeys(in: $0.id, plans: viewModel.allPlans)
+        }
+    }
+
+    private var recommendationSections: PrayerJourneyRecommendationSections {
+        PrayerJourneyRecommendationService.sections(
+            journeys: allJourneys,
+            completedDaysByPlan: analytics.completedDaysByPlan,
+            activePlanID: analytics.activePlanID
+        )
+    }
+
+    private var personalizedRecommendations: some View {
+        VStack(alignment: .leading, spacing: AppSpacing.medium) {
+            if let journey = recommendationSections.recommended.first {
+                sectionHeader("Recommended for You")
+                journeyDashboardCard(journey)
+            }
+            if let featured = recommendationSections.featured.first {
+                sectionHeader("Featured Journey")
+                journeyDashboardCard(featured)
+            }
+            if let seasonal = recommendationSections.seasonal.first {
+                sectionHeader("Seasonal Journey")
+                journeyDashboardCard(seasonal)
+            }
+        }
+    }
+
+    private var librarySection: some View {
+        let saved = allJourneys.filter { savedJourneyIDs.contains($0.id) }
+        let favorites = allJourneys.filter { favoriteJourneyIDs.contains($0.id) }
+        return VStack(alignment: .leading, spacing: AppSpacing.medium) {
+            if !saved.isEmpty {
+                sectionHeader("Saved Journeys")
+                journeyDashboardCard(saved[0])
+            }
+            if !favorites.isEmpty {
+                sectionHeader("Favorite Journeys")
+                journeyDashboardCard(favorites[0])
+            }
+        }
+    }
+
+    private func journeyDashboardCard(_ journey: PrayerJourney) -> some View {
+        let accent = AppColors.planAccent(named: journey.accentColorName)
+        return Button {
+            onOpenPlan(journey.plan)
+        } label: {
+            GlassCard(padding: AppSpacing.medium) {
+                HStack(spacing: AppSpacing.medium) {
+                    Image(systemName: journey.heroImageName)
+                        .foregroundStyle(accent)
+                        .frame(width: 44, height: 44)
+                        .background(accent.opacity(0.16), in: Circle())
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(journey.title)
+                            .font(AppTypography.headline())
+                            .foregroundStyle(AppColors.textPrimary)
+                        Text(journey.subtitle)
+                            .font(AppTypography.caption())
+                            .foregroundStyle(AppColors.textSecondary)
+                            .lineLimit(2)
+                    }
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundStyle(accent)
+                }
+            }
+        }
+        .buttonStyle(.plain)
+        .accessibilityHint("Opens (journey.title).")
     }
 
     private func heroCard(for day: PrayerDay) -> some View {
