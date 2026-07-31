@@ -214,6 +214,8 @@ enum PrayerStorageKeys {
     static let prayerJournalEntries = "prayerJournalEntries"
     static let achievementUnlockDates = "achievementUnlockDates"
     static let journeyProgress = "prayerJourneyProgress"
+    static let savedJourneyIDs = "savedPrayerJourneyIDs"
+    static let favoriteJourneyIDs = "favoritePrayerJourneyIDs"
 }
 
 enum PrayerStorageCodec {
