@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.scenePhase) private var scenePhase
     @StateObject private var viewModel = PrayerPlanViewModel()
     @AppStorage(PrayerStorageKeys.completedDayNumbers) private var completedDayNumbersRawValue = ""
     @AppStorage(PrayerStorageKeys.completedDaysByPlan) private var completedDaysByPlanRawValue = "{}"
@@ -158,6 +159,7 @@ struct ContentView: View {
         }
         .tint(AppColors.textPrimary)
         .onAppear {
+            refreshStreak()
             syncActivePlan()
             syncAnalytics()
             seedExistingHomeActivityIfNeeded()
@@ -176,6 +178,11 @@ struct ContentView: View {
             synchronizeSavedPrayerRecords(oldValue: oldValue, newValue: newValue)
             recordSavedPrayerIfNeeded(oldValue: oldValue, newValue: newValue)
             syncAnalytics()
+        }
+        .onChange(of: scenePhase) { _, newPhase in
+            if newPhase == .active {
+                refreshStreak()
+            }
         }
     }
 
@@ -273,6 +280,15 @@ struct ContentView: View {
         }
         viewModel.setActivePlan(id: resolvedID)
         syncLegacyCompletedDays()
+    }
+
+    private func refreshStreak() {
+        let existing = prayerStreakBinding.wrappedValue
+        let refreshed = StreakService().refreshedStreak(from: existing)
+
+        if refreshed != existing {
+            prayerStreakBinding.wrappedValue = refreshed
+        }
     }
 
     private func startJourney(_ plan: PrayerPlan) {

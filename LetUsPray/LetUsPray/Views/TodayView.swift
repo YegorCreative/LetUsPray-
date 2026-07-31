@@ -157,9 +157,10 @@ struct TodayView: View {
                         .font(AppTypography.headline())
                         .foregroundStyle(AppColors.textPrimary)
 
-                    Text("Longest streak: \(prayerStreak.longestStreak) day\(prayerStreak.longestStreak == 1 ? "" : "s")")
+                    Text(prayerStreak.encouragementText)
                         .font(AppTypography.footnote())
                         .foregroundStyle(AppColors.textSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
 
                 Spacer()
