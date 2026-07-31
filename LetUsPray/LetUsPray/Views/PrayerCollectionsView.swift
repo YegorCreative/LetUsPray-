@@ -14,8 +14,9 @@ struct PrayerCollectionsView: View {
         ScrollView(showsIndicators: false) {
             LazyVStack(alignment: .leading, spacing: AppSpacing.medium) {
                 intro
-                recentlyContinuedSection
-                recentlyCompletedSection
+                ForEach(recommendationSections.ordered, id: \.0) { section in
+                    activitySection(title: section.0, journeys: section.1)
+                }
                 ForEach(collections) { collection in
                     NavigationLink {
                         PrayerCollectionDetailView(
@@ -52,6 +53,14 @@ struct PrayerCollectionsView: View {
 
     private var allJourneys: [PrayerJourney] {
         collections.flatMap { PrayerJourneyCatalog.journeys(in: $0.id, plans: viewModel.allPlans) }
+    }
+
+    private var recommendationSections: PrayerJourneyRecommendationSections {
+        PrayerJourneyRecommendationService.sections(
+            journeys: allJourneys,
+            completedDaysByPlan: analytics.completedDaysByPlan,
+            activePlanID: activePlanID
+        )
     }
 
     private var inProgressJourneys: [PrayerJourney] {
@@ -98,6 +107,11 @@ struct PrayerCollectionsView: View {
                             onStartJourney: {
                                 activePlanID = journey.plan.id
                                 viewModel.setActivePlan(id: journey.plan.id)
+                            },
+                            completedDayNumbersForPlan: completedDayNumbersForPlan,
+                            onOpenJourney: { plan in
+                                activePlanID = plan.id
+                                viewModel.setActivePlan(id: plan.id)
                             }
                         )
                     } label: {
@@ -307,7 +321,11 @@ struct PrayerCollectionDetailView: View {
                     activePlanID = journey.plan.id
                     viewModel.setActivePlan(id: journey.plan.id)
                 },
-                onViewCollection: { dismiss() }
+                onViewCollection: { dismiss() },
+                onOpenJourney: { plan in
+                    activePlanID = plan.id
+                    viewModel.setActivePlan(id: plan.id)
+                }
             )
         } label: {
             journeyCard(journey, featured: featured)

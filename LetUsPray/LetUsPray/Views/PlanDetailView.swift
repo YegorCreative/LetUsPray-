@@ -8,12 +8,18 @@ struct PlanDetailView: View {
     @Binding var analytics: PrayerAnalyticsSnapshot
     let onStartJourney: () -> Void
     let onViewCollection: () -> Void
+    let completedDayNumbersForPlan: ((String) -> Binding<Set<Int>>)?
+    let onOpenJourney: (PrayerPlan) -> Void
     @State private var isMarkedFavorite = false
     @State private var isSavedForLater = false
     @State private var journeyProgressRecord: PrayerJourneyProgressRecord?
 
     private var journey: PrayerJourney {
         PrayerJourneyCatalog.journey(for: plan)
+    }
+
+    private func progressBinding(for planID: String) -> Binding<Set<Int>> {
+        completedDayNumbersForPlan?(planID) ?? $completedDayNumbers
     }
 
     init(
@@ -23,7 +29,9 @@ struct PlanDetailView: View {
         savedVerseIDs: Binding<Set<String>>,
         analytics: Binding<PrayerAnalyticsSnapshot>,
         onStartJourney: @escaping () -> Void,
-        onViewCollection: @escaping () -> Void = {}
+        onViewCollection: @escaping () -> Void = {},
+        completedDayNumbersForPlan: ((String) -> Binding<Set<Int>>)? = nil,
+        onOpenJourney: @escaping (PrayerPlan) -> Void = { _ in }
     ) {
         self.plan = plan
         self.isActive = isActive
@@ -32,6 +40,8 @@ struct PlanDetailView: View {
         self._analytics = analytics
         self.onStartJourney = onStartJourney
         self.onViewCollection = onViewCollection
+        self.completedDayNumbersForPlan = completedDayNumbersForPlan
+        self.onOpenJourney = onOpenJourney
     }
 
     var body: some View {
@@ -48,6 +58,7 @@ struct PlanDetailView: View {
                 if !plan.days.isEmpty {
                     journeyDaysSection
                 }
+                recommendationsSection
             }
             .padding(.horizontal, AppSpacing.large)
             .padding(.top, AppSpacing.medium)
@@ -408,6 +419,82 @@ struct PlanDetailView: View {
                 .contentShape(Rectangle())
             }
         }
+    }
+
+    private var recommendationsSection: some View {
+        let allJourneys = PrayerJourneyCatalog.collections.flatMap {
+            PrayerJourneyCatalog.journeys(in: $0.id, plans: PrayerPlansRepository.allPlans)
+        }
+        let next = PrayerJourneyRecommendationService.suggestedNext(
+            after: journey,
+            journeys: allJourneys,
+            completedDaysByPlan: analytics.completedDaysByPlan
+        )
+        let related = PrayerJourneyRecommendationService.related(
+            to: journey,
+            journeys: allJourneys,
+            completedDaysByPlan: analytics.completedDaysByPlan
+        )
+
+        return VStack(alignment: .leading, spacing: AppSpacing.medium) {
+            if let next {
+                Text("Suggested Next Journey")
+                    .font(AppTypography.headline())
+                    .foregroundStyle(AppColors.textPrimary)
+                recommendationLink(next)
+            }
+
+            if !related.isEmpty {
+                Text("More From This Collection")
+                    .font(AppTypography.headline())
+                    .foregroundStyle(AppColors.textPrimary)
+                    .padding(.top, next == nil ? 0 : AppSpacing.small)
+                ForEach(related) { recommendation in
+                    recommendationLink(recommendation)
+                }
+            }
+        }
+    }
+
+    private func recommendationLink(_ recommendation: PrayerJourney) -> some View {
+        NavigationLink {
+            PlanDetailView(
+                plan: recommendation.plan,
+                isActive: activePlanID(for: recommendation) == recommendation.plan.id,
+                completedDayNumbers: progressBinding(for: recommendation.plan.id),
+                savedVerseIDs: $savedVerseIDs,
+                analytics: $analytics,
+                onStartJourney: { onOpenJourney(recommendation.plan) },
+                completedDayNumbersForPlan: completedDayNumbersForPlan,
+                onOpenJourney: onOpenJourney
+            )
+        } label: {
+            GlassCard(padding: AppSpacing.medium) {
+                HStack(spacing: AppSpacing.medium) {
+                    Image(systemName: recommendation.heroImageName)
+                        .foregroundStyle(AppColors.planAccent(named: recommendation.accentColorName))
+                        .frame(width: 42, height: 42)
+                        .background(AppColors.planAccent(named: recommendation.accentColorName).opacity(0.16), in: Circle())
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(recommendation.title)
+                            .font(AppTypography.headline())
+                            .foregroundStyle(AppColors.textPrimary)
+                        Text(recommendation.subtitle)
+                            .font(AppTypography.caption())
+                            .foregroundStyle(AppColors.textSecondary)
+                            .lineLimit(2)
+                    }
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundStyle(AppColors.planAccent(named: recommendation.accentColorName))
+                }
+            }
+        }
+        .buttonStyle(.plain)
+    }
+
+    private func activePlanID(for recommendation: PrayerJourney) -> String {
+        analytics.activePlanID
     }
 
     private func metadataPill(title: String, value: String) -> some View {
