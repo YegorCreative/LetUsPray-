@@ -62,6 +62,7 @@ struct TodayView: View {
                 }
 
                 dashboardProgressSection
+                insightsEntry
                 personalizedRecommendations
                 librarySection
                 recentActivitySection
@@ -181,6 +182,47 @@ struct TodayView: View {
                 journeyDashboardCard(seasonal)
             }
         }
+    }
+
+    private var insightsEntry: some View {
+        NavigationLink {
+            PrayerInsightsView(insights: prayerInsights)
+        } label: {
+            GlassCard(padding: AppSpacing.medium) {
+                HStack(spacing: AppSpacing.medium) {
+                    Image(systemName: "chart.xyaxis.line")
+                        .foregroundStyle(AppColors.electricCyan)
+                        .frame(width: 44, height: 44)
+                        .background(AppColors.electricCyan.opacity(0.16), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Prayer Insights")
+                            .font(AppTypography.headline())
+                            .foregroundStyle(AppColors.textPrimary)
+                        Text("See the story of your prayer journey")
+                            .font(AppTypography.footnote())
+                            .foregroundStyle(AppColors.textSecondary)
+                    }
+                    Spacer()
+                    Image(systemName: "chevron.right").foregroundStyle(AppColors.textTertiary)
+                }
+            }
+        }
+        .buttonStyle(.plain)
+        .accessibilityHint("Opens your personal prayer insights.")
+    }
+
+    private var prayerInsights: PrayerInsights {
+        PrayerInsightsService.make(
+            journeys: allJourneys,
+            completedDaysByPlan: analytics.completedDaysByPlan,
+            streak: prayerStreak,
+            completedPrayerCount: analytics.completedPrayersCount,
+            savedJourneyIDs: savedJourneyIDs,
+            favoriteJourneyIDs: favoriteJourneyIDs,
+            prayerCompletionDates: prayerCompletionDates,
+            latestCompletedPrayer: latestCompletedPrayer,
+            latestStartedJourney: latestStartedJourney
+        )
     }
 
     private var librarySection: some View {
