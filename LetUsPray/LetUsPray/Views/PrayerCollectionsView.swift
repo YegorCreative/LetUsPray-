@@ -7,31 +7,21 @@ struct PrayerCollectionsView: View {
     let completedDayNumbersForPlan: (String) -> Binding<Set<Int>>
     @Binding var savedVerseIDs: Set<String>
     @Binding var analytics: PrayerAnalyticsSnapshot
+    @State private var searchQuery = ""
+    @State private var searchFilters = JourneySearchFilters.empty
+    @State private var searchSort: JourneySortOption = .recommended
+    @State private var showingFilters = false
+    @State private var recentSearches: [String] = []
 
     private var collections: [JourneyCollection] { PrayerJourneyCatalog.collections }
 
     var body: some View {
         ScrollView(showsIndicators: false) {
-            LazyVStack(alignment: .leading, spacing: AppSpacing.medium) {
-                intro
-                ForEach(recommendationSections.ordered, id: \.0) { section in
-                    activitySection(title: section.0, journeys: section.1)
-                }
-                ForEach(collections) { collection in
-                    NavigationLink {
-                        PrayerCollectionDetailView(
-                            collection: collection,
-                            viewModel: viewModel,
-                            activePlanID: $activePlanID,
-                            completedDayNumbers: $completedDayNumbers,
-                            completedDayNumbersForPlan: completedDayNumbersForPlan,
-                            savedVerseIDs: $savedVerseIDs,
-                            analytics: $analytics
-                        )
-                    } label: {
-                        collectionCard(collection)
-                    }
-                    .buttonStyle(.plain)
+            Group {
+                if searchIsActive {
+                    searchResultsContent
+                } else {
+                    discoveryContent
                 }
             }
             .padding(.horizontal, AppSpacing.large)
@@ -41,6 +31,159 @@ struct PrayerCollectionsView: View {
         .navigationTitle("Prayer Journeys")
         .navigationBarTitleDisplayMode(.large)
         .toolbarBackground(.hidden, for: .navigationBar)
+        .searchable(text: $searchQuery, prompt: "Search prayer journeys")
+        .searchSuggestions {
+            if !recentSearches.isEmpty {
+                Section("Recent Searches") {
+                    ForEach(recentSearches, id: \.self) { recent in
+                        Button(recent) { searchQuery = recent }
+                    }
+                }
+            }
+        }
+        .toolbar {
+            ToolbarItemGroup(placement: .topBarTrailing) {
+                Button {
+                    showingFilters = true
+                } label: {
+                    Label("Filter", systemImage: searchFilters.isEmpty ? "line.3.horizontal.decrease.circle" : "line.3.horizontal.decrease.circle.fill")
+                }
+                Menu {
+                    Picker("Sort", selection: $searchSort) {
+                        ForEach(JourneySortOption.allCases) { option in
+                            Text(option.rawValue).tag(option)
+                        }
+                    }
+                } label: {
+                    Label("Sort", systemImage: "arrow.up.arrow.down")
+                }
+            }
+        }
+        .sheet(isPresented: $showingFilters) {
+            JourneyFilterSheet(filters: $searchFilters)
+        }
+        .onSubmit(of: .search) {
+            let trimmed = searchQuery.trimmingCharacters(in: .whitespacesAndNewlines)
+            guard !trimmed.isEmpty else { return }
+            recentSearches.removeAll { $0.caseInsensitiveCompare(trimmed) == .orderedSame }
+            recentSearches.insert(trimmed, at: 0)
+            recentSearches = Array(recentSearches.prefix(5))
+        }
+    }
+
+    private var searchIsActive: Bool {
+        !searchQuery.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || !searchFilters.isEmpty
+    }
+
+    private var searchResults: [PrayerJourney] {
+        PrayerJourneySearchService.search(
+            journeys: allJourneys,
+            query: searchQuery,
+            filters: searchFilters,
+            sort: searchSort,
+            completedDaysByPlan: analytics.completedDaysByPlan,
+            activePlanID: activePlanID
+        )
+    }
+
+    private var discoveryContent: some View {
+        LazyVStack(alignment: .leading, spacing: AppSpacing.medium) {
+            intro
+            ForEach(recommendationSections.ordered, id: \.0) { section in
+                activitySection(title: section.0, journeys: section.1)
+            }
+            ForEach(collections) { collection in
+                NavigationLink {
+                    PrayerCollectionDetailView(
+                        collection: collection,
+                        viewModel: viewModel,
+                        activePlanID: $activePlanID,
+                        completedDayNumbers: $completedDayNumbers,
+                        completedDayNumbersForPlan: completedDayNumbersForPlan,
+                        savedVerseIDs: $savedVerseIDs,
+                        analytics: $analytics
+                    )
+                } label: {
+                    collectionCard(collection)
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .padding(.horizontal, AppSpacing.large)
+        .padding(.top, AppSpacing.medium)
+        .padding(.bottom, AppSpacing.xxLarge)
+    }
+
+    private var searchResultsContent: some View {
+        LazyVStack(alignment: .leading, spacing: AppSpacing.medium) {
+            HStack {
+                Text("\(searchResults.count) result\(searchResults.count == 1 ? "" : "s")")
+                    .font(AppTypography.headline())
+                    .foregroundStyle(AppColors.textPrimary)
+                Spacer()
+                if !searchQuery.isEmpty || !searchFilters.isEmpty {
+                    Button("Clear") {
+                        searchQuery = ""
+                        searchFilters = .empty
+                    }
+                    .font(AppTypography.footnote())
+                }
+            }
+
+            if searchResults.isEmpty {
+                EmptyStateView(
+                    title: searchQuery.isEmpty ? "No journeys match these filters" : "No journeys found",
+                    message: "Try a different search or broaden your filters.",
+                    systemImage: "magnifyingglass"
+                )
+            } else {
+                ForEach(groupedSearchResults, id: \.0) { group in
+                    VStack(alignment: .leading, spacing: AppSpacing.small) {
+                        Text(group.0)
+                            .font(AppTypography.headline())
+                            .foregroundStyle(AppColors.textPrimary)
+                        ForEach(group.1) { journey in
+                            journeySearchLink(journey)
+                        }
+                    }
+                }
+            }
+        }
+        .padding(.horizontal, AppSpacing.large)
+        .padding(.top, AppSpacing.medium)
+        .padding(.bottom, AppSpacing.xxLarge)
+    }
+
+    private var groupedSearchResults: [(String, [PrayerJourney])] {
+        let groups = Dictionary(grouping: searchResults) { $0.collection.title }
+        return collections.compactMap { collection in
+            guard let journeys = groups[collection.title], !journeys.isEmpty else { return nil }
+            return (collection.title, journeys)
+        }
+    }
+
+    private func journeySearchLink(_ journey: PrayerJourney) -> some View {
+        NavigationLink {
+            PlanDetailView(
+                plan: journey.plan,
+                isActive: activePlanID == journey.plan.id,
+                completedDayNumbers: completedDayNumbersForPlan(journey.plan.id),
+                savedVerseIDs: $savedVerseIDs,
+                analytics: $analytics,
+                onStartJourney: {
+                    activePlanID = journey.plan.id
+                    viewModel.setActivePlan(id: journey.plan.id)
+                },
+                completedDayNumbersForPlan: completedDayNumbersForPlan,
+                onOpenJourney: { plan in
+                    activePlanID = plan.id
+                    viewModel.setActivePlan(id: plan.id)
+                }
+            )
+        } label: {
+            activityCard(journey)
+        }
+        .buttonStyle(.plain)
     }
 
     private var intro: some View {
@@ -227,6 +370,10 @@ struct PrayerCollectionDetailView: View {
     let completedDayNumbersForPlan: (String) -> Binding<Set<Int>>
     @Binding var savedVerseIDs: Set<String>
     @Binding var analytics: PrayerAnalyticsSnapshot
+    @State private var searchQuery = ""
+    @State private var searchFilters = JourneySearchFilters.empty
+    @State private var searchSort: JourneySortOption = .recommended
+    @State private var showingFilters = false
 
     private var journeys: [PrayerJourney] {
         PrayerJourneyCatalog.journeys(in: collection.id, plans: viewModel.allPlans)
@@ -236,7 +383,9 @@ struct PrayerCollectionDetailView: View {
         ScrollView(showsIndicators: false) {
             LazyVStack(alignment: .leading, spacing: AppSpacing.large) {
                 header
-                if let featured = journeys.first(where: \.isFeatured) {
+                if collectionSearchIsActive {
+                    collectionSearchContent
+                } else if let featured = journeys.first(where: \.isFeatured) {
                     featuredSection(featured)
                     allJourneysSection(excluding: featured.id)
                 } else if journeys.isEmpty {
@@ -252,6 +401,64 @@ struct PrayerCollectionDetailView: View {
         .navigationTitle(collection.title)
         .navigationBarTitleDisplayMode(.large)
         .toolbarBackground(.hidden, for: .navigationBar)
+        .searchable(text: $searchQuery, prompt: "Search this collection")
+        .toolbar {
+            ToolbarItemGroup(placement: .topBarTrailing) {
+                Button { showingFilters = true } label: {
+                    Label("Filter", systemImage: searchFilters.isEmpty ? "line.3.horizontal.decrease.circle" : "line.3.horizontal.decrease.circle.fill")
+                }
+                Menu {
+                    Picker("Sort", selection: $searchSort) {
+                        ForEach(JourneySortOption.allCases) { option in
+                            Text(option.rawValue).tag(option)
+                        }
+                    }
+                } label: {
+                    Label("Sort", systemImage: "arrow.up.arrow.down")
+                }
+            }
+        }
+        .sheet(isPresented: $showingFilters) {
+            JourneyFilterSheet(filters: $searchFilters, collectionLockedTo: collection.id)
+        }
+    }
+
+    private var collectionSearchIsActive: Bool {
+        !searchQuery.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || !searchFilters.isEmpty
+    }
+
+    private var collectionSearchResults: [PrayerJourney] {
+        PrayerJourneySearchService.search(
+            journeys: journeys,
+            query: searchQuery,
+            filters: searchFilters,
+            sort: searchSort,
+            completedDaysByPlan: analytics.completedDaysByPlan,
+            activePlanID: activePlanID
+        )
+    }
+
+    private var collectionSearchContent: some View {
+        VStack(alignment: .leading, spacing: AppSpacing.medium) {
+            HStack {
+                Text("\(collectionSearchResults.count) result\(collectionSearchResults.count == 1 ? "" : "s")")
+                    .font(AppTypography.headline())
+                    .foregroundStyle(AppColors.textPrimary)
+                Spacer()
+                Button("Clear") {
+                    searchQuery = ""
+                    searchFilters = .empty
+                }
+                .font(AppTypography.footnote())
+            }
+            if collectionSearchResults.isEmpty {
+                EmptyStateView(title: "No journeys found", message: "Try a different search or broaden your filters.", systemImage: "magnifyingglass")
+            } else {
+                ForEach(collectionSearchResults) { journey in
+                    journeyLink(journey)
+                }
+            }
+        }
     }
 
     private var header: some View {
@@ -412,5 +619,77 @@ struct PrayerCollectionDetailView: View {
             .padding(.horizontal, 7)
             .padding(.vertical, 3)
             .background(color.opacity(0.14), in: Capsule())
+    }
+}
+
+private struct JourneyFilterSheet: View {
+    @Environment(\.dismiss) private var dismiss
+    @Binding var filters: JourneySearchFilters
+    let collectionLockedTo: PrayerCollectionID?
+
+    init(filters: Binding<JourneySearchFilters>, collectionLockedTo: PrayerCollectionID? = nil) {
+        self._filters = filters
+        self.collectionLockedTo = collectionLockedTo
+    }
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                if collectionLockedTo == nil {
+                    Section("Collection") {
+                        Picker("Collection", selection: $filters.collection) {
+                            Text("All Collections").tag(Optional<PrayerCollectionID>.none)
+                            ForEach(PrayerJourneyCatalog.collections) { collection in
+                                Text(collection.title).tag(Optional(collection.id))
+                            }
+                        }
+                    }
+                }
+                Section("Journey") {
+                    Picker("Difficulty", selection: $filters.difficulty) {
+                        Text("Any Difficulty").tag(Optional<PrayerJourneyDifficulty>.none)
+                        ForEach(PrayerJourneyDifficulty.allCases, id: \.self) { difficulty in
+                            Text(difficulty.rawValue).tag(Optional(difficulty))
+                        }
+                    }
+                    Picker("Duration", selection: $filters.duration) {
+                        ForEach(JourneyDurationFilter.allCases) { option in
+                            Text(option.rawValue).tag(option)
+                        }
+                    }
+                    Picker("Prayer Time", selection: $filters.prayerTime) {
+                        ForEach(JourneyPrayerTimeFilter.allCases) { option in
+                            Text(option.rawValue).tag(option)
+                        }
+                    }
+                    Picker("Progress", selection: $filters.progress) {
+                        ForEach(JourneyProgressFilter.allCases) { option in
+                            Text(option.rawValue).tag(option)
+                        }
+                    }
+                }
+                Section("Highlights") {
+                    Toggle("Featured", isOn: $filters.featuredOnly)
+                    Toggle("Recommended", isOn: $filters.recommendedOnly)
+                    Toggle("Seasonal", isOn: $filters.seasonalOnly)
+                }
+                Section {
+                    Button("Reset Filters", role: .destructive) {
+                        filters = .empty
+                        filters.collection = collectionLockedTo
+                    }
+                }
+            }
+            .navigationTitle("Filter Journeys")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Done") { dismiss() }
+                }
+            }
+            .onAppear {
+                if let collectionLockedTo { filters.collection = collectionLockedTo }
+            }
+        }
     }
 }
