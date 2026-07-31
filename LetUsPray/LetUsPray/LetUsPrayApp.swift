@@ -12,11 +12,16 @@ import SwiftUI
 
 @main
 struct LetUsPrayApp: App {
+    @AppStorage("settings.appearance") private var appearanceRawValue = AppAppearance.system.rawValue
+
     /// Defines the scene that represents the application's user interface.
     /// Configures a single window group that displays the main content view.
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(
+                    AppAppearance(rawValue: appearanceRawValue)?.colorScheme
+                )
         }
     }
 }
