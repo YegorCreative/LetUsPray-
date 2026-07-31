@@ -8,6 +8,12 @@ enum PrayerJourneyContentState: String, CaseIterable, Codable, Hashable {
     case locked = "Locked"
 }
 
+enum PrayerJourneyReviewStatus: String, CaseIterable, Codable, Hashable {
+    case notStarted = "Not Started"
+    case inReview = "In Review"
+    case approved = "Approved"
+}
+
 enum PrayerJourneyDifficulty: String, Codable, CaseIterable, Hashable {
     case gentle = "Gentle"
     case steady = "Steady"
@@ -40,6 +46,15 @@ struct PrayerJourneyMetadata: Identifiable, Hashable {
     let estimatedRelease: String?
     let featuredPriority: Int
     let launchPriority: Int
+    let reviewer: String
+    let reviewStatus: PrayerJourneyReviewStatus
+    let createdDate: String
+    let updatedDate: String
+    let publishDate: String?
+    let estimatedCompletion: String?
+    let requiredSessionCount: Int
+    let requiredPrayerCount: Int
+    let requiredScriptureCount: Int
 }
 
 struct PrayerJourneyProgressRecord: Codable, Hashable {
@@ -223,9 +238,11 @@ enum PrayerJourneyCatalog {
         let missingCollections: [String]
         let invalidSortOrders: [String]
         let incompleteMetadata: [String]
+        let missingArtwork: [String]
+        let missingRequirements: [String]
 
         var isValid: Bool {
-            duplicateIDs.isEmpty && duplicateTitles.isEmpty && missingCollections.isEmpty && invalidSortOrders.isEmpty && incompleteMetadata.isEmpty
+            duplicateIDs.isEmpty && duplicateTitles.isEmpty && missingCollections.isEmpty && invalidSortOrders.isEmpty && incompleteMetadata.isEmpty && missingArtwork.isEmpty && missingRequirements.isEmpty
         }
     }
 
@@ -238,7 +255,11 @@ enum PrayerJourneyCatalog {
         let incompleteMetadata = metadata.filter {
             $0.id.isEmpty || $0.title.isEmpty || $0.category.isEmpty || $0.heroImageName.isEmpty || $0.accentColorName.isEmpty || $0.version < 1
         }.map(\.id).sorted()
-        return ValidationReport(duplicateIDs: ids, duplicateTitles: titles, missingCollections: missingCollections, invalidSortOrders: invalidSortOrders, incompleteMetadata: incompleteMetadata)
+        let missingArtwork = metadata.filter { $0.heroImageName.isEmpty || $0.accentColorName.isEmpty }.map(\.id).sorted()
+        let missingRequirements = metadata.filter {
+            $0.requiredSessionCount < 0 || $0.requiredPrayerCount < 0 || $0.requiredScriptureCount < 0
+        }.map(\.id).sorted()
+        return ValidationReport(duplicateIDs: ids, duplicateTitles: titles, missingCollections: missingCollections, invalidSortOrders: invalidSortOrders, incompleteMetadata: incompleteMetadata, missingArtwork: missingArtwork, missingRequirements: missingRequirements)
     }
 
     static func journey(for plan: PrayerPlan) -> PrayerJourney {
@@ -338,6 +359,12 @@ enum PrayerJourneyCatalog {
             , lastUpdated: "2026-07-31", author: "LetUsPray Editorial"
             , estimatedRelease: planID == nil ? "Planned" : nil
             , featuredPriority: featured ? 1 : 0, launchPriority: planID == nil ? 0 : 1
+            , reviewer: "Unassigned", reviewStatus: planID == nil ? .notStarted : .approved
+            , createdDate: "2026-07-31", updatedDate: "2026-07-31"
+            , publishDate: planID == nil ? nil : "2026-07-31"
+            , estimatedCompletion: planID == nil ? "Planned" : nil
+            , requiredSessionCount: max(duration, 0), requiredPrayerCount: max(duration, 0)
+            , requiredScriptureCount: max(duration, 0)
         )
     }
 
@@ -352,6 +379,10 @@ enum PrayerJourneyCatalog {
             , contentState: .available, version: 1, contentCompletionPercentage: 100
             , lastUpdated: "2026-07-31", author: "LetUsPray Editorial", estimatedRelease: nil
             , featuredPriority: plan.category == .psalms ? 1 : 0, launchPriority: 1
+            , reviewer: "Unassigned", reviewStatus: .approved
+            , createdDate: "2026-07-31", updatedDate: "2026-07-31", publishDate: "2026-07-31"
+            , estimatedCompletion: nil, requiredSessionCount: plan.durationDays
+            , requiredPrayerCount: plan.days.count, requiredScriptureCount: plan.days.count
         )
     }
 
