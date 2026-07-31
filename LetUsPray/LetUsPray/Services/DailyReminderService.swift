@@ -8,6 +8,10 @@ final class DailyReminderService {
     static let notificationIdentifier = "daily-prayer-reminder"
 
     private let notificationCenter: UNUserNotificationCenter
+    private var desiredReminderTime: TimeInterval?
+    private var changeGeneration = 0
+    private var reconciliationTask: Task<Void, Never>?
+    private var reconciliationError: Error?
 
     private init(notificationCenter: UNUserNotificationCenter = .current()) {
         self.notificationCenter = notificationCenter
@@ -31,8 +35,67 @@ final class DailyReminderService {
     }
 
     func scheduleDailyReminder(at timeInterval: TimeInterval) async throws {
-        cancelDailyReminder()
+        changeGeneration += 1
+        desiredReminderTime = timeInterval
+        reconciliationError = nil
+        startReconciliationIfNeeded()
 
+        await reconciliationTask?.value
+
+        if let reconciliationError {
+            throw reconciliationError
+        }
+    }
+
+    func cancelDailyReminder() {
+        changeGeneration += 1
+        desiredReminderTime = nil
+        reconciliationError = nil
+        notificationCenter.removePendingNotificationRequests(
+            withIdentifiers: [Self.notificationIdentifier]
+        )
+        startReconciliationIfNeeded()
+    }
+
+    private func startReconciliationIfNeeded() {
+        guard reconciliationTask == nil else { return }
+
+        reconciliationTask = Task { [weak self] in
+            await self?.reconcileDesiredState()
+        }
+    }
+
+    private func reconcileDesiredState() async {
+        while true {
+            let generation = changeGeneration
+            let reminderTime = desiredReminderTime
+
+            notificationCenter.removePendingNotificationRequests(
+                withIdentifiers: [Self.notificationIdentifier]
+            )
+
+            if let reminderTime {
+                do {
+                    try await notificationCenter.add(
+                        notificationRequest(at: reminderTime)
+                    )
+                } catch {
+                    if generation == changeGeneration {
+                        reconciliationError = error
+                    }
+                }
+            }
+
+            guard generation == changeGeneration else {
+                continue
+            }
+
+            reconciliationTask = nil
+            return
+        }
+    }
+
+    private func notificationRequest(at timeInterval: TimeInterval) -> UNNotificationRequest {
         let normalizedInterval = max(0, min(timeInterval, 24 * 60 * 60 - 1))
         let totalMinutes = Int(normalizedInterval) / 60
         var dateComponents = DateComponents()
@@ -48,18 +111,10 @@ final class DailyReminderService {
             dateMatching: dateComponents,
             repeats: true
         )
-        let request = UNNotificationRequest(
+        return UNNotificationRequest(
             identifier: Self.notificationIdentifier,
             content: content,
             trigger: trigger
-        )
-
-        try await notificationCenter.add(request)
-    }
-
-    func cancelDailyReminder() {
-        notificationCenter.removePendingNotificationRequests(
-            withIdentifiers: [Self.notificationIdentifier]
         )
     }
 }

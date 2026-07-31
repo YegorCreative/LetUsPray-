@@ -57,6 +57,7 @@ struct SettingsView: View {
     @State private var notificationAuthorizationStatus: UNAuthorizationStatus = .notDetermined
     @State private var permissionRequestInProgress = false
     @State private var reminderErrorMessage: String?
+    @State private var reminderRequestGeneration = 0
 
     var body: some View {
         Form {
@@ -78,8 +79,10 @@ struct SettingsView: View {
         }
         .onChange(of: reminderTimeInterval) {
             guard dailyReminderEnabled else { return }
+            reminderRequestGeneration += 1
+            let generation = reminderRequestGeneration
             Task {
-                await scheduleReminder()
+                await scheduleReminder(generation: generation)
             }
         }
         .onChange(of: scenePhase) { _, newPhase in
@@ -222,10 +225,13 @@ struct SettingsView: View {
             get: { dailyReminderEnabled },
             set: { isEnabled in
                 if isEnabled {
+                    reminderRequestGeneration += 1
+                    let generation = reminderRequestGeneration
                     Task {
-                        await enableDailyReminder()
+                        await enableDailyReminder(generation: generation)
                     }
                 } else {
+                    reminderRequestGeneration += 1
                     dailyReminderEnabled = false
                     reminderErrorMessage = nil
                     DailyReminderService.shared.cancelDailyReminder()
@@ -243,7 +249,7 @@ struct SettingsView: View {
             : "Requests permission and schedules one daily prayer reminder."
     }
 
-    private func enableDailyReminder() async {
+    private func enableDailyReminder(generation: Int) async {
         permissionRequestInProgress = true
         reminderErrorMessage = nil
         defer { permissionRequestInProgress = false }
@@ -252,26 +258,38 @@ struct SettingsView: View {
             let granted = try await DailyReminderService.shared.requestAuthorizationIfNeeded()
             notificationAuthorizationStatus = await DailyReminderService.shared.authorizationStatus()
 
-            guard granted else {
+            guard generation == reminderRequestGeneration, granted else {
                 dailyReminderEnabled = false
                 DailyReminderService.shared.cancelDailyReminder()
                 return
             }
 
             try await DailyReminderService.shared.scheduleDailyReminder(at: reminderTimeInterval)
+            guard generation == reminderRequestGeneration else { return }
             dailyReminderEnabled = true
         } catch {
+            guard generation == reminderRequestGeneration else { return }
             dailyReminderEnabled = false
             DailyReminderService.shared.cancelDailyReminder()
             reminderErrorMessage = "The daily reminder could not be scheduled. Please try again."
         }
     }
 
-    private func scheduleReminder() async {
+    private func scheduleReminder(generation: Int? = nil) async {
+        if let generation, generation != reminderRequestGeneration {
+            return
+        }
+
         do {
             try await DailyReminderService.shared.scheduleDailyReminder(at: reminderTimeInterval)
+            if let generation, generation != reminderRequestGeneration {
+                return
+            }
             reminderErrorMessage = nil
         } catch {
+            if let generation, generation != reminderRequestGeneration {
+                return
+            }
             dailyReminderEnabled = false
             DailyReminderService.shared.cancelDailyReminder()
             reminderErrorMessage = "The daily reminder could not be updated. Please try again."
