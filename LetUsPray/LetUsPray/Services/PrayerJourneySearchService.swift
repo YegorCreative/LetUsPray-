@@ -50,12 +50,15 @@ struct JourneySearchFilters: Equatable {
     var featuredOnly = false
     var recommendedOnly = false
     var seasonalOnly = false
+    var savedOnly = false
+    var favoriteOnly = false
 
     static let empty = JourneySearchFilters(collection: nil, difficulty: nil)
 
     var isEmpty: Bool {
         collection == nil && difficulty == nil && duration == .any && prayerTime == .any && progress == .any
             && !featuredOnly && !recommendedOnly && !seasonalOnly
+            && !savedOnly && !favoriteOnly
     }
 }
 
@@ -66,12 +69,14 @@ enum PrayerJourneySearchService {
         filters: JourneySearchFilters,
         sort: JourneySortOption,
         completedDaysByPlan: [String: Int],
-        activePlanID: String
+        activePlanID: String,
+        savedJourneyIDs: Set<String> = PrayerJourneyLibraryService.savedIDs(),
+        favoriteJourneyIDs: Set<String> = PrayerJourneyLibraryService.favoriteIDs()
     ) -> [PrayerJourney] {
         let normalizedQuery = query.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
         let filtered = journeys.filter { journey in
             matchesQuery(journey, query: normalizedQuery)
-                && matchesFilters(journey, filters: filters, completedDaysByPlan: completedDaysByPlan)
+                && matchesFilters(journey, filters: filters, completedDaysByPlan: completedDaysByPlan, savedJourneyIDs: savedJourneyIDs, favoriteJourneyIDs: favoriteJourneyIDs)
         }
 
         return filtered.sorted {
@@ -87,12 +92,14 @@ enum PrayerJourneySearchService {
         return searchableText.localizedStandardRange(of: query) != nil
     }
 
-    private static func matchesFilters(_ journey: PrayerJourney, filters: JourneySearchFilters, completedDaysByPlan: [String: Int]) -> Bool {
+    private static func matchesFilters(_ journey: PrayerJourney, filters: JourneySearchFilters, completedDaysByPlan: [String: Int], savedJourneyIDs: Set<String>, favoriteJourneyIDs: Set<String>) -> Bool {
         if let collection = filters.collection, journey.collection != collection { return false }
         if let difficulty = filters.difficulty, journey.difficulty != difficulty { return false }
         if filters.featuredOnly && !journey.isFeatured { return false }
         if filters.recommendedOnly && !journey.isRecommended { return false }
         if filters.seasonalOnly && !journey.isSeasonal { return false }
+        if filters.savedOnly && !savedJourneyIDs.contains(journey.id) { return false }
+        if filters.favoriteOnly && !favoriteJourneyIDs.contains(journey.id) { return false }
 
         switch filters.duration {
         case .any: break

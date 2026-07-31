@@ -7,6 +7,8 @@ struct PrayerCollectionsView: View {
     let completedDayNumbersForPlan: (String) -> Binding<Set<Int>>
     @Binding var savedVerseIDs: Set<String>
     @Binding var analytics: PrayerAnalyticsSnapshot
+    @AppStorage(PrayerStorageKeys.savedJourneyIDs) private var savedJourneyIDsRawValue = ""
+    @AppStorage(PrayerStorageKeys.favoriteJourneyIDs) private var favoriteJourneyIDsRawValue = ""
     @State private var searchQuery = ""
     @State private var searchFilters = JourneySearchFilters.empty
     @State private var searchSort: JourneySortOption = .recommended
@@ -89,6 +91,7 @@ struct PrayerCollectionsView: View {
     private var discoveryContent: some View {
         LazyVStack(alignment: .leading, spacing: AppSpacing.medium) {
             intro
+            libraryContent
             ForEach(recommendationSections.ordered, id: \.0) { section in
                 activitySection(title: section.0, journeys: section.1)
             }
@@ -112,6 +115,36 @@ struct PrayerCollectionsView: View {
         .padding(.horizontal, AppSpacing.large)
         .padding(.top, AppSpacing.medium)
         .padding(.bottom, AppSpacing.xxLarge)
+    }
+
+    private var savedJourneyIDs: Set<String> {
+        PrayerStorageCodec.decodeStringSet(savedJourneyIDsRawValue)
+    }
+
+    private var favoriteJourneyIDs: Set<String> {
+        PrayerStorageCodec.decodeStringSet(favoriteJourneyIDsRawValue)
+    }
+
+    private var libraryContent: some View {
+        let saved = allJourneys.filter { savedJourneyIDs.contains($0.id) }
+        let favorites = allJourneys.filter { favoriteJourneyIDs.contains($0.id) }
+        return Group {
+            if !saved.isEmpty || !favorites.isEmpty {
+                VStack(alignment: .leading, spacing: AppSpacing.small) {
+                    Text("Your Library")
+                        .font(AppTypography.headline())
+                        .foregroundStyle(AppColors.textPrimary)
+                    activitySection(title: "Saved Journeys", journeys: saved)
+                    activitySection(title: "Favorite Journeys", journeys: favorites)
+                }
+            } else {
+                EmptyStateView(
+                    title: "Build Your Prayer Library",
+                    message: "Save journeys you want to return to, or mark a favorite for quick access.",
+                    systemImage: "books.vertical"
+                )
+            }
+        }
     }
 
     private var searchResultsContent: some View {
@@ -184,6 +217,7 @@ struct PrayerCollectionsView: View {
             activityCard(journey)
         }
         .buttonStyle(.plain)
+        .contextMenu { libraryContextMenu(for: journey) }
     }
 
     private var intro: some View {
@@ -261,6 +295,7 @@ struct PrayerCollectionsView: View {
                         activityCard(journey)
                     }
                     .buttonStyle(.plain)
+                    .contextMenu { libraryContextMenu(for: journey) }
                 }
             }
             .transition(.opacity.combined(with: .move(edge: .top)))
@@ -279,15 +314,33 @@ struct PrayerCollectionsView: View {
                     Text(journey.title)
                         .font(AppTypography.headline())
                         .foregroundStyle(AppColors.textPrimary)
-                    Text(progress.status == .completed ? "Completed" : "Session \(nextSession(for: journey)) of \(journey.sessionCount)")
-                        .font(AppTypography.caption())
-                        .foregroundStyle(AppColors.textSecondary)
+                    HStack(spacing: AppSpacing.small) {
+                        Text(progress.status == .completed ? "Completed" : "Session \(nextSession(for: journey)) of \(journey.sessionCount)")
+                            .font(AppTypography.caption())
+                            .foregroundStyle(AppColors.textSecondary)
+                        if savedJourneyIDs.contains(journey.id) { Image(systemName: "bookmark.fill").accessibilityLabel("Saved") }
+                        if favoriteJourneyIDs.contains(journey.id) { Image(systemName: "heart.fill").accessibilityLabel("Favorite") }
+                    }
                 }
                 Spacer()
                 Text("\(progress.percentage)%")
                     .font(AppTypography.headline())
                     .foregroundStyle(AppColors.planAccent(named: journey.accentColorName))
             }
+        }
+    }
+
+    @ViewBuilder
+    private func libraryContextMenu(for journey: PrayerJourney) -> some View {
+        Button {
+            PrayerJourneyLibraryService.setSaved(!savedJourneyIDs.contains(journey.id), journeyID: journey.id)
+        } label: {
+            Label(savedJourneyIDs.contains(journey.id) ? "Remove Saved" : "Save Journey", systemImage: savedJourneyIDs.contains(journey.id) ? "bookmark.slash" : "bookmark")
+        }
+        Button {
+            PrayerJourneyLibraryService.setFavorite(!favoriteJourneyIDs.contains(journey.id), journeyID: journey.id)
+        } label: {
+            Label(favoriteJourneyIDs.contains(journey.id) ? "Remove Favorite" : "Mark Favorite", systemImage: favoriteJourneyIDs.contains(journey.id) ? "heart.slash" : "heart")
         }
     }
 
@@ -370,6 +423,8 @@ struct PrayerCollectionDetailView: View {
     let completedDayNumbersForPlan: (String) -> Binding<Set<Int>>
     @Binding var savedVerseIDs: Set<String>
     @Binding var analytics: PrayerAnalyticsSnapshot
+    @AppStorage(PrayerStorageKeys.savedJourneyIDs) private var savedJourneyIDsRawValue = ""
+    @AppStorage(PrayerStorageKeys.favoriteJourneyIDs) private var favoriteJourneyIDsRawValue = ""
     @State private var searchQuery = ""
     @State private var searchFilters = JourneySearchFilters.empty
     @State private var searchSort: JourneySortOption = .recommended
@@ -538,6 +593,23 @@ struct PrayerCollectionDetailView: View {
             journeyCard(journey, featured: featured)
         }
         .buttonStyle(.plain)
+        .contextMenu { libraryContextMenu(for: journey) }
+    }
+
+    @ViewBuilder
+    private func libraryContextMenu(for journey: PrayerJourney) -> some View {
+        let saved = PrayerStorageCodec.decodeStringSet(savedJourneyIDsRawValue).contains(journey.id)
+        let favorite = PrayerStorageCodec.decodeStringSet(favoriteJourneyIDsRawValue).contains(journey.id)
+        Button {
+            PrayerJourneyLibraryService.setSaved(!saved, journeyID: journey.id)
+        } label: {
+            Label(saved ? "Remove Saved" : "Save Journey", systemImage: saved ? "bookmark.slash" : "bookmark")
+        }
+        Button {
+            PrayerJourneyLibraryService.setFavorite(!favorite, journeyID: journey.id)
+        } label: {
+            Label(favorite ? "Remove Favorite" : "Mark Favorite", systemImage: favorite ? "heart.slash" : "heart")
+        }
     }
 
     private func journeyCard(_ journey: PrayerJourney, featured: Bool = false) -> some View {
@@ -560,6 +632,12 @@ struct PrayerCollectionDetailView: View {
                                 .foregroundStyle(AppColors.textPrimary)
                             if journey.isRecommended { badge("Recommended", color: accent) }
                             if journey.isSeasonal { badge("Seasonal", color: .orange) }
+                            if PrayerStorageCodec.decodeStringSet(savedJourneyIDsRawValue).contains(journey.id) {
+                                Image(systemName: "bookmark.fill").foregroundStyle(accent).accessibilityLabel("Saved")
+                            }
+                            if PrayerStorageCodec.decodeStringSet(favoriteJourneyIDsRawValue).contains(journey.id) {
+                                Image(systemName: "heart.fill").foregroundStyle(.pink).accessibilityLabel("Favorite")
+                            }
                         }
                         Text(journey.subtitle)
                             .font(AppTypography.footnote())
@@ -672,6 +750,8 @@ private struct JourneyFilterSheet: View {
                     Toggle("Featured", isOn: $filters.featuredOnly)
                     Toggle("Recommended", isOn: $filters.recommendedOnly)
                     Toggle("Seasonal", isOn: $filters.seasonalOnly)
+                    Toggle("Saved", isOn: $filters.savedOnly)
+                    Toggle("Favorite", isOn: $filters.favoriteOnly)
                 }
                 Section {
                     Button("Reset Filters", role: .destructive) {

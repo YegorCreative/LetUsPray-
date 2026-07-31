@@ -10,12 +10,20 @@ struct PlanDetailView: View {
     let onViewCollection: () -> Void
     let completedDayNumbersForPlan: ((String) -> Binding<Set<Int>>)?
     let onOpenJourney: (PrayerPlan) -> Void
-    @State private var isMarkedFavorite = false
-    @State private var isSavedForLater = false
+    @AppStorage(PrayerStorageKeys.savedJourneyIDs) private var savedJourneyIDsRawValue = ""
+    @AppStorage(PrayerStorageKeys.favoriteJourneyIDs) private var favoriteJourneyIDsRawValue = ""
     @State private var journeyProgressRecord: PrayerJourneyProgressRecord?
 
     private var journey: PrayerJourney {
         PrayerJourneyCatalog.journey(for: plan)
+    }
+
+    private var isSavedForLater: Bool {
+        PrayerStorageCodec.decodeStringSet(savedJourneyIDsRawValue).contains(journey.id)
+    }
+
+    private var isMarkedFavorite: Bool {
+        PrayerStorageCodec.decodeStringSet(favoriteJourneyIDsRawValue).contains(journey.id)
     }
 
     private func progressBinding(for planID: String) -> Binding<Set<Int>> {
@@ -351,10 +359,14 @@ struct PlanDetailView: View {
         ViewThatFits(in: .horizontal) {
             HStack(spacing: AppSpacing.small) {
                 secondaryAction("Save", systemImage: isSavedForLater ? "bookmark.fill" : "bookmark") {
-                    withAnimation(.easeInOut(duration: 0.2)) { isSavedForLater.toggle() }
+                    withAnimation(.easeInOut(duration: 0.2)) {
+                        PrayerJourneyLibraryService.setSaved(!isSavedForLater, journeyID: journey.id)
+                    }
                 }
                 secondaryAction("Favorite", systemImage: isMarkedFavorite ? "heart.fill" : "heart") {
-                    withAnimation(.easeInOut(duration: 0.2)) { isMarkedFavorite.toggle() }
+                    withAnimation(.easeInOut(duration: 0.2)) {
+                        PrayerJourneyLibraryService.setFavorite(!isMarkedFavorite, journeyID: journey.id)
+                    }
                 }
                 secondaryAction("Collection", systemImage: "square.grid.2x2") {
                     onViewCollection()
@@ -369,10 +381,14 @@ struct PlanDetailView: View {
 
             VStack(spacing: AppSpacing.small) {
                 secondaryAction("Save", systemImage: isSavedForLater ? "bookmark.fill" : "bookmark") {
-                    withAnimation(.easeInOut(duration: 0.2)) { isSavedForLater.toggle() }
+                    withAnimation(.easeInOut(duration: 0.2)) {
+                        PrayerJourneyLibraryService.setSaved(!isSavedForLater, journeyID: journey.id)
+                    }
                 }
                 secondaryAction("Favorite", systemImage: isMarkedFavorite ? "heart.fill" : "heart") {
-                    withAnimation(.easeInOut(duration: 0.2)) { isMarkedFavorite.toggle() }
+                    withAnimation(.easeInOut(duration: 0.2)) {
+                        PrayerJourneyLibraryService.setFavorite(!isMarkedFavorite, journeyID: journey.id)
+                    }
                 }
                 secondaryAction("View Collection", systemImage: "square.grid.2x2") {
                     onViewCollection()
