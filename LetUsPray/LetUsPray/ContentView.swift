@@ -132,6 +132,20 @@ struct ContentView: View {
             .tag(2)
 
             NavigationStack {
+                SearchView(
+                    viewModel: viewModel,
+                    completedDayNumbersForPlan: completedDaysBinding(for:),
+                    savedVerseIDs: savedVerseIDsBinding,
+                    analytics: analyticsBinding
+                )
+                .background(PrayerBackground())
+            }
+            .tabItem {
+                Label("Search", systemImage: "magnifyingglass")
+            }
+            .tag(3)
+
+            NavigationStack {
                 SettingsView {
                     hasCompletedOnboarding = false
                 }
@@ -140,7 +154,7 @@ struct ContentView: View {
             .tabItem {
                 Label("Settings", systemImage: "gearshape.fill")
             }
-            .tag(3)
+            .tag(4)
         }
         .tint(AppColors.textPrimary)
         .onAppear {
