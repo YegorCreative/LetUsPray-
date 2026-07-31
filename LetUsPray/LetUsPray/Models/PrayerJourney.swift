@@ -445,9 +445,10 @@ enum PrayerJourneyCatalog {
         let releaseIssues: [String]
         let publicationIssues: [String]
         let documentationIssues: [String]
+        let platformIssues: [String]
 
         var isValid: Bool {
-            duplicateIDs.isEmpty && duplicateTitles.isEmpty && missingCollections.isEmpty && invalidSortOrders.isEmpty && incompleteMetadata.isEmpty && missingArtwork.isEmpty && missingRequirements.isEmpty && invalidWorkflowTransitions.isEmpty && missingWorkflowMetadata.isEmpty && localizationIssues.isEmpty && assetIssues.isEmpty && qaIssues.isEmpty && releaseIssues.isEmpty && publicationIssues.isEmpty && documentationIssues.isEmpty
+            duplicateIDs.isEmpty && duplicateTitles.isEmpty && missingCollections.isEmpty && invalidSortOrders.isEmpty && incompleteMetadata.isEmpty && missingArtwork.isEmpty && missingRequirements.isEmpty && invalidWorkflowTransitions.isEmpty && missingWorkflowMetadata.isEmpty && localizationIssues.isEmpty && assetIssues.isEmpty && qaIssues.isEmpty && releaseIssues.isEmpty && publicationIssues.isEmpty && documentationIssues.isEmpty && platformIssues.isEmpty
         }
     }
 
@@ -539,7 +540,25 @@ enum PrayerJourneyCatalog {
             platform.documentationVersion.isEmpty ? "documentation-version" : nil,
             platform.minimumSupportedAppVersion.isEmpty ? "minimum-app-version" : nil
         ].compactMap { $0 }
-        return ValidationReport(duplicateIDs: ids, duplicateTitles: titles, missingCollections: missingCollections, invalidSortOrders: invalidSortOrders, incompleteMetadata: incompleteMetadata, missingArtwork: missingArtwork, missingRequirements: missingRequirements, invalidWorkflowTransitions: invalidWorkflowTransitions, missingWorkflowMetadata: missingWorkflowMetadata, localizationIssues: localizationIssues, assetIssues: assetIssues, qaIssues: qaIssues, releaseIssues: releaseIssues, publicationIssues: publicationIssues.sorted(), documentationIssues: documentationIssues)
+        let platformIssues = metadata.flatMap { item -> [String] in
+            var issues: [String] = []
+            if item.id.range(of: "^[a-z0-9]+(?:-[a-z0-9]+)*$", options: .regularExpression) == nil { issues.append("\(item.id):invalid-id") }
+            if !PrayerCollectionID.allCases.contains(item.collection) { issues.append("\(item.id):invalid-collection") }
+            if item.category.isEmpty || item.difficulty.rawValue.isEmpty || item.estimatedDurationDays < 0 || item.estimatedPrayerMinutes <= 0 { issues.append("\(item.id):incomplete-core-metadata") }
+            if item.assets.contains(where: { $0.reference == nil && $0.status != .missing && $0.status != .placeholder }) { issues.append("\(item.id):invalid-asset-reference") }
+            if item.localizations.contains(where: { !item.supportedLanguages.contains($0.languageCode) }) { issues.append("\(item.id):invalid-localization-reference") }
+            if let release = item.release, release.releaseID.isEmpty || release.version.isEmpty { issues.append("\(item.id):invalid-release-reference") }
+            return issues
+        }.sorted()
+        return ValidationReport(duplicateIDs: ids, duplicateTitles: titles, missingCollections: missingCollections, invalidSortOrders: invalidSortOrders, incompleteMetadata: incompleteMetadata, missingArtwork: missingArtwork, missingRequirements: missingRequirements, invalidWorkflowTransitions: invalidWorkflowTransitions, missingWorkflowMetadata: missingWorkflowMetadata, localizationIssues: localizationIssues, assetIssues: assetIssues, qaIssues: qaIssues, releaseIssues: releaseIssues, publicationIssues: publicationIssues.sorted(), documentationIssues: documentationIssues, platformIssues: platformIssues)
+    }
+
+    static func platformIntegrityReport(plans: [PrayerPlan]) -> [String] {
+        let planIDs = Set(plans.map(\.id))
+        return metadata.compactMap { item in
+            guard let planID = item.planID, !planIDs.contains(planID), planID != "psalms-journey-overview" else { return nil }
+            return "\(item.id):orphaned-plan-reference"
+        }.sorted()
     }
 
     static func journey(for plan: PrayerPlan) -> PrayerJourney {
@@ -650,7 +669,7 @@ enum PrayerJourneyCatalog {
             , stageCompletionDate: planID == nil ? nil : "2026-07-31", qaApprovalDate: planID == nil ? nil : "2026-07-31"
             , releaseVersion: planID == nil ? nil : "1.0", releaseNotes: nil, blockingIssuesCount: 0, reviewComments: nil
             , sourceLanguage: "en", supportedLanguages: ["en"]
-            , localizations: [PrayerJourneyLocalizationMetadata(id: "en", languageCode: "en", localizedTitle: title, localizedSubtitle: subtitle, localizedDescription: subtitle, localizedHeroImageName: hero, localizedCollectionTitle: collection.title, status: .published, completionPercentage: 100, translator: "Source", reviewer: "Unassigned", lastUpdated: "2026-07-31", publishedVersion: planID == nil ? nil : "1.0")]
+            , localizations: [PrayerJourneyLocalizationMetadata(id: "en", languageCode: "en", localizedTitle: title, localizedSubtitle: subtitle, localizedDescription: subtitle, localizedHeroImageName: hero, localizedCollectionTitle: collection.title, status: planID == nil ? .notStarted : .published, completionPercentage: planID == nil ? 0 : 100, translator: "Source", reviewer: "Unassigned", lastUpdated: "2026-07-31", publishedVersion: planID == nil ? nil : "1.0")]
             , assets: [PrayerJourneyAssetMetadata(id: "\(id)-hero", kind: "Hero", reference: hero, darkModeReference: hero, lightModeReference: hero, localizedReferences: ["en": hero], version: 1, author: "LetUsPray Editorial", status: planID == nil ? .placeholder : .published, updatedDate: "2026-07-31")]
             , qa: PrayerJourneyQAMetadata(status: planID == nil ? .notStarted : .approved, owner: "Unassigned", startedDate: planID == nil ? nil : "2026-07-31", completedDate: planID == nil ? nil : "2026-07-31", approvalDate: planID == nil ? nil : "2026-07-31", releaseBlocker: false, criticalIssues: 0, majorIssues: 0, minorIssues: 0, knownIssues: nil, notes: nil, completedCategories: planID == nil ? [] : Set(PrayerJourneyQACategory.allCases))
             , release: planID == nil ? nil : PrayerJourneyReleaseMetadata(releaseID: "release-\(id)-1.0", version: "1.0", name: "LetUsPray Version 1.0", channel: .production, milestone: .version1, targetDate: "2026-07-31", actualDate: "2026-07-31", owner: "Unassigned", releaseNotes: nil, rollbackVersion: nil, status: .released)
