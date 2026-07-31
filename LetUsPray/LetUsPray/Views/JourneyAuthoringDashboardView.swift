@@ -74,6 +74,16 @@ struct JourneyAuthoringDashboardView: View {
                     .foregroundStyle(report.releaseIssues.isEmpty ? .green : .orange)
             }
 
+            Section("Publishing Health") {
+                healthRow("Draft journeys", value: "\(publishingCount(.draft))", systemImage: "doc.text")
+                healthRow("Ready to publish", value: "\(publishingCount(.readyToPublish))", systemImage: "arrow.up.circle.fill")
+                healthRow("Published", value: "\(publishingCount(.published))", systemImage: "checkmark.seal.fill")
+                healthRow("Rollback available", value: "\(metadata.filter { $0.publication.rollbackVersion != nil }.count)", systemImage: "arrow.uturn.backward.circle.fill")
+                healthRow("Publishing health", value: "\(publishingHealth)%", systemImage: "chart.bar.fill")
+                Label(report.publicationIssues.isEmpty ? "Publishing validation passed" : "Publishing needs attention", systemImage: report.publicationIssues.isEmpty ? "checkmark.circle" : "exclamationmark.triangle")
+                    .foregroundStyle(report.publicationIssues.isEmpty ? .green : .orange)
+            }
+
             Section("Collections") {
                 ForEach(PrayerJourneyCatalog.collections) { collection in
                     let journeys = metadata.filter { $0.collection == collection.id }
@@ -169,6 +179,17 @@ struct JourneyAuthoringDashboardView: View {
                 value = 0
             }
             return total + value
+        } / metadata.count
+    }
+
+    private func publishingCount(_ state: PrayerJourneyPublishingState) -> Int {
+        metadata.filter { $0.publication.state == state }.count
+    }
+
+    private var publishingHealth: Int {
+        guard !metadata.isEmpty else { return 0 }
+        return metadata.reduce(0) { total, item in
+            total + (item.publication.contentIntegrityStatus == "Verified" ? 100 : item.publication.state == .draft ? 0 : 50)
         } / metadata.count
     }
 }
