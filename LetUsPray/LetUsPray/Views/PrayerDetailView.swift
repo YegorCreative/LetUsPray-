@@ -42,12 +42,12 @@ private final class PrayerSpeechController: NSObject, ObservableObject, @preconc
         synthesizer.delegate = self
     }
 
-    func play(_ text: String) {
+    func play(_ text: String, rateMultiplier: Float) {
         stop()
 
         let utterance = AVSpeechUtterance(string: text)
         utterance.voice = preferredVoice
-        utterance.rate = AVSpeechUtteranceDefaultSpeechRate * 0.82
+        utterance.rate = AVSpeechUtteranceDefaultSpeechRate * rateMultiplier
         utterance.pitchMultiplier = 0.98
         utterance.preUtteranceDelay = 0.15
         utterance.postUtteranceDelay = 0.2
@@ -107,16 +107,24 @@ struct PrayerDetailView: View {
     @Binding var savedVerseIDs: Set<String>
     @Binding var analytics: PrayerAnalyticsSnapshot
     @AppStorage(PrayerStorageKeys.prayerJournalEntries) private var prayerJournalEntriesRawValue = "{}"
+    @AppStorage("settings.readAloud") private var readAloudEnabled = false
+    @AppStorage("settings.readingSpeed") private var readingSpeedRawValue = PrayerReadingSpeed.reflective.rawValue
+    @AppStorage("settings.autoContinueJourney") private var autoContinueJourneyEnabled = true
 
     @State private var completionPulse = false
     @State private var copyConfirmationVisible = false
     @State private var journalScrollTarget: PrayerJournalField?
+    @State private var autoContinueDay: PrayerDay?
     @StateObject private var speechController = PrayerSpeechController.shared
     @FocusState private var focusedJournalField: PrayerJournalField?
     private let streakService = StreakService()
 
     private var accentColor: Color {
         AppColors.planAccent(named: plan.accentColorName)
+    }
+
+    private var readingSpeed: PrayerReadingSpeed {
+        PrayerReadingSpeed(rawValue: readingSpeedRawValue) ?? .reflective
     }
 
     private var isCompleted: Bool {
@@ -173,6 +181,15 @@ struct PrayerDetailView: View {
                 }
             }
         }
+        .navigationDestination(item: $autoContinueDay) { nextDay in
+            PrayerDetailView(
+                plan: plan,
+                day: nextDay,
+                completedDayNumbers: $completedDayNumbers,
+                savedVerseIDs: $savedVerseIDs,
+                analytics: $analytics
+            )
+        }
         .overlay(alignment: .top) {
             if copyConfirmationVisible {
                 Label("Prayer copied", systemImage: "checkmark")
@@ -192,6 +209,14 @@ struct PrayerDetailView: View {
         }
         .onDisappear {
             speechController.stop()
+        }
+        .onAppear {
+            if readAloudEnabled && !day.verses.isEmpty {
+                speechController.play(
+                    readAloudText,
+                    rateMultiplier: readingSpeed.rateMultiplier
+                )
+            }
         }
         .onChange(of: journalEntryKey) {
             speechController.stop()
@@ -216,7 +241,10 @@ struct PrayerDetailView: View {
                     switch speechController.state {
                     case .stopped:
                         Button {
-                            speechController.play(readAloudText)
+                            speechController.play(
+                                readAloudText,
+                                rateMultiplier: readingSpeed.rateMultiplier
+                            )
                         } label: {
                             Label("Read Aloud", systemImage: "play.fill")
                                 .font(AppTypography.callout())
@@ -488,6 +516,15 @@ struct PrayerDetailView: View {
         updateAnalytics(completedDaysCount: updatedDays.count)
         updateStoredStreak()
         HapticsService.markPrayerCompleted()
+
+        if autoContinueJourneyEnabled,
+           let nextDay = plan.days.first(where: {
+               $0.dayNumber > day.dayNumber && !updatedDays.contains($0.dayNumber)
+           }) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.65) {
+                autoContinueDay = nextDay
+            }
+        }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
             withAnimation(.spring(response: 0.36, dampingFraction: 0.84)) {

@@ -1,5 +1,6 @@
 import SwiftUI
 import UserNotifications
+import UIKit
 
 private enum SettingsDestinations {
     static let appStoreID = "REPLACE_WITH_APP_STORE_ID"
@@ -8,8 +9,17 @@ private enum SettingsDestinations {
     static let termsOfServiceURL = URL(string: "https://letuspray.app/terms")!
 
     static let contactSupportURL = URL(string: "mailto:\(supportEmail)")!
+    static let sendFeedbackURL = URL(
+        string: "mailto:\(supportEmail)?subject=LetUsPray%20Feedback"
+    )!
+    static let reportProblemURL = URL(
+        string: "mailto:\(supportEmail)?subject=LetUsPray%20Problem%20Report"
+    )!
     static let writeReviewURL = URL(
         string: "https://apps.apple.com/app/id\(appStoreID)?action=write-review"
+    )!
+    static let notificationSettingsURL = URL(
+        string: UIApplication.openNotificationSettingsURLString
     )!
 }
 
@@ -22,38 +32,64 @@ enum AppAppearance: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .system:
-            "Follow System"
-        case .light:
-            "Light"
-        case .dark:
-            "Dark"
+        case .system: "System"
+        case .light: "Light"
+        case .dark: "Dark"
         }
     }
 
     var colorScheme: ColorScheme? {
         switch self {
-        case .system:
-            nil
-        case .light:
-            .light
-        case .dark:
-            .dark
+        case .system: nil
+        case .light: .light
+        case .dark: .dark
+        }
+    }
+}
+
+enum PrayerReadingSpeed: String, CaseIterable, Identifiable {
+    case reflective
+    case balanced
+    case flowing
+
+    var id: Self { self }
+
+    var title: String {
+        switch self {
+        case .reflective: "Reflective"
+        case .balanced: "Balanced"
+        case .flowing: "Flowing"
+        }
+    }
+
+    var rateMultiplier: Float {
+        switch self {
+        case .reflective: 0.72
+        case .balanced: 0.82
+        case .flowing: 0.94
         }
     }
 }
 
 struct SettingsView: View {
+    let onOpenSaved: () -> Void
     let onResetOnboarding: () -> Void
 
     @Environment(\.scenePhase) private var scenePhase
     @AppStorage("settings.dailyReminder") private var dailyReminderEnabled = false
     @AppStorage("settings.reminderTime") private var reminderTimeInterval = 8 * 60 * 60.0
     @AppStorage("settings.readAloud") private var readAloudEnabled = false
+    @AppStorage("settings.readingSpeed") private var readingSpeedRawValue = PrayerReadingSpeed.reflective.rawValue
     @AppStorage("settings.hapticFeedback") private var hapticFeedbackEnabled = true
     @AppStorage("settings.appearance") private var appearanceRawValue = AppAppearance.system.rawValue
     @AppStorage("settings.autoContinueJourney") private var autoContinueJourneyEnabled = true
     @AppStorage("settings.startOnHome") private var startOnHomeEnabled = true
+    @AppStorage(PrayerStorageKeys.currentStreak) private var currentStreak = 0
+    @AppStorage(PrayerStorageKeys.longestStreak) private var longestStreak = 0
+    @AppStorage(PrayerStorageKeys.completedPrayersCount) private var completedPrayersCount = 0
+    @AppStorage(PrayerStorageKeys.savedVerseIDs) private var savedVerseIDsRawValue = ""
+    @AppStorage(PrayerStorageKeys.achievementUnlockDates) private var achievementUnlockDatesRawValue = "{}"
+
     @State private var notificationAuthorizationStatus: UNAuthorizationStatus = .notDetermined
     @State private var permissionRequestInProgress = false
     @State private var reminderErrorMessage: String?
@@ -61,18 +97,19 @@ struct SettingsView: View {
 
     var body: some View {
         Form {
-            generalSection
+            appIdentitySection
+            dailyPrayerSection
+            prayerExperienceSection
             appearanceSection
-            prayerSection
+            progressSection
             supportSection
-            onboardingSection
+            legalSection
             aboutSection
         }
         .formStyle(.grouped)
-        .scrollContentBackground(.hidden)
-        .background(PrayerBackground())
+        .tint(.blue)
         .navigationTitle("Settings")
-        .toolbarBackground(.hidden, for: .navigationBar)
+        .navigationBarTitleDisplayMode(.large)
         .preferredColorScheme(selectedAppearance.colorScheme)
         .task {
             await refreshReminderState()
@@ -93,112 +130,280 @@ struct SettingsView: View {
         }
     }
 
-    private var generalSection: some View {
+    private var appIdentitySection: some View {
+        Section {
+            HStack(spacing: AppSpacing.medium) {
+                Image(systemName: "hands.sparkles.fill")
+                    .font(.system(size: 25, weight: .semibold))
+                    .foregroundStyle(.white)
+                    .frame(width: 56, height: 56)
+                    .background(BrandGradients.prayerProgress, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                    .accessibilityHidden(true)
+
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(AppMetadata.appName)
+                        .font(AppTypography.title2())
+                        .foregroundStyle(.primary)
+
+                    Text("Prayer, thoughtfully supported")
+                        .font(AppTypography.footnote())
+                        .foregroundStyle(.secondary)
+                }
+            }
+            .padding(.vertical, AppSpacing.small)
+            .accessibilityElement(children: .combine)
+        }
+    }
+
+    private var dailyPrayerSection: some View {
         Section {
             Toggle(isOn: dailyReminderBinding) {
-                Label("Daily Reminder", systemImage: "bell.fill")
+                settingsLabel("Daily Reminder", systemImage: "bell.fill", color: .orange)
             }
             .disabled(permissionRequestInProgress)
             .accessibilityHint(dailyReminderAccessibilityHint)
 
             DatePicker(
-                "Reminder Time",
                 selection: reminderTime,
                 displayedComponents: .hourAndMinute
-            )
+            ) {
+                settingsLabel("Reminder Time", systemImage: "clock.fill", color: .blue)
+            }
             .disabled(!dailyReminderEnabled)
-            .accessibilityHint("Sets the preferred time for the daily reminder.")
+            .accessibilityHint("Sets the time for your daily prayer reminder.")
 
-            Toggle(isOn: $readAloudEnabled) {
-                Label("Read Aloud", systemImage: "speaker.wave.2.fill")
+            LabeledContent {
+                Text(notificationStatusTitle)
+                    .foregroundStyle(notificationStatusColor)
+            } label: {
+                settingsLabel("Notification Status", systemImage: notificationStatusImage, color: notificationStatusColor)
             }
-            .accessibilityHint("Controls whether prayers begin with read aloud enabled.")
 
-            Toggle(isOn: $hapticFeedbackEnabled) {
-                Label("Haptic Feedback", systemImage: "hand.tap.fill")
-            }
-            .accessibilityHint("Controls tactile feedback for prayer interactions.")
-        } header: {
-            Text("General")
-        } footer: {
             if notificationAuthorizationStatus == .denied {
-                Text("Notifications are turned off for LetUsPray in iOS Settings.")
-            } else if let reminderErrorMessage {
+                Link(destination: SettingsDestinations.notificationSettingsURL) {
+                    settingsLabel("Open Notification Settings", systemImage: "arrow.up.forward.app.fill", color: .blue)
+                }
+            }
+        } header: {
+            Text("Daily Prayer")
+        } footer: {
+            if let reminderErrorMessage {
                 Text(reminderErrorMessage)
+            } else {
+                Text(notificationFooterText)
             }
         }
     }
 
+    private var prayerExperienceSection: some View {
+        Section {
+            Toggle(isOn: $readAloudEnabled) {
+                settingsLabel("Voice Reading", systemImage: "speaker.wave.2.fill", color: .indigo)
+            }
+            .accessibilityHint("Starts voice reading automatically when a prayer opens.")
+
+            Picker(selection: $readingSpeedRawValue) {
+                ForEach(PrayerReadingSpeed.allCases) { speed in
+                    Text(speed.title)
+                        .tag(speed.rawValue)
+                }
+            } label: {
+                settingsLabel("Reading Speed", systemImage: "gauge.with.dots.needle.50percent", color: .indigo)
+            }
+            .pickerStyle(.navigationLink)
+            .accessibilityHint("Chooses the pace used for voice reading.")
+
+            Toggle(isOn: $hapticFeedbackEnabled) {
+                settingsLabel("Haptic Feedback", systemImage: "hand.tap.fill", color: .pink)
+            }
+            .accessibilityHint("Controls gentle tactile feedback for prayer actions.")
+
+            Toggle(isOn: $autoContinueJourneyEnabled) {
+                settingsLabel("Auto Continue Journey", systemImage: "arrow.right.circle.fill", color: .green)
+            }
+            .accessibilityHint("Opens the next available prayer after completing the current one.")
+
+            Toggle(isOn: $startOnHomeEnabled) {
+                settingsLabel("Start on Home", systemImage: "house.fill", color: .cyan)
+            }
+            .accessibilityHint("Opens LetUsPray on Home instead of the most recently used tab.")
+        } header: {
+            Text("Prayer Experience")
+        } footer: {
+            Text("Choose how LetUsPray supports your prayer without changing the prayer itself.")
+        }
+    }
+
     private var appearanceSection: some View {
-        Section("Appearance") {
+        Section {
             Picker("Appearance", selection: $appearanceRawValue) {
                 ForEach(AppAppearance.allCases) { appearance in
                     Text(appearance.title)
                         .tag(appearance.rawValue)
                 }
             }
-            .pickerStyle(.inline)
-            .accessibilityHint("Chooses whether LetUsPray follows the system appearance or uses Light or Dark mode.")
+            .pickerStyle(.segmented)
+            .accessibilityHint("Chooses System, Light, or Dark appearance.")
+        } header: {
+            Text("Appearance")
+        } footer: {
+            Text("System follows your device appearance automatically.")
         }
     }
 
-    private var prayerSection: some View {
-        Section("Prayer") {
-            Toggle(isOn: $autoContinueJourneyEnabled) {
-                Label("Auto Continue Journey", systemImage: "arrow.forward.circle.fill")
+    private var progressSection: some View {
+        Section {
+            LabeledContent {
+                Text("\(currentStreak) day\(currentStreak == 1 ? "" : "s")")
+            } label: {
+                settingsLabel("Current Streak", systemImage: "flame.fill", color: .orange)
             }
-            .accessibilityHint("Controls whether your active journey continues automatically.")
 
-            Toggle(isOn: $startOnHomeEnabled) {
-                Label("Start on Home", systemImage: "house.fill")
+            LabeledContent {
+                Text("\(longestStreak) day\(longestStreak == 1 ? "" : "s")")
+            } label: {
+                settingsLabel("Longest Streak", systemImage: "calendar.badge.checkmark", color: .green)
             }
-            .accessibilityHint("Controls whether LetUsPray opens on Home.")
+
+            NavigationLink {
+                AchievementsView()
+            } label: {
+                settingsNavigationLabel(
+                    "Achievements",
+                    detail: "\(earnedAchievementCount) of 9 earned",
+                    systemImage: "sparkles",
+                    color: .yellow
+                )
+            }
+
+            Button(action: onOpenSaved) {
+                settingsNavigationLabel(
+                    "Saved Prayers",
+                    detail: "\(savedPrayerCount)",
+                    systemImage: "bookmark.fill",
+                    color: .blue
+                )
+            }
+            .foregroundStyle(.primary)
+            .accessibilityHint("Opens Saved prayers.")
+
+            LabeledContent {
+                Text("\(completedPrayersCount)")
+            } label: {
+                settingsLabel("Prayers Completed", systemImage: "checkmark.circle.fill", color: .green)
+            }
+        } header: {
+            Text("Progress")
+        } footer: {
+            Text("A private reflection of your prayer journey, stored on this device.")
         }
     }
 
     private var supportSection: some View {
         Section("Support") {
             Link(destination: SettingsDestinations.contactSupportURL) {
-                Label("Contact Support", systemImage: "envelope.fill")
+                settingsLabel("Contact Support", systemImage: "envelope.fill", color: .blue)
             }
 
-            Link(destination: SettingsDestinations.privacyPolicyURL) {
-                Label("Privacy Policy", systemImage: "hand.raised.fill")
+            Link(destination: SettingsDestinations.sendFeedbackURL) {
+                settingsLabel("Send Feedback", systemImage: "bubble.left.and.text.bubble.right.fill", color: .purple)
             }
 
-            Link(destination: SettingsDestinations.termsOfServiceURL) {
-                Label("Terms of Service", systemImage: "doc.text.fill")
+            Link(destination: SettingsDestinations.reportProblemURL) {
+                settingsLabel("Report a Problem", systemImage: "exclamationmark.bubble.fill", color: .orange)
             }
 
             Link(destination: SettingsDestinations.writeReviewURL) {
-                Label("Rate LetUsPray", systemImage: "star.fill")
+                settingsLabel("Rate LetUsPray", systemImage: "star.fill", color: .yellow)
             }
         }
     }
 
-    private var onboardingSection: some View {
-        Section {
-            Button(action: onResetOnboarding) {
-                Label("Reset Onboarding", systemImage: "arrow.counterclockwise.circle.fill")
+    private var legalSection: some View {
+        Section("Legal") {
+            Link(destination: SettingsDestinations.privacyPolicyURL) {
+                settingsLabel("Privacy Policy", systemImage: "hand.raised.fill", color: .blue)
             }
-            .accessibilityHint("Shows the welcome journey again.")
-        } header: {
-            Text("Onboarding")
-        } footer: {
-            Text("Show the welcome journey again on next entry.")
+
+            Link(destination: SettingsDestinations.termsOfServiceURL) {
+                settingsLabel("Terms of Service", systemImage: "doc.text.fill", color: .gray)
+            }
         }
     }
 
     private var aboutSection: some View {
-        Section("About") {
+        Section {
             LabeledContent("App Name", value: AppMetadata.appName)
             LabeledContent("Version", value: appVersion)
             LabeledContent("Build", value: appBuild)
+
+            Button(action: onResetOnboarding) {
+                settingsLabel("View Welcome Again", systemImage: "arrow.counterclockwise.circle.fill", color: .blue)
+            }
+            .foregroundStyle(.primary)
+            .accessibilityHint("Shows the welcome journey again.")
+        } header: {
+            Text("About")
+        } footer: {
+            Text("Made to support quiet, consistent time in prayer.")
         }
     }
 
     private var selectedAppearance: AppAppearance {
         AppAppearance(rawValue: appearanceRawValue) ?? .system
+    }
+
+    private var earnedAchievementCount: Int {
+        let unlockDates = PrayerStorageCodec.decodeValue(
+            [String: Date].self,
+            from: achievementUnlockDatesRawValue
+        ) ?? [:]
+        return unlockDates.count
+    }
+
+    private var savedPrayerCount: Int {
+        PrayerStorageCodec.decodeStringSet(savedVerseIDsRawValue).count
+    }
+
+    private var notificationStatusTitle: String {
+        switch notificationAuthorizationStatus {
+        case .authorized, .provisional, .ephemeral:
+            dailyReminderEnabled ? "Scheduled" : "Available"
+        case .denied:
+            "Disabled"
+        case .notDetermined:
+            "Not Requested"
+        @unknown default:
+            "Unavailable"
+        }
+    }
+
+    private var notificationStatusImage: String {
+        switch notificationAuthorizationStatus {
+        case .authorized, .provisional, .ephemeral: "checkmark.circle.fill"
+        case .denied: "xmark.circle.fill"
+        case .notDetermined: "bell.badge.fill"
+        @unknown default: "questionmark.circle.fill"
+        }
+    }
+
+    private var notificationStatusColor: Color {
+        switch notificationAuthorizationStatus {
+        case .authorized, .provisional, .ephemeral: .green
+        case .denied: .red
+        case .notDetermined: .secondary
+        @unknown default: .secondary
+        }
+    }
+
+    private var notificationFooterText: String {
+        if notificationAuthorizationStatus == .denied {
+            return "Notifications are disabled in iOS Settings. LetUsPray will never request permission without your action."
+        }
+        if dailyReminderEnabled {
+            return "One gentle reminder will arrive each day at your chosen time."
+        }
+        return "Permission is requested only when you turn on Daily Reminder."
     }
 
     private var reminderTime: Binding<Date> {
@@ -208,10 +413,7 @@ struct SettingsView: View {
                     .addingTimeInterval(reminderTimeInterval)
             },
             set: { newValue in
-                let components = Calendar.current.dateComponents(
-                    [.hour, .minute],
-                    from: newValue
-                )
+                let components = Calendar.current.dateComponents([.hour, .minute], from: newValue)
                 reminderTimeInterval = Double(
                     (components.hour ?? 8) * 60 * 60
                     + (components.minute ?? 0) * 60
@@ -247,6 +449,30 @@ struct SettingsView: View {
         return dailyReminderEnabled
             ? "Turns off the daily prayer reminder."
             : "Requests permission and schedules one daily prayer reminder."
+    }
+
+    private func settingsLabel(_ title: String, systemImage: String, color: Color) -> some View {
+        Label {
+            Text(title)
+        } icon: {
+            Image(systemName: systemImage)
+                .foregroundStyle(color)
+                .frame(width: 24)
+        }
+    }
+
+    private func settingsNavigationLabel(
+        _ title: String,
+        detail: String,
+        systemImage: String,
+        color: Color
+    ) -> some View {
+        HStack {
+            settingsLabel(title, systemImage: systemImage, color: color)
+            Spacer()
+            Text(detail)
+                .foregroundStyle(.secondary)
+        }
     }
 
     private func enableDailyReminder(generation: Int) async {
@@ -328,6 +554,9 @@ struct SettingsView: View {
 
 #Preview {
     NavigationStack {
-        SettingsView(onResetOnboarding: {})
+        SettingsView(
+            onOpenSaved: {},
+            onResetOnboarding: {}
+        )
     }
 }

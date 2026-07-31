@@ -28,6 +28,8 @@ struct ContentView: View {
     @AppStorage(PrayerStorageKeys.latestStartedJourneyActivity) private var latestStartedJourneyActivityRawValue = ""
     @AppStorage(PrayerStorageKeys.prayerCompletionDates) private var prayerCompletionDatesRawValue = "[]"
     @AppStorage(PrayerStorageKeys.achievementUnlockDates) private var achievementUnlockDatesRawValue = "{}"
+    @AppStorage("settings.startOnHome") private var startOnHomeEnabled = true
+    @AppStorage("settings.lastSelectedTab") private var lastSelectedTab = 0
     @State private var selectedTodayDay: PrayerDay?
     @State private var selectedHomePlan: PrayerPlan?
     @State private var selectedTab = 0
@@ -148,9 +150,10 @@ struct ContentView: View {
             .tag(3)
 
             NavigationStack {
-                SettingsView {
-                    hasCompletedOnboarding = false
-                }
+                SettingsView(
+                    onOpenSaved: { selectedTab = 2 },
+                    onResetOnboarding: { hasCompletedOnboarding = false }
+                )
                 .background(PrayerBackground())
             }
             .tabItem {
@@ -160,11 +163,15 @@ struct ContentView: View {
         }
         .tint(AppColors.textPrimary)
         .onAppear {
+            selectedTab = startOnHomeEnabled ? 0 : lastSelectedTab
             refreshStreak()
             syncActivePlan()
             syncAnalytics()
             seedExistingHomeActivityIfNeeded()
             evaluateAchievements()
+        }
+        .onChange(of: selectedTab) { _, newValue in
+            lastSelectedTab = newValue
         }
         .onChange(of: activePlanID) { oldValue, newValue in
             recordStartedJourneyIfNeeded(oldPlanID: oldValue, newPlanID: newValue)
