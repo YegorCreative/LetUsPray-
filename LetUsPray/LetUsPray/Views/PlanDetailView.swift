@@ -7,16 +7,40 @@ struct PlanDetailView: View {
     @Binding var savedVerseIDs: Set<String>
     @Binding var analytics: PrayerAnalyticsSnapshot
     let onStartJourney: () -> Void
+    let onViewCollection: () -> Void
+    @State private var isMarkedFavorite = false
+    @State private var isSavedForLater = false
+
+    private var journey: PrayerJourney {
+        PrayerJourneyCatalog.journey(for: plan)
+    }
+
+    init(
+        plan: PrayerPlan,
+        isActive: Bool,
+        completedDayNumbers: Binding<Set<Int>>,
+        savedVerseIDs: Binding<Set<String>>,
+        analytics: Binding<PrayerAnalyticsSnapshot>,
+        onStartJourney: @escaping () -> Void,
+        onViewCollection: @escaping () -> Void = {}
+    ) {
+        self.plan = plan
+        self.isActive = isActive
+        self._completedDayNumbers = completedDayNumbers
+        self._savedVerseIDs = savedVerseIDs
+        self._analytics = analytics
+        self.onStartJourney = onStartJourney
+        self.onViewCollection = onViewCollection
+    }
 
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .leading, spacing: AppSpacing.large) {
                 coverSection
                 metadataSection
-                if !plan.isPreviewPlaceholder {
-                    progressSection
-                }
+                progressSection
                 actionSection
+                secondaryActionsSection
                 if !plan.days.isEmpty {
                     journeyDaysSection
                 }
@@ -26,12 +50,13 @@ struct PlanDetailView: View {
             .padding(.bottom, AppSpacing.xxLarge)
         }
         .background(PrayerBackground())
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle(plan.title)
+        .navigationBarTitleDisplayMode(.large)
         .toolbarBackground(.hidden, for: .navigationBar)
     }
 
     private var planAccent: Color {
-        plan.category.brandAccent
+        AppColors.planAccent(named: journey.accentColorName)
     }
 
     private var planProgress: PrayerPlanProgress {
@@ -85,16 +110,16 @@ struct PlanDetailView: View {
             VStack(alignment: .leading, spacing: AppSpacing.large) {
                 HStack(alignment: .top) {
                     VStack(alignment: .leading, spacing: AppSpacing.small) {
-                        Text(plan.category.displayTitle)
+                        Text(journey.collection.title)
                             .font(AppTypography.caption())
                             .foregroundStyle(AppColors.textPrimary.opacity(0.86))
                             .textCase(.uppercase)
 
-                        Text(plan.title)
+                        Text(journey.title)
                             .font(AppTypography.title())
                             .foregroundStyle(AppColors.textPrimary)
 
-                        Text(plan.subtitle)
+                        Text(journey.subtitle)
                             .font(AppTypography.callout())
                             .foregroundStyle(AppColors.textSecondary)
                             .fixedSize(horizontal: false, vertical: true)
@@ -102,7 +127,7 @@ struct PlanDetailView: View {
 
                     Spacer()
 
-                    Image(systemName: plan.id == ProverbsPrayerData.plan.id ? plan.coverIcon : plan.category.brandIcon)
+                    Image(systemName: journey.heroImageName)
                         .font(.system(size: 34, weight: .semibold))
                         .foregroundStyle(AppColors.textPrimary)
                         .frame(width: 78, height: 78)
@@ -115,7 +140,7 @@ struct PlanDetailView: View {
 
                 HStack(spacing: AppSpacing.medium) {
                     metadataPill(title: "Status", value: displayStatus)
-                    metadataPill(title: "Focus", value: plan.category.displayTitle)
+                    metadataPill(title: "Focus", value: journey.categoryName)
                 }
             }
             .padding(AppSpacing.heroPadding)
@@ -132,14 +157,33 @@ struct PlanDetailView: View {
     private var metadataSection: some View {
         GlassCard {
             VStack(alignment: .leading, spacing: AppSpacing.medium) {
-                Text(plan.description)
+                Text(journey.description)
                     .font(AppTypography.body())
                     .foregroundStyle(AppColors.textSecondary)
                     .lineSpacing(4)
 
+                Text("What you'll experience")
+                    .font(AppTypography.headline())
+                    .foregroundStyle(AppColors.textPrimary)
+                Text("Move through a thoughtful rhythm of Scripture, reflection, and guided prayer at your own pace.")
+                    .font(AppTypography.footnote())
+                    .foregroundStyle(AppColors.textSecondary)
+
                 HStack(spacing: AppSpacing.medium) {
-                    metadataPill(title: "Category", value: plan.category.displayTitle)
-                    metadataPill(title: "Duration", value: "\(plan.durationDays) Days")
+                    metadataPill(title: "Category", value: journey.categoryName)
+                    metadataPill(title: "Sessions", value: "\(journey.sessionCount)")
+                }
+
+                HStack(spacing: AppSpacing.medium) {
+                    metadataPill(title: "Duration", value: durationLabel)
+                    metadataPill(title: "Prayer Time", value: "\(journey.estimatedPrayerMinutes) min")
+                }
+
+                HStack(spacing: AppSpacing.small) {
+                    badge(journey.difficulty.rawValue, color: planAccent)
+                    if journey.isFeatured { badge("Featured", color: planAccent) }
+                    if journey.isRecommended { badge("Recommended", color: .green) }
+                    if journey.isSeasonal { badge("Seasonal", color: .orange) }
                 }
             }
         }
@@ -147,23 +191,44 @@ struct PlanDetailView: View {
 
     private var progressSection: some View {
         GlassCard {
-            VStack(alignment: .leading, spacing: AppSpacing.medium) {
-                HStack {
-                    Text("Journey Progress")
-                        .font(AppTypography.headline())
-                        .foregroundStyle(AppColors.textPrimary)
-
-                    Spacer()
-
-                    Text("\(planProgress.percentage)%")
+            HStack(spacing: AppSpacing.large) {
+                ZStack {
+                    Circle()
+                        .stroke(planAccent.opacity(0.18), lineWidth: 9)
+                    Circle()
+                        .trim(from: 0, to: plan.isPreviewPlaceholder ? 0 : planProgress.fractionCompleted)
+                        .stroke(planAccent, style: StrokeStyle(lineWidth: 9, lineCap: .round))
+                        .rotationEffect(.degrees(-90))
+                        .animation(.easeInOut(duration: 0.35), value: planProgress.fractionCompleted)
+                    Text(plan.isPreviewPlaceholder ? "—" : "\(planProgress.percentage)%")
                         .font(AppTypography.headline())
                         .foregroundStyle(planAccent)
                 }
+                .frame(width: 78, height: 78)
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel("Journey progress")
+                .accessibilityValue(plan.isPreviewPlaceholder ? "Preview" : "\(planProgress.percentage) percent complete")
 
+                VStack(alignment: .leading, spacing: AppSpacing.small) {
+                    Text("Journey Progress")
+                        .font(AppTypography.headline())
+                        .foregroundStyle(AppColors.textPrimary)
+                    Text(displayStatus)
+                        .font(AppTypography.footnote())
+                        .foregroundStyle(AppColors.textSecondary)
+                    if !plan.isPreviewPlaceholder {
+                        Text("\(planProgress.completedDays) of \(planProgress.totalDays) sessions complete")
+                            .font(AppTypography.caption())
+                            .foregroundStyle(AppColors.textTertiary)
+                    }
+                }
+                Spacer(minLength: 0)
+            }
+
+            if !plan.isPreviewPlaceholder {
                 ProgressView(value: planProgress.fractionCompleted)
                     .tint(planAccent)
-                    .accessibilityLabel("Journey progress")
-                    .accessibilityValue("\(planProgress.percentage) percent complete")
+                    .accessibilityHidden(true)
 
                 ViewThatFits(in: .horizontal) {
                     HStack(spacing: AppSpacing.medium) {
@@ -198,12 +263,17 @@ struct PlanDetailView: View {
                     systemImage: "sparkles"
                 )
             } else if planProgress.status == .completed {
-                PrimaryPrayerButton(
-                    title: "Journey Completed",
-                    systemImage: "checkmark.circle.fill",
-                    isSecondary: true
-                )
-                .accessibilityLabel("Journey completed")
+                Button {
+                    completedDayNumbers = []
+                    onStartJourney()
+                } label: {
+                    PrimaryPrayerButton(
+                        title: "Restart Journey",
+                        systemImage: "arrow.counterclockwise.circle.fill"
+                    )
+                }
+                .buttonStyle(.plain)
+                .accessibilityHint("Clears this journey's completed sessions and starts again.")
             } else if isActive, let nextJourneyDay {
                 NavigationLink {
                     PrayerDetailView(
@@ -234,6 +304,56 @@ struct PlanDetailView: View {
                 .accessibilityHint("Sets this as your active prayer journey.")
             }
         }
+    }
+
+    private var secondaryActionsSection: some View {
+        ViewThatFits(in: .horizontal) {
+            HStack(spacing: AppSpacing.small) {
+                secondaryAction("Save", systemImage: isSavedForLater ? "bookmark.fill" : "bookmark") {
+                    withAnimation(.easeInOut(duration: 0.2)) { isSavedForLater.toggle() }
+                }
+                secondaryAction("Favorite", systemImage: isMarkedFavorite ? "heart.fill" : "heart") {
+                    withAnimation(.easeInOut(duration: 0.2)) { isMarkedFavorite.toggle() }
+                }
+                secondaryAction("Collection", systemImage: "square.grid.2x2") {
+                    onViewCollection()
+                }
+                ShareLink(item: "\(journey.title) — \(journey.subtitle)") {
+                    Label("Share", systemImage: "square.and.arrow.up")
+                }
+                .buttonStyle(.bordered)
+                .tint(planAccent)
+                .accessibilityHint("Shares this journey's title and description.")
+            }
+
+            VStack(spacing: AppSpacing.small) {
+                secondaryAction("Save", systemImage: isSavedForLater ? "bookmark.fill" : "bookmark") {
+                    withAnimation(.easeInOut(duration: 0.2)) { isSavedForLater.toggle() }
+                }
+                secondaryAction("Favorite", systemImage: isMarkedFavorite ? "heart.fill" : "heart") {
+                    withAnimation(.easeInOut(duration: 0.2)) { isMarkedFavorite.toggle() }
+                }
+                secondaryAction("View Collection", systemImage: "square.grid.2x2") {
+                    onViewCollection()
+                }
+                ShareLink(item: "\(journey.title) — \(journey.subtitle)") {
+                    Label("Share Journey", systemImage: "square.and.arrow.up")
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.bordered)
+                .tint(planAccent)
+            }
+        }
+    }
+
+    private func secondaryAction(_ title: String, systemImage: String, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Label(title, systemImage: systemImage)
+                .frame(maxWidth: .infinity)
+        }
+        .buttonStyle(.bordered)
+        .tint(planAccent)
+        .accessibilityValue(title == "Save" ? (isSavedForLater ? "Saved" : "Not saved") : (isMarkedFavorite ? "Marked favorite" : "Not marked favorite"))
     }
 
     private var journeyDaysSection: some View {
@@ -277,6 +397,19 @@ struct PlanDetailView: View {
             RoundedRectangle(cornerRadius: 18, style: .continuous)
                 .stroke(AppColors.glassStroke, lineWidth: 1)
         }
+    }
+
+    private var durationLabel: String {
+        journey.estimatedDurationDays > 0 ? "\(journey.estimatedDurationDays) Days" : "Self-guided"
+    }
+
+    private func badge(_ title: String, color: Color) -> some View {
+        Text(title)
+            .font(AppTypography.caption())
+            .foregroundStyle(color)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 4)
+            .background(color.opacity(0.14), in: Capsule())
     }
 }
 

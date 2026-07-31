@@ -96,6 +96,7 @@ struct PrayerCollectionsView: View {
 }
 
 struct PrayerCollectionDetailView: View {
+    @Environment(\.dismiss) private var dismiss
     let collection: JourneyCollection
     @ObservedObject var viewModel: PrayerPlanViewModel
     @Binding var activePlanID: String
@@ -195,7 +196,8 @@ struct PrayerCollectionDetailView: View {
                 onStartJourney: {
                     activePlanID = journey.plan.id
                     viewModel.setActivePlan(id: journey.plan.id)
-                }
+                },
+                onViewCollection: { dismiss() }
             )
         } label: {
             journeyCard(journey, featured: featured)
