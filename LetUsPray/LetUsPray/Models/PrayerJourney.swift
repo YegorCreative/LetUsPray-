@@ -1,5 +1,22 @@
 import Foundation
 
+struct PrayerJourneyPlatformMetadata: Hashable, Codable {
+    let platformVersion: String
+    let schemaVersion: Int
+    let modelVersion: Int
+    let migrationVersion: Int
+    let documentationVersion: String
+    let apiCompatibilityVersion: String
+    let minimumSupportedAppVersion: String
+}
+
+enum PrayerJourneyDeveloperDocumentation {
+    static let metadata = PrayerJourneyPlatformMetadata(platformVersion: "1.0", schemaVersion: 1, modelVersion: 1, migrationVersion: 1, documentationVersion: "1.0", apiCompatibilityVersion: "1.x", minimumSupportedAppVersion: "1.0")
+    static let architectureOverview = "Catalog metadata drives collections, authoring, localization, assets, QA, release, and publishing without duplicating prayer content."
+    static let dataModelSummary = "PrayerJourney composes PrayerPlan content with immutable catalog metadata and derived progress."
+    static let schemaSummary = "Versioned metadata supports workflow, localization, assets, QA, release, and publishing lifecycles."
+}
+
 enum PrayerJourneyContentState: String, CaseIterable, Codable, Hashable {
     case available = "Available"
     case comingSoon = "Coming Soon"
@@ -376,6 +393,7 @@ enum PrayerCollectionID: String, Codable, CaseIterable, Hashable, Identifiable {
 }
 
 enum PrayerJourneyCatalog {
+    static let platform = PrayerJourneyDeveloperDocumentation.metadata
     static let collections: [JourneyCollection] = [
         .init(id: .scripture, title: "Scripture", description: "Pray through the words and stories that shape faith.", iconName: "book.closed.fill", sortOrder: 0),
         .init(id: .family, title: "Family & Relationships", description: "Bring the people you love into a quieter rhythm of prayer.", iconName: "figure.2.and.child.holdinghands", sortOrder: 1),
@@ -426,9 +444,10 @@ enum PrayerJourneyCatalog {
         let qaIssues: [String]
         let releaseIssues: [String]
         let publicationIssues: [String]
+        let documentationIssues: [String]
 
         var isValid: Bool {
-            duplicateIDs.isEmpty && duplicateTitles.isEmpty && missingCollections.isEmpty && invalidSortOrders.isEmpty && incompleteMetadata.isEmpty && missingArtwork.isEmpty && missingRequirements.isEmpty && invalidWorkflowTransitions.isEmpty && missingWorkflowMetadata.isEmpty && localizationIssues.isEmpty && assetIssues.isEmpty && qaIssues.isEmpty && releaseIssues.isEmpty && publicationIssues.isEmpty
+            duplicateIDs.isEmpty && duplicateTitles.isEmpty && missingCollections.isEmpty && invalidSortOrders.isEmpty && incompleteMetadata.isEmpty && missingArtwork.isEmpty && missingRequirements.isEmpty && invalidWorkflowTransitions.isEmpty && missingWorkflowMetadata.isEmpty && localizationIssues.isEmpty && assetIssues.isEmpty && qaIssues.isEmpty && releaseIssues.isEmpty && publicationIssues.isEmpty && documentationIssues.isEmpty
         }
     }
 
@@ -511,7 +530,16 @@ enum PrayerJourneyCatalog {
             let approved = item.qa.status == .approved && item.release?.status == .released
             return publication.contentIntegrityStatus.isEmpty || (published && (publication.publishedVersion == nil || publication.publishedBy == nil || publication.importChecksum == nil || !contentExists || !referencesReady || !assetsReady || !approved))
         }.map(\.id) + (duplicatePublicationIDs ? ["duplicate-publication-id"] : [])
-        return ValidationReport(duplicateIDs: ids, duplicateTitles: titles, missingCollections: missingCollections, invalidSortOrders: invalidSortOrders, incompleteMetadata: incompleteMetadata, missingArtwork: missingArtwork, missingRequirements: missingRequirements, invalidWorkflowTransitions: invalidWorkflowTransitions, missingWorkflowMetadata: missingWorkflowMetadata, localizationIssues: localizationIssues, assetIssues: assetIssues, qaIssues: qaIssues, releaseIssues: releaseIssues, publicationIssues: publicationIssues.sorted())
+        let platform = PrayerJourneyDeveloperDocumentation.metadata
+        let documentationIssues: [String] = [
+            platform.platformVersion.isEmpty ? "platform-version" : nil,
+            platform.schemaVersion < 1 ? "schema-version" : nil,
+            platform.modelVersion < 1 ? "model-version" : nil,
+            platform.migrationVersion < 1 ? "migration-version" : nil,
+            platform.documentationVersion.isEmpty ? "documentation-version" : nil,
+            platform.minimumSupportedAppVersion.isEmpty ? "minimum-app-version" : nil
+        ].compactMap { $0 }
+        return ValidationReport(duplicateIDs: ids, duplicateTitles: titles, missingCollections: missingCollections, invalidSortOrders: invalidSortOrders, incompleteMetadata: incompleteMetadata, missingArtwork: missingArtwork, missingRequirements: missingRequirements, invalidWorkflowTransitions: invalidWorkflowTransitions, missingWorkflowMetadata: missingWorkflowMetadata, localizationIssues: localizationIssues, assetIssues: assetIssues, qaIssues: qaIssues, releaseIssues: releaseIssues, publicationIssues: publicationIssues.sorted(), documentationIssues: documentationIssues)
     }
 
     static func journey(for plan: PrayerPlan) -> PrayerJourney {

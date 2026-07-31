@@ -29,6 +29,24 @@ struct JourneyAuthoringDashboardView: View {
                     .foregroundStyle(report.isValid ? .green : .orange)
             }
 
+            Section("Developer Platform") {
+                healthRow("Platform", value: PrayerJourneyCatalog.platform.platformVersion, systemImage: "hammer.fill")
+                healthRow("Schema / model", value: "\(PrayerJourneyCatalog.platform.schemaVersion) / \(PrayerJourneyCatalog.platform.modelVersion)", systemImage: "square.stack.3d.up.fill")
+                healthRow("Migration", value: "\(PrayerJourneyCatalog.platform.migrationVersion)", systemImage: "arrow.triangle.2.circlepath")
+                healthRow("API compatibility", value: PrayerJourneyCatalog.platform.apiCompatibilityVersion, systemImage: "link")
+                healthRow("Minimum app", value: PrayerJourneyCatalog.platform.minimumSupportedAppVersion, systemImage: "iphone")
+                Label(report.documentationIssues.isEmpty ? "Documentation validation passed" : "Documentation needs attention", systemImage: report.documentationIssues.isEmpty ? "checkmark.circle" : "exclamationmark.triangle")
+                    .foregroundStyle(report.documentationIssues.isEmpty ? .green : .orange)
+            }
+
+            Section("Platform Documentation") {
+                Text(PrayerJourneyDeveloperDocumentation.architectureOverview)
+                Text(PrayerJourneyDeveloperDocumentation.dataModelSummary)
+                Text(PrayerJourneyDeveloperDocumentation.schemaSummary)
+                healthRow("Collections", value: "\(PrayerJourneyCatalog.collections.count)", systemImage: "square.grid.2x2.fill")
+                healthRow("Journeys", value: "\(metadata.count)", systemImage: "books.vertical.fill")
+            }
+
             Section("Content Pipeline") {
                 healthRow("Ready for QA", value: "\(count(.readyForQA))", systemImage: "checklist")
                 healthRow("Ready for Release", value: "\(count(.readyForRelease))", systemImage: "shippingbox.fill")
