@@ -1,4 +1,5 @@
 import SwiftUI
+import UserNotifications
 
 private enum SettingsDestinations {
     static let appStoreID = "REPLACE_WITH_APP_STORE_ID"
@@ -45,6 +46,7 @@ enum AppAppearance: String, CaseIterable, Identifiable {
 struct SettingsView: View {
     let onResetOnboarding: () -> Void
 
+    @Environment(\.scenePhase) private var scenePhase
     @AppStorage("settings.dailyReminder") private var dailyReminderEnabled = false
     @AppStorage("settings.reminderTime") private var reminderTimeInterval = 8 * 60 * 60.0
     @AppStorage("settings.readAloud") private var readAloudEnabled = false
@@ -52,6 +54,9 @@ struct SettingsView: View {
     @AppStorage("settings.appearance") private var appearanceRawValue = AppAppearance.system.rawValue
     @AppStorage("settings.autoContinueJourney") private var autoContinueJourneyEnabled = true
     @AppStorage("settings.startOnHome") private var startOnHomeEnabled = true
+    @State private var notificationAuthorizationStatus: UNAuthorizationStatus = .notDetermined
+    @State private var permissionRequestInProgress = false
+    @State private var reminderErrorMessage: String?
 
     var body: some View {
         Form {
@@ -68,14 +73,30 @@ struct SettingsView: View {
         .navigationTitle("Settings")
         .toolbarBackground(.hidden, for: .navigationBar)
         .preferredColorScheme(selectedAppearance.colorScheme)
+        .task {
+            await refreshReminderState()
+        }
+        .onChange(of: reminderTimeInterval) {
+            guard dailyReminderEnabled else { return }
+            Task {
+                await scheduleReminder()
+            }
+        }
+        .onChange(of: scenePhase) { _, newPhase in
+            guard newPhase == .active else { return }
+            Task {
+                await refreshReminderState()
+            }
+        }
     }
 
     private var generalSection: some View {
-        Section("General") {
-            Toggle(isOn: $dailyReminderEnabled) {
+        Section {
+            Toggle(isOn: dailyReminderBinding) {
                 Label("Daily Reminder", systemImage: "bell.fill")
             }
-            .accessibilityHint("Stores your daily reminder preference. Notifications are not scheduled yet.")
+            .disabled(permissionRequestInProgress)
+            .accessibilityHint(dailyReminderAccessibilityHint)
 
             DatePicker(
                 "Reminder Time",
@@ -94,6 +115,14 @@ struct SettingsView: View {
                 Label("Haptic Feedback", systemImage: "hand.tap.fill")
             }
             .accessibilityHint("Controls tactile feedback for prayer interactions.")
+        } header: {
+            Text("General")
+        } footer: {
+            if notificationAuthorizationStatus == .denied {
+                Text("Notifications are turned off for LetUsPray in iOS Settings.")
+            } else if let reminderErrorMessage {
+                Text(reminderErrorMessage)
+            }
         }
     }
 
@@ -186,6 +215,86 @@ struct SettingsView: View {
                 )
             }
         )
+    }
+
+    private var dailyReminderBinding: Binding<Bool> {
+        Binding(
+            get: { dailyReminderEnabled },
+            set: { isEnabled in
+                if isEnabled {
+                    Task {
+                        await enableDailyReminder()
+                    }
+                } else {
+                    dailyReminderEnabled = false
+                    reminderErrorMessage = nil
+                    DailyReminderService.shared.cancelDailyReminder()
+                }
+            }
+        )
+    }
+
+    private var dailyReminderAccessibilityHint: String {
+        if notificationAuthorizationStatus == .denied {
+            return "Notifications are disabled for LetUsPray in iOS Settings."
+        }
+        return dailyReminderEnabled
+            ? "Turns off the daily prayer reminder."
+            : "Requests permission and schedules one daily prayer reminder."
+    }
+
+    private func enableDailyReminder() async {
+        permissionRequestInProgress = true
+        reminderErrorMessage = nil
+        defer { permissionRequestInProgress = false }
+
+        do {
+            let granted = try await DailyReminderService.shared.requestAuthorizationIfNeeded()
+            notificationAuthorizationStatus = await DailyReminderService.shared.authorizationStatus()
+
+            guard granted else {
+                dailyReminderEnabled = false
+                DailyReminderService.shared.cancelDailyReminder()
+                return
+            }
+
+            try await DailyReminderService.shared.scheduleDailyReminder(at: reminderTimeInterval)
+            dailyReminderEnabled = true
+        } catch {
+            dailyReminderEnabled = false
+            DailyReminderService.shared.cancelDailyReminder()
+            reminderErrorMessage = "The daily reminder could not be scheduled. Please try again."
+        }
+    }
+
+    private func scheduleReminder() async {
+        do {
+            try await DailyReminderService.shared.scheduleDailyReminder(at: reminderTimeInterval)
+            reminderErrorMessage = nil
+        } catch {
+            dailyReminderEnabled = false
+            DailyReminderService.shared.cancelDailyReminder()
+            reminderErrorMessage = "The daily reminder could not be updated. Please try again."
+        }
+    }
+
+    private func refreshReminderState() async {
+        notificationAuthorizationStatus = await DailyReminderService.shared.authorizationStatus()
+
+        switch notificationAuthorizationStatus {
+        case .authorized, .provisional, .ephemeral:
+            if dailyReminderEnabled {
+                await scheduleReminder()
+            }
+        case .denied, .notDetermined:
+            if dailyReminderEnabled {
+                dailyReminderEnabled = false
+                DailyReminderService.shared.cancelDailyReminder()
+            }
+        @unknown default:
+            dailyReminderEnabled = false
+            DailyReminderService.shared.cancelDailyReminder()
+        }
     }
 
     private var appVersion: String {
