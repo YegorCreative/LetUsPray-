@@ -68,7 +68,8 @@ struct ContentView: View {
                     onStartJourney: startJourney,
                     onOpenPlan: { selectedHomePlan = $0 },
                     onOpenPlans: { selectedTab = 1 },
-                    onOpenSaved: { selectedTab = 2 }
+                    onOpenSaved: { selectedTab = 2 },
+                    onOpenSearch: { selectedTab = 3 }
                 )
                 .background(PrayerBackground())
                 .navigationDestination(item: $selectedTodayDay) { day in
