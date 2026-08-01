@@ -416,6 +416,26 @@ struct TodayView: View {
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel("Insights")
+                NavigationLink { PrayerCalendarView(prayerCompletionDates: prayerCompletionDates) } label: {
+                    VStack(spacing: AppSpacing.xs) {
+                        ZStack {
+                            Circle()
+                                .fill(AppColors.primaryBlue.opacity(0.14))
+                                .frame(width: 44, height: 44)
+                            Image(systemName: "calendar")
+                                .font(.system(size: 17, weight: .semibold))
+                                .foregroundStyle(AppColors.primaryBlue)
+                        }
+                        Text("Calendar")
+                            .font(AppTypography.caption())
+                            .foregroundStyle(AppColors.secondaryText)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.85)
+                    }
+                    .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Prayer Calendar")
             }
         }
     }
