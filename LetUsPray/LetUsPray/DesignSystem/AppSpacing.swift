@@ -11,4 +11,7 @@ enum AppSpacing {
     static let heroPadding: CGFloat = 24
     static let cardCornerRadius: CGFloat = 20
     static let buttonCornerRadius: CGFloat = 14
+    static let heroCornerRadius: CGFloat = 30
+    static let compactCornerRadius: CGFloat = 18
+    static let shelfCardWidth: CGFloat = 210
 }

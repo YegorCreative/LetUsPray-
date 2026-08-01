@@ -95,17 +95,23 @@ struct SearchView: View {
             LazyVStack(alignment: .leading, spacing: AppSpacing.large) {
                 if !journeyResults.isEmpty {
                     resultSection("Prayer Journeys", count: journeyResults.count) {
-                        ForEach(journeyResults) { result in journeyResultCard(result) }
+                        ForEach(Array(journeyResults.enumerated()), id: \.element.id) { index, result in
+                            journeyResultCard(result, showsDivider: index < journeyResults.count - 1)
+                        }
                     }
                 }
                 if !scriptureResults.isEmpty {
                     resultSection("Scripture", count: scriptureResults.count) {
-                        ForEach(scriptureResults) { result in scriptureResultCard(result) }
+                        ForEach(Array(scriptureResults.enumerated()), id: \.element.id) { index, result in
+                            scriptureResultCard(result, showsDivider: index < scriptureResults.count - 1)
+                        }
                     }
                 }
                 if !guidedPrayerResults.isEmpty {
                     resultSection("Guided Prayers", count: guidedPrayerResults.count) {
-                        ForEach(guidedPrayerResults) { result in prayerResultCard(result) }
+                        ForEach(Array(guidedPrayerResults.enumerated()), id: \.element.id) { index, result in
+                            prayerResultCard(result, showsDivider: index < guidedPrayerResults.count - 1)
+                        }
                     }
                 }
             }
@@ -126,13 +132,13 @@ struct SearchView: View {
                     .font(AppTypography.metadata())
                     .foregroundStyle(AppColors.tertiaryText)
             }
-            content()
+            GroupedCard { content() }
         }
     }
 
-    private func journeyResultCard(_ result: PrayerSearchResult) -> some View {
+    private func journeyResultCard(_ result: PrayerSearchResult, showsDivider: Bool = true) -> some View {
         NavigationLink(value: result) {
-            GlassCard(padding: AppSpacing.medium) {
+            GroupedRow(showsDivider: showsDivider) {
                 HStack(spacing: AppSpacing.medium) {
                     Image(systemName: result.plan.coverIcon)
                         .foregroundStyle(result.plan.category.brandAccent)
@@ -160,9 +166,9 @@ struct SearchView: View {
         .accessibilityHint("Opens this prayer journey.")
     }
 
-    private func scriptureResultCard(_ result: PrayerSearchResult) -> some View {
+    private func scriptureResultCard(_ result: PrayerSearchResult, showsDivider: Bool = true) -> some View {
         NavigationLink(value: result) {
-            GlassCard(padding: AppSpacing.medium) {
+            GroupedRow(showsDivider: showsDivider) {
                 VStack(alignment: .leading, spacing: AppSpacing.small) {
                     highlightedText(result.verse.reference, matching: debouncedQuery, font: AppTypography.sectionHeader(), color: AppColors.accent)
                     highlightedText(result.verse.text, matching: debouncedQuery, font: AppTypography.body(), color: AppColors.primaryText)
@@ -178,9 +184,9 @@ struct SearchView: View {
         .accessibilityHint("Opens this Scripture prayer.")
     }
 
-    private func prayerResultCard(_ result: PrayerSearchResult) -> some View {
+    private func prayerResultCard(_ result: PrayerSearchResult, showsDivider: Bool = true) -> some View {
         NavigationLink(value: result) {
-            GlassCard(padding: AppSpacing.medium) {
+            GroupedRow(showsDivider: showsDivider) {
                 VStack(alignment: .leading, spacing: AppSpacing.small) {
                     highlightedText(result.verse.reference, matching: debouncedQuery, font: AppTypography.sectionHeader(), color: AppColors.accent)
                     highlightedText(result.verse.prayer, matching: debouncedQuery, font: AppTypography.body(), color: AppColors.primaryText)
@@ -206,27 +212,44 @@ struct SearchView: View {
     private var discoveryState: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: AppSpacing.large) {
-                GlassCard(padding: AppSpacing.heroPadding) {
+                HeroCard(gradient: BrandGradients.activityHero) {
                     VStack(alignment: .leading, spacing: AppSpacing.small) {
                         Image(systemName: "magnifyingglass")
-                            .font(.system(size: 30, weight: .semibold))
-                            .foregroundStyle(AppColors.accent)
+                            .font(.system(size: 26, weight: .semibold))
+                            .foregroundStyle(AppColors.brightTextOnAccent)
+                            .frame(width: 52, height: 52)
+                            .background(Color.white.opacity(0.18), in: Circle())
                         Text("Find a place to begin")
-                            .font(AppTypography.screenTitle())
-                            .foregroundStyle(AppColors.primaryText)
+                            .font(AppTypography.largeDisplay())
+                            .foregroundStyle(AppColors.brightTextOnAccent)
                         Text("Search Scripture, guided prayers, and prayer journeys by word or phrase.")
                             .font(AppTypography.secondaryBody())
-                            .foregroundStyle(AppColors.secondaryText)
+                            .foregroundStyle(AppColors.brightTextOnAccent.opacity(0.88))
                     }
                 }
                 if !recentSearches.isEmpty {
-                    Text("Recent Searches")
-                        .font(AppTypography.sectionHeader())
-                        .foregroundStyle(AppColors.primaryText)
-                    ForEach(recentSearches, id: \.self) { recent in
-                        Button(recent) { query = recent }
-                            .font(AppTypography.secondaryBody())
-                            .foregroundStyle(AppColors.accent)
+                    VStack(alignment: .leading, spacing: AppSpacing.small) {
+                        Text("Recent Searches")
+                            .font(AppTypography.sectionHeader())
+                            .foregroundStyle(AppColors.primaryText)
+                        GroupedCard {
+                            ForEach(Array(recentSearches.enumerated()), id: \.element) { index, recent in
+                                Button { query = recent } label: {
+                                    GroupedRow(showsDivider: index < recentSearches.count - 1) {
+                                        HStack(spacing: AppSpacing.medium) {
+                                            Image(systemName: "clock.arrow.circlepath")
+                                                .foregroundStyle(AppColors.tertiaryText)
+                                                .frame(width: 22)
+                                            Text(recent)
+                                                .font(AppTypography.secondaryBody())
+                                                .foregroundStyle(AppColors.primaryText)
+                                            Spacer(minLength: 0)
+                                        }
+                                    }
+                                }
+                                .buttonStyle(.plain)
+                            }
+                        }
                     }
                 }
             }
