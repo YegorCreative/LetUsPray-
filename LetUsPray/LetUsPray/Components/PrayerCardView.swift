@@ -17,79 +17,51 @@ struct PrayerCardView: View {
             .trimmingCharacters(in: .whitespaces)
     }
 
+    /// A single Scripture reading, editorial in style and free of per-verse card chrome —
+    /// callers group several of these inside one shared reading surface.
     var body: some View {
-        GlassCard(padding: AppSpacing.heroPadding) {
-            if isClosingPrayer {
-                // Simplified layout for closing prayers
-                VStack(alignment: .center, spacing: AppSpacing.medium) {
+        if isClosingPrayer {
+            VStack(spacing: AppSpacing.small) {
+                Text(verse.reference)
+                    .font(AppTypography.caption())
+                    .foregroundStyle(AppColors.accent)
+                    .textCase(.uppercase)
+
+                Text(closingText)
+                    .font(.system(.title3, design: .serif, weight: .medium))
+                    .foregroundStyle(AppColors.primaryText)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+
+                Image(systemName: "hands.sparkles.fill")
+                    .font(.system(size: 28, weight: .medium))
+                    .foregroundStyle(AppColors.accent)
+            }
+            .frame(maxWidth: .infinity)
+        } else {
+            VStack(alignment: .leading, spacing: AppSpacing.small) {
+                HStack(alignment: .firstTextBaseline) {
                     Text(verse.reference)
-                        .font(AppTypography.caption())
+                        .font(AppTypography.sectionHeader())
                         .foregroundStyle(AppColors.accent)
-                        .textCase(.uppercase)
-                    
-                    VStack(spacing: AppSpacing.small) {
-                        Text(closingText)
-                            .font(AppTypography.body())
-                            .fontWeight(.semibold)
-                            .foregroundStyle(AppColors.primaryText)
-                            .multilineTextAlignment(.center)
-                        
-                        // Use SF Symbol for praying hands that can be styled
-                        Image(systemName: "hands.sparkles.fill")
-                            .font(.system(size: 32, weight: .medium))
-                            .foregroundStyle(AppColors.accent)
+
+                    Spacer(minLength: AppSpacing.medium)
+
+                    Button(action: onToggleSaved) {
+                        Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
+                            .font(.system(size: 15, weight: .semibold))
+                            .foregroundStyle(isSaved ? AppColors.prayerGold : AppColors.secondaryText)
                     }
-                    .frame(maxWidth: .infinity)
+                    .buttonStyle(.plain)
+                    .contentShape(Rectangle())
+                    .accessibilityLabel(isSaved ? "Remove saved prayer" : "Save prayer")
                 }
-            } else {
-                // Normal layout for regular prayers
-                VStack(alignment: .leading, spacing: AppSpacing.medium) {
-                    HStack(alignment: .top) {
-                        VStack(alignment: .leading, spacing: 6) {
-                            Text(verse.reference)
-                                .font(AppTypography.sectionHeader())
-                                .foregroundStyle(AppColors.accent)
 
-                            Text("Verse")
-                                .font(AppTypography.caption())
-                                .foregroundStyle(AppColors.tertiaryText)
-                                .textCase(.uppercase)
-
-                            Text(verse.text)
-                                .font(AppTypography.body())
-                                .foregroundStyle(AppColors.primaryText)
-                                .fixedSize(horizontal: false, vertical: true)
-                                .lineSpacing(7)
-                        }
-
-                        Spacer(minLength: AppSpacing.medium)
-
-                        Button(action: onToggleSaved) {
-                            Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
-                                .font(.system(size: 18, weight: .semibold))
-                                .foregroundStyle(isSaved ? AppColors.prayerGold : AppColors.secondaryText)
-                                .padding(10)
-                                .background(.thinMaterial, in: Circle())
-                        }
-                        .buttonStyle(.plain)
-                        .contentShape(Rectangle())
-                        .accessibilityLabel(isSaved ? "Remove saved prayer" : "Save prayer")
-                    }
-
-                    VStack(alignment: .leading, spacing: AppSpacing.small) {
-                        Text("Prayer")
-                            .font(AppTypography.caption())
-                            .foregroundStyle(AppColors.tertiaryText)
-                            .textCase(.uppercase)
-
-                        Text(verse.prayer)
-                            .font(AppTypography.body())
-                            .fontWeight(.semibold)
-                            .foregroundStyle(AppColors.primaryText)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .lineSpacing(7)
-                    }
-                }
+                Text(verse.text)
+                    .font(.system(.title3, design: .serif))
+                    .foregroundStyle(AppColors.primaryText)
+                    .lineSpacing(9)
+                    .fixedSize(horizontal: false, vertical: true)
             }
         }
     }

@@ -6,6 +6,7 @@ struct SavedView: View {
     let savedPrayerRecords: [SavedPrayerRecord]
     let completedDayNumbersForPlan: (String) -> Binding<Set<Int>>
     @Binding var analytics: PrayerAnalyticsSnapshot
+    var onOpenSearch: () -> Void = {}
     @State private var selectedSavedPrayer: SavedPrayerItem?
 
     var body: some View {
@@ -19,91 +20,12 @@ struct SavedView: View {
                 if savedItems.isEmpty {
                     emptyState
                 } else {
-                    ForEach(savedItems) { item in
-                        let accent = item.plan.category.brandAccent
-
-                        ZStack(alignment: .topTrailing) {
-                            Button {
-                                selectedSavedPrayer = item
-                            } label: {
-                                GlassCard {
-                                    VStack(alignment: .leading, spacing: AppSpacing.medium) {
-                                        HStack(alignment: .top, spacing: AppSpacing.medium) {
-                                            Image(systemName: item.plan.category.brandIcon)
-                                                .font(.system(size: 18, weight: .semibold))
-                                                .foregroundStyle(AppColors.textPrimary)
-                                                .frame(width: 42, height: 42)
-                                                .background(BrandGradients.savedPrayer, in: RoundedRectangle(cornerRadius: 15, style: .continuous))
-
-                                            VStack(alignment: .leading, spacing: 6) {
-                                                Text(item.plan.title)
-                                                    .font(AppTypography.caption())
-                                                    .foregroundStyle(accent)
-
-                                                Text(item.verse.reference)
-                                                    .font(AppTypography.caption())
-                                                    .foregroundStyle(AppColors.premiumGold)
-
-                                                Text(item.day.chapterReference)
-                                                    .font(AppTypography.footnote())
-                                                    .foregroundStyle(AppColors.textTertiary)
-
-                                                Text(item.verse.text)
-                                                    .font(AppTypography.headline())
-                                                    .foregroundStyle(AppColors.textPrimary)
-                                                    .fixedSize(horizontal: false, vertical: true)
-
-                                                Text(item.record.savedDate, format: .dateTime.month(.abbreviated).day().year())
-                                                    .font(AppTypography.caption())
-                                                    .foregroundStyle(AppColors.textTertiary)
-                                                    .accessibilityLabel("Saved date")
-                                                    .accessibilityValue(
-                                                        item.record.savedDate.formatted(
-                                                            date: .long,
-                                                            time: .omitted
-                                                        )
-                                                    )
-                                                    .accessibilityHint("The date this prayer was saved.")
-                                            }
-
-                                            Spacer(minLength: 44)
-                                        }
-
-                                        VStack(alignment: .leading, spacing: AppSpacing.small) {
-                                            Text("Prayer")
-                                                .font(AppTypography.caption())
-                                                .foregroundStyle(AppColors.textTertiary)
-                                                .textCase(.uppercase)
-
-                                            Text(item.verse.prayer)
-                                                .font(AppTypography.body())
-                                                .foregroundStyle(AppColors.textSecondary)
-                                                .lineSpacing(4)
-                                        }
-                                    }
-                                    .multilineTextAlignment(.leading)
-                                }
+                    GroupedCard {
+                        ForEach(Array(savedItems.enumerated()), id: \.element.id) { index, item in
+                            GroupedRow(showsDivider: index < savedItems.count - 1) {
+                                savedRow(item)
                             }
-                            .buttonStyle(.plain)
-                            .contentShape(Rectangle())
-                            .accessibilityElement(children: .combine)
-                            .accessibilityHint("Opens this prayer.")
-
-                            Button {
-                                removeSavedPrayer(id: item.verse.id)
-                            } label: {
-                                Image(systemName: "bookmark.fill")
-                                    .foregroundStyle(AppColors.premiumGold)
-                                    .frame(minWidth: 44, minHeight: 44)
-                                    .background(.thinMaterial, in: Circle())
-                            }
-                            .buttonStyle(.plain)
-                            .contentShape(Rectangle())
-                            .padding(AppSpacing.medium)
-                            .accessibilityLabel("Remove \(item.verse.reference) from Saved")
-                            .accessibilityHint("Removes this prayer from Saved.")
                         }
-                        .transition(.opacity.combined(with: .scale(scale: 0.98)))
                     }
                 }
             }
@@ -123,12 +45,93 @@ struct SavedView: View {
         }
     }
 
+    private func savedRow(_ item: SavedPrayerItem) -> some View {
+        let accent = item.plan.category.brandAccent
+
+        return HStack(spacing: AppSpacing.small) {
+            Button {
+                selectedSavedPrayer = item
+            } label: {
+                HStack(spacing: AppSpacing.medium) {
+                    Image(systemName: item.plan.category.brandIcon)
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundStyle(AppColors.textPrimary)
+                        .frame(width: 42, height: 42)
+                        .background(BrandGradients.savedPrayer, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text(item.verse.reference)
+                            .font(AppTypography.cardTitle())
+                            .foregroundStyle(accent)
+
+                        Text(item.verse.text)
+                            .font(AppTypography.metadata())
+                            .foregroundStyle(AppColors.textSecondary)
+                            .lineLimit(2)
+                            .fixedSize(horizontal: false, vertical: true)
+
+                        HStack(spacing: 4) {
+                            Text(item.plan.title)
+                                .lineLimit(1)
+                            Text("·")
+                            Text(item.record.savedDate, format: .dateTime.month(.abbreviated).day())
+                                .accessibilityLabel("Saved \(item.record.savedDate.formatted(date: .long, time: .omitted))")
+                        }
+                        .font(AppTypography.caption())
+                        .foregroundStyle(AppColors.textTertiary)
+                    }
+
+                    Spacer(minLength: 0)
+                }
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityElement(children: .combine)
+            .accessibilityHint("Opens this prayer.")
+
+            Menu {
+                Button(role: .destructive) {
+                    removeSavedPrayer(id: item.verse.id)
+                } label: {
+                    Label("Remove from Saved", systemImage: "bookmark.slash")
+                }
+            } label: {
+                Image(systemName: "ellipsis.circle")
+                    .font(.system(size: 18, weight: .semibold))
+                    .foregroundStyle(AppColors.textTertiary)
+                    .frame(width: 32, height: 32)
+            }
+            .accessibilityLabel("More options for \(item.verse.reference)")
+        }
+    }
+
     private var emptyState: some View {
-        EmptyStateView(
-            title: "No saved prayers yet.",
-            message: "When a verse becomes a prayer you want to return to, save it here for quiet reflection later.",
-            systemImage: "bookmark.slash"
-        )
+        VStack(alignment: .leading, spacing: AppSpacing.large) {
+            HeroCard(gradient: BrandGradients.savedPrayer) {
+                VStack(alignment: .leading, spacing: AppSpacing.small) {
+                    Image(systemName: "bookmark.fill")
+                        .font(.system(size: 24, weight: .semibold))
+                        .foregroundStyle(AppColors.brightTextOnAccent)
+                        .frame(width: 52, height: 52)
+                        .background(Color.white.opacity(0.18), in: Circle())
+
+                    Text("Your Prayer Library")
+                        .font(AppTypography.largeDisplay())
+                        .foregroundStyle(AppColors.brightTextOnAccent)
+
+                    Text("When a verse becomes a prayer you want to return to, save it here for quiet reflection later.")
+                        .font(AppTypography.secondaryBody())
+                        .foregroundStyle(AppColors.brightTextOnAccent.opacity(0.88))
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+
+            Button(action: onOpenSearch) {
+                PrimaryPrayerButton(title: "Browse Scripture & Prayers", systemImage: "magnifyingglass")
+            }
+            .buttonStyle(.plain)
+            .accessibilityHint("Opens Search to find Scripture and prayers to save.")
+        }
     }
 
     private var savedItems: [SavedPrayerItem] {

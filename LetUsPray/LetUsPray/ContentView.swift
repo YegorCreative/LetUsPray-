@@ -128,7 +128,8 @@ struct ContentView: View {
                     savedVerseIDs: savedVerseIDsBinding,
                     savedPrayerRecords: savedPrayerRecords,
                     completedDayNumbersForPlan: completedDaysBinding(for:),
-                    analytics: analyticsBinding
+                    analytics: analyticsBinding,
+                    onOpenSearch: { selectedTab = 3 }
                 )
                 .background(PrayerBackground())
             }

@@ -143,16 +143,8 @@ struct PrayerDetailView: View {
                 if day.verses.isEmpty {
                     placeholderCard
                 } else {
-                    ForEach(day.verses) { verse in
-                        PrayerCardView(
-                            verse: verse,
-                            isSaved: savedVerseIDs.contains(verse.id),
-                            onToggleSaved: {
-                                toggleSaved(verseID: verse.id)
-                            }
-                        )
-                    }
-
+                    scriptureSection
+                    guidedPrayerSection
                     readAloudControls
                     personalResponseSection
                     reflectionCompletionSection
@@ -232,26 +224,81 @@ struct PrayerDetailView: View {
         }
     }
 
-    private var readAloudControls: some View {
-        GlassCard(padding: AppSpacing.heroPadding) {
+    private func isClosingPrayer(_ verse: PrayerVerse) -> Bool {
+        verse.id.hasSuffix("-closing") || verse.reference.lowercased() == "closing"
+    }
+
+    private var guidedPrayerVerses: [PrayerVerse] {
+        day.verses.filter { !isClosingPrayer($0) }
+    }
+
+    private var scriptureSection: some View {
+        InfoCard(padding: AppSpacing.heroPadding) {
+            VStack(alignment: .leading, spacing: AppSpacing.large) {
+                ForEach(Array(day.verses.enumerated()), id: \.element.id) { index, verse in
+                    PrayerCardView(
+                        verse: verse,
+                        isSaved: savedVerseIDs.contains(verse.id),
+                        onToggleSaved: {
+                            toggleSaved(verseID: verse.id)
+                        }
+                    )
+                    if index < day.verses.count - 1 {
+                        Divider().opacity(0.5)
+                    }
+                }
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var guidedPrayerSection: some View {
+        if !guidedPrayerVerses.isEmpty {
             VStack(alignment: .leading, spacing: AppSpacing.medium) {
+                Label("Guided Prayer", systemImage: "hands.sparkles.fill")
+                    .font(AppTypography.sectionHeader())
+                    .foregroundStyle(AppColors.primaryText)
+
+                VStack(alignment: .leading, spacing: AppSpacing.large) {
+                    ForEach(Array(guidedPrayerVerses.enumerated()), id: \.element.id) { index, verse in
+                        Text(verse.prayer)
+                            .font(AppTypography.body())
+                            .fontWeight(.medium)
+                            .foregroundStyle(AppColors.primaryText)
+                            .lineSpacing(7)
+                            .fixedSize(horizontal: false, vertical: true)
+                        if index < guidedPrayerVerses.count - 1 {
+                            Divider().opacity(0.4)
+                        }
+                    }
+                }
+                .padding(AppSpacing.large)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(accentColor.opacity(0.10), in: RoundedRectangle(cornerRadius: AppSpacing.heroCornerRadius, style: .continuous))
+                .overlay {
+                    RoundedRectangle(cornerRadius: AppSpacing.heroCornerRadius, style: .continuous)
+                        .stroke(accentColor.opacity(0.26), lineWidth: 1)
+                }
+            }
+            .accessibilityElement(children: .contain)
+        }
+    }
+
+    private var readAloudControls: some View {
+        InfoCard(padding: AppSpacing.medium) {
+            VStack(alignment: .leading, spacing: AppSpacing.small) {
                 HStack {
                     Label("Read Aloud", systemImage: speechController.state.systemImage)
-                        .font(AppTypography.sectionHeader())
-                        .foregroundStyle(AppColors.primaryText)
+                        .font(AppTypography.metadata())
+                        .fontWeight(.semibold)
+                        .foregroundStyle(AppColors.secondaryText)
                     Spacer()
                     Text(speechController.state.title)
-                        .font(AppTypography.metadata())
-                        .foregroundStyle(AppColors.secondaryText)
+                        .font(AppTypography.caption())
+                        .foregroundStyle(AppColors.tertiaryText)
                 }
 
-                if speechController.state != .stopped {
-                    ProgressView()
-                        .tint(accentColor)
-                        .accessibilityLabel("Reading in progress")
-                }
-
-                HStack(spacing: AppSpacing.large) {
+                HStack(spacing: AppSpacing.medium) {
                     Button {
                         speechController.replay(readAloudText, rateMultiplier: readingSpeed.rateMultiplier)
                     } label: {
@@ -271,8 +318,8 @@ struct PrayerDetailView: View {
                         }
                     } label: {
                         Image(systemName: speechController.state == .playing ? "pause.fill" : "play.fill")
-                            .font(.system(size: 22, weight: .semibold))
-                            .frame(width: 52, height: 52)
+                            .font(.system(size: 18, weight: .semibold))
+                            .frame(width: 44, height: 44)
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(accentColor)
@@ -294,16 +341,24 @@ struct PrayerDetailView: View {
                         .buttonStyle(PrayerIconButtonStyle())
                         .accessibilityLabel("Stop reading")
                     }
-                }
-                .frame(maxWidth: .infinity)
 
-                Picker("Reading speed", selection: $readingSpeedRawValue) {
-                    ForEach(PrayerReadingSpeed.allCases) { speed in
-                        Text(speed.title).tag(speed.rawValue)
+                    Spacer(minLength: 0)
+
+                    Picker("Reading speed", selection: $readingSpeedRawValue) {
+                        ForEach(PrayerReadingSpeed.allCases) { speed in
+                            Text(speed.title).tag(speed.rawValue)
+                        }
                     }
+                    .pickerStyle(.menu)
+                    .tint(accentColor)
+                    .accessibilityHint("Chooses the pace for voice reading.")
                 }
-                .pickerStyle(.segmented)
-                .accessibilityHint("Chooses the pace for voice reading.")
+
+                if speechController.state != .stopped {
+                    ProgressView()
+                        .tint(accentColor)
+                        .accessibilityLabel("Reading in progress")
+                }
             }
         }
     }
@@ -335,11 +390,12 @@ struct PrayerDetailView: View {
         field: PrayerJournalField,
         text: Binding<String>
     ) -> some View {
-        GlassCard {
-            VStack(alignment: .leading, spacing: AppSpacing.medium) {
+        InfoCard(padding: AppSpacing.medium) {
+            VStack(alignment: .leading, spacing: AppSpacing.small) {
                 Label(title, systemImage: systemImage)
-                    .font(AppTypography.headline())
-                    .foregroundStyle(AppColors.textPrimary)
+                    .font(AppTypography.metadata())
+                    .fontWeight(.semibold)
+                    .foregroundStyle(AppColors.secondaryText)
 
                 ZStack(alignment: .topLeading) {
                     if text.wrappedValue.isEmpty {
@@ -355,20 +411,20 @@ struct PrayerDetailView: View {
                         .font(AppTypography.body())
                         .foregroundStyle(AppColors.textPrimary)
                         .scrollContentBackground(.hidden)
-                        .frame(minHeight: 140)
+                        .frame(minHeight: 100)
                         .padding(AppSpacing.small)
                         .focused($focusedJournalField, equals: field)
                         .accessibilityLabel(title)
                         .accessibilityHint(placeholder)
                 }
-                .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                 .overlay {
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                    RoundedRectangle(cornerRadius: 16, style: .continuous)
                         .stroke(AppColors.glassStroke, lineWidth: 1)
                 }
 
                 Text("Saved automatically")
-                    .font(AppTypography.caption())
+                    .font(.system(size: 10, weight: .medium))
                     .foregroundStyle(AppColors.textTertiary)
             }
         }
@@ -460,7 +516,7 @@ struct PrayerDetailView: View {
     }
 
     private var reflectionPrompt: some View {
-        GlassCard {
+        InfoCard {
             VStack(alignment: .leading, spacing: AppSpacing.medium) {
                 Label("Continue the conversation", systemImage: isCompleted ? "checkmark.circle.fill" : "heart.text.square.fill")
                     .font(AppTypography.headline())
@@ -488,17 +544,45 @@ struct PrayerDetailView: View {
     }
 
     private var completionExperience: some View {
-        GlassCard(padding: AppSpacing.heroPadding) {
+        VStack(alignment: .leading, spacing: AppSpacing.large) {
             VStack(alignment: .leading, spacing: AppSpacing.medium) {
-                Label("Prayer complete", systemImage: "checkmark.seal.fill")
-                    .font(AppTypography.screenTitle())
-                    .foregroundStyle(AppColors.success)
+                HStack(spacing: AppSpacing.medium) {
+                    ZStack {
+                        Circle()
+                            .fill(AppColors.success.opacity(0.16))
+                            .frame(width: 52, height: 52)
+                        Image(systemName: "checkmark.seal.fill")
+                            .font(.system(size: 22, weight: .semibold))
+                            .foregroundStyle(AppColors.success)
+                    }
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Prayer Complete")
+                            .font(AppTypography.sectionHeader())
+                            .foregroundStyle(AppColors.primaryText)
+                        Text("You made space to pray today.")
+                            .font(AppTypography.metadata())
+                            .foregroundStyle(AppColors.secondaryText)
+                    }
+                    Spacer(minLength: 0)
+                }
 
-                Text("You made space to pray today. Carry this quiet moment with you.")
+                Text("Carry this quiet moment with you.")
                     .font(AppTypography.body())
                     .foregroundStyle(AppColors.secondaryText)
                     .fixedSize(horizontal: false, vertical: true)
+            }
+            .padding(AppSpacing.large)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: AppSpacing.heroCornerRadius, style: .continuous)
+                    .fill(AppColors.success.opacity(0.08))
+            )
+            .overlay {
+                RoundedRectangle(cornerRadius: AppSpacing.heroCornerRadius, style: .continuous)
+                    .stroke(AppColors.success.opacity(0.24), lineWidth: 1)
+            }
 
+            VStack(spacing: AppSpacing.small) {
                 if let nextDay = plan.days.first(where: { $0.dayNumber > day.dayNumber }) {
                     Button { autoContinueDay = nextDay } label: {
                         PrimaryPrayerButton(title: "Continue Journey", systemImage: "arrow.right.circle.fill")
@@ -517,36 +601,43 @@ struct PrayerDetailView: View {
     }
 
     private var headerCard: some View {
-        GlassCard(padding: AppSpacing.heroPadding) {
-            VStack(alignment: .leading, spacing: AppSpacing.medium) {
-                Text(plan.title)
-                    .font(AppTypography.caption())
-                    .foregroundStyle(accentColor)
-                    .textCase(.uppercase)
+        InfoCard(padding: AppSpacing.medium) {
+            HStack(alignment: .top, spacing: AppSpacing.medium) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(plan.title.uppercased())
+                        .font(.system(size: 11, weight: .bold))
+                        .foregroundStyle(accentColor)
 
-                Text("Day \(day.dayNumber)")
-                    .font(AppTypography.caption())
-                    .foregroundStyle(AppColors.textTertiary)
-                    .textCase(.uppercase)
+                    Text(day.title)
+                        .font(AppTypography.cardTitle())
+                        .foregroundStyle(AppColors.textPrimary)
 
-                Text(day.title)
-                    .font(AppTypography.title())
-                    .foregroundStyle(AppColors.textPrimary)
+                    Text("Day \(day.dayNumber) · \(day.chapterReference)")
+                        .font(AppTypography.metadata())
+                        .foregroundStyle(AppColors.textSecondary)
 
-                Text(day.chapterReference)
-                    .font(AppTypography.callout())
-                    .foregroundStyle(AppColors.textSecondary)
+                    Text(day.summary)
+                        .font(AppTypography.caption())
+                        .foregroundStyle(AppColors.textTertiary)
+                        .lineLimit(2)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
 
-                Text(day.summary)
-                    .font(AppTypography.body())
-                    .foregroundStyle(AppColors.textSecondary)
-                    .lineSpacing(4)
+                Spacer(minLength: 0)
+
+                if isCompleted {
+                    Image(systemName: "checkmark.seal.fill")
+                        .font(.system(size: 18, weight: .semibold))
+                        .foregroundStyle(AppColors.success)
+                        .accessibilityHidden(true)
+                }
             }
         }
+        .accessibilityElement(children: .combine)
     }
 
     private var placeholderCard: some View {
-        GlassCard {
+        InfoCard {
             VStack(alignment: .leading, spacing: AppSpacing.medium) {
                 Label("Prayer content is coming soon", systemImage: "sparkles")
                     .font(AppTypography.headline())
