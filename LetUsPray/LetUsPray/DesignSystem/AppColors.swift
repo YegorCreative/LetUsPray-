@@ -3,10 +3,16 @@ import UIKit
 
 /// Semantic colors for the product. Every color adapts to the system appearance.
 enum AppColors {
-    static let background = adaptive(light: UIColor(red: 0.94, green: 0.97, blue: 0.95, alpha: 1), dark: UIColor(red: 0.035, green: 0.075, blue: 0.07, alpha: 1))
-    static let secondaryBackground = adaptive(light: UIColor(red: 0.87, green: 0.94, blue: 0.91, alpha: 1), dark: UIColor(red: 0.055, green: 0.13, blue: 0.12, alpha: 1))
-    static let surface = adaptive(light: UIColor(red: 0.90, green: 0.97, blue: 0.93, alpha: 0.78), dark: UIColor(red: 0.055, green: 0.145, blue: 0.125, alpha: 0.88))
-    static let elevatedSurface = adaptive(light: UIColor(red: 0.94, green: 0.985, blue: 0.96, alpha: 0.88), dark: UIColor(red: 0.08, green: 0.19, blue: 0.16, alpha: 0.92))
+    static let background = adaptive(light: UIColor(red: 0.94, green: 0.97, blue: 0.95, alpha: 1), dark: UIColor(red: 0.012, green: 0.025, blue: 0.023, alpha: 1))
+    static let secondaryBackground = adaptive(light: UIColor(red: 0.87, green: 0.94, blue: 0.91, alpha: 1), dark: UIColor(red: 0.025, green: 0.065, blue: 0.057, alpha: 1))
+    static let surface = adaptive(light: UIColor(red: 0.90, green: 0.97, blue: 0.93, alpha: 0.78), dark: UIColor(red: 0.035, green: 0.10, blue: 0.085, alpha: 0.88))
+    static let elevatedSurface = adaptive(light: UIColor(red: 0.94, green: 0.985, blue: 0.96, alpha: 0.88), dark: UIColor(red: 0.06, green: 0.145, blue: 0.12, alpha: 0.92))
+    static let primaryBackground = background
+    static let prayerSurface = surface
+    static let glassSurface = surface
+    static let heroSurface = elevatedSurface
+    static let cardSurface = surface
+    static let overlaySurface = elevatedSurface
     static let primaryText = adaptive(light: UIColor(red: 0.055, green: 0.16, blue: 0.12, alpha: 1), dark: UIColor(red: 0.94, green: 0.985, blue: 0.96, alpha: 1))
     static let secondaryText = adaptive(light: UIColor(red: 0.22, green: 0.34, blue: 0.29, alpha: 1), dark: UIColor(red: 0.73, green: 0.86, blue: 0.79, alpha: 1))
     static let tertiaryText = adaptive(light: UIColor(red: 0.34, green: 0.46, blue: 0.40, alpha: 1), dark: UIColor(red: 0.56, green: 0.72, blue: 0.65, alpha: 1))
