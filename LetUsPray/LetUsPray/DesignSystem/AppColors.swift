@@ -3,26 +3,26 @@ import UIKit
 
 /// Semantic colors for the product. Every color adapts to the system appearance.
 enum AppColors {
-    static let background = adaptive(light: UIColor(red: 0.97, green: 0.97, blue: 0.96, alpha: 1), dark: UIColor(red: 0.07, green: 0.08, blue: 0.10, alpha: 1))
-    static let secondaryBackground = adaptive(light: UIColor(red: 0.93, green: 0.94, blue: 0.93, alpha: 1), dark: UIColor(red: 0.11, green: 0.13, blue: 0.16, alpha: 1))
-    static let surface = adaptive(light: .white, dark: UIColor(red: 0.13, green: 0.15, blue: 0.18, alpha: 1))
-    static let elevatedSurface = adaptive(light: .white, dark: UIColor(red: 0.17, green: 0.19, blue: 0.23, alpha: 1))
-    static let primaryText = adaptive(light: UIColor(red: 0.09, green: 0.10, blue: 0.12, alpha: 1), dark: UIColor(red: 0.96, green: 0.97, blue: 0.98, alpha: 1))
-    static let secondaryText = adaptive(light: UIColor(red: 0.32, green: 0.36, blue: 0.42, alpha: 1), dark: UIColor(red: 0.76, green: 0.79, blue: 0.84, alpha: 1))
-    static let tertiaryText = adaptive(light: UIColor(red: 0.40, green: 0.44, blue: 0.50, alpha: 1), dark: UIColor(red: 0.61, green: 0.65, blue: 0.71, alpha: 1))
+    static let background = adaptive(light: UIColor(red: 0.94, green: 0.97, blue: 0.95, alpha: 1), dark: UIColor(red: 0.035, green: 0.075, blue: 0.07, alpha: 1))
+    static let secondaryBackground = adaptive(light: UIColor(red: 0.87, green: 0.94, blue: 0.91, alpha: 1), dark: UIColor(red: 0.055, green: 0.13, blue: 0.12, alpha: 1))
+    static let surface = adaptive(light: UIColor(red: 0.985, green: 0.995, blue: 0.99, alpha: 1), dark: UIColor(red: 0.075, green: 0.16, blue: 0.145, alpha: 1))
+    static let elevatedSurface = adaptive(light: UIColor(red: 1.0, green: 1.0, blue: 0.995, alpha: 1), dark: UIColor(red: 0.10, green: 0.21, blue: 0.19, alpha: 1))
+    static let primaryText = adaptive(light: UIColor(red: 0.055, green: 0.16, blue: 0.12, alpha: 1), dark: UIColor(red: 0.94, green: 0.985, blue: 0.96, alpha: 1))
+    static let secondaryText = adaptive(light: UIColor(red: 0.22, green: 0.34, blue: 0.29, alpha: 1), dark: UIColor(red: 0.73, green: 0.86, blue: 0.79, alpha: 1))
+    static let tertiaryText = adaptive(light: UIColor(red: 0.34, green: 0.46, blue: 0.40, alpha: 1), dark: UIColor(red: 0.56, green: 0.72, blue: 0.65, alpha: 1))
     static let textPrimary = primaryText
     static let textSecondary = secondaryText
     static let textTertiary = tertiaryText
-    static let accent = adaptive(light: UIColor(red: 0.12, green: 0.32, blue: 0.78, alpha: 1), dark: UIColor(red: 0.50, green: 0.68, blue: 1.00, alpha: 1))
-    static let success = adaptive(light: UIColor(red: 0.09, green: 0.45, blue: 0.27, alpha: 1), dark: UIColor(red: 0.35, green: 0.82, blue: 0.52, alpha: 1))
+    static let accent = adaptive(light: UIColor(red: 0.07, green: 0.43, blue: 0.29, alpha: 1), dark: UIColor(red: 0.42, green: 0.82, blue: 0.62, alpha: 1))
+    static let success = adaptive(light: UIColor(red: 0.06, green: 0.40, blue: 0.23, alpha: 1), dark: UIColor(red: 0.34, green: 0.80, blue: 0.52, alpha: 1))
     static let warning = adaptive(light: UIColor(red: 0.58, green: 0.34, blue: 0.02, alpha: 1), dark: UIColor(red: 1.00, green: 0.72, blue: 0.27, alpha: 1))
     static let error = adaptive(light: UIColor(red: 0.72, green: 0.12, blue: 0.13, alpha: 1), dark: UIColor(red: 1.00, green: 0.42, blue: 0.43, alpha: 1))
     static let separator = adaptive(light: UIColor.black.withAlphaComponent(0.12), dark: UIColor.white.withAlphaComponent(0.16))
 
     // Named accents remain available to existing screens and now use an accessible palette.
     static let voltLime = accent
-    static let activityPink = adaptive(light: UIColor(red: 0.76, green: 0.18, blue: 0.32, alpha: 1), dark: UIColor(red: 1.00, green: 0.43, blue: 0.56, alpha: 1))
-    static let electricCyan = adaptive(light: UIColor(red: 0.02, green: 0.42, blue: 0.62, alpha: 1), dark: UIColor(red: 0.35, green: 0.78, blue: 0.96, alpha: 1))
+    static let activityPink = adaptive(light: UIColor(red: 0.72, green: 0.25, blue: 0.34, alpha: 1), dark: UIColor(red: 0.96, green: 0.48, blue: 0.58, alpha: 1))
+    static let electricCyan = adaptive(light: UIColor(red: 0.05, green: 0.35, blue: 0.68, alpha: 1), dark: UIColor(red: 0.40, green: 0.70, blue: 0.98, alpha: 1))
     static let premiumGold = adaptive(light: UIColor(red: 0.57, green: 0.36, blue: 0.02, alpha: 1), dark: UIColor(red: 1.00, green: 0.78, blue: 0.32, alpha: 1))
     static let deepGraphite = background
     static let cardDarkSurface = surface

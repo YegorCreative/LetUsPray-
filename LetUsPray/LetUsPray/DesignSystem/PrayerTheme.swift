@@ -5,7 +5,8 @@ enum PrayerTheme {
         colors: [
             AppColors.background,
             AppColors.secondaryBackground,
-            AppColors.background
+            AppColors.background,
+            AppColors.secondaryBackground.opacity(0.72)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
@@ -32,18 +33,26 @@ struct PrayerBackground: View {
             PrayerTheme.pageGradient
                 .ignoresSafeArea()
 
-            AppColors.background.opacity(0.18)
+            AppColors.background.opacity(0.12)
                 .ignoresSafeArea()
 
             Circle()
-                .fill(AppColors.accent.opacity(0.08))
-                .frame(width: 280, height: 280)
+                .fill(AppColors.accent.opacity(0.13))
+                .frame(width: 330, height: 330)
+                .blur(radius: 42)
                 .offset(x: -120, y: -260)
 
             Circle()
-                .fill(AppColors.electricCyan.opacity(0.07))
-                .frame(width: 240, height: 240)
+                .fill(AppColors.electricCyan.opacity(0.11))
+                .frame(width: 290, height: 290)
+                .blur(radius: 46)
                 .offset(x: 150, y: 260)
+
+            Circle()
+                .fill(AppColors.premiumGold.opacity(0.055))
+                .frame(width: 220, height: 220)
+                .blur(radius: 34)
+                .offset(x: 130, y: -150)
         }
         .allowsHitTesting(false)
     }
@@ -78,7 +87,8 @@ struct PrayerSurfaceModifier: ViewModifier {
                         RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
                             .stroke(AppColors.glassStroke, lineWidth: 1)
                     }
-                    .shadow(color: AppColors.shadow, radius: 14, x: 0, y: 6)
+                    .shadow(color: AppColors.shadow, radius: 18, x: 0, y: 8)
+                    .shadow(color: AppColors.accent.opacity(0.07), radius: 12, x: 0, y: 4)
             )
     }
 }

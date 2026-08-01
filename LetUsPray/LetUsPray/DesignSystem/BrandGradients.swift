@@ -3,9 +3,9 @@ import SwiftUI
 enum BrandGradients {
     static let activityHero = LinearGradient(
         colors: [
-            AppColors.voltLime.opacity(0.95),
-            AppColors.electricCyan.opacity(0.82),
-            AppColors.activityPink.opacity(0.70)
+            AppColors.voltLime.opacity(0.92),
+            AppColors.electricCyan.opacity(0.78),
+            AppColors.premiumGold.opacity(0.34)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
@@ -13,9 +13,9 @@ enum BrandGradients {
 
     static let prayerProgress = LinearGradient(
         colors: [
-            AppColors.voltLime.opacity(0.92),
-            AppColors.electricCyan.opacity(0.78),
-            AppColors.cardDarkSurface.opacity(0.22)
+            AppColors.voltLime.opacity(0.90),
+            AppColors.electricCyan.opacity(0.72),
+            AppColors.cardDarkSurface.opacity(0.26)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
@@ -23,9 +23,9 @@ enum BrandGradients {
 
     static let streakGlow = LinearGradient(
         colors: [
-            AppColors.activityPink.opacity(0.92),
-            AppColors.premiumGold.opacity(0.82),
-            AppColors.voltLime.opacity(0.40)
+            AppColors.premiumGold.opacity(0.86),
+            AppColors.activityPink.opacity(0.58),
+            AppColors.voltLime.opacity(0.42)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
@@ -33,9 +33,9 @@ enum BrandGradients {
 
     static let savedPrayer = LinearGradient(
         colors: [
-            AppColors.premiumGold.opacity(0.82),
-            AppColors.activityPink.opacity(0.62),
-            AppColors.electricCyan.opacity(0.30)
+            AppColors.premiumGold.opacity(0.80),
+            AppColors.electricCyan.opacity(0.54),
+            AppColors.voltLime.opacity(0.24)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
@@ -43,9 +43,9 @@ enum BrandGradients {
 
     static let planCard = LinearGradient(
         colors: [
-            AppColors.electricCyan.opacity(0.70),
-            AppColors.voltLime.opacity(0.50),
-            AppColors.activityPink.opacity(0.42)
+            AppColors.electricCyan.opacity(0.72),
+            AppColors.voltLime.opacity(0.62),
+            AppColors.premiumGold.opacity(0.28)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
@@ -53,10 +53,10 @@ enum BrandGradients {
 
     static let onboardingCard = LinearGradient(
         colors: [
-            AppColors.deepGraphite.opacity(0.70),
-            AppColors.electricCyan.opacity(0.58),
-            AppColors.voltLime.opacity(0.42),
-            AppColors.activityPink.opacity(0.32)
+            AppColors.deepGraphite.opacity(0.66),
+            AppColors.electricCyan.opacity(0.54),
+            AppColors.voltLime.opacity(0.44),
+            AppColors.premiumGold.opacity(0.22)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
@@ -66,8 +66,8 @@ enum BrandGradients {
         colors: [
             AppColors.deepGraphite,
             AppColors.cardDarkSurface,
-            AppColors.electricCyan.opacity(0.22),
-            AppColors.activityPink.opacity(0.18)
+            AppColors.electricCyan.opacity(0.26),
+            AppColors.voltLime.opacity(0.16)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
