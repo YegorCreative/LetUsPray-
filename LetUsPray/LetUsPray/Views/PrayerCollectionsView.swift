@@ -112,9 +112,6 @@ struct PrayerCollectionsView: View {
                 .buttonStyle(.plain)
             }
         }
-        .padding(.horizontal, AppSpacing.large)
-        .padding(.top, AppSpacing.medium)
-        .padding(.bottom, AppSpacing.xxLarge)
     }
 
     private var savedJourneyIDs: Set<String> {
@@ -221,11 +218,22 @@ struct PrayerCollectionsView: View {
     }
 
     private var intro: some View {
-        Text("Find a journey for this season of your life.")
-            .font(AppTypography.body())
-            .foregroundStyle(AppColors.textSecondary)
-            .padding(.bottom, AppSpacing.small)
-            .accessibilityElement(children: .combine)
+        GlassCard(padding: AppSpacing.heroPadding) {
+            VStack(alignment: .leading, spacing: AppSpacing.small) {
+                Text("Find a prayer journey for this season of life.")
+                    .font(AppTypography.screenTitle())
+                    .foregroundStyle(AppColors.primaryText)
+                    .fixedSize(horizontal: false, vertical: true)
+                Text("Explore Scripture, themes, and gentle rhythms of prayer at your own pace.")
+                    .font(AppTypography.secondaryBody())
+                    .foregroundStyle(AppColors.secondaryText)
+                    .fixedSize(horizontal: false, vertical: true)
+                Label("Search or browse collections below", systemImage: "magnifyingglass")
+                    .font(AppTypography.metadata())
+                    .foregroundStyle(AppColors.accent)
+            }
+        }
+        .accessibilityElement(children: .combine)
     }
 
     private var allJourneys: [PrayerJourney] {
@@ -312,14 +320,16 @@ struct PrayerCollectionsView: View {
                     .background(AppColors.planAccent(named: journey.accentColorName).opacity(0.16), in: Circle())
                 VStack(alignment: .leading, spacing: 4) {
                     Text(journey.title)
-                        .font(AppTypography.headline())
-                        .foregroundStyle(AppColors.textPrimary)
+                        .font(AppTypography.cardTitle())
+                        .foregroundStyle(AppColors.primaryText)
+                        .lineLimit(2)
                     HStack(spacing: AppSpacing.small) {
                         Text(progress.status == .completed ? "Completed" : "Session \(nextSession(for: journey)) of \(journey.sessionCount)")
+                            .font(AppTypography.metadata())
+                            .foregroundStyle(AppColors.secondaryText)
+                        Text("· \(journey.estimatedDurationDays > 0 ? "\(journey.estimatedDurationDays) days" : "Self-guided")")
                             .font(AppTypography.caption())
-                            .foregroundStyle(AppColors.textSecondary)
-                        if savedJourneyIDs.contains(journey.id) { Image(systemName: "bookmark.fill").accessibilityLabel("Saved") }
-                        if favoriteJourneyIDs.contains(journey.id) { Image(systemName: "heart.fill").accessibilityLabel("Favorite") }
+                            .foregroundStyle(AppColors.tertiaryText)
                     }
                 }
                 Spacer()
@@ -363,45 +373,42 @@ struct PrayerCollectionsView: View {
         let featured = journeys.first(where: \.isFeatured)
         let accent = featured.map { AppColors.planAccent(named: $0.accentColorName) } ?? AppColors.electricCyan
 
-        return GlassCard(padding: AppSpacing.large) {
-            HStack(alignment: .top, spacing: AppSpacing.medium) {
-                Image(systemName: featured?.heroImageName ?? collection.iconName)
-                    .font(.system(size: 24, weight: .semibold))
-                    .foregroundStyle(accent)
-                    .frame(width: 58, height: 58)
-                    .background(accent.opacity(0.18), in: RoundedRectangle(cornerRadius: 17, style: .continuous))
-
-                VStack(alignment: .leading, spacing: 6) {
-                    HStack(spacing: AppSpacing.small) {
-                        Text(collection.title)
-                            .font(AppTypography.headline())
-                            .foregroundStyle(AppColors.textPrimary)
-                        if featured != nil { badge("Featured", color: accent) }
-                    }
-                    Text(collection.description)
-                        .font(AppTypography.footnote())
-                        .foregroundStyle(AppColors.textSecondary)
-                        .lineLimit(2)
-                    Text("\(journeys.count) journey\(journeys.count == 1 ? "" : "s")")
-                        .font(AppTypography.caption())
+        return GlassCard(padding: AppSpacing.heroPadding) {
+            VStack(alignment: .leading, spacing: AppSpacing.medium) {
+                HStack(alignment: .top, spacing: AppSpacing.medium) {
+                    Image(systemName: featured?.heroImageName ?? collection.iconName)
+                        .font(.system(size: 24, weight: .semibold))
                         .foregroundStyle(accent)
+                        .frame(width: 54, height: 54)
+                        .background(accent.opacity(0.13), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text(collection.title)
+                            .font(AppTypography.cardTitle())
+                            .foregroundStyle(AppColors.primaryText)
+                        Text("\(journeys.count) journey\(journeys.count == 1 ? "" : "s")")
+                            .font(AppTypography.metadata())
+                            .foregroundStyle(accent)
+                    }
+
+                    Spacer(minLength: AppSpacing.small)
+                    Image(systemName: "chevron.right")
+                        .foregroundStyle(accent)
+                        .accessibilityHidden(true)
+                }
+
+                Text(collection.description)
+                    .font(AppTypography.secondaryBody())
+                    .foregroundStyle(AppColors.secondaryText)
+                    .lineLimit(2)
+
+                HStack(spacing: AppSpacing.small) {
+                    if featured != nil { badge("Featured", color: accent) }
                     let launchReady = journeys.filter(\.isLaunchReady).count
                     Text("\(launchReady) available · \(journeys.count - launchReady) upcoming")
                         .font(AppTypography.caption())
-                        .foregroundStyle(AppColors.textTertiary)
-                    let completed = journeys.filter { progress(for: $0).status == .completed }.count
-                    let inProgress = journeys.filter { progress(for: $0).status == .inProgress }.count
-                    if completed > 0 || inProgress > 0 {
-                        Text("\(inProgress) in progress · \(completed) completed")
-                            .font(AppTypography.caption())
-                            .foregroundStyle(AppColors.textTertiary)
-                    }
+                        .foregroundStyle(AppColors.tertiaryText)
                 }
-
-                Spacer(minLength: AppSpacing.small)
-                Image(systemName: "chevron.right")
-                    .foregroundStyle(accent)
-                    .padding(.top, 5)
             }
         }
         .accessibilityElement(children: .combine)
@@ -521,22 +528,26 @@ struct PrayerCollectionDetailView: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: AppSpacing.small) {
+        let accent = journeys.first.map { AppColors.planAccent(named: $0.accentColorName) } ?? AppColors.accent
+        return VStack(alignment: .leading, spacing: AppSpacing.small) {
             Image(systemName: journeys.first(where: \.isFeatured)?.heroImageName ?? collection.iconName)
                 .font(.system(size: 30, weight: .semibold))
-                .foregroundStyle(AppColors.electricCyan)
+                .foregroundStyle(accent)
                 .frame(width: 64, height: 64)
-                .background(AppColors.electricCyan.opacity(0.16), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                .background(accent.opacity(0.13), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+            Text(collection.title)
+                .font(AppTypography.screenTitle())
+                .foregroundStyle(AppColors.primaryText)
             Text(collection.description)
-                .font(AppTypography.body())
-                .foregroundStyle(AppColors.textSecondary)
+                .font(AppTypography.secondaryBody())
+                .foregroundStyle(AppColors.secondaryText)
             Text("\(journeys.count) journey\(journeys.count == 1 ? "" : "s")")
-                .font(AppTypography.caption())
-                .foregroundStyle(AppColors.textTertiary)
+                .font(AppTypography.metadata())
+                .foregroundStyle(AppColors.tertiaryText)
             let availableCount = journeys.filter(\.isLaunchReady).count
             Text("\(availableCount) available · \(journeys.count - availableCount) upcoming · \(collectionCompletionPercentage)% content ready")
                 .font(AppTypography.caption())
-                .foregroundStyle(AppColors.electricCyan)
+                .foregroundStyle(accent)
         }
         .accessibilityElement(children: .combine)
     }
@@ -629,33 +640,24 @@ struct PrayerCollectionDetailView: View {
         let accent = AppColors.planAccent(named: journey.accentColorName)
         let progress = progress(for: journey)
 
-        return GlassCard(padding: AppSpacing.large) {
+        return GlassCard(padding: featured ? AppSpacing.heroPadding : AppSpacing.medium) {
             VStack(alignment: .leading, spacing: AppSpacing.medium) {
                 HStack(alignment: .top, spacing: AppSpacing.medium) {
                     Image(systemName: journey.heroImageName)
                         .font(.system(size: featured ? 26 : 21, weight: .semibold))
                         .foregroundStyle(accent)
                         .frame(width: featured ? 58 : 48, height: featured ? 58 : 48)
-                        .background(accent.opacity(0.18), in: RoundedRectangle(cornerRadius: featured ? 17 : 14, style: .continuous))
+                        .background(accent.opacity(0.13), in: RoundedRectangle(cornerRadius: featured ? 17 : 14, style: .continuous))
 
                     VStack(alignment: .leading, spacing: 5) {
-                        HStack(spacing: AppSpacing.small) {
-                            Text(journey.title)
-                                .font(featured ? AppTypography.title2() : AppTypography.headline())
-                                .foregroundStyle(AppColors.textPrimary)
-                            if journey.isRecommended { badge("Recommended", color: accent) }
-                            if journey.isSeasonal { badge("Seasonal", color: .orange) }
-                            if PrayerStorageCodec.decodeStringSet(savedJourneyIDsRawValue).contains(journey.id) {
-                                Image(systemName: "bookmark.fill").foregroundStyle(accent).accessibilityLabel("Saved")
-                            }
-                            if PrayerStorageCodec.decodeStringSet(favoriteJourneyIDsRawValue).contains(journey.id) {
-                                Image(systemName: "heart.fill").foregroundStyle(.pink).accessibilityLabel("Favorite")
-                            }
-                        }
-                        Text(journey.subtitle)
-                            .font(AppTypography.footnote())
-                            .foregroundStyle(AppColors.textSecondary)
+                        Text(journey.title)
+                            .font(featured ? AppTypography.title2() : AppTypography.cardTitle())
+                            .foregroundStyle(AppColors.primaryText)
                             .lineLimit(2)
+                        Text(journey.subtitle)
+                            .font(AppTypography.metadata())
+                            .foregroundStyle(AppColors.secondaryText)
+                            .lineLimit(1)
                     }
 
                     Spacer(minLength: AppSpacing.small)
@@ -663,13 +665,19 @@ struct PrayerCollectionDetailView: View {
                         .foregroundStyle(accent)
                 }
 
-                HStack(spacing: AppSpacing.medium) {
+                HStack(spacing: AppSpacing.small) {
                     Label(durationLabel(for: journey), systemImage: "calendar")
                     Label("\(journey.estimatedPrayerMinutes) min", systemImage: "clock")
                     Label(journey.difficulty.rawValue, systemImage: "chart.bar.fill")
                 }
                 .font(AppTypography.caption())
-                .foregroundStyle(AppColors.textTertiary)
+                .foregroundStyle(AppColors.tertiaryText)
+                .lineLimit(1)
+                .minimumScaleFactor(0.78)
+
+                if let primaryBadge = primaryBadge(for: journey, progress: progress) {
+                    badge(primaryBadge.title, color: primaryBadge.color)
+                }
 
                 if journey.sessionCount > 0 {
                     VStack(alignment: .leading, spacing: 6) {
@@ -679,7 +687,7 @@ struct PrayerCollectionDetailView: View {
                             Text("\(progress.percentage)%")
                         }
                         .font(AppTypography.caption())
-                        .foregroundStyle(progress.status == .completed ? accent : AppColors.textTertiary)
+                        .foregroundStyle(progress.status == .completed ? accent : AppColors.tertiaryText)
                         ProgressView(value: progress.fractionCompleted)
                             .tint(accent)
                     }
@@ -710,6 +718,14 @@ struct PrayerCollectionDetailView: View {
             .padding(.horizontal, 7)
             .padding(.vertical, 3)
             .background(color.opacity(0.14), in: Capsule())
+    }
+
+    private func primaryBadge(for journey: PrayerJourney, progress: PrayerPlanProgress) -> (title: String, color: Color)? {
+        if progress.status == .completed { return ("Completed", AppColors.success) }
+        if journey.isFeatured { return ("Featured", AppColors.premiumGold) }
+        if journey.isRecommended { return ("Recommended", AppColors.accent) }
+        if journey.isSeasonal { return ("Seasonal", AppColors.warning) }
+        return nil
     }
 }
 
