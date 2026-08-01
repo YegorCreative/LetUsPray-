@@ -73,8 +73,8 @@ struct PlanDetailView: View {
             .padding(.bottom, AppSpacing.xxLarge)
         }
         .background(PrayerBackground())
-        .navigationTitle(plan.title)
-        .navigationBarTitleDisplayMode(.large)
+        .navigationTitle("")
+        .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(.hidden, for: .navigationBar)
         .onAppear {
             journeyProgressRecord = PrayerJourneyProgressStore.record(for: plan.id)
@@ -124,121 +124,105 @@ struct PlanDetailView: View {
     }
 
     private var coverSection: some View {
-        ZStack(alignment: .bottomLeading) {
-            RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius + 6, style: .continuous)
-                .fill(plan.category.brandGradient)
-                .overlay {
-                    RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius + 6, style: .continuous)
-                        .fill(BrandGradients.onboardingCard.opacity(0.28))
-                }
-                .overlay(alignment: .topTrailing) {
-                    Circle()
-                        .fill(AppColors.voltLime.opacity(0.24))
-                        .frame(width: 150, height: 150)
-                        .blur(radius: 24)
-                        .offset(x: 46, y: -54)
-                }
-                .shadow(color: planAccent.opacity(0.24), radius: 28, x: 0, y: 18)
-
+        GlassCard(padding: AppSpacing.heroPadding) {
             VStack(alignment: .leading, spacing: AppSpacing.large) {
-                HStack(alignment: .top) {
+                HStack(alignment: .top, spacing: AppSpacing.medium) {
                     VStack(alignment: .leading, spacing: AppSpacing.small) {
-                        Text(journey.collection.title)
+                        Label(journey.collection.title, systemImage: "square.grid.2x2")
                             .font(AppTypography.caption())
-                            .foregroundStyle(AppColors.textPrimary.opacity(0.86))
+                            .foregroundStyle(planAccent)
                             .textCase(.uppercase)
 
                         Text(journey.title)
-                            .font(AppTypography.title())
-                            .foregroundStyle(AppColors.textPrimary)
+                            .font(AppTypography.largeDisplay())
+                            .foregroundStyle(AppColors.primaryText)
+                            .fixedSize(horizontal: false, vertical: true)
 
                         Text(journey.subtitle)
-                            .font(AppTypography.callout())
-                            .foregroundStyle(AppColors.textSecondary)
+                            .font(AppTypography.secondaryBody())
+                            .foregroundStyle(AppColors.secondaryText)
                             .fixedSize(horizontal: false, vertical: true)
                     }
 
-                    Spacer()
+                    Spacer(minLength: AppSpacing.small)
 
                     Image(systemName: journey.heroImageName)
-                        .font(.system(size: 34, weight: .semibold))
-                        .foregroundStyle(AppColors.textPrimary)
-                        .frame(width: 78, height: 78)
-                        .background(AppColors.cardDarkSurface.opacity(0.36), in: Circle())
-                        .overlay {
-                            Circle()
-                                .stroke(AppColors.glassStroke, lineWidth: 1)
-                        }
+                        .font(.system(size: 30, weight: .semibold))
+                        .foregroundStyle(AppColors.brightTextOnAccent)
+                        .frame(width: 68, height: 68)
+                        .background(plan.category.brandGradient, in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+                        .accessibilityHidden(true)
                 }
 
-                HStack(spacing: AppSpacing.medium) {
-                    metadataPill(title: "Status", value: displayStatus)
-                    metadataPill(title: "Focus", value: journey.categoryName)
+                HStack(spacing: AppSpacing.small) {
+                    if journey.isFeatured { badge("Featured", color: AppColors.premiumGold) }
+                    if journey.isRecommended { badge("Recommended", color: AppColors.accent) }
+                    if journey.isSeasonal { badge("Seasonal", color: AppColors.warning) }
                 }
             }
-            .padding(AppSpacing.heroPadding)
-            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous))
-            .overlay {
-                RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
-                    .stroke(AppColors.glassStroke, lineWidth: 1)
-            }
-            .padding(AppSpacing.small)
         }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("(journey.title), (journey.subtitle), in (journey.collection.title)")
     }
 
 
     private var metadataSection: some View {
-        GlassCard {
+        GlassCard(padding: AppSpacing.heroPadding) {
             VStack(alignment: .leading, spacing: AppSpacing.medium) {
                 Text(journey.description)
                     .font(AppTypography.body())
-                    .foregroundStyle(AppColors.textSecondary)
+                    .foregroundStyle(AppColors.secondaryText)
                     .lineSpacing(4)
+                    .fixedSize(horizontal: false, vertical: true)
 
                 Text("What you'll experience")
-                    .font(AppTypography.headline())
-                    .foregroundStyle(AppColors.textPrimary)
+                    .font(AppTypography.sectionHeader())
+                    .foregroundStyle(AppColors.primaryText)
                 Text("Move through a thoughtful rhythm of Scripture, reflection, and guided prayer at your own pace.")
-                    .font(AppTypography.footnote())
-                    .foregroundStyle(AppColors.textSecondary)
+                    .font(AppTypography.secondaryBody())
+                    .foregroundStyle(AppColors.secondaryText)
+                    .fixedSize(horizontal: false, vertical: true)
 
-                HStack(spacing: AppSpacing.medium) {
-                    metadataPill(title: "Category", value: journey.categoryName)
-                    metadataPill(title: "Sessions", value: "\(journey.sessionCount)")
-                }
-
-                HStack(spacing: AppSpacing.medium) {
-                    metadataPill(title: "Duration", value: durationLabel)
-                    metadataPill(title: "Prayer Time", value: "\(journey.estimatedPrayerMinutes) min")
+                ViewThatFits(in: .horizontal) {
+                    HStack(spacing: AppSpacing.small) {
+                        metadataPill(title: "Duration", value: durationLabel)
+                        metadataPill(title: "Prayer", value: "\(journey.estimatedPrayerMinutes) min")
+                        metadataPill(title: "Sessions", value: "\(journey.sessionCount)")
+                        metadataPill(title: "Difficulty", value: journey.difficulty.rawValue)
+                    }
+                    VStack(spacing: AppSpacing.small) {
+                        HStack(spacing: AppSpacing.small) {
+                            metadataPill(title: "Duration", value: durationLabel)
+                            metadataPill(title: "Prayer", value: "\(journey.estimatedPrayerMinutes) min")
+                        }
+                        HStack(spacing: AppSpacing.small) {
+                            metadataPill(title: "Sessions", value: "\(journey.sessionCount)")
+                            metadataPill(title: "Difficulty", value: journey.difficulty.rawValue)
+                        }
+                    }
                 }
 
                 HStack(spacing: AppSpacing.small) {
-                    badge(journey.contentState.rawValue, color: journey.isLaunchReady ? planAccent : .orange)
                     badge(journey.difficulty.rawValue, color: planAccent)
-                    if journey.isFeatured { badge("Featured", color: planAccent) }
-                    if journey.isRecommended { badge("Recommended", color: .green) }
-                    if journey.isSeasonal { badge("Seasonal", color: .orange) }
+                    badge(journey.categoryName, color: AppColors.secondaryText)
                 }
-                Text("Content v\(journey.metadata.version) · \(journey.metadata.contentCompletionPercentage)% ready · Updated \(journey.metadata.lastUpdated)")
-                    .font(AppTypography.caption())
-                    .foregroundStyle(AppColors.textTertiary)
             }
         }
     }
 
     private var progressSection: some View {
-        GlassCard {
+        GlassCard(padding: AppSpacing.heroPadding) {
             HStack(spacing: AppSpacing.large) {
                 ZStack {
                     Circle()
-                        .stroke(planAccent.opacity(0.18), lineWidth: 9)
+                        .stroke(planAccent.opacity(0.16), lineWidth: 10)
                     Circle()
                         .trim(from: 0, to: plan.isPreviewPlaceholder ? 0 : planProgress.fractionCompleted)
-                        .stroke(planAccent, style: StrokeStyle(lineWidth: 9, lineCap: .round))
+                        .stroke(planAccent, style: StrokeStyle(lineWidth: 10, lineCap: .round))
                         .rotationEffect(.degrees(-90))
                         .animation(.easeInOut(duration: 0.35), value: planProgress.fractionCompleted)
                     Text(plan.isPreviewPlaceholder ? "—" : "\(planProgress.percentage)%")
-                        .font(AppTypography.headline())
+                        .font(AppTypography.cardTitle())
                         .foregroundStyle(planAccent)
                 }
                 .frame(width: 78, height: 78)
@@ -247,23 +231,23 @@ struct PlanDetailView: View {
                 .accessibilityValue(plan.isPreviewPlaceholder ? "Preview" : "\(planProgress.percentage) percent complete")
 
                 VStack(alignment: .leading, spacing: AppSpacing.small) {
-                    Text("Journey Progress")
-                        .font(AppTypography.headline())
-                        .foregroundStyle(AppColors.textPrimary)
+                    Text("Your Progress")
+                        .font(AppTypography.sectionHeader())
+                        .foregroundStyle(AppColors.primaryText)
                     Text(displayStatus)
-                        .font(AppTypography.footnote())
-                        .foregroundStyle(AppColors.textSecondary)
+                        .font(AppTypography.metadata())
+                        .foregroundStyle(AppColors.secondaryText)
                     if !plan.isPreviewPlaceholder {
                         Text("\(planProgress.completedDays) of \(planProgress.totalDays) sessions complete")
-                            .font(AppTypography.caption())
-                            .foregroundStyle(AppColors.textTertiary)
+                            .font(AppTypography.metadata())
+                            .foregroundStyle(AppColors.secondaryText)
                         Text("Current session: \(currentSession)")
                             .font(AppTypography.caption())
-                            .foregroundStyle(AppColors.textTertiary)
+                            .foregroundStyle(AppColors.tertiaryText)
                         if let completedDate = journeyProgressRecord?.lastCompletedDate {
                             Text("Completed \(completedDate.formatted(date: .abbreviated, time: .omitted))")
                                 .font(AppTypography.caption())
-                                .foregroundStyle(AppColors.textTertiary)
+                                .foregroundStyle(AppColors.tertiaryText)
                         }
                     }
                 }
@@ -277,22 +261,22 @@ struct PlanDetailView: View {
 
                 ViewThatFits(in: .horizontal) {
                     HStack(spacing: AppSpacing.medium) {
-                        metadataPill(title: "Total", value: "\(planProgress.totalDays) Days")
-                        metadataPill(title: "Progress", value: "\(planProgress.completedDays) Days")
-                        metadataPill(title: "Remaining", value: "\(planProgress.remainingDays) Days")
+                        metadataPill(title: "Total", value: "\(planProgress.totalDays) sessions")
+                        metadataPill(title: "Complete", value: "\(planProgress.completedDays)")
+                        metadataPill(title: "Remaining", value: "\(planProgress.remainingDays)")
                     }
 
                     VStack(spacing: AppSpacing.small) {
-                        metadataPill(title: "Total", value: "\(planProgress.totalDays) Days")
-                        metadataPill(title: "Progress", value: "\(planProgress.completedDays) Days")
-                        metadataPill(title: "Remaining", value: "\(planProgress.remainingDays) Days")
+                        metadataPill(title: "Total", value: "\(planProgress.totalDays) sessions")
+                        metadataPill(title: "Complete", value: "\(planProgress.completedDays)")
+                        metadataPill(title: "Remaining", value: "\(planProgress.remainingDays)")
                     }
                 }
 
                 if planProgress.status == .notStarted {
                     Text("Your journey is ready when you are. Begin with the first prayer and move at a peaceful pace.")
                         .font(AppTypography.footnote())
-                        .foregroundStyle(AppColors.textSecondary)
+                        .foregroundStyle(AppColors.secondaryText)
                         .fixedSize(horizontal: false, vertical: true)
                 }
             }
@@ -422,9 +406,9 @@ struct PlanDetailView: View {
 
     private var journeyDaysSection: some View {
         VStack(alignment: .leading, spacing: AppSpacing.medium) {
-            Text("Journey Days")
-                .font(AppTypography.headline())
-                .foregroundStyle(AppColors.textPrimary)
+            Text("Sessions")
+                .font(AppTypography.sectionHeader())
+                .foregroundStyle(AppColors.primaryText)
 
             ForEach(plan.days) { day in
                 NavigationLink {
@@ -472,7 +456,7 @@ struct PlanDetailView: View {
                     .font(AppTypography.headline())
                     .foregroundStyle(AppColors.textPrimary)
                     .padding(.top, next == nil ? 0 : AppSpacing.small)
-                ForEach(related) { recommendation in
+                ForEach(related.prefix(3)) { recommendation in
                     recommendationLink(recommendation)
                 }
             }
@@ -500,12 +484,13 @@ struct PlanDetailView: View {
                         .background(AppColors.planAccent(named: recommendation.accentColorName).opacity(0.16), in: Circle())
                     VStack(alignment: .leading, spacing: 4) {
                         Text(recommendation.title)
-                            .font(AppTypography.headline())
-                            .foregroundStyle(AppColors.textPrimary)
-                        Text(recommendation.subtitle)
-                            .font(AppTypography.caption())
-                            .foregroundStyle(AppColors.textSecondary)
+                            .font(AppTypography.cardTitle())
+                            .foregroundStyle(AppColors.primaryText)
                             .lineLimit(2)
+                        Text(recommendation.subtitle)
+                            .font(AppTypography.metadata())
+                            .foregroundStyle(AppColors.secondaryText)
+                            .lineLimit(1)
                     }
                     Spacer()
                     Image(systemName: "chevron.right")
@@ -524,10 +509,10 @@ struct PlanDetailView: View {
         VStack(alignment: .leading, spacing: 4) {
             Text(title)
                 .font(AppTypography.caption())
-                .foregroundStyle(AppColors.textTertiary)
+                .foregroundStyle(AppColors.tertiaryText)
             Text(value)
                 .font(AppTypography.footnote())
-                .foregroundStyle(AppColors.textPrimary)
+                .foregroundStyle(AppColors.primaryText)
         }
         .padding(.vertical, AppSpacing.small)
         .padding(.horizontal, AppSpacing.medium)
