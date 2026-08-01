@@ -18,7 +18,7 @@ struct PrayerCardView: View {
     }
 
     var body: some View {
-        GlassCard {
+        GlassCard(padding: AppSpacing.heroPadding) {
             if isClosingPrayer {
                 // Simplified layout for closing prayers
                 VStack(alignment: .center, spacing: AppSpacing.medium) {
@@ -29,14 +29,15 @@ struct PrayerCardView: View {
                     
                     VStack(spacing: AppSpacing.small) {
                         Text(closingText)
-                            .font(.system(size: 18, weight: .semibold, design: .rounded))
-                            .foregroundStyle(AppColors.textPrimary)
+                            .font(AppTypography.body())
+                            .fontWeight(.semibold)
+                            .foregroundStyle(AppColors.primaryText)
                             .multilineTextAlignment(.center)
                         
                         // Use SF Symbol for praying hands that can be styled
                         Image(systemName: "hands.sparkles.fill")
                             .font(.system(size: 32, weight: .medium))
-                            .foregroundStyle(.white.opacity(0.85))
+                            .foregroundStyle(AppColors.accent)
                     }
                     .frame(maxWidth: .infinity)
                 }
@@ -46,19 +47,19 @@ struct PrayerCardView: View {
                     HStack(alignment: .top) {
                         VStack(alignment: .leading, spacing: 6) {
                             Text(verse.reference)
-                                .font(AppTypography.caption())
+                                .font(AppTypography.sectionHeader())
                                 .foregroundStyle(AppColors.accent)
 
                             Text("Verse")
                                 .font(AppTypography.caption())
-                                .foregroundStyle(AppColors.textTertiary)
+                                .foregroundStyle(AppColors.tertiaryText)
                                 .textCase(.uppercase)
 
                             Text(verse.text)
                                 .font(AppTypography.body())
-                                .foregroundStyle(AppColors.textSecondary)
+                                .foregroundStyle(AppColors.primaryText)
                                 .fixedSize(horizontal: false, vertical: true)
-                                .lineSpacing(4)
+                                .lineSpacing(7)
                         }
 
                         Spacer(minLength: AppSpacing.medium)
@@ -66,7 +67,7 @@ struct PrayerCardView: View {
                         Button(action: onToggleSaved) {
                             Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
                                 .font(.system(size: 18, weight: .semibold))
-                                .foregroundStyle(isSaved ? AppColors.prayerGold : AppColors.textSecondary)
+                                .foregroundStyle(isSaved ? AppColors.prayerGold : AppColors.secondaryText)
                                 .padding(10)
                                 .background(.thinMaterial, in: Circle())
                         }
@@ -78,14 +79,15 @@ struct PrayerCardView: View {
                     VStack(alignment: .leading, spacing: AppSpacing.small) {
                         Text("Prayer")
                             .font(AppTypography.caption())
-                            .foregroundStyle(AppColors.textTertiary)
+                            .foregroundStyle(AppColors.tertiaryText)
                             .textCase(.uppercase)
 
                         Text(verse.prayer)
-                            .font(.system(size: 18, weight: .semibold, design: .rounded))
-                            .foregroundStyle(AppColors.textPrimary)
+                            .font(AppTypography.body())
+                            .fontWeight(.semibold)
+                            .foregroundStyle(AppColors.primaryText)
                             .fixedSize(horizontal: false, vertical: true)
-                            .lineSpacing(5)
+                            .lineSpacing(7)
                     }
                 }
             }

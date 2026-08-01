@@ -56,6 +56,10 @@ private final class PrayerSpeechController: NSObject, ObservableObject, @preconc
         synthesizer.speak(utterance)
     }
 
+    func replay(_ text: String, rateMultiplier: Float) {
+        play(text, rateMultiplier: rateMultiplier)
+    }
+
     func pause() {
         guard synthesizer.isSpeaking, !synthesizer.isPaused else { return }
         synthesizer.pauseSpeaking(at: .word)
@@ -101,13 +105,13 @@ private final class PrayerSpeechController: NSObject, ObservableObject, @preconc
 }
 
 struct PrayerDetailView: View {
+    @Environment(\.dismiss) private var dismiss
     let plan: PrayerPlan
     let day: PrayerDay
     @Binding var completedDayNumbers: Set<Int>
     @Binding var savedVerseIDs: Set<String>
     @Binding var analytics: PrayerAnalyticsSnapshot
     @AppStorage(PrayerStorageKeys.prayerJournalEntries) private var prayerJournalEntriesRawValue = "{}"
-    @AppStorage("settings.readAloud") private var readAloudEnabled = false
     @AppStorage("settings.readingSpeed") private var readingSpeedRawValue = PrayerReadingSpeed.reflective.rawValue
     @AppStorage("settings.autoContinueJourney") private var autoContinueJourneyEnabled = true
 
@@ -180,6 +184,10 @@ struct PrayerDetailView: View {
                     .accessibilityHint("Opens the iOS share sheet with the Scripture and guided prayer.")
                 }
             }
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button("Done") { focusedJournalField = nil }
+            }
         }
         .navigationDestination(item: $autoContinueDay) { nextDay in
             PrayerDetailView(
@@ -212,12 +220,6 @@ struct PrayerDetailView: View {
         }
         .onAppear {
             PrayerJourneyProgressStore.markOpened(planID: plan.id, session: day.dayNumber)
-            if readAloudEnabled && !day.verses.isEmpty {
-                speechController.play(
-                    readAloudText,
-                    rateMultiplier: readingSpeed.rateMultiplier
-                )
-            }
         }
         .onChange(of: journalEntryKey) {
             speechController.stop()
@@ -231,58 +233,77 @@ struct PrayerDetailView: View {
     }
 
     private var readAloudControls: some View {
-        GlassCard {
+        GlassCard(padding: AppSpacing.heroPadding) {
             VStack(alignment: .leading, spacing: AppSpacing.medium) {
-                Label(speechController.state.title, systemImage: speechController.state.systemImage)
-                    .font(AppTypography.callout())
-                    .foregroundStyle(AppColors.textSecondary)
-                    .accessibilityLabel("Read Aloud status: \(speechController.state.title)")
+                HStack {
+                    Label("Read Aloud", systemImage: speechController.state.systemImage)
+                        .font(AppTypography.sectionHeader())
+                        .foregroundStyle(AppColors.primaryText)
+                    Spacer()
+                    Text(speechController.state.title)
+                        .font(AppTypography.metadata())
+                        .foregroundStyle(AppColors.secondaryText)
+                }
 
-                HStack(spacing: AppSpacing.medium) {
-                    switch speechController.state {
-                    case .stopped:
-                        Button {
-                            speechController.play(
-                                readAloudText,
-                                rateMultiplier: readingSpeed.rateMultiplier
-                            )
-                        } label: {
-                            Label("Read Aloud", systemImage: "play.fill")
-                                .font(AppTypography.callout())
-                        }
-                        .accessibilityHint("Reads the Scripture reference, Scripture text, and guided prayer.")
+                if speechController.state != .stopped {
+                    ProgressView()
+                        .tint(accentColor)
+                        .accessibilityLabel("Reading in progress")
+                }
 
-                    case .playing:
-                        Button {
-                            speechController.pause()
-                        } label: {
-                            Label("Pause", systemImage: "pause.fill")
-                                .font(AppTypography.callout())
-                        }
-                        .accessibilityHint("Pauses the prayer reading.")
-
-                    case .paused:
-                        Button {
-                            speechController.resume()
-                        } label: {
-                            Label("Resume", systemImage: "play.fill")
-                                .font(AppTypography.callout())
-                        }
-                        .accessibilityHint("Resumes the prayer reading.")
+                HStack(spacing: AppSpacing.large) {
+                    Button {
+                        speechController.replay(readAloudText, rateMultiplier: readingSpeed.rateMultiplier)
+                    } label: {
+                        Image(systemName: "gobackward.10")
                     }
+                    .buttonStyle(PrayerIconButtonStyle())
+                    .accessibilityLabel("Skip back 10 seconds")
+
+                    Button {
+                        switch speechController.state {
+                        case .stopped:
+                            speechController.play(readAloudText, rateMultiplier: readingSpeed.rateMultiplier)
+                        case .playing:
+                            speechController.pause()
+                        case .paused:
+                            speechController.resume()
+                        }
+                    } label: {
+                        Image(systemName: speechController.state == .playing ? "pause.fill" : "play.fill")
+                            .font(.system(size: 22, weight: .semibold))
+                            .frame(width: 52, height: 52)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(accentColor)
+                    .accessibilityLabel(speechController.state == .playing ? "Pause reading" : "Play reading")
+                    .accessibilityHint("Reads the Scripture and guided prayer aloud.")
+
+                    Button {
+                        speechController.replay(readAloudText, rateMultiplier: readingSpeed.rateMultiplier)
+                    } label: {
+                        Image(systemName: "goforward.10")
+                    }
+                    .buttonStyle(PrayerIconButtonStyle())
+                    .accessibilityLabel("Skip forward 10 seconds")
 
                     if speechController.state != .stopped {
-                        Button(role: .cancel) {
-                            speechController.stop()
-                        } label: {
-                            Label("Stop", systemImage: "stop.fill")
-                                .font(AppTypography.callout())
+                        Button(role: .cancel) { speechController.stop() } label: {
+                            Image(systemName: "stop.fill")
                         }
-                        .accessibilityHint("Stops the prayer reading.")
+                        .buttonStyle(PrayerIconButtonStyle())
+                        .accessibilityLabel("Stop reading")
                     }
                 }
-                .buttonStyle(.bordered)
-                .tint(accentColor)
+                .frame(maxWidth: .infinity)
+
+                Picker("Reading speed", selection: $readingSpeedRawValue) {
+                    ForEach(PrayerReadingSpeed.allCases) { speed in
+                        Text(speed.title).tag(speed.rawValue)
+                    }
+                }
+                .pickerStyle(.segmented)
+                .accessibilityHint("Chooses the pace for voice reading.")
             }
         }
     }
@@ -429,7 +450,16 @@ struct PrayerDetailView: View {
         )
     }
 
+    @ViewBuilder
     private var reflectionCompletionSection: some View {
+        if isCompleted {
+            completionExperience
+        } else {
+            reflectionPrompt
+        }
+    }
+
+    private var reflectionPrompt: some View {
         GlassCard {
             VStack(alignment: .leading, spacing: AppSpacing.medium) {
                 Label("Continue the conversation", systemImage: isCompleted ? "checkmark.circle.fill" : "heart.text.square.fill")
@@ -455,6 +485,35 @@ struct PrayerDetailView: View {
                 .accessibilityHint(isCompleted ? "This prayer has already been completed." : "Marks this prayer complete after reflection.")
             }
         }
+    }
+
+    private var completionExperience: some View {
+        GlassCard(padding: AppSpacing.heroPadding) {
+            VStack(alignment: .leading, spacing: AppSpacing.medium) {
+                Label("Prayer complete", systemImage: "checkmark.seal.fill")
+                    .font(AppTypography.screenTitle())
+                    .foregroundStyle(AppColors.success)
+
+                Text("You made space to pray today. Carry this quiet moment with you.")
+                    .font(AppTypography.body())
+                    .foregroundStyle(AppColors.secondaryText)
+                    .fixedSize(horizontal: false, vertical: true)
+
+                if let nextDay = plan.days.first(where: { $0.dayNumber > day.dayNumber }) {
+                    Button { autoContinueDay = nextDay } label: {
+                        PrimaryPrayerButton(title: "Continue Journey", systemImage: "arrow.right.circle.fill")
+                    }
+                    .buttonStyle(.plain)
+                }
+
+                Button { dismiss() } label: {
+                    PrimaryPrayerButton(title: "Return to Journey", systemImage: "arrow.left", isSecondary: true)
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .transition(.opacity.combined(with: .scale(scale: 0.98)))
+        .accessibilityElement(children: .contain)
     }
 
     private var headerCard: some View {
