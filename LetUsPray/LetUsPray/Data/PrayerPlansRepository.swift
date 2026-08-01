@@ -17,6 +17,7 @@ enum PrayerPlansRepository {
     static let allPlans: [PrayerPlan] = [
         ProverbsPrayerData.plan,
         psalmsJourneyEntry,
+        LordsPrayerData.plan,
         PrayerPlan(
             id: "gospel-of-john",
             title: "Gospel of John",

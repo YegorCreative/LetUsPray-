@@ -144,7 +144,6 @@ struct PrayerDetailView: View {
                     placeholderCard
                 } else {
                     scriptureSection
-                    guidedPrayerSection
                     readAloudControls
                     personalResponseSection
                     reflectionCompletionSection
@@ -224,18 +223,10 @@ struct PrayerDetailView: View {
         }
     }
 
-    private func isClosingPrayer(_ verse: PrayerVerse) -> Bool {
-        verse.id.hasSuffix("-closing") || verse.reference.lowercased() == "closing"
-    }
-
-    private var guidedPrayerVerses: [PrayerVerse] {
-        day.verses.filter { !isClosingPrayer($0) }
-    }
-
     private var scriptureSection: some View {
-        InfoCard(padding: AppSpacing.heroPadding) {
-            VStack(alignment: .leading, spacing: AppSpacing.large) {
-                ForEach(Array(day.verses.enumerated()), id: \.element.id) { index, verse in
+        VStack(alignment: .leading, spacing: AppSpacing.medium) {
+            ForEach(day.verses) { verse in
+                InfoCard(padding: AppSpacing.heroPadding) {
                     PrayerCardView(
                         verse: verse,
                         isSaved: savedVerseIDs.contains(verse.id),
@@ -243,44 +234,8 @@ struct PrayerDetailView: View {
                             toggleSaved(verseID: verse.id)
                         }
                     )
-                    if index < day.verses.count - 1 {
-                        Divider().opacity(0.5)
-                    }
                 }
             }
-        }
-    }
-
-    @ViewBuilder
-    private var guidedPrayerSection: some View {
-        if !guidedPrayerVerses.isEmpty {
-            VStack(alignment: .leading, spacing: AppSpacing.medium) {
-                Label("Guided Prayer", systemImage: "hands.sparkles.fill")
-                    .font(AppTypography.sectionHeader())
-                    .foregroundStyle(AppColors.primaryText)
-
-                VStack(alignment: .leading, spacing: AppSpacing.large) {
-                    ForEach(Array(guidedPrayerVerses.enumerated()), id: \.element.id) { index, verse in
-                        Text(verse.prayer)
-                            .font(AppTypography.body())
-                            .fontWeight(.medium)
-                            .foregroundStyle(AppColors.primaryText)
-                            .lineSpacing(7)
-                            .fixedSize(horizontal: false, vertical: true)
-                        if index < guidedPrayerVerses.count - 1 {
-                            Divider().opacity(0.4)
-                        }
-                    }
-                }
-                .padding(AppSpacing.large)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .background(accentColor.opacity(0.10), in: RoundedRectangle(cornerRadius: AppSpacing.heroCornerRadius, style: .continuous))
-                .overlay {
-                    RoundedRectangle(cornerRadius: AppSpacing.heroCornerRadius, style: .continuous)
-                        .stroke(accentColor.opacity(0.26), lineWidth: 1)
-                }
-            }
-            .accessibilityElement(children: .contain)
         }
     }
 
@@ -322,7 +277,7 @@ struct PrayerDetailView: View {
                             .frame(width: 44, height: 44)
                     }
                     .buttonStyle(.borderedProminent)
-                    .tint(accentColor)
+                    .tint(AppColors.accentCyan)
                     .accessibilityLabel(speechController.state == .playing ? "Pause reading" : "Play reading")
                     .accessibilityHint("Reads the Scripture and guided prayer aloud.")
 
@@ -350,13 +305,13 @@ struct PrayerDetailView: View {
                         }
                     }
                     .pickerStyle(.menu)
-                    .tint(accentColor)
+                    .tint(AppColors.accentCyan)
                     .accessibilityHint("Chooses the pace for voice reading.")
                 }
 
                 if speechController.state != .stopped {
                     ProgressView()
-                        .tint(accentColor)
+                        .tint(AppColors.accentCyan)
                         .accessibilityLabel("Reading in progress")
                 }
             }

@@ -172,7 +172,7 @@ struct TodayView: View {
         return GroupedCard {
             GroupedRow {
                 HStack(alignment: .center, spacing: AppSpacing.medium) {
-                    statIcon("chart.line.uptrend.xyaxis", tint: AppColors.accent)
+                    progressRingIcon("chart.line.uptrend.xyaxis", progress: Double(completion) / 100)
                     VStack(alignment: .leading, spacing: 5) {
                         HStack {
                             Text("Prayer Progress")
@@ -221,6 +221,16 @@ struct TodayView: View {
             .foregroundStyle(tint)
             .frame(width: 34, height: 34)
             .background(tint.opacity(0.14), in: Circle())
+    }
+
+    private func progressRingIcon(_ systemImage: String, progress: Double) -> some View {
+        ZStack {
+            ProgressRingView(progress: progress, lineWidth: 4)
+                .frame(width: 34, height: 34)
+            Image(systemName: systemImage)
+                .font(.system(size: 13, weight: .semibold))
+                .foregroundStyle(AppColors.primaryText)
+        }
     }
 
     private var allJourneys: [PrayerJourney] {
@@ -384,17 +394,17 @@ struct TodayView: View {
             sectionHeader("Quick Actions")
             HStack(spacing: AppSpacing.small) {
                 DockAction(title: "Plans", systemImage: "books.vertical.fill", tint: AppColors.accent, isPrimary: true, action: onOpenPlans)
-                DockAction(title: "Search", systemImage: "magnifyingglass", tint: AppColors.electricCyan, action: onOpenSearch)
-                DockAction(title: "Library", systemImage: "bookmark.fill", tint: AppColors.premiumGold, action: onOpenSaved)
+                DockAction(title: "Search", systemImage: "magnifyingglass", tint: AppColors.primaryBlue, action: onOpenSearch)
+                DockAction(title: "Library", systemImage: "bookmark.fill", tint: AppColors.primaryBlue, action: onOpenSaved)
                 NavigationLink { PrayerInsightsView(insights: prayerInsights) } label: {
                     VStack(spacing: AppSpacing.xs) {
                         ZStack {
                             Circle()
-                                .fill(AppColors.activityPink.opacity(0.14))
+                                .fill(AppColors.primaryBlue.opacity(0.14))
                                 .frame(width: 44, height: 44)
                             Image(systemName: "chart.xyaxis.line")
                                 .font(.system(size: 17, weight: .semibold))
-                                .foregroundStyle(AppColors.activityPink)
+                                .foregroundStyle(AppColors.primaryBlue)
                         }
                         Text("Insights")
                             .font(AppTypography.caption())

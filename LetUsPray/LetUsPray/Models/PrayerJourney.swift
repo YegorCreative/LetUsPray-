@@ -568,11 +568,11 @@ enum PrayerJourneyCatalog {
     }
 
     static let metadata: [PrayerJourneyMetadata] = [
-        entry("proverbs", "Proverbs", "A daily rhythm of wisdom", .scripture, "Scripture", 31, 8, .steady, "book.closed.fill", "wisdom", true, true, false, "proverbs-journey"),
+        entry("proverbs", "Proverbs", "A daily rhythm of wisdom", .scripture, "Scripture", 31, 8, .steady, "book.closed.fill", "wisdom", true, true, false, ProverbsPrayerData.plan.id),
         entry("psalms", "Psalms", "A journey through songs of the soul", .scripture, "Scripture", 150, 10, .gentle, "music.note.list", "psalms", true, false, false, "psalms-journey-overview"),
         entry("song-of-songs", "Song of Songs", "Pray through love, beauty, and devotion", .scripture, "Scripture", 14, 8, .deep, "heart.fill", "gospel", false, false, false),
         entry("prayers-of-jesus", "Prayers of Jesus", "Learn from the prayers of Christ", .scripture, "Scripture", 21, 8, .deep, "cross.fill", "gospel", false, false, false),
-        entry("lords-prayer", "Lord's Prayer", "A simple pattern for a faithful life", .scripture, "Scripture", 7, 6, .gentle, "hands.sparkles.fill", "gratitude", false, true, false),
+        entry("lords-prayer", "Lord's Prayer", "A simple pattern for a faithful life", .scripture, "Scripture", 7, 6, .gentle, "hands.sparkles.fill", "gratitude", false, true, false, LordsPrayerData.plan.id),
         entry("biblical-prayers", "Biblical Prayers", "Pray with the people of Scripture", .scripture, "Scripture", 30, 9, .steady, "scroll.fill", "wisdom", false, false, false),
         entry("prayer-through-the-gospels", "Prayer Through the Gospels", "Meet Jesus in the Gospel story", .scripture, "Scripture", 40, 10, .steady, "sparkles.tv", "gospel", true, false, false, "gospel-of-john"),
 

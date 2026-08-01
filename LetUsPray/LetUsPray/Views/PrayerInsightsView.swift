@@ -33,9 +33,14 @@ struct PrayerInsightsView: View {
                             .font(AppTypography.headline())
                             .foregroundStyle(AppColors.textPrimary)
                         Spacer()
-                        Text("\(insights.overallCompletionPercentage)%")
-                            .font(AppTypography.title2())
-                            .foregroundStyle(AppColors.premiumGold)
+                        ZStack {
+                            ProgressRingView(progress: Double(insights.overallCompletionPercentage) / 100, lineWidth: 5)
+                                .frame(width: 52, height: 52)
+                            Text("\(insights.overallCompletionPercentage)%")
+                                .font(AppTypography.caption())
+                                .fontWeight(.semibold)
+                                .foregroundStyle(AppColors.textPrimary)
+                        }
                     }
                     ProgressView(value: Double(insights.overallCompletionPercentage), total: 100)
                         .tint(AppColors.premiumGold)

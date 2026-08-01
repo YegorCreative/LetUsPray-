@@ -11,19 +11,19 @@
 		C20000000000000000000002 /* PrayerWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10000000000000000000003 /* PrayerWidgetBundle.swift */; };
 		C20000000000000000000003 /* PrayerWidgetIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10000000000000000000004 /* PrayerWidgetIntents.swift */; };
 		C20000000000000000000004 /* PrayerLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10000000000000000000005 /* PrayerLiveActivity.swift */; };
-		C20000000000000000000005 /* LetUsPrayWidgets.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C10000000000000000000001 /* LetUsPrayWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C20000000000000000000005 /* LetUsPrayWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C10000000000000000000001 /* LetUsPrayWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C40000000000000000000003 /* Embed App Extensions */ = {
+		C40000000000000000000003 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				C20000000000000000000005 /* LetUsPrayWidgets.appex in Embed App Extensions */,
+				C20000000000000000000005 /* LetUsPrayWidgets.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -131,7 +131,7 @@
 				ABDF10AE2FD3CB48009A879B /* Sources */,
 				ABDF10AF2FD3CB48009A879B /* Frameworks */,
 				ABDF10B02FD3CB48009A879B /* Resources */,
-				C40000000000000000000003 /* Embed App Extensions */,
+				C40000000000000000000003 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);

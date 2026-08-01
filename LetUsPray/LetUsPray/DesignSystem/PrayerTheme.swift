@@ -1,18 +1,6 @@
 import SwiftUI
 
 enum PrayerTheme {
-    static let pageGradient = LinearGradient(
-        colors: [
-            AppColors.background,
-            AppColors.secondaryBackground,
-            AppColors.background,
-            AppColors.secondaryBackground.opacity(0.72),
-            AppColors.background
-        ],
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
-    )
-
     static let heroGradient = BrandGradients.activityHero
 
     static let buttonGradient = LinearGradient(
@@ -28,48 +16,13 @@ enum PrayerMotion {
     static let reduced = Animation.linear(duration: 0.01)
 }
 
+/// The app's canvas: a flat, untinted background. Guide §4 — color belongs to cards and accents,
+/// never the background, so the OLED black reads as a room dimmed on purpose, not a colored wash.
 struct PrayerBackground: View {
     var body: some View {
-        ZStack {
-            PrayerTheme.pageGradient
-                .ignoresSafeArea()
-
-            AppColors.background.opacity(0.12)
-                .ignoresSafeArea()
-
-            LinearGradient(
-                colors: [AppColors.accent.opacity(0.16), AppColors.electricCyan.opacity(0.10), .clear],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
+        AppColors.background
             .ignoresSafeArea()
-
-            LinearGradient(
-                colors: [.clear, AppColors.electricCyan.opacity(0.08), AppColors.accent.opacity(0.10)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea()
-
-            Circle()
-                .fill(AppColors.accent.opacity(0.19))
-                .frame(width: 330, height: 330)
-                .blur(radius: 42)
-                .offset(x: -120, y: -260)
-
-            Circle()
-                .fill(AppColors.electricCyan.opacity(0.16))
-                .frame(width: 290, height: 290)
-                .blur(radius: 46)
-                .offset(x: 150, y: 260)
-
-            Circle()
-                .fill(AppColors.premiumGold.opacity(0.055))
-                .frame(width: 220, height: 220)
-                .blur(radius: 34)
-                .offset(x: 130, y: -150)
-        }
-        .allowsHitTesting(false)
+            .allowsHitTesting(false)
     }
 }
 

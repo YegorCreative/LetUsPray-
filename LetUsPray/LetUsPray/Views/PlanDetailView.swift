@@ -347,7 +347,7 @@ struct PlanDetailView: View {
             DockAction(
                 title: "Save",
                 systemImage: isSavedForLater ? "bookmark.fill" : "bookmark",
-                tint: planAccent
+                tint: isSavedForLater ? AppColors.accent : AppColors.tertiaryText
             ) {
                 withAnimation(.easeInOut(duration: 0.2)) {
                     PrayerJourneyLibraryService.setSaved(!isSavedForLater, journeyID: journey.id)
@@ -358,7 +358,7 @@ struct PlanDetailView: View {
             DockAction(
                 title: "Favorite",
                 systemImage: isMarkedFavorite ? "heart.fill" : "heart",
-                tint: AppColors.activityPink
+                tint: isMarkedFavorite ? AppColors.accent : AppColors.tertiaryText
             ) {
                 withAnimation(.easeInOut(duration: 0.2)) {
                     PrayerJourneyLibraryService.setFavorite(!isMarkedFavorite, journeyID: journey.id)
@@ -369,7 +369,7 @@ struct PlanDetailView: View {
             DockAction(
                 title: "Collection",
                 systemImage: "square.grid.2x2",
-                tint: AppColors.electricCyan,
+                tint: AppColors.primaryBlue,
                 action: onViewCollection
             )
             .accessibilityHint("Opens the collection this journey belongs to.")
@@ -378,11 +378,11 @@ struct PlanDetailView: View {
                 VStack(spacing: AppSpacing.xs) {
                     ZStack {
                         Circle()
-                            .fill(AppColors.premiumGold.opacity(0.14))
+                            .fill(AppColors.tertiaryText.opacity(0.14))
                             .frame(width: 44, height: 44)
                         Image(systemName: "square.and.arrow.up")
                             .font(.system(size: 17, weight: .semibold))
-                            .foregroundStyle(AppColors.premiumGold)
+                            .foregroundStyle(AppColors.tertiaryText)
                     }
                     Text("Share")
                         .font(AppTypography.caption())

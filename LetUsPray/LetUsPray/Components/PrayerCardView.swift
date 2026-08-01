@@ -4,11 +4,13 @@ struct PrayerCardView: View {
     let verse: PrayerVerse
     let isSaved: Bool
     let onToggleSaved: () -> Void
-    
+
+    @State private var didCopy = false
+
     private var isClosingPrayer: Bool {
         verse.id.hasSuffix("-closing") || verse.reference.lowercased() == "closing"
     }
-    
+
     private var closingText: String {
         // Remove emoji from the prayer text
         verse.prayer
@@ -17,8 +19,59 @@ struct PrayerCardView: View {
             .trimmingCharacters(in: .whitespaces)
     }
 
-    /// A single Scripture reading, editorial in style and free of per-verse card chrome —
-    /// callers group several of these inside one shared reading surface.
+    private var shareText: String {
+        if isClosingPrayer {
+            return closingText
+        }
+        return """
+        \(verse.reference)
+
+        “\(verse.text)”
+
+        Prayer
+
+        “\(verse.prayer)”
+        """
+    }
+
+    private func copyToClipboard() {
+        UIPasteboard.general.string = shareText
+        withAnimation(.easeInOut(duration: 0.2)) { didCopy = true }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            withAnimation(.easeInOut(duration: 0.2)) { didCopy = false }
+        }
+    }
+
+    private var cardActions: some View {
+        HStack(spacing: AppSpacing.small) {
+            Button(action: copyToClipboard) {
+                Image(systemName: didCopy ? "checkmark" : "doc.on.doc")
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundStyle(didCopy ? AppColors.success : AppColors.secondaryText)
+            }
+            .buttonStyle(.plain)
+            .contentShape(Rectangle())
+            .accessibilityLabel(didCopy ? "Copied" : "Copy verse and prayer")
+
+            ShareLink(item: shareText) {
+                Image(systemName: "square.and.arrow.up")
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundStyle(AppColors.secondaryText)
+            }
+            .accessibilityLabel("Share verse and prayer")
+
+            Button(action: onToggleSaved) {
+                Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundStyle(isSaved ? AppColors.prayerGold : AppColors.secondaryText)
+            }
+            .buttonStyle(.plain)
+            .contentShape(Rectangle())
+            .accessibilityLabel(isSaved ? "Remove saved prayer" : "Save prayer")
+        }
+    }
+
+    /// A single Scripture reading with its own prayer — callers wrap each instance in its own card.
     var body: some View {
         if isClosingPrayer {
             VStack(spacing: AppSpacing.small) {
@@ -36,6 +89,8 @@ struct PrayerCardView: View {
                 Image(systemName: "hands.sparkles.fill")
                     .font(.system(size: 28, weight: .medium))
                     .foregroundStyle(AppColors.accent)
+
+                cardActions
             }
             .frame(maxWidth: .infinity)
         } else {
@@ -47,14 +102,7 @@ struct PrayerCardView: View {
 
                     Spacer(minLength: AppSpacing.medium)
 
-                    Button(action: onToggleSaved) {
-                        Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
-                            .font(.system(size: 15, weight: .semibold))
-                            .foregroundStyle(isSaved ? AppColors.prayerGold : AppColors.secondaryText)
-                    }
-                    .buttonStyle(.plain)
-                    .contentShape(Rectangle())
-                    .accessibilityLabel(isSaved ? "Remove saved prayer" : "Save prayer")
+                    cardActions
                 }
 
                 Text(verse.text)
@@ -62,6 +110,21 @@ struct PrayerCardView: View {
                     .foregroundStyle(AppColors.primaryText)
                     .lineSpacing(9)
                     .fixedSize(horizontal: false, vertical: true)
+
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Prayer")
+                        .font(AppTypography.caption())
+                        .foregroundStyle(AppColors.tertiaryText)
+                        .textCase(.uppercase)
+
+                    Text(verse.prayer)
+                        .font(AppTypography.body())
+                        .fontWeight(.medium)
+                        .foregroundStyle(AppColors.primaryText)
+                        .lineSpacing(7)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                .padding(.top, AppSpacing.xs)
             }
         }
     }

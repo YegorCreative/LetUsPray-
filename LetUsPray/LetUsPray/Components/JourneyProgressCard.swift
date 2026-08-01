@@ -33,9 +33,14 @@ struct JourneyProgressCard: View {
 
                     Spacer()
 
-                    Text(percentageLabel)
-                        .font(AppTypography.title2())
-                        .foregroundStyle(accent)
+                    ZStack {
+                        ProgressRingView(progress: progress, lineWidth: 4)
+                            .frame(width: 44, height: 44)
+                        Text(percentageLabel)
+                            .font(AppTypography.caption())
+                            .fontWeight(.semibold)
+                            .foregroundStyle(AppColors.textPrimary)
+                    }
                 }
 
                 Text("\(completedDays) of \(totalDays) Days Completed")
