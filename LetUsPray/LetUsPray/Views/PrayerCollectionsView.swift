@@ -234,6 +234,10 @@ struct PrayerCollectionsView: View {
             }
         }
         .accessibilityElement(children: .combine)
+        .background(
+            RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
+                .fill(BrandGradients.activityHero.opacity(0.16))
+        )
     }
 
     private var allJourneys: [PrayerJourney] {

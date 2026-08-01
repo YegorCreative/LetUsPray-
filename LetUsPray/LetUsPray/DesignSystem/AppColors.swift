@@ -5,8 +5,8 @@ import UIKit
 enum AppColors {
     static let background = adaptive(light: UIColor(red: 0.94, green: 0.97, blue: 0.95, alpha: 1), dark: UIColor(red: 0.035, green: 0.075, blue: 0.07, alpha: 1))
     static let secondaryBackground = adaptive(light: UIColor(red: 0.87, green: 0.94, blue: 0.91, alpha: 1), dark: UIColor(red: 0.055, green: 0.13, blue: 0.12, alpha: 1))
-    static let surface = adaptive(light: UIColor(red: 0.985, green: 0.995, blue: 0.99, alpha: 1), dark: UIColor(red: 0.075, green: 0.16, blue: 0.145, alpha: 1))
-    static let elevatedSurface = adaptive(light: UIColor(red: 1.0, green: 1.0, blue: 0.995, alpha: 1), dark: UIColor(red: 0.10, green: 0.21, blue: 0.19, alpha: 1))
+    static let surface = adaptive(light: UIColor(red: 0.90, green: 0.97, blue: 0.93, alpha: 0.78), dark: UIColor(red: 0.055, green: 0.145, blue: 0.125, alpha: 0.88))
+    static let elevatedSurface = adaptive(light: UIColor(red: 0.94, green: 0.985, blue: 0.96, alpha: 0.88), dark: UIColor(red: 0.08, green: 0.19, blue: 0.16, alpha: 0.92))
     static let primaryText = adaptive(light: UIColor(red: 0.055, green: 0.16, blue: 0.12, alpha: 1), dark: UIColor(red: 0.94, green: 0.985, blue: 0.96, alpha: 1))
     static let secondaryText = adaptive(light: UIColor(red: 0.22, green: 0.34, blue: 0.29, alpha: 1), dark: UIColor(red: 0.73, green: 0.86, blue: 0.79, alpha: 1))
     static let tertiaryText = adaptive(light: UIColor(red: 0.34, green: 0.46, blue: 0.40, alpha: 1), dark: UIColor(red: 0.56, green: 0.72, blue: 0.65, alpha: 1))
@@ -48,10 +48,14 @@ enum AppColors {
     static let encouragementAccent = accent
     static let prayerGold = premiumGold
     static let brightTextOnAccent = adaptive(light: .white, dark: UIColor(red: 0.04, green: 0.07, blue: 0.12, alpha: 1))
-    static let glassFill = elevatedSurface.opacity(0.92)
-    static let glassStroke = separator
-    static let glassHighlight = Color.white.opacity(0.10)
-    static let shadow = Color.black.opacity(0.16)
+    static let glassFill = surface
+    static let glassStroke = adaptive(light: UIColor(red: 0.14, green: 0.47, blue: 0.34, alpha: 0.24), dark: UIColor(red: 0.38, green: 0.78, blue: 0.63, alpha: 0.28))
+    static let glassHighlight = LinearGradient(
+        colors: [Color.white.opacity(0.18), electricCyan.opacity(0.07), accent.opacity(0.08), .clear],
+        startPoint: .topLeading,
+        endPoint: .bottomTrailing
+    )
+    static let shadow = Color.black.opacity(0.22)
 
     static func planAccent(named name: String) -> Color {
         switch name {

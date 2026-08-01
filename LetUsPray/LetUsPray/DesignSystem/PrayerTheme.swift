@@ -6,7 +6,8 @@ enum PrayerTheme {
             AppColors.background,
             AppColors.secondaryBackground,
             AppColors.background,
-            AppColors.secondaryBackground.opacity(0.72)
+            AppColors.secondaryBackground.opacity(0.72),
+            AppColors.background
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
@@ -36,14 +37,28 @@ struct PrayerBackground: View {
             AppColors.background.opacity(0.12)
                 .ignoresSafeArea()
 
+            LinearGradient(
+                colors: [AppColors.accent.opacity(0.16), AppColors.electricCyan.opacity(0.10), .clear],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
+
+            LinearGradient(
+                colors: [.clear, AppColors.electricCyan.opacity(0.08), AppColors.accent.opacity(0.10)],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
+
             Circle()
-                .fill(AppColors.accent.opacity(0.13))
+                .fill(AppColors.accent.opacity(0.19))
                 .frame(width: 330, height: 330)
                 .blur(radius: 42)
                 .offset(x: -120, y: -260)
 
             Circle()
-                .fill(AppColors.electricCyan.opacity(0.11))
+                .fill(AppColors.electricCyan.opacity(0.16))
                 .frame(width: 290, height: 290)
                 .blur(radius: 46)
                 .offset(x: 150, y: 260)
@@ -70,18 +85,7 @@ struct PrayerSurfaceModifier: ViewModifier {
                     )
                     .overlay {
                         RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
-                            .fill(
-                                LinearGradient(
-                                    colors: [
-                                        AppColors.glassHighlight,
-                                        AppColors.electricCyan.opacity(0.04),
-                                        AppColors.accent.opacity(0.02),
-                                        .clear
-                                    ],
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                )
-                            )
+                            .fill(AppColors.glassHighlight)
                     }
                     .overlay {
                         RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)

@@ -58,6 +58,7 @@ struct SearchView: View {
             }
         }
         .scrollDismissesKeyboard(.interactively)
+        .tint(AppColors.electricCyan)
         .toolbarBackground(.hidden, for: .navigationBar)
         .onSubmit(of: .search) {
             let trimmed = trimmedQuery

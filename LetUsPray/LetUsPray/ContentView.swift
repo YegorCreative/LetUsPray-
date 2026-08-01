@@ -163,7 +163,7 @@ struct ContentView: View {
             }
             .tag(4)
         }
-        .tint(AppColors.textPrimary)
+        .tint(AppColors.accent)
         .onAppear {
             selectedTab = startOnHomeEnabled ? 0 : lastSelectedTab
             refreshStreak()
