@@ -8,6 +8,7 @@ struct SearchView: View {
 
     @State private var query = ""
     @State private var debouncedQuery = ""
+    @State private var recentSearches: [String] = []
 
     private let searchIndex: [PrayerSearchResult]
 
@@ -41,10 +42,30 @@ struct SearchView: View {
         .searchable(
             text: $query,
             placement: .navigationBarDrawer(displayMode: .always),
-            prompt: "Scripture, prayer, or journey"
+            prompt: "Search Scripture, prayers, or journeys"
         )
+        .searchSuggestions {
+            if !recentSearches.isEmpty {
+                Section("Recent Searches") {
+                    ForEach(recentSearches, id: \.self) { recent in
+                        Button {
+                            query = recent
+                        } label: {
+                            Label(recent, systemImage: "clock.arrow.circlepath")
+                        }
+                    }
+                }
+            }
+        }
         .scrollDismissesKeyboard(.interactively)
         .toolbarBackground(.hidden, for: .navigationBar)
+        .onSubmit(of: .search) {
+            let trimmed = trimmedQuery
+            guard !trimmed.isEmpty else { return }
+            recentSearches.removeAll { $0.caseInsensitiveCompare(trimmed) == .orderedSame }
+            recentSearches.insert(trimmed, at: 0)
+            recentSearches = Array(recentSearches.prefix(5))
+        }
         .task(id: query) {
             let pendingQuery = query
 
@@ -69,40 +90,109 @@ struct SearchView: View {
     }
 
     private var resultsList: some View {
-        List(matchingResults) { result in
-            NavigationLink(value: result) {
-                VStack(alignment: .leading, spacing: 8) {
-                    highlightedText(
-                        result.verse.reference,
-                        matching: debouncedQuery,
-                        font: AppTypography.headline(),
-                        color: AppColors.textPrimary
-                    )
-
-                    highlightedText(
-                        result.plan.title,
-                        matching: debouncedQuery,
-                        font: AppTypography.caption(),
-                        color: result.plan.category.brandAccent
-                    )
-
-                    highlightedText(
-                        result.verse.prayer,
-                        matching: debouncedQuery,
-                        font: AppTypography.body(),
-                        color: AppColors.textSecondary
-                    )
-                    .lineLimit(3)
+        ScrollView(showsIndicators: false) {
+            LazyVStack(alignment: .leading, spacing: AppSpacing.large) {
+                if !journeyResults.isEmpty {
+                    resultSection("Prayer Journeys", count: journeyResults.count) {
+                        ForEach(journeyResults) { result in journeyResultCard(result) }
+                    }
                 }
-                .padding(.vertical, 6)
-                .contentShape(Rectangle())
+                if !scriptureResults.isEmpty {
+                    resultSection("Scripture", count: scriptureResults.count) {
+                        ForEach(scriptureResults) { result in scriptureResultCard(result) }
+                    }
+                }
+                if !guidedPrayerResults.isEmpty {
+                    resultSection("Guided Prayers", count: guidedPrayerResults.count) {
+                        ForEach(guidedPrayerResults) { result in prayerResultCard(result) }
+                    }
+                }
             }
-            .accessibilityElement(children: .combine)
-            .accessibilityHint("Opens this prayer.")
+            .padding(.horizontal, AppSpacing.large)
+            .padding(.vertical, AppSpacing.medium)
         }
-        .listStyle(.plain)
-        .scrollContentBackground(.hidden)
         .background(PrayerBackground())
+    }
+
+    private func resultSection<Content: View>(_ title: String, count: Int, @ViewBuilder content: () -> Content) -> some View {
+        VStack(alignment: .leading, spacing: AppSpacing.small) {
+            HStack {
+                Text(title)
+                    .font(AppTypography.sectionHeader())
+                    .foregroundStyle(AppColors.primaryText)
+                Spacer()
+                Text("\(count)")
+                    .font(AppTypography.metadata())
+                    .foregroundStyle(AppColors.tertiaryText)
+            }
+            content()
+        }
+    }
+
+    private func journeyResultCard(_ result: PrayerSearchResult) -> some View {
+        NavigationLink(value: result) {
+            GlassCard(padding: AppSpacing.medium) {
+                HStack(spacing: AppSpacing.medium) {
+                    Image(systemName: result.plan.coverIcon)
+                        .foregroundStyle(result.plan.category.brandAccent)
+                        .frame(width: 44, height: 44)
+                        .background(result.plan.category.brandAccent.opacity(0.13), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+                    VStack(alignment: .leading, spacing: 4) {
+                        highlightedText(result.plan.title, matching: debouncedQuery, font: AppTypography.cardTitle(), color: AppColors.primaryText)
+                        Text(result.plan.category.displayTitle)
+                            .font(AppTypography.caption())
+                            .foregroundStyle(AppColors.secondaryText)
+                        Text(result.plan.subtitle)
+                            .font(AppTypography.metadata())
+                            .foregroundStyle(AppColors.tertiaryText)
+                            .lineLimit(1)
+                    }
+                    Spacer()
+                    Text("\(result.plan.durationDays) days")
+                        .font(AppTypography.caption())
+                        .foregroundStyle(result.plan.category.brandAccent)
+                }
+            }
+        }
+        .buttonStyle(.plain)
+        .accessibilityElement(children: .combine)
+        .accessibilityHint("Opens this prayer journey.")
+    }
+
+    private func scriptureResultCard(_ result: PrayerSearchResult) -> some View {
+        NavigationLink(value: result) {
+            GlassCard(padding: AppSpacing.medium) {
+                VStack(alignment: .leading, spacing: AppSpacing.small) {
+                    highlightedText(result.verse.reference, matching: debouncedQuery, font: AppTypography.sectionHeader(), color: AppColors.accent)
+                    highlightedText(result.verse.text, matching: debouncedQuery, font: AppTypography.body(), color: AppColors.primaryText)
+                        .lineLimit(4)
+                    Text(result.plan.title)
+                        .font(AppTypography.caption())
+                        .foregroundStyle(AppColors.secondaryText)
+                }
+            }
+        }
+        .buttonStyle(.plain)
+        .accessibilityElement(children: .combine)
+        .accessibilityHint("Opens this Scripture prayer.")
+    }
+
+    private func prayerResultCard(_ result: PrayerSearchResult) -> some View {
+        NavigationLink(value: result) {
+            GlassCard(padding: AppSpacing.medium) {
+                VStack(alignment: .leading, spacing: AppSpacing.small) {
+                    highlightedText(result.verse.reference, matching: debouncedQuery, font: AppTypography.sectionHeader(), color: AppColors.accent)
+                    highlightedText(result.verse.prayer, matching: debouncedQuery, font: AppTypography.body(), color: AppColors.primaryText)
+                        .lineLimit(4)
+                    Text(result.plan.title)
+                        .font(AppTypography.caption())
+                        .foregroundStyle(AppColors.secondaryText)
+                }
+            }
+        }
+        .buttonStyle(.plain)
+        .accessibilityElement(children: .combine)
+        .accessibilityHint("Opens this guided prayer.")
     }
 
     private var searchingState: some View {
@@ -113,12 +203,35 @@ struct SearchView: View {
     }
 
     private var discoveryState: some View {
-        ContentUnavailableView {
-            Label("Search Prayer Library", systemImage: "text.magnifyingglass")
-        } description: {
-            Text("Find a verse, guided prayer, Psalm, Proverb, or journey to pray with.")
+        ScrollView {
+            VStack(alignment: .leading, spacing: AppSpacing.large) {
+                GlassCard(padding: AppSpacing.heroPadding) {
+                    VStack(alignment: .leading, spacing: AppSpacing.small) {
+                        Image(systemName: "magnifyingglass")
+                            .font(.system(size: 30, weight: .semibold))
+                            .foregroundStyle(AppColors.accent)
+                        Text("Find a place to begin")
+                            .font(AppTypography.screenTitle())
+                            .foregroundStyle(AppColors.primaryText)
+                        Text("Search Scripture, guided prayers, and prayer journeys by word or phrase.")
+                            .font(AppTypography.secondaryBody())
+                            .foregroundStyle(AppColors.secondaryText)
+                    }
+                }
+                if !recentSearches.isEmpty {
+                    Text("Recent Searches")
+                        .font(AppTypography.sectionHeader())
+                        .foregroundStyle(AppColors.primaryText)
+                    ForEach(recentSearches, id: \.self) { recent in
+                        Button(recent) { query = recent }
+                            .font(AppTypography.secondaryBody())
+                            .foregroundStyle(AppColors.accent)
+                    }
+                }
+            }
+            .padding(.horizontal, AppSpacing.large)
+            .padding(.vertical, AppSpacing.medium)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(PrayerBackground())
     }
 
@@ -130,6 +243,7 @@ struct SearchView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(PrayerBackground())
+        .accessibilityElement(children: .combine)
     }
 
     private var trimmedQuery: String {
@@ -147,25 +261,51 @@ struct SearchView: View {
         )
     }
 
+    private var journeyResults: [PrayerSearchResult] {
+        uniquePlans(from: matchingResults.filter { result in
+            let terms = searchTerms
+            return terms.allSatisfy { result.normalizedPlanTitle.contains($0) || result.normalizedPlanSubtitle.contains($0) }
+        })
+    }
+
+    private var scriptureResults: [PrayerSearchResult] {
+        matchingResults.filter { result in
+            searchTerms.allSatisfy { result.normalizedVerseReference.contains($0) || result.normalizedVerseText.contains($0) || result.normalizedChapterReference.contains($0) }
+        }
+    }
+
+    private var guidedPrayerResults: [PrayerSearchResult] {
+        matchingResults.filter { result in
+            searchTerms.allSatisfy { result.normalizedPrayer.contains($0) }
+        }
+    }
+
+    private var searchTerms: [String] {
+        PrayerSearchIndex.normalize(debouncedQuery).split(separator: " ").map(String.init)
+    }
+
+    private func uniquePlans(from results: [PrayerSearchResult]) -> [PrayerSearchResult] {
+        var seen = Set<String>()
+        return results.filter { seen.insert($0.plan.id).inserted }
+    }
+
     private func highlightedText(
         _ text: String,
         matching query: String,
         font: Font,
         color: Color
     ) -> Text {
-        var attributedText = AttributedString(text)
-
-        if let range = attributedText.range(
-            of: query.trimmingCharacters(in: .whitespacesAndNewlines),
-            options: [.caseInsensitive, .diacriticInsensitive]
-        ) {
-            attributedText[range].foregroundColor = AppColors.premiumGold
-            attributedText[range].inlinePresentationIntent = .stronglyEmphasized
+        let terms = query.split(whereSeparator: { $0 == " " || $0 == "\n" }).map { PrayerSearchIndex.normalize(String($0)) }
+        let pieces = text.split(separator: " ", omittingEmptySubsequences: false)
+        var output = Text("")
+        for (index, piece) in pieces.enumerated() {
+            let part = String(piece)
+            let isMatch = terms.contains { PrayerSearchIndex.normalize(part).contains($0) }
+            let pieceText = Text(part).foregroundStyle(isMatch ? AppColors.accent : color)
+            output = output + pieceText + (index == pieces.count - 1 ? Text("") : Text(" "))
         }
-
-        return Text(attributedText)
+        return output
             .font(font)
-            .foregroundStyle(color)
     }
 }
 
@@ -311,7 +451,7 @@ private struct PrayerSearchIndex {
         }
     }
 
-    private static func normalize(_ value: String) -> String {
+    static func normalize(_ value: String) -> String {
         value
             .folding(
                 options: [.caseInsensitive, .diacriticInsensitive],
