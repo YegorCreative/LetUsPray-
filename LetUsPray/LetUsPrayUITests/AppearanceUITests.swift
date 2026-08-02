@@ -19,6 +19,12 @@ final class AppearanceUITests: XCTestCase {
         attach(app, name: "01-settings-before-any-tap")
 
         let darkSegment = app.segmentedControls.buttons["Dark"]
+        var scrollAttempts = 0
+        while !darkSegment.exists, scrollAttempts < 10 {
+            app.swipeUp()
+            scrollAttempts += 1
+        }
+        attach(app, name: "01b-settings-after-scroll-to-appearance")
         XCTAssertTrue(darkSegment.waitForExistence(timeout: 5), "Dark segment not found")
         darkSegment.tap()
         attach(app, name: "02-immediately-after-tap-Dark")
