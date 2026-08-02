@@ -266,13 +266,24 @@ struct SettingsView: View {
             }
 
             NavigationLink {
-                AchievementsView()
+                FaithMilestonesView()
             } label: {
                 settingsNavigationLabel(
-                    "Achievements",
-                    detail: "\(earnedAchievementCount) of 9 earned",
+                    "Faith Milestones",
+                    detail: "\(earnedAchievementCount) of \(AchievementService().totalCount) earned",
                     systemImage: "sparkles",
                     color: .yellow
+                )
+            }
+
+            NavigationLink {
+                PrayerWallView()
+            } label: {
+                settingsNavigationLabel(
+                    "Prayer Wall",
+                    detail: "Share and pray together",
+                    systemImage: "hands.sparkles.fill",
+                    color: .green
                 )
             }
 
@@ -358,7 +369,7 @@ struct SettingsView: View {
             [String: Date].self,
             from: achievementUnlockDatesRawValue
         ) ?? [:]
-        return unlockDates.count
+        return AchievementService().earnedCount(unlockDates: unlockDates)
     }
 
     private var savedPrayerCount: Int {

@@ -158,6 +158,8 @@ Key relationship principle: **Community objects reference Users and each other; 
 
 Selecting the specific authentication provider and backend platform that satisfy these four capabilities is a separate decision, to be made when implementation begins — not part of this architecture document.
 
+**Current implementation note (Prayer Wall, Version 1):** the backend platform has been selected — Supabase (approved 2026-08-01). Prayer Wall's code currently uses Supabase's anonymous auth (`signInAnonymously`) to obtain an `auth.uid()` for ownership/RLS, purely as a stand-in — Version 1 had no sign-up/sign-in UI in scope. **Authentication provider remains TBD**; anonymous auth is an implementation detail of the current code, not a finalized decision. See the TODO in `Community/SupabaseService.swift`.
+
 ---
 
 ## 7. UI Flow

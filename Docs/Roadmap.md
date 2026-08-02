@@ -27,7 +27,18 @@ Users should notice the content before they notice the interface.
 
 ## Community Platform
 
-**Status:** Planned (architecture only — see [CommunityPlatform-Architecture.md](CommunityPlatform-Architecture.md))
+**Status:** Architecture locked — see [CommunityPlatform-Architecture.md](CommunityPlatform-Architecture.md). Implementation not yet started.
+
+### Approved implementation order
+
+1. Faith Milestones
+2. Prayer Wall
+3. Answered Prayers
+4. Testimonies
+5. Personal Prayer Journal
+6. Faith Profile
+7. Community Feed
+8. Church Communities
 
 ### Purpose
 

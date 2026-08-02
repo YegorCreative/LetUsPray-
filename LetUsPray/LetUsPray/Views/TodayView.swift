@@ -18,6 +18,7 @@ struct TodayView: View {
     let onOpenSearch: () -> Void
     @AppStorage(PrayerStorageKeys.savedJourneyIDs) private var savedJourneyIDsRawValue = ""
     @AppStorage(PrayerStorageKeys.favoriteJourneyIDs) private var favoriteJourneyIDsRawValue = ""
+    @AppStorage(PrayerStorageKeys.achievementUnlockDates) private var achievementUnlockDatesRawValue = "{}"
 
     private var activePlan: PrayerPlan { viewModel.activePlan }
     private var planAccent: Color { activePlan.category.brandAccent }
@@ -42,6 +43,7 @@ struct TodayView: View {
                 }
 
                 compactPrayerCalendarSection
+                faithMilestoneSection
                 recommendationsSection
                 recentActivitySection
             }
@@ -224,6 +226,74 @@ struct TodayView: View {
                 .accessibilityLabel("\(prayerStreak.currentStreak) day streak. \(completedJourneys) journeys completed.")
             }
         }
+    }
+
+    private var achievementProgress: AchievementProgress {
+        let journeyPlans = viewModel.availableJourneyPlans.filter { !$0.days.isEmpty }
+        let completedJourneyCount = journeyPlans.filter {
+            PrayerPlanProgress(completedDays: analytics.completedDaysByPlan[$0.id] ?? 0, totalDays: $0.days.count).status == .completed
+        }.count
+
+        return AchievementProgress(
+            completedPrayerCount: analytics.completedDaysByPlan.values.reduce(0, +),
+            longestStreak: prayerStreak.longestStreak,
+            completedJourneyCount: completedJourneyCount,
+            savedPrayerCount: savedVerseIDs.count
+        )
+    }
+
+    private var faithMilestones: [Achievement] {
+        let unlockDates = PrayerStorageCodec.decodeValue([String: Date].self, from: achievementUnlockDatesRawValue) ?? [:]
+        return AchievementService().achievements(unlockDates: unlockDates, progress: achievementProgress)
+    }
+
+    /// Most recently earned Faith Milestone if one exists; otherwise the nearest one still ahead.
+    @ViewBuilder
+    private var faithMilestoneSection: some View {
+        if let mostRecent = faithMilestones.filter(\.isUnlocked).max(by: { ($0.unlockDate ?? .distantPast) < ($1.unlockDate ?? .distantPast) }) {
+            faithMilestoneCard(mostRecent, isEarned: true)
+        } else if let nearest = faithMilestones.filter({ !$0.isUnlocked }).max(by: { $0.fractionComplete < $1.fractionComplete }) {
+            faithMilestoneCard(nearest, isEarned: false)
+        }
+    }
+
+    private func faithMilestoneCard(_ milestone: Achievement, isEarned: Bool) -> some View {
+        NavigationLink {
+            FaithMilestonesView()
+        } label: {
+            GroupedCard {
+                GroupedRow(showsDivider: false) {
+                    HStack(alignment: .center, spacing: AppSpacing.medium) {
+                        statIcon(milestone.systemImage, tint: AppColors.accent)
+                        VStack(alignment: .leading, spacing: 3) {
+                            Text(isEarned ? "Faith Milestone Earned" : "Next Faith Milestone")
+                                .font(AppTypography.caption())
+                                .foregroundStyle(AppColors.tertiaryText)
+                                .textCase(.uppercase)
+                            Text(milestone.title)
+                                .font(AppTypography.cardTitle())
+                                .foregroundStyle(AppColors.primaryText)
+                            if isEarned {
+                                Text(milestone.description)
+                                    .font(AppTypography.metadata())
+                                    .foregroundStyle(AppColors.secondaryText)
+                                    .lineLimit(2)
+                            } else {
+                                ProgressView(value: milestone.fractionComplete)
+                                    .tint(AppColors.accent)
+                                Text("\(milestone.progress) of \(milestone.target)")
+                                    .font(AppTypography.caption())
+                                    .foregroundStyle(AppColors.tertiaryText)
+                            }
+                        }
+                        Spacer(minLength: 0)
+                    }
+                }
+            }
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(isEarned ? "Faith Milestone earned: \(milestone.title)" : "Next Faith Milestone: \(milestone.title), \(milestone.progress) of \(milestone.target)")
+        .accessibilityHint("Opens Faith Milestones.")
     }
 
     private var compactPrayerCalendarSection: some View {

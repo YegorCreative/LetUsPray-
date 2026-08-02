@@ -1,0 +1,16 @@
+// Supabase project configuration for the Community platform backend.
+// The publishable/anon key is designed by Supabase to be safe inside a client app (unlike a
+// service_role key, which must never appear here or anywhere client-side).
+//
+// Stored as build settings (not hardcoded in Swift) and exposed to the app via
+// INFOPLIST_KEY_* entries, which Xcode's auto-generated Info.plist picks up automatically.
+//
+// Note: the host is stored without a scheme because xcconfig treats "//" as a comment
+// marker anywhere on a line, including inside a URL — SupabaseConfig.swift prepends
+// "https://" when building the URL.
+
+SUPABASE_PROJECT_HOST = yreamyiyisipyepjzkfa.supabase.co
+SUPABASE_PUBLISHABLE_KEY = sb_publishable_tadXNyls0o4mekr90uOSWw_pxxHHIM8
+
+INFOPLIST_KEY_SupabaseProjectHost = $(SUPABASE_PROJECT_HOST)
+INFOPLIST_KEY_SupabasePublishableKey = $(SUPABASE_PUBLISHABLE_KEY)
