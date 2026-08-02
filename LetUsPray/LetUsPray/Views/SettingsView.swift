@@ -110,7 +110,6 @@ struct SettingsView: View {
         .tint(.blue)
         .navigationTitle("Settings")
         .navigationBarTitleDisplayMode(.large)
-        .preferredColorScheme(selectedAppearance.colorScheme)
         .task {
             await refreshReminderState()
         }
@@ -358,10 +357,6 @@ struct SettingsView: View {
         } footer: {
             Text("Made to support quiet, consistent time in prayer.")
         }
-    }
-
-    private var selectedAppearance: AppAppearance {
-        AppAppearance(rawValue: appearanceRawValue) ?? .system
     }
 
     private var earnedAchievementCount: Int {

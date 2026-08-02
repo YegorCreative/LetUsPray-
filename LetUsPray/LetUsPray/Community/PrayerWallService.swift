@@ -78,6 +78,38 @@ struct PrayerWallService {
             .execute()
     }
 
+    /// Marks a Prayer Request answered in place — same row, no new post. Ownership is
+    /// enforced by the existing update RLS policy (user_id = auth.uid()), the same one
+    /// `updateRequest` relies on.
+    func markAnswered(requestID: UUID, summary: String, details: String, answeredAt: Date) async throws {
+        try await SupabaseService.shared.ensureSession()
+
+        let payload = MarkAnsweredPayload(
+            status: PrayerRequestStatus.answered.rawValue,
+            answerSummary: summary,
+            answerDetails: details,
+            answeredAt: answeredAt
+        )
+
+        try await client
+            .from("prayer_requests")
+            .update(payload)
+            .eq("id", value: requestID)
+            .execute()
+    }
+
+    /// Reopens a previously-answered request — clears the answer fields rather than leaving
+    /// stale ones behind. Owner-only, same RLS policy as any other update.
+    func reopenRequest(id: UUID) async throws {
+        try await SupabaseService.shared.ensureSession()
+
+        try await client
+            .from("prayer_requests")
+            .update(ReopenPayload())
+            .eq("id", value: id)
+            .execute()
+    }
+
     func deleteRequest(id: UUID) async throws {
         try await SupabaseService.shared.ensureSession()
         try await client
@@ -146,6 +178,40 @@ private struct UpdatedPrayerRequest: Encodable {
     enum CodingKeys: String, CodingKey {
         case title, description, category, visibility
         case isAnonymous = "is_anonymous"
+    }
+}
+
+private struct MarkAnsweredPayload: Encodable {
+    let status: String
+    let answerSummary: String
+    let answerDetails: String
+    let answeredAt: Date
+
+    enum CodingKeys: String, CodingKey {
+        case status
+        case answerSummary = "answer_summary"
+        case answerDetails = "answer_details"
+        case answeredAt = "answered_at"
+    }
+}
+
+/// Reopening clears the answer fields rather than leaving stale ones behind, so this needs
+/// explicit `null`s — Swift's default Encodable synthesis omits nil optionals entirely,
+/// which PostgREST reads as "leave unchanged," not "clear."
+private struct ReopenPayload: Encodable {
+    enum CodingKeys: String, CodingKey {
+        case status
+        case answerSummary = "answer_summary"
+        case answerDetails = "answer_details"
+        case answeredAt = "answered_at"
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(PrayerRequestStatus.open.rawValue, forKey: .status)
+        try container.encodeNil(forKey: .answerSummary)
+        try container.encodeNil(forKey: .answerDetails)
+        try container.encodeNil(forKey: .answeredAt)
     }
 }
 

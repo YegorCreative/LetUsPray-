@@ -55,9 +55,6 @@ enum PrayerRequestVisibility: String, Codable, CaseIterable, Identifiable {
     }
 }
 
-/// Present in the schema so Answered Prayers (a later Community phase, see
-/// Docs/CommunityPlatform-Architecture.md) can mark a request answered without a migration.
-/// Not settable anywhere in this Version 1 UI.
 enum PrayerRequestStatus: String, Codable {
     case open
     case answered
@@ -73,6 +70,12 @@ nonisolated struct PrayerRequest: Identifiable, Codable, Hashable, Sendable {
     var isAnonymous: Bool
     var prayerCount: Int
     var status: PrayerRequestStatus
+    /// A short line summarizing how God answered — set together with `answerDetails` and
+    /// `answeredAt` when the owner marks the request answered. Not a testimony; just the
+    /// completion of this request.
+    var answerSummary: String?
+    var answerDetails: String?
+    var answeredAt: Date?
     let createdAt: Date
     var updatedAt: Date
 
@@ -86,9 +89,14 @@ nonisolated struct PrayerRequest: Identifiable, Codable, Hashable, Sendable {
         case isAnonymous = "is_anonymous"
         case prayerCount = "prayer_count"
         case status
+        case answerSummary = "answer_summary"
+        case answerDetails = "answer_details"
+        case answeredAt = "answered_at"
         case createdAt = "created_at"
         case updatedAt = "updated_at"
     }
+
+    var isAnswered: Bool { status == .answered }
 }
 
 /// A single "🙏 I Prayed" record — one row per (user, request), enforced by a unique
