@@ -15,6 +15,16 @@
 		C20000000000000000000005 /* LetUsPrayWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C10000000000000000000001 /* LetUsPrayWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E0000000000000000000000A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABDF10AA2FD3CB48009A879B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABDF10B12FD3CB48009A879B;
+			remoteInfo = LetUsPray;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		C40000000000000000000003 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -38,6 +48,7 @@
 		C10000000000000000000005 /* PrayerLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerLiveActivity.swift; sourceTree = "<group>"; };
 		C10000000000000000000006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D00000000000000000000003 /* Supabase.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Supabase.xcconfig; sourceTree = "<group>"; };
+		E00000000000000000000002 /* LetUsPrayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LetUsPrayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -74,6 +85,11 @@
 			path = LetUsPray;
 			sourceTree = "<group>";
 		};
+		E00000000000000000000003 /* LetUsPrayUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LetUsPrayUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +108,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E00000000000000000000004 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,6 +123,7 @@
 			children = (
 				ABF777472FE09FF1003D9593 /* LetUsPray.app */,
 				C10000000000000000000001 /* LetUsPrayWidgets.appex */,
+				E00000000000000000000002 /* LetUsPrayUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +134,7 @@
 				D00000000000000000000004 /* Config */,
 				ABDF10B42FD3CB48009A879B /* LetUsPray */,
 				C30000000000000000000001 /* LetUsPrayWidgets */,
+				E00000000000000000000003 /* LetUsPrayUITests */,
 				AB21E96B2FDCA07C0074FCB7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -161,6 +186,27 @@
 			productReference = ABF777472FE09FF1003D9593 /* LetUsPray.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E00000000000000000000001 /* LetUsPrayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E00000000000000000000009 /* Build configuration list for PBXNativeTarget "LetUsPrayUITests" */;
+			buildPhases = (
+				E00000000000000000000006 /* Sources */,
+				E00000000000000000000004 /* Frameworks */,
+				E00000000000000000000005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0000000000000000000000B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E00000000000000000000003 /* LetUsPrayUITests */,
+			);
+			name = LetUsPrayUITests;
+			productName = LetUsPrayUITests;
+			productReference = E00000000000000000000002 /* LetUsPrayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C50000000000000000000001 /* LetUsPrayWidgets */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C80000000000000000000001 /* Build configuration list for PBXNativeTarget "LetUsPrayWidgets" */;
@@ -194,6 +240,10 @@
 					C50000000000000000000001 = {
 						CreatedOnToolsVersion = 26.5;
 					};
+					E00000000000000000000001 = {
+						CreatedOnToolsVersion = 26.5;
+						TestTargetID = ABDF10B12FD3CB48009A879B;
+					};
 				};
 			};
 			buildConfigurationList = ABDF10AD2FD3CB48009A879B /* Build configuration list for PBXProject "LetUsPray" */;
@@ -215,6 +265,7 @@
 			targets = (
 				ABDF10B12FD3CB48009A879B /* LetUsPray */,
 				C50000000000000000000001 /* LetUsPrayWidgets */,
+				E00000000000000000000001 /* LetUsPrayUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -228,6 +279,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C40000000000000000000004 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E00000000000000000000005 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,7 +313,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E00000000000000000000006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E0000000000000000000000B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABDF10B12FD3CB48009A879B /* LetUsPray */;
+			targetProxy = E0000000000000000000000A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		ABDF10BB2FD3CB49009A879B /* Debug */ = {
@@ -493,6 +566,42 @@
 			};
 			name = Release;
 		};
+		E00000000000000000000007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3YPJ6GZ2J6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.letuspray.app.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LetUsPray;
+			};
+			name = Debug;
+		};
+		E00000000000000000000008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3YPJ6GZ2J6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.letuspray.app.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LetUsPray;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -519,6 +628,15 @@
 			buildConfigurations = (
 				C70000000000000000000001 /* Debug */,
 				C70000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E00000000000000000000009 /* Build configuration list for PBXNativeTarget "LetUsPrayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E00000000000000000000007 /* Debug */,
+				E00000000000000000000008 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
