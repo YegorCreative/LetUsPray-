@@ -2,11 +2,11 @@ import SwiftUI
 
 /// The single, unmistakable focal point for a screen. Fills its background with a saturated
 /// brand gradient instead of translucent glass so it visually outranks every other card.
-struct HeroCard<Content: View>: View {
-    private let gradient: LinearGradient
+struct HeroCard<Background: View, Content: View>: View {
+    private let gradient: Background
     @ViewBuilder private let content: Content
 
-    init(gradient: LinearGradient, @ViewBuilder content: () -> Content) {
+    init(gradient: Background, @ViewBuilder content: () -> Content) {
         self.gradient = gradient
         self.content = content()
     }

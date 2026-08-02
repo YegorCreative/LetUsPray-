@@ -111,6 +111,12 @@ struct PrayerCardView: View {
                     .lineSpacing(9)
                     .fixedSize(horizontal: false, vertical: true)
 
+                Divider()
+                    .opacity(0.5)
+                    .padding(.top, AppSpacing.xs)
+
+                // A quiet, low-contrast inset — Scripture stays the loudest thing on the
+                // card; Prayer reads as a response held slightly apart, not a second verse.
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Prayer")
                         .font(AppTypography.caption())
@@ -120,11 +126,16 @@ struct PrayerCardView: View {
                     Text(verse.prayer)
                         .font(AppTypography.body())
                         .fontWeight(.medium)
-                        .foregroundStyle(AppColors.primaryText)
+                        .foregroundStyle(AppColors.secondaryText)
                         .lineSpacing(7)
                         .fixedSize(horizontal: false, vertical: true)
+                        .padding(AppSpacing.small)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(
+                            RoundedRectangle(cornerRadius: AppSpacing.compactCornerRadius, style: .continuous)
+                                .fill(Color.primary.opacity(0.05))
+                        )
                 }
-                .padding(.top, AppSpacing.xs)
             }
         }
     }

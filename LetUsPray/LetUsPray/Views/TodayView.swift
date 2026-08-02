@@ -41,9 +41,9 @@ struct TodayView: View {
                     )
                 }
 
+                compactPrayerCalendarSection
                 recommendationsSection
                 recentActivitySection
-                quickActionsSection
             }
             .padding(.horizontal, AppSpacing.large)
             .padding(.top, AppSpacing.medium)
@@ -86,7 +86,10 @@ struct TodayView: View {
         let minutes = remaining * max(5, min(15, activePlan.durationDays / 2))
         let isStarted = completed > 0
 
-        return HeroCard(gradient: activePlan.category.brandGradient) {
+        // A "nice green card," not a "nice gradient": one flat color, no hue transition.
+        // Replaces the previous green→blue diagonal `category.brandGradient` locally,
+        // without touching the shared `BrandGradients.swift` (Phase X scope).
+        return HeroCard(gradient: AppColors.accent) {
             VStack(alignment: .leading, spacing: AppSpacing.large) {
                 HStack(alignment: .top, spacing: AppSpacing.medium) {
                     VStack(alignment: .leading, spacing: AppSpacing.xSmall) {
@@ -137,10 +140,10 @@ struct TodayView: View {
                         Image(systemName: "arrow.right")
                             .font(.system(size: 14, weight: .bold))
                     }
-                    .foregroundStyle(planAccent)
+                    .foregroundStyle(AppColors.accent)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, AppSpacing.medium)
-                    .background(Color.white.opacity(0.96), in: RoundedRectangle(cornerRadius: AppSpacing.buttonCornerRadius, style: .continuous))
+                    .background(AppColors.elevatedSurface, in: RoundedRectangle(cornerRadius: AppSpacing.buttonCornerRadius, style: .continuous))
                 }
                 .buttonStyle(.plain)
                 .accessibilityHint(isStarted ? "Resumes your current prayer journey." : "Opens today's prayer.")
@@ -170,24 +173,32 @@ struct TodayView: View {
         let completion = journeyPlans.isEmpty ? 0 : Int((Double(completedJourneys) / Double(journeyPlans.count) * 100).rounded())
 
         return GroupedCard {
-            GroupedRow {
-                HStack(alignment: .center, spacing: AppSpacing.medium) {
-                    progressRingIcon("chart.line.uptrend.xyaxis", progress: Double(completion) / 100)
-                    VStack(alignment: .leading, spacing: 5) {
-                        HStack {
-                            Text("Prayer Progress")
-                                .font(AppTypography.cardTitle())
-                                .foregroundStyle(AppColors.primaryText)
-                            Spacer()
-                            Text("\(completion)%")
-                                .font(AppTypography.cardTitle())
-                                .foregroundStyle(AppColors.accent)
+            NavigationLink {
+                PrayerInsightsView(insights: prayerInsights)
+            } label: {
+                GroupedRow {
+                    HStack(alignment: .center, spacing: AppSpacing.medium) {
+                        progressRingIcon("chart.line.uptrend.xyaxis", progress: Double(completion) / 100)
+                        VStack(alignment: .leading, spacing: 5) {
+                            HStack {
+                                Text("Prayer Progress")
+                                    .font(AppTypography.cardTitle())
+                                    .foregroundStyle(AppColors.primaryText)
+                                Spacer()
+                                Text("\(completion)%")
+                                    .font(AppTypography.cardTitle())
+                                    .foregroundStyle(AppColors.accent)
+                            }
+                            ProgressView(value: Double(completion), total: 100)
+                                .tint(AppColors.accent)
                         }
-                        ProgressView(value: Double(completion), total: 100)
-                            .tint(AppColors.accent)
                     }
                 }
             }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Prayer Progress, \(completion) percent complete")
+            .accessibilityHint("Opens prayer insights.")
+
             GroupedRow(showsDivider: false) {
                 HStack(alignment: .center, spacing: AppSpacing.medium) {
                     statIcon("flame.fill", tint: AppColors.warning)
@@ -209,10 +220,21 @@ struct TodayView: View {
                         .font(AppTypography.caption())
                         .foregroundStyle(AppColors.tertiaryText)
                 }
+                .accessibilityElement(children: .combine)
+                .accessibilityLabel("\(prayerStreak.currentStreak) day streak. \(completedJourneys) journeys completed.")
             }
         }
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("Prayer progress, \(completion) percent complete. \(prayerStreak.currentStreak) day streak. \(completedJourneys) journeys completed.")
+    }
+
+    private var compactPrayerCalendarSection: some View {
+        NavigationLink {
+            PrayerCalendarView(prayerCompletionDates: prayerCompletionDates)
+        } label: {
+            PrayerCalendarStrip(prayerCompletionDates: prayerCompletionDates, prayerStreak: prayerStreak)
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("Prayer Calendar")
+        .accessibilityHint("Opens the full prayer calendar. \(prayerStreak.badgeText).")
     }
 
     private func statIcon(_ systemImage: String, tint: Color) -> some View {
@@ -251,16 +273,27 @@ struct TodayView: View {
         let journey: PrayerJourney
     }
 
+    /// Pulls from every existing recommendation category (already deduplicated against each
+    /// other and against the active journey by `PrayerJourneyRecommendationService`) instead
+    /// of just the first "recommended" and first "seasonal" entry, so the carousel reliably
+    /// has enough cards to browse. No new recommendation logic, no invented data.
     private var recommendationItems: [RecommendationItem] {
+        var seenIDs = Set<String>()
         var items: [RecommendationItem] = []
-        if let recommended = recommendationSections.recommended.first {
-            items.append(.init(id: recommended.id, kicker: "Recommended", journey: recommended))
+
+        func add(_ journeys: [PrayerJourney], kicker: String) {
+            for journey in journeys where !seenIDs.contains(journey.id) {
+                seenIDs.insert(journey.id)
+                items.append(.init(id: journey.id, kicker: kicker, journey: journey))
+            }
         }
-        if let seasonal = recommendationSections.seasonal.first,
-           seasonal.id != recommendationSections.recommended.first?.id {
-            items.append(.init(id: seasonal.id, kicker: "Seasonal", journey: seasonal))
-        }
-        return items
+
+        add(recommendationSections.recommended, kicker: "Recommended")
+        add(recommendationSections.featured, kicker: "Popular")
+        add(recommendationSections.seasonal, kicker: "Seasonal")
+        add(recommendationSections.newToYou, kicker: "New")
+
+        return Array(items.prefix(6))
     }
 
     @ViewBuilder
@@ -278,51 +311,42 @@ struct TodayView: View {
         }
     }
 
+    /// Reuses `HeroCard` (now that it accepts any `Background: View`) at a fixed, much
+    /// smaller width instead of introducing a second card design. Background is a flat
+    /// per-journey accent color — a solid color, not a gradient.
     private func shelfJourneyCard(_ journey: PrayerJourney, kicker: String) -> some View {
         let accent = AppColors.planAccent(named: journey.accentColorName)
         return Button { onOpenPlan(journey.plan) } label: {
-            ShelfCard {
+            HeroCard(gradient: accent) {
                 VStack(alignment: .leading, spacing: AppSpacing.small) {
                     HStack(alignment: .top) {
                         Image(systemName: journey.heroImageName)
-                            .font(.system(size: 19, weight: .semibold))
-                            .foregroundStyle(accent)
-                            .frame(width: 42, height: 42)
-                            .background(accent.opacity(0.14), in: RoundedRectangle(cornerRadius: 13, style: .continuous))
-                        Spacer(minLength: AppSpacing.small)
+                            .font(.system(size: 15, weight: .semibold))
+                            .foregroundStyle(AppColors.brightTextOnAccent)
+                        Spacer(minLength: AppSpacing.xs)
                         Text(kicker.uppercased())
-                            .font(.system(size: 10, weight: .bold))
-                            .foregroundStyle(accent)
+                            .font(.system(size: 9, weight: .bold))
+                            .foregroundStyle(AppColors.brightTextOnAccent.opacity(0.85))
                     }
 
                     Spacer(minLength: AppSpacing.xs)
 
                     Text(journey.title)
                         .font(AppTypography.cardTitle())
-                        .foregroundStyle(AppColors.primaryText)
+                        .foregroundStyle(AppColors.brightTextOnAccent)
                         .lineLimit(2)
                         .fixedSize(horizontal: false, vertical: true)
 
                     Text(journey.subtitle)
                         .font(AppTypography.caption())
-                        .foregroundStyle(AppColors.secondaryText)
+                        .foregroundStyle(AppColors.brightTextOnAccent.opacity(0.85))
                         .lineLimit(2)
-
-                    Spacer(minLength: AppSpacing.small)
-
-                    HStack(spacing: 4) {
-                        Text("Explore")
-                            .font(AppTypography.caption())
-                            .fontWeight(.semibold)
-                        Image(systemName: "arrow.right")
-                            .font(.system(size: 10, weight: .bold))
-                    }
-                    .foregroundStyle(accent)
                 }
             }
+            .frame(width: 156)
         }
         .buttonStyle(.plain)
-        .accessibilityLabel("\(journey.title), \(journey.subtitle)")
+        .accessibilityLabel("\(journey.title), \(kicker). \(journey.subtitle)")
         .accessibilityHint("Explores this journey.")
     }
 
@@ -387,57 +411,6 @@ struct TodayView: View {
             items.append(.init(id: "started", title: "Journey opened", detail: activity.journeyName, date: activity.date, systemImage: "book.pages.fill"))
         }
         return items.sorted { $0.date > $1.date }.prefix(3).map { $0 }
-    }
-
-    private var quickActionsSection: some View {
-        VStack(alignment: .leading, spacing: AppSpacing.medium) {
-            sectionHeader("Quick Actions")
-            HStack(spacing: AppSpacing.small) {
-                DockAction(title: "Plans", systemImage: "books.vertical.fill", tint: AppColors.accent, isPrimary: true, action: onOpenPlans)
-                DockAction(title: "Search", systemImage: "magnifyingglass", tint: AppColors.primaryBlue, action: onOpenSearch)
-                DockAction(title: "Library", systemImage: "bookmark.fill", tint: AppColors.primaryBlue, action: onOpenSaved)
-                NavigationLink { PrayerInsightsView(insights: prayerInsights) } label: {
-                    VStack(spacing: AppSpacing.xs) {
-                        ZStack {
-                            Circle()
-                                .fill(AppColors.primaryBlue.opacity(0.14))
-                                .frame(width: 44, height: 44)
-                            Image(systemName: "chart.xyaxis.line")
-                                .font(.system(size: 17, weight: .semibold))
-                                .foregroundStyle(AppColors.primaryBlue)
-                        }
-                        Text("Insights")
-                            .font(AppTypography.caption())
-                            .foregroundStyle(AppColors.secondaryText)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.85)
-                    }
-                    .frame(maxWidth: .infinity)
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel("Insights")
-                NavigationLink { PrayerCalendarView(prayerCompletionDates: prayerCompletionDates) } label: {
-                    VStack(spacing: AppSpacing.xs) {
-                        ZStack {
-                            Circle()
-                                .fill(AppColors.primaryBlue.opacity(0.14))
-                                .frame(width: 44, height: 44)
-                            Image(systemName: "calendar")
-                                .font(.system(size: 17, weight: .semibold))
-                                .foregroundStyle(AppColors.primaryBlue)
-                        }
-                        Text("Calendar")
-                            .font(AppTypography.caption())
-                            .foregroundStyle(AppColors.secondaryText)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.85)
-                    }
-                    .frame(maxWidth: .infinity)
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel("Prayer Calendar")
-            }
-        }
     }
 
     private func continueJourney() {
