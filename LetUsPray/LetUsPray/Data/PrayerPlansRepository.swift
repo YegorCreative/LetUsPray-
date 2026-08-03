@@ -1166,6 +1166,50 @@ enum PrayerPlansRepository {
                             prayer: "Heavenly Father, thank You for giving me opportunities to serve You by serving others. Keep me from seeking recognition or serving out of obligation. Instead, let gratitude fill my heart so completely that every act of kindness, every task, and every sacrifice becomes an offering of worship to You. May my life reflect the humble servant heart of Jesus Christ, bringing honor to Your name in everything I do. In Jesus' name, Amen. 🙏🏻"
                         )
                     ]
+                ),
+                PrayerDay(
+                    dayNumber: 20,
+                    title: "Overflowing With Joy",
+                    chapterReference: "Romans 15:13",
+                    summary: "A life rooted in gratitude overflows with the joy, hope, and peace that come from trusting God.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-20-1",
+                            reference: "Romans 15:13",
+                            text: "Now may the God of hope fill you with all joy and peace in believing, so that you will abound in hope by the power of the Holy Spirit.",
+                            prayer: "Father, fill my heart with lasting joy and hope as I continue to place my trust in You."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-20-2",
+                            reference: "Psalm 28:7",
+                            text: "The LORD is my strength and my shield; My heart trusts in Him, and I am helped; Therefore my heart exults, And with my song I shall thank Him.",
+                            prayer: "Thank You for being my strength and faithful help, giving me every reason to rejoice."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-20-3",
+                            reference: "John 15:11",
+                            text: "These things I have spoken to you so that My joy may be in you, and that your joy may be made full.",
+                            prayer: "Lord Jesus, let Your joy fill my heart so that it overflows into every part of my life."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-20-4",
+                            reference: "Psalm 126:3",
+                            text: "The LORD has done great things for us; We are glad.",
+                            prayer: "Help me continually remember Your faithfulness so my heart remains joyful and grateful."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-20-5",
+                            reference: "Nehemiah 8:10",
+                            text: "Do not be grieved, for the joy of the LORD is your strength.",
+                            prayer: "Strengthen me with the joy that comes from knowing and walking with You."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-20-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, thank You for filling my life with a joy that circumstances cannot take away. As I remember Your faithfulness, mercy, salvation, presence, and daily provision, let gratitude continue to overflow from my heart. May Your joy strengthen me, Your peace sustain me, and Your hope guide me each day. Let my life become a testimony of the goodness of Christ, bringing encouragement and glory to You wherever I go. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
                 )
             ]
         )
