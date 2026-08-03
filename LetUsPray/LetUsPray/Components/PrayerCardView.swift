@@ -89,8 +89,6 @@ struct PrayerCardView: View {
                 Image(systemName: "hands.sparkles.fill")
                     .font(.system(size: 28, weight: .medium))
                     .foregroundStyle(AppColors.accent)
-
-                cardActions
             }
             .frame(maxWidth: .infinity)
         } else {
