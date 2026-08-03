@@ -990,6 +990,50 @@ enum PrayerPlansRepository {
                             prayer: "Heavenly Father, thank You for Your overwhelming generosity toward me. Everything I have ultimately comes from Your loving hand. Guard my heart from selfishness and teach me to give freely, joyfully, and faithfully. May my gratitude be seen not only in my words but also in my generosity, compassion, and willingness to serve others. Let my life point people back to You, the Giver of every good and perfect gift. In Jesus' name, Amen. 🙏🏻"
                         )
                     ]
+                ),
+                PrayerDay(
+                    dayNumber: 16,
+                    title: "Walking in God's Love",
+                    chapterReference: "1 John 4:19",
+                    summary: "When we remember God's love for us, gratitude overflows into genuine love for Him and for others.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-16-1",
+                            reference: "1 John 4:19",
+                            text: "We love, because He first loved us.",
+                            prayer: "Father, thank You for loving me first and teaching me how to love through Your example."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-16-2",
+                            reference: "Romans 5:5",
+                            text: "…the love of God has been poured out within our hearts through the Holy Spirit who was given to us.",
+                            prayer: "Fill my heart with Your love so that it naturally flows to the people around me."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-16-3",
+                            reference: "John 13:34–35",
+                            text: "A new commandment I give to you, that you love one another, even as I have loved you... By this all men will know that you are My disciples, if you have love for one another.",
+                            prayer: "Help me reflect the love of Christ in my words, actions, and relationships today."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-16-4",
+                            reference: "Ephesians 5:2",
+                            text: "Walk in love, just as Christ also loved you and gave Himself up for us...",
+                            prayer: "Teach me to walk in sacrificial love, following the example Jesus has given me."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-16-5",
+                            reference: "Colossians 3:14",
+                            text: "And beyond all these things put on love, which is the perfect bond of unity.",
+                            prayer: "Clothe my heart with love so that gratitude is seen in the way I treat others."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-16-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, thank You for the immeasurable love You have shown me through Jesus Christ. Because You loved me first, help me respond with wholehearted love for You and sincere love for others. Remove selfishness, bitterness, and pride from my heart, replacing them with compassion, kindness, and grace. May gratitude for Your love shape every relationship and every decision I make, so that my life reflects the love of Christ to the world around me. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
                 )
             ]
         )
