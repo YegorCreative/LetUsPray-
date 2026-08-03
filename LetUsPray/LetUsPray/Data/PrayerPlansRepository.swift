@@ -1034,6 +1034,50 @@ enum PrayerPlansRepository {
                             prayer: "Heavenly Father, thank You for the immeasurable love You have shown me through Jesus Christ. Because You loved me first, help me respond with wholehearted love for You and sincere love for others. Remove selfishness, bitterness, and pride from my heart, replacing them with compassion, kindness, and grace. May gratitude for Your love shape every relationship and every decision I make, so that my life reflects the love of Christ to the world around me. In Jesus' name, Amen. 🙏🏻"
                         )
                     ]
+                ),
+                PrayerDay(
+                    dayNumber: 17,
+                    title: "Thankful for the Body of Christ",
+                    chapterReference: "1 Corinthians 12:27",
+                    summary: "God has placed every believer into the Body of Christ, where we grow together, encourage one another, and serve with unity and love.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-17-1",
+                            reference: "1 Corinthians 12:27",
+                            text: "Now you are Christ's body, and individually members of it.",
+                            prayer: "Father, thank You for making me part of Your family and giving me a place in the Body of Christ."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-17-2",
+                            reference: "Hebrews 10:24–25",
+                            text: "Let us consider how to stimulate one another to love and good deeds, not forsaking our own assembling together... but encouraging one another.",
+                            prayer: "Help me encourage my brothers and sisters in Christ and faithfully walk alongside them."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-17-3",
+                            reference: "Romans 12:10",
+                            text: "Be devoted to one another in brotherly love; give preference to one another in honor.",
+                            prayer: "Teach me to love others sincerely and honor them above myself."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-17-4",
+                            reference: "Ephesians 4:2–3",
+                            text: "With all humility and gentleness, with patience, showing tolerance for one another in love, being diligent to preserve the unity of the Spirit in the bond of peace.",
+                            prayer: "Give me humility, patience, and grace so I may help strengthen the unity of Your Church."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-17-5",
+                            reference: "Galatians 6:2",
+                            text: "Bear one another's burdens, and thus fulfill the law of Christ.",
+                            prayer: "Open my eyes to the needs of others and help me carry their burdens with compassion."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-17-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, thank You for the gift of the Body of Christ. Thank You for brothers and sisters who encourage me, pray for me, challenge me, and walk beside me in faith. Help me not only receive their love but also become a source of encouragement, unity, and service to others. May my gratitude for Your family be reflected in the way I love, support, and build up Your Church. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
                 )
             ]
         )
