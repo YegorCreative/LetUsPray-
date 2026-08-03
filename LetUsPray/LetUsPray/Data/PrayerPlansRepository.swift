@@ -902,6 +902,50 @@ enum PrayerPlansRepository {
                             prayer: "Heavenly Father, thank You for Your faithful provision each day of my life. You know every need before I even ask, and You continue to care for me with perfect wisdom and love. Keep me from anxiety and teach me to trust You more deeply, remembering that You are my Shepherd and my Provider. May I receive every blessing with gratitude and use what You have entrusted to me to serve You and bless others. In Jesus' name, Amen. 🙏🏻"
                         )
                     ]
+                ),
+                PrayerDay(
+                    dayNumber: 14,
+                    title: "Thankful for God's Peace",
+                    chapterReference: "John 14:27",
+                    summary: "Christ gives a lasting peace that the world cannot offer, allowing grateful hearts to rest securely in Him.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-14-1",
+                            reference: "John 14:27",
+                            text: "Peace I leave with you; My peace I give to you; not as the world gives do I give to you. Let not your heart be troubled, nor let it be fearful.",
+                            prayer: "Lord Jesus, thank You for the gift of Your peace that calms my heart and steadies my soul."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-14-2",
+                            reference: "Isaiah 26:3",
+                            text: "The steadfast of mind Thou wilt keep in perfect peace, Because he trusts in Thee.",
+                            prayer: "Help me keep my mind fixed on You so that I may rest in Your perfect peace."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-14-3",
+                            reference: "Romans 5:1",
+                            text: "Therefore having been justified by faith, we have peace with God through our Lord Jesus Christ.",
+                            prayer: "Father, thank You that through Jesus I have peace with You and can confidently draw near to You."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-14-4",
+                            reference: "Colossians 3:15",
+                            text: "And let the peace of Christ rule in your hearts, to which indeed you were called in one body; and be thankful.",
+                            prayer: "Let the peace of Christ guide my heart and shape every response with gratitude."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-14-5",
+                            reference: "2 Thessalonians 3:16",
+                            text: "Now may the Lord of peace Himself continually grant you peace in every circumstance. The Lord be with you all.",
+                            prayer: "Thank You for being the Lord of peace who remains with me in every circumstance."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-14-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, thank You for the peace that comes from knowing You through Jesus Christ. When the world feels uncertain, remind me that Your peace is steady, faithful, and unchanging. Teach me to trust You with every concern and to let gratitude quiet my anxious thoughts. May Your peace guard my heart, direct my decisions, and overflow into the lives of those around me as I continue to walk with You. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
                 )
             ]
         )
