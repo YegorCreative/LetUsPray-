@@ -1210,6 +1210,50 @@ enum PrayerPlansRepository {
                             prayer: "Heavenly Father, thank You for filling my life with a joy that circumstances cannot take away. As I remember Your faithfulness, mercy, salvation, presence, and daily provision, let gratitude continue to overflow from my heart. May Your joy strengthen me, Your peace sustain me, and Your hope guide me each day. Let my life become a testimony of the goodness of Christ, bringing encouragement and glory to You wherever I go. In Jesus' name, Amen. 🙏🏻"
                         )
                     ]
+                ),
+                PrayerDay(
+                    dayNumber: 21,
+                    title: "A Life of Thanksgiving",
+                    chapterReference: "Colossians 2:6–7",
+                    summary: "Gratitude is not meant to be a temporary practice but a lifelong way of walking with Christ, overflowing in thanksgiving every day.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-21-1",
+                            reference: "Colossians 2:6–7",
+                            text: "Therefore as you have received Christ Jesus the Lord, so walk in Him... having been firmly rooted and now being built up in Him... overflowing with gratitude.",
+                            prayer: "Father, help me remain firmly rooted in Christ so that gratitude continually overflows from my life."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-21-2",
+                            reference: "Psalm 92:1–2",
+                            text: "It is good to give thanks to the LORD And to sing praises to Thy name, O Most High; To declare Thy lovingkindness in the morning And Thy faithfulness by night.",
+                            prayer: "May thanksgiving become the rhythm of my days—from morning until night."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-21-3",
+                            reference: "1 Thessalonians 5:16–18",
+                            text: "Rejoice always; pray without ceasing; in everything give thanks; for this is God's will for you in Christ Jesus.",
+                            prayer: "Teach me to rejoice, pray faithfully, and give thanks in every season of life."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-21-4",
+                            reference: "Hebrews 12:28",
+                            text: "Therefore, since we receive a kingdom which cannot be shaken, let us show gratitude, by which we may offer to God an acceptable service with reverence and awe.",
+                            prayer: "Help my gratitude become an act of worship that honors You every day."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-21-5",
+                            reference: "Psalm 136:1",
+                            text: "Give thanks to the LORD, for He is good, For His lovingkindness is everlasting.",
+                            prayer: "Thank You, Lord, for Your goodness and steadfast love that never comes to an end."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-21-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, thank You for leading me through this journey of gratitude. As I continue walking with You, may thanksgiving no longer be limited to special moments but become the constant posture of my heart. Help me remember Your goodness, trust Your faithfulness, love others generously, serve joyfully, and worship You wholeheartedly. Let every day of my life reflect the gratitude that comes from knowing Jesus Christ as my Savior and Lord. May my life bring glory to You in all that I do. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
                 )
             ]
         )
