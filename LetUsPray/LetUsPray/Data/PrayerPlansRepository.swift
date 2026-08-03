@@ -858,6 +858,50 @@ enum PrayerPlansRepository {
                             prayer: "Heavenly Father, thank You that even in my trials I am never outside of Your loving care. When I cannot understand what You are doing, help me trust Your wisdom, rest in Your grace, and remember that You are shaping me into the image of Christ. Thank You for Your constant presence, Your sustaining strength, and the hope You provide in every season. May I continue to praise You, knowing that You remain faithful through every trial. In Jesus' name, Amen. 🙏🏻"
                         )
                     ]
+                ),
+                PrayerDay(
+                    dayNumber: 13,
+                    title: "Thankful for Daily Provision",
+                    chapterReference: "Matthew 6:31–33",
+                    summary: "God faithfully provides for His children each day, inviting us to trust His care instead of living in fear or worry.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-13-1",
+                            reference: "Matthew 6:31–33",
+                            text: "Do not be anxious then, saying, 'What shall we eat?' or 'What shall we drink?' or 'With what shall we clothe ourselves?' ... But seek first His kingdom and His righteousness; and all these things shall be added to you.",
+                            prayer: "Father, help me seek Your kingdom first and trust You to faithfully provide what I need."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-13-2",
+                            reference: "Philippians 4:19",
+                            text: "And my God shall supply all your needs according to His riches in glory in Christ Jesus.",
+                            prayer: "Thank You for Your faithful provision and for meeting every need according to Your perfect wisdom."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-13-3",
+                            reference: "Psalm 23:1",
+                            text: "The LORD is my shepherd, I shall not want.",
+                            prayer: "Lord, remind me that with You as my Shepherd, I have everything I truly need."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-13-4",
+                            reference: "Psalm 145:15–16",
+                            text: "The eyes of all look to Thee, And Thou dost give them their food in due time. Thou dost open Thy hand, And dost satisfy the desire of every living thing.",
+                            prayer: "Open my eyes to recognize Your generous hand providing for me each day."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-13-5",
+                            reference: "2 Corinthians 9:8",
+                            text: "And God is able to make all grace abound to you, that always having all sufficiency in everything, you may have an abundance for every good deed.",
+                            prayer: "Thank You for providing not only for my needs but also enabling me to bless others."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-13-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, thank You for Your faithful provision each day of my life. You know every need before I even ask, and You continue to care for me with perfect wisdom and love. Keep me from anxiety and teach me to trust You more deeply, remembering that You are my Shepherd and my Provider. May I receive every blessing with gratitude and use what You have entrusted to me to serve You and bless others. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
                 )
             ]
         )
