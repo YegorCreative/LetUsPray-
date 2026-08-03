@@ -1122,6 +1122,50 @@ enum PrayerPlansRepository {
                             prayer: "Heavenly Father, thank You for every person You have placed in my life. Let my gratitude overflow through words that encourage, comfort, and strengthen others. Guard my tongue from criticism, complaining, and discouragement. Instead, fill my heart so completely with Your goodness that my words become a source of grace and hope. May every conversation reflect the love of Christ and point others closer to You. In Jesus' name, Amen. 🙏🏻"
                         )
                     ]
+                ),
+                PrayerDay(
+                    dayNumber: 19,
+                    title: "Serving With Thanksgiving",
+                    chapterReference: "Colossians 3:17",
+                    summary: "Gratitude transforms ordinary acts of service into joyful worship offered to God.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-19-1",
+                            reference: "Colossians 3:17",
+                            text: "Whatever you do in word or deed, do all in the name of the Lord Jesus, giving thanks through Him to God the Father.",
+                            prayer: "Father, let everything I do today be an act of grateful worship offered to You."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-19-2",
+                            reference: "Colossians 3:23–24",
+                            text: "Whatever you do, do your work heartily, as for the Lord rather than for men... It is the Lord Christ whom you serve.",
+                            prayer: "Help me serve faithfully, remembering that every act of obedience is ultimately for You."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-19-3",
+                            reference: "Galatians 5:13",
+                            text: "Through love serve one another.",
+                            prayer: "Fill my heart with love that joyfully serves others without seeking recognition."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-19-4",
+                            reference: "Mark 10:45",
+                            text: "For even the Son of Man did not come to be served, but to serve, and to give His life a ransom for many.",
+                            prayer: "Lord Jesus, shape my heart after Yours so that I may serve others with humility."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-19-5",
+                            reference: "1 Peter 4:10",
+                            text: "As each one has received a special gift, employ it in serving one another as good stewards of the manifold grace of God.",
+                            prayer: "Help me faithfully use every gift You have entrusted to me for the blessing of others and Your glory."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-19-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, thank You for giving me opportunities to serve You by serving others. Keep me from seeking recognition or serving out of obligation. Instead, let gratitude fill my heart so completely that every act of kindness, every task, and every sacrifice becomes an offering of worship to You. May my life reflect the humble servant heart of Jesus Christ, bringing honor to Your name in everything I do. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
                 )
             ]
         )
