@@ -330,7 +330,448 @@ enum PrayerPlansRepository {
             durationDays: 10,
             accentColorName: "gratitude",
             coverIcon: "hands.sparkles.fill",
-            days: []
+            days: [
+                PrayerDay(
+                    dayNumber: 1,
+                    title: "Giving Thanks in Every Circumstance",
+                    chapterReference: "1 Thessalonians 5:18",
+                    summary: "True gratitude is not based on perfect circumstances but on God's unchanging goodness and faithfulness.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-1-1",
+                            reference: "1 Thessalonians 5:18",
+                            text: "In every thing give thanks: for this is God's will for you in Christ Jesus.",
+                            prayer: "Heavenly Father, teach me to give thanks in every circumstance, trusting that You are working even when I cannot see it."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-1-2",
+                            reference: "Psalm 107:1",
+                            text: "Oh give thanks unto the LORD, for He is good; For His lovingkindness is everlasting.",
+                            prayer: "Lord, thank You for Your goodness and Your everlasting lovingkindness. Help me remember Your faithfulness today."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-1-3",
+                            reference: "Colossians 3:17",
+                            text: "Whatever you do in word or deed, do all in the name of the Lord Jesus, giving thanks through Him to God the Father.",
+                            prayer: "Father, may everything I say and do today reflect a thankful heart that honors You."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-1-4",
+                            reference: "Psalm 100:4",
+                            text: "Enter His gates with thanksgiving, And His courts with praise. Give thanks to Him, bless His name.",
+                            prayer: "Lord, I enter Your presence with thanksgiving and praise. Fill my heart with joy as I worship You today."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-1-5",
+                            reference: "James 1:17",
+                            text: "Every good thing bestowed and every perfect gift is from above, coming down from the Father of lights, with whom there is no variation, or shifting shadow.",
+                            prayer: "Father, thank You for every good and perfect gift. Open my eyes to recognize Your blessings each day."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-1-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Gracious Father, thank You for reminding me today that every good gift comes from You. Help me to cultivate a heart of gratitude that does not depend on my circumstances but rests in Your goodness and faithfulness. May thanksgiving shape my thoughts, my words, and my actions, and may my life bring glory to You in every season. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
+                ),
+                PrayerDay(
+                    dayNumber: 2,
+                    title: "Every Good Gift Comes From God",
+                    chapterReference: "James 1:17",
+                    summary: "Recognizing every blessing as a gift from God helps us cultivate a thankful heart and trust His faithful provision.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-2-1",
+                            reference: "James 1:17",
+                            text: "Every good thing bestowed and every perfect gift is from above, coming down from the Father of lights, with whom there is no variation, or shifting shadow.",
+                            prayer: "Father, thank You for every good gift You have placed in my life. Help me never take Your blessings for granted."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-2-2",
+                            reference: "Psalm 103:2",
+                            text: "Bless the LORD, O my soul, And forget none of His benefits;",
+                            prayer: "Lord, remind me to remember Your faithfulness and the countless ways You have cared for me."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-2-3",
+                            reference: "Deuteronomy 8:18",
+                            text: "But thou shalt remember the LORD thy God, for it is He who is giving thee power to make wealth...",
+                            prayer: "Father, help me remember that every ability, opportunity, and blessing comes from Your gracious hand."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-2-4",
+                            reference: "Philippians 4:19",
+                            text: "And my God shall supply all your needs according to His riches in glory in Christ Jesus.",
+                            prayer: "Lord, thank You for faithfully providing everything I truly need according to Your perfect wisdom."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-2-5",
+                            reference: "Psalm 136:1",
+                            text: "Give thanks unto the LORD; for He is good; For His lovingkindness is everlasting.",
+                            prayer: "Thank You, Lord, because Your goodness and Your everlasting love never fail."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-2-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Gracious Father, thank You for every blessing You have poured into my life. Teach me to recognize Your hand in both the ordinary and extraordinary moments of each day. May I never forget that every good gift comes from You, and may my gratitude deepen my trust, strengthen my faith, and draw me closer to Your heart. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
+                ),
+                PrayerDay(
+                    dayNumber: 3,
+                    title: "A Thankful Heart Changes Everything",
+                    chapterReference: "Colossians 3:15",
+                    summary: "Gratitude transforms the heart by replacing worry, pride, and discouragement with peace, joy, and trust in God.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-3-1",
+                            reference: "Colossians 3:15",
+                            text: "And let the peace of Christ rule in your hearts, to which indeed you were called in one body; and be thankful.",
+                            prayer: "Father, let the peace of Christ rule my heart today and shape my thoughts with gratitude instead of worry."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-3-2",
+                            reference: "Psalm 28:7",
+                            text: "The LORD is my strength and my shield; My heart trusts in Him, and I am helped; Therefore my heart exults, And with my song I shall thank Him.",
+                            prayer: "Lord, remind me that Your strength is enough for every challenge, and let gratitude overflow from my trust in You."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-3-3",
+                            reference: "Ephesians 5:20",
+                            text: "Always giving thanks for all things in the name of our Lord Jesus Christ to God, even the Father;",
+                            prayer: "Teach me to cultivate a thankful heart in every season, recognizing Your faithfulness in both joyful and difficult moments."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-3-4",
+                            reference: "Hebrews 12:28",
+                            text: "Therefore, since we receive a kingdom which cannot be shaken, let us show gratitude, by which we may offer to God an acceptable service with reverence and awe;",
+                            prayer: "Gracious God, help my gratitude become an act of worship that honors You with reverence and joy."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-3-5",
+                            reference: "Psalm 9:1",
+                            text: "I will give thanks to the LORD with all my heart; I will tell of all Thy wonders.",
+                            prayer: "Open my heart to remember Your wonderful works so that thanksgiving becomes my natural response each day."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-3-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, thank You for showing me that gratitude is more than words—it is the posture of a heart that trusts You. Let thankfulness shape the way I think, speak, worship, and serve. As I remember Your faithfulness, may my heart be filled with peace, my life reflect Your goodness, and my words encourage others to glorify You. Keep my eyes fixed on Your unchanging love so that gratitude becomes a daily way of life. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
+                ),
+                PrayerDay(
+                    dayNumber: 4,
+                    title: "Remember God's Faithfulness",
+                    chapterReference: "Lamentations 3:22–23",
+                    summary: "Looking back on God's faithfulness reminds us that His mercy is new every morning and gives us confidence for today.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-4-1",
+                            reference: "Lamentations 3:22–23",
+                            text: "The LORD'S lovingkindnesses indeed never cease, For His compassions never fail. They are new every morning; Great is Thy faithfulness.",
+                            prayer: "Faithful Father, thank You that Your mercy meets me every new morning with fresh hope and grace."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-4-2",
+                            reference: "Deuteronomy 7:9",
+                            text: "Know therefore that the LORD thy God, He is God, the faithful God, who keepeth His covenant and His lovingkindness to a thousandth generation with those who love Him and keep His commandments;",
+                            prayer: "Lord, help me remember that Your promises never fail and that Your faithfulness extends through every generation."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-4-3",
+                            reference: "Psalm 77:11",
+                            text: "I shall remember the deeds of the LORD; Surely I will remember Thy wonders of old.",
+                            prayer: "Bring to my mind the many ways You have worked in my life so that remembrance leads me to grateful worship."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-4-4",
+                            reference: "1 Chronicles 16:34",
+                            text: "O give thanks to the LORD, for He is good; For His lovingkindness is everlasting.",
+                            prayer: "Father, let my gratitude be rooted in Your unchanging goodness and everlasting love."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-4-5",
+                            reference: "Hebrews 10:23",
+                            text: "Let us hold fast the confession of our hope without wavering, for He who promised is faithful;",
+                            prayer: "Strengthen my confidence to trust You completely because You are always faithful to every promise You have made."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-4-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, thank You for Your unfailing faithfulness throughout every season of my life. When I remember how You have provided, guided, forgiven, and sustained me, my heart cannot help but give thanks. Help me never forget Your goodness or doubt Your promises. May the memory of Your faithfulness strengthen my trust today and give me hope for tomorrow. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
+                ),
+                PrayerDay(
+                    dayNumber: 5,
+                    title: "Praise Before the Answer",
+                    chapterReference: "Habakkuk 3:17–18",
+                    summary: "Faith-filled gratitude chooses to praise God for who He is, even before circumstances change.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-5-1",
+                            reference: "Habakkuk 3:17–18",
+                            text: "Though the fig tree should not blossom, And there be no fruit on the vines... Yet I will exult in the LORD, I will rejoice in the God of my salvation.",
+                            prayer: "Father, help me choose worship even when I cannot yet see the answer to my prayers."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-5-2",
+                            reference: "Romans 8:28",
+                            text: "And we know that God causes all things to work together for good to those who love God, to those who are called according to His purpose.",
+                            prayer: "Teach me to trust that You are working for my good, even when I cannot understand what You are doing."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-5-3",
+                            reference: "Psalm 34:1",
+                            text: "I will bless the LORD at all times; His praise shall continually be in my mouth.",
+                            prayer: "May praise become my daily response, no matter what circumstances I face."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-5-4",
+                            reference: "Hebrews 13:15",
+                            text: "Through Him then, let us continually offer up a sacrifice of praise to God, that is, the fruit of lips that give thanks to His name.",
+                            prayer: "Lord, receive my praise as an offering of love and gratitude from a trusting heart."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-5-5",
+                            reference: "Isaiah 12:2",
+                            text: "Behold, God is my salvation, I will trust and not be afraid; For the LORD GOD is my strength and song, And He has become my salvation.",
+                            prayer: "Strengthen my faith so that trust becomes greater than fear and gratitude becomes stronger than doubt."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-5-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, today I choose to praise You not only for what You have done but for who You are. Even when I cannot see the outcome, I know You remain faithful, loving, and worthy of my trust. Fill my heart with confident gratitude that rests in Your character rather than my circumstances. May my worship declare that You are good in every season, and may my faith continue to grow as I wait upon You. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
+                ),
+                PrayerDay(
+                    dayNumber: 6,
+                    title: "Gratitude Instead of Worry",
+                    chapterReference: "Philippians 4:6–7",
+                    summary: "Thanksgiving shifts our focus from our worries to God's faithful care, allowing His peace to guard our hearts.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-6-1",
+                            reference: "Philippians 4:6–7",
+                            text: "Be anxious for nothing, but in everything by prayer and supplication with thanksgiving let your requests be made known to God. And the peace of God, which surpasses all comprehension, shall guard your hearts and your minds in Christ Jesus.",
+                            prayer: "Father, replace my anxious thoughts with thankful prayers that rest confidently in Your faithful care."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-6-2",
+                            reference: "Psalm 56:3–4",
+                            text: "When I am afraid, I will put my trust in Thee. In God, whose word I praise, In God I have put my trust; I shall not be afraid.",
+                            prayer: "Lord, when fear rises within me, help me choose trust and praise instead of worry."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-6-3",
+                            reference: "Colossians 4:2",
+                            text: "Devote yourselves to prayer, keeping alert in it with an attitude of thanksgiving;",
+                            prayer: "Teach me to make gratitude a regular part of my prayers and my daily walk with You."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-6-4",
+                            reference: "Isaiah 26:3",
+                            text: "The steadfast of mind Thou wilt keep in perfect peace, Because he trusts in Thee.",
+                            prayer: "Keep my mind fixed on You so that Your perfect peace fills my heart each day."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-6-5",
+                            reference: "Psalm 118:24",
+                            text: "This is the day which the LORD has made; Let us rejoice and be glad in it.",
+                            prayer: "Help me rejoice in the gift of today and receive it with gratitude, no matter what it brings."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-6-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, thank You for inviting me to bring every care to You with a thankful heart. Instead of allowing worry to control my thoughts, teach me to trust in Your promises and rest in Your peace. Fill my heart with gratitude that overcomes fear, and help me recognize Your faithfulness in every circumstance. May thanksgiving become my response because I know You are always with me and always working for my good. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
+                ),
+                PrayerDay(
+                    dayNumber: 7,
+                    title: "Rejoice Always",
+                    chapterReference: "Philippians 4:4",
+                    summary: "Joy grows in a heart that continually rejoices in the Lord, regardless of changing circumstances.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-7-1",
+                            reference: "Philippians 4:4",
+                            text: "Rejoice in the Lord always; again I will say, rejoice!",
+                            prayer: "Father, teach me to find my joy in You, no matter what today brings."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-7-2",
+                            reference: "Nehemiah 8:10",
+                            text: "Do not be grieved, for the joy of the LORD is your strength.",
+                            prayer: "Lord, let Your joy become my strength when I feel weak or discouraged."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-7-3",
+                            reference: "Psalm 16:11",
+                            text: "In Thy presence is fullness of joy; In Thy right hand there are pleasures forever.",
+                            prayer: "Draw me close to You, where true joy is found in Your presence."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-7-4",
+                            reference: "Romans 15:13",
+                            text: "Now may the God of hope fill you with all joy and peace in believing...",
+                            prayer: "Fill my heart with lasting joy and confident hope as I continue trusting in You."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-7-5",
+                            reference: "Psalm 126:3",
+                            text: "The LORD has done great things for us; We are glad.",
+                            prayer: "Open my eyes to remember the great things You have done so my heart overflows with joyful gratitude."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-7-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, thank You for the joy that comes from knowing You. Let my gratitude become more than an occasional response—make it the attitude of my heart each day. When circumstances change, remind me that my joy is rooted in Your unchanging character and Your faithful promises. Fill my life with hope, peace, and gladness as I continue walking closely with You. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
+                ),
+                PrayerDay(
+                    dayNumber: 8,
+                    title: "Worship With Thanksgiving",
+                    chapterReference: "Psalm 95:2",
+                    summary: "Gratitude naturally overflows into worship as we remember God's greatness, goodness, and faithfulness.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-8-1",
+                            reference: "Psalm 95:2",
+                            text: "Let us come before His presence with thanksgiving, Let us shout joyfully to Him with psalms.",
+                            prayer: "Father, let my gratitude lead me into joyful worship as I come into Your presence today."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-8-2",
+                            reference: "Psalm 96:1–2",
+                            text: "Sing to the LORD a new song; Sing to the LORD, all the earth. Sing to the LORD, bless His name; Proclaim good tidings of His salvation from day to day.",
+                            prayer: "Place a song of praise in my heart so that my life continually declares Your goodness."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-8-3",
+                            reference: "Hebrews 13:15",
+                            text: "Through Him then, let us continually offer up a sacrifice of praise to God, that is, the fruit of lips that give thanks to His name.",
+                            prayer: "Receive my praise today as an offering of gratitude flowing from a sincere heart."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-8-4",
+                            reference: "Psalm 150:6",
+                            text: "Let everything that has breath praise the LORD. Praise the LORD!",
+                            prayer: "May every part of my life reflect praise to You, for You alone are worthy of worship."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-8-5",
+                            reference: "Revelation 7:12",
+                            text: "Amen, blessing and glory and wisdom and thanksgiving and honor and power and might, be to our God forever and ever. Amen.",
+                            prayer: "Lift my eyes beyond today and remind me that all glory and thanksgiving belong to You forever."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-8-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, thank You for inviting me into Your presence with thanksgiving and praise. As I remember who You are and all that You have done, may worship become the natural response of my heart. Let my gratitude be expressed not only through my words but also through the way I live, serve, and love others. May my life bring honor and glory to Your holy name. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
+                ),
+                PrayerDay(
+                    dayNumber: 9,
+                    title: "Grateful for God's Mercy",
+                    chapterReference: "Psalm 103:8",
+                    summary: "God's mercy reminds us that we receive far more grace than we deserve, leading us to a life of humble gratitude.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-9-1",
+                            reference: "Psalm 103:8",
+                            text: "The LORD is compassionate and gracious, Slow to anger and abounding in lovingkindness.",
+                            prayer: "Father, thank You for meeting me with compassion and mercy each day instead of giving me what I deserve."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-9-2",
+                            reference: "Lamentations 3:22–23",
+                            text: "The LORD'S lovingkindnesses indeed never cease, For His compassions never fail. They are new every morning; Great is Thy faithfulness.",
+                            prayer: "Thank You for renewing Your mercy every morning and faithfully walking with me each day."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-9-3",
+                            reference: "Ephesians 2:4–5",
+                            text: "But God, being rich in mercy, because of His great love with which He loved us, even when we were dead in our transgressions, made us alive together with Christ...",
+                            prayer: "Lord, I am grateful that Your mercy has given me new life through Jesus Christ."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-9-4",
+                            reference: "Micah 7:18",
+                            text: "Who is a God like Thee, who pardons iniquity... He does not retain His anger forever, Because He delights in unchanging love.",
+                            prayer: "Thank You for delighting in forgiveness and extending Your steadfast love to me."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-9-5",
+                            reference: "Hebrews 4:16",
+                            text: "Let us therefore draw near with confidence to the throne of grace, that we may receive mercy and may find grace to help in time of need.",
+                            prayer: "Help me come confidently into Your presence, knowing that You freely offer mercy and grace."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-9-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Merciful Father, thank You for loving me with a compassion that never fails. Your mercy has forgiven my sins, restored my hope, and welcomed me into Your family through Jesus Christ. Keep me humble as I remember the grace I have received, and help me extend that same mercy to others. May gratitude for Your compassion shape the way I live each day. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
+                ),
+                PrayerDay(
+                    dayNumber: 10,
+                    title: "Thankful for Salvation",
+                    chapterReference: "Ephesians 2:8–9",
+                    summary: "Our greatest reason for gratitude is the gift of salvation, freely given through God's grace in Jesus Christ.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-10-1",
+                            reference: "Ephesians 2:8–9",
+                            text: "For by grace you have been saved through faith; and that not of yourselves, it is the gift of God; not as a result of works, that no one should boast.",
+                            prayer: "Father, thank You that salvation is Your gracious gift and not something I could ever earn."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-10-2",
+                            reference: "John 3:16",
+                            text: "For God so loved the world, that He gave His only begotten Son, that whoever believes in Him should not perish, but have eternal life.",
+                            prayer: "Thank You for loving me so deeply that You gave Your Son so I could have eternal life."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-10-3",
+                            reference: "Romans 5:8",
+                            text: "But God demonstrates His own love toward us, in that while we were yet sinners, Christ died for us.",
+                            prayer: "Lord Jesus, thank You for laying down Your life for me while I was still a sinner."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-10-4",
+                            reference: "Colossians 1:13–14",
+                            text: "For He delivered us from the domain of darkness, and transferred us to the kingdom of His beloved Son, in whom we have redemption, the forgiveness of sins.",
+                            prayer: "Thank You for rescuing me from darkness and giving me redemption and forgiveness through Christ."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-10-5",
+                            reference: "Titus 3:5",
+                            text: "He saved us, not on the basis of deeds which we have done in righteousness, but according to His mercy...",
+                            prayer: "Keep me humble and grateful, remembering that Your mercy alone has brought me new life."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-10-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, thank You for the greatest gift I have ever received—salvation through Jesus Christ. Thank You for Your grace, Your mercy, and Your unfailing love that reached me when I could not save myself. Help me never lose the wonder of the cross or take Your forgiveness for granted. Let gratitude for my salvation shape every part of my life, filling me with humility, joy, and a desire to share Your love with others. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
+                )
+            ]
         )
     ]
 
