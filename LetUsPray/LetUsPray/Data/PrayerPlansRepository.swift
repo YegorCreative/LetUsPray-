@@ -1078,6 +1078,50 @@ enum PrayerPlansRepository {
                             prayer: "Heavenly Father, thank You for the gift of the Body of Christ. Thank You for brothers and sisters who encourage me, pray for me, challenge me, and walk beside me in faith. Help me not only receive their love but also become a source of encouragement, unity, and service to others. May my gratitude for Your family be reflected in the way I love, support, and build up Your Church. In Jesus' name, Amen. 🙏🏻"
                         )
                     ]
+                ),
+                PrayerDay(
+                    dayNumber: 18,
+                    title: "Gratitude That Encourages Others",
+                    chapterReference: "1 Thessalonians 5:11",
+                    summary: "A grateful heart naturally speaks words that strengthen, encourage, and build up those around us.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-18-1",
+                            reference: "1 Thessalonians 5:11",
+                            text: "Therefore encourage one another and build up one another, just as you also are doing.",
+                            prayer: "Father, help my words strengthen and encourage those You place in my life today."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-18-2",
+                            reference: "Ephesians 4:29",
+                            text: "Let no unwholesome word proceed from your mouth, but only such a word as is good for edification according to the need of the moment, so that it will give grace to those who hear.",
+                            prayer: "Teach me to speak words that give grace, hope, and encouragement to others."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-18-3",
+                            reference: "Proverbs 16:24",
+                            text: "Pleasant words are a honeycomb, Sweet to the soul and healing to the bones.",
+                            prayer: "May my speech bring kindness, healing, and comfort wherever You send me."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-18-4",
+                            reference: "Colossians 4:6",
+                            text: "Let your speech always be with grace, as though seasoned with salt, so that you will know how you should respond to each person.",
+                            prayer: "Fill my heart with gratitude so that grace naturally flows from my lips."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-18-5",
+                            reference: "Hebrews 3:13",
+                            text: "But encourage one another day after day... so that none of you will be hardened by the deceitfulness of sin.",
+                            prayer: "Use me to faithfully encourage others and help strengthen their walk with You."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-18-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, thank You for every person You have placed in my life. Let my gratitude overflow through words that encourage, comfort, and strengthen others. Guard my tongue from criticism, complaining, and discouragement. Instead, fill my heart so completely with Your goodness that my words become a source of grace and hope. May every conversation reflect the love of Christ and point others closer to You. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
                 )
             ]
         )
