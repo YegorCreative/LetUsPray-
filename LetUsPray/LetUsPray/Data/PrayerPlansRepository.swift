@@ -946,6 +946,50 @@ enum PrayerPlansRepository {
                             prayer: "Heavenly Father, thank You for the peace that comes from knowing You through Jesus Christ. When the world feels uncertain, remind me that Your peace is steady, faithful, and unchanging. Teach me to trust You with every concern and to let gratitude quiet my anxious thoughts. May Your peace guard my heart, direct my decisions, and overflow into the lives of those around me as I continue to walk with You. In Jesus' name, Amen. 🙏🏻"
                         )
                     ]
+                ),
+                PrayerDay(
+                    dayNumber: 15,
+                    title: "Gratitude That Gives",
+                    chapterReference: "2 Corinthians 9:11",
+                    summary: "A grateful heart recognizes God's generosity and joyfully reflects it by blessing others.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-15-1",
+                            reference: "2 Corinthians 9:11",
+                            text: "You will be enriched in everything for all liberality, which through us is producing thanksgiving to God.",
+                            prayer: "Father, thank You for every blessing You have entrusted to me. Help me use it generously for Your glory."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-15-2",
+                            reference: "Acts 20:35",
+                            text: "It is more blessed to give than to receive.",
+                            prayer: "Teach me the joy of giving with a willing and cheerful heart."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-15-3",
+                            reference: "Proverbs 11:25",
+                            text: "The generous man will be prosperous, And he who waters will himself be watered.",
+                            prayer: "Make me generous in kindness, encouragement, and compassion toward those around me."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-15-4",
+                            reference: "Luke 6:38",
+                            text: "Give, and it will be given to you. They will pour into your lap a good measure—pressed down, shaken together, and running over.",
+                            prayer: "Keep my hands open to bless others just as You have abundantly blessed me."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-15-5",
+                            reference: "Hebrews 13:16",
+                            text: "And do not neglect doing good and sharing; for with such sacrifices God is pleased.",
+                            prayer: "Help me delight in doing good and sharing with others as an act of worship."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-15-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, thank You for Your overwhelming generosity toward me. Everything I have ultimately comes from Your loving hand. Guard my heart from selfishness and teach me to give freely, joyfully, and faithfully. May my gratitude be seen not only in my words but also in my generosity, compassion, and willingness to serve others. Let my life point people back to You, the Giver of every good and perfect gift. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
                 )
             ]
         )
