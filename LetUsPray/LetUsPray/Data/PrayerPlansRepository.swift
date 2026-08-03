@@ -814,6 +814,50 @@ enum PrayerPlansRepository {
                             prayer: "Heavenly Father, thank You for the incredible gift of Your presence. More than any earthly blessing, I treasure the assurance that You are always with me. Thank You for walking beside me in seasons of joy and carrying me through seasons of difficulty. Fill my heart with peace, courage, and confidence as I continue to follow You. May I seek Your presence above all else, knowing that in You I have everything I truly need. In Jesus' name, Amen. 🙏🏻"
                         )
                     ]
+                ),
+                PrayerDay(
+                    dayNumber: 12,
+                    title: "Thankful in Trials",
+                    chapterReference: "James 1:2–3",
+                    summary: "Even in difficult seasons, we can thank God because He faithfully uses trials to strengthen our faith and shape our character.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-12-1",
+                            reference: "James 1:2–3",
+                            text: "Consider it all joy, my brethren, when you encounter various trials, knowing that the testing of your faith produces endurance.",
+                            prayer: "Father, help me trust that You are strengthening my faith even when life is difficult."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-12-2",
+                            reference: "Romans 5:3–5",
+                            text: "And not only this, but we also exult in our tribulations, knowing that tribulation brings about perseverance; and perseverance, proven character; and proven character, hope...",
+                            prayer: "Thank You for continuing Your work in my life, producing endurance, character, and lasting hope."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-12-3",
+                            reference: "2 Corinthians 12:9",
+                            text: "And He has said to me, 'My grace is sufficient for you, for power is perfected in weakness.'",
+                            prayer: "Lord, remind me that Your grace is sufficient and Your strength is made perfect in my weakness."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-12-4",
+                            reference: "1 Peter 1:6–7",
+                            text: "In this you greatly rejoice, even though now for a little while, if necessary, you have been distressed by various trials... so that the proof of your faith... may be found to result in praise and glory and honor at the revelation of Jesus Christ.",
+                            prayer: "Refine my faith through every trial so that my life brings glory and honor to You."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-12-5",
+                            reference: "Psalm 34:18",
+                            text: "The LORD is near to the brokenhearted And saves those who are crushed in spirit.",
+                            prayer: "Thank You for drawing near to me in moments of sorrow and surrounding me with Your faithful love."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-12-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, thank You that even in my trials I am never outside of Your loving care. When I cannot understand what You are doing, help me trust Your wisdom, rest in Your grace, and remember that You are shaping me into the image of Christ. Thank You for Your constant presence, Your sustaining strength, and the hope You provide in every season. May I continue to praise You, knowing that You remain faithful through every trial. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
                 )
             ]
         )
