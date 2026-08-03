@@ -770,6 +770,50 @@ enum PrayerPlansRepository {
                             prayer: "Heavenly Father, thank You for the greatest gift I have ever received—salvation through Jesus Christ. Thank You for Your grace, Your mercy, and Your unfailing love that reached me when I could not save myself. Help me never lose the wonder of the cross or take Your forgiveness for granted. Let gratitude for my salvation shape every part of my life, filling me with humility, joy, and a desire to share Your love with others. In Jesus' name, Amen. 🙏🏻"
                         )
                     ]
+                ),
+                PrayerDay(
+                    dayNumber: 11,
+                    title: "Thankful for God's Presence",
+                    chapterReference: "Psalm 16:11",
+                    summary: "God's greatest blessing is His presence, which brings joy, peace, strength, and the assurance that we are never alone.",
+                    verses: [
+                        PrayerVerse(
+                            id: "gratitude-11-1",
+                            reference: "Psalm 16:11",
+                            text: "Thou wilt make known to me the path of life; In Thy presence is fullness of joy; In Thy right hand there are pleasures forever.",
+                            prayer: "Father, thank You that true joy is found in Your presence and not in the changing circumstances of life."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-11-2",
+                            reference: "Matthew 28:20",
+                            text: "…and lo, I am with you always, even to the end of the age.",
+                            prayer: "Lord Jesus, thank You for Your promise that You will never leave me and are always with me."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-11-3",
+                            reference: "Deuteronomy 31:8",
+                            text: "And the LORD is the one who goes ahead of you; He will be with you. He will not fail you or forsake you. Do not fear or be dismayed.",
+                            prayer: "Strengthen my heart with the assurance that You go before me and faithfully remain by my side."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-11-4",
+                            reference: "Psalm 46:1",
+                            text: "God is our refuge and strength, A very present help in trouble.",
+                            prayer: "Thank You for being my refuge and my ever-present help whenever I call upon You."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-11-5",
+                            reference: "Hebrews 13:5",
+                            text: "…for He Himself has said, 'I will never desert you, nor will I ever forsake you.'",
+                            prayer: "Help me rest confidently in the promise that I am never alone because You are always faithful."
+                        ),
+                        PrayerVerse(
+                            id: "gratitude-11-closing",
+                            reference: "Closing",
+                            text: "In Jesus' name, Amen. 🙏🏻",
+                            prayer: "Heavenly Father, thank You for the incredible gift of Your presence. More than any earthly blessing, I treasure the assurance that You are always with me. Thank You for walking beside me in seasons of joy and carrying me through seasons of difficulty. Fill my heart with peace, courage, and confidence as I continue to follow You. May I seek Your presence above all else, knowing that in You I have everything I truly need. In Jesus' name, Amen. 🙏🏻"
+                        )
+                    ]
                 )
             ]
         )
