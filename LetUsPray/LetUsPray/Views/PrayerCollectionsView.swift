@@ -679,49 +679,175 @@ struct PrayerCollectionsView: View {
 
 private struct PrayerPlanSuggestionView: View {
     @Environment(\.dismiss) private var dismiss
+    @State private var fullName = ""
+    @State private var emailAddress = ""
     @State private var planName = ""
     @State private var planDescription = ""
+    @State private var allowsCredit = false
     @State private var showingSuccess = false
 
+    private var trimmedName: String {
+        fullName.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    private var emailIsValid: Bool {
+        let trimmed = emailAddress.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard let atIndex = trimmed.firstIndex(of: "@") else { return false }
+        let domain = trimmed[trimmed.index(after: atIndex)...]
+        return atIndex != trimmed.startIndex && domain.contains(".") && !domain.hasSuffix(".")
+    }
+
     private var canSubmit: Bool {
-        !planName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        emailIsValid && !planName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+
+    private var creditBinding: Binding<Bool> {
+        Binding(
+            get: { allowsCredit && !trimmedName.isEmpty },
+            set: { allowsCredit = $0 }
+        )
     }
 
     var body: some View {
         NavigationStack {
-            Form {
-                Section("Prayer Plan Name") {
-                    TextField("Required", text: $planName)
-                        .textInputAutocapitalization(.words)
-                        .accessibilityLabel("Prayer Plan Name, required")
-                }
-
-                Section("Optional Description") {
-                    TextField("Tell us what you would like this plan to cover", text: $planDescription, axis: .vertical)
-                        .lineLimit(3...6)
-                }
-
-                Section {
-                    Button("Submit") {
-                        showingSuccess = true
-                    }
-                    .frame(maxWidth: .infinity)
-                    .disabled(!canSubmit)
+            Group {
+                if showingSuccess {
+                    successContent
+                } else {
+                    suggestionForm
                 }
             }
-            .navigationTitle("Suggest a Prayer Plan")
+            .navigationTitle(showingSuccess ? "Thank You!" : "Suggest a Prayer Plan")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") { dismiss() }
+                if !showingSuccess {
+                    ToolbarItem(placement: .cancellationAction) {
+                        Button("Cancel") { dismiss() }
+                    }
                 }
             }
-            .alert("Suggestion Received", isPresented: $showingSuccess) {
-                Button("Done") { dismiss() }
-            } message: {
-                Text("Thank you for helping shape future updates to LetUsPray.")
+        }
+    }
+
+    private var suggestionForm: some View {
+        Form {
+            Section {
+                Text("Help shape the future of LetUsPray.")
+                    .font(AppTypography.secondaryBody())
+                    .foregroundStyle(AppColors.textSecondary)
+            }
+
+            Section {
+                TextField("John Smith", text: $fullName)
+                    .textContentType(.name)
+                    .textInputAutocapitalization(.words)
+                    .accessibilityLabel("Full Name, optional")
+            } header: {
+                Text("Full Name · Optional")
+            } footer: {
+                Text("So I can personally thank you if your suggestion is selected.")
+            }
+
+            Section {
+                TextField("name@example.com", text: $emailAddress)
+                    .textContentType(.emailAddress)
+                    .keyboardType(.emailAddress)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
+                    .accessibilityLabel("Email Address, required")
+            } header: {
+                Text("Email Address · Required")
+            } footer: {
+                Text("I'll send you a thank-you email and let you know if your suggestion is added to LetUsPray.")
+            }
+
+            Section("Prayer Plan Name · Required") {
+                TextField("Overcoming Fear", text: $planName)
+                    .textInputAutocapitalization(.words)
+                    .accessibilityLabel("Prayer Plan Name, required")
+            }
+
+            Section("Tell Me More · Optional") {
+                ZStack(alignment: .topLeading) {
+                    if planDescription.isEmpty {
+                        Text("What would you like this prayer plan to cover?")
+                            .foregroundStyle(AppColors.tertiaryText)
+                            .padding(.horizontal, 5)
+                            .padding(.vertical, 8)
+                            .allowsHitTesting(false)
+                    }
+                    TextEditor(text: $planDescription)
+                        .frame(minHeight: 120)
+                        .scrollContentBackground(.hidden)
+                }
+            }
+
+            Section {
+                Toggle(isOn: creditBinding) {
+                    VStack(alignment: .leading, spacing: AppSpacing.small) {
+                        Text("If this prayer plan is added to LetUsPray, you may credit it as:")
+                        if !trimmedName.isEmpty {
+                            Text("\"Inspired by \(trimmedName).\"")
+                                .font(AppTypography.caption())
+                                .foregroundStyle(AppColors.textSecondary)
+                        }
+                    }
+                    .fixedSize(horizontal: false, vertical: true)
+                }
+                .disabled(trimmedName.isEmpty)
+                .accessibilityHint(trimmedName.isEmpty ? "Enter your full name to enable credit." : "Allows LetUsPray to credit your contribution if the plan is selected.")
+            } header: {
+                Text("Credit · Optional")
+            }
+
+            Section {
+                Button("Submit") {
+                    showingSuccess = true
+                }
+                .frame(maxWidth: .infinity)
+                .disabled(!canSubmit)
             }
         }
+    }
+
+    private var successContent: some View {
+        ScrollView(showsIndicators: false) {
+            VStack(alignment: .leading, spacing: AppSpacing.large) {
+                InfoCard(padding: AppSpacing.large) {
+                    VStack(alignment: .leading, spacing: AppSpacing.medium) {
+                        Text("Thank You!")
+                            .font(AppTypography.largeDisplay())
+                            .foregroundStyle(AppColors.textPrimary)
+
+                        Text("""
+                        Thank you for taking the time to help build LetUsPray.
+
+                        Your suggestion has been received, and I truly appreciate you sharing your idea.
+
+                        Please know that I'll be praying for you, and I'm grateful you're part of this journey.
+
+                        Every suggestion is personally reviewed as I continue building LetUsPray one prayer at a time.
+
+                        If your idea is selected, I'll reach out using the email you provided. If you've chosen to be credited, I'd be honored to recognize your contribution inside the app.
+
+                        God bless you.
+
+                        — Yegor
+                        """)
+                        .font(AppTypography.secondaryBody())
+                        .foregroundStyle(AppColors.textSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+
+                Button("Done") { dismiss() }
+                    .buttonStyle(.borderedProminent)
+                    .tint(AppColors.accentCyan)
+                    .frame(maxWidth: .infinity)
+            }
+            .padding(AppSpacing.large)
+        }
+        .background(PrayerBackground())
     }
 }
 
