@@ -30,7 +30,6 @@ struct ContentView: View {
     @AppStorage(PrayerStorageKeys.achievementUnlockDates) private var achievementUnlockDatesRawValue = "{}"
     @AppStorage("settings.startOnHome") private var startOnHomeEnabled = true
     @AppStorage("settings.lastSelectedTab") private var lastSelectedTab = 0
-    @AppStorage("settings.appearance") private var appearanceRawValue = AppAppearance.system.rawValue
     @State private var selectedTodayDay: PrayerDay?
     @State private var selectedHomePlan: PrayerPlan?
     @State private var selectedTab = 0
@@ -47,7 +46,7 @@ struct ContentView: View {
                 }
             }
         }
-        .preferredColorScheme(AppAppearance(rawValue: appearanceRawValue)?.colorScheme)
+        .preferredColorScheme(.dark)
         .onAppear {
             migrateSavedPrayerRecordsIfNeeded()
         }

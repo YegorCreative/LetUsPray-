@@ -35,6 +35,10 @@ struct PrayerSurfaceModifier: ViewModifier {
                     )
                     .overlay {
                         RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
+                            .fill(AppColors.glassHighlight)
+                    }
+                    .overlay {
+                        RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
                             .stroke(AppColors.glassStroke, lineWidth: 1)
                     }
                     .shadow(color: AppColors.shadow, radius: 18, x: 0, y: 8)

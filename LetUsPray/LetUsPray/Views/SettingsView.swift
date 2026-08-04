@@ -23,30 +23,6 @@ private enum SettingsDestinations {
     )!
 }
 
-enum AppAppearance: String, CaseIterable, Identifiable {
-    case system
-    case light
-    case dark
-
-    var id: Self { self }
-
-    var title: String {
-        switch self {
-        case .system: "System"
-        case .light: "Light"
-        case .dark: "Dark"
-        }
-    }
-
-    var colorScheme: ColorScheme? {
-        switch self {
-        case .system: nil
-        case .light: .light
-        case .dark: .dark
-        }
-    }
-}
-
 enum PrayerReadingSpeed: String, CaseIterable, Identifiable {
     case reflective
     case balanced
@@ -81,7 +57,6 @@ struct SettingsView: View {
     @AppStorage("settings.readAloud") private var readAloudEnabled = false
     @AppStorage("settings.readingSpeed") private var readingSpeedRawValue = PrayerReadingSpeed.reflective.rawValue
     @AppStorage("settings.hapticFeedback") private var hapticFeedbackEnabled = true
-    @AppStorage("settings.appearance") private var appearanceRawValue = AppAppearance.system.rawValue
     @AppStorage("settings.autoContinueJourney") private var autoContinueJourneyEnabled = true
     @AppStorage("settings.startOnHome") private var startOnHomeEnabled = true
     @AppStorage(PrayerStorageKeys.currentStreak) private var currentStreak = 0
@@ -100,7 +75,6 @@ struct SettingsView: View {
             appIdentitySection
             dailyPrayerSection
             prayerExperienceSection
-            appearanceSection
             progressSection
             supportSection
             legalSection
@@ -230,23 +204,6 @@ struct SettingsView: View {
             Text("Prayer Experience")
         } footer: {
             Text("Choose how LetUsPray supports your prayer without changing the prayer itself.")
-        }
-    }
-
-    private var appearanceSection: some View {
-        Section {
-            Picker("Appearance", selection: $appearanceRawValue) {
-                ForEach(AppAppearance.allCases) { appearance in
-                    Text(appearance.title)
-                        .tag(appearance.rawValue)
-                }
-            }
-            .pickerStyle(.segmented)
-            .accessibilityHint("Chooses System, Light, or Dark appearance.")
-        } header: {
-            Text("Appearance")
-        } footer: {
-            Text("System follows your device appearance automatically.")
         }
     }
 

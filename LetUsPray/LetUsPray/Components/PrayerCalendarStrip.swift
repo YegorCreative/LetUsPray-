@@ -54,14 +54,21 @@ struct PrayerCalendarStrip: View {
         .background(cardBackground)
     }
 
-    /// Deliberately not `.prayerSurface()` — that shared style bakes in a white→blue→green
-    /// highlight gradient, which is exactly the multi-hue effect the new "98% solid, 2% depth"
-    /// language rules out. Fixing the shared token is Phase X scope; this card gets its own
-    /// minimal background instead: one base color, a near-invisible white overlay for depth,
-    /// no hue transition anywhere.
+    /// Deliberately not `.prayerSurface()` — this card keeps its own minimal background instead:
+    /// one base color, a near-invisible white overlay for premium surface depth, no hue transition.
     private var cardBackground: some View {
         RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
             .fill(AppColors.surface)
+            .overlay {
+                RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [Color.white.opacity(0.03), .clear],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                    )
+            }
             .overlay {
                 RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
                     .stroke(AppColors.separator, lineWidth: 1)

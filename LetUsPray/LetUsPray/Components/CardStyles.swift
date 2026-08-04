@@ -15,7 +15,16 @@ struct HeroCard<Background: View, Content: View>: View {
         content
             .padding(AppSpacing.heroPadding)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(gradient)
+            .background {
+                ZStack {
+                    gradient
+                    LinearGradient(
+                        colors: [Color.black.opacity(0.16), .clear, Color.black.opacity(0.10)],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                }
+            }
             .clipShape(RoundedRectangle(cornerRadius: AppSpacing.heroCornerRadius, style: .continuous))
             .overlay {
                 RoundedRectangle(cornerRadius: AppSpacing.heroCornerRadius, style: .continuous)
