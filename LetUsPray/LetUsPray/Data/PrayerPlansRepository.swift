@@ -30,6 +30,17 @@ enum PrayerPlansRepository {
             days: []
         ),
         PrayerPlan(
+            id: "easter",
+            title: "Easter",
+            subtitle: "Walk through the cross and resurrection of Jesus",
+            description: "Journey through the promise, sacrifice, resurrection, and victory of Jesus Christ.",
+            category: .gospel,
+            durationDays: 14,
+            accentColorName: "gospel",
+            coverIcon: "cross.fill",
+            days: []
+        ),
+        PrayerPlan(
             id: "anxiety-and-peace",
             title: "Anxiety & Peace",
             subtitle: "Scripture prayers for rest, trust, and calm",

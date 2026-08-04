@@ -52,29 +52,34 @@ struct PlanDetailView: View {
         self.onOpenJourney = onOpenJourney
     }
 
+    @ViewBuilder
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(alignment: .leading, spacing: AppSpacing.large) {
-                heroSection
-                actionSection
-                progressSection
-                journeyOverviewSection
-                if !plan.days.isEmpty {
-                    journeyDaysSection
+        if let journeyPlan = JourneyPlansRepository.planByID(plan.id) {
+            JourneyPlanDetailView(plan: journeyPlan)
+        } else {
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading, spacing: AppSpacing.large) {
+                    heroSection
+                    actionSection
+                    progressSection
+                    journeyOverviewSection
+                    if !plan.days.isEmpty {
+                        journeyDaysSection
+                    }
+                    secondaryActionsSection
+                    recommendationsSection
                 }
-                secondaryActionsSection
-                recommendationsSection
+                .padding(.horizontal, AppSpacing.large)
+                .padding(.top, AppSpacing.medium)
+                .padding(.bottom, AppSpacing.xxLarge)
             }
-            .padding(.horizontal, AppSpacing.large)
-            .padding(.top, AppSpacing.medium)
-            .padding(.bottom, AppSpacing.xxLarge)
-        }
-        .background(PrayerBackground())
-        .navigationTitle("")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(.hidden, for: .navigationBar)
-        .onAppear {
-            journeyProgressRecord = PrayerJourneyProgressStore.record(for: plan.id)
+            .background(PrayerBackground())
+            .navigationTitle("")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(.hidden, for: .navigationBar)
+            .onAppear {
+                journeyProgressRecord = PrayerJourneyProgressStore.record(for: plan.id)
+            }
         }
     }
 
