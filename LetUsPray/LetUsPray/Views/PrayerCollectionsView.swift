@@ -15,6 +15,8 @@ struct PrayerCollectionsView: View {
     @State private var searchSort: JourneySortOption = .recommended
     @State private var showingFilters = false
     @State private var recentSearches: [String] = []
+    @State private var showingComingSoonMessage = false
+    @State private var showingPlanSuggestion = false
 
     private var collections: [JourneyCollection] { PrayerJourneyCatalog.collections }
 
@@ -141,20 +143,40 @@ struct PrayerCollectionsView: View {
 
     private var allPlansList: some View {
         ScrollView(showsIndicators: false) {
-            LazyVStack(alignment: .leading, spacing: AppSpacing.medium) {
-                Text("\(allJourneys.count) available plan\(allJourneys.count == 1 ? "" : "s")")
-                    .font(AppTypography.metadata())
-                    .foregroundStyle(AppColors.textSecondary)
-
-                GroupedCard {
-                    ForEach(Array(allJourneys.enumerated()), id: \.element.id) { index, journey in
-                        journeySearchLink(
-                            journey,
-                            showsDivider: index < allJourneys.count - 1,
-                            showsDescription: true
-                        )
+            LazyVStack(alignment: .leading, spacing: AppSpacing.large) {
+                if !availableJourneys.isEmpty {
+                    planListSection(title: "Available Now") {
+                        GroupedCard {
+                            ForEach(Array(availableJourneys.enumerated()), id: \.element.id) { index, journey in
+                                journeySearchLink(
+                                    journey,
+                                    showsDivider: index < availableJourneys.count - 1,
+                                    showsDescription: true
+                                )
+                            }
+                        }
                     }
                 }
+
+                if !comingSoonJourneys.isEmpty {
+                    planListSection(title: "Coming Soon") {
+                        GroupedCard {
+                            ForEach(Array(comingSoonJourneys.enumerated()), id: \.element.id) { index, journey in
+                                Button {
+                                    showingComingSoonMessage = true
+                                } label: {
+                                    GroupedRow(showsDivider: index < comingSoonJourneys.count - 1) {
+                                        comingSoonRowContent(journey)
+                                    }
+                                }
+                                .buttonStyle(.plain)
+                                .accessibilityHint("Shows information about when this plan will be available.")
+                            }
+                        }
+                    }
+                }
+
+                suggestionSection
             }
             .padding(.horizontal, AppSpacing.large)
             .padding(.top, AppSpacing.medium)
@@ -164,6 +186,89 @@ struct PrayerCollectionsView: View {
         .navigationTitle("All Plans")
         .navigationBarTitleDisplayMode(.large)
         .toolbarBackground(.hidden, for: .navigationBar)
+        .alert("Coming Soon", isPresented: $showingComingSoonMessage) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("This prayer plan is currently in development and will be available in a future update.")
+        }
+        .sheet(isPresented: $showingPlanSuggestion) {
+            PrayerPlanSuggestionView()
+        }
+    }
+
+    private var availableJourneys: [PrayerJourney] {
+        allJourneys.filter(isAvailable)
+    }
+
+    private var comingSoonJourneys: [PrayerJourney] {
+        allJourneys.filter { !isAvailable($0) }
+    }
+
+    private func isAvailable(_ journey: PrayerJourney) -> Bool {
+        if !journey.plan.days.isEmpty || journey.plan.id == "psalms-journey-overview" {
+            return true
+        }
+        return JourneyPlansRepository.planByID(journey.plan.id)?.days.isEmpty == false
+    }
+
+    private func planListSection<Content: View>(
+        title: String,
+        @ViewBuilder content: () -> Content
+    ) -> some View {
+        VStack(alignment: .leading, spacing: AppSpacing.small) {
+            Text(title)
+                .font(AppTypography.headline())
+                .foregroundStyle(AppColors.textPrimary)
+            content()
+        }
+    }
+
+    private func comingSoonRowContent(_ journey: PrayerJourney) -> some View {
+        HStack(spacing: AppSpacing.medium) {
+            journeyArtwork(journey)
+            VStack(alignment: .leading, spacing: 4) {
+                Text(journey.title)
+                    .font(AppTypography.cardTitle())
+                    .foregroundStyle(AppColors.primaryText)
+                    .fixedSize(horizontal: false, vertical: true)
+                Text(journey.description)
+                    .font(AppTypography.caption())
+                    .foregroundStyle(AppColors.secondaryText)
+                    .fixedSize(horizontal: false, vertical: true)
+                Text("Coming Soon")
+                    .font(AppTypography.metadata())
+                    .foregroundStyle(AppColors.planAccent(named: journey.accentColorName))
+            }
+            Spacer(minLength: AppSpacing.small)
+            Image(systemName: "clock")
+                .foregroundStyle(AppColors.tertiaryText)
+                .accessibilityHidden(true)
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(journey.title), \(journey.description), Coming Soon")
+    }
+
+    private var suggestionSection: some View {
+        InfoCard(padding: AppSpacing.large) {
+            VStack(alignment: .leading, spacing: AppSpacing.medium) {
+                VStack(alignment: .leading, spacing: AppSpacing.small) {
+                    Text("Looking for something else?")
+                        .font(AppTypography.headline())
+                        .foregroundStyle(AppColors.textPrimary)
+                    Text("Don't see the prayer plan you're looking for? We'd love to hear your ideas. Every suggestion helps shape future updates to LetUsPray.")
+                        .font(AppTypography.secondaryBody())
+                        .foregroundStyle(AppColors.textSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+
+                Button("Suggest a Prayer Plan") {
+                    showingPlanSuggestion = true
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(AppColors.accentCyan)
+                .accessibilityHint("Opens a form to suggest a future prayer plan.")
+            }
+        }
     }
 
     @ViewBuilder
@@ -569,6 +674,54 @@ struct PrayerCollectionsView: View {
             .padding(.horizontal, 7)
             .padding(.vertical, 3)
             .background(color.opacity(0.14), in: Capsule())
+    }
+}
+
+private struct PrayerPlanSuggestionView: View {
+    @Environment(\.dismiss) private var dismiss
+    @State private var planName = ""
+    @State private var planDescription = ""
+    @State private var showingSuccess = false
+
+    private var canSubmit: Bool {
+        !planName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section("Prayer Plan Name") {
+                    TextField("Required", text: $planName)
+                        .textInputAutocapitalization(.words)
+                        .accessibilityLabel("Prayer Plan Name, required")
+                }
+
+                Section("Optional Description") {
+                    TextField("Tell us what you would like this plan to cover", text: $planDescription, axis: .vertical)
+                        .lineLimit(3...6)
+                }
+
+                Section {
+                    Button("Submit") {
+                        showingSuccess = true
+                    }
+                    .frame(maxWidth: .infinity)
+                    .disabled(!canSubmit)
+                }
+            }
+            .navigationTitle("Suggest a Prayer Plan")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") { dismiss() }
+                }
+            }
+            .alert("Suggestion Received", isPresented: $showingSuccess) {
+                Button("Done") { dismiss() }
+            } message: {
+                Text("Thank you for helping shape future updates to LetUsPray.")
+            }
+        }
     }
 }
 
