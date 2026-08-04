@@ -101,7 +101,7 @@ enum AppColors {
         }
     }
 
-    private static func adaptive(light: UIColor, dark: UIColor) -> Color {
+    nonisolated private static func adaptive(light: UIColor, dark: UIColor) -> Color {
         Color(uiColor: UIColor { traits in
             traits.userInterfaceStyle == .dark ? dark : light
         })
