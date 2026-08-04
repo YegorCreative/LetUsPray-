@@ -2,8 +2,9 @@ import SwiftUI
 import UIKit
 
 /// Semantic colors for the product, matching the LetUsPray Brand Guide v1.1.
-/// Dark values are the locked brand palette; light values are the guide's approved proposal.
-/// Every color adapts to the system appearance.
+/// Theme Rule: Dark values are the single locked brand palette. Brand/accent/status/border
+/// colors are IDENTICAL in both appearances — Light Mode changes only background, surface,
+/// text, shadows, and separators. Nothing else adapts.
 enum AppColors {
     // Background & Surfaces — Guide §3–§4
     static let background = adaptive(light: UIColor(red: 0.9804, green: 0.9804, blue: 0.9725, alpha: 1), dark: UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1)) // #FAFAF8 / #000000 — true black, no tint
@@ -25,13 +26,13 @@ enum AppColors {
     static let textSecondary = secondaryText
     static let textTertiary = tertiaryText
 
-    // Primary Brand — Guide §1 (locked)
-    static let accent = adaptive(light: UIColor(red: 0.4863, green: 0.6431, blue: 0.0, alpha: 1), dark: UIColor(red: 0.7294, green: 0.9922, blue: 0.3098, alpha: 1)) // #7CA400 / #BAFD4F — Primary Green
+    // Primary Brand — Guide §1 (locked). Theme-invariant: same hex in both appearances.
+    static let accent = adaptive(light: UIColor(red: 0.7294, green: 0.9922, blue: 0.3098, alpha: 1), dark: UIColor(red: 0.7294, green: 0.9922, blue: 0.3098, alpha: 1)) // #BAFD4F — Primary Green, both appearances
     static let primaryGreen = accent
-    static let primaryBlue = adaptive(light: UIColor(red: 0.0, green: 0.4784, blue: 1.0, alpha: 1), dark: UIColor(red: 0.0392, green: 0.5176, blue: 1.0, alpha: 1)) // #007AFF / #0A84FF
+    static let primaryBlue = adaptive(light: UIColor(red: 0.0392, green: 0.5176, blue: 1.0, alpha: 1), dark: UIColor(red: 0.0392, green: 0.5176, blue: 1.0, alpha: 1)) // #0A84FF, both appearances
 
     // Secondary — Guide §2 (Secondary Green retired with this revision; use accent at reduced opacity instead)
-    static let secondaryBlue = adaptive(light: UIColor(red: 0.2000, green: 0.6157, blue: 1.0, alpha: 1), dark: UIColor(red: 0.3922, green: 0.8235, blue: 1.0, alpha: 1)) // derived / #64D2FF
+    static let secondaryBlue = adaptive(light: UIColor(red: 0.3922, green: 0.8235, blue: 1.0, alpha: 1), dark: UIColor(red: 0.3922, green: 0.8235, blue: 1.0, alpha: 1)) // #64D2FF, both appearances
 
     // Accent & Celebration — Guide §6
     // `electricCyan` keeps the "general informational blue" role it already carried across the app
@@ -39,14 +40,16 @@ enum AppColors {
     static let electricCyan = primaryBlue
     // `accentCyan` is the guide's true Accent Cyan — reserved exclusively for the Guided Prayer
     // surface and the Read Aloud speed control. It must not be used anywhere else.
-    static let accentCyan = adaptive(light: UIColor(red: 0.1961, green: 0.6784, blue: 0.9020, alpha: 1), dark: UIColor(red: 0.3529, green: 0.7843, blue: 0.9804, alpha: 1)) // #32ADE6 / #5AC8FA
+    static let accentCyan = adaptive(light: UIColor(red: 0.3529, green: 0.7843, blue: 0.9804, alpha: 1), dark: UIColor(red: 0.3529, green: 0.7843, blue: 0.9804, alpha: 1)) // #5AC8FA, both appearances
     // Celebration Accent — achievements, streak milestones, featured CTAs only. Never a background or large fill.
-    static let celebrationAccent = adaptive(light: UIColor(red: 0.6627, green: 0.7451, blue: 0.0, alpha: 1), dark: UIColor(red: 0.8667, green: 0.9961, blue: 0.0, alpha: 1)) // #A9BE00 / #DDFE00
+    static let celebrationAccent = adaptive(light: UIColor(red: 0.8667, green: 0.9961, blue: 0.0, alpha: 1), dark: UIColor(red: 0.8667, green: 0.9961, blue: 0.0, alpha: 1)) // #DDFE00, both appearances
 
     // Status — Guide §7 (Success is the same value as Primary Green — completion is progress finished, not a separate feeling)
     static let success = accent
-    static let warning = adaptive(light: UIColor(red: 0.5608, green: 0.4353, blue: 0.0, alpha: 1), dark: UIColor(red: 1.0, green: 0.8392, blue: 0.0392, alpha: 1)) // #8F6F00 / #FFD60A
-    static let error = adaptive(light: UIColor(red: 0.7176, green: 0.1412, blue: 0.1216, alpha: 1), dark: UIColor(red: 1.0, green: 0.2706, blue: 0.2275, alpha: 1)) // #B7241F / #FF453A
+    static let warning = adaptive(light: UIColor(red: 1.0, green: 0.8392, blue: 0.0392, alpha: 1), dark: UIColor(red: 1.0, green: 0.8392, blue: 0.0392, alpha: 1)) // #FFD60A, both appearances
+    static let error = adaptive(light: UIColor(red: 1.0, green: 0.2706, blue: 0.2275, alpha: 1), dark: UIColor(red: 1.0, green: 0.2706, blue: 0.2275, alpha: 1)) // #FF453A, both appearances
+    // Separator is the one deliberate exception to the Theme Rule: like text color, it exists
+    // purely for readability, and a fixed alpha would be invisible against one of the two backgrounds.
     static let separator = adaptive(light: UIColor.black.withAlphaComponent(0.12), dark: UIColor.white.withAlphaComponent(0.16))
 
     // Retired hues — repointed rather than deleted, so every existing call site inherits the
@@ -80,12 +83,7 @@ enum AppColors {
     static let prayerGold = celebrationAccent
     static let brightTextOnAccent = adaptive(light: UIColor(red: 0.04, green: 0.09, blue: 0.02, alpha: 1), dark: UIColor(red: 0.04, green: 0.09, blue: 0.02, alpha: 1))
     static let glassFill = surface
-    static let glassStroke = adaptive(light: UIColor(red: 0.4863, green: 0.6431, blue: 0.0, alpha: 0.20), dark: UIColor(red: 0.7294, green: 0.9922, blue: 0.3098, alpha: 0.22))
-    static let glassHighlight = LinearGradient(
-        colors: [Color.white.opacity(0.18), primaryBlue.opacity(0.07), accent.opacity(0.08), .clear],
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
-    )
+    static let glassStroke = adaptive(light: UIColor(red: 0.7294, green: 0.9922, blue: 0.3098, alpha: 0.22), dark: UIColor(red: 0.7294, green: 0.9922, blue: 0.3098, alpha: 0.22)) // #BAFD4F @ 22%, both appearances
     static let shadow = Color.black.opacity(0.22)
 
     /// Guide §13 category → hue remap: Wisdom & Gospel → Green · Psalms & Family → Blue · Gratitude & Encouragement → Cyan

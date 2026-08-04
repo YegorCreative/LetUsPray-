@@ -5,7 +5,7 @@ struct JourneyProgressCard: View {
     let completedDays: Int
     let totalDays: Int
     var accent: Color = AppColors.voltLime
-    var gradient: LinearGradient = BrandGradients.prayerProgress
+    var gradient: Color = BrandGradients.prayerProgress
 
     private var progress: Double {
         guard totalDays > 0 else { return 0 }

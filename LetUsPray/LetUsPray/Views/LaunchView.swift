@@ -15,50 +15,23 @@ struct LaunchView: View {
             
             // Large liquid glass element - Top Left
             Ellipse()
-                .fill(
-                    LinearGradient(
-                        colors: [
-                            Color(red: 0.45, green: 0.85, blue: 0.88).opacity(0.25),
-                            Color(red: 0.35, green: 0.75, blue: 0.82).opacity(0.15)
-                        ],
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    )
-                )
+                .fill(Color(red: 0.45, green: 0.85, blue: 0.88).opacity(0.25))
                 .frame(width: 450, height: 500)
                 .blur(radius: 40)
                 .offset(x: -180, y: -320 + glassOffset1)
                 .opacity(0.8)
-            
+
             // Large liquid glass element - Right Side
             Ellipse()
-                .fill(
-                    LinearGradient(
-                        colors: [
-                            Color(red: 0.3, green: 0.65, blue: 0.95).opacity(0.22),
-                            Color(red: 0.4, green: 0.75, blue: 0.92).opacity(0.12)
-                        ],
-                        startPoint: .topTrailing,
-                        endPoint: .bottomLeading
-                    )
-                )
+                .fill(Color(red: 0.3, green: 0.65, blue: 0.95).opacity(0.22))
                 .frame(width: 400, height: 550)
                 .blur(radius: 45)
                 .offset(x: 200, y: -180 + glassOffset2)
                 .opacity(0.75)
-            
+
             // Large liquid glass element - Bottom
             Ellipse()
-                .fill(
-                    LinearGradient(
-                        colors: [
-                            Color(red: 0.38, green: 0.78, blue: 0.85).opacity(0.2),
-                            Color(red: 0.32, green: 0.68, blue: 0.88).opacity(0.1)
-                        ],
-                        startPoint: .bottomLeading,
-                        endPoint: .topTrailing
-                    )
-                )
+                .fill(Color(red: 0.38, green: 0.78, blue: 0.85).opacity(0.2))
                 .frame(width: 500, height: 480)
                 .blur(radius: 50)
                 .offset(x: -100, y: 450 + glassOffset3)
@@ -68,66 +41,16 @@ struct LaunchView: View {
             VStack(spacing: 28) {
                 // Glass icon with sparkle
                 ZStack(alignment: .topTrailing) {
-                    // Icon glow
-                    RoundedRectangle(cornerRadius: 38, style: .continuous)
-                        .fill(
-                            RadialGradient(
-                                colors: [
-                                    Color(red: 0.4, green: 0.82, blue: 0.86).opacity(0.4),
-                                    Color.clear
-                                ],
-                                center: .center,
-                                startRadius: 20,
-                                endRadius: 90
-                            )
-                        )
-                        .frame(width: 140, height: 140)
-                        .blur(radius: 20)
-                    
                     // Main glass icon
                     ZStack {
                         // Background fill
                         RoundedRectangle(cornerRadius: 38, style: .continuous)
-                            .fill(
-                                LinearGradient(
-                                    colors: [
-                                        Color(red: 0.42, green: 0.82, blue: 0.85).opacity(0.9),
-                                        Color(red: 0.38, green: 0.76, blue: 0.82).opacity(0.85)
-                                    ],
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                )
-                            )
+                            .fill(Color(red: 0.42, green: 0.82, blue: 0.85).opacity(0.9))
                             .frame(width: 120, height: 120)
-                        
-                        // Glass refraction overlay
-                        RoundedRectangle(cornerRadius: 38, style: .continuous)
-                            .fill(
-                                LinearGradient(
-                                    colors: [
-                                        Color.white.opacity(0.5),
-                                        Color.white.opacity(0.1),
-                                        Color.clear
-                                    ],
-                                    startPoint: .topLeading,
-                                    endPoint: .center
-                                )
-                            )
-                            .frame(width: 120, height: 120)
-                        
+
                         // Inner glow
                         RoundedRectangle(cornerRadius: 38, style: .continuous)
-                            .stroke(
-                                LinearGradient(
-                                    colors: [
-                                        Color.white.opacity(0.6),
-                                        Color.white.opacity(0.2)
-                                    ],
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                ),
-                                lineWidth: 1.5
-                            )
+                            .stroke(Color.white.opacity(0.6), lineWidth: 1.5)
                             .frame(width: 120, height: 120)
                         
                         // White sparkle in center

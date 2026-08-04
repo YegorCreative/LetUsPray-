@@ -3,11 +3,8 @@ import SwiftUI
 enum PrayerTheme {
     static let heroGradient = BrandGradients.activityHero
 
-    static let buttonGradient = LinearGradient(
-        colors: [AppColors.accent, AppColors.electricCyan],
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
-    )
+    // Theme Rule: solid color, dominant stop of the former Green→Cyan gradient.
+    static let buttonGradient: Color = AppColors.accent
 }
 
 enum PrayerMotion {
@@ -36,10 +33,6 @@ struct PrayerSurfaceModifier: ViewModifier {
                         RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
                             .fill(AppColors.surface)
                     )
-                    .overlay {
-                        RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
-                            .fill(AppColors.glassHighlight)
-                    }
                     .overlay {
                         RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
                             .stroke(AppColors.glassStroke, lineWidth: 1)

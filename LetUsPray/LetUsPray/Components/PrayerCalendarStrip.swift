@@ -64,16 +64,6 @@ struct PrayerCalendarStrip: View {
             .fill(AppColors.surface)
             .overlay {
                 RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
-                    .fill(
-                        LinearGradient(
-                            colors: [Color.white.opacity(0.03), .clear],
-                            startPoint: .top,
-                            endPoint: .bottom
-                        )
-                    )
-            }
-            .overlay {
-                RoundedRectangle(cornerRadius: AppSpacing.cardCornerRadius, style: .continuous)
                     .stroke(AppColors.separator, lineWidth: 1)
             }
             .shadow(color: AppColors.shadow, radius: 14, x: 0, y: 6)

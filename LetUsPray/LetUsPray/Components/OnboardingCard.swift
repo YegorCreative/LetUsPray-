@@ -5,7 +5,7 @@ struct OnboardingCard: View {
     let subtitle: String?
     let description: String
     let systemImage: String
-    let gradient: LinearGradient
+    let gradient: Color
     let isActive: Bool
 
     var body: some View {

@@ -172,7 +172,7 @@ private struct OnboardingPage: Identifiable {
     let subtitle: String?
     let description: String
     let systemImage: String
-    let gradient: LinearGradient
+    let gradient: Color
 }
 
 #Preview { OnboardingView(onComplete: { _ in }) }

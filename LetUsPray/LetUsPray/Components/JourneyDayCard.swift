@@ -8,15 +8,7 @@ struct JourneyDayCard: View {
         HStack(alignment: .center, spacing: AppSpacing.medium) {
             ZStack {
                 Circle()
-                    .fill(
-                        LinearGradient(
-                            colors: isCompleted
-                                ? [AppColors.voltLime.opacity(0.92), AppColors.electricCyan.opacity(0.78)]
-                                : [AppColors.glassFill, Color.white.opacity(0.08)],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                    )
+                    .fill(isCompleted ? AppColors.voltLime.opacity(0.92) : AppColors.glassFill)
                     .frame(width: 46, height: 46)
 
                 if isCompleted {

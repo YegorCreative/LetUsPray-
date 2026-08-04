@@ -1,143 +1,52 @@
 import SwiftUI
 
+/// Theme Rule: every former gradient is now a solid color — the dominant/first stop of the
+/// original blend, at that stop's original opacity. No blending, no invented colors.
 enum BrandGradients {
-    /// Guide §12 — the single canonical Hero fill: Green → Cyan → Blue, green's stop pulled in to
-    /// 38% of the diagonal so it reads as a bright accent at the leading corner, not half the surface.
-    static let activityHero = LinearGradient(
-        gradient: Gradient(stops: [
-            .init(color: AppColors.primaryGreen, location: 0.0),
-            .init(color: AppColors.accentCyan, location: 0.38),
-            .init(color: AppColors.primaryBlue, location: 1.0)
-        ]),
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
-    )
+    /// Formerly the canonical diagonal Hero fill (Green → Cyan → Blue); solid Primary Green.
+    static let activityHero: Color = AppColors.primaryGreen
 
-    /// Angular counterpart to `activityHero` for circular progress rings — same locked stops
-    /// (Green → Cyan → Blue), swept around the circle instead of run diagonally across a card.
-    static let ringGradient = AngularGradient(
-        gradient: Gradient(stops: [
-            .init(color: AppColors.primaryGreen, location: 0.0),
-            .init(color: AppColors.accentCyan, location: 0.5),
-            .init(color: AppColors.primaryBlue, location: 1.0)
-        ]),
-        center: .center,
-        startAngle: .degrees(0),
-        endAngle: .degrees(360)
-    )
+    /// Formerly the angular counterpart of `activityHero` for progress rings; solid Primary Green.
+    static let ringGradient: Color = AppColors.primaryGreen
 
-    /// Guide §6 — Celebration Accent paired with Primary Green, reserved for streak/achievement moments only.
-    static let celebration = LinearGradient(
-        colors: [AppColors.celebrationAccent, AppColors.primaryGreen],
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
-    )
+    /// Formerly Celebration Accent → Primary Green; solid Celebration Accent.
+    static let celebration: Color = AppColors.celebrationAccent
 
-    static let prayerProgress = LinearGradient(
-        colors: [
-            AppColors.voltLime.opacity(0.90),
-            AppColors.electricCyan.opacity(0.72),
-            AppColors.cardDarkSurface.opacity(0.26)
-        ],
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
-    )
+    static let prayerProgress: Color = AppColors.voltLime.opacity(0.90)
 
-    static let streakGlow = LinearGradient(
-        colors: [
-            AppColors.celebrationAccent.opacity(0.86),
-            AppColors.primaryGreen.opacity(0.42)
-        ],
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
-    )
+    static let streakGlow: Color = AppColors.celebrationAccent.opacity(0.86)
 
-    static let savedPrayer = LinearGradient(
-        colors: [
-            AppColors.premiumGold.opacity(0.80),
-            AppColors.electricCyan.opacity(0.54),
-            AppColors.voltLime.opacity(0.24)
-        ],
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
-    )
+    static let savedPrayer: Color = AppColors.premiumGold.opacity(0.80)
 
-    static let planCard = LinearGradient(
-        colors: [
-            AppColors.electricCyan.opacity(0.72),
-            AppColors.voltLime.opacity(0.62),
-            AppColors.premiumGold.opacity(0.28)
-        ],
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
-    )
+    static let planCard: Color = AppColors.electricCyan.opacity(0.72)
 
-    static let onboardingCard = LinearGradient(
-        colors: [
-            AppColors.deepGraphite.opacity(0.66),
-            AppColors.electricCyan.opacity(0.54),
-            AppColors.voltLime.opacity(0.44),
-            AppColors.premiumGold.opacity(0.22)
-        ],
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
-    )
+    // Former first stop (deepGraphite = page background) is degenerate as a card fill — it would
+    // render the onboarding hero invisible against its own background. Using the gradient's next
+    // stop instead, still an existing color from the same blend, no new color invented.
+    static let onboardingCard: Color = AppColors.electricCyan.opacity(0.54)
 
-    static let launchScreen = LinearGradient(
-        colors: [
-            AppColors.deepGraphite,
-            AppColors.cardDarkSurface,
-            AppColors.electricCyan.opacity(0.26),
-            AppColors.voltLime.opacity(0.16)
-        ],
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
-    )
+    static let launchScreen: Color = AppColors.deepGraphite
 
     static let primaryHero = activityHero
     static let progressCard = prayerProgress
     static let streakCard = streakGlow
 
     /// Guide §13 category remap: Wisdom & Gospel → Green · Psalms & Family → Blue · Gratitude & Encouragement → Cyan.
-    /// Categories sharing a hue are differentiated by their secondary stop rather than a different family.
-    static func planGradient(for category: PrayerPlanCategory) -> LinearGradient {
+    /// Formerly a 2-stop gradient per category; now solid, using the dominant (first) stop's color and opacity.
+    static func planGradient(for category: PrayerPlanCategory) -> Color {
         switch category {
         case .wisdom:
-            return LinearGradient(
-                colors: [AppColors.primaryGreen.opacity(0.92), AppColors.primaryBlue.opacity(0.26)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
+            return AppColors.primaryGreen.opacity(0.92)
         case .psalms:
-            return LinearGradient(
-                colors: [AppColors.primaryBlue.opacity(0.88), AppColors.primaryGreen.opacity(0.22)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
+            return AppColors.primaryBlue.opacity(0.88)
         case .gospel:
-            return LinearGradient(
-                colors: [AppColors.primaryGreen.opacity(0.90), AppColors.accentCyan.opacity(0.26)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
+            return AppColors.primaryGreen.opacity(0.90)
         case .gratitude:
-            return LinearGradient(
-                colors: [AppColors.accentCyan.opacity(0.92), AppColors.primaryBlue.opacity(0.28)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
+            return AppColors.accentCyan.opacity(0.92)
         case .family:
-            return LinearGradient(
-                colors: [AppColors.primaryBlue.opacity(0.88), AppColors.accentCyan.opacity(0.30)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
+            return AppColors.primaryBlue.opacity(0.88)
         case .encouragement:
-            return LinearGradient(
-                colors: [AppColors.accentCyan.opacity(0.90), AppColors.primaryGreen.opacity(0.24)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
+            return AppColors.accentCyan.opacity(0.90)
         }
     }
 }
@@ -178,7 +87,7 @@ extension PrayerPlanCategory {
         }
     }
 
-    var brandGradient: LinearGradient {
+    var brandGradient: Color {
         BrandGradients.planGradient(for: self)
     }
 }
