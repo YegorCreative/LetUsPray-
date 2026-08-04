@@ -604,7 +604,6 @@ enum PrayerJourneyCatalog {
         entry("courage", "Courage", "Stand faithfully in difficult moments", .christianLiving, "Christian Living", 14, 7, .steady, "shield.fill", "wisdom", false, false, false),
         entry("faith-during-hard-times", "Faith During Hard Times", "Keep trusting through uncertainty", .christianLiving, "Christian Living", 21, 8, .deep, "mountain.2.fill", "wisdom", false, false, false),
         entry("purity", "Purity", "Pray for an undivided heart", .christianLiving, "Christian Living", 14, 7, .steady, "sparkle", "wisdom", false, false, false),
-        entry("gratitude", "Gratitude", "Notice grace in the everyday", .christianLiving, "Christian Living", 21, 7, .gentle, "hands.sparkles.fill", "gratitude", true, true, false),
         entry("joy", "Joy", "Receive the quiet joy of God's presence", .christianLiving, "Christian Living", 14, 7, .gentle, "sun.max.fill", "gratitude", false, false, false),
         entry("happiness", "Happiness", "Pray with hope for a lighter heart", .christianLiving, "Christian Living", 14, 7, .gentle, "face.smiling.fill", "gratitude", false, false, false),
         entry("peace", "Peace", "Practice stillness and trust", .christianLiving, "Christian Living", 14, 7, .gentle, "water.waves", "encouragement", false, false, false),
@@ -628,7 +627,7 @@ enum PrayerJourneyCatalog {
 
         entry("30-days-in-proverbs", "30 Days in Proverbs", "A month of practical wisdom", .devotionals, "Devotionals", 30, 8, .steady, "book.closed.fill", "wisdom", true, true, false, ProverbsPrayerData.plan.id),
         entry("31-days-in-psalms", "31 Days in Psalms", "A month of honest worship and prayer", .devotionals, "Devotionals", 31, 8, .gentle, "music.note.list", "psalms", true, false, false, "psalms-journey-overview"),
-        entry("21-days-of-gratitude", "21 Days of Gratitude", "A focused practice of thanksgiving", .devotionals, "Devotionals", 21, 7, .gentle, "hands.sparkles.fill", "gratitude", false, false, false, "gratitude-challenge"),
+        entry("21-days-of-gratitude", "21 Days of Gratitude", "A focused practice of thanksgiving", .devotionals, "Devotionals", 21, 7, .gentle, "hands.sparkles.fill", "gratitude", true, true, false, "gratitude-challenge"),
         entry("names-of-god", "Names of God", "Pray through the names that reveal God's character", .devotionals, "Devotionals", 30, 8, .deep, "text.book.closed.fill", "gospel", false, false, false),
         entry("wisdom-for-men", "Wisdom for Men", "A grounded journey in faithful living", .devotionals, "Devotionals", 21, 8, .steady, "person.fill", "wisdom", false, false, false),
         entry("wisdom-for-women", "Wisdom for Women", "A grounded journey in faithful living", .devotionals, "Devotionals", 21, 8, .steady, "person.fill", "wisdom", false, false, false),

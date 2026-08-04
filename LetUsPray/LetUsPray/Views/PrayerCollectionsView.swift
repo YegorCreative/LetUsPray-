@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct PrayerCollectionsView: View {
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @ObservedObject var viewModel: PrayerPlanViewModel
     @Binding var activePlanID: String
     @Binding var completedDayNumbers: Set<Int>
@@ -91,12 +92,78 @@ struct PrayerCollectionsView: View {
     private var discoveryContent: some View {
         LazyVStack(alignment: .leading, spacing: AppSpacing.large) {
             intro
+            allPlansEntry
             libraryContent
             ForEach(recommendationSections.ordered, id: \.0) { section in
                 activitySection(title: section.0, journeys: section.1)
             }
             collectionsShelf
         }
+    }
+
+    private var allPlansEntry: some View {
+        NavigationLink {
+            allPlansList
+        } label: {
+            InfoCard(padding: AppSpacing.medium) {
+                HStack(spacing: AppSpacing.medium) {
+                    Image(systemName: "list.bullet.rectangle.portrait.fill")
+                        .font(.system(size: 20, weight: .semibold))
+                        .foregroundStyle(AppColors.accentCyan)
+                        .frame(width: 44, height: 44)
+                        .background(AppColors.accentCyan.opacity(0.14), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("See All Plans")
+                            .font(AppTypography.headline())
+                            .foregroundStyle(AppColors.textPrimary)
+
+                        Text("Browse every available prayer plan and journey")
+                            .font(AppTypography.footnote())
+                            .foregroundStyle(AppColors.textSecondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+
+                    Spacer(minLength: AppSpacing.small)
+
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(AppColors.accentCyan)
+                        .accessibilityHidden(true)
+                }
+            }
+        }
+        .buttonStyle(.plain)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("See All Plans")
+        .accessibilityHint("Opens the complete list of prayer plans and journeys.")
+    }
+
+    private var allPlansList: some View {
+        ScrollView(showsIndicators: false) {
+            LazyVStack(alignment: .leading, spacing: AppSpacing.medium) {
+                Text("\(allJourneys.count) available plan\(allJourneys.count == 1 ? "" : "s")")
+                    .font(AppTypography.metadata())
+                    .foregroundStyle(AppColors.textSecondary)
+
+                GroupedCard {
+                    ForEach(Array(allJourneys.enumerated()), id: \.element.id) { index, journey in
+                        journeySearchLink(
+                            journey,
+                            showsDivider: index < allJourneys.count - 1,
+                            showsDescription: true
+                        )
+                    }
+                }
+            }
+            .padding(.horizontal, AppSpacing.large)
+            .padding(.top, AppSpacing.medium)
+            .padding(.bottom, AppSpacing.xxLarge)
+        }
+        .background(PrayerBackground())
+        .navigationTitle("All Plans")
+        .navigationBarTitleDisplayMode(.large)
+        .toolbarBackground(.hidden, for: .navigationBar)
     }
 
     @ViewBuilder
@@ -208,7 +275,11 @@ struct PrayerCollectionsView: View {
         }
     }
 
-    private func journeySearchLink(_ journey: PrayerJourney, showsDivider: Bool = true) -> some View {
+    private func journeySearchLink(
+        _ journey: PrayerJourney,
+        showsDivider: Bool = true,
+        showsDescription: Bool = false
+    ) -> some View {
         NavigationLink {
             PlanDetailView(
                 plan: journey.plan,
@@ -228,7 +299,7 @@ struct PrayerCollectionsView: View {
             )
         } label: {
             GroupedRow(showsDivider: showsDivider) {
-                activityRowContent(journey)
+                activityRowContent(journey, showsDescription: showsDescription)
             }
         }
         .buttonStyle(.plain)
@@ -332,32 +403,94 @@ struct PrayerCollectionsView: View {
         }
     }
 
-    private func activityRowContent(_ journey: PrayerJourney) -> some View {
+    private func activityRowContent(_ journey: PrayerJourney, showsDescription: Bool = false) -> some View {
         let progress = progress(for: journey)
-        return HStack(spacing: AppSpacing.medium) {
-            Image(systemName: journey.heroImageName)
-                .foregroundStyle(AppColors.planAccent(named: journey.accentColorName))
-                .frame(width: 38, height: 38)
-                .background(AppColors.planAccent(named: journey.accentColorName).opacity(0.16), in: Circle())
-            VStack(alignment: .leading, spacing: 4) {
-                Text(journey.title)
-                    .font(AppTypography.cardTitle())
-                    .foregroundStyle(AppColors.primaryText)
-                    .lineLimit(2)
-                HStack(spacing: AppSpacing.small) {
-                    Text(progress.status == .completed ? "Completed" : "Session \(nextSession(for: journey)) of \(journey.sessionCount)")
-                        .font(AppTypography.metadata())
-                        .foregroundStyle(AppColors.secondaryText)
-                    Text("· \(journey.estimatedDurationDays > 0 ? "\(journey.estimatedDurationDays) days" : "Self-guided")")
-                        .font(AppTypography.caption())
-                        .foregroundStyle(AppColors.tertiaryText)
+        return Group {
+            if dynamicTypeSize.isAccessibilitySize {
+                VStack(alignment: .leading, spacing: AppSpacing.small) {
+                    HStack(alignment: .top, spacing: AppSpacing.medium) {
+                        journeyArtwork(journey)
+
+                        Text(journey.title)
+                            .font(AppTypography.cardTitle())
+                            .foregroundStyle(AppColors.primaryText)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+
+                    if showsDescription {
+                        Text(journey.description)
+                            .font(AppTypography.caption())
+                            .foregroundStyle(AppColors.secondaryText)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+
+                    HStack(alignment: .firstTextBaseline, spacing: AppSpacing.small) {
+                        journeyProgressLabel(journey, progress: progress)
+                        Spacer(minLength: AppSpacing.small)
+                        journeyPercentage(journey, progress: progress)
+                    }
+                }
+            } else {
+                HStack(spacing: AppSpacing.medium) {
+                    journeyArtwork(journey)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(journey.title)
+                            .font(AppTypography.cardTitle())
+                            .foregroundStyle(AppColors.primaryText)
+                            .lineLimit(2)
+                            .fixedSize(horizontal: false, vertical: true)
+                        if showsDescription {
+                            Text(journey.description)
+                                .font(AppTypography.caption())
+                                .foregroundStyle(AppColors.secondaryText)
+                                .lineLimit(3)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                        journeyProgressLabel(journey, progress: progress)
+                    }
+                    Spacer(minLength: AppSpacing.small)
+                    journeyPercentage(journey, progress: progress)
                 }
             }
-            Spacer()
-            Text("\(progress.percentage)%")
-                .font(AppTypography.headline())
-                .foregroundStyle(AppColors.planAccent(named: journey.accentColorName))
         }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(
+            "\(journey.title), \(journey.description), \(journey.estimatedDurationDays > 0 ? "\(journey.estimatedDurationDays) days" : "Self-guided"), \(progress.percentage) percent complete"
+        )
+        .accessibilityHint("Opens plan details.")
+    }
+
+    private func journeyArtwork(_ journey: PrayerJourney) -> some View {
+        Image(systemName: journey.heroImageName)
+            .foregroundStyle(AppColors.planAccent(named: journey.accentColorName))
+            .frame(width: 38, height: 38)
+            .background(AppColors.planAccent(named: journey.accentColorName).opacity(0.16), in: Circle())
+            .accessibilityHidden(true)
+    }
+
+    private func journeyProgressLabel(
+        _ journey: PrayerJourney,
+        progress: PrayerPlanProgress
+    ) -> some View {
+        HStack(spacing: AppSpacing.small) {
+            Text(progress.status == .completed ? "Completed" : "Session \(nextSession(for: journey)) of \(journey.sessionCount)")
+                .font(AppTypography.metadata())
+                .foregroundStyle(AppColors.secondaryText)
+            Text("· \(journey.estimatedDurationDays > 0 ? "\(journey.estimatedDurationDays) days" : "Self-guided")")
+                .font(AppTypography.caption())
+                .foregroundStyle(AppColors.tertiaryText)
+        }
+        .fixedSize(horizontal: false, vertical: true)
+    }
+
+    private func journeyPercentage(
+        _ journey: PrayerJourney,
+        progress: PrayerPlanProgress
+    ) -> some View {
+        Text("\(progress.percentage)%")
+            .font(AppTypography.headline())
+            .foregroundStyle(AppColors.planAccent(named: journey.accentColorName))
+            .fixedSize()
     }
 
     @ViewBuilder
