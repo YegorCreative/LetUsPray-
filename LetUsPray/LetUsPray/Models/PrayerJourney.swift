@@ -625,8 +625,6 @@ enum PrayerJourneyCatalog {
         entry("easter", "Easter", "Pray into resurrection hope", .seasonal, "Seasonal", 14, 8, .gentle, "sunrise.fill", "gospel", true, false, true),
         entry("christmas", "Christmas", "Receive the wonder of Emmanuel", .seasonal, "Seasonal", 14, 8, .gentle, "gift.fill", "gospel", false, false, true),
 
-        entry("30-days-in-proverbs", "30 Days in Proverbs", "A month of practical wisdom", .devotionals, "Devotionals", 30, 8, .steady, "book.closed.fill", "wisdom", true, true, false, ProverbsPrayerData.plan.id),
-        entry("31-days-in-psalms", "31 Days in Psalms", "A month of honest worship and prayer", .devotionals, "Devotionals", 31, 8, .gentle, "music.note.list", "psalms", true, false, false, "psalms-journey-overview"),
         entry("21-days-of-gratitude", "21 Days of Gratitude", "A focused practice of thanksgiving", .devotionals, "Devotionals", 21, 7, .gentle, "hands.sparkles.fill", "gratitude", true, true, false, "gratitude-challenge"),
         entry("names-of-god", "Names of God", "Pray through the names that reveal God's character", .devotionals, "Devotionals", 30, 8, .deep, "text.book.closed.fill", "gospel", false, false, false),
         entry("wisdom-for-men", "Wisdom for Men", "A grounded journey in faithful living", .devotionals, "Devotionals", 21, 8, .steady, "person.fill", "wisdom", false, false, false),
