@@ -2,6 +2,11 @@ import SwiftUI
 
 struct JourneyPlanDetailView: View {
     let plan: JourneyPlan
+    @AppStorage(PrayerStorageKeys.completedDaysByPlan) private var completedDaysByPlanRawValue = "{}"
+
+    private var completedDayNumbers: Set<Int> {
+        PrayerStorageCodec.decodeCompletedDaysByPlan(completedDaysByPlanRawValue)[plan.id] ?? []
+    }
 
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -41,7 +46,7 @@ struct JourneyPlanDetailView: View {
 
                         ForEach(plan.days) { day in
                             NavigationLink {
-                                JourneyDayView(day: day)
+                                JourneyDayView(plan: plan, day: day)
                             } label: {
                                 GlassCard(padding: AppSpacing.medium) {
                                     HStack(spacing: AppSpacing.medium) {
@@ -63,8 +68,10 @@ struct JourneyPlanDetailView: View {
 
                                         Spacer(minLength: AppSpacing.small)
 
-                                        Image(systemName: "chevron.right")
-                                            .foregroundStyle(plan.category.brandAccent)
+                                        Image(systemName: completedDayNumbers.contains(day.dayNumber) ? "checkmark.circle.fill" : "chevron.right")
+                                            .font(.system(size: completedDayNumbers.contains(day.dayNumber) ? 18 : 14, weight: .semibold))
+                                            .foregroundStyle(completedDayNumbers.contains(day.dayNumber) ? AppColors.success : plan.category.brandAccent)
+                                            .accessibilityLabel(completedDayNumbers.contains(day.dayNumber) ? "Completed" : "Open day")
                                     }
                                 }
                             }

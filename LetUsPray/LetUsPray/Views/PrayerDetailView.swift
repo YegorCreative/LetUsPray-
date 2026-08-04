@@ -3,7 +3,7 @@ import Combine
 import SwiftUI
 import UIKit
 
-private enum PrayerSpeechState {
+enum PrayerSpeechState {
     case stopped
     case playing
     case paused
@@ -31,7 +31,7 @@ private enum PrayerJournalField: Hashable {
 }
 
 @MainActor
-private final class PrayerSpeechController: NSObject, ObservableObject, @preconcurrency AVSpeechSynthesizerDelegate {
+final class PrayerSpeechController: NSObject, ObservableObject, @preconcurrency AVSpeechSynthesizerDelegate {
     static let shared = PrayerSpeechController()
 
     @Published private(set) var state: PrayerSpeechState = .stopped
