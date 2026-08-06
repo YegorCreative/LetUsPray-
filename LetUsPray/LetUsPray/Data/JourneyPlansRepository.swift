@@ -9,7 +9,7 @@ enum JourneyPlansRepository {
         category: .encouragement,
         durationDays: 16,
         accentColorName: "encouragement",
-        coverIcon: "airplane",
+        coverIcon: "paperplane.fill",
         days: []
     )
 
@@ -45,6 +45,51 @@ enum JourneyPlansRepository {
             missionFocus: missionaryPlaceholderFocus
         )
     }
+
+    private static let missionaryDayOne = JourneyDay(
+        dayNumber: 1,
+        title: "Confidence in God's Word",
+        chapterReference: "Acts 13:4–5",
+        summary: "The Holy Spirit sent Barnabas and Saul to proclaim God's Word. We can pray with confidence that the Gospel is God's power to bring light and life to every people.",
+        primaryScripture: JourneyScripture(
+            reference: "Acts 13:4–5",
+            text: "So, being sent out by the Holy Spirit, they went down to Seleucia and from there they sailed to Cyprus. When they reached Salamis, they began to proclaim the word of God in the synagogues of the Jews; and they also had John as their helper."
+        ),
+        devotional: "The first missionaries in Acts did not go because they had created a perfect plan. They went because the Holy Spirit sent them. Barnabas and Saul carried the word of God from one place to another, trusting that the Lord Himself would open hearts and establish His truth.\n\nTheir confidence was not in their eloquence, strength, or circumstances. It was in the God who speaks and acts through His Word. The Gospel they proclaimed was not merely helpful advice; it was the message of Jesus Christ, the power of God for salvation.\n\nToday, missionaries continue that calling across cultures and languages. As we pray for them, we can ask God to make His Word clear, give His servants courage, and prepare people to hear and believe. Our prayers join the Spirit's work as the good news of Christ reaches places where it has scarcely been heard.",
+        reflections: [
+            JourneyReflection(
+                id: "pray-for-missionaries-1-reflection-1",
+                scripture: JourneyScripture(
+                    reference: "2 Timothy 3:16–17",
+                    text: "All Scripture is inspired by God and profitable for teaching, for reproof, for correction, for training in righteousness; so that the man of God may be adequate, equipped for every good work."
+                ),
+                prayer: "Father, thank You for giving us Your trustworthy Word. Equip missionaries and me to live and serve faithfully through its truth, and help those they serve recognize Your voice."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-1-reflection-2",
+                scripture: JourneyScripture(
+                    reference: "Romans 10:17",
+                    text: "So faith comes from hearing, and hearing by the word of Christ."
+                ),
+                prayer: "Lord Jesus, make the message of Christ clear through every missionary who speaks. Prepare hearers to receive Your Word with faith and respond to Your saving grace."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-1-reflection-3",
+                scripture: JourneyScripture(
+                    reference: "Psalm 119:105",
+                    text: "Your word is a lamp to my feet And a light to my path."
+                ),
+                prayer: "Holy Spirit, guide missionaries through unfamiliar paths and protect them with the light of Scripture. Lead the people they serve from darkness into the hope of Christ."
+            )
+        ],
+        closingPrayer: "Heavenly Father, thank You for sending Your Word and for calling servants to carry the Gospel to the nations. Give missionaries confidence in the truth of Scripture, courage to proclaim Jesus Christ, and wisdom to serve each community with love. Prepare hearts to hear, believe, and follow the Savior. Teach me to pray faithfully for those You have sent, trusting that Your Word will accomplish Your purposes. In Jesus' name, Amen.",
+        missionFocus: JourneyMissionInformation(
+            countryOrPeopleGroup: "Afghanistan",
+            approximatePopulation: "Approximately 42 million people",
+            approximateChristianPercentage: "Less than 1% Christian",
+            prayerFocus: "Pray for courageous Christian workers, safe access to isolated communities, and open hearts to hear and believe the Word of God."
+        )
+    )
 
     static let allPlans: [JourneyPlan] = PrayerPlansRepository.allPlans
         .filter { $0.id == "easter" }
@@ -701,7 +746,7 @@ enum JourneyPlansRepository {
         } + [
             JourneyPlan(
                 metadata: missionariesPlan,
-                days: (1...16).map { missionaryPlaceholderDay($0) },
+                days: [missionaryDayOne] + (2...16).map { missionaryPlaceholderDay($0) },
                 introduction: JourneyIntroduction(
                     themeVerse: JourneyScripture(
                         reference: "Matthew 28:19–20",

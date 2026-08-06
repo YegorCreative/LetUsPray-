@@ -20,6 +20,16 @@ struct PrayerCollectionsView: View {
 
     private var collections: [JourneyCollection] { PrayerJourneyCatalog.collections }
 
+    private let upcomingJourneyCategories: [UpcomingJourneyCategory] = [
+        .init(title: "Healing", systemImage: "cross.case.fill"),
+        .init(title: "Worship", systemImage: "music.mic"),
+        .init(title: "Forgiveness", systemImage: "arrow.triangle.2.circlepath"),
+        .init(title: "Marriage", systemImage: "heart.fill"),
+        .init(title: "Parenting", systemImage: "figure.2.and.child.holdinghands"),
+        .init(title: "Work & Calling", systemImage: "briefcase.fill"),
+        .init(title: "Spiritual Growth", systemImage: "leaf.fill")
+    ]
+
     var body: some View {
         ScrollView(showsIndicators: false) {
             Group {
@@ -176,6 +186,8 @@ struct PrayerCollectionsView: View {
                     }
                 }
 
+                upcomingCategoriesSection
+
                 suggestionSection
             }
             .padding(.horizontal, AppSpacing.large)
@@ -247,6 +259,65 @@ struct PrayerCollectionsView: View {
         }
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(journey.title), \(journey.description), Coming Soon")
+    }
+
+    /// A static, non-interactive teaser for future journey categories — no plan data backs these
+    /// yet, so unlike `comingSoonJourneys` above (real placeholder plans you can tap for detail),
+    /// these tiles intentionally do nothing when touched. They exist purely so the end of the
+    /// "All Plans" list reads as "more is on the way" rather than trailing off into empty space.
+    private var upcomingCategoriesSection: some View {
+        VStack(alignment: .leading, spacing: AppSpacing.small) {
+            Text("More Prayer Journeys Are Coming")
+                .font(AppTypography.headline())
+                .foregroundStyle(AppColors.textPrimary)
+            Text("We're continually adding new Scripture-based prayer journeys to help you grow in your daily walk with Christ.")
+                .font(AppTypography.secondaryBody())
+                .foregroundStyle(AppColors.textSecondary)
+                .fixedSize(horizontal: false, vertical: true)
+
+            LazyVGrid(
+                columns: [GridItem(.flexible(), spacing: AppSpacing.small), GridItem(.flexible())],
+                spacing: AppSpacing.small
+            ) {
+                ForEach(upcomingJourneyCategories) { category in
+                    upcomingCategoryTile(category)
+                }
+            }
+            .padding(.top, AppSpacing.xs)
+        }
+    }
+
+    private func upcomingCategoryTile(_ category: UpcomingJourneyCategory) -> some View {
+        HStack(spacing: AppSpacing.small) {
+            Image(systemName: category.systemImage)
+                .font(.system(size: 15, weight: .semibold))
+                .foregroundStyle(AppColors.tertiaryText)
+                .frame(width: 32, height: 32)
+                .background(AppColors.tertiaryText.opacity(0.12), in: Circle())
+
+            VStack(alignment: .leading, spacing: 1) {
+                Text(category.title)
+                    .font(AppTypography.callout())
+                    .foregroundStyle(AppColors.secondaryText)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.85)
+                Text("Coming Soon")
+                    .font(AppTypography.caption())
+                    .foregroundStyle(AppColors.tertiaryText)
+            }
+
+            Spacer(minLength: 0)
+        }
+        .padding(.horizontal, AppSpacing.small)
+        .padding(.vertical, AppSpacing.small)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(AppColors.surface.opacity(0.5), in: RoundedRectangle(cornerRadius: AppSpacing.compactCornerRadius, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: AppSpacing.compactCornerRadius, style: .continuous)
+                .stroke(AppColors.separator, lineWidth: 1)
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(category.title), Coming Soon")
     }
 
     private var suggestionSection: some View {
@@ -570,7 +641,7 @@ struct PrayerCollectionsView: View {
         Image(systemName: journey.heroImageName)
             .foregroundStyle(AppColors.planAccent(named: journey.accentColorName))
             .frame(width: 38, height: 38)
-            .background(AppColors.planAccent(named: journey.accentColorName).opacity(0.16), in: Circle())
+            .background(AppColors.planIconGradient(named: journey.accentColorName), in: Circle())
             .accessibilityHidden(true)
     }
 
@@ -639,7 +710,7 @@ struct PrayerCollectionsView: View {
                     .font(.system(size: 21, weight: .semibold))
                     .foregroundStyle(accent)
                     .frame(width: 48, height: 48)
-                    .background(accent.opacity(0.14), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+                    .background(AppColors.planIconGradient(named: featured?.accentColorName ?? "psalms"), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
 
                 Text(collection.title)
                     .font(AppTypography.cardTitle())
@@ -676,6 +747,12 @@ struct PrayerCollectionsView: View {
             .padding(.vertical, 3)
             .background(color.opacity(0.14), in: Capsule())
     }
+}
+
+private struct UpcomingJourneyCategory: Identifiable {
+    let title: String
+    let systemImage: String
+    var id: String { title }
 }
 
 private struct PrayerPlanSuggestionView: View {
@@ -1061,7 +1138,7 @@ struct PrayerCollectionDetailView: View {
                 .font(.system(size: 18, weight: .semibold))
                 .foregroundStyle(accent)
                 .frame(width: 42, height: 42)
-                .background(accent.opacity(0.14), in: RoundedRectangle(cornerRadius: 13, style: .continuous))
+                .background(AppColors.planIconGradient(named: journey.accentColorName), in: RoundedRectangle(cornerRadius: 13, style: .continuous))
             VStack(alignment: .leading, spacing: 4) {
                 Text(journey.title)
                     .font(AppTypography.cardTitle())

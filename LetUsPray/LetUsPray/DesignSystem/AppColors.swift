@@ -104,6 +104,27 @@ enum AppColors {
         }
     }
 
+    /// A soft, category-tinted two-stop gradient for plan/journey icon backgrounds only — never
+    /// for cards, buttons, or Hero fills. Each pair blends existing palette tokens (no invented
+    /// colors) at low opacity so it reads as gentle depth behind the glyph, not a saturated fill.
+    static func planIconGradient(named name: String) -> LinearGradient {
+        let stops: (Color, Color)
+        switch name {
+        case "wisdom": stops = (primaryGreen, accentCyan)         // lime → mint
+        case "psalms": stops = (primaryBlue, accentCyan)          // cyan → teal
+        case "gospel": stops = (primaryGreen, celebrationAccent)  // lime → warm gold
+        case "gratitude": stops = (accentCyan, celebrationAccent) // cyan → warm amber
+        case "family": stops = (primaryBlue, celebrationAccent)   // blue → warm gold
+        case "encouragement": stops = (accentCyan, primaryGreen)  // cyan → lime
+        default: stops = (accent, accent)
+        }
+        return LinearGradient(
+            colors: [stops.0.opacity(0.26), stops.1.opacity(0.13)],
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+    }
+
     nonisolated private static func fixed(_ color: UIColor) -> Color {
         Color(uiColor: color)
     }

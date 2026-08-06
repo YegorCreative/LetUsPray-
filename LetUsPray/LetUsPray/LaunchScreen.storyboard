@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="launch-view-controller">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,88 +14,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="glass-blob-1">
-                                <rect key="frame" x="-200" y="-150" width="450" height="450"/>
-                                <color key="backgroundColor" red="0.45" green="0.85" blue="0.88" alpha="0.18" colorSpace="custom" customColorSpace="sRGB"/>
+                            <!-- Complete rebuild, no iteration on the prior concept. Launch screens
+                                 reject userDefinedRuntimeAttributes, so there is no cornerRadius,
+                                 shadow, or blur available here at all — every earlier "square glow"
+                                 attempt is gone. The radial falloff below is five concentric
+                                 `circle.fill` SF Symbol image views (genuinely round, not a boxed
+                                 shape), each barely brighter than the one outside it, with the brand
+                                 glyph — the same hands.sparkles.fill used in Settings' identity row
+                                 and onboarding's first page, ~12% larger than the previous pass — on
+                                 top. No badge, no card, no border, no text anywhere on this screen. -->
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" image="circle.fill" catalog="system" id="glow-1">
+                                <rect key="frame" x="-14.5" y="212" width="420" height="420"/>
+                                <color key="tintColor" red="0.7294117647058823" green="0.9921568627450981" blue="0.30980392156862746" alpha="0.02" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="450" id="glass-1-width"/>
-                                    <constraint firstAttribute="height" constant="450" id="glass-1-height"/>
+                                    <constraint firstAttribute="width" constant="420" id="glow-1-width"/>
+                                    <constraint firstAttribute="height" constant="420" id="glow-1-height"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="glass-blob-2">
-                                <rect key="frame" x="200" y="100" width="380" height="400"/>
-                                <color key="backgroundColor" red="0.32" green="0.68" blue="0.92" alpha="0.15" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" image="circle.fill" catalog="system" id="glow-2">
+                                <rect key="frame" x="25.5" y="252" width="340" height="340"/>
+                                <color key="tintColor" red="0.7294117647058823" green="0.9921568627450981" blue="0.30980392156862746" alpha="0.03" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="380" id="glass-2-width"/>
-                                    <constraint firstAttribute="height" constant="400" id="glass-2-height"/>
+                                    <constraint firstAttribute="width" constant="340" id="glow-2-width"/>
+                                    <constraint firstAttribute="height" constant="340" id="glow-2-height"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="glass-blob-3">
-                                <rect key="frame" x="-150" y="500" width="420" height="420"/>
-                                <color key="backgroundColor" red="0.38" green="0.78" blue="0.85" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" image="circle.fill" catalog="system" id="glow-3">
+                                <rect key="frame" x="65.5" y="292" width="260" height="260"/>
+                                <color key="tintColor" red="0.7294117647058823" green="0.9921568627450981" blue="0.30980392156862746" alpha="0.045" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="420" id="glass-3-width"/>
-                                    <constraint firstAttribute="height" constant="420" id="glass-3-height"/>
+                                    <constraint firstAttribute="width" constant="260" id="glow-3-width"/>
+                                    <constraint firstAttribute="height" constant="260" id="glow-3-height"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icon-container">
-                                <rect key="frame" x="136.67" y="356" width="120" height="120"/>
-                                <color key="backgroundColor" red="0.42" green="0.82" blue="0.85" alpha="0.88" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" image="circle.fill" catalog="system" id="glow-4">
+                                <rect key="frame" x="101" y="327" width="190" height="190"/>
+                                <color key="tintColor" red="0.7294117647058823" green="0.9921568627450981" blue="0.30980392156862746" alpha="0.065" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="icon-width"/>
-                                    <constraint firstAttribute="height" constant="120" id="icon-height"/>
+                                    <constraint firstAttribute="width" constant="190" id="glow-4-width"/>
+                                    <constraint firstAttribute="height" constant="190" id="glow-4-height"/>
                                 </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✦" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sparkle-label">
-                                <rect key="frame" x="170.67" y="390" width="52" height="52"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="52"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" image="circle.fill" catalog="system" id="glow-5">
+                                <rect key="frame" x="131" y="357" width="130" height="130"/>
+                                <color key="tintColor" red="0.7294117647058823" green="0.9921568627450981" blue="0.30980392156862746" alpha="0.09" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="52" id="sparkle-width"/>
-                                    <constraint firstAttribute="height" constant="52" id="sparkle-height"/>
+                                    <constraint firstAttribute="width" constant="130" id="glow-5-width"/>
+                                    <constraint firstAttribute="height" constant="130" id="glow-5-height"/>
                                 </constraints>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✦" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yellow-sparkle">
-                                <rect key="frame" x="250" y="345" width="16" height="16"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                <color key="textColor" red="1" green="0.88" blue="0.2" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" image="hands.sparkles.fill" catalog="system" id="brand-glyph">
+                                <rect key="frame" x="142" y="368" width="108" height="108"/>
+                                <color key="tintColor" red="0.7294117647058823" green="0.9921568627450981" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="16" id="yellow-width"/>
-                                    <constraint firstAttribute="height" constant="16" id="yellow-height"/>
+                                    <constraint firstAttribute="width" constant="108" id="glyph-width"/>
+                                    <constraint firstAttribute="height" constant="108" id="glyph-height"/>
                                 </constraints>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LetUsPray" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wordmark-label">
-                                <rect key="frame" x="40" y="504" width="313" height="44"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="42"/>
-                                <color key="textColor" red="0.12" green="0.28" blue="0.48" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pray Through Scripture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tagline-label">
-                                <rect key="frame" x="40" y="558" width="313" height="22"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <color key="textColor" red="0.38" green="0.75" blue="0.82" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="safe-area"/>
-                        <color key="backgroundColor" red="0.98" green="0.97" blue="0.96" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.027450980392156862" green="0.06666666666666667" blue="0.0392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="glass-blob-1" firstAttribute="leading" secondItem="launch-root-view" secondAttribute="leading" constant="-200" id="glass-1-leading"/>
-                            <constraint firstItem="glass-blob-1" firstAttribute="top" secondItem="launch-root-view" secondAttribute="top" constant="-150" id="glass-1-top"/>
-                            <constraint firstItem="glass-blob-2" firstAttribute="leading" secondItem="launch-root-view" secondAttribute="leading" constant="200" id="glass-2-leading"/>
-                            <constraint firstItem="glass-blob-2" firstAttribute="top" secondItem="launch-root-view" secondAttribute="top" constant="100" id="glass-2-top"/>
-                            <constraint firstItem="glass-blob-3" firstAttribute="leading" secondItem="launch-root-view" secondAttribute="leading" constant="-150" id="glass-3-leading"/>
-                            <constraint firstItem="glass-blob-3" firstAttribute="top" secondItem="launch-root-view" secondAttribute="top" constant="500" id="glass-3-top"/>
-                            <constraint firstItem="icon-container" firstAttribute="centerX" secondItem="launch-root-view" secondAttribute="centerX" id="icon-center-x"/>
-                            <constraint firstItem="icon-container" firstAttribute="centerY" secondItem="launch-root-view" secondAttribute="centerY" constant="-10" id="icon-center-y"/>
-                            <constraint firstItem="sparkle-label" firstAttribute="centerX" secondItem="icon-container" secondAttribute="centerX" id="sparkle-center-x"/>
-                            <constraint firstItem="sparkle-label" firstAttribute="centerY" secondItem="icon-container" secondAttribute="centerY" id="sparkle-center-y"/>
-                            <constraint firstItem="yellow-sparkle" firstAttribute="leading" secondItem="icon-container" secondAttribute="trailing" constant="8" id="yellow-leading"/>
-                            <constraint firstItem="yellow-sparkle" firstAttribute="top" secondItem="icon-container" secondAttribute="top" constant="-11" id="yellow-top"/>
-                            <constraint firstItem="wordmark-label" firstAttribute="top" secondItem="icon-container" secondAttribute="bottom" constant="28" id="wordmark-top"/>
-                            <constraint firstItem="wordmark-label" firstAttribute="leading" secondItem="launch-root-view" secondAttribute="leading" constant="40" id="wordmark-leading"/>
-                            <constraint firstItem="wordmark-label" firstAttribute="trailing" secondItem="launch-root-view" secondAttribute="trailing" constant="-40" id="wordmark-trailing"/>
-                            <constraint firstItem="tagline-label" firstAttribute="top" secondItem="wordmark-label" secondAttribute="bottom" constant="10" id="tagline-top"/>
-                            <constraint firstItem="tagline-label" firstAttribute="leading" secondItem="launch-root-view" secondAttribute="leading" constant="40" id="tagline-leading"/>
-                            <constraint firstItem="tagline-label" firstAttribute="trailing" secondItem="launch-root-view" secondAttribute="trailing" constant="-40" id="tagline-trailing"/>
+                            <constraint firstItem="glow-1" firstAttribute="centerX" secondItem="launch-root-view" secondAttribute="centerX" id="glow-1-center-x"/>
+                            <constraint firstItem="glow-1" firstAttribute="centerY" secondItem="launch-root-view" secondAttribute="centerY" id="glow-1-center-y"/>
+                            <constraint firstItem="glow-2" firstAttribute="centerX" secondItem="launch-root-view" secondAttribute="centerX" id="glow-2-center-x"/>
+                            <constraint firstItem="glow-2" firstAttribute="centerY" secondItem="launch-root-view" secondAttribute="centerY" id="glow-2-center-y"/>
+                            <constraint firstItem="glow-3" firstAttribute="centerX" secondItem="launch-root-view" secondAttribute="centerX" id="glow-3-center-x"/>
+                            <constraint firstItem="glow-3" firstAttribute="centerY" secondItem="launch-root-view" secondAttribute="centerY" id="glow-3-center-y"/>
+                            <constraint firstItem="glow-4" firstAttribute="centerX" secondItem="launch-root-view" secondAttribute="centerX" id="glow-4-center-x"/>
+                            <constraint firstItem="glow-4" firstAttribute="centerY" secondItem="launch-root-view" secondAttribute="centerY" id="glow-4-center-y"/>
+                            <constraint firstItem="glow-5" firstAttribute="centerX" secondItem="launch-root-view" secondAttribute="centerX" id="glow-5-center-x"/>
+                            <constraint firstItem="glow-5" firstAttribute="centerY" secondItem="launch-root-view" secondAttribute="centerY" id="glow-5-center-y"/>
+                            <constraint firstItem="brand-glyph" firstAttribute="centerX" secondItem="launch-root-view" secondAttribute="centerX" id="glyph-center-x"/>
+                            <constraint firstItem="brand-glyph" firstAttribute="centerY" secondItem="launch-root-view" secondAttribute="centerY" id="glyph-center-y"/>
                         </constraints>
                     </view>
                 </viewController>
