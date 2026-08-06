@@ -186,6 +186,23 @@
 			productReference = ABF777472FE09FF1003D9593 /* LetUsPray.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C50000000000000000000001 /* LetUsPrayWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C80000000000000000000001 /* Build configuration list for PBXNativeTarget "LetUsPrayWidgets" */;
+			buildPhases = (
+				C40000000000000000000001 /* Sources */,
+				C40000000000000000000002 /* Frameworks */,
+				C40000000000000000000004 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LetUsPrayWidgets;
+			productName = LetUsPrayWidgets;
+			productReference = C10000000000000000000001 /* LetUsPrayWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		E00000000000000000000001 /* LetUsPrayUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E00000000000000000000009 /* Build configuration list for PBXNativeTarget "LetUsPrayUITests" */;
@@ -206,23 +223,6 @@
 			productName = LetUsPrayUITests;
 			productReference = E00000000000000000000002 /* LetUsPrayUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		C50000000000000000000001 /* LetUsPrayWidgets */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C80000000000000000000001 /* Build configuration list for PBXNativeTarget "LetUsPrayWidgets" */;
-			buildPhases = (
-				C40000000000000000000001 /* Sources */,
-				C40000000000000000000002 /* Frameworks */,
-				C40000000000000000000004 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LetUsPrayWidgets;
-			productName = LetUsPrayWidgets;
-			productReference = C10000000000000000000001 /* LetUsPrayWidgets.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 

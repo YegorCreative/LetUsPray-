@@ -1,6 +1,51 @@
 import Foundation
 
 enum JourneyPlansRepository {
+    private static let missionariesPlan = PrayerPlan(
+        id: "pray-for-missionaries",
+        title: "Pray for Missionaries",
+        subtitle: "Pray for those taking the Gospel to the nations.",
+        description: "A 16-day prayer journey supporting missionaries and the people they serve.",
+        category: .encouragement,
+        durationDays: 16,
+        accentColorName: "encouragement",
+        coverIcon: "airplane",
+        days: []
+    )
+
+    private static let missionaryPlaceholderFocus = JourneyMissionInformation(
+        countryOrPeopleGroup: "Country / People Group Placeholder",
+        approximatePopulation: "Approximate Population Placeholder",
+        approximateChristianPercentage: "Approximate Christian Percentage Placeholder",
+        prayerFocus: "Mission Prayer Focus Placeholder"
+    )
+
+    private static func missionaryPlaceholderDay(_ number: Int) -> JourneyDay {
+        JourneyDay(
+            dayNumber: number,
+            title: "Day \(number) Title Placeholder",
+            chapterReference: "Scripture Reference Placeholder",
+            summary: "Summary Placeholder",
+            primaryScripture: JourneyScripture(
+                reference: "Scripture Reference Placeholder",
+                text: "Scripture Text Placeholder"
+            ),
+            devotional: "Devotional Placeholder",
+            reflections: (1...3).map { reflectionNumber in
+                JourneyReflection(
+                    id: "pray-for-missionaries-\(number)-reflection-\(reflectionNumber)",
+                    scripture: JourneyScripture(
+                        reference: "Reflection Scripture Placeholder",
+                        text: "Reflection Text Placeholder"
+                    ),
+                    prayer: "Reflection Prayer Placeholder"
+                )
+            },
+            closingPrayer: "Closing Prayer Placeholder",
+            missionFocus: missionaryPlaceholderFocus
+        )
+    }
+
     static let allPlans: [JourneyPlan] = PrayerPlansRepository.allPlans
         .filter { $0.id == "easter" }
         .map {
@@ -653,7 +698,44 @@ enum JourneyPlansRepository {
                     )
                 ]
             )
-        }
+        } + [
+            JourneyPlan(
+                metadata: missionariesPlan,
+                days: (1...16).map { missionaryPlaceholderDay($0) },
+                introduction: JourneyIntroduction(
+                    themeVerse: JourneyScripture(
+                        reference: "Matthew 28:19–20",
+                        text: "Go therefore and make disciples of all the nations, baptizing them in the name of the Father and the Son and the Holy Spirit, teaching them to observe all that I commanded you; and lo, I am with you always, even to the end of the age."
+                    ),
+                    paragraphs: [
+                        "This journey is a focused invitation to pray for missionaries who carry the Gospel across cultures, languages, and borders.",
+                        "Over these sixteen days, you will make space for Scripture, reflection, and guided prayer as you remember the people and places being served. Your prayers join the work of God around the world and encourage those who have been sent."
+                    ],
+                    estimatedDailyPrayerTime: "7–10 minutes",
+                    difficulty: .gentle,
+                    categoryTitle: "Missions",
+                    experiences: [
+                        JourneyExperience(title: "Read God's Word", description: "Meditate on carefully selected passages that guide each day's prayer."),
+                        JourneyExperience(title: "Reflect on Scripture", description: "Discover biblical truths that deepen your faith and encourage your walk with Christ."),
+                        JourneyExperience(title: "Pray with Purpose", description: "Follow thoughtful, Scripture-centered prayers that help you pray with confidence."),
+                        JourneyExperience(title: "Pray for the Nations", description: "Learn about a different country or people group and lift them before God in prayer."),
+                        JourneyExperience(title: "Gain a Global Perspective", description: "See the population and Christian presence of each mission field to better understand the need for the Gospel."),
+                        JourneyExperience(title: "Support Missionaries", description: "Pray intentionally for the men and women faithfully sharing Christ around the world.")
+                    ],
+                    mission: JourneyMissionInformation(
+                        countryOrPeopleGroup: "Shown with each future journey day",
+                        approximatePopulation: "Shown with each future journey day",
+                        approximateChristianPercentage: "Shown with each future journey day",
+                        prayerFocus: "Pray for faithful Gospel witness, protection, provision, and fruit among the people being served."
+                    ),
+                    beforeYouBeginTitle: "Before You Begin",
+                    beforeYouBeginContent: [
+                        "Ask the Holy Spirit to prepare your heart as you begin this journey of prayer. Over the next sixteen days, you will walk through Scripture, intercede for missionaries faithfully proclaiming the Gospel, and pray for people around the world who have yet to hear the name of Jesus.",
+                        "May these moments of prayer deepen your love for God's mission, strengthen your compassion for the nations, and remind you that every prayer offered in faith can have an eternal impact."
+                    ]
+                )
+            )
+        ]
 
     static func planByID(_ id: String) -> JourneyPlan? {
         allPlans.first(where: { $0.id == id })

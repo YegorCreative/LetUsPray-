@@ -47,6 +47,9 @@ struct JourneyDayView: View {
                 themeSection
                 primaryScriptureSection
                 devotionalSection
+                if let missionFocus = day.missionFocus {
+                    missionFocusSection(missionFocus)
+                }
 
                 ForEach(Array(day.reflections.enumerated()), id: \.element.id) { index, reflection in
                     reflectionSection(reflection, number: index + 1)
@@ -126,6 +129,44 @@ struct JourneyDayView: View {
                 .foregroundStyle(AppColors.secondaryText)
                 .lineSpacing(7)
                 .fixedSize(horizontal: false, vertical: true)
+        }
+    }
+
+    private func missionFocusSection(_ mission: JourneyMissionInformation) -> some View {
+        InfoCard(padding: AppSpacing.heroPadding) {
+            VStack(alignment: .leading, spacing: AppSpacing.medium) {
+                Label("Mission Focus", systemImage: "globe.americas.fill")
+                    .font(AppTypography.headline())
+                    .foregroundStyle(AppColors.textPrimary)
+
+                missionRow("Country / People Group", mission.countryOrPeopleGroup)
+                missionRow("Approximate Population", mission.approximatePopulation)
+                missionRow("Approximate Christian Percentage", mission.approximateChristianPercentage)
+
+                VStack(alignment: .leading, spacing: AppSpacing.xSmall) {
+                    Text("Prayer Focus")
+                        .font(AppTypography.caption())
+                        .foregroundStyle(AppColors.tertiaryText)
+                    Text(mission.prayerFocus)
+                        .font(AppTypography.body())
+                        .foregroundStyle(AppColors.secondaryText)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+        }
+    }
+
+    private func missionRow(_ title: String, _ value: String) -> some View {
+        HStack(alignment: .firstTextBaseline) {
+            Text(title)
+                .font(AppTypography.body())
+                .foregroundStyle(AppColors.secondaryText)
+            Spacer(minLength: AppSpacing.small)
+            Text(value)
+                .font(AppTypography.body())
+                .fontWeight(.semibold)
+                .foregroundStyle(AppColors.textPrimary)
+                .multilineTextAlignment(.trailing)
         }
     }
 
@@ -443,6 +484,10 @@ struct JourneyDayView: View {
 
         Journey Devotional.
         \(day.devotional)
+
+        \(day.missionFocus.map { mission in
+            "Mission Focus. \(mission.countryOrPeopleGroup). \(mission.approximatePopulation). \(mission.approximateChristianPercentage). \(mission.prayerFocus)"
+        } ?? "")
 
         \(reflections)
 

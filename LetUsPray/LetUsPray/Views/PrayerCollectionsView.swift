@@ -208,7 +208,8 @@ struct PrayerCollectionsView: View {
         if !journey.plan.days.isEmpty || journey.plan.id == "psalms-journey-overview" {
             return true
         }
-        return JourneyPlansRepository.planByID(journey.plan.id)?.days.isEmpty == false
+        let repositoryPlan = JourneyPlansRepository.planByID(journey.plan.id)
+        return repositoryPlan?.days.isEmpty == false || repositoryPlan?.introduction != nil
     }
 
     private func planListSection<Content: View>(

@@ -588,7 +588,7 @@ enum PrayerJourneyCatalog {
         entry("pray-for-unity", "Pray for Unity", "Seek peace across the body of Christ", .church, "Church", 14, 7, .steady, "arrow.triangle.branch", "gospel", false, false, false),
 
         entry("pray-for-missions", "Pray for Missions", "Join God's work around the world", .missions, "Missions", 21, 8, .steady, "globe.americas.fill", "encouragement", false, false, false),
-        entry("pray-for-missionaries", "Pray for Missionaries", "Support those serving far from home", .missions, "Missions", 14, 7, .gentle, "airplane", "encouragement", false, false, false),
+        entry("pray-for-missionaries", "Pray for Missionaries", "Pray for those taking the Gospel to the nations.", .missions, "Missions", 16, 8, .gentle, "airplane", "encouragement", false, false, false, "pray-for-missionaries"),
         entry("pray-for-evangelism", "Pray for Evangelism", "Pray for courage to share good news", .missions, "Missions", 14, 8, .steady, "megaphone.fill", "encouragement", false, false, false),
         entry("pray-for-the-nations", "Pray for the Nations", "Lift the world and its people to God", .missions, "Missions", 30, 8, .steady, "globe", "encouragement", false, false, false),
         entry("pray-for-your-community", "Pray for Your Community", "Seek the good of the place you call home", .missions, "Missions", 14, 7, .gentle, "house.2.fill", "encouragement", false, true, false),
