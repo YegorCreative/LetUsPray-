@@ -91,6 +91,398 @@ enum JourneyPlansRepository {
         )
     )
 
+    private static let missionaryDayTwo = JourneyDay(
+        dayNumber: 2,
+        title: "Filled with God's Spirit",
+        chapterReference: "Acts 13:6–9",
+        summary: "Missionaries need the Holy Spirit's wisdom, discernment, and courage to proclaim Jesus Christ faithfully, especially when Gospel ministry meets resistance.",
+        primaryScripture: JourneyScripture(
+            reference: "Acts 13:6–9",
+            text: "When they had gone through the whole island as far as Paphos, they found a magician, a Jewish false prophet whose name was Bar-Jesus, who was with the proconsul, Sergius Paulus, a man of intelligence. This man summoned Barnabas and Saul and sought to hear the word of God. But Elymas the magician (for so his name is translated) was opposing them, seeking to turn the proconsul away from the faith. But Saul, who was also known as Paul, filled with the Holy Spirit, fixed his gaze on him,"
+        ),
+        devotional: "Paul and Barnabas reached Paphos and found both an open door and determined opposition. Sergius Paulus wanted to hear the word of God, but Elymas tried to turn him away from the faith. In that difficult moment, Scripture does not first draw attention to Paul's education, force of personality, or experience. It tells us that Paul was filled with the Holy Spirit.\n\nBeing filled with the Spirit did not remove conflict or make Gospel ministry easy. It enabled Paul to face resistance with spiritual discernment and faithful courage. He needed wisdom to recognize what was happening, sensitivity to God's direction, and strength to speak truth without trusting in human influence alone. The Spirit's work kept the mission centered on God's truth rather than Paul's ability.\n\nMissionaries today also encounter situations that skill alone cannot navigate. They serve across cultures, answer difficult questions, discern between genuine interest and harmful opposition, and make decisions whose consequences may not be immediately clear. Their deepest need is not a more impressive personality but a living dependence on the Holy Spirit, who glorifies Christ and equips His people to bear witness to Him.\n\nAs we pray, let us ask God to fill missionaries with His Spirit so they can carry out the mission Jesus has given them. May He grant wisdom without pride, discernment without fear, and courage without harshness. Whether ministry brings welcome or resistance, may they remain faithful to Scripture, speak the Gospel clearly, and trust God's power to produce fruit according to His will.",
+        reflections: [
+            JourneyReflection(
+                id: "pray-for-missionaries-2-reflection-1",
+                scripture: JourneyScripture(
+                    reference: "Zechariah 4:6",
+                    text: "Then he said to me, 'This is the word of the LORD to Zerubbabel saying, “Not by might nor by power, but by My Spirit,” says the LORD of hosts.'"
+                ),
+                prayer: "Lord God, teach missionaries to depend on Your Spirit rather than human strength, talent, or influence. Supply what they lack and keep their service rooted in Your power and directed toward Jesus Christ."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-2-reflection-2",
+                scripture: JourneyScripture(
+                    reference: "Colossians 1:9",
+                    text: "For this reason also, since the day we heard of it, we have not ceased to pray for you and to ask that you may be filled with the knowledge of His will in all spiritual wisdom and understanding."
+                ),
+                prayer: "Father, fill missionaries with the knowledge of Your will. Give them spiritual wisdom and discernment for every conversation, decision, and challenge, and keep them faithful to the truth of Scripture."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-2-reflection-3",
+                scripture: JourneyScripture(
+                    reference: "Acts 1:8",
+                    text: "But you will receive power when the Holy Spirit has come upon you; and you shall be My witnesses both in Jerusalem, and in all Judea and Samaria, and even to the remotest part of the earth."
+                ),
+                prayer: "Holy Spirit, give missionaries courage and power to witness faithfully to Jesus. Open opportunities to share Christ, strengthen them when they face resistance, and bring Gospel fruit for God's glory."
+            )
+        ],
+        closingPrayer: "Heavenly Father, fill missionaries with the Holy Spirit as they carry the Gospel of Jesus Christ into places of opportunity and resistance. Teach them to depend on Your power rather than their own personality, talent, influence, or strength. Give them wisdom for every decision, discernment in every challenge, courage to speak the truth faithfully, and sensitivity to follow Your direction. Strengthen them when opposition comes, keep them anchored in Scripture, and open doors for them to proclaim Christ with clarity and love. Produce Gospel fruit according to Your will, establish faithful local believers and churches, and receive all the glory through their service. In Jesus’ name, Amen.",
+        missionFocus: JourneyMissionInformation(
+            countryOrPeopleGroup: "Tunisia",
+            approximatePopulation: "Approximately 12.3 million people",
+            approximateChristianPercentage: "Approximately 0.5% Christian",
+            prayerFocus: "Pray for missionaries and local believers to depend on the Holy Spirit for wisdom, discernment, and courage; to remain faithful to Scripture when facing resistance; and to receive opportunities to share Christ and see Gospel fruit according to God's will."
+        )
+    )
+
+    private static let missionaryDayThree = JourneyDay(
+        dayNumber: 3,
+        title: "Victory in Spiritual Warfare",
+        chapterReference: "Acts 13:10–12",
+        summary: "Missionaries face real spiritual opposition, yet they can stand faithfully in God's strength, love the people they serve, and trust the authority of Jesus Christ.",
+        primaryScripture: JourneyScripture(
+            reference: "Acts 13:10–12",
+            text: "And said, \"You who are full of all deceit and fraud, you son of the devil, you enemy of all righteousness, will you not cease to make crooked the straight ways of the Lord? Now, behold, the hand of the Lord is upon you, and you will be blind and not see the sun for a time.\" And immediately a mist and a darkness fell upon him, and he went about seeking those who would lead him by the hand. Then the proconsul believed when he saw what had happened, being amazed at the teaching of the Lord."
+        ),
+        devotional: "Elymas actively tried to turn the proconsul away from the faith, and Paul confronted his deception with Spirit-given courage. This was a serious moment of opposition, but it does not give Christians permission to treat people as enemies or speak harshly whenever someone disagrees. Paul's specific rebuke exposed a deliberate effort to distort God's truth, while the larger witness of Scripture reminds us that our struggle is not against flesh and blood.\n\nMissionaries may encounter resistance, discouragement, confusion, or deception as they share Jesus Christ. Spiritual warfare is not a reason for fear or sensationalism. It is a call to remain prayerful, discerning, and grounded in Scripture. The people missionaries serve are people to love—neighbors made in God's image who need the truth and grace of Christ. The opposition is spiritual, and it cannot be overcome through anger, manipulation, or human strength.\n\nVictory is found in Jesus. Christ has authority over every power, has overcome the world through His death and resurrection, and remains faithful when ministry is costly. This does not mean missionaries will avoid rejection, suffering, or setbacks. It means those hardships do not have the final word. God's servants can stand firm in His strength, speak biblical truth with humility, and keep loving people even when the Gospel is resisted.\n\nAs we pray today, let us ask God to protect missionaries from fear, deception, and discouragement. May He give them wisdom to recognize spiritual opposition without becoming suspicious of people, courage to proclaim Christ without hostility, and perseverance when progress seems blocked. The Gospel cannot ultimately be defeated, and Jesus is able to sustain His witnesses through every difficulty.",
+        reflections: [
+            JourneyReflection(
+                id: "pray-for-missionaries-3-reflection-1",
+                scripture: JourneyScripture(
+                    reference: "Ephesians 6:12",
+                    text: "For our struggle is not against flesh and blood, but against the rulers, against the powers, against the world forces of this darkness, against the spiritual forces of wickedness in the heavenly places."
+                ),
+                prayer: "Father, help missionaries recognize the spiritual nature of opposition while seeing every person with compassion. Guard them from hostility and suspicion, and enable them to share Christ's truth with humility, patience, and love."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-3-reflection-2",
+                scripture: JourneyScripture(
+                    reference: "Ephesians 6:10–11",
+                    text: "Finally, be strong in the Lord and in the strength of His might. Put on the full armor of God, so that you will be able to stand firm against the schemes of the devil."
+                ),
+                prayer: "Lord, strengthen missionaries with Your mighty power. Keep them grounded in Scripture, give them wisdom and discernment, protect their unity, and help them stand firm when ministry becomes spiritually difficult."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-3-reflection-3",
+                scripture: JourneyScripture(
+                    reference: "John 16:33",
+                    text: "These things I have spoken to you, so that in Me you may have peace. In the world you have tribulation, but take courage; I have overcome the world."
+                ),
+                prayer: "Lord Jesus, give missionaries peace and courage when they face opposition, suffering, fear, or discouragement. Fix their confidence on Your victory and help them persevere in sharing the Gospel with faithfulness and love."
+            )
+        ],
+        closingPrayer: "Heavenly Father, thank You that Jesus Christ has all authority and has overcome the world. Strengthen missionaries who face spiritual opposition, discouragement, deception, rejection, or suffering. Give them discernment without suspicion, courage without harshness, and perseverance rooted in Your faithfulness. Protect their hearts and minds, preserve their unity, and keep them grounded in Scripture and prayer. Help them see the people they serve with compassion and continue proclaiming Christ with truth, humility, and love. Open opportunities for Gospel witness, and let those who hear encounter the truth and grace of Jesus. When ministry is difficult, enable Your servants to stand firm in Your strength and remain confident in Christ's sovereign care. In Jesus’ name, Amen.",
+        missionFocus: JourneyMissionInformation(
+            countryOrPeopleGroup: "Maldives",
+            approximatePopulation: "Approximately 530,000 people",
+            approximateChristianPercentage: "Less than 0.1% Christian",
+            prayerFocus: "Pray for missionaries and local believers to receive spiritual strength, protection from discouragement, discernment, courage, wisdom, perseverance, and unity. Ask God for opportunities to share Christ faithfully and lovingly, and for those who hear to encounter the truth and grace of Jesus."
+        )
+    )
+
+    private static let missionaryDayFour = JourneyDay(
+        dayNumber: 4,
+        title: "Success in Gospel Witness",
+        chapterReference: "Acts 13:12",
+        summary: "Missionaries faithfully proclaim Jesus Christ, but only God can open hearts. We pray for clear Gospel witness, receptive hearers, and lasting fruit that brings glory to Christ.",
+        primaryScripture: JourneyScripture(
+            reference: "Acts 13:12",
+            text: "Then the proconsul believed when he saw what had happened, being amazed at the teaching of the Lord."
+        ),
+        devotional: "The proconsul in Acts 13 encountered both the truth of God's Word and the unmistakable evidence of God's power. What amazed him was not merely the personality or skill of Paul and Barnabas, but the teaching of the Lord. Through their faithful witness, his attention was directed to the truth about Jesus Christ, and he believed.\n\nThis moment reminds us what true success in Gospel witness looks like. Missionaries are called to communicate the good news clearly, lovingly, and faithfully, pointing people away from themselves and toward Christ. Careful preparation and wise communication matter, but persuasive ability alone cannot produce faith. God works through His Word and by His Spirit to open hearts and bring people to repentance and trust in Jesus.\n\nSometimes missionaries see an immediate response, as Paul and Barnabas did in this account. At other times, they sow and water for years before visible fruit appears. Neither quick results nor long waiting determines whether their service is faithful. Their calling is to proclaim Christ, love the people before them, and trust God with the outcome.\n\nAs we pray today, let us ask the Lord to give missionaries clarity, courage, and deep dependence on Him. May people encounter biblical truth, recognize the beauty and authority of Jesus, and become lasting disciples who grow within faithful local churches. And when results seem slow, may God's servants remain steady, knowing that He alone gives the growth.",
+        reflections: [
+            JourneyReflection(
+                id: "pray-for-missionaries-4-reflection-1",
+                scripture: JourneyScripture(
+                    reference: "2 Corinthians 4:5",
+                    text: "For we do not preach ourselves but Christ Jesus as Lord, and ourselves as your bond-servants for Jesus' sake."
+                ),
+                prayer: "Lord Jesus, keep missionaries from drawing attention to themselves. Give them humility and clarity to proclaim You as Lord so that every Gospel conversation faithfully points people to Your saving grace."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-4-reflection-2",
+                scripture: JourneyScripture(
+                    reference: "Acts 16:14",
+                    text: "A woman named Lydia, from the city of Thyatira, a seller of purple fabrics, a worshiper of God, was listening; and the Lord opened her heart to respond to the things spoken by Paul."
+                ),
+                prayer: "Father, open hearts as missionaries share Your Word. Arrange meaningful conversations, help hearers understand biblical truth, and draw them to genuine faith and lasting obedience to Christ."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-4-reflection-3",
+                scripture: JourneyScripture(
+                    reference: "Romans 1:16",
+                    text: "For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes, to the Jew first and also to the Greek."
+                ),
+                prayer: "Holy Spirit, give missionaries courage and confidence in the power of the Gospel. Sustain them when fruit seems slow, and use their faithful witness to bring people to salvation in Jesus Christ."
+            )
+        ],
+        closingPrayer: "Heavenly Father, thank You for the Gospel, Your power for salvation to everyone who believes. Strengthen missionaries to proclaim Jesus Christ faithfully, with clarity, courage, humility, and love. Open doors for Gospel conversations and open hearts to receive the truth of Your Word. Keep Your servants dependent on the Holy Spirit rather than on persuasive ability alone, and sustain them when visible results come slowly. Establish local believers and churches, and produce lasting disciples whose lives bear fruit for Your kingdom. May every response and every faithful act of witness bring glory to Jesus Christ. In Jesus’ name, Amen.",
+        missionFocus: JourneyMissionInformation(
+            countryOrPeopleGroup: "Japan",
+            approximatePopulation: "Approximately 123 million people",
+            approximateChristianPercentage: "Approximately 1–2% Christian",
+            prayerFocus: "Pray for missionaries to share Christ clearly, for open hearts and natural opportunities for Gospel conversations, and for local believers and churches to nurture lasting disciples rather than superficial responses."
+        )
+    )
+
+    private static let missionaryDayFive = JourneyDay(
+        dayNumber: 5,
+        title: "Peace with Other Believers",
+        chapterReference: "Acts 13:13",
+        summary: "Missionaries need Christ-centered relationships marked by humility, patience, forgiveness, and grace as they serve alongside other believers for the sake of the Gospel.",
+        primaryScripture: JourneyScripture(
+            reference: "Acts 13:13",
+            text: "Now Paul and his companions put out to sea from Paphos and came to Perga in Pamphylia; but John left them and returned to Jerusalem."
+        ),
+        devotional: "Acts 13:13 does not directly teach about reconciliation. It records that John left Paul and his companions and returned to Jerusalem. Later, when Barnabas wanted to take John Mark on another journey, Paul strongly disagreed because John had withdrawn from the earlier work. That event became part of a serious conflict between two faithful believers who had served the Gospel together.\n\nMissionaries do not serve alone. They work with teammates, families, local believers, pastors, churches, and ministry partners from different cultures and backgrounds. Even people who sincerely love Jesus can misunderstand one another, feel disappointed, disagree about ministry decisions, or cause hurt. Christian unity is not the absence of every conflict; it is a shared commitment to honor Christ in the way conflict is handled.\n\nBiblical peace does not require believers to pretend that problems are harmless or that every partnership must continue in exactly the same form. Honest conversations, repentance, forgiveness, wise boundaries, and even different ministry decisions may sometimes be necessary. Yet personal pride, bitterness, and contempt must not be allowed to rule. Because Christ has reconciled His people to God through the cross, He calls them to extend humility, patience, truth, and grace to one another.\n\nAs we pray today, let us ask God to protect Gospel partnerships and heal relationships when conflict occurs. May missionaries listen carefully across cultural differences, speak truth with love, forgive as they have been forgiven, and keep Christ's mission above personal ambition. Healthy unity among believers does not mean agreement on every secondary matter, but it can show the world the transforming love of Jesus and strengthen a faithful Gospel witness.",
+        reflections: [
+            JourneyReflection(
+                id: "pray-for-missionaries-5-reflection-1",
+                scripture: JourneyScripture(
+                    reference: "John 17:20–23",
+                    text: "I do not ask on behalf of these alone, but for those also who believe in Me through their word; that they may all be one; even as You, Father, are in Me and I in You, that they also may be in Us, so that the world may believe that You sent Me. The glory which You have given Me I have given to them, that they may be one, just as We are one; I in them and You in Me, that they may be perfected in unity, so that the world may know that You sent Me, and loved them, even as You have loved Me."
+                ),
+                prayer: "Father, answer Jesus' prayer for unity among missionaries, local believers, and churches serving together. Center their relationships on Christ, deepen their love for one another, and let their unity strengthen the world's witness to the Gospel."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-5-reflection-2",
+                scripture: JourneyScripture(
+                    reference: "Ephesians 4:1–3",
+                    text: "Therefore I, the prisoner of the Lord, implore you to walk in a manner worthy of the calling with which you have been called, with all humility and gentleness, with patience, showing tolerance for one another in love, being diligent to preserve the unity of the Spirit in the bond of peace."
+                ),
+                prayer: "Lord, give missionaries humility, gentleness, and patience in their everyday relationships. Grant wisdom across personality and cultural differences, and help ministry teams diligently preserve the unity of the Spirit in the bond of peace."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-5-reflection-3",
+                scripture: JourneyScripture(
+                    reference: "Colossians 3:12–15",
+                    text: "So, as those who have been chosen of God, holy and beloved, put on a heart of compassion, kindness, humility, gentleness and patience; bearing with one another, and forgiving each other, whoever has a complaint against anyone; just as the Lord forgave you, so also should you. Beyond all these things put on love, which is the perfect bond of unity. Let the peace of Christ rule in your hearts, to which indeed you were called in one body; and be thankful."
+                ),
+                prayer: "Lord Jesus, rule with Your peace when missionaries and fellow believers experience disappointment or conflict. Free them from bitterness, lead them toward repentance, forgiveness, and reconciliation, and bind them together in Christ-centered love."
+            )
+        ],
+        closingPrayer: "Heavenly Father, thank You for reconciling Your people to Yourself through Jesus Christ and calling believers to live in peace with one another. Strengthen missionaries, their families, teammates, local believers, pastors, churches, and ministry partners with Christ-centered love. Give them humility, patience, gentleness, and wisdom in difficult conversations. When disagreements occur even among faithful believers, grant grace to listen honestly, repent where needed, forgive freely, establish wise boundaries, and pursue reconciliation in ways that honor Jesus. Protect missionary teams and Gospel partnerships from pride, division, and bitterness. Help believers navigate cultural and ministry differences without demanding agreement on every secondary issue. May healthy local churches and strong relationships display the transforming love of Christ and support a faithful Gospel witness to the world. In Jesus’ name, Amen.",
+        missionFocus: JourneyMissionInformation(
+            countryOrPeopleGroup: "Cambodia",
+            approximatePopulation: "Approximately 17.8 million people",
+            approximateChristianPercentage: "Approximately 3% Christian",
+            prayerFocus: "Pray for unity among missionaries and local believers, healthy churches, humility and patience across cultural differences, forgiveness and reconciliation when conflict occurs, protection from bitterness, and strong Christ-centered partnerships that strengthen faithful Gospel witness."
+        )
+    )
+
+    private static let missionaryDaySix = JourneyDay(
+        dayNumber: 6,
+        title: "Favor with Unbelievers",
+        chapterReference: "Acts 13:14–15",
+        summary: "God can give missionaries relational openness and opportunities to speak about Christ as they live with integrity, love people genuinely, and remain faithful to the Gospel.",
+        primaryScripture: JourneyScripture(
+            reference: "Acts 13:14–15",
+            text: "But going on from Perga, they arrived at Pisidian Antioch, and on the Sabbath day they went into the synagogue and sat down. After the reading of the Law and the Prophets the synagogue officials sent to them, saying, \"Brethren, if you have any word of exhortation for the people, say it.\""
+        ),
+        devotional: "Acts 13:14–15 records an open opportunity, not a promise of universal acceptance. When Paul and Barnabas entered the synagogue at Pisidian Antioch, the officials invited them to offer a word of exhortation. God used that invitation to give Paul an opportunity to proclaim His message. Yet the wider story of Acts includes both receptive listeners and serious opposition. Faithful missionaries are not guaranteed popularity, approval, influence, or freedom from rejection.\n\nMissionaries often live and work among neighbors, coworkers, teachers, officials, families, and community leaders who do not share their faith. God may open doors through ordinary conversations, hospitality, patient friendship, or a reputation for honest and compassionate living. Integrity, humility, kindness, and respect can build genuine trust and give credibility to a missionary's words, but these qualities must never become a strategy for manipulating people. Every person bears God's image and deserves sincere love and dignity, whether or not that person ever embraces the Gospel.\n\nBiblical favor is not worldly popularity, political influence, social status, or success gained by compromise. Missionaries must not soften or reshape the Gospel to win approval. Instead, we pray that God would create relational openness according to His purposes and give His servants wisdom to recognize it. Their speech should be gracious, their conduct Christlike, and their courage rooted in Jesus when an opportunity comes to explain the hope of salvation in Him. Faithful conduct supports Gospel proclamation; it does not replace it.\n\nAs we pray today, let us ask God to help missionaries love people genuinely and represent Christ well. May He give them meaningful relationships, cultural sensitivity, receptive conversations, and courage to speak clearly about Jesus. Whether people respond with curiosity, indifference, disagreement, or rejection, may missionaries remain gracious and faithful, trusting God with the results and seeking the glory of Christ rather than their own acceptance.",
+        reflections: [
+            JourneyReflection(
+                id: "pray-for-missionaries-6-reflection-1",
+                scripture: JourneyScripture(
+                    reference: "Colossians 4:2–4",
+                    text: "Devote yourselves to prayer, keeping alert in it with an attitude of thanksgiving; praying at the same time for us as well, that God will open up to us a door for the word, so that we may speak forth the mystery of Christ, for which I have also been imprisoned; that I may make it clear in the way I ought to speak."
+                ),
+                prayer: "Father, open doors for missionaries to speak about Jesus and help them recognize the opportunities You provide. Give them courage and clarity to proclaim the mystery of Christ faithfully, and prepare hearts to hear Your Word."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-6-reflection-2",
+                scripture: JourneyScripture(
+                    reference: "Colossians 4:5–6",
+                    text: "Conduct yourselves with wisdom toward outsiders, making the most of the opportunity. Let your speech always be with grace, as though seasoned with salt, so that you will know how you should respond to each person."
+                ),
+                prayer: "Lord, help missionaries walk wisely and speak graciously with those who do not share their faith. Give them respect, discernment, cultural sensitivity, and genuine love so that every conversation represents Christ with both truth and grace."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-6-reflection-3",
+                scripture: JourneyScripture(
+                    reference: "1 Peter 2:12",
+                    text: "Keep your behavior excellent among the Gentiles, so that in the thing in which they slander you as evildoers, they may because of your good deeds, as they observe them, glorify God in the day of visitation."
+                ),
+                prayer: "God, form integrity, kindness, and Christlike character in missionaries as they live among the people they serve. Build trustworthy relationships through their conduct, and give them courage to support that witness by clearly proclaiming Jesus Christ."
+            )
+        ],
+        closingPrayer: "Heavenly Father, we ask You to give missionaries favor according to Your purposes and keep them faithful regardless of how people respond. Open doors for meaningful relationships and Gospel conversations. Help missionaries love unbelievers genuinely, honoring the dignity of every person rather than treating relationships merely as ministry opportunities. Give them wisdom, cultural sensitivity, integrity, kindness, and gracious speech. Make them courageous when opportunities arise to explain the hope found in Jesus Christ, and help them proclaim Him clearly without compromise. Prepare receptive hearts, strengthen faithful local believers, and let the lives and words of Your servants represent Christ well. When they meet curiosity, indifference, disagreement, or rejection, sustain them in humility and love. May Jesus be known and glorified through their faithful witness. In Jesus’ name, Amen.",
+        missionFocus: JourneyMissionInformation(
+            countryOrPeopleGroup: "Morocco",
+            approximatePopulation: "Approximately 38.4 million people",
+            approximateChristianPercentage: "Approximately 0.2% Christian",
+            prayerFocus: "Pray for missionaries and local believers to build genuine, trustworthy relationships marked by integrity, kindness, and cultural sensitivity. Ask God for open doors, gracious conversations, receptive hearts, and courage to speak clearly about Jesus while loving every person sincerely."
+        )
+    )
+
+    private static let missionaryDaySeven = JourneyDay(
+        dayNumber: 7,
+        title: "The Gospel Will Be Clear Through Them",
+        chapterReference: "Acts 13:16–47",
+        summary: "Missionaries are called to make Jesus Christ and His Gospel known with faithfulness to God's Word, clarity for their listeners, and dependence on the Holy Spirit.",
+        primaryScripture: JourneyScripture(
+            reference: "Acts 13:16–47",
+            text: """
+            Paul stood up, and motioning with his hand said, "Men of Israel, and you who fear God, listen: The God of this people Israel chose our fathers and made the people great during their stay in the land of Egypt, and with an uplifted arm He led them out from it. For a period of about forty years He put up with them in the wilderness. When He had destroyed seven nations in the land of Canaan, He distributed their land as an inheritance—all of which took about four hundred and fifty years. After these things He gave them judges until Samuel the prophet. Then they asked for a king, and God gave them Saul the son of Kish, a man of the tribe of Benjamin, for forty years. After He had removed him, He raised up David to be their king, concerning whom He also testified and said, 'I have found David the son of Jesse, a man after My heart, who will do all My will.' From the descendants of this man, according to promise, God has brought to Israel a Savior, Jesus, after John had proclaimed before His coming a baptism of repentance to all the people of Israel. And while John was completing his course, he kept saying, 'What do you suppose that I am? I am not He. But behold, one is coming after me the sandals of whose feet I am not worthy to untie.'
+
+            Brethren, sons of Abraham's family, and those among you who fear God, to us the message of this salvation has been sent. For those who live in Jerusalem, and their rulers, recognizing neither Him nor the utterances of the prophets which are read every Sabbath, fulfilled these by condemning Him. And though they found no ground for putting Him to death, they asked Pilate that He be executed. When they had carried out all that was written concerning Him, they took Him down from the cross and laid Him in a tomb. But God raised Him from the dead; and for many days He appeared to those who came up with Him from Galilee to Jerusalem, the very ones who are now His witnesses to the people. And we preach to you the good news of the promise made to the fathers, that God has fulfilled this promise to our children in that He raised up Jesus, as it is also written in the second Psalm, 'You are My Son; today I have begotten You.' As for the fact that He raised Him up from the dead, no longer to return to decay, He has spoken in this way: 'I will give you the holy and sure blessings of David.' Therefore He also says in another Psalm, 'You will not allow Your Holy One to undergo decay.' For David, after he had served the purpose of God in his own generation, fell asleep, and was laid among his fathers and underwent decay; but He whom God raised did not undergo decay.
+
+            Therefore let it be known to you, brethren, that through Him forgiveness of sins is proclaimed to you, and through Him everyone who believes is freed from all things, from which you could not be freed through the Law of Moses. Therefore take heed, so that the thing spoken of in the Prophets may not come upon you: 'Behold, you scoffers, and marvel, and perish; for I am accomplishing a work in your days, a work which you will never believe, though someone should describe it to you.'
+
+            As Paul and Barnabas were going out, the people kept begging that these things might be spoken to them the next Sabbath. Now when the meeting of the synagogue had broken up, many of the Jews and of the God-fearing proselytes followed Paul and Barnabas, who, speaking to them, were urging them to continue in the grace of God. The next Sabbath nearly the whole city assembled to hear the word of the Lord. But when the Jews saw the crowds, they were filled with jealousy and began contradicting the things spoken by Paul, and were blaspheming. Paul and Barnabas spoke out boldly and said, "It was necessary that the word of God be spoken to you first; since you repudiate it and judge yourselves unworthy of eternal life, behold, we are turning to the Gentiles. For so the Lord has commanded us, 'I have placed You as a light for the Gentiles, that You may bring salvation to the end of the earth.'"
+            """
+        ),
+        devotional: """
+        Paul's message in Acts 13 traces God's faithful work through Israel's history and brings everything to its center: Jesus Christ. Paul explains that Jesus is God's promised Savior, that He was rejected and crucified, that God raised Him from the dead, and that forgiveness and freedom from sin are proclaimed through Him. He does not promote himself, an organization, a culture, or a vague spirituality. He makes the Gospel clear and calls his listeners to receive God's message.
+
+        Missionaries communicate across languages, cultures, generations, educational backgrounds, and religious traditions. They must learn how people think, what words communicate accurately, and which assumptions may create confusion. Adapting the way the Gospel is explained is not the same as changing what the Gospel means. Faithful missionaries work to make biblical truth understandable while preserving its essential message: God is holy and faithful; humanity is sinful and needs reconciliation; Jesus is God's promised Savior; He died for sins and rose from the dead; forgiveness is found in Him; and people are called to repent and believe, receiving salvation by God's grace rather than human achievement.
+
+        Clarity does not come primarily from eloquence, charisma, marketing, or emotional pressure. Missionaries need careful study of Scripture, cultural and linguistic wisdom, courage to speak difficult truths, and dependence on the Holy Spirit. They must not hide sin, the cross, repentance, or Christ's exclusive saving work in order to gain acceptance. At the same time, faithfulness does not excuse confusing language, cultural pride, careless answers, or needless offense. The message must remain unchanged, but it should be communicated with humility, patience, and genuine concern for the listener.
+
+        As we pray today, let us ask God to keep Jesus at the center of every missionary's witness. May missionaries know His Word deeply, explain Christ's death and resurrection clearly, answer questions graciously, and help listeners understand more than unfamiliar Christian terminology. Whether the Gospel is welcomed or rejected, may they faithfully proclaim Christ and trust God to work in people's hearts, establish genuine faith, and form lasting disciples for His glory.
+        """,
+        reflections: [
+            JourneyReflection(
+                id: "pray-for-missionaries-7-reflection-1",
+                scripture: JourneyScripture(
+                    reference: "1 Corinthians 2:1–5",
+                    text: "And when I came to you, brethren, I did not come with superiority of speech or of wisdom, proclaiming to you the testimony of God. For I determined to know nothing among you except Jesus Christ, and Him crucified. I was with you in weakness and in fear and in much trembling, and my message and my preaching were not in persuasive words of wisdom, but in demonstration of the Spirit and of power, so that your faith would not rest on the wisdom of men, but on the power of God."
+                ),
+                prayer: "Father, keep Jesus Christ and Him crucified at the center of every missionary's witness. Guard Your servants from drawing attention to themselves or trusting charisma and persuasive ability, and let people's faith rest on Your power."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-7-reflection-2",
+                scripture: JourneyScripture(
+                    reference: "2 Timothy 2:15",
+                    text: "Be diligent to present yourself approved to God as a workman who does not need to be ashamed, accurately handling the word of truth."
+                ),
+                prayer: "Lord, help missionaries study Scripture carefully and handle the word of truth accurately. Give them disciplined preparation, sound understanding, and wisdom to explain biblical truth clearly and responsibly in every language and culture."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-7-reflection-3",
+                scripture: JourneyScripture(
+                    reference: "1 Peter 3:15–16",
+                    text: "But sanctify Christ as Lord in your hearts, always being ready to make a defense to everyone who asks you to give an account for the hope that is in you, yet with gentleness and reverence; and keep a good conscience so that in the thing in which you are slandered, those who revile your good behavior in Christ will be put to shame."
+                ),
+                prayer: "Lord Jesus, prepare missionaries to explain their hope in You with clarity, gentleness, and respect. Give them humility and wisdom when answering questions, courage when truth is unpopular, and faithfulness when the Gospel is rejected."
+            )
+        ],
+        closingPrayer: "Heavenly Father, strengthen missionaries to proclaim Your Gospel faithfully and clearly. Keep Jesus Christ—His death for sins, His resurrection, and the forgiveness found in Him—at the center of their message. Help Your servants know Scripture deeply and handle Your Word accurately. Give them wisdom to understand the people they serve, diligence in learning languages, and discernment to communicate across cultural differences without changing biblical truth. Make their speech gracious, their answers clear, and their hearts humble. Give them courage when the Gospel is unpopular and dependence on the Holy Spirit rather than eloquence or human persuasion. Open listeners' understanding so they grasp the truth of sin, grace, repentance, faith, and salvation in Christ rather than merely hearing Christian words. Form those who respond into lasting disciples, and help missionaries trust You with every response. May their lives and proclamation bring glory to Jesus Christ. In Jesus’ name, Amen.",
+        missionFocus: JourneyMissionInformation(
+            countryOrPeopleGroup: "Tajikistan",
+            approximatePopulation: "Approximately 10.8 million people",
+            approximateChristianPercentage: "Approximately 0.4% Christian",
+            prayerFocus: "Pray for missionaries and local believers to understand the people they serve, learn languages faithfully, and explain Scripture with clarity and cultural wisdom. Ask the Holy Spirit to help listeners understand Christ's death and resurrection, forgiveness, and salvation rather than merely hearing unfamiliar Christian terms, and to establish those who believe as lasting disciples."
+        )
+    )
+
+    private static let missionaryDayEight = JourneyDay(
+        dayNumber: 8,
+        title: "God Will Open Hearts Around Them",
+        chapterReference: "Acts 13:48",
+        summary: "Missionaries faithfully proclaim Jesus Christ, but only God can open hearts, give spiritual understanding, and produce lasting Gospel fruit in His timing.",
+        primaryScripture: JourneyScripture(
+            reference: "Acts 13:48",
+            text: "When the Gentiles heard this, they began rejoicing and glorifying the word of the Lord; and as many as had been appointed to eternal life believed."
+        ),
+        devotional: """
+        Acts 13:48 follows Paul's clear proclamation of Jesus Christ in Pisidian Antioch. The Gentiles heard that God's salvation extended to the nations, rejoiced in the word of the Lord, and believed. The passage keeps a beautiful biblical order before us: Christ was faithfully proclaimed, people genuinely heard and responded, and God's saving work was active. The missionary served as God's messenger, but God remained the source of salvation.
+
+        Missionaries can learn languages, study cultures, build relationships, answer questions, serve communities, and explain Scripture carefully. These are important acts of faithful ministry, but none of them can manufacture genuine faith. Missionaries do not save people, and emotional pressure or persuasive technique cannot transform a heart. Only God can bring spiritual understanding, convict people of sin, draw them to Christ, and produce repentance and faith.
+
+        This truth gives missionaries both humility and confidence. Humility keeps them from treating people as results to produce or measuring their worth by conversion numbers. A season with little visible fruit does not necessarily mean that a missionary has failed. Some servants plant and others water, often without seeing what God is doing beneath the surface. Confidence reminds them that they are not carrying out Christ's mission alone. God can prepare hearts, remove confusion, make the truth of Jesus understood, and cause Gospel seed to bear fruit in His appointed time.
+
+        As we pray today, we need not enter a denominational debate about every theological question raised by Acts 13:48. We can remain close to its clear hope: the Gospel was proclaimed, people heard and rejoiced, people believed, and God was at work. Let us pray that missionaries continue sowing His Word without manipulation or discouragement. May people truly understand their need for Christ, repent and believe in Him, and grow as faithful disciples within healthy local churches, all for God's glory.
+        """,
+        reflections: [
+            JourneyReflection(
+                id: "pray-for-missionaries-8-reflection-1",
+                scripture: JourneyScripture(
+                    reference: "2 Corinthians 4:6",
+                    text: "For God, who said, \"Light shall shine out of darkness,\" is the One who has shone in our hearts to give the Light of the knowledge of the glory of God in the face of Christ."
+                ),
+                prayer: "Father, shine the light of the knowledge of Your glory into the hearts of people hearing the Gospel through missionaries. Help them understand who Jesus is, recognize their need for Him, and respond in genuine repentance and faith."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-8-reflection-2",
+                scripture: JourneyScripture(
+                    reference: "1 Corinthians 3:6–7",
+                    text: "I planted, Apollos watered, but God was causing the growth. So then neither the one who plants nor the one who waters is anything, but God who causes the growth."
+                ),
+                prayer: "God, give missionaries humility and perseverance as they plant and water Gospel seed. Free them from measuring their worth by immediate results, keep them from manipulation, and help them trust You alone to produce spiritual growth in Your timing."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-8-reflection-3",
+                scripture: JourneyScripture(
+                    reference: "Isaiah 55:10–11",
+                    text: "For as the rain and the snow come down from heaven, and do not return there without watering the earth and making it bear and sprout, and furnishing seed to the sower and bread to the eater; so will My word be which goes forth from My mouth; it will not return to Me empty, without accomplishing what I desire, and without succeeding in the matter for which I sent it."
+                ),
+                prayer: "Lord, strengthen missionaries and local believers to keep teaching and proclaiming Your Word faithfully when fruit is not yet visible. Accomplish Your purposes through Scripture, bring lasting disciples to maturity, and establish healthy churches centered on Christ."
+            )
+        ],
+        closingPrayer: "Heavenly Father, prepare hearts to hear and understand the Gospel proclaimed by missionaries. Give people genuine opportunities to encounter Scripture, remove spiritual confusion, and reveal the truth and glory of Jesus Christ. Through Your Word, show them their need for reconciliation, produce repentance and faith, and draw them into faithful discipleship. Give missionaries grace to proclaim Christ clearly while depending on Your power rather than persuasion or manipulation. When visible results are slow, protect them from discouragement and help them continue planting and watering with patience, humility, and hope. Strengthen local believers to participate faithfully in Gospel witness. Cause lasting spiritual fruit to grow, establish healthy local churches, and raise up disciples who follow Jesus with enduring faith. May Your saving work bring glory to Christ among the nations. In Jesus’ name, Amen.",
+        missionFocus: JourneyMissionInformation(
+            countryOrPeopleGroup: "Maldives",
+            approximatePopulation: "Approximately 530,000 people",
+            approximateChristianPercentage: "Estimated at less than 0.1% Christian",
+            prayerFocus: "Pray that God would prepare hearts in the Maldives to encounter and understand Scripture, reveal the truth of Jesus Christ, and produce genuine repentance, faith, and lasting discipleship. Ask Him to give missionaries and local believers meaningful Gospel conversations, patience when fruit is slow, and grace to establish healthy Christ-centered churches without manipulation or discouragement."
+        )
+    )
+
+    private static let missionaryDayNine = JourneyDay(
+        dayNumber: 9,
+        title: "Joy in the Midst of Suffering",
+        chapterReference: "Acts 14:1–2",
+        summary: "Missionaries need joy rooted in Jesus Christ—a deep hope that can coexist with honest sorrow and sustain faithful witness through hardship.",
+        primaryScripture: JourneyScripture(
+            reference: "Acts 14:1–2",
+            text: "In Iconium they entered the synagogue of the Jews together, and spoke in such a manner that a large number of people believed, both of Jews and of Greeks. But the Jews who disbelieved stirred up the minds of the Gentiles and embittered them against the brethren."
+        ),
+        devotional: """
+        Acts 14:1–2 does not explicitly say that Paul and Barnabas felt joyful. It shows that Gospel fruit and opposition existed side by side: many Jews and Greeks believed, while others stirred up hostility against the believers. The rest of Acts 14 records increasing resistance and suffering. This setting helps us pray in light of the broader New Testament truth that deep joy in Christ can remain present even when ministry is painful and costly.
+
+        Missionary hardship is real. Rejection, loneliness, separation from family, cultural isolation, financial uncertainty, ministry disappointment, hostility, physical difficulty, and grief can weigh heavily on those who serve. Suffering itself is not good, and it should never be romanticized. Christian joy does not require missionaries to pretend pain does not hurt, hide trauma, or appear cheerful at every moment. Sadness is not proof of weak faith, and wise rest, lament, counseling, practical care, community support, and appropriate safety measures can all be faithful responses to hardship.
+
+        Joy in Christ is deeper than favorable circumstances. It grows from knowing Jesus, receiving His salvation, trusting His promises, and remembering that suffering will not have the final word. Through the Holy Spirit, sorrow and joy can coexist. Missionaries may grieve honestly while still possessing an enduring hope in God's presence and the resurrection life secured by Christ. They can rejoice when people believe the Gospel even while acknowledging the personal cost of ministry and asking God to relieve suffering.
+
+        As we pray today, let us not merely tell missionaries to be happy or remain in preventable danger. Let us ask God to protect them, provide practical help, surround them with compassionate believers, and give them freedom to rest and grieve. When difficult circumstances continue, may Jesus sustain them with comfort, courage, and hope. May they remain rooted in His love, continue serving according to His calling, and see Gospel fruit according to His wise will.
+        """,
+        reflections: [
+            JourneyReflection(
+                id: "pray-for-missionaries-9-reflection-1",
+                scripture: JourneyScripture(
+                    reference: "Philippians 4:4",
+                    text: "Rejoice in the Lord always; again I will say, rejoice!"
+                ),
+                prayer: "Lord Jesus, be the deepest joy of missionaries when circumstances are painful or uncertain. Keep them close to You, remind them of Your salvation and promises, and sustain a joy rooted in You rather than pressure to deny their suffering."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-9-reflection-2",
+                scripture: JourneyScripture(
+                    reference: "2 Corinthians 6:10",
+                    text: "As sorrowful yet always rejoicing, as poor yet making many rich, as having nothing yet possessing all things."
+                ),
+                prayer: "Compassionate Father, give missionaries freedom to grieve honestly without losing hope in Christ. Meet them in sorrow, provide wise and caring support, and surround them with believers who listen, encourage, and help carry their burdens."
+            ),
+            JourneyReflection(
+                id: "pray-for-missionaries-9-reflection-3",
+                scripture: JourneyScripture(
+                    reference: "Romans 5:3–5",
+                    text: "And not only this, but we also exult in our tribulations, knowing that tribulation brings about perseverance; and perseverance, proven character; and proven character, hope; and hope does not disappoint, because the love of God has been poured out within our hearts through the Holy Spirit who was given to us."
+                ),
+                prayer: "God, sustain missionaries through hardship by Your Holy Spirit. Give them endurance without minimizing their pain, pour Your love into their hearts, show them when to rest or seek help, and preserve their hope and faithful witness in Christ."
+            )
+        ],
+        closingPrayer: "Heavenly Father, draw missionaries and local believers close to Jesus, the source of enduring joy and eternal hope. When they face rejection, loneliness, grief, exhaustion, uncertainty, opposition, or other hardship, meet them with Your comforting presence. Give them freedom to lament honestly without shame and surround them with compassionate Christian community, wise counsel, practical help, and meaningful encouragement. Where suffering can be relieved, provide protection, provision, peace, safety, healing, and rest. When difficult circumstances continue, strengthen Your people to persevere without pretending the pain is small. Pour Your love into their hearts through the Holy Spirit, preserve their love for the people they serve, and help them remember that suffering does not have the final word. Sustain their faithful Gospel witness and bring fruit according to Your will as they rest in the resurrection hope of Christ. In Jesus’ name, Amen.",
+        missionFocus: JourneyMissionInformation(
+            countryOrPeopleGroup: "Myanmar",
+            approximatePopulation: "Approximately 54.9 million people",
+            approximateChristianPercentage: "Approximately 9% Christian",
+            prayerFocus: "Pray for missionaries and local believers serving amid conflict, displacement, natural disasters, and economic hardship in Myanmar. Ask God for deep joy in Christ, protection, provision, appropriate rest, compassionate community, practical aid, endurance, and hope. Pray that they would continue loving their neighbors and bearing faithful Gospel witness, with fruit according to God's will."
+        )
+    )
+
     static let allPlans: [JourneyPlan] = PrayerPlansRepository.allPlans
         .filter { $0.id == "easter" }
         .map {
@@ -746,7 +1138,7 @@ enum JourneyPlansRepository {
         } + [
             JourneyPlan(
                 metadata: missionariesPlan,
-                days: [missionaryDayOne] + (2...16).map { missionaryPlaceholderDay($0) },
+                days: [missionaryDayOne, missionaryDayTwo, missionaryDayThree, missionaryDayFour, missionaryDayFive, missionaryDaySix, missionaryDaySeven, missionaryDayEight, missionaryDayNine] + (10...16).map { missionaryPlaceholderDay($0) },
                 introduction: JourneyIntroduction(
                     themeVerse: JourneyScripture(
                         reference: "Matthew 28:19–20",

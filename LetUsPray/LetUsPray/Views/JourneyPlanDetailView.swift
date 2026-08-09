@@ -102,8 +102,12 @@ struct JourneyPlanDetailView: View {
 struct JourneyIntroductionView: View {
     let plan: JourneyPlan
     let introduction: JourneyIntroduction
+    @AppStorage(PrayerStorageKeys.completedDaysByPlan) private var completedDaysByPlanRawValue = "{}"
 
     private var firstDay: JourneyDay? { plan.days.first }
+    private var completedDayNumbers: Set<Int> {
+        PrayerStorageCodec.decodeCompletedDaysByPlan(completedDaysByPlanRawValue)[plan.id] ?? []
+    }
 
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -147,6 +151,11 @@ struct JourneyIntroductionView: View {
                         .padding(.top, AppSpacing.xLarge) // a deliberate pause before the close
                 }
 
+                if !plan.days.isEmpty {
+                    journeyDaysSection
+                        .padding(.top, AppSpacing.xLarge)
+                }
+
                 Group {
                     if let firstDay {
                         NavigationLink {
@@ -173,6 +182,74 @@ struct JourneyIntroductionView: View {
         .navigationTitle(plan.title)
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(.hidden, for: .navigationBar)
+    }
+
+    private var journeyDaysSection: some View {
+        VStack(alignment: .leading, spacing: AppSpacing.small) {
+            Text("Journey Days")
+                .font(AppTypography.headline())
+                .foregroundStyle(AppColors.textPrimary)
+
+            ForEach(plan.days) { day in
+                if day.hasPlaceholderContent {
+                    journeyDayRow(day, isAvailable: false)
+                } else {
+                    NavigationLink {
+                        JourneyDayView(plan: plan, day: day)
+                    } label: {
+                        journeyDayRow(day, isAvailable: true)
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+        }
+    }
+
+    private func journeyDayRow(_ day: JourneyDay, isAvailable: Bool) -> some View {
+        GlassCard(padding: AppSpacing.medium) {
+            HStack(spacing: AppSpacing.medium) {
+                Text("\(day.dayNumber)")
+                    .font(AppTypography.headline())
+                    .foregroundStyle(isAvailable ? AppColors.brightTextOnAccent : AppColors.textTertiary)
+                    .frame(width: 40, height: 40)
+                    .background(
+                        isAvailable ? plan.category.brandAccent : AppColors.textTertiary.opacity(0.14),
+                        in: Circle()
+                    )
+
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Day \(day.dayNumber)")
+                        .font(AppTypography.caption())
+                        .foregroundStyle(isAvailable ? plan.category.brandAccent : AppColors.textTertiary)
+
+                    Text(isAvailable ? day.title : "Coming Soon")
+                        .font(AppTypography.headline())
+                        .foregroundStyle(isAvailable ? AppColors.textPrimary : AppColors.textSecondary)
+                }
+
+                Spacer(minLength: AppSpacing.small)
+
+                if isAvailable {
+                    let isCompleted = completedDayNumbers.contains(day.dayNumber)
+                    Image(systemName: isCompleted ? "checkmark.circle.fill" : "chevron.right")
+                        .font(.system(size: isCompleted ? 18 : 14, weight: .semibold))
+                        .foregroundStyle(isCompleted ? AppColors.success : plan.category.brandAccent)
+                        .accessibilityHidden(true)
+                } else {
+                    Image(systemName: "clock")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundStyle(AppColors.textTertiary)
+                        .accessibilityHidden(true)
+                }
+            }
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(
+            isAvailable
+                ? "Day \(day.dayNumber), \(day.title)\(completedDayNumbers.contains(day.dayNumber) ? ", Completed" : "")"
+                : "Day \(day.dayNumber), Coming Soon"
+        )
+        .accessibilityHint(isAvailable ? "Opens this journey day" : "This journey day is not yet available")
     }
 
     /// Deliberately quieter than a section header: the reference drops from headline to body
@@ -408,5 +485,12 @@ struct JourneyIntroductionView: View {
 
     private func hasDistinctMissionStats(_ mission: JourneyMissionInformation) -> Bool {
         Set([mission.countryOrPeopleGroup, mission.approximatePopulation, mission.approximateChristianPercentage]).count > 1
+    }
+}
+
+private extension JourneyDay {
+    var hasPlaceholderContent: Bool {
+        devotional == "Devotional Placeholder"
+            || primaryScripture.text == "Scripture Text Placeholder"
     }
 }

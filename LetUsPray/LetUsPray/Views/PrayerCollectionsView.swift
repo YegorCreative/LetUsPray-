@@ -458,17 +458,18 @@ struct PrayerCollectionsView: View {
         showsDescription: Bool = false
     ) -> some View {
         NavigationLink {
-            PlanDetailView(
+            PrayerCollectionJourneyDestination(
                 plan: journey.plan,
-                isActive: activePlanID == journey.plan.id,
-                completedDayNumbers: completedDayNumbersForPlan(journey.plan.id),
+                activePlanID: $activePlanID,
+                completedDayNumbers: $completedDayNumbers,
                 savedVerseIDs: $savedVerseIDs,
                 analytics: $analytics,
-                onStartJourney: {
-                    activePlanID = journey.plan.id
-                    viewModel.setActivePlan(id: journey.plan.id)
-                },
                 completedDayNumbersForPlan: completedDayNumbersForPlan,
+                onStartJourney: { plan in
+                    activePlanID = plan.id
+                    viewModel.setActivePlan(id: plan.id)
+                },
+                onViewCollection: {},
                 onOpenJourney: { plan in
                     activePlanID = plan.id
                     viewModel.setActivePlan(id: plan.id)
@@ -550,17 +551,18 @@ struct PrayerCollectionsView: View {
                 GroupedCard {
                     ForEach(Array(journeys.enumerated()), id: \.element.id) { index, journey in
                         NavigationLink {
-                            PlanDetailView(
+                            PrayerCollectionJourneyDestination(
                                 plan: journey.plan,
-                                isActive: activePlanID == journey.plan.id,
-                                completedDayNumbers: completedDayNumbersForPlan(journey.plan.id),
+                                activePlanID: $activePlanID,
+                                completedDayNumbers: $completedDayNumbers,
                                 savedVerseIDs: $savedVerseIDs,
                                 analytics: $analytics,
-                                onStartJourney: {
-                                    activePlanID = journey.plan.id
-                                    viewModel.setActivePlan(id: journey.plan.id)
-                                },
                                 completedDayNumbersForPlan: completedDayNumbersForPlan,
+                                onStartJourney: { plan in
+                                    activePlanID = plan.id
+                                    viewModel.setActivePlan(id: plan.id)
+                                },
+                                onViewCollection: {},
                                 onOpenJourney: { plan in
                                     activePlanID = plan.id
                                     viewModel.setActivePlan(id: plan.id)
@@ -746,6 +748,42 @@ struct PrayerCollectionsView: View {
             .padding(.horizontal, 7)
             .padding(.vertical, 3)
             .background(color.opacity(0.14), in: Capsule())
+    }
+}
+
+private struct PrayerCollectionJourneyDestination: View {
+    let plan: PrayerPlan
+    @Binding var activePlanID: String
+    @Binding var completedDayNumbers: Set<Int>
+    @Binding var savedVerseIDs: Set<String>
+    @Binding var analytics: PrayerAnalyticsSnapshot
+    let completedDayNumbersForPlan: (String) -> Binding<Set<Int>>
+    let onStartJourney: (PrayerPlan) -> Void
+    let onViewCollection: () -> Void
+    let onOpenJourney: (PrayerPlan) -> Void
+
+    @ViewBuilder
+    var body: some View {
+        if plan.id == "psalms-journey-overview" {
+            PsalmsOverviewView(
+                activePlanID: $activePlanID,
+                completedDayNumbers: $completedDayNumbers,
+                savedVerseIDs: $savedVerseIDs,
+                analytics: $analytics
+            )
+        } else {
+            PlanDetailView(
+                plan: plan,
+                isActive: activePlanID == plan.id,
+                completedDayNumbers: completedDayNumbersForPlan(plan.id),
+                savedVerseIDs: $savedVerseIDs,
+                analytics: $analytics,
+                onStartJourney: { onStartJourney(plan) },
+                onViewCollection: onViewCollection,
+                completedDayNumbersForPlan: completedDayNumbersForPlan,
+                onOpenJourney: onOpenJourney
+            )
+        }
     }
 }
 
@@ -1101,15 +1139,16 @@ struct PrayerCollectionDetailView: View {
 
     private func journeyLink(_ journey: PrayerJourney, featured: Bool = false, showsDivider: Bool = true) -> some View {
         NavigationLink {
-            PlanDetailView(
+            PrayerCollectionJourneyDestination(
                 plan: journey.plan,
-                isActive: activePlanID == journey.plan.id,
-                completedDayNumbers: completedDayNumbersForPlan(journey.plan.id),
+                activePlanID: $activePlanID,
+                completedDayNumbers: $completedDayNumbers,
                 savedVerseIDs: $savedVerseIDs,
                 analytics: $analytics,
-                onStartJourney: {
-                    activePlanID = journey.plan.id
-                    viewModel.setActivePlan(id: journey.plan.id)
+                completedDayNumbersForPlan: completedDayNumbersForPlan,
+                onStartJourney: { plan in
+                    activePlanID = plan.id
+                    viewModel.setActivePlan(id: plan.id)
                 },
                 onViewCollection: { dismiss() },
                 onOpenJourney: { plan in

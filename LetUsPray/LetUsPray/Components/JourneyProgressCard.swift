@@ -34,11 +34,10 @@ struct JourneyProgressCard: View {
                     Spacer()
 
                     ZStack {
-                        ProgressRingView(progress: progress, lineWidth: 4)
-                            .frame(width: 44, height: 44)
+                        ProgressRingView(progress: progress, lineWidth: 7)
+                            .frame(width: 76, height: 76)
                         Text(percentageLabel)
-                            .font(AppTypography.caption())
-                            .fontWeight(.semibold)
+                            .font(AppTypography.cardTitle())
                             .foregroundStyle(AppColors.textPrimary)
                     }
                 }
