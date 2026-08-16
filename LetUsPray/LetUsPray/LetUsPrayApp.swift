@@ -12,6 +12,8 @@ import SwiftUI
 
 @main
 struct LetUsPrayApp: App {
+    @State private var isShowingSplash = true
+
     /// Defines the scene that represents the application's user interface.
     /// Configures a single window group that displays the main content view.
     ///
@@ -24,7 +26,22 @@ struct LetUsPrayApp: App {
     /// so moving the modifier there uses the same, already-trusted mechanism.
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack {
+                ContentView()
+
+                if isShowingSplash {
+                    LaunchView()
+                        .transition(.opacity)
+                        .zIndex(1)
+                        .task {
+                            try? await Task.sleep(for: .seconds(2))
+
+                            withAnimation(.easeOut(duration: 0.6)) {
+                                isShowingSplash = false
+                            }
+                        }
+                }
+            }
         }
     }
 }
