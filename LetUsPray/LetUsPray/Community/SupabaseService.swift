@@ -1,38 +1,103 @@
+import AuthenticationServices
 import Foundation
 import Supabase
 
-/// Single shared Supabase client for the whole app.
-///
-/// CURRENT IMPLEMENTATION, NOT A FINALIZED ARCHITECTURAL DECISION:
-/// `ensureSession()` uses Supabase's anonymous auth (`signInAnonymously`) to obtain the
-/// `auth.uid()` that Prayer Wall's ownership model and Row Level Security policies require.
-/// This was the minimal way to unblock Prayer Wall Version 1 given no sign-up/sign-in UI was
-/// in that task's scope — it is a stand-in, not a chosen authentication strategy for the
-/// Community platform. Docs/CommunityPlatform-Architecture.md §6 still marks the
-/// authentication provider as TBD; that remains the source of truth.
-///
-/// TODO: Finalize the real authentication strategy (Sign in with Apple, email, or otherwise)
-/// before production. Anonymous sessions have no recovery path across reinstalls/devices and
-/// should not be the permanent identity model for Community features.
+enum CloudServiceError: LocalizedError {
+    case unavailable
+    case notSignedIn
+    case missingAppleToken
+
+    var errorDescription: String? {
+        switch self {
+        case .unavailable:
+            "Cloud services are unavailable. You can keep using LetUsPray on this device."
+        case .notSignedIn:
+            "You need to be signed in to do that."
+        case .missingAppleToken:
+            "Sign in with Apple could not be completed."
+        }
+    }
+}
+
+/// Shared Supabase client. Created only when configuration is present.
+/// Does not sign in anonymously. A missing or unreachable project must not
+/// prevent local prayer from working.
 @MainActor
 final class SupabaseService {
     static let shared = SupabaseService()
 
-    let client: SupabaseClient
+    let client: SupabaseClient?
 
-    private init() {
-        client = SupabaseClient(supabaseURL: SupabaseConfig.projectURL, supabaseKey: SupabaseConfig.publishableKey)
+    var currentUserID: UUID? {
+        client?.auth.currentSession?.user.id
     }
 
-    /// Ensures an authenticated (currently: anonymous) session exists. Call before any
-    /// Prayer Wall read/write that requires auth.uid(). See the type-level TODO above.
-    func ensureSession() async throws {
-        if client.auth.currentSession == nil {
-            try await client.auth.signInAnonymously()
+    var currentSession: Session? {
+        client?.auth.currentSession
+    }
+
+    var isSignedIn: Bool {
+        currentSession != nil
+    }
+
+    private init() {
+        if let url = SupabaseConfig.projectURL, let key = SupabaseConfig.publishableKey {
+            client = SupabaseClient(
+                supabaseURL: url,
+                supabaseKey: key,
+                options: SupabaseClientOptions(
+                    auth: .init(redirectToURL: SupabaseConfig.redirectURL)
+                )
+            )
+        } else {
+            client = nil
         }
     }
 
-    var currentUserID: UUID? {
-        client.auth.currentSession?.user.id
+    func requireClient() throws -> SupabaseClient {
+        guard let client else { throw CloudServiceError.unavailable }
+        return client
+    }
+
+    func requireSignedInUserID() throws -> UUID {
+        guard let currentUserID else { throw CloudServiceError.notSignedIn }
+        return currentUserID
+    }
+
+    /// Restores a previously saved session if one exists. Never creates an anonymous session.
+    func restoreSession() async {
+        guard let client else { return }
+        _ = try? await client.auth.session
+    }
+
+    func signInWithApple(idToken: String, nonce: String?) async throws {
+        let client = try requireClient()
+        _ = try await client.auth.signInWithIdToken(
+            credentials: OpenIDConnectCredentials(
+                provider: .apple,
+                idToken: idToken,
+                nonce: nonce
+            )
+        )
+    }
+
+    func signInWithGoogle() async throws {
+        let client = try requireClient()
+        _ = try await client.auth.signInWithOAuth(
+            provider: .google,
+            redirectTo: SupabaseConfig.redirectURL
+        ) { session in
+            session.prefersEphemeralWebBrowserSession = true
+        }
+    }
+
+    func signOut() async throws {
+        let client = try requireClient()
+        try await client.auth.signOut()
+    }
+
+    func handleRedirect(_ url: URL) async {
+        guard let client, url.scheme == SupabaseConfig.redirectURL.scheme else { return }
+        _ = try? await client.auth.session(from: url)
     }
 }

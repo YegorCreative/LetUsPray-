@@ -47,6 +47,16 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F10000000000000000000003"
+               BuildableName = "LetUsPrayTests.xctest"
+               BlueprintName = "LetUsPrayTests"
+               ReferencedContainer = "container:LetUsPray.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "E00000000000000000000001"
                BuildableName = "LetUsPrayUITests.xctest"
                BlueprintName = "LetUsPrayUITests"

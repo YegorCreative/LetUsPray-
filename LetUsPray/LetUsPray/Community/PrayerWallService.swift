@@ -5,10 +5,12 @@ import Supabase
 /// supabase/migrations/20260801_prayer_wall.sql). Duplicate "I Prayed" prevention relies on
 /// the database's own unique(prayer_request_id, user_id) constraint as the source of truth.
 struct PrayerWallService {
-    private var client: SupabaseClient { SupabaseService.shared.client }
+    private func requireClient() throws -> SupabaseClient {
+        try SupabaseService.shared.requireClient()
+    }
 
     func fetchPublicRequests() async throws -> [PrayerRequest] {
-        try await SupabaseService.shared.ensureSession()
+        let client = try requireClient()
         return try await client
             .from("prayer_requests")
             .select()
@@ -19,7 +21,7 @@ struct PrayerWallService {
     }
 
     func fetchMyRequests() async throws -> [PrayerRequest] {
-        try await SupabaseService.shared.ensureSession()
+        let client = try requireClient()
         guard let userID = SupabaseService.shared.currentUserID else { return [] }
         return try await client
             .from("prayer_requests")
@@ -37,7 +39,7 @@ struct PrayerWallService {
         visibility: PrayerRequestVisibility,
         isAnonymous: Bool
     ) async throws -> PrayerRequest {
-        try await SupabaseService.shared.ensureSession()
+        let client = try requireClient()
         guard let userID = SupabaseService.shared.currentUserID else {
             throw PrayerWallError.notAuthenticated
         }
@@ -61,7 +63,10 @@ struct PrayerWallService {
     }
 
     func updateRequest(_ request: PrayerRequest) async throws {
-        try await SupabaseService.shared.ensureSession()
+        let client = try requireClient()
+        guard SupabaseService.shared.currentUserID != nil else {
+            throw PrayerWallError.notAuthenticated
+        }
 
         let payload = UpdatedPrayerRequest(
             title: request.title,
@@ -82,7 +87,10 @@ struct PrayerWallService {
     /// enforced by the existing update RLS policy (user_id = auth.uid()), the same one
     /// `updateRequest` relies on.
     func markAnswered(requestID: UUID, summary: String, details: String, answeredAt: Date) async throws {
-        try await SupabaseService.shared.ensureSession()
+        let client = try requireClient()
+        guard SupabaseService.shared.currentUserID != nil else {
+            throw PrayerWallError.notAuthenticated
+        }
 
         let payload = MarkAnsweredPayload(
             status: PrayerRequestStatus.answered.rawValue,
@@ -101,7 +109,10 @@ struct PrayerWallService {
     /// Reopens a previously-answered request — clears the answer fields rather than leaving
     /// stale ones behind. Owner-only, same RLS policy as any other update.
     func reopenRequest(id: UUID) async throws {
-        try await SupabaseService.shared.ensureSession()
+        let client = try requireClient()
+        guard SupabaseService.shared.currentUserID != nil else {
+            throw PrayerWallError.notAuthenticated
+        }
 
         try await client
             .from("prayer_requests")
@@ -111,7 +122,10 @@ struct PrayerWallService {
     }
 
     func deleteRequest(id: UUID) async throws {
-        try await SupabaseService.shared.ensureSession()
+        let client = try requireClient()
+        guard SupabaseService.shared.currentUserID != nil else {
+            throw PrayerWallError.notAuthenticated
+        }
         try await client
             .from("prayer_requests")
             .delete()
@@ -122,7 +136,7 @@ struct PrayerWallService {
     /// Records "🙏 I Prayed." A duplicate insert is caught (unique-constraint violation,
     /// Postgres code 23505) and treated as already-prayed, not surfaced as an error.
     func markPrayed(requestID: UUID) async throws {
-        try await SupabaseService.shared.ensureSession()
+        let client = try requireClient()
         guard let userID = SupabaseService.shared.currentUserID else {
             throw PrayerWallError.notAuthenticated
         }
@@ -138,7 +152,7 @@ struct PrayerWallService {
     }
 
     func hasPrayed(requestID: UUID) async throws -> Bool {
-        try await SupabaseService.shared.ensureSession()
+        let client = try requireClient()
         guard let userID = SupabaseService.shared.currentUserID else { return false }
 
         let supports: [PrayerSupport] = try await client

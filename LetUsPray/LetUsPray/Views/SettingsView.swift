@@ -1,3 +1,4 @@
+import AuthenticationServices
 import SwiftUI
 import UserNotifications
 import UIKit
@@ -69,10 +70,13 @@ struct SettingsView: View {
     @State private var permissionRequestInProgress = false
     @State private var reminderErrorMessage: String?
     @State private var reminderRequestGeneration = 0
+    @ObservedObject private var accountService = AccountService.shared
+    @ObservedObject private var prayerSyncService = PrayerSyncService.shared
 
     var body: some View {
         Form {
             appIdentitySection
+            accountSection
             dailyPrayerSection
             prayerExperienceSection
             progressSection
@@ -126,6 +130,78 @@ struct SettingsView: View {
             .padding(.vertical, AppSpacing.small)
             .accessibilityElement(children: .combine)
         }
+    }
+
+    private var accountSection: some View {
+        Section {
+            LabeledContent {
+                Text(accountService.identityLabel)
+                    .foregroundStyle(.secondary)
+            } label: {
+                settingsLabel("Account", systemImage: "person.crop.circle.fill", color: .blue)
+            }
+
+            if accountService.isSignedIn {
+                if let lastSuccessfulSync = prayerSyncService.lastSuccessfulSync {
+                    LabeledContent {
+                        Text(lastSuccessfulSync.formatted(date: .abbreviated, time: .shortened))
+                            .foregroundStyle(.secondary)
+                    } label: {
+                        settingsLabel("Last Sync", systemImage: "arrow.triangle.2.circlepath", color: .green)
+                    }
+                }
+
+                Button {
+                    Task { await accountService.signOut() }
+                } label: {
+                    settingsLabel("Sign Out", systemImage: "rectangle.portrait.and.arrow.right.fill", color: .orange)
+                }
+                .disabled(accountService.isBusy)
+                .accessibilityHint("Signs out of the optional account. Prayer on this device continues.")
+            } else {
+                SignInWithAppleButton(.signIn) { request in
+                    accountService.prepareAppleRequest(request)
+                } onCompletion: { result in
+                    Task { await accountService.completeAppleSignIn(result) }
+                }
+                .signInWithAppleButtonStyle(.white)
+                .frame(maxWidth: .infinity, minHeight: 44)
+                .disabled(accountService.isBusy || !SupabaseConfig.isConfigured)
+                .accessibilityLabel("Sign in with Apple")
+
+                Button {
+                    Task { await accountService.signInWithGoogle() }
+                } label: {
+                    settingsLabel("Sign in with Google", systemImage: "g.circle.fill", color: .blue)
+                }
+                .disabled(accountService.isBusy || !SupabaseConfig.isConfigured)
+                .accessibilityHint("Creates or signs into an optional account using Google.")
+            }
+
+            if let lastErrorMessage = accountService.lastErrorMessage {
+                Text(lastErrorMessage)
+                    .font(AppTypography.footnote())
+                    .foregroundStyle(AppColors.error)
+            } else if let lastSyncMessage = prayerSyncService.lastSyncMessage, accountService.isSignedIn {
+                Text(lastSyncMessage)
+                    .font(AppTypography.footnote())
+                    .foregroundStyle(AppColors.secondaryText)
+            }
+        } header: {
+            Text("Account")
+        } footer: {
+            Text(accountFooterText)
+        }
+    }
+
+    private var accountFooterText: String {
+        if !SupabaseConfig.isConfigured {
+            return "Cloud services are unavailable. You can keep using LetUsPray on this device."
+        }
+        if accountService.isSignedIn {
+            return "Your prayer progress, saved prayers, and journals can sync to this account. Signing out does not remove what is stored on this device."
+        }
+        return "Prayer on this device does not require an account. Signing in is optional and enables sync of your progress, saved prayers, and journals."
     }
 
     private var dailyPrayerSection: some View {

@@ -159,7 +159,7 @@ struct SavedPrayerVerse: Identifiable, Hashable {
     var id: String { verse.id }
 }
 
-struct SavedPrayerRecord: Identifiable, Hashable, Codable {
+struct SavedPrayerRecord: Identifiable, Hashable, Codable, Sendable {
     let verseID: String
     let savedDate: Date
 
@@ -186,7 +186,7 @@ struct HomeJourneyActivity: Hashable, Codable {
     let date: Date
 }
 
-struct PrayerJournalEntry: Hashable, Codable {
+struct PrayerJournalEntry: Hashable, Codable, Sendable {
     var prayerText: String
     var reflectionText: String
 
@@ -217,6 +217,7 @@ enum PrayerStorageKeys {
     static let savedJourneyIDs = "savedPrayerJourneyIDs"
     static let favoriteJourneyIDs = "favoritePrayerJourneyIDs"
     static let onboardingInterests = "onboardingPrayerInterests"
+    static let syncUpdatedAt = "prayerSyncUpdatedAt"
 }
 
 enum PrayerStorageCodec {

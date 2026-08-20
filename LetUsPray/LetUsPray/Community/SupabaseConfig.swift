@@ -1,25 +1,35 @@
 import Foundation
 
-/// Supabase project credentials for the Community platform backend (see
-/// Docs/CommunityPlatform-Architecture.md). Values live in Config/Supabase.xcconfig, not here —
-/// this only reads what Xcode's auto-generated Info.plist exposes from that build config.
-/// The publishable/anon key is designed by Supabase to be safe inside a client app — unlike a
-/// service_role key, which must never appear here.
+/// Client-side Supabase configuration. Values come from `Config/Supabase.xcconfig`
+/// via Info.plist substitution. Missing or unsubstituted values must not crash the app —
+/// guest/local prayer has to keep working.
 enum SupabaseConfig {
-    static let projectURL: URL = {
-        guard let host = Bundle.main.object(forInfoDictionaryKey: "SupabaseProjectHost") as? String,
-              !host.isEmpty,
+    static let redirectURL = URL(string: "com.letuspray.app://auth-callback")!
+
+    static var projectURL: URL? {
+        guard let host = sanitizedInfoValue("SupabaseProjectHost"),
               let url = URL(string: "https://\(host)") else {
-            fatalError("Missing or invalid SupabaseProjectHost in Info.plist — check Config/Supabase.xcconfig.")
+            return nil
         }
         return url
-    }()
+    }
 
-    static let publishableKey: String = {
-        guard let key = Bundle.main.object(forInfoDictionaryKey: "SupabasePublishableKey") as? String,
-              !key.isEmpty else {
-            fatalError("Missing SupabasePublishableKey in Info.plist — check Config/Supabase.xcconfig.")
+    static var publishableKey: String? {
+        sanitizedInfoValue("SupabasePublishableKey")
+    }
+
+    static var isConfigured: Bool {
+        projectURL != nil && publishableKey != nil
+    }
+
+    private static func sanitizedInfoValue(_ key: String) -> String? {
+        guard let raw = Bundle.main.object(forInfoDictionaryKey: key) as? String else {
+            return nil
         }
-        return key
-    }()
+        let trimmed = raw.trimmingCharacters(in: .whitespacesAndNewlines)
+        if trimmed.isEmpty || trimmed.contains("$(") || trimmed.hasPrefix("$") {
+            return nil
+        }
+        return trimmed
+    }
 }

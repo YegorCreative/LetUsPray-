@@ -42,6 +42,14 @@ struct LetUsPrayApp: App {
                         }
                 }
             }
+            .task {
+                await AccountService.shared.start()
+            }
+            .onOpenURL { url in
+                Task {
+                    await SupabaseService.shared.handleRedirect(url)
+                }
+            }
         }
     }
 }

@@ -50,5 +50,18 @@
 	<string>$(SUPABASE_PROJECT_HOST)</string>
 	<key>SupabasePublishableKey</key>
 	<string>$(SUPABASE_PUBLISHABLE_KEY)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.letuspray.app.auth</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.letuspray.app</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

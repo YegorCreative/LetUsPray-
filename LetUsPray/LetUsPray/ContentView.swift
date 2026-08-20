@@ -181,26 +181,33 @@ struct ContentView: View {
             recordStartedJourneyIfNeeded(oldPlanID: oldValue, newPlanID: newValue)
             syncActivePlan()
             syncAnalytics()
+            PrayerSyncService.shared.noteLocalChange()
         }
         .onChange(of: completedDaysByPlanRawValue) { oldValue, newValue in
             recordCompletedPrayerIfNeeded(oldValue: oldValue, newValue: newValue)
             syncLegacyCompletedDays()
             syncAnalytics()
             evaluateAchievements()
+            PrayerSyncService.shared.noteLocalChange()
         }
         .onChange(of: savedVerseIDsRawValue) { oldValue, newValue in
             synchronizeSavedPrayerRecords(oldValue: oldValue, newValue: newValue)
             recordSavedPrayerIfNeeded(oldValue: oldValue, newValue: newValue)
             syncAnalytics()
             evaluateAchievements()
+            PrayerSyncService.shared.noteLocalChange()
         }
         .onChange(of: longestStreak) {
             evaluateAchievements()
+            PrayerSyncService.shared.noteLocalChange()
         }
         .onChange(of: scenePhase) { _, newPhase in
             if newPhase == .active {
                 refreshStreak()
                 evaluateAchievements()
+                Task {
+                    await PrayerSyncService.shared.synchronizeIfNeeded()
+                }
             }
         }
     }
