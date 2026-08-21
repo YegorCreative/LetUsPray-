@@ -8,6 +8,7 @@ struct PlanDetailView: View {
     @Binding var analytics: PrayerAnalyticsSnapshot
     let onStartJourney: () -> Void
     let onViewCollection: () -> Void
+    let showsCollectionAction: Bool
     let completedDayNumbersForPlan: ((String) -> Binding<Set<Int>>)?
     let onOpenJourney: (PrayerPlan) -> Void
     @AppStorage(PrayerStorageKeys.savedJourneyIDs) private var savedJourneyIDsRawValue = ""
@@ -38,6 +39,7 @@ struct PlanDetailView: View {
         analytics: Binding<PrayerAnalyticsSnapshot>,
         onStartJourney: @escaping () -> Void,
         onViewCollection: @escaping () -> Void = {},
+        showsCollectionAction: Bool = false,
         completedDayNumbersForPlan: ((String) -> Binding<Set<Int>>)? = nil,
         onOpenJourney: @escaping (PrayerPlan) -> Void = { _ in }
     ) {
@@ -48,6 +50,7 @@ struct PlanDetailView: View {
         self._analytics = analytics
         self.onStartJourney = onStartJourney
         self.onViewCollection = onViewCollection
+        self.showsCollectionAction = showsCollectionAction
         self.completedDayNumbersForPlan = completedDayNumbersForPlan
         self.onOpenJourney = onOpenJourney
     }
@@ -61,11 +64,11 @@ struct PlanDetailView: View {
                 VStack(alignment: .leading, spacing: AppSpacing.large) {
                     heroSection
                     actionSection
-                    progressSection
-                    journeyOverviewSection
                     if !plan.days.isEmpty {
                         journeyDaysSection
                     }
+                    journeyOverviewSection
+                    progressSection
                     secondaryActionsSection
                     recommendationsSection
                 }
@@ -315,7 +318,7 @@ struct PlanDetailView: View {
                 }
                 .buttonStyle(.plain)
                 .accessibilityHint("Clears this journey's completed sessions and starts again.")
-            } else if isActive, let nextJourneyDay {
+            } else if let nextJourneyDay {
                 NavigationLink {
                     PrayerDetailView(
                         plan: plan,
@@ -324,25 +327,20 @@ struct PlanDetailView: View {
                         savedVerseIDs: $savedVerseIDs,
                         analytics: $analytics
                     )
+                    .onAppear {
+                        if !isActive {
+                            onStartJourney()
+                        }
+                    }
                 } label: {
                     PrimaryPrayerButton(
-                        title: "Continue Journey",
-                        systemImage: "arrow.right.circle.fill"
+                        title: isActive || planProgress.status != .notStarted ? "Continue Journey" : "Start Journey",
+                        systemImage: isActive || planProgress.status != .notStarted ? "arrow.right.circle.fill" : "play.circle.fill"
                     )
                 }
                 .buttonStyle(.plain)
                 .contentShape(Rectangle())
-                .accessibilityHint("Opens the next prayer in this journey.")
-            } else {
-                Button(action: onStartJourney) {
-                    PrimaryPrayerButton(
-                        title: planProgress.status == .notStarted ? "Start Journey" : "Continue Journey",
-                        systemImage: planProgress.status == .notStarted ? "play.circle.fill" : "arrow.right.circle.fill"
-                    )
-                }
-                .buttonStyle(.plain)
-                .contentShape(Rectangle())
-                .accessibilityHint("Sets this as your active prayer journey.")
+                .accessibilityHint(isActive ? "Opens the next prayer in this journey." : "Starts this journey and opens the next prayer.")
             }
         }
     }
@@ -371,13 +369,15 @@ struct PlanDetailView: View {
             }
             .accessibilityValue(isMarkedFavorite ? "Marked favorite" : "Not marked favorite")
 
-            DockAction(
-                title: "Collection",
-                systemImage: "square.grid.2x2",
-                tint: AppColors.primaryBlue,
-                action: onViewCollection
-            )
-            .accessibilityHint("Opens the collection this journey belongs to.")
+            if showsCollectionAction {
+                DockAction(
+                    title: "Collection",
+                    systemImage: "square.grid.2x2",
+                    tint: AppColors.primaryBlue,
+                    action: onViewCollection
+                )
+                .accessibilityHint("Opens the collection this journey belongs to.")
+            }
 
             ShareLink(item: "\(journey.title) — \(journey.subtitle)") {
                 VStack(spacing: AppSpacing.xs) {

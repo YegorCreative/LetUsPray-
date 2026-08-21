@@ -55,10 +55,9 @@ struct SettingsView: View {
     @Environment(\.scenePhase) private var scenePhase
     @AppStorage("settings.dailyReminder") private var dailyReminderEnabled = false
     @AppStorage("settings.reminderTime") private var reminderTimeInterval = 8 * 60 * 60.0
-    @AppStorage("settings.readAloud") private var readAloudEnabled = false
     @AppStorage("settings.readingSpeed") private var readingSpeedRawValue = PrayerReadingSpeed.reflective.rawValue
     @AppStorage("settings.hapticFeedback") private var hapticFeedbackEnabled = true
-    @AppStorage("settings.autoContinueJourney") private var autoContinueJourneyEnabled = true
+    @AppStorage("settings.autoContinueJourney") private var autoContinueJourneyEnabled = false
     @AppStorage("settings.startOnHome") private var startOnHomeEnabled = true
     @AppStorage(PrayerStorageKeys.currentStreak) private var currentStreak = 0
     @AppStorage(PrayerStorageKeys.longestStreak) private var longestStreak = 0
@@ -246,11 +245,6 @@ struct SettingsView: View {
 
     private var prayerExperienceSection: some View {
         Section {
-            Toggle(isOn: $readAloudEnabled) {
-                settingsLabel("Voice Reading", systemImage: "speaker.wave.2.fill", color: .indigo)
-            }
-            .accessibilityHint("Starts voice reading automatically when a prayer opens.")
-
             Picker(selection: $readingSpeedRawValue) {
                 ForEach(PrayerReadingSpeed.allCases) { speed in
                     Text(speed.title)
@@ -308,17 +302,6 @@ struct SettingsView: View {
                 )
             }
 
-            NavigationLink {
-                PrayerWallView()
-            } label: {
-                settingsNavigationLabel(
-                    "Prayer Wall",
-                    detail: "Share and pray together",
-                    systemImage: "hands.sparkles.fill",
-                    color: .green
-                )
-            }
-
             Button(action: onOpenSaved) {
                 settingsNavigationLabel(
                     "Saved Prayers",
@@ -354,10 +337,6 @@ struct SettingsView: View {
 
             Link(destination: SettingsDestinations.reportProblemURL) {
                 settingsLabel("Report a Problem", systemImage: "exclamationmark.bubble.fill", color: .orange)
-            }
-
-            Link(destination: SettingsDestinations.writeReviewURL) {
-                settingsLabel("Rate LetUsPray", systemImage: "star.fill", color: .yellow)
             }
         }
     }

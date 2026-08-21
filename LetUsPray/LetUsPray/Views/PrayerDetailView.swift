@@ -113,7 +113,7 @@ struct PrayerDetailView: View {
     @Binding var analytics: PrayerAnalyticsSnapshot
     @AppStorage(PrayerStorageKeys.prayerJournalEntries) private var prayerJournalEntriesRawValue = "{}"
     @AppStorage("settings.readingSpeed") private var readingSpeedRawValue = PrayerReadingSpeed.reflective.rawValue
-    @AppStorage("settings.autoContinueJourney") private var autoContinueJourneyEnabled = true
+    @AppStorage("settings.autoContinueJourney") private var autoContinueJourneyEnabled = false
 
     @State private var completionPulse = false
     @State private var copyConfirmationVisible = false
@@ -152,6 +152,8 @@ struct PrayerDetailView: View {
             .padding(.horizontal, AppSpacing.large)
             .padding(.top, AppSpacing.medium)
             .padding(.bottom, AppSpacing.xxLarge)
+            .frame(maxWidth: 720)
+            .frame(maxWidth: .infinity)
             .scrollTargetLayout()
         }
         .scrollDismissesKeyboard(.interactively)
@@ -164,12 +166,14 @@ struct PrayerDetailView: View {
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     Button(action: copyPrayer) {
                         Image(systemName: "doc.on.doc")
+                            .frame(minWidth: 44, minHeight: 44)
                     }
                     .accessibilityLabel("Copy prayer")
                     .accessibilityHint("Copies the Scripture reference, Scripture text, and guided prayer.")
 
                     ShareLink(item: sharePrayerText) {
                         Image(systemName: "square.and.arrow.up")
+                            .frame(minWidth: 44, minHeight: 44)
                     }
                     .accessibilityLabel("Share prayer")
                     .accessibilityHint("Opens the iOS share sheet with the Scripture and guided prayer.")
@@ -255,14 +259,6 @@ struct PrayerDetailView: View {
 
                 HStack(spacing: AppSpacing.medium) {
                     Button {
-                        speechController.replay(readAloudText, rateMultiplier: readingSpeed.rateMultiplier)
-                    } label: {
-                        Image(systemName: "gobackward.10")
-                    }
-                    .buttonStyle(PrayerIconButtonStyle())
-                    .accessibilityLabel("Skip back 10 seconds")
-
-                    Button {
                         switch speechController.state {
                         case .stopped:
                             speechController.play(readAloudText, rateMultiplier: readingSpeed.rateMultiplier)
@@ -280,14 +276,6 @@ struct PrayerDetailView: View {
                     .tint(AppColors.accentCyan)
                     .accessibilityLabel(speechController.state == .playing ? "Pause reading" : "Play reading")
                     .accessibilityHint("Reads the Scripture and guided prayer aloud.")
-
-                    Button {
-                        speechController.replay(readAloudText, rateMultiplier: readingSpeed.rateMultiplier)
-                    } label: {
-                        Image(systemName: "goforward.10")
-                    }
-                    .buttonStyle(PrayerIconButtonStyle())
-                    .accessibilityLabel("Skip forward 10 seconds")
 
                     if speechController.state != .stopped {
                         Button(role: .cancel) { speechController.stop() } label: {
@@ -345,12 +333,12 @@ struct PrayerDetailView: View {
         field: PrayerJournalField,
         text: Binding<String>
     ) -> some View {
-        InfoCard(padding: AppSpacing.medium) {
+        InfoCard(padding: AppSpacing.small) {
             VStack(alignment: .leading, spacing: AppSpacing.small) {
                 Label(title, systemImage: systemImage)
-                    .font(AppTypography.metadata())
+                    .font(AppTypography.caption())
                     .fontWeight(.semibold)
-                    .foregroundStyle(AppColors.secondaryText)
+                    .foregroundStyle(AppColors.tertiaryText)
 
                 ZStack(alignment: .topLeading) {
                     if text.wrappedValue.isEmpty {

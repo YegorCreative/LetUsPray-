@@ -25,6 +25,12 @@ struct PrayerCalendarStrip: View {
         }
     }
 
+    /// Empty leading cells so the first date sits under its weekday label.
+    private var leadingEmptyCount: Int {
+        guard let first = recentDays.first else { return 0 }
+        return (calendar.component(.weekday, from: first) - calendar.firstWeekday + 7) % 7
+    }
+
     private var weekdaySymbols: [String] {
         let symbols = calendar.veryShortWeekdaySymbols
         let offset = calendar.firstWeekday - 1
@@ -41,6 +47,13 @@ struct PrayerCalendarStrip: View {
                         .font(.system(size: 11, weight: .medium))
                         .foregroundStyle(AppColors.tertiaryText)
                         .frame(maxWidth: .infinity)
+                }
+
+                ForEach(0..<leadingEmptyCount, id: \.self) { index in
+                    Color.clear
+                        .frame(maxWidth: .infinity, minHeight: 34)
+                        .accessibilityHidden(true)
+                        .id("calendar-leading-\(index)")
                 }
 
                 ForEach(recentDays, id: \.self) { date in
@@ -106,17 +119,11 @@ struct PrayerCalendarStrip: View {
                     .frame(width: 30, height: 30)
             }
 
-            if completed {
-                Image(systemName: "checkmark")
-                    .font(.system(size: 10, weight: .bold))
-                    .foregroundStyle(AppColors.brightTextOnAccent)
-            } else {
-                Text("\(dayNumber)")
-                    .font(.system(size: 13, weight: isToday ? .semibold : .regular))
-                    .foregroundStyle(AppColors.secondaryText)
-            }
+            Text("\(dayNumber)")
+                .font(.system(size: 13, weight: isToday || completed ? .semibold : .regular))
+                .foregroundStyle(completed ? AppColors.brightTextOnAccent : AppColors.secondaryText)
         }
-        .frame(maxWidth: .infinity, minHeight: 34)
+        .frame(maxWidth: .infinity, minHeight: 44)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(accessibilityLabel(for: date, completed: completed, isToday: isToday))
     }

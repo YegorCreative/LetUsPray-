@@ -16,7 +16,7 @@ struct JourneyDayView: View {
     @AppStorage(PrayerStorageKeys.completedPrayersCount) private var completedPrayersCount = 0
     @AppStorage(PrayerStorageKeys.savedPrayersCount) private var savedPrayersCount = 0
     @AppStorage("settings.readingSpeed") private var readingSpeedRawValue = PrayerReadingSpeed.reflective.rawValue
-    @AppStorage("settings.autoContinueJourney") private var autoContinueJourneyEnabled = true
+    @AppStorage("settings.autoContinueJourney") private var autoContinueJourneyEnabled = false
 
     @State private var completionPulse = false
     @State private var journalScrollTarget: JourneyJournalField?
@@ -63,6 +63,8 @@ struct JourneyDayView: View {
             .padding(.horizontal, AppSpacing.large)
             .padding(.top, AppSpacing.medium)
             .padding(.bottom, AppSpacing.xxLarge)
+            .frame(maxWidth: 720)
+            .frame(maxWidth: .infinity)
             .scrollTargetLayout()
         }
         .scrollDismissesKeyboard(.interactively)
@@ -224,14 +226,6 @@ struct JourneyDayView: View {
 
                 HStack(spacing: AppSpacing.medium) {
                     Button {
-                        speechController.replay(readAloudText, rateMultiplier: readingSpeed.rateMultiplier)
-                    } label: {
-                        Image(systemName: "gobackward.10")
-                    }
-                    .buttonStyle(PrayerIconButtonStyle())
-                    .accessibilityLabel("Skip back 10 seconds")
-
-                    Button {
                         switch speechController.state {
                         case .stopped:
                             speechController.play(readAloudText, rateMultiplier: readingSpeed.rateMultiplier)
@@ -248,14 +242,6 @@ struct JourneyDayView: View {
                     .buttonStyle(.borderedProminent)
                     .tint(AppColors.accentCyan)
                     .accessibilityLabel(speechController.state == .playing ? "Pause reading" : "Play reading")
-
-                    Button {
-                        speechController.replay(readAloudText, rateMultiplier: readingSpeed.rateMultiplier)
-                    } label: {
-                        Image(systemName: "goforward.10")
-                    }
-                    .buttonStyle(PrayerIconButtonStyle())
-                    .accessibilityLabel("Skip forward 10 seconds")
 
                     if speechController.state != .stopped {
                         Button(role: .cancel) { speechController.stop() } label: {

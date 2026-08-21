@@ -48,15 +48,18 @@ struct PrayerCardView: View {
                 Image(systemName: didCopy ? "checkmark" : "doc.on.doc")
                     .font(.system(size: 15, weight: .semibold))
                     .foregroundStyle(didCopy ? AppColors.success : AppColors.secondaryText)
+                    .frame(minWidth: 44, minHeight: 44)
+                    .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
-            .contentShape(Rectangle())
             .accessibilityLabel(didCopy ? "Copied" : "Copy verse and prayer")
 
             ShareLink(item: shareText) {
                 Image(systemName: "square.and.arrow.up")
                     .font(.system(size: 15, weight: .semibold))
                     .foregroundStyle(AppColors.secondaryText)
+                    .frame(minWidth: 44, minHeight: 44)
+                    .contentShape(Rectangle())
             }
             .accessibilityLabel("Share verse and prayer")
 
@@ -64,9 +67,10 @@ struct PrayerCardView: View {
                 Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
                     .font(.system(size: 15, weight: .semibold))
                     .foregroundStyle(isSaved ? AppColors.prayerGold : AppColors.secondaryText)
+                    .frame(minWidth: 44, minHeight: 44)
+                    .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
-            .contentShape(Rectangle())
             .accessibilityLabel(isSaved ? "Remove saved prayer" : "Save prayer")
         }
     }

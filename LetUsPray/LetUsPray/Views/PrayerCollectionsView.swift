@@ -104,12 +104,11 @@ struct PrayerCollectionsView: View {
     private var discoveryContent: some View {
         LazyVStack(alignment: .leading, spacing: AppSpacing.large) {
             intro
-            allPlansEntry
+            recentlyContinuedSection
+            activitySection(title: "Available Now", journeys: availableJourneys)
             libraryContent
-            ForEach(recommendationSections.ordered, id: \.0) { section in
-                activitySection(title: section.0, journeys: section.1)
-            }
             collectionsShelf
+            allPlansEntry
         }
     }
 
@@ -185,10 +184,6 @@ struct PrayerCollectionsView: View {
                         }
                     }
                 }
-
-                upcomingCategoriesSection
-
-                suggestionSection
             }
             .padding(.horizontal, AppSpacing.large)
             .padding(.top, AppSpacing.medium)
@@ -202,9 +197,6 @@ struct PrayerCollectionsView: View {
             Button("OK", role: .cancel) {}
         } message: {
             Text("This prayer plan is currently in development and will be available in a future update.")
-        }
-        .sheet(isPresented: $showingPlanSuggestion) {
-            PrayerPlanSuggestionView()
         }
     }
 
@@ -392,12 +384,6 @@ struct PrayerCollectionsView: View {
                     activitySection(title: "Saved Journeys", journeys: saved)
                     activitySection(title: "Favorite Journeys", journeys: favorites)
                 }
-            } else {
-                EmptyStateView(
-                    title: "Build Your Prayer Library",
-                    message: "Save journeys you want to return to, or mark a favorite for quick access.",
-                    systemImage: "books.vertical"
-                )
             }
         }
     }
@@ -439,9 +425,6 @@ struct PrayerCollectionsView: View {
                 }
             }
         }
-        .padding(.horizontal, AppSpacing.large)
-        .padding(.top, AppSpacing.medium)
-        .padding(.bottom, AppSpacing.xxLarge)
     }
 
     private var groupedSearchResults: [(String, [PrayerJourney])] {
@@ -760,6 +743,7 @@ private struct PrayerCollectionJourneyDestination: View {
     let completedDayNumbersForPlan: (String) -> Binding<Set<Int>>
     let onStartJourney: (PrayerPlan) -> Void
     let onViewCollection: () -> Void
+    var showsCollectionAction: Bool = false
     let onOpenJourney: (PrayerPlan) -> Void
 
     @ViewBuilder
@@ -780,6 +764,7 @@ private struct PrayerCollectionJourneyDestination: View {
                 analytics: $analytics,
                 onStartJourney: { onStartJourney(plan) },
                 onViewCollection: onViewCollection,
+                showsCollectionAction: showsCollectionAction,
                 completedDayNumbersForPlan: completedDayNumbersForPlan,
                 onOpenJourney: onOpenJourney
             )
@@ -1151,6 +1136,7 @@ struct PrayerCollectionDetailView: View {
                     viewModel.setActivePlan(id: plan.id)
                 },
                 onViewCollection: { dismiss() },
+                showsCollectionAction: true,
                 onOpenJourney: { plan in
                     activePlanID = plan.id
                     viewModel.setActivePlan(id: plan.id)

@@ -99,7 +99,7 @@ struct SavedView: View {
                 Image(systemName: "ellipsis.circle")
                     .font(.system(size: 18, weight: .semibold))
                     .foregroundStyle(AppColors.textTertiary)
-                    .frame(width: 32, height: 32)
+                    .frame(minWidth: 44, minHeight: 44)
             }
             .accessibilityLabel("More options for \(item.verse.reference)")
         }
