@@ -42,6 +42,8 @@ struct PrayerCollectionsView: View {
             .padding(.horizontal, AppSpacing.large)
             .padding(.top, AppSpacing.medium)
             .padding(.bottom, AppSpacing.xxLarge)
+            .frame(maxWidth: 720)
+            .frame(maxWidth: .infinity)
         }
         .navigationTitle("Prayer Journeys")
         .navigationBarTitleDisplayMode(.large)
